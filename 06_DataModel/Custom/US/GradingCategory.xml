@@ -1,0 +1,76 @@
+<DataObject name="GradingCategory"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <EventsReported>true</EventsReported>
+
+  <Key>@RefId</Key>
+  <Item>
+    <Element>GradingCategory</Element>
+    <Description>
+      <p>This object provides information about a particular grading category to provide grouping and type information for assignments.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies a grading category.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Attribute>SectionInfoRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID for the SectionInfo object that this category is used for grading in.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>TermInfoRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID for the TermInfo object that defines the marking period that the category was created in.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>SchoolInfoRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies the School that these Mark Values apply to.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The name/short description of the category.</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+
+  <xhtml:Example xmlns="">
+    <GradingCategory RefId="98157AA013BA8C3D00AA012B359D7512" SectionInfoRefId="13BA8C3D00AA098157AA012B359D7512"
+      TermInfoRefId="D00AA012B359D798157AA013BA8C3512" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB">
+      <Description>Tests</Description>
+    </GradingCategory>
+  </xhtml:Example>
+</DataObject>

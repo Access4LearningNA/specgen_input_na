@@ -1,0 +1,78 @@
+<DataObject name="FinancialTransaction"			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:xi="http://www.w3.org/2001/XInclude"
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+      xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>FinancialTransaction</Element>
+    <Description>
+      <p>This object communicates a financial transaction. A transaction can be for the daily food sales revenue account.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies this financial transaction.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>TransactionDate</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Transaction date.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>TransactionTime</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Transaction time.</p>
+    </Description>
+    <Type name="xs:time"></Type>
+  </Item>
+  <Item>
+    <Element>Amounts</Element>
+    <Characteristics>M</Characteristics>
+     <Description>
+      <p>Monetary amount of the transaction.</p>
+    </Description>
+    <Type ref="CommonTypes" name="DebitCreditMonetaryAmountListType"/>
+  </Item>
+  <Item>
+    <Element>Program</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="FundedProgramType"></Type>
+  </Item>
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:string"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <FinancialTransaction RefId="E72C08BD41894187BA07B00C1401BE3F">
+      <TransactionDate>2003-01-01</TransactionDate>
+      <TransactionTime>04:32:23-08:00</TransactionTime>
+      <Amounts>
+        <Amount FinancialAccountAccountingPeriodLocationInfoRefId="B595A5959A8F43448DF0F5C635CD0E1D" Type="Debit" Currency="USD">99999.99</Amount>
+        <Amount FinancialAccountAccountingPeriodLocationInfoRefId="AFC675959A8F43448DF036C5F5CD0DE1" Type="Credit" Currency="USD">99999.99</Amount>
+      </Amounts>
+      <Program Type="Foodservice">NSLP</Program>
+    </FinancialTransaction>
+  </xhtml:Example>
+</DataObject>

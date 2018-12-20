@@ -1,0 +1,154 @@
+<DataObject name="EmployeeAssignment"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>EmployeeAssignment</Element>
+    <Description>
+      <p>
+        This object defines information related to an employee assignment as it pertains to the human resource needed to track employee assignment for employee reporting and financial funding tracking.
+        The staff assignment record will hold more detail of the actual assignment.
+        There are multiple records for each assignment and/or location.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID that uniquely identifies a particular HR staff assignment.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Attribute>EmployeePersonalRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>This GUID referencing the parent EmployeePersonal object</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Short assignment description</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  <Item>
+    <Element>PrimaryAssignment</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        Is this the staff member's primary assignment? There must be one and only one instance of the object with <code>Yes</code> in this value per school year.
+      </p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Yes</Code>
+      </Value>
+      <Value>
+        <Code>No</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>LocationInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>
+        This is an optional element so the placement of the employee within the agency can be tracked as needed.
+        The GUID references the LocationInfo object.
+      </p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>JobStartDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This is the date from which the staff assignment is valid (inclusive).</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>JobEndDate</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>This is the date through which the staff assignment is valid (inclusive).  Present if the JobStartDate is entered and a JobEndDate is available.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>JobFTE</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Full-time job equivalent ratio for this assignment. (Format is x.xx; an employee who is full-time and who spends 50% of their time on this assignment would be represented as 0.50)</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+    <Facets>
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="1"/>
+      <xs:fractionDigits value="2"/>
+    </Facets>
+  </Item>
+  <Item>
+    <Element>JobClassification</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The specific group of duties or responsibilities of position.</p>
+    </Description>
+    <Type ref="CommonTypes" name="JobClassificationType"></Type>
+  </Item>
+ <Item>
+    <Element>ProgramType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The type of instructional or non-instructional program.</p>
+    </Description>
+    <Type ref="CommonTypes" name="EmployeeAssignmentProgramType"></Type>
+  </Item>
+  <Item>
+    <Element>FundingSource</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Provider of funds for the program or service.</p>
+    </Description>
+     <Type ref="CommonTypes" name="FundingSourceType"></Type>
+ </Item>
+   <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <EmployeeAssignment RefId="FE1078BA3261545A31905937B265CE01" EmployeePersonalRefId="BE1078BA3261545A31905937B265CE02">
+      <Description>First grade elementary teacher</Description>
+      <PrimaryAssignment>Yes</PrimaryAssignment>
+      <LocationInfoRefId>FD1078BA3261545A31905937B265CE01</LocationInfoRefId>
+      <JobStartDate>2000-09-05</JobStartDate>
+      <JobEndDate>2001-06-25</JobEndDate>
+      <JobFTE>1.00</JobFTE>
+      <JobClassification>
+        <Code>1000</Code>
+      </JobClassification>
+      <ProgramType>
+        <Code>0100</Code>
+      </ProgramType>
+      <FundingSource>
+        <Code>0617</Code>
+      </FundingSource>
+    </EmployeeAssignment>
+  </xhtml:Example>
+</DataObject>

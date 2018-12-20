@@ -1,0 +1,139 @@
+<DataObject name="FoodserviceMealPrices"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <EventsReported>true</EventsReported>
+  <Key>@RefId</Key>
+  <Item>
+    <Element>FoodserviceMealPrices</Element>
+    <Description>
+      <p>This object is a site's meal prices for each grade program, meal status, meal type and grade level.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies this meal price.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies the school this meal price belongs to</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>Program</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="FundedProgramType"></Type>
+  </Item>
+  <Item>
+    <Element>Prices</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="MealPriceListType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <FoodserviceMealPrices RefId="EF521958AB474559B2AE7BD82647C66B">
+      <SchoolInfoRefId>FF521958AB474559B2AE7BD82647C66B</SchoolInfoRefId>
+      <Program Type="Foodservice">NSLP</Program>
+      <Prices>
+        <Price>
+          <Value Currency="USD">999.99</Value>
+          <MealStatus Type="Free" />
+          <MealType>FirstMeal</MealType>
+          <GradeLevels>
+            <GradeLevel>
+              <Code>09</Code>
+            </GradeLevel>
+            <GradeLevel>
+              <Code>10</Code>
+            </GradeLevel>
+            <GradeLevel>
+              <Code>11</Code>
+            </GradeLevel>
+            <GradeLevel>
+              <Code>12</Code>
+            </GradeLevel>
+          </GradeLevels>
+        </Price>
+        <Price>
+          <Value>999.99</Value>
+          <MealStatus Type="Free" />
+          <MealType>SecondMeal</MealType>
+          <GradeLevels>
+            <GradeLevel>
+              <Code>09</Code>
+            </GradeLevel>
+            <GradeLevel>
+              <Code>10</Code>
+            </GradeLevel>
+            <GradeLevel>
+              <Code>11</Code>
+            </GradeLevel>
+            <GradeLevel>
+              <Code>12</Code>
+            </GradeLevel>
+          </GradeLevels>
+        </Price>
+        <Price>
+          <Value>999.99</Value>
+          <MealStatus Type="Reduced" />
+          <MealType>FirstMeal</MealType>
+          <GradeLevels>
+            <GradeLevel>
+              <Code>09</Code>
+            </GradeLevel>
+            <GradeLevel>
+              <Code>10</Code>
+            </GradeLevel>
+            <GradeLevel>
+              <Code>11</Code>
+            </GradeLevel>
+            <GradeLevel>
+              <Code>12</Code>
+            </GradeLevel>
+          </GradeLevels>
+        </Price>
+        <Price>
+          <Value>999.99</Value>
+          <MealStatus Type="None" />
+          <MealType>FirstMeal</MealType>
+          <GradeLevels>
+            <GradeLevel>
+              <Code>01</Code>
+            </GradeLevel>
+            <GradeLevel>
+              <Code>02</Code>
+            </GradeLevel>
+            <GradeLevel>
+              <Code>03</Code>
+            </GradeLevel>
+            <GradeLevel>
+              <Code>04</Code>
+            </GradeLevel>
+            <GradeLevel>
+              <Code>05</Code>
+            </GradeLevel>
+          </GradeLevels>
+        </Price>
+      </Prices>
+    </FoodserviceMealPrices>
+  </xhtml:Example>
+</DataObject>

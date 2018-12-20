@@ -1,0 +1,105 @@
+<DataObject name="StudentResponseSet"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+
+  <Item>
+    <Element>StudentResponseSet</Element>
+    <Description>
+      <p>This object transmits the student's responses to stimuli presented in an assessment. These are the raw, unscored responses.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Description>
+      <p>The GUID that uniquely identifies an instance of the object.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>AssessmentAdministrationRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>The administration associated with the response set.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>StudentPersonalRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>The student associated with the response set.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>AssessmentRegistrationRefId</Attribute>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>The registration associated with the response set.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>Items</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Container for item elements.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StudentResponseSetItemListType"></Type>
+  </Item>
+   <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+
+  <xhtml:Example name="StudentResponseSet - Example 1" xmlns="">
+    <StudentResponseSet RefId="A32F55CC14004172A7CD8E8FB5187DD0" AssessmentAdministrationRefId="BB181B05598C46D2B8D533483D91392E" StudentPersonalRefId="8F0934CC2F0448F8BBD788AA1ADE691B">
+      <Items>
+        <Item>
+          <Response>C</Response>
+          <ResponseLocation>http://assessments-r-us.com/29834928374/2394/response.html</ResponseLocation>
+          <ResponseStatus>Incomplete</ResponseStatus>
+          <ResponseTime>PT32S</ResponseTime>
+          <ItemNumber>27</ItemNumber>
+          <ItemName>Writing Sample 1</ItemName>
+          <DiagnosticStatement>Shows ability to determine symmetry</DiagnosticStatement>
+          <NumberOfAttempts>2</NumberOfAttempts>
+        </Item>
+      </Items>
+    </StudentResponseSet>
+  </xhtml:Example>
+
+  <xhtml:Example name="StudentResponseSet - Example 2" xmlns="">
+    <StudentResponseSet RefId="A32F55CC14004172A7CD8E8FB5187DD0" AssessmentAdministrationRefId="BB181B05598C46D2B8D533483D91392E" StudentPersonalRefId="8F0934CC2F0448F8BBD788AA1ADE691B">
+      <Items>
+        <Item>
+          <Response>C</Response>
+          <ResponseLocation>http://assessments-r-us.com/29834928374/2394/response.html</ResponseLocation>
+          <ResponseStatus>Incomplete</ResponseStatus>
+          <ResponseTime>PT32S</ResponseTime>
+          <ItemNumber>27</ItemNumber>
+          <ItemName>Writing Sample 1</ItemName>
+          <DiagnosticStatement>Shows ability to determine symmetry</DiagnosticStatement>
+          <NumberOfAttempts>2</NumberOfAttempts>
+          <ItemScore>5</ItemScore>
+          <ItemAidSetUsed>Calculator</ItemAidSetUsed>
+        </Item>
+      </Items>
+    </StudentResponseSet>
+
+  </xhtml:Example>
+</DataObject>

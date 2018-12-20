@@ -1,0 +1,97 @@
+<DataObject name="Billing"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>Billing</Element>
+    <Description>
+      <p>This object contains an amount to be billed to an outside entity.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID for this transaction. The application that owns this object is responsible for generating this unique Id.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>BilledEntity</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Id of the entity being billed for this billing activity (e.g., student, employee, organization).</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        SIF object referenced by <code>BilledEntity</code>.
+      </p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>StudentPersonal</Code>
+      </Value>
+      <Value>
+        <Code>StaffPersonal</Code>
+      </Value>
+      <Value>
+        <Code>VendorInfo</Code>
+      </Value>
+      <Value>
+        <Code>Purchasing</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>BillingDate</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Date of the transaction.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>TransactionDescription</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Description of the transaction.</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  <Item>
+    <Element>BilledAmount</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Amount to be billed.</p>
+    </Description>
+    <Type ref="CommonTypes" name="MonetaryAmountType"/>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <Billing RefId="CA12345847DEA97463FEB238759FD123">
+      <BilledEntity SIF_RefObject="StaffPersonal">BA497254965FDA48965ABCE4589EA421</BilledEntity>
+      <BillingDate>1999-10-12</BillingDate>
+      <TransactionDescription>Activity Fees</TransactionDescription>
+      <BilledAmount Currency="USD">50.00</BilledAmount>
+    </Billing>
+  </xhtml:Example>
+</DataObject>

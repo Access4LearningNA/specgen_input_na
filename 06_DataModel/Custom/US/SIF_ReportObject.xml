@@ -1,0 +1,244 @@
+<DataObject name="SIF_ReportObject"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>SIF_ReportObject</Element>
+    <Description>
+      <p>
+        This object is an envelope used to send other data objects, typically reports, to authorities such as state departments
+        of education, district offices, other schools, etc. It is also used to signal a data collector agent that a report is
+        compiled and ready to be requested. SIF_ReportObject contains a data object, which is either complete or partial (a
+        partial data object is one that contains a subset of the elements for the data object). One or a series of
+        SIF_ReportObjects contained within one or a series of related SIF_Response messages makes up a complete report.
+      </p>
+      <p>
+		  Note: With SIF Implementation Specification version 2.4 the choice element depicted in the diagram below has changed.  In the XSD files, the choice element used to be rendered as a sequence of optional elements.  Now, in the XSD files, the choice element is rendered as an xs:choice.  This may cause problems with agents that treat the choice element as two optional elements rather than a choice of one and only one of the choices.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies this instance of a report.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Choice>
+    <Item>
+      <Element>ReportInfo</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>
+          Identifies the manifest for the report and characteristics of the submission.
+          This element is a conditional element.
+          This element, the ReportData element, or the SIF_ExtendedQueryResults element is included but never more than one at the same time within an instance of this object.
+          See examples of the usage of the object below.
+        </p>
+      </Description>
+    <Type ref="CommonTypes" name="ReportInfoType"></Type>
+    </Item>
+    <Item>
+      <Element>ReportData</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>
+          Container element for the report content; one valid SIF object can occur as a child here. This element is conditional.
+          This element or <code>ReportInfo</code> or <code>SIF_ExtendedQueryResults</code> is included but never at the same time.
+          See examples of the usage of the object below.
+        </p>
+      </Description>
+      <Type ref="CommonTypes" name="ReportDataObjectType"></Type>
+    </Item>
+    <Item>
+      <Element>SIF_ExtendedQueryResults</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>
+          The report content resulting from a <code>SIF_ExtendedQuery</code>-based report.  This element is conditional.
+          This element or <code>ReportInfo</code> or <code>ReportData</code> is included but never at the same time.
+        </p>
+      </Description>
+      <Type ref="Infrastructure" name="SIF_ExtendedQueryResults"></Type>
+    </Item>
+  </Choice>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <SIF_Message xmlns="http://www.sifinfo.org/infrastructure/2.x" Version="2.5">
+      <SIF_Response>
+        <SIF_Header>
+          <SIF_MsgId>FAE9D90A38F84B729C92F868CB63C9F3</SIF_MsgId>
+          <SIF_Timestamp>2006-10-15T09:23:26-05:00</SIF_Timestamp>
+          <SIF_SourceId>XXXX Agent</SIF_SourceId>
+          <SIF_DestinationId>STATE</SIF_DestinationId>
+        </SIF_Header>
+        <SIF_RequestMsgId>EB79C3D1FF1911D785138B604A511DAD</SIF_RequestMsgId>
+        <SIF_PacketNumber>1</SIF_PacketNumber>
+        <SIF_MorePackets>No</SIF_MorePackets>
+        <SIF_ObjectData>
+          <SIF_ReportObject RefId="B234516384746B387459000F84723A00">
+            <ReportInfo ReportManifestRefId="B234516384746B387459000F84723A00">
+              <CalculationDate>2003-08-19</CalculationDate>
+              <SubmissionNumber>1</SubmissionNumber>
+              <SubmissionReason>Initial</SubmissionReason>
+              <ReportSubmitterInfo>
+                <SubmitterName>Wasatch School District 441</SubmitterName>
+                <SubmitterDepartment>Central Data Services Center</SubmitterDepartment>
+                <ContactInfo>
+                  <Name Type="02">
+                    <LastName>Reynolds</LastName>
+                    <FirstName>Patricia</FirstName>
+                  </Name>
+                  <PhoneNumberList>
+                    <PhoneNumber Type="0096">
+                      <Number>(555) 555-1010</Number>
+                    </PhoneNumber>
+                  </PhoneNumberList>
+                </ContactInfo>
+                <PhoneNumber Type="0096">
+                  <Number>(555) 555-1010</Number>
+                </PhoneNumber>
+                <SubmitterNotes>Wasatch School District's Vertical Reporting policies can be found on-line at http://www.wasatchsif.org/policies/vr.html. Please contact Patricia Reynolds, Central Data Services Center, at (555) 555-1010 for more information.</SubmitterNotes>
+              </ReportSubmitterInfo>
+            </ReportInfo>
+          </SIF_ReportObject>
+          <SIF_ReportObject RefId="B234516384746B387459000F84723A00">
+            <ReportData>
+              <StudentPersonal RefId="5D1F2390F33F11D7B64CD17E020C45AB">
+                <LocalId>2983</LocalId>
+                <Name Type="04">
+                  <LastName>Gedzyk</LastName>
+                  <FirstName>David</FirstName>
+                </Name>
+                <Demographics>
+                  <Gender>M</Gender>
+                  <PlaceOfBirth>West Allis</PlaceOfBirth>
+                  <CountyOfBirth>Milwaukee</CountyOfBirth>
+                  <StateOfBirth>WI</StateOfBirth>
+                  <CountryOfBirth>US</CountryOfBirth>
+                  <CountriesOfCitizenship>
+                    <CountryOfCitizenship>US</CountryOfCitizenship>
+                  </CountriesOfCitizenship>
+                  <CountriesOfResidency>
+                    <CountryOfResidency>US</CountryOfResidency>
+                  </CountriesOfResidency>
+                  <CitizenshipStatus>1017</CitizenshipStatus>
+                  <EnglishProficiency>
+                    <Code>1633</Code>
+                  </EnglishProficiency>
+                </Demographics>
+                <AddressList>
+                  <Address Type="0123">
+                    <Street>
+                      <Line1>6799 33rd Ave.</Line1>
+                      <StreetNumber>6799</StreetNumber>
+                      <StreetName>33rd</StreetName>
+                      <StreetType>Ave.</StreetType>
+                    </Street>
+                    <City>West Allis</City>
+                    <County>Milwaukee</County>
+                    <StateProvince>WI</StateProvince>
+                    <Country>US</Country>
+                    <PostalCode>53219</PostalCode>
+                  </Address>
+                </AddressList>
+                <PhoneNumberList>
+                  <PhoneNumber Type="0096">
+                    <Number>(414) 775-9644</Number>
+                  </PhoneNumber>
+                </PhoneNumberList>
+                <EmailList>
+                  <Email Type="Primary">DavidGedzyk@sifinfo.org</Email>
+                </EmailList>
+                <OnTimeGraduationYear>2005</OnTimeGraduationYear>
+              </StudentPersonal>
+            </ReportData>
+          </SIF_ReportObject>
+          <SIF_ReportObject RefId="B234516384746B387459000F84723A00">
+            <ReportData>
+              <StudentSchoolEnrollment RefId="5DF9A510F33F11D7B64C970DE3494F35" StudentPersonalRefId="5D1F2390F33F11D7B64CD17E020C45AB"
+                SchoolInfoRefId="56E86900F33F11D7B64CBCCE0CB2E03A" MembershipType="Home" TimeFrame="Current" SchoolYear="2003">
+                <EntryDate>2002-09-02</EntryDate>
+                <EntryType>
+                  <Code>1838</Code>
+                </EntryType>
+                <GradeLevel>
+                  <Code>12</Code>
+                </GradeLevel>
+                <Homeroom SIF_RefObject="RoomInfo">5A9BD410F33F11D7B64CB911AF996C9B</Homeroom>
+                <Advisor SIF_RefObject="StaffPersonal">59B1E940F33F11D7B64CB2D1D11E84A2</Advisor>
+                <FTE>1.00</FTE>
+                <FTPTStatus>FullTime</FTPTStatus>
+              </StudentSchoolEnrollment>
+            </ReportData>
+          </SIF_ReportObject>
+          <SIF_ReportObject RefId="B234516384746B387459000F84723A00">
+            <ReportData>
+              <SchoolInfo RefId="56E86900F33F11D7B64CBCCE0CB2E03A">
+                <SchoolName>John Tyler High</SchoolName>
+                <SchoolType>2403</SchoolType>
+                <SchoolURL>http://207.95.37.147:8080/sifcompliance/SchoolURL.jsp?SchoolName=JohnTylerHigh</SchoolURL>
+                <PrincipalInfo>
+                  <ContactName>Barbara Riedy</ContactName>
+                </PrincipalInfo>
+                <AddressList>
+                  <Address Type="0765">
+                    <Street>
+                      <Line1>14604 31st Ave.</Line1>
+                      <StreetNumber>14604</StreetNumber>
+                      <StreetName>31st</StreetName>
+                      <StreetType>Ave.</StreetType>
+                    </Street>
+                    <City>Boca Raton</City>
+                    <County>Palm Beach</County>
+                    <StateProvince>FL</StateProvince>
+                    <Country>US</Country>
+                    <PostalCode>33486</PostalCode>
+                  </Address>
+                </AddressList>
+                <PhoneNumberList>
+                  <PhoneNumber Type="0096">
+                    <Number>(561) 702-7199</Number>
+                  </PhoneNumber>
+                </PhoneNumberList>
+                <IdentificationInfoList>
+                  <IdentificationInfo Code="0175">00126</IdentificationInfo>
+                </IdentificationInfoList>
+                <SessionType>0830</SessionType>
+                <GradeLevels>
+                  <GradeLevel>
+                    <Code>09</Code>
+                  </GradeLevel>
+                  <GradeLevel>
+                    <Code>10</Code>
+                  </GradeLevel>
+                  <GradeLevel>
+                    <Code>11</Code>
+                  </GradeLevel>
+                  <GradeLevel>
+                    <Code>12</Code>
+                  </GradeLevel>
+                </GradeLevels>
+              </SchoolInfo>
+            </ReportData>
+          </SIF_ReportObject>
+        </SIF_ObjectData>
+      </SIF_Response>
+    </SIF_Message>
+  </xhtml:Example>
+</DataObject>

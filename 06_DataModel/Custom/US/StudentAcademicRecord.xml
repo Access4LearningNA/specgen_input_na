@@ -1,0 +1,720 @@
+<DataObject name="StudentAcademicRecord"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+	xmlns="http://sifassociation.org/SpecGen">
+	<Key>@RefId</Key>
+	<EventsReported>false</EventsReported>
+	<Item>
+		<Element>StudentAcademicRecord</Element>
+		<Description>
+			<p>This object conveys a student's academic record data for student record exchange and transcript purposes.</p>
+			<p>
+        This object is designed to be a dual-purpose object.  It can be linked to a <code>StudentRecordExchange</code> object
+        for record exchange purposes.  There may also be Zones where systems can provide this information for record exchange
+        systems or general informational purposes, in which case the object can be linked directly to <code>StudentPersonal</code>.
+      </p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Type ref="CommonTypes" name="RefIdType"/>
+		<Description>
+			<p>The Id (GUID) of this record.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>SIF_RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Type ref="CommonTypes" name="RefIdType"/>
+		<Description>
+			<p>
+        The GUID of an associated object, either <code>StudentRecordExchange</code> or <code>StudentPersonal</code>.
+      </p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>SIF_RefObject</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        The associated object type.
+      </p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>StudentRecordExchange</Code>
+			</Value>
+			<Value>
+				<Code>StudentPersonal</Code>
+			</Value>
+		</Values>
+	</Item>
+	<Item>
+		<Element>ReportingDate</Element>
+		<Characteristics>M</Characteristics>
+		<Type name="xs:date"/>
+		<Description>
+			<p>The date this record was prepared.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>StudentSchoolEnrollmentData</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Collects elements of interest from StudentSchoolEnrollment.</p>
+		</Description>
+		<Type ref="CommonTypes" name="StudentSchoolEnrollmentDataType"/>
+	</Item>
+
+	<Item>
+		<Element>DistrictEntryDate</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="PartialDateType"/>
+		<Description>
+			<p>The date the student originally enrolled in the district of the school of record.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>SchoolAttendanceHistory</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Chronology of schools attended in the student's academic career, including the current school if enrolled.</p>
+		</Description>
+		<Type ref="CommonTypes" name="SchoolAttendanceHistoryListType"/>
+	</Item>
+	<Item>
+		<Element>EnrollmentHistory</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A list of each enrollment in the schools above (see SchoolAttended).</p>
+		</Description>
+		<Type ref="CommonTypes" name="StudentSchoolEnrollmentSummaryListType"/>
+	</Item>
+	<Item>
+		<Element>CurrentCourseActivity</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>Note: Mandatory if coursework is underway.  Conveys a student's current coursework along with mid-term marks if applicable.</p>
+		</Description>
+		<Type ref="CommonTypes" name="CurrentCourseActivityType"/>
+	</Item>
+	<Item>
+		<Element>CourseHistory</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Conveys the coursework completed, performance and attendance information for a student's academic career.
+      </p>
+		</Description>
+		<Type ref="CommonTypes" name="CourseHistoryTermListType"/>
+	</Item>
+	<Item>
+		<Element>AcademicPerformanceHistory</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Provides a summary of a student's academic performance by reporting period.</p>
+		</Description>
+		<Type ref="CommonTypes" name="AcademicPerformanceHistoryType"/>
+	</Item>
+	<Item>
+		<Element>AcademicPerformanceSummary</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Conveys a cumulative summary of a student's entire academic performance at the time the transcript was generated.</p>
+		</Description>
+		<Type ref="CommonTypes" name="AcademicPerformanceSummaryType"/>
+	</Item>
+	<Item>
+		<Element>AssessmentPerformanceHistory</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>Note: Mandatory if assessments exist.  Conveys a history of assessments that the student has taken throughout his/her academic career.</p>
+		</Description>
+		<Type ref="CommonTypes" name="AssessmentPerformanceHistoryListType"/>
+	</Item>
+	<Item>
+		<Element>AdditionalGraduationRequirementPerformanceHistory</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>Note: Mandatory if additional graduation requirements exist.  Conveys a student's achievements in relation to additional graduation requirements.</p>
+		</Description>
+		<Type ref="CommonTypes" name="AdditionalGraduationRequirementPerformanceHistoryListType"/>
+	</Item>
+	<Item>
+		<Element>ActivityAwardHistory</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>Note: Mandatory if activities/awards exist.  Conveys award the student has received and/or activities in which s/he has been involved.</p>
+		</Description>
+		<Type ref="CommonTypes" name="ActivityAwardHistoryListType"/>
+	</Item>
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_MetadataType"/>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+	</Item>
+
+	 <xhtml:Example name="StudentAcademicRecord - Example 1" xmlns="">
+		<StudentAcademicRecord RefId="D932E34082D04C048112729922B58A93" SIF_RefObject="StudentRecordExchange" SIF_RefId="0EAF9D6DA4854F348103B04BFEAC65B2">
+			<ReportingDate>2006-09-26</ReportingDate>
+			<StudentSchoolEnrollmentData SchoolAttendedRefId="39FA2714A63543B0A7732796825E9C68">
+				<GradeLevel>
+					<Code>12</Code>
+				</GradeLevel>
+			</StudentSchoolEnrollmentData>
+			<DistrictEntryDate>2003-09-01</DistrictEntryDate>
+			<SchoolAttendanceHistory>
+				<SchoolAttended RefId="39FA2714A63543B0A7732796825E9C67">
+					<SchoolInfoData>
+						<LocalId>43</LocalId>
+						<StateProvinceId>389</StateProvinceId>
+						<SchoolName>Thomas Jefferson HS</SchoolName>
+						<GradeLevels>
+							<GradeLevel>
+								<Code>09</Code>
+							</GradeLevel>
+							<GradeLevel>
+								<Code>10</Code>
+							</GradeLevel>
+							<GradeLevel>
+								<Code>11</Code>
+							</GradeLevel>
+							<GradeLevel>
+								<Code>12</Code>
+							</GradeLevel>
+						</GradeLevels>
+					</SchoolInfoData>
+					<MarkingSystems>
+						<MarkValueInfoData RefId="DBA34A13FF234C7994AAE13D89DA9A50">
+							<Name>Letter Grades</Name>
+							<Letter>
+								<ValidMark>
+									<Code>A</Code>
+									<NumericEquivalent>4.0</NumericEquivalent>
+								</ValidMark>
+								<ValidMark>
+									<Code>A-</Code>
+									<NumericEquivalent>3.7</NumericEquivalent>
+								</ValidMark>
+								<ValidMark>
+									<Code>B+</Code>
+									<NumericEquivalent>3.2</NumericEquivalent>
+								</ValidMark>
+								<ValidMark>
+									<Code>B</Code>
+									<NumericEquivalent>3.0</NumericEquivalent>
+								</ValidMark>
+								<ValidMark>
+									<Code>B-</Code>
+									<NumericEquivalent>2.7</NumericEquivalent>
+								</ValidMark>
+								<ValidMark>
+									<Code>C+</Code>
+									<NumericEquivalent>2.8</NumericEquivalent>
+								</ValidMark>
+								<ValidMark>
+									<Code>C</Code>
+									<NumericEquivalent>2.0</NumericEquivalent>
+								</ValidMark>
+								<ValidMark>
+									<Code>C-</Code>
+									<NumericEquivalent>1.7</NumericEquivalent>
+								</ValidMark>
+								<ValidMark>
+									<Code>D+</Code>
+									<NumericEquivalent>1.2</NumericEquivalent>
+								</ValidMark>
+								<ValidMark>
+									<Code>D</Code>
+									<NumericEquivalent>1.0</NumericEquivalent>
+								</ValidMark>
+								<ValidMark>
+									<Code>E</Code>
+									<NumericEquivalent>0.0</NumericEquivalent>
+								</ValidMark>
+								<ValidMark>
+									<Code>F</Code>
+									<NumericEquivalent>0.0</NumericEquivalent>
+								</ValidMark>
+							</Letter>
+						</MarkValueInfoData>
+					</MarkingSystems>
+				</SchoolAttended>
+				<SchoolAttended RefId="39FA2714A63543B0A7732796825E9C68">
+					<LEAInfoData>
+						<LEAName>Everett School District</LEAName>
+					</LEAInfoData>
+					<SchoolInfoData>
+						<LocalId>44</LocalId>
+						<StateProvinceId>390</StateProvinceId>
+						<SchoolName>Everett HS</SchoolName>
+						<AddressList>
+							<Address Type="0123">
+								<Street>
+									<Line1>2416 Colby Ave</Line1>
+								</Street>
+								<City>Everett</City>
+								<StateProvince>WA</StateProvince>
+								<Country>US</Country>
+								<PostalCode>98201</PostalCode>
+							</Address>
+						</AddressList>
+						<GradeLevels>
+							<GradeLevel>
+								<Code>09</Code>
+							</GradeLevel>
+							<GradeLevel>
+								<Code>10</Code>
+							</GradeLevel>
+							<GradeLevel>
+								<Code>11</Code>
+							</GradeLevel>
+							<GradeLevel>
+								<Code>12</Code>
+							</GradeLevel>
+						</GradeLevels>
+					</SchoolInfoData>
+					<MarkingSystems>
+						<MarkValueInfoData RefId="FBE50CCA156741F389D916B89923DFFE">
+							<Name>Letter Grades</Name>
+							<Letter>
+								<ValidMark>
+									<Code>A</Code>
+									<NumericEquivalent>4.0</NumericEquivalent>
+								</ValidMark>
+								<ValidMark>
+									<Code>A-</Code>
+									<NumericEquivalent>3.7</NumericEquivalent>
+								</ValidMark>
+								<ValidMark>
+									<Code>B+</Code>
+									<NumericEquivalent>3.2</NumericEquivalent>
+								</ValidMark>
+								<ValidMark>
+									<Code>B</Code>
+									<NumericEquivalent>3.0</NumericEquivalent>
+								</ValidMark>
+								<ValidMark>
+									<Code>B-</Code>
+									<NumericEquivalent>2.7</NumericEquivalent>
+								</ValidMark>
+								<ValidMark>
+									<Code>C+</Code>
+									<NumericEquivalent>2.8</NumericEquivalent>
+								</ValidMark>
+								<ValidMark>
+									<Code>C</Code>
+									<NumericEquivalent>2.0</NumericEquivalent>
+								</ValidMark>
+								<ValidMark>
+									<Code>C-</Code>
+									<NumericEquivalent>1.7</NumericEquivalent>
+								</ValidMark>
+								<ValidMark>
+									<Code>D+</Code>
+									<NumericEquivalent>1.2</NumericEquivalent>
+								</ValidMark>
+								<ValidMark>
+									<Code>D</Code>
+									<NumericEquivalent>1.0</NumericEquivalent>
+								</ValidMark>
+								<ValidMark>
+									<Code>E</Code>
+									<NumericEquivalent>0.0</NumericEquivalent>
+								</ValidMark>
+								<ValidMark>
+									<Code>F</Code>
+									<NumericEquivalent>0.0</NumericEquivalent>
+								</ValidMark>
+							</Letter>
+						</MarkValueInfoData>
+					</MarkingSystems>
+				</SchoolAttended>
+				<SchoolAttended RefId="39FA2714A63543B0A7732796825E9C69">
+					<SchoolInfoData>
+						<LocalId>45</LocalId>
+						<StateProvinceId>391</StateProvinceId>
+						<NCESId/>
+						<SchoolName>Thomas Alva Edison HS</SchoolName>
+						<GradeLevels>
+							<GradeLevel>
+								<Code>09</Code>
+							</GradeLevel>
+							<GradeLevel>
+								<Code>10</Code>
+							</GradeLevel>
+							<GradeLevel>
+								<Code>11</Code>
+							</GradeLevel>
+							<GradeLevel>
+								<Code>12</Code>
+							</GradeLevel>
+						</GradeLevels>
+					</SchoolInfoData>
+				</SchoolAttended>
+			</SchoolAttendanceHistory>
+			<EnrollmentHistory>
+				<StudentSchoolEnrollmentData SchoolAttendedRefId="39FA2714A63543B0A7732796825E9C67">
+					<SchoolYear>1998</SchoolYear>
+					<EntryDate>1997-09-01</EntryDate>
+					<ExitDate>1998-06-30</ExitDate>
+				</StudentSchoolEnrollmentData>
+				<StudentSchoolEnrollmentData SchoolAttendedRefId="39FA2714A63543B0A7732796825E9C68">
+					<SchoolYear>1999</SchoolYear>
+					<EntryDate>1998-09-01</EntryDate>
+					<ExitDate>1999-06-30</ExitDate>
+				</StudentSchoolEnrollmentData>
+				<StudentSchoolEnrollmentData SchoolAttendedRefId="39FA2714A63543B0A7732796825E9C69">
+					<SchoolYear>2000</SchoolYear>
+					<EntryDate>1999-09-01</EntryDate>
+					<ExitDate>2000-06-30</ExitDate>
+				</StudentSchoolEnrollmentData>
+				<StudentSchoolEnrollmentData SchoolAttendedRefId="39FA2714A63543B0A7732796825E9C68">
+					<SchoolYear>2002</SchoolYear>
+					<EntryDate>2001-09-01</EntryDate>
+				</StudentSchoolEnrollmentData>
+			</EnrollmentHistory>
+			<CourseHistory>
+				<Term>
+					<TermInfoData SchoolAttendedRefId="39FA2714A63543B0A7732796825E9C67">
+						<SchoolYear>1998</SchoolYear>
+						<StartDate>1997-09-01</StartDate>
+						<EndDate>1998-03-30</EndDate>
+					</TermInfoData>
+					<Courses>
+						<Course>
+							<SchoolCourseInfoData>
+								<CourseCode>ENG031</CourseCode>
+								<CourseTitle>Grammar</CourseTitle>
+							</SchoolCourseInfoData>
+							<StartDate>1997-09-01</StartDate>
+							<EndDate>1998-03-30</EndDate>
+							<MarkingPeriods>
+								<MarkingPeriod>
+									<GradeLevelWhenTaken>
+										<Code>09</Code>
+									</GradeLevelWhenTaken>
+									<MarkData MarkValueInfoDataRefId="DBA34A13FF234C7994AAE13D89DA9A50">
+										<Letter>A</Letter>
+									</MarkData>
+									<CourseCreditsAttempted>0.50</CourseCreditsAttempted>
+									<CourseCreditsEarned>0.50</CourseCreditsEarned>
+									<DaysAbsent>0</DaysAbsent>
+									<DaysPresent>85</DaysPresent>
+								</MarkingPeriod>
+							</MarkingPeriods>
+						</Course>
+						<!-- ... -->
+					</Courses>
+				</Term>
+				<!-- ... -->
+			</CourseHistory>
+			<AcademicPerformanceHistory>
+				<TermPerformance>
+					<TermInfoData>
+						<EndDate>1998-03-31</EndDate>
+					</TermInfoData>
+					<GradeLevelWhenTaken>
+						<Code>09</Code>
+					</GradeLevelWhenTaken>
+					<CreditsAttempted>3.0</CreditsAttempted>
+					<CreditsEarned>3.0</CreditsEarned>
+					<GPACreditsAttempted>3.0</GPACreditsAttempted>
+					<GPACreditsEarned>3.0</GPACreditsEarned>
+					<GPAGradePoints>12.0</GPAGradePoints>
+					<GPA>4.00</GPA>
+					<DaysAbsent>0</DaysAbsent>
+					<DaysPresent>85</DaysPresent>
+				</TermPerformance>
+				<TermPerformance>
+					<TermInfoData>
+						<EndDate>1998-06-30</EndDate>
+					</TermInfoData>
+					<GradeLevelWhenTaken>
+						<Code>09</Code>
+					</GradeLevelWhenTaken>
+					<CreditsAttempted>3.5</CreditsAttempted>
+					<CreditsEarned>3.5</CreditsEarned>
+					<GPACreditsAttempted>3.5</GPACreditsAttempted>
+					<GPACreditsEarned>3.5</GPACreditsEarned>
+					<GPAGradePoints>12.0</GPAGradePoints>
+					<GPA>4.00</GPA>
+					<DaysAbsent>0</DaysAbsent>
+					<DaysPresent>85</DaysPresent>
+				</TermPerformance>
+				<TermPerformance>
+					<TermInfoData>
+						<EndDate>1999-01-31</EndDate>
+					</TermInfoData>
+					<GradeLevelWhenTaken>
+						<Code>09</Code>
+					</GradeLevelWhenTaken>
+					<CreditsAttempted>3.0</CreditsAttempted>
+					<CreditsEarned>3.0</CreditsEarned>
+					<GPACreditsAttempted>2.5</GPACreditsAttempted>
+					<GPACreditsEarned>2.5</GPACreditsEarned>
+					<GPAGradePoints>12.0</GPAGradePoints>
+					<GPA>4.00</GPA>
+					<DaysAbsent>0</DaysAbsent>
+					<DaysPresent>85</DaysPresent>
+				</TermPerformance>
+				<!-- ... -->
+			</AcademicPerformanceHistory>
+			<AcademicPerformanceSummary>
+				<TotalCreditsAttempted>27.3</TotalCreditsAttempted>
+				<TotalCreditsEarned>27.3</TotalCreditsEarned>
+				<CumulativeGPACreditsEarned>22.5</CumulativeGPACreditsEarned>
+				<CumulativeGradePoints>94.0</CumulativeGradePoints>
+				<CumulativeGPA>4.000</CumulativeGPA>
+				<ClassRank>1</ClassRank>
+				<ClassTotalNumber>250</ClassTotalNumber>
+				<ClassRankingDate>2002-06-01</ClassRankingDate>
+				<ProjectedGraduationDate>2002-06-05</ProjectedGraduationDate>
+			</AcademicPerformanceSummary>
+			<AssessmentPerformanceHistory>
+				<Assessment>
+					<Name>WASL</Name>
+					<AdministrationDate>2002-01-02</AdministrationDate>
+					<Level>4</Level>
+					<StudentGradeLevelWhenAssessed>
+						<Code>12</Code>
+					</StudentGradeLevelWhenAssessed>
+					<SubtestCategory>Reading</SubtestCategory>
+					<TestScoreType>0512</TestScoreType>
+					<TestScore>SCHOLAR</TestScore>
+				</Assessment>
+				<Assessment>
+					<Name>WASL</Name>
+					<AdministrationDate>2002-01-02</AdministrationDate>
+					<Level>1</Level>
+					<StudentGradeLevelWhenAssessed>
+						<Code>12</Code>
+					</StudentGradeLevelWhenAssessed>
+					<SubtestCategory>Writing</SubtestCategory>
+					<TestScoreType>0512</TestScoreType>
+					<TestScore>NOT MET</TestScore>
+				</Assessment>
+				<!-- ... -->
+			</AssessmentPerformanceHistory>
+			<AdditionalGraduationRequirementPerformanceHistory>
+				<Requirement>
+					<Name>WASL Cert Acad Achievement</Name>
+					<Status>Met</Status>
+					<StatusDeterminationDate>2002-06-01</StatusDeterminationDate>
+				</Requirement>
+				<Requirement>
+					<Name>High School &amp; Beyond Plan</Name>
+					<Method/>
+					<Status>Not Met</Status>
+					<StatusDeterminationDate>2002-06-01</StatusDeterminationDate>
+				</Requirement>
+				<!-- ... -->
+			</AdditionalGraduationRequirementPerformanceHistory>
+			<ActivityAwardHistory>
+				<ActivityAward>
+					<Name>Computer club</Name>
+					<InvolvementCode>0701</InvolvementCode>
+					<InvolvementBeginningDate>2001-09-01</InvolvementBeginningDate>
+					<InvolvementEndingDate>2002-06-30</InvolvementEndingDate>
+				</ActivityAward>
+				<!-- ... -->
+			</ActivityAwardHistory>
+		</StudentAcademicRecord>
+	</xhtml:Example>
+	 <xhtml:Example name="StudentAcademicRecord - Example 2" xmlns="">
+	<StudentAcademicRecord RefId="D932E34082D04C048112729922B58A93" SIF_RefObject="StudentRecordExchange" SIF_RefId="0EAF9D6DA4854F348103B04BFEAC65B2">
+    <ReportingDate>2010-07-15</ReportingDate>
+    <StudentSchoolEnrollmentData SchoolAttendedRefId="140902170B360F35140071CD92A52A4A">
+        <GradeLevel>
+            <Code>12</Code>
+        </GradeLevel>
+        <Counselor>
+            <StaffPersonalData>
+                <Name Type="04">
+                    <LastName>Reese</LastName>
+                    <FirstName>Beth</FirstName>
+                    <FullName>Beth Reese</FullName>
+                </Name>
+            </StaffPersonalData>
+        </Counselor>
+    </StudentSchoolEnrollmentData>
+    <SchoolAttendanceHistory>
+        <SchoolAttended RefId="140902170B360F35140071CD92A52A4A">
+            <LEAInfoData>
+                <StateProvinceId>123456</StateProvinceId>
+                <LEAName>Botetourt County</LEAName>
+            </LEAInfoData>
+            <SchoolInfoData>
+                <LocalId>440</LocalId>
+                <StateProvinceId>654321</StateProvinceId>
+	        <SchoolName>Lord Botetourt High School</SchoolName>
+		<SchoolURL>http://sites.google.com/a/bcps.k12.va.us/lord-botetourte-high-school</SchoolURL>
+                <SchoolContactList>
+                    <!-- ... -->
+                </SchoolContactList>
+                <AddressList>
+                    <Address Type="0123">
+                        <!-- ... -->
+                    </Address>
+                    <Address Type="0765">
+                        <!-- ... -->
+                    </Address>
+                </AddressList>
+                <PhoneNumberList>
+                    <PhoneNumber Type="0096">
+                        <Number>703-444-5600</Number>
+                    </PhoneNumber>
+                    <PhoneNumber Type="2364">
+                        <Number>703-555-5555</Number>
+                    </PhoneNumber>
+                </PhoneNumberList>
+                <SIF_ExtendedElements>
+                    <SIF_ExtendedElement Name="SchoolEmail">ABSmith@bcps.k12.va</SIF_ExtendedElement>
+                </SIF_ExtendedElements>
+
+            </SchoolInfoData>
+            <MarkingSystems>
+                <MarkValueInfoData RefId="9BA91E6D97A94933BA2A7D070881D2A3">
+                    <!-- ... -->
+                </MarkValueInfoData>
+            </MarkingSystems>
+
+        </SchoolAttended>
+    </SchoolAttendanceHistory>
+    <CourseHistory>
+        <Term>
+            <TermInfoData SchoolAttendedRefId="140902170C0227005A532E65ED069555">
+                <SchoolYear>2010</SchoolYear>
+            </TermInfoData>
+            <Courses>
+                <Course>
+                    <SchoolCourseInfoData>
+                        <CourseCode>1109</CourseCode>
+                        <NationalCourseCode>010011IB1130</NationalCourseCode>
+                        <CourseTitle>English 6</CourseTitle>
+                    </SchoolCourseInfoData>
+                    <MarkingPeriods>
+                        <MarkingPeriod>
+                            <TermInfoData>
+                                <TermSpan>
+                                    <Code>0828</Code>
+                                     <OtherCodeList>
+                                        <OtherCode Codeset="StateProvince">FG</OtherCode>
+                                        <OtherCode Codeset="Other">8156</OtherCode>
+                                    </OtherCodeList>
+                                </TermSpan>
+                            </TermInfoData>
+                            <GradeLevelWhenTaken>
+                                <Code>06</Code>
+                            </GradeLevelWhenTaken>
+                            <MarkData MarkValueInfoDataRefId="66C178304ECB4A8E8FA0A54B7ED4026A">
+                                <!--Letter>C</Letter>-->
+                                <!--Numeric>5</Numeric>  to be deprecated  <Quality Points -->
+                                <NumericAsDecimal>0.5</NumericAsDecimal>   <!-- Quality Points -->
+                            </MarkData>
+                            <CourseCreditsAttempted>0</CourseCreditsAttempted>
+                            <CourseCreditsEarned>1</CourseCreditsEarned>
+                            <SIF_ExtendedElements>
+                                <SIF_ExtendedElement Name="VA_Verified_Credit_Earned">1</SIF_ExtendedElement>
+                                <SIF_ExtendedElement Name="CourseCreditBasis">CreditByExam</SIF_ExtendedElement>
+                            </SIF_ExtendedElements>
+                        </MarkingPeriod>
+                    </MarkingPeriods>
+                    <SIF_ExtendedElements>
+                        <SIF_ExtendedElement Name="APCourse">No</SIF_ExtendedElement>
+                        <SIF_ExtendedElement Name="AcceleratedCourse">Yes</SIF_ExtendedElement>
+                        <SIF_ExtendedElement Name="IBCourse">No</SIF_ExtendedElement>
+                        <SIF_ExtendedElement Name="DualEnrollmentCourse">Yes</SIF_ExtendedElement>
+                        <SIF_ExtendedElement Name="HonorsCourse">No</SIF_ExtendedElement>
+                        <SIF_ExtendedElement Name="SummerCourse">No</SIF_ExtendedElement>
+                    </SIF_ExtendedElements>
+                </Course>
+            </Courses>
+        </Term>
+    </CourseHistory>
+
+    <AcademicPerformanceHistory>
+        <TermPerformance>
+            <TermInfoData>
+                <SchoolYear>2009</SchoolYear>
+            </TermInfoData>
+            <DaysAbsent>6</DaysAbsent>
+            <SIF_ExtendedElements>
+                <SIF_ExtendedElement Name="TermUnexcusedDaysAbent">3</SIF_ExtendedElement>
+            </SIF_ExtendedElements>
+        </TermPerformance>
+        <TermPerformance>
+            <TermInfoData>
+                <SchoolYear>2010</SchoolYear>
+            </TermInfoData>
+            <DaysAbsent>2</DaysAbsent>
+            <SIF_ExtendedElements>
+                <SIF_ExtendedElement Name="TermUnexcusedDaysAbent">3</SIF_ExtendedElement>
+            </SIF_ExtendedElements>
+        </TermPerformance>
+        <TermPerformance>
+            <TermInfoData>
+                <SchoolYear>2011</SchoolYear>
+            </TermInfoData>
+            <DaysAbsent>4</DaysAbsent>
+        </TermPerformance>
+    </AcademicPerformanceHistory>
+
+    <AcademicPerformanceSummary>
+        <CumulativeGPA>3.5</CumulativeGPA>
+        <ClassRank>17</ClassRank>
+        <ClassTotalNumber>145</ClassTotalNumber>
+        <GraduationDate>2011-06-30</GraduationDate>
+        <GraduationDiplomaType>2</GraduationDiplomaType>
+        <SIF_ExtendedElements>
+            <SIF_ExtendedElement Name="RankTermBasis">4</SIF_ExtendedElement>
+        </SIF_ExtendedElements>
+     </AcademicPerformanceSummary>
+
+
+    <AssessmentPerformanceHistory>
+        <Assessment>
+            <Name>Industry Certification</Name>
+            <AdministrationDate>2010-03-31</AdministrationDate>
+            <SubtestCategory>Welding</SubtestCategory>
+            <TestScore>99</TestScore>
+        </Assessment>
+        <Assessment>
+            <Name>Industry Certification</Name>
+            <AdministrationDate>2010-03-31</AdministrationDate>
+            <SubtestCategory>Carpentry</SubtestCategory>
+            <TestScore>PASS</TestScore>
+        </Assessment>
+        <Assessment>
+            <Name>Industry Certification</Name>
+            <AdministrationDate>2010-03-31</AdministrationDate>
+            <SubtestCategory>MSSC</SubtestCategory>
+            <TestScore>0</TestScore>
+            <SIF_ExtendedElements>
+                <SIF_ExtendedElement Name="ScoreNotReportedReason">3</SIF_ExtendedElement>
+            </SIF_ExtendedElements>
+        </Assessment>
+    </AssessmentPerformanceHistory>
+    <ActivityAwardHistory>
+        <ActivityAward>
+            <Name>Carpentry Certification Completion</Name>
+            <InvolvementEndingDate>2010-03-31</InvolvementEndingDate>
+            <SIF_ExtendedElements>
+                <SIF_ExtendedElement Name="GovernorRecognition">No</SIF_ExtendedElement>
+            </SIF_ExtendedElements>
+         </ActivityAward>
+    </ActivityAwardHistory>
+
+
+   </StudentAcademicRecord>
+</xhtml:Example>
+</DataObject>

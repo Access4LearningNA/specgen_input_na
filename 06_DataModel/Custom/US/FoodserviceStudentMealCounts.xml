@@ -1,0 +1,98 @@
+<DataObject name="FoodserviceStudentMealCounts"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <EventsReported>false</EventsReported>
+  <Key>@RefId</Key>
+  <Item>
+    <Element>FoodserviceStudentMealCounts</Element>
+    <Description>
+      <p>This object communicates the daily student sales.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies the daily meal sales object</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>School for which the sales object applies</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records student meal counts per program for" count="*:1" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>Date</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Date on which the sales occurred.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>Program</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="FundedProgramType"></Type>
+  </Item>
+  <Item>
+    <Element>Counts</Element>
+    <Characteristics>M</Characteristics>
+     <Type ref="CommonTypes" name="FSCountListType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+
+  <xhtml:Example xmlns="">
+    <FoodserviceStudentMealCounts RefId="E822BCDC9E7A40F787ED8183D3B485B5">
+      <SchoolInfoRefId>F2F9D9B212B94489BC3F9FD6AB75F54A</SchoolInfoRefId>
+      <Date>2003-08-25</Date>
+      <Program Type="Foodservice">NSLP</Program>
+      <Counts>
+        <Count>
+          <MealStatus Type="Free" />
+          <MealType>FirstMeal</MealType>
+          <Amount Type="Value" Credits="0">99999.99</Amount>
+          <Tax>9999.99</Tax>
+          <Value>99999</Value>
+        </Count>
+        <Count>
+          <MealStatus Type="Reduced" />
+          <MealType>FirstMeal</MealType>
+          <Amount Type="Value" Credits="0">99999.99</Amount>
+          <Tax>9999.99</Tax>
+          <Value>99999</Value>
+        </Count>
+        <Count>
+          <MealStatus Type="Free" />
+          <MealType>SecondMeal</MealType>
+          <Amount Type="Value" Credits="0">99999.99</Amount>
+          <Tax>9999.99</Tax>
+          <Value>99999</Value>
+        </Count>
+        <Count>
+          <MealStatus Type="None" />
+          <MealType>SecondMeal</MealType>
+          <Amount Type="Value" Credits="0">99999.99</Amount>
+          <Tax>9999.99</Tax>
+          <Value>99999</Value>
+        </Count>
+      </Counts>
+    </FoodserviceStudentMealCounts>
+  </xhtml:Example>
+</DataObject>

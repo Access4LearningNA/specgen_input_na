@@ -1,0 +1,84 @@
+<DataObject name="FoodserviceItem"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <EventsReported>true</EventsReported>
+  <Key>@RefId</Key>
+  <Item>
+    <Element>FoodserviceItem</Element>
+  </Item>
+  <Intro>
+    <p>This object communicates information about food service items.</p>
+  </Intro>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies this item</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>LocalId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Item number as presented to user.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Description of Item</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>ElectronicIdList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Electronic identifier(s) associated with this item.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ElectronicIdListType"></Type>
+  </Item>
+  <Item>
+    <Element>ItemCategory</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>
+        The category is derived from the Child Nutrition Database's food category codes/names (Source: Food Category Name File <a href="References.html#CNDB">[CNDB]</a>).
+        Agents may use the actual codes or a district's local definition of the names associated with the codes.
+        The Child Nutrition Database <a href="References.html#CNDB">[CNDB]</a> is updated on a yearly basis by the USDA.
+      </p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+    <ItemExample>Milk</ItemExample>
+    <ItemExample>Meat</ItemExample>
+    <ItemExample>Vegetables</ItemExample>
+    <ItemExample>Other</ItemExample>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <FoodserviceItem RefId="EF521958AB474559B2AE7BD82647C66B">
+      <LocalId>2391</LocalId>
+      <Description>Green Burrito</Description>
+      <ElectronicIdList>
+        <ElectronicId Type="Barcode">123456</ElectronicId>
+      </ElectronicIdList>
+      <ItemCategory>Vegetables</ItemCategory>
+    </FoodserviceItem>
+  </xhtml:Example>
+</DataObject>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jaxb:bindings 
+        xmlns:jaxws="http://java.sun.com/xml/ns/jaxws"
+        xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" version="2.1"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <jaxb:bindings schemaLocation="SIF.input.schema.xsd" node="/xs:schema/xs:element[@name='Code']">
+        <jaxb:class name="CodeUppercase" />
+    </jaxb:bindings>
+
+</jaxb:bindings>

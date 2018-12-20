@@ -1,0 +1,179 @@
+<DataObject name="StudentSectionEnrollment"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>@RefId</Key>
+
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>StudentSectionEnrollment</Element>
+    <Description>
+      <p>This object contains information about a student's enrollment in a section of a course.</p>
+    </Description>
+  </Item>
+  <Item>
+
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies this StudentSectionEnrollment entity.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+
+    <Attribute>StudentPersonalRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) of the student to whom the enrollment information applies.</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records section enrollment for" count="*:1" name="IdRefType"></Type>
+  </Item>
+  <Item>
+
+    <Attribute>SectionInfoRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) of the section in which this student is enrolled.</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records student enrollment in" count="1:1" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>SchoolYear</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        School year for which the information is applicable, expressed as the four-digit year in which the school
+        year ends (e.g. <code>2007</code> for the 2006-07 school year).
+      </p>
+    </Description>
+    <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
+  <Item>
+    <Element>EntryDate</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date from when this course section enrollment is valid.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>ExitDate</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The last school calendar day (membership day) the student was enrolled in the course section (inclusive).</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>ScheduleInfoOverrideList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A complete replacement of the standard SectionInfo/ScheduleInfoList for this student's course enrollment.</p>
+    </Description>
+     <Type ref="CommonTypes" name="ScheduleInfoOverrideListType"></Type>
+  </Item>
+
+  <Item>
+    <Element>CreditsAttempted</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Number of credits the student is attempting to earn. If present, this element's value overrides the credits in SchoolCourseInfo and SectionInfo.</p>
+    </Description>
+    <Type ref="CommonTypes" name="CreditsAttemptedType"></Type>
+  </Item>
+
+
+  <Item>
+    <Element>DualCredit</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Indicates whether this course is applicable in having dual credits. This value overrides the SchoolCourseInfo DualCredit value at the student section level..</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Yes</Code>
+      </Value>
+      <Value>
+        <Code>No</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>CTEConcentrator</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Indicates whether this is a CTE concentrator for this course.  This value overrides the SchoolCourseInfo CTEConcentrator value at the student section level..</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Yes</Code>
+      </Value>
+      <Value>
+        <Code>No</Code>
+      </Value>
+    </Values>
+  </Item>
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example name="StudentSectionEnrollment" xmlns="">
+    <StudentSectionEnrollment RefId="983AC16598793002C3D00AA00456789D" StudentPersonalRefId="CAE293165987101A8C3D00AA00456789"
+      SectionInfoRefId="9076AB23E386112B7EA2256100BB3312" SchoolYear="2002">
+      <EntryDate>2001-09-05</EntryDate>
+      <ExitDate>2002-03-01</ExitDate>
+      <ScheduleInfoOverrideList>
+        <ScheduleInfoOverride Override="Yes" TermInfoRefId="099BBC3227490063E97403434C5C2207">
+          <MeetingTimeList>
+            <MeetingTime>
+              <TimetableDay>M</TimetableDay>
+              <TimetablePeriod>6</TimetablePeriod>
+            </MeetingTime>
+            <MeetingTime>
+              <TimetableDay>W</TimetableDay>
+              <TimetablePeriod>6</TimetablePeriod>
+            </MeetingTime>
+            <MeetingTime>
+              <TimetableDay>F</TimetableDay>
+              <TimetablePeriod>6</TimetablePeriod>
+            </MeetingTime>
+          </MeetingTimeList>
+        </ScheduleInfoOverride>
+        <ScheduleInfoOverride Override="Yes" TermInfoRefId="A2334007263E97403434C5C220798765">
+          <MeetingTimeList>
+            <MeetingTime>
+              <TimetableDay>M</TimetableDay>
+              <TimetablePeriod>4</TimetablePeriod>
+            </MeetingTime>
+            <MeetingTime>
+              <TimetableDay>W</TimetableDay>
+              <TimetablePeriod>4</TimetablePeriod>
+            </MeetingTime>
+            <MeetingTime>
+              <TimetableDay>F</TimetableDay>
+              <TimetablePeriod>4</TimetablePeriod>
+            </MeetingTime>
+          </MeetingTimeList>
+        </ScheduleInfoOverride>
+      </ScheduleInfoOverrideList>
+      <CreditsAttempted Type="0588">1</CreditsAttempted>
+      <DualCredit>Yes</DualCredit>
+	  <CTEConcentrator>Yes</CTEConcentrator>
+    </StudentSectionEnrollment>
+  </xhtml:Example>
+</DataObject>

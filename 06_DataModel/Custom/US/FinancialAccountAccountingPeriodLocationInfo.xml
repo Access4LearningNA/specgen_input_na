@@ -1,0 +1,65 @@
+<DataObject name="FinancialAccountAccountingPeriodLocationInfo"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>FinancialAccountAccountingPeriodLocationInfo</Element>
+    <Description>
+      <p>This object relates financial account to an accounting period and a location.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies this object.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>FinancialAccountRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Financial account reference.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>AccountingPeriodRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Accounting period reference.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>LocationInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>LocationInfo reference.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <FinancialAccountAccountingPeriodLocationInfo RefId="B595A5959A8FE43448DF0EF5C635CD0E">
+      <FinancialAccountRefId>C6576B6AF13F49E09F0B6B0A92BF5D3B</FinancialAccountRefId>
+      <AccountingPeriodRefId>BA03EDF66F2848D7BE32586D98170F29</AccountingPeriodRefId>
+      <LocationInfoRefId>E72C08BD41894187BA07B00C1401BE3F</LocationInfoRefId>
+    </FinancialAccountAccountingPeriodLocationInfo>
+  </xhtml:Example>
+</DataObject>

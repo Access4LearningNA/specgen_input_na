@@ -1,0 +1,104 @@
+<DataObject name="UserOrganizationAssociation"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+	xmlns="http://sifassociation.org/SpecGen">
+	<Key>@RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>UserOrganizationAssociation</Element>
+		<Description>
+			<p>This object associates a user of computer software applications to an organization. </p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>GUID that uniquely identifies an instance of this object.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+	<Item>
+		<Element>PersonRefId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>RefId of the person or any other SIF role object instance (e.g., student) of the person.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Attribute>SIF_Object</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The name of the SIF object that is being referenced by the payload of this element.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>OrganizationRefId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>RefId of the organization.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Attribute>SIF_Object</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The name of the SIF object that is being referenced by the payload of this element.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>AssociationType</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The type of association. For example, if the user is a member of the organization then the type would be Member.</p>
+		</Description>
+		<Type name="xs:token"/>
+	</Item>
+	<Item>
+		<Element>AuthoritativeSourceId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The RefID of the Authoritative Application creating this association</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+	<Item>
+		<Element>StartDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Start date of the association.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<Item>
+		<Element>EndDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>End date of the association.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_MetadataType"/>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+	</Item>
+	<xhtml:Example name="UserOrganizationAssociation" xmlns="">
+		<UserOrganizationAssociation RefId="FE1078BA3261545A31905937B265CE01">
+			<PersonRefId SIF_Object = "StaffPersonal">AE1078BA3261545A31905937B265CE01</PersonRefId>
+			<OrganizationRefId SIF_Object = "SchoolInfo">BE1078BA3261545A31905937B265CE01</OrganizationRefId>
+			<AssociationType>Associate Member</AssociationType>
+			<StartDate>2001-09-05</StartDate>
+		</UserOrganizationAssociation>
+	</xhtml:Example>
+</DataObject>

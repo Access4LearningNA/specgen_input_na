@@ -1,0 +1,66 @@
+<DataObject name="FoodservicePurchaseTransaction"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <EventsReported>true</EventsReported>
+  <Key>@RefId</Key>
+  <Item>
+    <Element>FoodservicePurchaseTransaction</Element>
+    <Description>
+      <p>
+        If a food service transaction is of type <code>Purchase</code> then this object can give the details of the purchase.
+        This object does not exist for other transaction types.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies purchase transaction</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>FoodserviceTransactionRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies food service transaction in which this purchase was made</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="provides purchase details for" count="?:1" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>PurchaseQuantities</Element>
+    <Characteristics>M</Characteristics>
+     <Type ref="CommonTypes" name="FoodservicePurchaseQuantityListType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+
+  <xhtml:Example xmlns="">
+    <FoodservicePurchaseTransaction RefId="AC99DDF0ED0E426ABE18C9174EC469B7">
+      <FoodserviceTransactionRefId>EFA054E90CDE45C9BB8A87E9F8F9B238</FoodserviceTransactionRefId>
+      <PurchaseQuantities>
+        <PurchaseQuantity FoodserviceItemPortionRefId="A2366AFF739B4BC590DA53AD3CE2311A" Earned="Yes">
+          <MealType>FirstMeal</MealType>
+          <Value>1</Value>
+        </PurchaseQuantity>
+        <PurchaseQuantity FoodserviceItemPortionRefId="E612E09D8B614BB4B9F892CFC3272063" Earned="No">
+          <MealType>AlaCarte</MealType>
+          <Value>2</Value>
+        </PurchaseQuantity>
+      </PurchaseQuantities>
+    </FoodservicePurchaseTransaction>
+  </xhtml:Example>
+</DataObject>

@@ -1,0 +1,320 @@
+<DataObject name='BellSchedule'
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Intro>
+    The BellSchedule is an object that a SIS (or another student scheduling application) can utilize to provide school / school year scheduling information, including timetable days, periods and bell schedules to other applications that may require this detailed scheduling information.
+
+    Additionally, the MeetingTime common element, which is utilized by the SectionInfo object's MeetingTimeList, provides references to these new timetable days and periods in order to provide this detailed scheduling information about each section.  Finally, the CalendarDate object provides the bell schedules and timetable days for each calendar date to subscribers needing this detailed information about when sections actually meet.  Events will be published for the BellSchedule object.
+
+  </Intro>
+  <EventsReported>true</EventsReported>
+  <Key>@RefId</Key>
+  <Item>
+    <Element>BellSchedule</Element>
+    <Description>
+      This object provides the bell schedule information for a school and school year, including timetable days, periods and bell schedules.
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Description>The Id (GUID) that uniquely identifies an instance of the object.</Description>
+    <Characteristics>M</Characteristics>
+    <Type ref='CommonTypes' name='RefIdType'/>
+  </Item>
+
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies the school to which this bell schedule information applies</p>
+    </Description>
+    <Type ref='CommonTypes' name='IdRefType'/>
+  </Item>
+
+  <Item>
+    <Element>SchoolYear</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007" for the 2006-07 school year).</p>
+    </Description>
+    <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
+
+  <Item>
+    <Element>BellScheduleName</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>A name that uniquely identifies a particular BellSchedule from others for the same school and year.</p>
+    </Description>
+    <Type name='xs:normalizedString'/>
+  </Item>
+
+  <Item>
+    <Element>TimetableDayList</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The timetable days for this school year bell schedule.  This essentially provides a list of the time day identifiers that are used in the BellPeriod definitions below with some additional properties for each.  The identifiers defined here may be referenced by other objects / elements like MeetingTime.</p>
+    </Description>
+   <Type ref="CommonTypes" name="TimetableDayListType"></Type>
+  </Item>
+
+  <Item>
+    <Element>TimetablePeriodList</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The timetable periods for this school year bell schedule.  This essentially provides a list of the time period identifiers that are used in the BellPeriod definitions below with some addition properties for each.  The identifiers defined here may be referenced by other objects / elements like MeetingTime.</p>
+    </Description>
+    <Type ref="CommonTypes" name="TimetablePeriodListType"></Type>
+  </Item>
+
+  <Item>
+    <Element>BellPeriodList</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The bell periods for this school year bell schedule.</p>
+    </Description>
+     <Type ref="CommonTypes" name="BellPeriodListType"></Type>
+  </Item>
+
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+
+  <xhtml:Example name="BellSchedule - Example 1" xmlns=''>
+    <BellSchedule RefId="A157E79C10AC744ED90AF2871BEB90B3">
+      <SchoolInfoRefId>B7A34E561C97345C0A4E11BB112B2753</SchoolInfoRefId>
+      <SchoolYear>2009</SchoolYear>
+      <BellScheduleName>High School Bell Schedule</BellScheduleName>
+      <TimetableDayList>
+        <TimetableDay>
+          <Identifier>A</Identifier>
+          <Name>A-Day</Name>
+        </TimetableDay>
+        <TimetableDay>
+          <Identifier>B</Identifier>
+          <Name>B-Day</Name>
+        </TimetableDay>
+        <TimetableDay>
+          <Identifier>X</Identifier>
+          <Name>AssemblyDay</Name>
+        </TimetableDay>
+      </TimetableDayList>
+      <TimetablePeriodList>
+        <TimetablePeriod>
+          <Identifier>P0</Identifier>
+          <Name>Before School Period</Name>
+        </TimetablePeriod>
+        <TimetablePeriod>
+          <Identifier>P1</Identifier>
+          <Name>Period 1</Name>
+        </TimetablePeriod>
+        <TimetablePeriod>
+          <Identifier>P2</Identifier>
+          <Name>Period 2</Name>
+        </TimetablePeriod>
+        <TimetablePeriod>
+          <Identifier>P3</Identifier>
+          <Name>Period 3</Name>
+        </TimetablePeriod>
+        <TimetablePeriod>
+          <Identifier>P4</Identifier>
+          <Name>Period 4</Name>
+        </TimetablePeriod>
+        <TimetablePeriod>
+          <Identifier>P5</Identifier>
+          <Name>Period 5</Name>
+        </TimetablePeriod>
+        <TimetablePeriod>
+          <Identifier>PX</Identifier>
+          <Name>Assembly Period</Name>
+        </TimetablePeriod>
+      </TimetablePeriodList>
+      <BellPeriodList>
+        <BellPeriod>
+          <TimetableDayIdentifier>A</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>P0</TimetablePeriodIdentifier>
+          <StartTime>08:00:00</StartTime>
+          <EndTime>08:55:00</EndTime>
+          <RegularSchoolPeriod>No</RegularSchoolPeriod>
+          <InstructionalMinutes>0</InstructionalMinutes>
+          <UseInAttendanceCalculations>No</UseInAttendanceCalculations>
+        </BellPeriod>
+        <BellPeriod>
+          <TimetableDayIdentifier>A</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>P1</TimetablePeriodIdentifier>
+          <StartTime>09:00:00</StartTime>
+          <EndTime>09:55:00</EndTime>
+          <RegularSchoolPeriod>Yes</RegularSchoolPeriod>
+          <InstructionalMinutes>55</InstructionalMinutes>
+          <UseInAttendanceCalculations>Yes</UseInAttendanceCalculations>
+        </BellPeriod>
+        <BellPeriod>
+          <TimetableDayIdentifier>A</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>P2</TimetablePeriodIdentifier>
+          <StartTime>10:00:00</StartTime>
+          <EndTime>10:55:00</EndTime>
+          <RegularSchoolPeriod>Yes</RegularSchoolPeriod>
+          <InstructionalMinutes>55</InstructionalMinutes>
+          <UseInAttendanceCalculations>Yes</UseInAttendanceCalculations>
+        </BellPeriod>
+        <BellPeriod>
+          <TimetableDayIdentifier>A</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>P3</TimetablePeriodIdentifier>
+          <StartTime>11:00:00</StartTime>
+          <EndTime>11:55:00</EndTime>
+          <RegularSchoolPeriod>Yes</RegularSchoolPeriod>
+          <InstructionalMinutes>55</InstructionalMinutes>
+          <UseInAttendanceCalculations>Yes</UseInAttendanceCalculations>
+        </BellPeriod>
+        <BellPeriod>
+          <TimetableDayIdentifier>A</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>P4</TimetablePeriodIdentifier>
+          <StartTime>13:00:00</StartTime>
+          <EndTime>13:55:00</EndTime>
+          <RegularSchoolPeriod>Yes</RegularSchoolPeriod>
+          <InstructionalMinutes>55</InstructionalMinutes>
+          <UseInAttendanceCalculations>Yes</UseInAttendanceCalculations>
+        </BellPeriod>
+        <BellPeriod>
+          <TimetableDayIdentifier>A</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>P5</TimetablePeriodIdentifier>
+          <StartTime>14:00:00</StartTime>
+          <EndTime>14:55:00</EndTime>
+          <RegularSchoolPeriod>Yes</RegularSchoolPeriod>
+          <InstructionalMinutes>55</InstructionalMinutes>
+          <UseInAttendanceCalculations>Yes</UseInAttendanceCalculations>
+        </BellPeriod>
+        <BellPeriod>
+          <TimetableDayIdentifier>B</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>P0</TimetablePeriodIdentifier>
+          <StartTime>08:00:00</StartTime>
+          <EndTime>08:55:00</EndTime>
+          <RegularSchoolPeriod>No</RegularSchoolPeriod>
+          <InstructionalMinutes>0</InstructionalMinutes>
+          <UseInAttendanceCalculations>No</UseInAttendanceCalculations>
+        </BellPeriod>
+        <BellPeriod>
+          <TimetableDayIdentifier>B</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>P1</TimetablePeriodIdentifier>
+          <StartTime>09:00:00</StartTime>
+          <EndTime>09:55:00</EndTime>
+          <RegularSchoolPeriod>Yes</RegularSchoolPeriod>
+          <InstructionalMinutes>55</InstructionalMinutes>
+          <UseInAttendanceCalculations>Yes</UseInAttendanceCalculations>
+        </BellPeriod>
+        <BellPeriod>
+          <TimetableDayIdentifier>B</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>P2</TimetablePeriodIdentifier>
+          <StartTime>10:00:00</StartTime>
+          <EndTime>10:55:00</EndTime>
+          <RegularSchoolPeriod>Yes</RegularSchoolPeriod>
+          <InstructionalMinutes>55</InstructionalMinutes>
+          <UseInAttendanceCalculations>Yes</UseInAttendanceCalculations>
+        </BellPeriod>
+        <BellPeriod>
+          <TimetableDayIdentifier>B</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>P3</TimetablePeriodIdentifier>
+          <StartTime>11:00:00</StartTime>
+          <EndTime>11:55:00</EndTime>
+          <RegularSchoolPeriod>Yes</RegularSchoolPeriod>
+          <InstructionalMinutes>55</InstructionalMinutes>
+          <UseInAttendanceCalculations>Yes</UseInAttendanceCalculations>
+        </BellPeriod>
+        <BellPeriod>
+          <TimetableDayIdentifier>B</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>P4</TimetablePeriodIdentifier>
+          <StartTime>13:00:00</StartTime>
+          <EndTime>13:55:00</EndTime>
+          <RegularSchoolPeriod>Yes</RegularSchoolPeriod>
+          <InstructionalMinutes>55</InstructionalMinutes>
+          <UseInAttendanceCalculations>Yes</UseInAttendanceCalculations>
+        </BellPeriod>
+        <BellPeriod>
+          <TimetableDayIdentifier>B</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>P5</TimetablePeriodIdentifier>
+          <StartTime>14:00:00</StartTime>
+          <EndTime>14:55:00</EndTime>
+          <RegularSchoolPeriod>Yes</RegularSchoolPeriod>
+          <InstructionalMinutes>55</InstructionalMinutes>
+          <UseInAttendanceCalculations>Yes</UseInAttendanceCalculations>
+        </BellPeriod>
+        <BellPeriod>
+          <TimetableDayIdentifier>B</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>PX</TimetablePeriodIdentifier>
+          <StartTime>15:00:00</StartTime>
+          <EndTime>16:55:00</EndTime>
+          <RegularSchoolPeriod>No</RegularSchoolPeriod>
+          <InstructionalMinutes>0</InstructionalMinutes>
+          <UseInAttendanceCalculations>No</UseInAttendanceCalculations>
+        </BellPeriod>
+        <BellPeriod>
+          <TimetableDayIdentifier>X</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>P1</TimetablePeriodIdentifier>
+          <StartTime>09:00:00</StartTime>
+          <EndTime>09:25:00</EndTime>
+          <RegularSchoolPeriod>Yes</RegularSchoolPeriod>
+          <InstructionalMinutes>25</InstructionalMinutes>
+          <UseInAttendanceCalculations>Yes</UseInAttendanceCalculations>
+        </BellPeriod>
+        <BellPeriod>
+          <TimetableDayIdentifier>X</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>P2</TimetablePeriodIdentifier>
+          <StartTime>09:30:00</StartTime>
+          <EndTime>09:55:00</EndTime>
+          <RegularSchoolPeriod>Yes</RegularSchoolPeriod>
+          <InstructionalMinutes>25</InstructionalMinutes>
+          <UseInAttendanceCalculations>Yes</UseInAttendanceCalculations>
+        </BellPeriod>
+        <BellPeriod>
+          <TimetableDayIdentifier>X</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>P3</TimetablePeriodIdentifier>
+          <StartTime>10:00:00</StartTime>
+          <EndTime>10:25:00</EndTime>
+          <RegularSchoolPeriod>Yes</RegularSchoolPeriod>
+          <InstructionalMinutes>25</InstructionalMinutes>
+          <UseInAttendanceCalculations>Yes</UseInAttendanceCalculations>
+        </BellPeriod>
+        <BellPeriod>
+          <TimetableDayIdentifier>X</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>P4</TimetablePeriodIdentifier>
+          <StartTime>10:30:00</StartTime>
+          <EndTime>10:55:00</EndTime>
+          <RegularSchoolPeriod>Yes</RegularSchoolPeriod>
+          <InstructionalMinutes>25</InstructionalMinutes>
+          <UseInAttendanceCalculations>Yes</UseInAttendanceCalculations>
+        </BellPeriod>
+        <BellPeriod>
+          <TimetableDayIdentifier>X</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>P5</TimetablePeriodIdentifier>
+          <StartTime>11:00:00</StartTime>
+          <EndTime>11:25:00</EndTime>
+          <RegularSchoolPeriod>Yes</RegularSchoolPeriod>
+          <InstructionalMinutes>25</InstructionalMinutes>
+          <UseInAttendanceCalculations>Yes</UseInAttendanceCalculations>
+        </BellPeriod>
+        <BellPeriod>
+          <TimetableDayIdentifier>X</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>PX</TimetablePeriodIdentifier>
+          <StartTime>12:30:00</StartTime>
+          <EndTime>14:30:00</EndTime>
+          <RegularSchoolPeriod>No</RegularSchoolPeriod>
+          <InstructionalMinutes>0</InstructionalMinutes>
+          <UseInAttendanceCalculations>No</UseInAttendanceCalculations>
+        </BellPeriod>
+      </BellPeriodList>
+    </BellSchedule>
+
+  </xhtml:Example>
+</DataObject>

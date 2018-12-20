@@ -1,0 +1,89 @@
+<DataObject name="IdMAuthorization"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+	xmlns="http://sifassociation.org/SpecGen">
+	<Key>@RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>IdMAuthorization</Element>
+		<Description>
+			<p>This object establishes a role/permission map between the Organization-User and the downstream applications’ roles and permissions. This will be used primarily to provision/deprovision users from the SIS/HR systems to other applications.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>GUID that uniquely identifies an instance of this object.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+	<Item>
+		<Element>UserOrganizationAssociationRefId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The RefId for the SIF UserOrganizationAssociation object which defines the Organization-User to be authorized.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>ApplicationRefId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>RefId of the Identity Provider application.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>ApplicationFunction</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The role for the OrganizationUser to be assigned for the target application. The consuming application must be able to honor such role.</p>
+		</Description>
+		<Type name="xs:token"/>
+	</Item>
+	<Item>
+		<Element>AuthoritativeSourceId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The RefID of the Authoritative Application creating this association.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>StartDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Start date of the association of this authorization instance to the Identity Provider application.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<Item>
+		<Element>EndDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>End date of the association of this authorization instance to the Identity Provider application.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_MetadataType"/>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+	</Item>
+	<xhtml:Example name="IdMAuthorization" xmlns="">
+		<IdMAuthorization RefId="FE1078BA3261545A31905937B265CE01">
+			<UserOrganizationAssociationRefId>AC3078BA3261545A31905937B265CE02</UserOrganizationAssociationRefId>
+			<ApplicationRefId>AC3089BA3261545A31905937B265CE02</ApplicationRefId>
+			<StartDate>2001-09-05</StartDate>
+		</IdMAuthorization>
+	</xhtml:Example>
+</DataObject>

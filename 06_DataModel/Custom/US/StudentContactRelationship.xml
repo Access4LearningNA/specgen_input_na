@@ -1,0 +1,96 @@
+<DataObject name='StudentContactRelationship'
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Intro>
+    This object defines a relationship between a contact person and a student.
+  </Intro>
+  <EventsReported>true</EventsReported>
+  <Key>@StudentPersonalRefId</Key>
+  <Key>@StudentContactPersonalRefId</Key>
+
+  <Item>
+    <Element>StudentContactRelationship</Element>
+    <Description>The relationship between a student and a contact person.</Description>
+  </Item>
+
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>A GUID that identifies an instance of this object. This RefId is new for 2.7M and MUST be supported like other objects that have a RefId (i.e. it is the key for the object).  The alternate keys MUST continue to be supported.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <Item>
+    <Attribute>StudentPersonalRefId</Attribute>
+    <Description>GUID that identifies the student for the relationship.</Description>
+    <Characteristics>M</Characteristics>
+    <Type ref='CommonTypes' name='IdRefType'/>
+  </Item>
+
+  <Item>
+    <Attribute>StudentContactPersonalRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies the contact person for the relationship.</p>
+    </Description>
+    <Type ref='CommonTypes' name='IdRefType'/>
+  </Item>
+
+  <Item>
+    <Element>Relationship</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The relationship of the contact person to the student</p>
+    </Description>
+    <Type ref="CommonTypes" name="RelationshipType"></Type>
+  </Item>
+
+  <Item>
+    <Element>ContactFlags</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Contains Yes/No characteristics of the contact person's role.  Provide a Yes value for all that apply. At least one of the child elements of ContactFlags must have a Yes value.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ContactFlagsType"></Type>
+  </Item>
+
+  <Item>
+    <Element>ContactSequence</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Number indicating the order in which the person should be contacted.</p>
+    </Description>
+    <Type name='xs:unsignedInt'/>
+  </Item>
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+
+  <xhtml:Example name="StudentContactRelationship - Example 1" xmlns=''>
+    <StudentContactRelationship RefId="359D75101AD0A9D7A8C3DAD0A85103A2"
+      StudentPersonalRefId='DEE34B359D75101A8C3D00AA001A1652'
+      StudentContactPersonalRefId="6472B2610947583A463DBB345291B001">
+      <Relationship>
+        <Code>1735</Code>
+      </Relationship>
+      <ContactFlags>
+        <PickupRights>Yes</PickupRights>
+      </ContactFlags>
+    </StudentContactRelationship>
+
+  </xhtml:Example>
+</DataObject>

@@ -1,0 +1,74 @@
+<DataObject name="EmployeeCredit"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>EmployeeCredit</Element>
+    <Description>
+      <p>This object contains information about courses and activities taken by employees.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>This is the GUID for this object.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Attribute>EmployeePersonalRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>References EmployeePersonal object.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>ProfessionalDevelopmentActivitiesRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>References the ProfessionalDevelopmentActivities object</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>EndDate</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Date in which the course or activity was completed and awarded credit.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>Earned</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The number of units earned</p>
+    </Description>
+    <Type ref="CommonTypes" name="EmployeeCreditEarnedType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <EmployeeCredit RefId="BC2078BA3261545A31905937B265CE01" EmployeePersonalRefId="BE3078BA3261545A31905937B265CE01"
+      ProfessionalDevelopmentActivitiesRefId="FD4078BA3261545A31905937B265CE01">
+      <EndDate>2003-05-20</EndDate>
+      <Earned Type="Credits">3.4</Earned>
+    </EmployeeCredit>
+  </xhtml:Example>
+</DataObject>

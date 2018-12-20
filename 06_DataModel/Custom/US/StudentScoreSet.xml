@@ -1,0 +1,88 @@
+<DataObject name="StudentScoreSet"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+
+  <Item>
+    <Element>StudentScoreSet</Element>
+    <Description>
+      <p>The scored results from an assessment.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Description>
+      <p>The GUID that uniquely identifies an instance of the object.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>ScoreMetric</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="ExternalCodeSets" name="NCES0056AssessmentReportingMethodType"></Type>
+    <Description>
+      <p>The metric or scale used to report the score.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>AssessmentAdministrationRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>The administration associated with this score set.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>StudentPersonalRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>The student associated with this score set.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>AssessmentRegistrationRefId</Attribute>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>The registration associated with this score set.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>Scores</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Container for score elements. </p>
+    </Description>
+     <Type ref="CommonTypes" name="StudentScoreSetScoreListType"></Type>
+  </Item>
+
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+
+  <xhtml:Example xmlns="">
+    <StudentScoreSet RefId="5810E283E928459CBBA76EFE1963F784" ScoreMetric="0512" AssessmentAdministrationRefId="1F971F3D414E4146932566638290E6C1" StudentPersonalRefId="8F0934CC2F0448F8BBD788AA1ADE691B">
+      <Scores>
+        <Score AssessmentSubTestRefId="E5EDAE63A04D47E49D0224A32956B074">
+          <ScoreValue>25</ScoreValue>
+          <DiagnosticStatement>Shows ability to identify symmetry.</DiagnosticStatement>
+        </Score>
+      </Scores>
+    </StudentScoreSet>
+  </xhtml:Example>
+</DataObject>

@@ -1,0 +1,340 @@
+<DataObject name="StudentPlacement"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Intro>
+    <p>This object contains information that describes a specific instructional, related or transitional service that has been prescribed or recommended in the program plan developed for a student who has been placed in an individualized special program.</p>
+    <p>The following notes are intended to clarify the use of this object:</p>
+    <ul>
+      <li>If assistive technology is considered a service and is prescribed in a general context rather than associated with another specific service, this can be reported as a service by using the appropriate service code</li>
+      <li>If transportation is considered a service and is prescribed in a general context rather than associated with another specific service, this can be reported as a service by using the appropriate service code</li>
+      <li>If the value of FrequencyTime is not the same for direct and indirect delivery of the service, each delivery can be reported separately (e.g. one instance of the object contains the direct information, the second instance contains the indirect)</li>
+      <li>If a state or district requires the reporting of "minutes per week" and does not use the concept of number of sessions, set FrequencyTime to "1 per week" and complete DirectTime / IndirectTime and TotalServiceDuration with the appropriate number of minutes</li>
+    </ul>
+  </Intro>
+  <Item>
+    <Element>StudentPlacement</Element>
+    <Description>
+      <p>This object contains information that describes a specific instructional, related or transitional service that has been prescribed or recommended in the program plan developed for a student who has been placed in an individualized special program.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>This is the unique identification code</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Attribute>StudentParticipationRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>This is the reference code for student eligibility for participation</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>StudentPersonalRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID of the student that this object is linked to.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>StudentPlacementAsOfDate</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Effective date (NOT the entry date) of this StudentPlacement instance for the identified student and program.   It is intended that each time the contents of this instance of the object changes, it will be published with a new RefId.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+
+  </Item>
+  <Item>
+    <Element>Service</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Specialized instruction or related / transitional service provided to this student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StudentPlacementServiceType"></Type>
+ </Item>
+
+  <Item>
+    <Element>ServiceCategory</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Category of service (for example, whether it is instruction or a related / transitional service or a supplemental service).  Typically designated by a state.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>S001</Code>
+        <Text>Service is instructional</Text>
+      </Value>
+      <Value>
+        <Code>S002</Code>
+        <Text>Service is a related service (e.g. speech / language, vision)</Text>
+      </Value>
+      <Value>
+        <Code>S003</Code>
+        <Text>Service is transitional</Text>
+      </Value>
+      <Value>
+        <Code>S004</Code>
+        <Text>Service is itinerant</Text>
+      </Value>
+      <Value>
+        <Code>S999</Code>
+        <Text>Service is of another category</Text>
+      </Value>
+
+    </Values>
+  </Item>
+  <Item>
+    <Element>ServiceFundingSources</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="StudentPlacementServiceFundingSourceListType"></Type>
+  </Item>
+   <Item>
+    <Element>ServicingPublicAgency</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The GUID of the public agency (a district / LEA) to which the "ServicingSchool" reports / belongs.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+    <Values>
+      <Value>
+        <Code>LEAInfo</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>ServicingSchool</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The GUID of the school responsible for providing and coordinating this service (but physical location where service delivered could be different and is identified in SchoolWhereServiceDelivered).</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+    <Values>
+      <Value>
+        <Code>SchoolInfo</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>SchoolWhereServiceDelivered</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The GUID of the school where the service is delivered.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+    <Values>
+      <Value>
+        <Code>SchoolInfo</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>ServiceProviderType</Element>
+    <Characteristics>O</Characteristics>
+     <Description>
+      <p>Used for an individual providing the service.  Review by state / program, may be required.  Service provider title (such as Physical Therapist or Psychologist).</p>
+    </Description>
+     <Type ref="CommonTypes" name="ServiceProviderTypeType"></Type>
+</Item>
+  <Item>
+    <Element>AgencyType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Identifies an agency or clinic that will provide the specified service.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>ServiceProviderName</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The name of the person who delivers the service.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>ServiceSetting</Element>
+    <Characteristics>O</Characteristics>
+   <Description>
+      <p>Setting where service is provided (Regular Class, Resource Room, Homebound, Detention Center, etc.).</p>
+    </Description>
+      <Type ref="CommonTypes" name="ServiceSettingType"></Type>
+ </Item>
+
+
+  <Item>
+    <Element>WhenServiceProvided</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>General timing of service delivery relative to school calendar / schedule.</p>
+    </Description>
+    <Type ref="CommonTypes" name="WhenServiceProvidedType"></Type>
+  </Item>
+  <Item>
+    <Element>LatestStartDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date by which service is supposed to start for this student.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>StartDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Actual date this service began for this student.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>EndDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Actual date this service ended for this student.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>FrequencyTime</Element>
+    <Characteristics>O</Characteristics>
+     <Description>
+      <p>Code for the frequency that the service is provided.</p>
+    </Description>
+    <Type ref="CommonTypes" name="FrequencyTimeType"></Type>
+  </Item>
+  <Item>
+    <Element>DirectTime</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Number of units of time per session spent directly providing the service to the student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SessionDurationType"></Type>
+  </Item>
+  <Item>
+    <Element>IndirectTime</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Number of units of time per session NOT spent directly providing the service to the student but rather spent providing consultation services to someone related to the student (e.g. parent, a general ed teacher, a new service provider, etc.).</p>
+    </Description>
+    <Type ref="CommonTypes" name="SessionDurationType"></Type>
+  </Item>
+   <Item>
+    <Element>TotalServiceDuration</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Total of the direct and indirect time as it relates to the FrequencyTime; e.g., DirectTime 60 + IndirectTime 30 = 90.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SessionDurationType"></Type>
+  </Item>
+  <Item>
+    <Element>IncludedInSpecialEducationFTE</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Indicates whether the direct time for this service is included in the calculation of a student's special education FTE.</p>
+    </Description>
+    <Type name="xs:boolean"></Type>
+  </Item>
+  <Item>
+    <Element>SpecialNeedsTransportation</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Indicates whether the student requires transportation to the location of Placement/Service.</p>
+    </Description>
+    <Type name="xs:boolean"></Type>
+  </Item>
+  <Item>
+    <Element>AssistiveTechnology</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Indicates whether the student requires assistive technology for this Placement/Service.</p>
+    </Description>
+    <Type name="xs:boolean"></Type>
+  </Item>
+  <Item>
+    <Element>EntryPerson</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Identification / name of the person who created the transaction that led to the creation of this instance of the object.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+
+  <xhtml:Example xmlns="">
+    <StudentPlacement RefId="A3E34B359A75101D8C3A00DD001D1652" StudentParticipationRefId="D3E34B359D75101A8C3D00AA001A1652" StudentPersonalRefId="A2E34F59A742C1A4B3D11CC002B163A2">
+      <StudentPlacementAsOfDate>2006-07-13</StudentPlacementAsOfDate>
+      <Service>
+        <Code>0290</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">8829</OtherCode>
+        </OtherCodeList>
+      </Service>
+      <ServiceFundingSources>
+        <ServiceFundingSource>
+          <Code>0797</Code>
+        </ServiceFundingSource>
+      </ServiceFundingSources>
+      <ServicingPublicAgency SIF_RefObject="LEAInfo">F3434F59A742C1A4B3D11CC002B163A2</ServicingPublicAgency>
+      <ServicingSchool SIF_RefObject="SchoolInfo">D93F4D183A42C1A4B3D11CC002B163A2</ServicingSchool>
+      <SchoolWhereServiceDelivered SIF_RefObject="SchoolInfo">D93F4D183A42C1A4B3D11CC002B163A2</SchoolWhereServiceDelivered>
+      <ServiceProviderType>
+        <Code>0203</Code>
+      </ServiceProviderType>
+      <AgencyType>Public School</AgencyType>
+      <ServiceProviderName>John Q. Public</ServiceProviderName>
+      <ServiceSetting>
+        <Code>0356</Code>
+      </ServiceSetting>
+      <WhenServiceProvided>
+        <Code>0231</Code>
+      </WhenServiceProvided>
+      <LatestStartDate>2006-02-01</LatestStartDate>
+      <StartDate>2006-02-01</StartDate>
+      <EndDate>2007-01-09</EndDate>
+      <FrequencyTime>
+        <Code>S001</Code>
+      </FrequencyTime>
+      <DirectTime UnitOfMeasure="Minutes">60</DirectTime>
+      <IndirectTime UnitOfMeasure="Minutes">0</IndirectTime>
+      <TotalServiceDuration UnitOfMeasure="Minutes">60</TotalServiceDuration>
+      <IncludedInSpecialEducationFTE>true</IncludedInSpecialEducationFTE>
+      <SpecialNeedsTransportation>true</SpecialNeedsTransportation>
+      <AssistiveTechnology>false</AssistiveTechnology>
+      <EntryPerson>Jill Anderson</EntryPerson>
+    </StudentPlacement>
+  </xhtml:Example>
+</DataObject>

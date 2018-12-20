@@ -1,0 +1,282 @@
+<DataObject name="SchoolInfo"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+	xmlns="http://sifassociation.org/SpecGen">
+	<Key>@RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>SchoolInfo</Element>
+		<Description>
+			<p>This object contains information about the school.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The GUID that identifies this school.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+	<Item>
+		<Element>LocalId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The locally-assigned identifier for this school.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>StateProvinceId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The state-assigned identifier for this school.</p>
+		</Description>
+		<Type ref="CommonTypes" name="StateProvinceIdType"/>
+	</Item>
+	<Item>
+		<Element>NCESId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The NCES-assigned identifier for this school.</p>
+		</Description>
+		<Type ref="CommonTypes" name="NCESIdType"/>
+	</Item>
+	<Item>
+		<Element>SchoolName</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Name of school.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>LEAInfoRefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The Id (GUID) that references the school district of which this school is a member.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>OtherLEA</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The Id (GUID) of another related education agency, such as a regional service agency.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Attribute>SIF_RefObject</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The name of the object reference.</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>LEAInfo</Code>
+			</Value>
+		</Values>
+	</Item>
+	<Item>
+		<Element>SchoolType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>An indication of the level of the educational institution.</p>
+		</Description>
+		<Type ref="ExternalCodeSets" name="NCES0031SchoolLevelType"/>
+	</Item>
+
+	<Item>
+		<Element>SchoolFocusList</Element>
+		<Characteristics>O</Characteristics>
+	    <Type ref="CommonTypes" name="SchoolFocusListType"/>
+	</Item>
+
+	<Item>
+		<Element>SchoolURL</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>URL for the school.</p>
+		</Description>
+		<Type ref="CommonTypes" name="SchoolURLType"/>
+	</Item>
+
+	<Item>
+		<Element>PrincipalInfo</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Information about the school's principal.</p>
+		</Description>
+		<Type ref="CommonTypes" name="PrincipalInfoType"/>
+	</Item>
+
+	<Item>
+		<Element>SchoolContactList</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SchoolContactListType"/>
+	</Item>
+	<Item>
+		<Element>AddressList</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="AddressListType"/>
+		<Description>
+			<p>The school's addresses.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>PhoneNumberList</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="PhoneNumberListType"/>
+		<Description>
+			<p>The school's phone numbers.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>IdentificationInfoList</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="IdentificationInfoListType"/>
+		<Description>
+			<p>Other identification information associated with a school, such as the locally-defined code/identifier, etc.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>SessionType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Code that specifies the session type.</p>
+		</Description>
+		<Type ref="ExternalCodeSets" name="NCES0266SessionTypeType"/>
+	</Item>
+	<Item>
+		<Element>GradeLevels</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Collection of grade levels offered in this school.</p>
+		</Description>
+		<Type ref="CommonTypes" name="GradeLevelsType"/>
+	</Item>
+	<Item>
+		<Element>Title1Status</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Status of the school's Title I eligibility. Certain schools are designated under appropriate state and federal regulations as being eligible for participation in programs authorized by Title I of Public Law 103-382.</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>Targeted</Code>
+				<Text>Certain students enrolled in the school are eligible for Title I programs</Text>
+			</Value>
+			<Value>
+				<Code>SchoolWide</Code>
+				<Text>All students in the school are eligible for Title I programs</Text>
+			</Value>
+			<Value>
+				<Code>NA</Code>
+				<Text>Not applicable, school is not eligible for Title I programs</Text>
+			</Value>
+		</Values>
+	</Item>
+	<Item>
+		<Element>OperationalStatus</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Operational condition of a school.</p>
+		</Description>
+		<Type ref="CommonTypes" name="OperationalStatusType"/>
+	</Item>
+	<Item>
+		<Element>CongressionalDistrict</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Number for the US congressional district of the school location.</p>
+		</Description>
+		<Type ref="CommonTypes" name="CongressionalDistrictType"/>
+	</Item>
+	<Item>
+		<Element>ActiveSchoolYear</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>School year for active (current) year, expressed as the four-digit year in which the school year ends (e.g. 2012 for the 2011-12 school year).</p>
+		</Description>
+		<Type name="xs:gYear"></Type>
+	</Item>
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_MetadataType"/>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+	</Item>
+	<xhtml:Example xmlns="">
+		<SchoolInfo RefId="D3E34B359D75101A8C3D00AA001A1652">
+			<LocalId>946379881</LocalId>
+			<StateProvinceId>C2345681</StateProvinceId>
+			<NCESId>421575003045</NCESId>
+			<SchoolName>Lincoln High School</SchoolName>
+			<LEAInfoRefId>73648462888624AA5294BC6380173276</LEAInfoRefId>
+			<OtherLEA SIF_RefObject="LEAInfo">AA648462888624AA5294BC638017320B</OtherLEA>
+			<SchoolFocusList>
+				<SchoolFocus>Regular</SchoolFocus>
+			</SchoolFocusList>
+			<SchoolURL>http://www.lincolnhs.edu</SchoolURL>
+			<PrincipalInfo>
+				<ContactName>Richard Knudson</ContactName>
+				<ContactTitle>Dr.</ContactTitle>
+			</PrincipalInfo>
+			<SchoolContactList>
+				<SchoolContact>
+					<PublishInDirectory>Yes</PublishInDirectory>
+					<ContactInfo>
+						<Name Type="04">
+							<LastName>Miller</LastName>
+							<FirstName>James</FirstName>
+						</Name>
+						<PositionTitle>Office Assistant</PositionTitle>
+						<EmailList>
+							<Email Type="Primary">jmiller@lhs.k12.state.us</Email>
+						</EmailList>
+						<PhoneNumberList>
+							<PhoneNumber Type="0096">
+								<Number>(555) 555-1235</Number>
+							</PhoneNumber>
+						</PhoneNumberList>
+					</ContactInfo>
+				</SchoolContact>
+			</SchoolContactList>
+			<PhoneNumberList>
+				<PhoneNumber Type="0096">
+					<Number>(555) 555-1234</Number>
+				</PhoneNumber>
+			</PhoneNumberList>
+			<IdentificationInfoList>
+				<IdentificationInfo Code="0175">00123</IdentificationInfo>
+			</IdentificationInfoList>
+			<SessionType>0830</SessionType>
+			<GradeLevels>
+				<GradeLevel>
+					<Code>09</Code>
+				</GradeLevel>
+				<GradeLevel>
+					<Code>10</Code>
+				</GradeLevel>
+				<GradeLevel>
+					<Code>11</Code>
+				</GradeLevel>
+				<GradeLevel>
+					<Code>12</Code>
+				</GradeLevel>
+			</GradeLevels>
+			<Title1Status>Targeted</Title1Status>
+			<OperationalStatus>0820</OperationalStatus>
+			<CongressionalDistrict>3</CongressionalDistrict>
+			<ActiveSchoolYear>2012</ActiveSchoolYear>
+		</SchoolInfo>
+	</xhtml:Example>
+</DataObject>

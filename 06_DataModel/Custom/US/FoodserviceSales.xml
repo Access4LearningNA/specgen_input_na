@@ -1,0 +1,76 @@
+<DataObject name="FoodserviceSales"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <EventsReported>true</EventsReported>
+  <Key>@RefId</Key>
+  <Item>
+    <Element>FoodserviceSales</Element>
+    <Description>
+      <p>This object communicates the daily sales information.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies the daily meal sales object</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>School for which the sales object applies</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>Date</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Date on which the sales occurred.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>Program</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="FundedProgramType"></Type>
+  </Item>
+  <Item>
+    <Element>SalesAmounts</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="FoodserviceSalesAmountListType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <FoodserviceSales RefId="E57A732918E1473F80C2CFA7774DAA6A">
+      <SchoolInfoRefId>D21CF29B7FB44965A9CF950E1E60B21E</SchoolInfoRefId>
+      <Date>2001-10-31</Date>
+      <Program Type="Foodservice">NSLP</Program>
+      <SalesAmounts>
+        <SalesAmount Type="Cash" AccountType="NA" Currency="USD">9999.99</SalesAmount>
+        <SalesAmount Type="Account" AccountType="PrepaidCash">9999.99</SalesAmount>
+        <SalesAmount Type="Charged" AccountType="PrepaidCash">9999.99</SalesAmount>
+        <SalesAmount Type="Charged" AccountType="BreakfastCredit">9999.99</SalesAmount>
+        <SalesAmount Type="Charged" AccountType="LunchCredit">9999.99</SalesAmount>
+        <SalesAmount Type="Earned" AccountType="NA">9999.99</SalesAmount>
+      </SalesAmounts>
+    </FoodserviceSales>
+  </xhtml:Example>
+</DataObject>

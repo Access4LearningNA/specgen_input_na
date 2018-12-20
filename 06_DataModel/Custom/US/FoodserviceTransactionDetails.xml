@@ -1,0 +1,68 @@
+<DataObject name="FoodserviceTransactionDetails"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <EventsReported>true</EventsReported>
+  <Key>@RefId</Key>
+  <Item>
+    <Element>FoodserviceTransactionDetails</Element>
+    <Description>
+      <p>
+        This object gives the transaction distribution for food service transactions of type other than <code>Purchase</code>. So, this
+        object can be requested for transactions of type <code>Prepayment</code>, <code>Repayment</code>, <code>Refund</code>, <code>Adjustment</code>.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies transaction details</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>FoodserviceTransactionRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies food service transaction</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>Amounts</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="FSAmountListType"></Type>
+  </Item>
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Description</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <FoodserviceTransactionDetails RefId="E50EE86118004F238D21B86E70B5B4AA">
+      <FoodserviceTransactionRefId>D489306D404E4DB28E0B0DA8B4C24908</FoodserviceTransactionRefId>
+      <Amounts>
+        <Amount Type="Cash" Credits="0" Currency="USD">2.00</Amount>
+        <Amount Type="BreakfastCredit" Credits="3">4.50</Amount>
+      </Amounts>
+      <Description>Refund for 2 dollars cash and 3 breakfast credits.</Description>
+    </FoodserviceTransactionDetails>
+  </xhtml:Example>
+</DataObject>

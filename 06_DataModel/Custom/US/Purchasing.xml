@@ -1,0 +1,123 @@
+<DataObject name="Purchasing"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+	xmlns="http://sifassociation.org/SpecGen">
+	<Key>@RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>Purchasing</Element>
+		<Description>
+			<p>This object provides information down to the line item level for requisitions and purchase orders.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Transaction GUID for this purchasing activity. The application that owns this object and is responsible for generating this unique Id.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+	<Item>
+		<Element>FormType</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Type of purchasing document.</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>PO</Code>
+				<Text>Purchase order</Text>
+			</Value>
+			<Value>
+				<Code>REQ</Code>
+				<Text>Requisition</Text>
+			</Value>
+		</Values>
+	</Item>
+	<Item>
+		<Element>FormNumber</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Requisition or PO number.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>FiscalYearRefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Reference to fiscal year for the transaction.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>VendorInfoRefId</Element>
+		<Characteristics>C</Characteristics>
+		<Description>
+			<p>This object references the VendorInfo object and should be considered mandatory when FormType="PO"</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>LocationInfoRefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The building Id for this purchasing activity.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>EmployeePersonalRefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The employee Id for the originator of this purchasing activity.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>PurchasingItems</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Contains information about the item being purchased.</p>
+		</Description>
+		<Type ref="CommonTypes" name="PurchasingItemListType"/>
+	</Item>
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_MetadataType"/>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+	</Item>
+	<xhtml:Example xmlns="">
+		<Purchasing RefId="ED12345FDA8497275BC28AA349DD3721">
+			<FormType>PO</FormType>
+			<FormNumber>00342</FormNumber>
+			<FiscalYearRefId>7A892874BC2389749876AE29873498A8</FiscalYearRefId>
+			<VendorInfoRefId>BD12345FDA8497275BC28AA349DD3723</VendorInfoRefId>
+			<LocationInfoRefId>ED12345FDA8497275BC28AA349DD3722</LocationInfoRefId>
+			<EmployeePersonalRefId>AD12345FDA8497275BC28AA349DD3721</EmployeePersonalRefId>
+			<PurchasingItems>
+				<PurchasingItem>
+					<ItemNumber>154486</ItemNumber>
+					<ItemDescription>Floor Wax</ItemDescription>
+					<Quantity>10</Quantity>
+					<UnitCost Currency="USD">7.00</UnitCost>
+					<ExpenseAccounts>
+						<ExpenseAccount>
+							<AccountCode>10-1100-610</AccountCode>
+							<Amount Currency="USD">70.00</Amount>
+						</ExpenseAccount>
+					</ExpenseAccounts>
+				</PurchasingItem>
+			</PurchasingItems>
+		</Purchasing>
+	</xhtml:Example>
+</DataObject>

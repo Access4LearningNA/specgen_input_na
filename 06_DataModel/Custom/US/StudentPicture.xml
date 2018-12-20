@@ -1,0 +1,92 @@
+<DataObject name="StudentPicture"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>@StudentPersonalRefId</Key>
+
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>StudentPicture</Element>
+    <Description>
+      <p>This object contains information about the student's picture.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>A GUID that identifies an instance of this object. This RefId is new for 2.7M and MUST be supported like other objects that have a RefId (i.e. it is the key for the object).  The alternate keys MUST continue to be supported.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <Item>
+    <Attribute>StudentPersonalRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>This is the GUID of the student whose picture this is.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>SchoolYear</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        School year for which this enrollment is applicable, expressed as the four-digit year in which the school year
+        ends (e.g. <code>2007</code> for the 2006-07 school year).
+      </p>
+    </Description>
+    <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
+
+  <Item>
+    <Element>PictureSource</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        This element defines the picture. If the Type attribute is URL, this is the location of the picture in <a href="References.html#JPEG">[JPEG]</a> format; if Type is JPEG, this is the <a href="References.html#JPEG">[JPEG]</a> image data encoded using the Base64 Content-Transfer-Encoding defined in Section 6.8 of <a href="References.html#RFC2045">[RFC 2045]</a>.
+      </p>
+    </Description>
+    <Type ref="CommonTypes" name="PictureSourceType"/>
+  </Item>
+
+  <Item>
+    <Element>OKToPublish</Element>
+    <Description>
+      <p>Can the picture be published?</p>
+    </Description>
+    <Characteristics>O</Characteristics>
+    <Values>
+      <Value>
+        <Code>Yes</Code>
+      </Value>
+      <Value>
+        <Code>No</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example name="StudentPicture" xmlns="">
+    <StudentPicture RefId="359D75101AD0A9D7A8C3DAD0A85103A2"
+ StudentPersonalRefId="D3E34B359D75101A8C3D00AA001A1652" SchoolYear="1999">
+      <PictureSource Type="URL">http://www.schoolsite.com/pictures/1999/1234.jpg</PictureSource>
+    </StudentPicture>
+  </xhtml:Example>
+</DataObject>

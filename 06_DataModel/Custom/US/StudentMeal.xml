@@ -1,0 +1,114 @@
+<DataObject name="StudentMeal"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <EventsReported>SIF_Events, typically Change events, can be reported.</EventsReported>
+  <Key>@StudentPersonalRefId</Key>
+  <Item>
+    <Element>StudentMeal</Element>
+    <Description>
+      <p>This object communicates the current meal/account status of a given student.</p>
+      <p>
+        This object will return information such as the amount of remaining breakfast/lunch credits, cash balance, meal status (free/reduced), etc.
+        Systems may optionally support the historical reporting of a student's meal status (free/reduced).
+      </p>
+
+    </Description>
+  </Item>
+
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>A GUID that identifies an instance of this object. This RefId is new for 2.7M and MUST be supported like other objects that have a RefId (i.e. it is the key for the object).  The alternate keys MUST continue to be supported.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <Item>
+    <Attribute>StudentPersonalRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID of the student to whom this object is linked.</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records account/meal status for" count="?:1" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>MealStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="MealStatusType"></Type>
+    <Description>
+      <p>The student's current meal status.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>HistoricalMealStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>
+        Optionally provides the meal status of the student historically. Note that as this status is historical, <code>StartDate</code> and <code>EndDate</code> together,
+        and/or <code>SchoolYear</code>&#160;<span class="rfc2119">MUST</span> be included.  If <code>SchoolYear</code> is included,
+        <code>StartDate</code> and <code>EndDate</code> should not cross school year boundaries, i.e. in addition to multiple
+        statuses being a possibility in a given school year, the same status may be repeated so <code>StartDate</code> and <code>EndDate</code> don't
+        disagree with <code>SchoolYear</code>, if included.
+      </p>
+    </Description>
+     <Type ref="CommonTypes" name="MealStatusListType"></Type>
+  </Item>
+  <Item>
+    <Element>LastBreakfastDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date of the last reimbursable breakfast served.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>LastLunchDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date of the last reimbursable lunch served.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>Amounts</Element>
+    <Characteristics>O</Characteristics>
+     <Type ref="CommonTypes" name="FSAmountListType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <StudentMeal RefId="C4E34B359D75101A8C3D00AA001A1792" StudentPersonalRefId="D3E34B359D75101A8C3D00AA001A1652">
+      <MealStatus Type="Free"/>
+      <HistoricalMealStatus>
+        <MealStatus Type="Reduced">
+          <StartDate>2003-09-01</StartDate>
+          <EndDate>2004-06-01</EndDate>
+          <SchoolYear>2004</SchoolYear>
+        </MealStatus>
+        <MealStatus Type="None">
+          <SchoolYear>2003</SchoolYear>
+        </MealStatus>
+      </HistoricalMealStatus>
+      <LastBreakfastDate>2005-09-25</LastBreakfastDate>
+      <LastLunchDate>2005-09-25</LastLunchDate>
+      <Amounts>
+        <Amount Type="Cash" Credits="0">3.50</Amount>
+        <Amount Type="BreakfastCredit" Credits="3">3.00</Amount>
+        <Amount Type="LunchCredit" Credits="5">7.50</Amount>
+      </Amounts>
+    </StudentMeal>
+  </xhtml:Example>
+</DataObject>

@@ -1,0 +1,243 @@
+ <DataObject name="Authentication"			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 			xmlns:xi="http://www.w3.org/2001/XInclude"
+ 			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+       xmlns="http://sifassociation.org/SpecGen">
+      <Key>@RefId</Key>
+      <EventsReported>true</EventsReported>
+      <Intro>
+        <p>
+          The Authentication object allows a system that stores usernames and/or passwords to share them with other applications through SIF.
+          The provider of the Authentication object may only support providing a username or a password, or it may support both.
+        </p>
+
+        <p>
+          The Authentication object is also able to transmit a user's network identity through SIF.
+          If the user has an account in a network directory system that supports LDAP, the user's distinguishedName or username is shared
+          to uniquely identify the user to applications that support LDAP or native network authentication options.
+        </p>
+
+        <p>Details of how to implement the password element are included below the object definition.</p>
+      </Intro>
+
+      <Item>
+        <Element>Authentication</Element>
+        <Description>
+          <p>
+            The Authentication object allows a system that stores usernames and/or passwords to share them with other applications through SIF.
+            The provider of the Authentication object may only support providing a username or a password, or it may support both.
+          </p>
+
+          <p>
+            The Authentication object is also able to transmit a user's network identity through SIF.
+            If the user has an account in a network directory system that supports LDAP, the user's distinguishedName or username is shared
+            to uniquely identify the user to applications that support LDAP or native network authentication options.
+          </p>
+        </Description>
+      </Item>
+
+      <Item>
+        <Attribute>RefId</Attribute>
+        <Characteristics>M</Characteristics>
+        <Description>
+          <p>The SIF RefId that uniquely identifies this authentication object.</p>
+        </Description>
+        <Type ref="CommonTypes" name="RefIdType"></Type>
+      </Item>
+      <Item>
+        <Attribute>SIF_RefId</Attribute>
+        <Characteristics>M</Characteristics>
+        <Description>
+          <p>The SIF RefId of a student or staff member</p>
+        </Description>
+        <Type ref="CommonTypes" name="IdRefType"></Type>
+      </Item>
+      <Item>
+        <Attribute>SIF_RefObject</Attribute>
+        <Characteristics>M</Characteristics>
+        <Description>
+          <p>The type of SIF object that the SIF_RefId attribute identifies.</p>
+        </Description>
+        <Values>
+          <Value>
+            <Code>StudentPersonal</Code>
+          </Value>
+          <Value>
+            <Code>StaffPersonal</Code>
+          </Value>
+          <Value>
+            <Code>StudentContact</Code>
+          </Value>
+          <Value>
+            <Code>EmployeePersonal</Code>
+          </Value>
+        </Values>
+      </Item>
+      <Item>
+        <Element>AuthenticationInfo</Element>
+        <Characteristics>M</Characteristics>
+        <Description>
+          <p>The authentication information for one system.</p>
+        </Description>
+        <Type ref="CommonTypes" name="AuthenticationInfoType"></Type>
+      </Item>
+      <Item>
+        <Element>SIF_Metadata</Element>
+        <Characteristics>O</Characteristics>
+        <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+      </Item>
+      <Item>
+        <Element>SIF_ExtendedElements</Element>
+        <Characteristics>O</Characteristics>
+        <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+      </Item>
+
+      <Section name="Password Implementation Details">
+        <p>
+          While Authentication objects transported over SIF HTTPS are typically secure in transit, SIF objects are often stored in logs and databases.
+          If the network infrastructure is not secure, the passwords could be subject to snooping from system users.
+          Because of this, the design of the Authentication object requires that passwords never be transmitted in plain text, to prevent casual viewing.
+          The design of this object allows passwords to be securely encrypted using a variety of encryption algorithms.
+        </p>
+        <p>
+          Passwords in the Authentication object can be shared in one of three ways as documented in the sections below.
+        </p>
+
+        <Section name="Encoded Text">
+          <p>
+            Sharing a password using encoded text is a very insecure method, because it uses a well-known algorithm and the value is not encrypted.
+            The only merit of using this method is that the password is not readable as plain text, and thus deters any casual attempt to read a password.
+            To share passwords in this manner, the following steps must be followed:
+          </p>
+
+          <ol>
+            <li>
+              The publishing agent creates a <code>Password</code> element with the algorithm set to <code>base64</code>.
+            </li>
+            <li>The agent encodes the Unicode representation of the password using the UTF-8 encoding.</li>
+            <li>The resulting binary value is then base64 encoded.</li>
+            <li>
+              Write the result as the payload of the <code>Password</code> element.
+            </li>
+          </ol>
+        </Section>
+
+        <Section name="Hashed Text">
+
+          <p>
+            Sharing a hashed text version of a password means that the original password is not shared.
+            Clear text passwords are not retrievable from values stored as hashes.
+            These hashed values can only be used to verify passwords input by a user.
+          </p>
+
+          <p>
+            What is shared is a cryptographically secure hash of the password.
+            This hash allows other applications to verify a user's password when s/he logs in by comparing the hash value, not the original password.
+            To share passwords in this manner, the following steps must be followed:
+          </p>
+
+          <ol>
+            <li>
+              The publishing agent creates a <code>Password</code> element with the algorithm set to <code>MD5</code> or <code>SHA1</code>.
+            </li>
+            <li>The agent encodes the Unicode representation of the password using the UTF-8 encoding.</li>
+            <li>Hash the resulting binary value with the chosen hash algorithm.</li>
+            <li>Encode the binary result using base64 encoding.</li>
+            <li>
+              Write the result as the payload of the <code>Password</code> element.
+            </li>
+          </ol>
+        </Section>
+
+        <Section name="Encrypted Text">
+
+          <p>
+            Sharing a password using encrypted text can be very secure.
+            The key being used to encrypt the data should be known only to the applications.
+            The <code>KeyName</code> attribute is used to allow agents to uniquely identify keys that are being used.
+            To share passwords in this manner, the following steps must be followed:
+          </p>
+
+          <ol>
+            <li>
+              The publishing agent creates a <code>Password</code> element with the algorithm set to <code>DES</code>, <code>TripleDES</code>, <code>RC2</code>,  or <code>AES</code>.
+            </li>
+            <li>The agent encodes the Unicode representation of the password using the UTF-8 encoding.</li>
+            <li>Generate a cryptographically secure Initialization Vector (IV).</li>
+            <li>Configure the encryption algorithm to use a cipher mode of CBC.</li>
+            <li>Configure the encryption algorithm to use a block size of 64 bits (8 bytes).</li>
+            <li>Configure the encryption algorithm to use the generated IV.</li>
+            <li>Configure the encryption algorithm to use the specified key for encryption.</li>
+            <li>Configure the encryption algorithm to use PKCS#7/PKCS#5 padding mode.</li>
+            <li>Encrypt the binary representation of the password that was generated in step 2.</li>
+            <li>Encode the binary result using base64 encoding.</li>
+            <li>
+              Write the result as the payload of the <code>Password</code> element.
+            </li>
+          </ol>
+
+          <Section name="Example Keys">
+            <p>
+              The XML in the Authentication example can be used to verify an agent's implementation of any of the published algorithms.
+              The password being shared for the sake of the example is <code>&#xBF;s&#xE8;cr&#xE8;t</code>.
+              High-Unicode characters are being used in this example to validate proper encoding.
+              The actual Unicode characters are: U+00BF, U+0073, U+00E8, U+0063, U+0072, U+00E8, U+0074.
+            </p>
+
+            <p>The encryption keys being used are as follows (in base 64 format)</p>
+
+            <table>
+              <thead>
+                <tr>
+                  <td>Key Name</td>
+                  <td>Key (in base64 format)</td>
+                </tr>
+              </thead>
+              <tr>
+                <td>64-BIT_KEY</td>
+                <td>dW7SKzwdn0Q=</td>
+              </tr>
+              <tr>
+                <td>128-BIT_KEY</td>
+                <td>TcdilmUZ6qvbmegl2it2pA==</td>
+              </tr>
+              <tr>
+                <td>192-BIT_KEY</td>
+                <td>mECbXMo+fOMWRwam7tyUEE59jbO9O0Z4</td>
+              </tr>
+            </table>
+
+            <p>
+              NOTE: Real-world implementations of password sharing should use keys other than the ones used for this documentation.
+              These keys are provided for example's sake only.
+              Keys should be generated using a secure cryptographic key generator.
+            </p>
+
+          </Section>
+
+        </Section>
+
+      </Section>
+
+      <xhtml:Example xmlns="">
+        <Authentication RefId="4286194F43ED43C18EE2F0A27C4BEF86"
+        SIF_RefId="23B08571E4D645C3B82A3E52E5349925"
+        SIF_RefObject="StudentPersonal">
+          <AuthenticationInfo>
+            <System Type="Network">NetworkSystem</System>
+            <Username>User01</Username>
+            <DistinguishedName>cn=User01, cn=Users, dc=sifinfo, dc=org</DistinguishedName>
+            <PasswordList>
+              <Password Algorithm="SHA1" KeyName="SHA1">1zKHIKRoPb3y0gZLJnFhQspdevg=</Password>
+              <Password Algorithm="MD5" KeyName="MD5">IwErjiNuanYLAmyFwyulPg==</Password>
+              <Password Algorithm="base64" KeyName="BASE64">wr9zw6hjcsOodA==</Password>
+              <Password Algorithm="DES" KeyName="64-BIT_KEY">6XSjrzAgkrd41Nzb61w5vwuqzKsQbybL</Password>
+              <Password Algorithm="RC2" KeyName="128-BIT_KEY">jqCzWFS38Xs7tx7v2ksa01TrFhBnixI8</Password>
+              <Password Algorithm="TripleDES" KeyName="192-BIT_KEY">msf17ucBbhN44uJpXTGGfI3twSR/cS/u</Password>
+            </PasswordList>
+          </AuthenticationInfo>
+        </Authentication>
+      </xhtml:Example>
+
+    </DataObject>

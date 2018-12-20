@@ -1,0 +1,88 @@
+<DataObject name="StaffMeal"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+	xmlns="http://sifassociation.org/SpecGen">
+	<EventsReported>SIF_Events, typically Change events, can be reported.</EventsReported>
+	<Key>@StaffPersonalRefId</Key>
+	<Item>
+		<Element>StaffMeal</Element>
+		<Description>
+			<p>
+        This object communicates the current meal status and account status of a given staff member. This object indicates
+        whether the staff member is entitled to earn meals.
+      </p>
+		</Description>
+	</Item>
+
+	  <Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+		  <p>A GUID that identifies an instance of this object. This RefId is new for 2.7M and MUST be supported like other objects that have a RefId (i.e. it is the key for the object).  The alternate keys MUST continue to be supported.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"></Type>
+	  </Item>
+
+	<Item>
+		<Attribute>StaffPersonalRefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The GUID of the staff to whom this object is linked.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>EarnedStatus</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="CommonTypes" name="EarnedStatusType"/>
+	</Item>
+	<Item>
+		<Element>LastBreakfastDate</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Last breakfast served date</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<Item>
+		<Element>LastLunchDate</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Last lunch served date</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<Item>
+		<Element>Amounts</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="CommonTypes" name="FSAmountListType"/>
+	</Item>
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_MetadataType"/>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+	</Item>
+	<xhtml:Example xmlns="">
+		<StaffMeal RefId="359D75101AD0A9D7A8C3DAD0A85103A2" StaffPersonalRefId="A9E34B359F44D51A8C3D00AA001A1652">
+			<EarnedStatus Type="Yes">
+				<StartDate>2003-08-25</StartDate>
+				<EndDate>2003-08-25</EndDate>
+			</EarnedStatus>
+			<LastBreakfastDate>2003-08-25</LastBreakfastDate>
+			<LastLunchDate>2003-08-25</LastLunchDate>
+			<Amounts>
+				<Amount Type="Cash" Credits="0">3.50</Amount>
+				<Amount Type="BreakfastCredit" Credits="3">3.00</Amount>
+				<Amount Type="LunchCredit" Credits="5">7.50</Amount>
+			</Amounts>
+		</StaffMeal>
+	</xhtml:Example>
+</DataObject>

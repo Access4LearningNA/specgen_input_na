@@ -1,0 +1,122 @@
+<DataObject name='StudentContactPersonal'
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Intro>
+    This object contains information about the people who are referenced as student contacts.
+  </Intro>
+  <EventsReported>true</EventsReported>
+  <Key>@RefId</Key>
+  <Item>
+    <Element>StudentContactPersonal</Element>
+    <Description>
+      Demographic and other information for each person who might be referenced as a student contact.
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Description>The Id (GUID) that uniquely identifies the instance of the object.</Description>
+    <Characteristics>M</Characteristics>
+    <Type ref='CommonTypes' name='RefIdType'/>
+  </Item>
+
+  <Item>
+    <Element>PersonInfo</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Common element containing person demographic information.</p>
+    </Description>
+    <Type ref="CommonTypes" name="PersonInfoType"></Type>
+  </Item>
+
+  <Item>
+    <Element>EmployerType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Code that defines the employer type.</p>
+    </Description>
+    <Type ref="ExternalCodeSets" name="NCES0614EmployerTypeType"></Type>
+  </Item>
+
+  <Item>
+    <Element>EducationLevel</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The highest level of education completed by the contact person.</p>
+    </Description>
+    <Type ref="CommonTypes" name="EducationalLevelType"></Type>
+  </Item>
+
+<Item>
+    <Element>OptOutEmail</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A "yes" value indicates person may only be contacted as authorized via email.  This usually indicates they have requested contact be limited to essential purposes and use/release of their contact information (e.g. to Parent Teacher organizations) may be limited.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Yes</Code>
+      </Value>
+      <Value>
+        <Code>No</Code>
+      </Value>
+      <Value>
+        <Code>Unknown</Code>
+      </Value>
+    </Values>
+  </Item>
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+
+  <xhtml:Example name="StudentContactPersonal - Example 1" xmlns=''>
+    <StudentContactPersonal RefId='6472B2610947583A463DBB345291B001'>
+      <PersonInfo>
+        <Name Type="04">
+          <LastName>Johnson</LastName>
+          <FirstName>Alicia</FirstName>
+        </Name>
+        <Demographics>
+          <Gender>F</Gender>
+        </Demographics>
+        <AddressList>
+          <Address Type="0123">
+            <Street>
+              <Line1>6799 33rd Ave.</Line1>
+              <StreetNumber>6799</StreetNumber>
+              <StreetName>33rd</StreetName>
+              <StreetType>Ave.</StreetType>
+            </Street>
+            <City>Chicago</City>
+            <StateProvince>IL</StateProvince>
+            <Country>US</Country>
+            <PostalCode>60660</PostalCode>
+          </Address>
+        </AddressList>
+        <PhoneNumberList>
+          <PhoneNumber Type="0096">
+            <Number>(604) 555-1212</Number>
+          </PhoneNumber>
+        </PhoneNumberList>
+        <EmailList>
+          <Email Type="Primary">contact@sifinfo.org</Email>
+        </EmailList>
+      </PersonInfo>
+      <EmployerType>1805</EmployerType>
+      <EducationLevel>1051</EducationLevel>
+    </StudentContactPersonal>
+
+  </xhtml:Example>
+</DataObject>

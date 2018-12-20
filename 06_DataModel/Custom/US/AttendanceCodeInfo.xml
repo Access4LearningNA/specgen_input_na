@@ -1,0 +1,170 @@
+<DataObject name="AttendanceCodeInfo"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>AttendanceCodeInfo</Element>
+    <Description>
+      <p>
+        This object provides information about a particular attendance code, allows applications to synchronize each other's
+        attendance code tables, or provides a dynamic list of attendance codes.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies this AttendanceCodeInfo entity.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+
+    <Attribute>SchoolInfoRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that identifies the school where the attendance code is used.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>AttendanceCode</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Locally defined code for attendance.</p>
+    </Description>
+    <Type name="xs:token"></Type>
+  </Item>
+  <Item>
+    <Element>AttendanceType</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Type of attendance code.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Absent</Code>
+      </Value>
+      <Value>
+        <Code>Tardy</Code>
+      </Value>
+      <Value>
+        <Code>EarlyDeparture</Code>
+      </Value>
+      <Value>
+        <Code>Partial</Code>
+      </Value>
+      <Value>
+        <Code>Present</Code>
+      </Value>
+      <Value>
+        <Code>Other</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>AttendanceStatus</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Excused status of the attendance code.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Excused</Code>
+      </Value>
+      <Value>
+        <Code>Unexcused</Code>
+      </Value>
+      <Value>
+        <Code>Unknown</Code>
+      </Value>
+      <Value>
+        <Code>NA</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>Description</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The text description of the attendance code.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>AbsenceValue</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The amount of absence represented by AttendanceCode, up to three decimal places.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+    <Facets>
+      <xs:minInclusive value="0"/>
+      <xs:fractionDigits value="3"/>
+    </Facets>
+  </Item>
+  <Item>
+    <Element>UsedForDailyAttendance</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Is this attendance code used for daily attendance?</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Yes</Code>
+      </Value>
+      <Value>
+        <Code>No</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>UsedForPeriodAttendance</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Is this attendance code used for period attendance?</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Yes</Code>
+      </Value>
+      <Value>
+        <Code>No</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_Metadata"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElements"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <AttendanceCodeInfo RefId="64A309DA063A2E35B359D75101A8C3D0" SchoolInfoRefId="CE0674A8BB8247669DE348F113D2316A">
+      <AttendanceCode>AE</AttendanceCode>
+      <AttendanceType>Absent</AttendanceType>
+      <AttendanceStatus>Excused</AttendanceStatus>
+      <Description>Child is absent with appropriate, legal excuse.</Description>
+      <AbsenceValue>1.0</AbsenceValue>
+      <UsedForDailyAttendance>Yes</UsedForDailyAttendance>
+      <UsedForPeriodAttendance>Yes</UsedForPeriodAttendance>
+    </AttendanceCodeInfo>
+  </xhtml:Example>
+</DataObject>

@@ -1,0 +1,151 @@
+<Section name="Introduction"
+		 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns:xi="http://www.w3.org/2001/XInclude"
+		 
+         xmlns="http://sifassociation.org/SpecGen">
+  <Section name="Specification Organization">
+    <p>
+      With respect to the SIF Specification, educators and non-technical readers are typically interested in the pK-12 data objects
+      that can be shared and reported on by SIF-enabled applications in SIF implementations.  This document, the <em>SIF Data Model Implementation Specification</em>, contains a <a href="DataModel.html">Data Model</a>
+      section in a format that should not be a barrier to readers with a some knowledge of <a href="http://https://www.w3.org/XML/">[XML]</a>.
+      More technical readers, including software architects,
+      developers and integrators, will also be interested in the separate <em>SIF Infrastructure Implementation Specification</em> document.   
+    </p>
+    <ul>
+      <li>
+        The <a href="index.html#Preamble">Preamble</a> provides an abstract of SIF along with the SIF Association disclaimer and details regarding certification and compliance claims.
+      </li>
+      <li>
+        This Introduction outlines the organization of this specification document, provides conventions used in this document, and summarizes versioning of the specification.
+        Highlights of additions/changes since the previous version of the specification are also provided.
+      </li>
+      <li>
+        The <a href="DataModel.html">Data Model</a> section provides definitions of the XML structure for common elements in the data model and all objects
+        related to entities in the pK-12 environment.  This section is organized by the working groups and task forces within the SIF Association that have defined
+        common elements or objects.
+      </li>
+      <li>
+        The document concludes with various appendices including lists of code set values defined within SIF and in external documents,
+        and ends with a list of <a href="References.html">references</a> to other documents.
+      </li>
+    </ul>
+  </Section>
+  <Section name="Document Conventions">
+    <Section name="Definitions">
+      <p>
+        The first time a term or concept is defined, it may be <em>emphasized</em>.
+      </p>
+    </Section>
+    <Section name="Structure and Values">
+      <p>
+        <code>SIF message and object names, XML element tags, attribute names and values, and other codes or values are typically presented as in this sentence.</code>
+      </p>
+    </Section>
+    <Section name="Examples">
+      <Example name="Examples Convention">Longer examples of XML or HTTP messages are typically numbered and presented as given here.</Example>
+    </Section>
+    <Section name="References">
+      <p>
+        References to other works occurring in this text are given in brackets, e.g. [REFERENCE].  The text in brackets corresponds to a key in the <a href="References.html#References">References</a> appendix.
+        Often when the text in the brackets duplicates surrounding text, the reference alone is used (e.g. [XML] instead of XML [XML]).
+      </p>
+    </Section>
+    <Section name="Terminology">
+      <p>
+        The key words <span class="rfc2119">MUST</span>, <span class="rfc2119">MUST NOT</span>, <span class="rfc2119">REQUIRED</span>, <span class="rfc2119">SHALL</span>,
+        <span class="rfc2119">SHALL NOT</span>, <span class="rfc2119">SHOULD</span>, <span class="rfc2119">SHOULD NOT</span>, <span class="rfc2119">RECOMMENDED</span>,
+        <span class="rfc2119">MAY</span>, <span class="rfc2119">OPTIONAL</span>, when <span class="rfc2119">EMPHASIZED</span>, are to be interpreted as described in <a href="https://www.ietf.org/rfc/rfc2119.txt">[RFC 2119]</a>.
+      </p>
+    </Section>
+    <Section name="XML Diagrams">
+      <p>
+        Quick overviews of XML structures, including messages, objects, common elements and types, are provided in XML diagrams.  The following diagram illustrates
+        the conventions typically encountered in SIF.
+      </p>
+      <p>
+        <img src="images/SequenceElement.png" title="XML Diagram Conventions"/>
+      </p>
+      <p>
+        XML elements are represented by rectangles with the name of the element in the upper portion and the type, if any, in the lower portion.  Attributes
+        are represented in the same fashion, but have an <code>@</code> icon rather than a SIF icon.  Elements and attributes that are optional have a circled <code>?</code>
+        (0 or 1 occurrence) to the left of the rectangle.  Optional and mandatory repeatable elements are indicated by a circled <code>*</code> (0 or more occurrences)
+        and <code>+</code> (1 or more occurrences), respectively.
+        Element attributes are grouped together in a rectangular block and connected to the element with a line that turns at right angles.
+        Ordered sequences of XML elements are bracketed by lines that turn at right angles.  When a choice of XML elements is indicated, the elements are bracketed by angled
+        lines.  A choice of elements can occur within an element, or may be an unnamed choice of elements.
+      </p>
+      <p>XML types are represented using the same conventions as for XML elements, though the type portion of the rectangle typically indicates a base type, if any.</p>
+      <p>
+        The type name of any element, attribute or type may be prefixed with a <code>&#x2193;</code>, indicating the type is restricted in some fashion by one or more
+        XML Schema facets (e.g. enumeration).  When the type is a union of types, a list of types is presented, each type separated by <code>|</code>; if the list of union types
+        is long, the list may be marked with ellipses, e.g., <code>| ...</code>
+      </p>
+      <p>In an actual XML diagram, element, type and attribute rectangles are usually linked to their corresponding definitions/descriptions in accompanying tables.</p>
+    </Section>
+  </Section>
+  <Section name="Version Numbers">
+    <p>The SIF Implementation Specification uses the following version numbering scheme:</p>
+
+    <p>
+      <em>major version</em>
+      <code>.</code>
+      <em>minor version</em>
+      <code>.</code>
+      <em>revision number</em>
+      <Code>(X.Y.Z)</Code>
+    </p>
+    <p>Once a versioned specification (Specification Release) has been released, the contents of that version MUST NOT be modified. Any modifications MUST be released under a new Specification Version Number unless the modification is the correction of an error or update of documentation. Each Specification Release has an associated errata section in which modifications and corrections of the release are listed.</p>
+    <p>A Specification Version Number for a Specification Release uses conventions as follows:  
+
+	<ul>
+	<li>A Specification Version Number MAY take the form <Code>X.Y.Z</Code> where <Code>X</Code>, <Code>Y</Code>, and <Code>Z</Code> are nonnegative integers (whole numbers), and MUST NOT contain leading zeroes. <Code>X</Code> represents the <em>Major version</em>, <Code>Y</Code>  represents the <em>Minor version</em>, and <Code>Z</Code> represents the <em>Revision version</em>.</li>
+	<li>Each version number element MUST increase sequentially based on the guidelines defined within this document; for instance, <Code>1.9.1</Code> to <Code>1.10</Code> to <Code>1.11</Code> to <Code>1.11.1</Code> .</li>
+	<li>Precedence refers to how versions are compared to each other when ordered. Precedence MUST be calculated by separating the version into major, minor, revision identifiers in that order. Precedence is determined by the first difference when comparing each of these identifiers from left to right as follows: Major, Minor, and Revision versions are always compared numerically; for example, <Code>1.0.0</Code> &lt; <Code>2.0.0</Code> &lt; <Code>2.1.0</Code> &lt; <Code>2.1.1</Code> .</li>
+	</ul>
+
+</p>
+<p>An instance of a Specification Version Number is the canonical identifier for a Specification Release. The manner in which the Specification Version Number increments after a given Specification Release depends on the type and relative magnitude of changes being proposed in the new release as follows:
+</p>
+<p>
+1.	The Revision version number ( <Code>Z</Code> in <em>x.y.</em><Code>Z</Code>, where <Code>x</Code> &gt;= 0) MUST be incremented when specification changes are limited to backward compatible changes. If <Code>Z</Code>=0 then the convention is to drop the Revision number: for example, <Code>3.1</Code> instead of <Code>3.1.0</Code>. Backward compatible changes include the following:
+</p>
+<ul>
+    <li>New data object.</li>
+    <li>New optional data object element.</li>
+	<li>New optional utility service object element.</li>
+</ul>
+    <p>2.	The Minor version number ( <Code>Y</Code> in <em>x.</em><Code>Y</Code><em>.z</em>, where <Code>x</Code> &gt; 0 ) MUST be incremented if new functionality is added to the specification. It MUST be incremented if any aspect of the specification is marked as deprecated. It MUST be incremented if any aspect of the specification is not backward compatible. (Backward compatible means any change that can be implemented by one participant (consumer, Environment or service provider) without requiring changes by other participants to maintaining the same level of interoperability.)  It MAY be incremented if substantial new functionality or improvements are introduced. It MAY include changes that are categorized as ”Revision” level magnitude. The Revision version MUST be reset to 0 when the Minor version is incremented. Changes requiring a Minor version increment include the following:  
+    </p>
+   <ul>
+<li>New mandatory data object element.</li>	 
+<li>New mandatory utility service object element.</li> 
+<li>Deprecate data object element.</li> 
+<li>Deprecate data object.</li> 
+<li>Deprecate utility service object element.</li> 
+<li>Deprecate utility service object.</li>
+<li>Remove deprecated data object element.</li> 
+<li>Remove deprecated data object.</li>
+<li>Remove deprecated utility service object element.</li> 
+<li>Remove deprecated utility service object.</li>
+<li>Add support for additional authentication methods.</li> 
+<li>Add support for additional TLS version. </li>
+<li>Any changes concerning security.</li> 
+<li>Any optional to mandatory change.</li> 
+<li>Add support for additional payload representations.</li> 
+</ul>
+
+    <p>3.	The Major version number ( <Code>X</Code> in <Code>X</Code><em>.y.z</em>, where <Code>X</Code> &gt; 0 ) MUST be incremented if a significant change is introduced to the specification. It MAY include changes categorized as Minor and Revision level changes. The Revision and Minor version numbers MUST be reset to 0 when the Major version is incremented. Changes requiring a Major version increment include the following:
+    <ul> 
+<li>Deprecate payload representation.</li>	 
+<li>Remove deprecated payload representation.</li> 
+<li>Add support for a distinct data model namespace.</li> 
+<li>Replace (deprecate and remove) a locale data model.</li> 
+<li>Any significant change that requires the Major version to be incremented as deemed by the A4L Association Board for global specifications and Management Boards for locale data models.</li> 
+</ul>
+
+    </p>
+  </Section>
+  <xi:include parse="text" href="custom/ChangeLog-Datamodel.xml"/>
+</Section>
+

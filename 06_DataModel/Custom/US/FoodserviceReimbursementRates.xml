@@ -1,0 +1,139 @@
+<DataObject name="FoodserviceReimbursementRates"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <EventsReported>true</EventsReported>
+  <Key>@RefId</Key>
+  <Item>
+    <Element>FoodserviceReimbursementRates</Element>
+    <Description>
+      <p>This object describes the federal, state, local and other reimbursement rates for a school.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies this object.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies the school.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>StartDate</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Effective start date for the reimbursement rates</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>EndDate</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Effective end date for the reimbursement rates</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>Program</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="FundedProgramType"></Type>
+  </Item>
+  <Item>
+    <Element>Agencies</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>List of reimbursing agencies.</p>
+    </Description>
+    <Type ref="CommonTypes" name="FoodserviceReimbursementAgencyListType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <FoodserviceReimbursementRates RefId="D9837A776DD626777872361DD118873C">
+      <SchoolInfoRefId>EF521958AB474559B2AE7BD82647C66B</SchoolInfoRefId>
+      <StartDate>2004-01-01</StartDate>
+      <EndDate>2004-12-31</EndDate>
+      <Program Type="Foodservice">NSLP</Program>
+      <Agencies>
+        <Agency Type="Federal">
+          <Rates>
+            <Rate SevereNeed="No">
+              <Value>1.00</Value>
+              <MealStatus Type="Free" />
+            </Rate>
+            <Rate SevereNeed="No">
+              <Value>2.00</Value>
+              <MealStatus Type="Reduced" />
+            </Rate>
+            <Rate SevereNeed="No">
+              <Value>3.00</Value>
+              <MealStatus Type="None" />
+            </Rate>
+            <Rate SevereNeed="Yes">
+              <Value>4.00</Value>
+              <MealStatus Type="Free" />
+            </Rate>
+            <Rate SevereNeed="Yes">
+              <Value>5.00</Value>
+              <MealStatus Type="Reduced" />
+            </Rate>
+            <Rate SevereNeed="Yes">
+              <Value>6.00</Value>
+              <MealStatus Type="None" />
+            </Rate>
+          </Rates>
+        </Agency>
+        <Agency Type="Other">
+          <Name>Some Reimbursing Agency</Name>
+          <Rates>
+            <Rate SevereNeed="No">
+              <Value>1.00</Value>
+              <MealStatus Type="Free" />
+            </Rate>
+            <Rate SevereNeed="No">
+              <Value>2.00</Value>
+              <MealStatus Type="Reduced" />
+            </Rate>
+            <Rate SevereNeed="No">
+              <Value>3.00</Value>
+              <MealStatus Type="None" />
+            </Rate>
+            <Rate SevereNeed="Yes">
+              <Value>4.00</Value>
+              <MealStatus Type="Free" />
+            </Rate>
+            <Rate SevereNeed="Yes">
+              <Value>5.00</Value>
+              <MealStatus Type="Reduced" />
+            </Rate>
+            <Rate SevereNeed="Yes">
+              <Value>6.00</Value>
+              <MealStatus Type="None" />
+            </Rate>
+          </Rates>
+        </Agency>
+      </Agencies>
+    </FoodserviceReimbursementRates>
+  </xhtml:Example>
+</DataObject>

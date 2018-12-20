@@ -1,0 +1,167 @@
+<DataObject name="ItemCharacteristics"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+	xmlns="http://sifassociation.org/SpecGen">
+	<Key>@RefId</Key>
+	<EventsReported>false</EventsReported>
+	<Item>
+		<Element>ItemCharacteristics</Element>
+		<Description>This object provides specific information about each assessment item.  This information includes an analysis, psychometric measures, reliability and validity information.  This item-level information assists in interpreting assessment scores as well as aide in improving teaching and learning.</Description>
+	</Item>
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+	<Item>
+		<Attribute>AssessmentItemRefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>This RefId points to the assessment item of which the characteristics are a part.</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Attribute>AssessmentFormRefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>This RefId points to the assessment form of which the item is a part.</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>PercentCorrect</Element>
+		<Characteristics>O</Characteristics>
+		<Description>Number of correct answers in sample.</Description>
+		<Type name="xs:decimal"/>
+	</Item>
+	<Item>
+		<Element>SampleSize</Element>
+		<Characteristics>O</Characteristics>
+		<Description>Number of total Item exposures.</Description>
+		<Type name="xs:integer"/>
+	</Item>
+	<Item>
+		<Element>SampleDescription</Element>
+		<Characteristics>O</Characteristics>
+		<Description>The description of the Sample the statistics are based on. May be District name, State or National sample.</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>Measurements</Element>
+		<Characteristics>O</Characteristics>
+		<Description>A repeating group of psychometric measures.</Description>
+		<Type ref="CommonTypes" name="ItemCharacteristicsMeasurementListType"/>
+	</Item>
+
+	<Item>
+		<Element>Descriptive</Element>
+		<Characteristics>O</Characteristics>
+		<Description>[This element is deprecated as of release 2.5.  It is replaced by the Measurements element.]</Description>
+		<Type ref="CommonTypes" name="ItemCharacteristicsDescriptiveType"/>
+	</Item>
+
+	<Item>
+		<Element>DifferentialItemAnalysis</Element>
+		<Characteristics>O</Characteristics>
+		<Description>[This element is deprecated as of release 2.5.  It is replaced by the Measurements element.]</Description>
+		<Type ref="CommonTypes" name="ItemCharacteristicsDifferentialItemAnalysisType"/>
+	</Item>
+	<Item>
+		<Element>ResponseChoicePattern</Element>
+		<Characteristics>O</Characteristics>
+		<Description>The distribution of responses to each choice.  This element only applies to multiple choice items.</Description>
+		<Type ref="CommonTypes" name="ItemCharacteristicsChoiceListType"/>
+	</Item>
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_MetadataType"/>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+	</Item>
+	<xhtml:Example xmlns="">
+		<ItemCharacteristics RefId="64B0CC6CFB314A328E520A102229CBC8" AssessmentItemRefId="A328E520A102229CBC864B0CC6CFB314" AssessmentFormRefId="229CBC864A328E520A102B0CC6CFB314">
+			<PercentCorrect>66.6</PercentCorrect>
+			<SampleSize>1777</SampleSize>
+			<SampleDescription>District tests only</SampleDescription>
+			<Measurements>
+				<Measurement MeasurementCode="MSF">
+					<MeasurementDescription>Mean Square Fit</MeasurementDescription>
+					<ScaleValue>.0066</ScaleValue>
+					<Min>0.0</Min>
+					<Max>GT 0.0</Max>
+					<Optimal>0.6</Optimal>
+				</Measurement>
+				<Measurement MeasurementCode="WMSF">
+					<MeasurementDescription>Weighted Mean Square Fit</MeasurementDescription>
+					<ScaleValue>.0066</ScaleValue>
+					<Min>0.0</Min>
+					<Max>GT 0.0</Max>
+					<Optimal>.2</Optimal>
+				</Measurement>
+				<Measurement MeasurementCode="ZChiSq">
+					<MeasurementDescription>Z Chi Square</MeasurementDescription>
+					<ScaleValue>3.3625</ScaleValue>
+					<Min>GT 0.0</Min>
+					<Max>LE 0.0</Max>
+					<Optimal>LT 0.0</Optimal>
+				</Measurement>
+			</Measurements>
+			<DifferentialItemAnalysis>
+				<CMH>-.30</CMH>
+				<MH>-.15</MH>
+			</DifferentialItemAnalysis>
+			<ResponseChoicePattern>
+				<Choice>
+					<ChoiceLabel>1</ChoiceLabel>
+					<Responses>183</Responses>
+				</Choice>
+				<Choice>
+					<ChoiceLabel>2</ChoiceLabel>
+					<Responses>182</Responses>
+				</Choice>
+				<Choice>
+					<ChoiceLabel>3</ChoiceLabel>
+					<Responses>1184</Responses>
+				</Choice>
+				<Choice>
+					<ChoiceLabel>4</ChoiceLabel>
+					<Responses>228</Responses>
+				</Choice>
+			</ResponseChoicePattern>
+			<SIF_Metadata>
+				<TimeElements>
+					<TimeElement>
+						<Type>Full school year</Type>
+						<Code>01</Code>
+						<Name>2004/2005 School Year</Name>
+						<Value>2004-2005</Value>
+						<StartDateTime>2004-09-01T08:00:00-05:00</StartDateTime>
+						<EndDateTime>2005-06-30T15:00:00-05:00</EndDateTime>
+						<IsCurrent>true</IsCurrent>
+					</TimeElement>
+				</TimeElements>
+				<LifeCycle>
+					<Created>
+						<DateTime>2006-08-13T09:00:00-05:00</DateTime>
+						<Creators>
+							<Creator>
+								<Name>My Testing Service</Name>
+								<ID>http://www.myTestingService.com</ID>
+							</Creator>
+						</Creators>
+					</Created>
+					<ModificationHistory>
+						<Modified>
+							<By>http://www.myTestingService.com</By>
+							<DateTime>2006-08-17T09:30:00-05:00</DateTime>
+						</Modified>
+					</ModificationHistory>
+				</LifeCycle>
+			</SIF_Metadata>
+		</ItemCharacteristics>
+	</xhtml:Example>
+</DataObject>

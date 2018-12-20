@@ -1,0 +1,124 @@
+<DataObject name="EmployeePersonal"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>EmployeePersonal</Element>
+    <Description>
+      <p>This object contains basic HR information for employees.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID that uniquely identifies this employee.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>StateProvinceId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The state-assigned identifier for this staff member.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StateProvinceIdType"></Type>
+  </Item>
+  <Item>
+    <Element>OtherIdList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>List all "other" Ids associated with the employee.</p>
+    </Description>
+		<Type ref="CommonTypes" name="EmployeePersonalOtherIdListType"/>
+  </Item>
+  <Item>
+    <Element>Name</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Name of employee.</p>
+    </Description>
+    <Type ref="CommonTypes" name="NameOfRecordType"></Type>
+  </Item>
+  <Item>
+    <Element>Demographics</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This element contains information related to employee demographics.</p>
+    </Description>
+    <Type ref="CommonTypes" name="DemographicsType"></Type>
+  </Item>
+  <Item>
+    <Element>AddressList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The employee's address(es).</p>
+    </Description>
+    <Type ref="CommonTypes" name="AddressListType"></Type>
+  </Item>
+  <Item>
+    <Element>PhoneNumberList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The employee's phone number(s).</p>
+    </Description>
+    <Type ref="CommonTypes" name="PhoneNumberListType"></Type>
+  </Item>
+  <Item>
+    <Element>EmailList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The employee's e-mail address(es).</p>
+    </Description>
+    <Type ref="CommonTypes" name="EmailListType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <EmployeePersonal RefId="CD590651225DAC3859DEA3458BC39583">
+      <OtherIdList>
+        <OtherId Type="SSN">590651225</OtherId>
+        <OtherId Type="Other">3333</OtherId>
+      </OtherIdList>
+      <Name Type="04">
+        <LastName>Stone</LastName>
+        <FirstName>Alicia</FirstName>
+      </Name>
+      <Demographics>
+        <Gender>F</Gender>
+      </Demographics>
+      <AddressList>
+        <Address Type="0123">
+          <Street>
+            <Line1>600 Royal Oak</Line1>
+          </Street>
+          <City>Chicago</City>
+          <StateProvince>IL</StateProvince>
+          <Country>US</Country>
+          <PostalCode>60601</PostalCode>
+        </Address>
+      </AddressList>
+      <PhoneNumberList>
+        <PhoneNumber Type="0096">
+          <Number>(312) 555-1234</Number>
+        </PhoneNumber>
+      </PhoneNumberList>
+      <EmailList>
+        <Email Type="Primary">stone@royaloak.org</Email>
+      </EmailList>
+    </EmployeePersonal>
+  </xhtml:Example>
+</DataObject>

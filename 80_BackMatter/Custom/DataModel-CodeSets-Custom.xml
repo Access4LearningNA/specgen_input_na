@@ -1,0 +1,599 @@
+<IncludeGroup
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+xmlns="http://sifassociation.org/SpecGen">
+
+<Grouping code="LearningStandardItem" name="LearningStandardItem" file="no">
+
+  <CodeSet>
+    <ID>Relationship Types</ID>
+
+    <Values>
+      <Value>
+        <Code>Content</Code>
+        <Text>A link to another state or school content standard</Text>
+      </Value>
+      <Value>
+        <Code>PD</Code><Text></Text>A link to a professional development standard
+      </Value>
+      <Value>
+        <Code>State</Code>
+        <Text>A link to a standard from another state.  The purpose of this is to express relationships between state standards.</Text>
+      </Value>
+      <Value>
+        <Code>Other</Code>
+        <Text>Any other type of relationship between the current standard and the target standard item.</Text>
+      </Value>
+    </Values>
+
+  </CodeSet>
+
+
+
+</Grouping>
+
+
+<Grouping code="StudentPlacement" name="StudentPlacement" file="no">
+
+  <CodeSet>
+    <ID>Other Types of Transportation</ID>
+
+    <Values>
+      <Value>
+        <Code>S101</Code>
+        <Text>Homeless transportation</Text>
+      </Value>
+      <Value>
+        <Code>S102</Code>
+        <Text>Choice transportation</Text>
+      </Value>
+    </Values>
+
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Title I Services</ID>
+    <Values>
+      <Value>
+        <Code>S001</Code>
+        <Text>Reading / language program</Text>
+      </Value>
+      <Value>
+        <Code>S002</Code>
+        <Text>Mathematics program</Text>
+      </Value>
+      <Value>
+        <Code>S003</Code>
+        <Text>Science program</Text>
+      </Value>
+      <Value>
+        <Code>S004</Code>
+        <Text>Social studies program</Text>
+      </Value>
+      <Value>
+        <Code>S005</Code>
+        <Text>Economics program</Text>
+      </Value>
+      <Value>
+        <Code>S006</Code>
+        <Text>Computers program</Text>
+      </Value>
+      <Value>
+        <Code>S007</Code>
+        <Text>Vocational / career program</Text>
+      </Value>
+      <Value>
+        <Code>S008</Code>
+        <Text>Support guidance / advocacy program</Text>
+      </Value>
+      <Value>
+        <Code>S009</Code>
+        <Text>Study skills program</Text>
+      </Value>
+      <Value>
+        <Code>S010</Code>
+        <Text>After-school tutoring program</Text>
+      </Value>
+      <Value>
+        <Code>S011</Code>
+        <Text>Summer school program</Text>
+      </Value>
+      <Value>
+        <Code>S012</Code>
+        <Text>4-year-old program</Text>
+      </Value>
+      <Value>
+        <Code>S013</Code>
+        <Text>3-year-old program</Text>
+      </Value>
+      <Value>
+        <Code>S014</Code>
+        <Text>Extended kindergarten program (beyond half day)</Text>
+      </Value>
+      <Value>
+        <Code>S015</Code>
+        <Text>Health / dental / eye care service</Text>
+      </Value>
+      <Value>
+        <Code>S016</Code>
+        <Text>Extended instruction time program</Text>
+      </Value>
+      <Value>
+        <Code>S017</Code>
+        <Text>Supplemental outside provider instructional services</Text>
+      </Value>
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Other Services</ID>
+    <Values>
+      <Value>
+        <Code>S200</Code>
+        <Text>Specialized instruction</Text>
+      </Value>
+    </Values>
+  </CodeSet>
+
+</Grouping>
+
+<Grouping code="TestAccommodation" name="TestAccommodation" file="false">
+
+
+  <CodeSet>
+    <ID>Test Material</ID>
+    <Values>
+      <Value>
+        <Code>S101</Code>
+        <Text>Braille</Text>
+      </Value>
+      <Value>
+        <Code>S102</Code>
+        <Text>Foreign Language</Text>
+      </Value>
+      <Value>
+        <Code>S103</Code>
+        <Text>Large print booklet</Text>
+      </Value>
+      <Value>
+        <Code>S104</Code>
+        <Text>Manually coded English or American sign Language to present test questions</Text>
+      </Value>
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Test Administration</ID>
+    <Values>
+      <Value>
+        <Code>S105</Code>
+        <Text>Amplification equipment</Text>
+      </Value>
+      <Value>
+        <Code>S106</Code>
+        <Text>Audiotape or CD</Text>
+      </Value>
+      <Value>
+        <Code>S107</Code>
+        <Text>Braille Reader</Text>
+      </Value>
+      <Value>
+        <Code>S108</Code>
+        <Text>Clarify directions</Text>
+      </Value>
+      <Value>
+        <Code>S109</Code>
+        <Text>Computer administration</Text>
+      </Value>
+      <Value>
+        <Code>S110</Code>
+        <Text>Cueing</Text>
+      </Value>
+      <Value>
+        <Code>S111</Code>
+        <Text>Examiner familiar with / to student</Text>
+      </Value>
+      <Value>
+        <Code>S112</Code>
+        <Text>Examiner fluent in sign language</Text>
+      </Value>
+      <Value>
+        <Code>S113</Code>
+        <Text>Font enlarged beyond large print version requirements</Text>
+      </Value>
+      <Value>
+        <Code>S114</Code>
+        <Text>Foreign language interpreter</Text>
+      </Value>
+      <Value>
+        <Code>S115</Code>
+        <Text>Foreign language interpreter for instructions, ask questions</Text>
+      </Value>
+      <Value>
+        <Code>S116</Code>
+        <Text>Format</Text>
+      </Value>
+      <Value>
+        <Code>S117</Code>
+        <Text>Graph paper</Text>
+      </Value>
+      <Value>
+        <Code>S118</Code>
+        <Text>Manipulatives for math items</Text>
+      </Value>
+      <Value>
+        <Code>S119</Code>
+        <Text>Mask portion of answer booklet</Text>
+      </Value>
+      <Value>
+        <Code>S120</Code>
+        <Text>Mask portion of test booklet</Text>
+      </Value>
+      <Value>
+        <Code>S121</Code>
+        <Text>Paraphrasing</Text>
+      </Value>
+      <Value>
+        <Code>S122</Code>
+        <Text>Provide reading windows</Text>
+      </Value>
+      <Value>
+        <Code>S123</Code>
+        <Text>Provide written directions on separate sheet / transparency</Text>
+      </Value>
+      <Value>
+        <Code>S124</Code>
+        <Text>Repeat / reword / clarify directions</Text>
+      </Value>
+      <Value>
+        <Code>S125</Code>
+        <Text>Sign language / cued speech interpreter</Text>
+      </Value>
+      <Value>
+        <Code>S126</Code>
+        <Text>Simplified language</Text>
+      </Value>
+      <Value>
+        <Code>S127</Code>
+        <Text>Student reads aloud</Text>
+      </Value>
+      <Value>
+        <Code>S128</Code>
+        <Text>Tactile cues</Text>
+      </Value>
+      <Value>
+        <Code>S129</Code>
+        <Text>Test administrator reads test directions aloud</Text>
+      </Value>
+      <Value>
+        <Code>S130</Code>
+        <Text>Test administrator reads test questions aloud</Text>
+      </Value>
+      <Value>
+        <Code>S131</Code>
+        <Text>Unlisted accommodation or modification</Text>
+      </Value>
+      <Value>
+        <Code>S132</Code>
+        <Text>Video cassette</Text>
+      </Value>
+      <Value>
+        <Code>S133</Code>
+        <Text>Visual cues</Text>
+      </Value>
+      <Value>
+        <Code>S134</Code>
+        <Text>Word processor</Text>
+      </Value>
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Student Equipment and Technology</ID>
+    <Values>
+      <Value>
+        <Code>S135</Code>
+        <Text>Adjustable swivel arm</Text>
+      </Value>
+      <Value>
+        <Code>S136</Code>
+        <Text>Adjustable table height</Text>
+      </Value>
+      <Value>
+        <Code>S137</Code>
+        <Text>Audio cassette player / tape recorder</Text>
+      </Value>
+      <Value>
+        <Code>S138</Code>
+        <Text>Colored lenses</Text>
+      </Value>
+      <Value>
+        <Code>S139</Code>
+        <Text>Enlarged keyboard</Text>
+      </Value>
+      <Value>
+        <Code>S140</Code>
+        <Text>Enlarged monitor view / screen display</Text>
+      </Value>
+      <Value>
+        <Code>S141</Code>
+        <Text>Laptop / computer</Text>
+      </Value>
+      <Value>
+        <Code>S142</Code>
+        <Text>Magnification device</Text>
+      </Value>
+      <Value>
+        <Code>S143</Code>
+        <Text>Physical supports</Text>
+      </Value>
+      <Value>
+        <Code>S144</Code>
+        <Text>Technological aid</Text>
+      </Value>
+      <Value>
+        <Code>S145</Code>
+        <Text>Track ball</Text>
+      </Value>
+      <Value>
+        <Code>S146</Code>
+        <Text>Video cassette player</Text>
+      </Value>
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Test Response</ID>
+    <Values>
+      <Value>
+        <Code>S147</Code>
+        <Text>Access to translation glossaries / word lists (english-to-primary language).  Shall not include definitions of formulas</Text>
+      </Value>
+      <Value>
+        <Code>S148</Code>
+        <Text>Arithmetic table (math or science)</Text>
+      </Value>
+      <Value>
+        <Code>S149</Code>
+        <Text>Assistive device that does interfere with independent work of the student</Text>
+      </Value>
+      <Value>
+        <Code>S150</Code>
+        <Text>Assistive device that does not interfere with independent work of the student</Text>
+      </Value>
+      <Value>
+        <Code>S151</Code>
+        <Text>Augmentative communication device</Text>
+      </Value>
+      <Value>
+        <Code>S152</Code>
+        <Text>Braille writer</Text>
+      </Value>
+      <Value>
+        <Code>S153</Code>
+        <Text>Braille writer, no thesaurus, spell-or grammar-checker</Text>
+      </Value>
+      <Value>
+        <Code>S154</Code>
+        <Text>Brailler ruler</Text>
+      </Value>
+      <Value>
+        <Code>S155</Code>
+        <Text>Calculator (math or science)</Text>
+      </Value>
+      <Value>
+        <Code>S156</Code>
+        <Text>Cassette player / tape recorder</Text>
+      </Value>
+      <Value>
+        <Code>S157</Code>
+        <Text>Computer administration</Text>
+      </Value>
+      <Value>
+        <Code>S158</Code>
+        <Text>Cranmer abacus</Text>
+      </Value>
+      <Value>
+        <Code>S159</Code>
+        <Text>Dictated oral response to proctor / transcriber</Text>
+      </Value>
+      <Value>
+        <Code>S160</Code>
+        <Text>Dictionary</Text>
+      </Value>
+      <Value>
+        <Code>S161</Code>
+        <Text>Essay responses dictated to a scribe orally, in manually coded English or in American Sign Language; and scribe provides spelling, grammar and language conventions</Text>
+      </Value>
+      <Value>
+        <Code>S162</Code>
+        <Text>Grammar checker</Text>
+      </Value>
+      <Value>
+        <Code>S163</Code>
+        <Text>Large face calculator</Text>
+      </Value>
+      <Value>
+        <Code>S164</Code>
+        <Text>Larger diameter pencil</Text>
+      </Value>
+      <Value>
+        <Code>S165</Code>
+        <Text>Mask portion of answer folder</Text>
+      </Value>
+      <Value>
+        <Code>S166</Code>
+        <Text>Math manipulatives (math or science)</Text>
+      </Value>
+      <Value>
+        <Code>S167</Code>
+        <Text>Modified specil grip pencil</Text>
+      </Value>
+      <Value>
+        <Code>S168</Code>
+        <Text>Qualified foreign language interpreter for LEP student</Text>
+      </Value>
+      <Value>
+        <Code>S169</Code>
+        <Text>Response dictated in American Sign Language / Manually coded English</Text>
+      </Value>
+      <Value>
+        <Code>S170</Code>
+        <Text>Separate additional continuation pages for writing tasks</Text>
+      </Value>
+      <Value>
+        <Code>S171</Code>
+        <Text>Sign responses to sign language interpreter</Text>
+      </Value>
+      <Value>
+        <Code>S172</Code>
+        <Text>Speech recognition system</Text>
+      </Value>
+      <Value>
+        <Code>S173</Code>
+        <Text>Spell-checker</Text>
+      </Value>
+      <Value>
+        <Code>S174</Code>
+        <Text>Student marked in test booklet</Text>
+      </Value>
+      <Value>
+        <Code>S175</Code>
+        <Text>Talking calculator</Text>
+      </Value>
+      <Value>
+        <Code>S176</Code>
+        <Text>Test administrator marked / wrote test at student's direction due to student handwriting issues</Text>
+      </Value>
+      <Value>
+        <Code>S177</Code>
+        <Text>Thesaurus</Text>
+      </Value>
+      <Value>
+        <Code>S178</Code>
+        <Text>Translation dictionary for LEP student</Text>
+      </Value>
+      <Value>
+        <Code>S179</Code>
+        <Text>Verbalized problem-solving</Text>
+      </Value>
+      <Value>
+        <Code>S180</Code>
+        <Text>Word processor / typewriter / computer with thesaurus / spell-checker / grammar-checker enabled on essay responses writing portion of test</Text>
+      </Value>
+      <Value>
+        <Code>S181</Code>
+        <Text>Word processor / typewriter / computer with thesaurus / spell-checker / grammar-checker turned off</Text>
+      </Value>
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Scheduling</ID>
+    <Values>
+      <Value>
+        <Code>S182</Code>
+        <Text>Additional supervised test breaks for English Learners within testing day or following each section provided that test section is completed within a testing day</Text>
+      </Value>
+      <Value>
+        <Code>S183</Code>
+        <Text>Frequent breaks</Text>
+      </Value>
+      <Value>
+        <Code>S184</Code>
+        <Text>Multi-day administration</Text>
+      </Value>
+      <Value>
+        <Code>S185</Code>
+        <Text>Multiple test sessions</Text>
+      </Value>
+      <Value>
+        <Code>S186</Code>
+        <Text>Scheduled extended time</Text>
+      </Value>
+      <Value>
+        <Code>S187</Code>
+        <Text>Student-requested extended time</Text>
+      </Value>
+      <Value>
+        <Code>S188</Code>
+        <Text>Supervised test breaks</Text>
+      </Value>
+      <Value>
+        <Code>S189</Code>
+        <Text>Terminate session when student indicates they have completed all items they can</Text>
+      </Value>
+      <Value>
+        <Code>S190</Code>
+        <Text>Test administered at best time of day for student</Text>
+      </Value>
+      <Value>
+        <Code>S191</Code>
+        <Text>Untimed</Text>
+      </Value>
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Setting</ID>
+    <Values>
+      <Value>
+        <Code>S192</Code>
+        <Text>Carrel</Text>
+      </Value>
+      <Value>
+        <Code>S193</Code>
+        <Text>Facing examiner / proctor</Text>
+      </Value>
+      <Value>
+        <Code>S194</Code>
+        <Text>Front of room near examiner / proctor</Text>
+      </Value>
+      <Value>
+        <Code>S195</Code>
+        <Text>Hospital / home testing</Text>
+      </Value>
+      <Value>
+        <Code>S196</Code>
+        <Text>Individual</Text>
+      </Value>
+      <Value>
+        <Code>S197</Code>
+        <Text>Resource room</Text>
+      </Value>
+      <Value>
+        <Code>S198</Code>
+        <Text>Separate room</Text>
+      </Value>
+      <Value>
+        <Code>S199</Code>
+        <Text>Separate room with other English Learners under supervision of district employee</Text>
+      </Value>
+      <Value>
+        <Code>S200</Code>
+        <Text>Small group</Text>
+      </Value>
+      <Value>
+        <Code>S201</Code>
+        <Text>Small group in separate room</Text>
+      </Value>
+      <Value>
+        <Code>S202</Code>
+        <Text>Special ed classroom</Text>
+      </Value>
+      <Value>
+        <Code>S203</Code>
+        <Text>Special furniture</Text>
+      </Value>
+      <Value>
+        <Code>S204</Code>
+        <Text>Special lighting</Text>
+      </Value>
+      <Value>
+        <Code>S205</Code>
+        <Text>Specialized setting</Text>
+      </Value>
+    </Values>
+  </CodeSet>
+
+</Grouping>
+</IncludeGroup>

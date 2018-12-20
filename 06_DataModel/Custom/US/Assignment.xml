@@ -1,0 +1,226 @@
+<DataObject name="Assignment"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+	xmlns="http://sifassociation.org/SpecGen">
+	<Key>@RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>Assignment</Element>
+		<Description>
+			<p>
+        The work assigned to a student, which can comprise of learning resources, activities, and assessments. It must have
+        a student and a time attached to it.
+      </p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>GUID assigned to assignment.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+
+	<!--<Item>
+		<Attribute>xml:lang</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The default language used in the assignment object.</p>
+		</Description>
+	</Item>-->
+
+	<Item>
+		<Element>Students</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Students given this assignment.</p>
+		</Description>
+		<Type ref="CommonTypes" name="StudentPersonalRefIdListType"/>
+	</Item>
+	<Item>
+		<Element>StaffPersonalRefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>GUID assigned to the educator who gave the assignment.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>TechnicalRequirements</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Operating system, network, and other technical requirements for the activity, if applicable.</p>
+		</Description>
+		<Type ref="CommonTypes" name="TechnicalRequirementsType"/>
+	</Item>
+	<Item>
+		<Element>SoftwareRequirementList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Contains information about required software.</p>
+		</Description>
+		<Type ref="CommonTypes" name="SoftwareRequirementListType"/>
+	</Item>
+	<Item>
+		<Element>EssentialMaterials</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Essential materials required to engage in the assignment.</p>
+		</Description>
+		<Type ref="CommonTypes" name="EssentialMaterialListType"/>
+	</Item>
+	<Item>
+		<Element>Title</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Descriptive name of the assignment.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>Preamble</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Description and context for the assignment.</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<Item>
+		<Element>LearningObjectives</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Educational objectives of the assignment.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LearningObjectiveListType"/>
+	</Item>
+	<Item>
+		<Element>LearningStandards</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        Associated <code>LearningStandardItem</code> objects.
+      </p>
+		</Description>
+		<Type ref="CommonTypes" name="LearningStandardItemRefIdListType"/>
+	</Item>
+	<Item>
+		<Element>Prerequisites</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Skills or competencies the student must have to engage in assignment.</p>
+		</Description>
+		<Type ref="CommonTypes" name="PrerequisiteListType"/>
+	</Item>
+	<Item>
+		<Element>SourceObjects</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Source objects assigned to students.</p>
+		</Description>
+		<Type ref="CommonTypes" name="SourceObjectListType"/>
+	</Item>
+	<Item>
+		<Element>AssignmentTime</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Time structures for the assignment.</p>
+		</Description>
+		<Type ref="CommonTypes" name="AssignmentTimeType"/>
+	</Item>
+	<Item>
+		<Element>MaxAttemptsAllowed</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The number attempts a student may make on this assignment. Assumed to be unlimited if omitted.</p>
+		</Description>
+		<Type name="xs:unsignedInt"/>
+	</Item>
+	<Item>
+		<Element>AddToGradeBookFlag</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Flag to prompt grade book processing.</p>
+		</Description>
+		<Type name="xs:boolean"/>
+	</Item>
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_MetadataType"/>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+	</Item>
+	<xhtml:Example name="Assignment - Example 1" xmlns="">
+		<Assignment RefId="DE072A87EFAD4B778AF9FAF83C94839E" xml:lang="en">
+			<Students>
+				<StudentPersonalRefId>687FE59529E5FDB6A0949FDD8E12ACC3</StudentPersonalRefId>
+			</Students>
+			<StaffPersonalRefId>994FE59529E5FDB6A0949FDD8E12ACC3</StaffPersonalRefId>
+			<TechnicalRequirements>
+				<TechnicalRequirement>Internet Explorer 5.5 or greater</TechnicalRequirement>
+			</TechnicalRequirements>
+			<EssentialMaterials>
+				<EssentialMaterial>LCD Projector</EssentialMaterial>
+			</EssentialMaterials>
+			<Title>The Painting of the Titanic: An Artistic Disaster</Title>
+			<Preamble>Just how badly CAN the students paint? This assignment will help determine this.</Preamble>
+			<SourceObjects>
+				<SourceObject SIF_RefObject="Assessment">C2AC666132E946D9828B506A851FC3F5</SourceObject>
+			</SourceObjects>
+			<AssignmentTime>
+				<Duration Units="minute">30</Duration>
+				<StartDate>2003-02-26</StartDate>
+				<DueDate>2003-02-26</DueDate>
+				<AdministrationDate>2003-02-26</AdministrationDate>
+			</AssignmentTime>
+			<MaxAttemptsAllowed>1</MaxAttemptsAllowed>
+			<AddToGradeBookFlag>true</AddToGradeBookFlag>
+		</Assignment>
+	</xhtml:Example>
+	<xhtml:Example name="Assignment - Example 2" xmlns="">
+		<Assignment RefId="DE072A87EFAD4B778AF9FAF83C94839E" xml:lang="en">
+			<Students>
+				<StudentPersonalRefId>687FE59529E5FDB6A0949FDD8E12ACC3</StudentPersonalRefId>
+			</Students>
+			<StaffPersonalRefId>994FE59529E5FDB6A0949FDD8E12ACC3</StaffPersonalRefId>
+			<TechnicalRequirements>
+				<TechnicalRequirement>Internet Explorer 5.5 or greater</TechnicalRequirement>
+			</TechnicalRequirements>
+			<SoftwareRequirementList>
+				<SoftwareRequirement>
+					<SoftwareTitle>Real Player</SoftwareTitle>
+					<Version>11.0</Version>
+					<Vendor>RealNetworks</Vendor>
+				</SoftwareRequirement>
+				<SoftwareRequirement>
+					<SoftwareTitle>Internet Explorer</SoftwareTitle>
+					<Version>6.0</Version>
+					<OS>Windows XP</OS>
+				</SoftwareRequirement>
+			</SoftwareRequirementList>
+			<EssentialMaterials>
+				<EssentialMaterial>LCD Projector</EssentialMaterial>
+			</EssentialMaterials>
+			<Title>The Painting of the Titanic: An Artistic Disaster</Title>
+			<Preamble>Just how badly CAN the students paint? This assignment will help determine this.</Preamble>
+			<SourceObjects>
+				<SourceObject SIF_RefObject="Assessment">C2AC666132E946D9828B506A851FC3F5</SourceObject>
+			</SourceObjects>
+			<AssignmentTime>
+				<Duration Units="minute">30</Duration>
+				<StartDate>2003-02-26</StartDate>
+				<DueDate>2003-02-26</DueDate>
+				<AdministrationDate>2003-02-26</AdministrationDate>
+			</AssignmentTime>
+			<MaxAttemptsAllowed>1</MaxAttemptsAllowed>
+			<AddToGradeBookFlag>true</AddToGradeBookFlag>
+		</Assignment>
+	</xhtml:Example>
+</DataObject>

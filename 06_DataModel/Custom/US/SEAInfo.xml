@@ -1,0 +1,162 @@
+<DataObject name="SEAInfo"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>@RefId</Key>
+
+  <EventsReported>false</EventsReported>
+  <Item>
+    <Element>SEAInfo</Element>
+    <Description>
+      <p>This object is designed to facilitate the transfer of State Education Agency (SEA) directory information to the Department of Education (USED) through the Education Data Exchange Network (EDEN).</p>
+    </Description>
+  </Item>
+  <Item>
+
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID of the SEA whose information this is.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>LocalId</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The locally-assigned identifier for this SEA.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  <Item>
+    <Element>NCESId</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The NCES-assigned identifier for this SEA.</p>
+    </Description>
+    <Type ref="CommonTypes" name="NCESIdType"></Type>
+  </Item>
+  <Item>
+    <Element>SEAName</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The full legally accepted name of the SEA.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>SEAURL</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>URL for the SEA.</p>
+    </Description>
+    <Type name="xs:anyURI"></Type>
+  </Item>
+
+  <Item>
+    <Element>CSSOContact</Element>
+    <Characteristics>M</Characteristics>
+    <Description>Chief State School Officer contact information.</Description>
+    <Type ref="CommonTypes" name="ContactInfoType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SEAContactList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>Information on contact persons for this SEA.</Description>
+    <Type ref="CommonTypes" name="SEAContactListType"></Type>
+  </Item>
+
+  <Item>
+    <Element>PhoneNumberList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>The SEA's phone number(s).</Description>
+    <Type ref="CommonTypes" name="PhoneNumberListType"></Type>
+  </Item>
+  <Item>
+    <Element>AddressList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>The SEA's address(es).</Description>
+    <Type ref="CommonTypes" name="AddressListType"></Type>
+  </Item>
+  <Item>
+    <Element>OperationalStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>This element is deprecated as of SIF Data Model Implementation Specification v2.5.  This element applies to LEAs but not to SEAs. </Description>
+    <Type ref="CommonTypes" name="OperationalStatusType"></Type>
+  </Item>
+  <Item>
+    <Element>EDENInfo</Element>
+    <Characteristics>O</Characteristics>
+    <Description>Container element for EDEN-specific information.</Description>
+      <Type ref="CommonTypes" name="EDENInfoType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <SEAInfo RefId="D3E34B359D75101A8C3D00AA001A1652">
+      <SEAName>Illinois State Board of Education</SEAName>
+      <SEAURL>http://www.isbe.net</SEAURL>
+      <CSSOContact>
+        <Name Type="08">
+          <LastName>Geisel</LastName>
+          <FirstName>Theodore</FirstName>
+        </Name>
+        <PositionTitle>Superintendent</PositionTitle>
+        <EmailList>
+          <Email Type="Primary">drseuss@isbe.net</Email>
+        </EmailList>
+        <PhoneNumberList>
+          <PhoneNumber Type="0096">
+            <Number>(312) 555-0102</Number>
+          </PhoneNumber>
+        </PhoneNumberList>
+      </CSSOContact>
+      <PhoneNumberList>
+        <PhoneNumber Type="0096">
+          <Number>5555551234</Number>
+        </PhoneNumber>
+      </PhoneNumberList>
+      <AddressList>
+        <Address Type="0123">
+          <Street>
+            <Line1>1 IBM Plaza</Line1>
+            <Line2>Suite 2000</Line2>
+            <StreetNumber>1</StreetNumber>
+            <StreetName>IBM</StreetName>
+            <StreetType>Plaza</StreetType>
+            <ApartmentType>Suite</ApartmentType>
+            <ApartmentNumber>2000</ApartmentNumber>
+          </Street>
+          <City>Chicago</City>
+          <StateProvince>IL</StateProvince>
+          <Country>US</Country>
+          <PostalCode>60611</PostalCode>
+        </Address>
+      </AddressList>
+      <EDENInfo>
+        <FIPSStateCode>99</FIPSStateCode>
+        <AgencyIdNumber>01</AgencyIdNumber>
+      </EDENInfo>
+    </SEAInfo>
+  </xhtml:Example>
+</DataObject>

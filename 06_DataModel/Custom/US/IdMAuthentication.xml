@@ -1,0 +1,107 @@
+<DataObject name="IdMAuthentication"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+	xmlns="http://sifassociation.org/SpecGen">
+	<Key>@RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>IdMAuthentication</Element>
+		<Description>
+			<p>This object establishes an authentication map between the Organization-User and the Identity Provider (IDP) LoginId. The profile will be used primarily to provision/deprovision users from the SIS/HR systems to the IDP.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>GUID that uniquely identifies an instance of this object.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+	<Item>
+		<Element>UserOrganizationAssociationRefId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The RefId for the UserOrganizationAssociation SIF object if the authentication returns “true”.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>ApplicationRefId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>RefId of the Identity Provider application.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>IdentityProviderLoginId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The login for the Organization-User within the Identity Provider application.</p>
+		</Description>
+		<Type name="xs:token"/>
+	</Item>
+	<Item>
+		<Element>IdentityProviderType</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>An enumeration that defines how the authentication can be performed and exchanged.</p>
+		</Description>
+		<Values>
+			<Value><Code>LDAP</Code></Value>
+			<Value><Code>Active Directory</Code></Value>
+			<Value><Code>SAML 2.0</Code></Value>
+			<Value><Code>OAuth 1.0</Code></Value>
+			<Value><Code>OAuth 2.0</Code></Value>
+			<Value><Code>OpenID</Code></Value>
+			<Value><Code>BrowserID</Code></Value>
+			<Value><Code>Other</Code></Value>
+		</Values>
+	</Item>
+	<Item>
+		<Element>AuthoritativeSourceId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The RefID of the Authoritative Application creating this association.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>StartDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Start date of the association of this authentication instance to the Identity Provider application.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<Item>
+		<Element>EndDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>End date of the association of this authentication instance to the Identity Provider application.</p>
+		</Description>
+		<Type name="xs:date"/>
+	</Item>
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_MetadataType"/>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+	</Item>
+	<xhtml:Example name= "IdMAuthentication" xmlns="">
+		<IdMAuthentication RefId="FE1078BA3261545A31905937B265CE01">
+			<UserOrganizationAssociationRefId>AC3078BA3261545A31905937B265CE02</UserOrganizationAssociationRefId>
+			<ApplicationRefId>AC3089BA3261545A31905937B265CE02</ApplicationRefId>
+			<IdentityProviderLoginId>myId</IdentityProviderLoginId>
+			<StartDate>2001-09-05</StartDate>
+		</IdMAuthentication>
+	</xhtml:Example>
+</DataObject>

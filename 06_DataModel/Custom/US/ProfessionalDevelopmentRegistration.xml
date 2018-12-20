@@ -1,0 +1,111 @@
+<DataObject name="ProfessionalDevelopmentRegistration"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Intro>
+    This object tracks the status of the user in a professional development activity.
+    It includes where the user is in terms of the status of completion, if a stipend is to be provided and the amount of that stipend.
+  </Intro>
+  <Item>
+    <Element>ProfessionalDevelopmentRegistration</Element>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Attribute>EmployeePersonalRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Who this record affects.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+    <Element>RegistrationStatus</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Tracks the status of the user in the professional development activity.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Registered</Code>
+        <Text>Represents the user has registered for the activity.</Text>
+      </Value>
+      <Value>
+        <Code>Withdrawn</Code>
+        <Text>Represents that the user has withdrawn from the activity without completing.</Text>
+      </Value>
+      <Value>
+        <Code>Complete</Code>
+        <Text>Represents that a user has completed the activity and has received credit and show have a record in the employee credit object to represent this.</Text>
+      </Value>
+      <Value>
+        <Code>Incomplete</Code>
+        <Text>Represents that the user did not receive credit for this activity for whatever reason.</Text>
+      </Value>
+      <Value>
+        <Code>In Progress</Code>
+        <Text>
+          Represents that the user has not yet finished the <code>ProfessionalDevelopmentActivity</code> or <code>ProfessionalDevelopmentProgram</code> but hasn't withdrawn.
+        </Text>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>ProfessionalDevelopmentActivityRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Relationship Id for professional development activity.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+    <Element>ProfessionalDevelopmentProgramRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Relationship Id for professional development program.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+    <Element>PaidAmount</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This optional field is used if there is a fee for the professional development activity and for tracking the amount the user paid to participate in the professional development activity.</p>
+    </Description>
+    <Type ref="CommonTypes" name="MonetaryAmountType"/>
+  </Item>
+  <Item>
+    <Element>Stipend</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Optional field for tracking the amount the user is paid to participate in the professional development activity.</p>
+    </Description>
+    <Type ref="CommonTypes" name="MonetaryAmountType"/>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <ProfessionalDevelopmentRegistration RefId="ACB1254742AE54CC874567DFCD196832" EmployeePersonalRefId="D4E1EA3D82614CA39361514E5F115B14">
+      <RegistrationStatus>Registered</RegistrationStatus>
+      <ProfessionalDevelopmentActivityRefId>13F1BD47F2AE862C874567ABE4196DD1</ProfessionalDevelopmentActivityRefId>
+      <PaidAmount Currency="USD">25</PaidAmount>
+      <Stipend Currency="USD">500</Stipend>
+    </ProfessionalDevelopmentRegistration>
+  </xhtml:Example>
+</DataObject>

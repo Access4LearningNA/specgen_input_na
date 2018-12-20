@@ -1,0 +1,81 @@
+<DataObject name="MarkInfo"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+	xmlns="http://sifassociation.org/SpecGen">
+	<EventsReported>true</EventsReported>
+	<Key>@RefId</Key>
+	<Item>
+		<Element>MarkInfo</Element>
+		<Description>
+			<p>
+        This object defines each mark that can be recorded and associates it with a MarkValueInfo object that lists the types of values and valid values for each type.  It also
+        places the definition in the context of a school and a school year.
+      </p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The Id (GUID) that uniquely identifies this Grading Mark entity.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+	<Item>
+		<Attribute>MarkValueInfoRefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The Id (GUID) that uniquely identifies the MarkValueInfo.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Attribute>SchoolInfoRefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The Id (GUID) that uniquely identifies the School that this Mark applies to.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>SchoolYear</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The year that this  MarkInfo applies to.</p>
+		</Description>
+		<Type ref="CommonTypes" name="SchoolYearType"/>
+	</Item>
+	<Item>
+		<Element>Description</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Textual description of the type of Mark (e.g. "Marking Period Grade", "Comment 1", "Comment 2", "Conduct", "Effort", "WorkHabits").</p>
+		</Description>
+		<Type name="xs:string"/>
+	</Item>
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_MetadataType"/>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+	</Item>
+	<xhtml:Example xmlns="">
+		<MarkInfo RefId="46BDBA4301C11737E214A7CADCA75C87" MarkValueInfoRefId="301CADCA7511737E214A7C46BDBA4E23" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB">
+			<SchoolYear>2004</SchoolYear>
+			<Description>Marking Period Grade</Description>
+		</MarkInfo>
+	</xhtml:Example>
+	<xhtml:Example xmlns="">
+		<MarkInfo RefId="11737E214A7C46BDBA4301CADCA75C87" MarkValueInfoRefId="11737E214A7C46BDBA4301CADCA75E23" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB">
+			<SchoolYear>2004</SchoolYear>
+			<Description>Conduct Grade</Description>
+		</MarkInfo>
+	</xhtml:Example>
+</DataObject>

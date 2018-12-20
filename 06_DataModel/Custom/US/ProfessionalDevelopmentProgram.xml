@@ -1,0 +1,91 @@
+<DataObject name="ProfessionalDevelopmentProgram"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Intro>
+    The purpose of this object is for tracking sets of professional development activities.
+    It creates a high-level relationship between professional development activities for tracking training programs,
+    grant-funded professional development, or potentially individually created learning programs.
+    The case for interoperability is that financial systems and instructional systems need to be aware of professional development programs
+    for funding or alignment respectively.
+  </Intro>
+  <Item>
+    <Element>ProfessionalDevelopmentProgram</Element>
+    <Description>Container for external relationships.</Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID for this object.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>LearningStandardItems</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>
+        Associated <code>LearningStandardItem</code> objects.
+      </p>
+    </Description>
+     <Type ref="CommonTypes" name="LearningStandardItemRefIdListType"></Type>
+  </Item>
+  <Item>
+    <Element>LocalProgramId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An element for setting local program identifiers.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>ProgramName</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The name or title of the program.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>ProgramType</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The type of program whether it be a grant, learning plan, or system training.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>FundingSource</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The funding source of the program.</p>
+    </Description>
+    <Type name="xs:string"/>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <ProfessionalDevelopmentProgram RefId="E6F37470472D49EE86C1FA8EE47D8244">
+      <LearningStandardItems>
+        <LearningStandardItemRefId>241A53AFBA3176EF062367CFCC2900BC</LearningStandardItemRefId>
+      </LearningStandardItems>
+      <LocalProgramId>RI123</LocalProgramId>
+      <ProgramName>Reading First Grant</ProgramName>
+      <ProgramType>Grant</ProgramType>
+    </ProfessionalDevelopmentProgram>
+  </xhtml:Example>
+</DataObject>

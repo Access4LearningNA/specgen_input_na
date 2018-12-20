@@ -1,0 +1,381 @@
+<DataObject name="StudentSchoolEnrollment"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>@RefId</Key>
+
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>StudentSchoolEnrollment</Element>
+    <Description>
+      <p>
+        This object defines information related to a student's enrollment.  StudentSchoolEnrollment
+        instances must not span multiple school years.
+      </p>
+      <p>
+        Note there is only one current home enrollment at a time for a student. One and only one instance of the <code>StudentSchoolEnrollment</code> object must exist for a given student with <code>MembershipType=Home</code> for the time interval between <code>EntryDate</code> and <code>ExitDate</code>, inclusive.
+      </p>
+
+      <p>
+        Effective in version 2.0, agents are required to re-publish a <code>StudentSchoolEnrollment</code> object <code>Change</code> event when the
+        <code>TimeFrame</code> attribute changes, regardless of when the data entry is done.
+        This is in addition to the pre-2.0 practice of publishing the object <code>Change</code> event at the time the data changes in the corresponding application.
+      </p>
+
+      <p>
+        When the object is re-published, it must contain all the data in the object that is supported by the publisher.
+        For more information, please refer to the
+        <a href="background/StudentInformationSystemsWorkingGroup/StudentSchoolEnrollment/Background/StudentSchoolEnrollment%202.0%20Behavior.doc">supporting documentation</a>.
+      </p>
+
+
+    </Description>
+  </Item>
+  <Item>
+
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies a particular enrollment.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+
+    <Attribute>StudentPersonalRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) of the student to whom this information is linked.</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records enrollment of" count="*:1" name="IdRefType"></Type>
+  </Item>
+  <Item>
+
+    <Attribute>SchoolInfoRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) of the school to which this enrollment applies.</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records enrollment of student in" count="1:1" name="IdRefType"></Type>
+  </Item>
+  <Item>
+
+    <Attribute>MembershipType</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The type of this enrollment as it relates to the school identified in SchoolInfoRefId.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Home</Code>
+        <Text>The school is responsible for reporting the student's membership/child accounting information</Text>
+      </Value>
+      <Value>
+        <Code>Concurrent</Code>
+        <Text>The school is not the primary reporting unit for the student's membership/child accounting information</Text>
+      </Value>
+      <Value>
+        <Code>Summer</Code>
+        <Text>A summer school enrollment, not part of the regular school year</Text>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+
+    <Attribute>TimeFrame</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        The timeframe of the enrollment based on the <code>SIF_Date</code> in the <code>SIF_Header</code> of the message. For events, it is determined as of the date the event is generated. For requests and responses, it is calculated based on the date of the request.
+      </p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Current</Code>
+        <Text>
+          Event/request date falls between <code>EntryDate</code> and <code>ExitDate</code> (inclusive)
+        </Text>
+      </Value>
+      <Value>
+        <Code>Historical</Code>
+        <Text>
+          Event/request date falls after <code>ExitDate</code>
+        </Text>
+      </Value>
+      <Value>
+        <Code>Future</Code>
+        <Text>
+          Event/request date falls before <code>EntryDate</code>
+        </Text>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Attribute>SchoolYear</Attribute>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        School year for which this enrollment is applicable, expressed as the four-digit year in which the school year ends (e.g. <code>2007</code> for the 2006-07 school year). StudentSchoolEnrollment instances must not span multiple school years.
+      </p>
+    </Description>
+    <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
+  <Item>
+    <Element>EntryDate</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The date from when this enrollment is valid.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>EntryType</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description></Description>
+    <Type ref="CommonTypes" name="StudentEntryTypeType"></Type>
+  </Item>
+
+  <Item>
+    <Element>GradeLevel</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Grade or academic level of student for this enrollment.</p>
+    </Description>
+    <Type ref="CommonTypes" name="GradeLevelType"></Type>
+  </Item>
+  <Item>
+    <Element>Homeroom</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Homeroom for this enrollment.</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records student homeroom as" count="1:?" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The name of the object referenced.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>RoomInfo</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>Advisor</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Staff member assigned as an advisor for this enrollment.</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records student advisor as" count="1:?" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The name of the object referenced.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>StaffPersonal</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>Counselor</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Staff member assigned as a counselor for this enrollment.</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records student counselor as" count="1:?" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The name of the object referenced.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>StaffPersonal</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>Calendar</Element>
+    <Characteristics>O</Characteristics>
+    <Description>The calendar assigned to this enrollment.</Description>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>The name of the object referenced.</Description>
+    <Values>
+      <Value>
+        <Code>CalendarSummary</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>ExitDate</Element>
+
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>
+        The last school calendar day of this enrollment. If the student has exited the school or the enrollment has a <code>RecordClosureReason</code>, <code>ExitDate</code> must have a value.
+      </p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+
+  <Item>
+    <Element>ExitStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description></Description>
+    <Type ref="CommonTypes" name="StudentExitStatusType"></Type>
+  </Item>
+
+
+  <Item>
+    <Element>ExitType</Element>
+    <Characteristics>O</Characteristics>
+    <Description></Description>
+    <Type ref="CommonTypes" name="StudentExitTypeType"></Type>
+  </Item>
+
+  <Item>
+    <Element>RecordClosureReason</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The reason why this enrollment was closed.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>SchoolExit</Code>
+      </Value>
+      <Value>
+        <Code>TimeDependentDataChange</Code>
+      </Value>
+      <Value>
+        <Code>EndOfYear</Code>
+        <Text>The EndOfYear option must be used to convey status change due to rollover activity.</Text>
+      </Value>
+    </Values>
+  </Item>
+
+  <Item>
+    <Element>PromotionInfo</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Information on a student’s promotion, retention, or demotion related to this enrollment instance.</p>
+    </Description>
+    <Type ref="CommonTypes" name="PromotionInfoType"></Type>
+  </Item>
+
+   <Item>
+    <Element>FTE</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Full-time equivalent numeric value of the student's course load during this enrollment, expressed in decimal form, where 1.00 represents a full-time enrollment.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+    <Facets>
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="1"/>
+      <xs:fractionDigits value="2"/>
+    </Facets>
+  </Item>
+  <Item>
+    <Element>FTPTStatus</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication of whether the student is enrolled full time or part time.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>FullTime</Code>
+      </Value>
+      <Value>
+        <Code>PartTime</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>ResidencyStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Location of an individual's legal residence relative to (within or outside) the boundaries of the school for this enrollment.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ResidencyStatusType"></Type>
+  </Item>
+
+  <Item>
+    <Element>NonResidentAttendReason</Element>
+
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>
+        If the school represented by this enrollment is outside of the student's usual attendance area
+        (as indicated in the ResidencyStatus element), this element indicates the reason that the student attends this school.
+      </p>
+    </Description>
+    <Type ref="ExternalCodeSets" name="NCES0599NonResidentAttendanceRationaleType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example name="StudentSchoolEnrollment - Example 1" xmlns="">
+    <StudentSchoolEnrollment RefId="A8C3D3E34B359D75101D00AA001A1652" StudentPersonalRefId="D3E34B359D75101A8C3D00AA001A1652"
+      SchoolInfoRefId="D3E34B359D75101A8C3D00AA001A1651" MembershipType="Home" TimeFrame="Current" SchoolYear="2004">
+      <EntryDate>2004-01-29</EntryDate>
+      <EntryType>
+        <Code>1838</Code>
+      </EntryType>
+      <GradeLevel>
+        <Code>10</Code>
+      </GradeLevel>
+      <Homeroom SIF_RefObject="RoomInfo">D7510D3E34B3591A8C3D00AA001A1651</Homeroom>
+      <Advisor SIF_RefObject="StaffPersonal">B359D3E34D75101A8C3D00AA001A1652</Advisor>
+      <FTE>1.00</FTE>
+      <FTPTStatus>FullTime</FTPTStatus>
+      <ResidencyStatus>
+        <Code>1653</Code>
+      </ResidencyStatus>
+      <NonResidentAttendReason>1658</NonResidentAttendReason>
+    </StudentSchoolEnrollment>
+  </xhtml:Example>
+  <xhtml:Example name="StudentSchoolEnrollment - Example 2" xmlns="">
+    <StudentSchoolEnrollment RefId="A8C3D3E34B359D75101D00AA001A1652" StudentPersonalRefId="D3E34B359D75101A8C3D00AA001A1652" SchoolInfoRefId="D3E34B359D75101A8C3D00AA001A1651" MembershipType="Home" TimeFrame="Historical" SchoolYear="2008">
+      <ExitDate>2008-01-29</ExitDate>
+      <RecordClosureReason>TimeDependentDataChange</RecordClosureReason>
+		<PromotionInfo>
+		<PromotionStatus>Promoted</PromotionStatus>
+      <Promotion>
+        <Code>1974</Code>
+      </Promotion>
+		</PromotionInfo>
+    </StudentSchoolEnrollment>
+
+  </xhtml:Example>
+</DataObject>

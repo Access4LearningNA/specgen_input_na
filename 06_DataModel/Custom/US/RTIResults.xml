@@ -1,0 +1,162 @@
+<DataObject name="RTIResults"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>@RefId</Key>
+
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>RTIResults</Element>
+    <Description>
+      <p>Response to Intervention (RTI) is a multi-tier approach to the early identification and assistance of students who are having learning and/or behavioral needs. This object records the individual learner information for an assigned ResponseToIntervention.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies the results of a particular Response to Intervention.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+ <Item>
+    <Attribute>StudentPersonalRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) of the student being administered the intervention..</p>
+    </Description>
+    <Type ref="CommonTypes"  name="IdRefType"></Type>
+  </Item>
+
+  <Item>
+    <Attribute>StudentPlacementRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID)  that references the StudentPlacement Object that contains information that describes a specific instructional, related or transitional service that has been prescribed or recommended in the program plan developed for a student who has been placed in an individualized special program.</p>
+    </Description>
+    <Type ref="CommonTypes"  name="IdRefType"></Type>
+  </Item>
+
+   <Item>
+    <Attribute>ResponseToInterventionRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) of the reference to the ResponseToIntervention that has been assigned for this individual learner.</p>
+    </Description>
+    <Type ref="CommonTypes"  name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>RTILocalId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A local ID that may be used to identify this intervention for the student.</p>
+    </Description>
+	<Type ref="CommonTypes" name="LocalIdType"/>
+   </Item>
+
+   <Item>
+    <Element>Intervention</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Naming of the intervention.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+   </Item>
+
+   <Item>
+    <Element>PerformanceIndicators</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The specific measurement goals at the end of the intervention that each student should reach.</p>
+    </Description>
+	<Type ref="CommonTypes" name="PerformanceIndicatorListType"/>
+  </Item>
+
+  <Item>
+    <Element>Measurements</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The specific measurement goals at the end of the intervention that each student should reach.</p>
+    </Description>
+	<Type ref="CommonTypes" name="ResponseToInterventionMeasurementListType"/>
+  </Item>
+
+
+
+  <Item>
+    <Element>Baselines</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>List of pre-assessment data used to evaluate the student on the learning objective.</p>
+    </Description>
+	<Type ref="CommonTypes" name="BaselineListType"/>
+  </Item>
+
+  <Item>
+    <Element>Targets</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>List of specific end aims.</p>
+    </Description>
+	<Type ref="CommonTypes" name="TargetListType"/>
+  </Item>
+
+  <Item>
+    <Element>Results</Element>
+    <Characteristics>O</Characteristics>
+	<Type ref="CommonTypes" name="ResultListType"/>
+  </Item>
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+
+  <xhtml:Example  xmlns="">
+   <RTIResults RefId="1652D3E34F419D75101A8C3D00AA001A"
+    StudentPersonalRefId="F260716384746B387459000F84717C00"
+	StudentPlacementRefId="DE072A87EFAD4B778AF9FAF83C94839E"
+	ResponseToInterventionRefId="869670E8540A43509515AFB767FADD9A">
+
+	<RTILocalId>837D3</RTILocalId>
+	<Intervention>Read Naturally</Intervention>
+	<PerformanceIndicators>
+		 <PerformanceIndicator>ORF 120</PerformanceIndicator>
+	</PerformanceIndicators>
+	<Measurements>
+		<Measurement>
+			 <MeasurementTool>DIBELS</MeasurementTool>
+			 <FrequencyofMeasure>S005</FrequencyofMeasure>
+		 </Measurement>
+	</Measurements>
+	<Baselines>
+		 <Baseline>ORF 40</Baseline>
+	</Baselines>
+	<Targets>
+		 <Target>ORF 70</Target>
+		 <Target>ORF 95</Target>
+		 <Target>ORF 110</Target>
+	</Targets>
+	<Results>
+      	 <Result>ORF 68</Result>
+	     <Result>ORF 99</Result>
+	     <Result>ORF 118</Result>
+	</Results>
+
+	</RTIResults>
+
+  </xhtml:Example>
+</DataObject>

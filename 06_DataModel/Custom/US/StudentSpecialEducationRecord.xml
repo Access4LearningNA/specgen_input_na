@@ -1,0 +1,121 @@
+<DataObject name="StudentSpecialEducationRecord"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>false</EventsReported>
+
+  <Item>
+    <Element>StudentSpecialEducationRecord</Element>
+    <Description>
+      <p>Conveys a student's special education program information for student record exchange.</p>
+      <p>
+        This object is designed to be a dual-purpose object.  It can be linked to a <code>StudentRecordExchange</code> object
+        for record exchange purposes.  There may also be Zones where systems can provide this information for record exchange
+        systems or general informational purposes, in which case the object can be linked directly to <code>StudentPersonal</code>.
+      </p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Description>
+      <p>The Id (GUID) of this record.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>SIF_RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Description>
+      <p>
+        The GUID of an associated object, either <code>StudentRecordExchange</code> or <code>StudentPersonal</code>.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        The associated object type.
+      </p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>StudentRecordExchange</Code>
+      </Value>
+      <Value>
+        <Code>StudentPersonal</Code>
+      </Value>
+    </Values>
+  </Item>
+
+
+  <Item>
+    <Element>ReportingDate</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The date this record was prepared.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>LEAInfoData</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Identifies the LEA of the "school of record" for the student's information. </p>
+    </Description>
+    <Type ref="CommonTypes" name="LEAInfoSummaryCleanType"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolInfoData</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Identifies the "school of record" responsible for maintaining the student's information.</p>
+    </Description>
+     <Type ref="CommonTypes" name="SchoolInfoMiniSummaryType"></Type>
+ </Item>
+
+  <Item>
+    <Element>StudentParticipationData</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Collects elements of interest from StudentParticipation.</p>
+    </Description>
+     <Type ref="CommonTypes" name="StudentParticipationDataType"></Type>
+  </Item>
+  <Item>
+    <Element>StudentParticipationList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p></p>
+    </Description>
+     <Type ref="CommonTypes" name="StudentSpecialEducationSummaryStudentParticipationListType"></Type>
+  </Item>
+  <Item>
+    <Element>StudentPlacementList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This list contains information that describes each specific instructional, related or transitional service that has been prescribed or recommended in the program plan developed for a student who has been placed in an individualized special program.</p>
+    </Description>
+     <Type ref="CommonTypes" name="StudentSpecialEducationSummaryStudentPlacementListType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+
+
+</DataObject>

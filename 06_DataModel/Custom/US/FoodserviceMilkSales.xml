@@ -1,0 +1,83 @@
+<DataObject name="FoodserviceMilkSales"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <EventsReported>false</EventsReported>
+  <Key>@RefId</Key>
+  <Item>
+    <Element>FoodserviceMilkSales</Element>
+    <Description>
+      <p>This object communicates the daily milk sales at a school.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies the daily milk sales object</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>School for which the sales object applies</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records milk sales for" count="?:1" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>Date</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Date on which the sales occurred.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>Program</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="FundedProgramType"></Type>
+  </Item>
+  <Item>
+    <Element>SaleQuantities</Element>
+    <Characteristics>M</Characteristics>
+     <Type ref="CommonTypes" name="MilkSaleQuantityListType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+
+  <xhtml:Example xmlns="">
+    <FoodserviceMilkSales RefId="D21CF29B7FB44965A9CF950E1E60B21E">
+      <SchoolInfoRefId>AA66800BE0D84E80AA5838FA97EE3A3E</SchoolInfoRefId>
+      <Date>2001-10-31</Date>
+      <Program Type="Foodservice">NSLP</Program>
+      <SaleQuantities>
+        <SaleQuantity>
+          <Value>99999</Value>
+          <MealStatus Type="Free" />
+          <SaleUnit>6 oz</SaleUnit>
+          <ChargeToChild Currency="USD">999.99</ChargeToChild>
+        </SaleQuantity>
+        <SaleQuantity>
+          <Value>99999</Value>
+          <MealStatus Type="Reduced" />
+          <SaleUnit>6 oz</SaleUnit>
+          <ChargeToChild Currency="USD">999.99</ChargeToChild>
+        </SaleQuantity>
+      </SaleQuantities>
+    </FoodserviceMilkSales>
+  </xhtml:Example>
+</DataObject>

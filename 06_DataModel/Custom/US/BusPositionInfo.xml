@@ -1,0 +1,187 @@
+<DataObject name="BusPositionInfo"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>BusPositionInfo</Element>
+    <Description>
+      <p>This object exposes telematics information to the zone.</p>
+    </Description>
+  </Item>
+  <Item>
+
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID that identifies the bus. This object only has meaning as current data for this particular bus.</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records position of" count="?:1" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>Date</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The date of the report from the bus.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>Time</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The time of the report from the bus.</p>
+    </Description>
+    <Type name="xs:time"></Type>
+  </Item>
+  <Item>
+    <Element>GridLocation</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The location of the bus.</p>
+    </Description>
+    <Type ref="CommonTypes" name="GridLocationType"></Type>
+  </Item>
+  <Item>
+    <Element>TelematicsId</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Id of the hardware unit on the bus that tracks and reports location and status. The interpretation of the content is deployment specific, but the format must be compact.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+
+  <Item>
+    <Element>TelemetryList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="TelemetryListType"></Type>
+  </Item>
+
+
+
+  <Item>
+    <Element>BusDriver</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Information identifying the driver.</p>
+    </Description>
+    <Type ref="CommonTypes" name="BusStaffType"></Type>
+  </Item>
+  <Item>
+    <Element>BusStaffList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>List identifying other staff. This may include aides, nurses, proctors, etc.</p>
+    </Description>
+    <Type ref="CommonTypes" name="BusStaffListType"></Type>
+  </Item>
+
+
+  <Item>
+    <Element>RouteStatus</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>
+        If the bus is running a route, this element must be included in the object.
+        Absence means the bus is not operating a route.
+      </p>
+    </Description>
+    <Type ref="CommonTypes" name="BusRouteStatusType"></Type>
+  </Item>
+
+  <Item>
+    <Element>OtherStatus</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>If the bus is not running a regularly scheduled route but is transporting (or positioning to transport) passengers as approved and directed by the school district, this element describes the activity. It's also used for maintenance, repair, and other authorized movements. This element is mutually exclusive with RouteStatus. Absence of both RouteStatus and OtherStatus is acceptable, but may indicate unauthorized operation.</p>
+      <p>The following values are suggested to enhance interoperability, but the field is free-form.</p>
+      <p>Suggested Values:</p>
+      <p>Field Trip</p>
+      <p>Sporting Event</p>
+      <p>Support Services</p>
+      <p>Maintenance</p>
+      <p>Repair</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>Odometer</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Current odometer reading.</p>
+    </Description>
+    <Type ref="CommonTypes" name="DistanceType"></Type>
+  </Item>
+   <Item>
+    <Element>Speedometer</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Current speedometer reading.</p>
+    </Description>
+    <Type ref="CommonTypes" name="DistanceType"></Type>
+  </Item>
+   <Item>
+    <Element>Students</Element>
+    <Characteristics>O</Characteristics>
+    <Description>A list of students and their statuses.   The complete list may be sent with some events (e.g. change in RouteStatus) per district policy, but it is more typical of responses.</Description>
+    <Type ref="CommonTypes" name="BusPositionStudentListType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <BusPositionInfo RefId="A2E35B359D75101A8C3D00AA001A0000">
+      <Date>2003-10-13</Date>
+      <Time>13:39:12-08:00</Time>
+      <GridLocation>
+        <Latitude>41.850000</Latitude>
+        <Longitude>-87.650000</Longitude>
+      </GridLocation>
+      <TelematicsId>NexTel866-456-7890</TelematicsId>
+      <TelemetryList>
+        <Telemetry>Close</Telemetry>
+      </TelemetryList>
+      <BusDriver>
+        <EmployeePersonalRefId>BB0300099D75101A8C3D00AA001A0000</EmployeePersonalRefId>
+        <Status>Sched</Status>
+      </BusDriver>
+      <RouteStatus>
+        <BusRouteInfoRefId>D3E34B359D75101A8C3D00AA001A1652</BusRouteInfoRefId>
+        <Status>Continue</Status>
+      </RouteStatus>
+      <Odometer Unit="km">100000.0</Odometer>
+      <Speedometer Unit="km">60</Speedometer>
+      <Students>
+        <Student>
+          <StudentPersonalRefId>F3B35B359D75101A8C3D00AA001A0000</StudentPersonalRefId>
+          <Status>Entered</Status>
+        </Student>
+        <Student>
+          <StudentPersonalRefId>A7E35B359D75101A8C3D00BB211A0000</StudentPersonalRefId>
+          <Status>Entered</Status>
+        </Student>
+        <Student>
+          <StudentPersonalRefId>A9D35B359D75101A8C3D00AA001A9999</StudentPersonalRefId>
+          <Status>Entered</Status>
+        </Student>
+      </Students>
+    </BusPositionInfo>
+  </xhtml:Example>
+</DataObject>

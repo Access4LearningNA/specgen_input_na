@@ -1,0 +1,255 @@
+<DataObject name="StudentContact"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+	xmlns="http://sifassociation.org/SpecGen">
+	<Key>@RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>StudentContact</Element>
+		<Description>
+			<p>This object contains information regarding a contact person for a student.</p>
+			<p>Note: <em>As of version 2.5 this object is deprecated.</em>  It will be removed from the Specification in the next major release.  Use the StudentContactPersonal and StudentContactRelationship objects instead. </p>
+			<p>
+        Note:  At least one of the child elements of <code>ContactFlags</code> must have a <code>Yes</code> value.
+        Do not publish the <code>StudentContact</code> instance if one of the child elements does not have a <code>Yes</code> value.
+      </p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The GUID of this contact.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+	<Item>
+		<Attribute>StudentPersonalRefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The GUID of the student whose contact this is.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>LocalId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>
+        The locally-assigned identifier for this contact.  Note: LocalId may be used as a unique person identifier
+        rather than a unique contact identifier.  In this case there may be more than one StudentContact instance with the same LocalId.
+      </p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+
+	<Item>
+		<Element>OtherIdList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Lists all "other" identifiers associated with the contact.</p>
+		</Description>
+		<Type ref="CommonTypes" name="OtherIdListType"/>
+    </Item>
+	<!-- The subset was removed so that an additional OtherId Type was not required.  Subset needs to be specified in documentation
+	<Item>
+		<Element>/OtherId</Element>
+		<Characteristics>MR</Characteristics>
+		<Description>
+			<p>Lists an "other" identifier associated with the contact.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Attribute>Type</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>Code that defines the type of this other Id.</p>
+		</Description>
+		<Type ref="ExternalCodeSets" name="NCES0147IdentificationSystemType"/>
+		<Values type="subset">
+			<Value>
+				<Code>0328</Code>
+			</Value>
+			<Value>
+				<Code>0164</Code>
+			</Value>
+			<Value>
+				<Code>0339</Code>
+			</Value>
+			<Value>
+				<Code>9999</Code>
+			</Value>
+			<Value>
+				<Code>0222</Code>
+			</Value>
+			<Value>
+				<Code>0154</Code>
+			</Value>
+			<Value>
+				<Code>0399</Code>
+			</Value>
+			<Value>
+				<Code>0004</Code>
+			</Value>
+			<Value>
+				<Code>0113</Code>
+			</Value>
+			<Value>
+				<Code>5013</Code>
+			</Value>
+		</Values>
+	</Item>
+     -->
+	<Item>
+		<Element>Name</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        The name of the contact.  Note: Type attribute value of <code>04</code> must be used here.
+      </p>
+		</Description>
+		<Type ref="CommonTypes" name="NameOfRecordType"/>
+	</Item>
+
+	<Item>
+		<Element>OtherNames</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Previous, alternate or other names or aliases associated with the contact.</p>
+		</Description>
+		<Type ref="CommonTypes" name="OtherNamesType"/>
+	</Item>
+	<Item>
+		<Element>Demographics</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Demographic information about the contact.</p>
+		</Description>
+		<Type ref="CommonTypes" name="DemographicsType"/>
+	</Item>
+	<Item>
+		<Element>AddressList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The contact's address(es).</p>
+		</Description>
+		<Type ref="CommonTypes" name="AddressListType"/>
+	</Item>
+	<Item>
+		<Element>PhoneNumberList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The contact's phone number(s).</p>
+		</Description>
+		<Type ref="CommonTypes" name="PhoneNumberListType"/>
+	</Item>
+	<Item>
+		<Element>EmailList</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The contact's e-mail address(es).</p>
+		</Description>
+		<Type ref="CommonTypes" name="EmailListType"/>
+	</Item>
+	<Item>
+		<Element>Relationship</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Defines the relationship of the contact to the student.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RelationshipType"/>
+	</Item>
+	<Item>
+		<Element>EmployerType</Element>
+		<Characteristics>O</Characteristics>
+		<Description/>
+		<Description>
+			<p>Code that defines the employer type.</p>
+		</Description>
+		<Type ref="ExternalCodeSets" name="NCES0614EmployerTypeType"/>
+	</Item>
+	<Item>
+		<Element>EducationalLevel</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The highest level of education completed by the contact person.</p>
+		</Description>
+		<Type ref="CommonTypes" name="EducationalLevelType"/>
+	</Item>
+	<Item>
+		<Element>ContactFlags</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        Contains Yes/No characteristics of the contact person's role.  Provide a <code>Yes</code> value for all that apply.
+        At least one of the child elements of <code>ContactFlags</code> must have a <code>Yes</code> value.
+        Do not publish the <code>StudentContact</code> instance if one of the child elements does not have a <code>Yes</code> value.
+      </p>
+		</Description>
+		<Type ref="CommonTypes" name="ContactFlagsType"/>
+	</Item>
+
+	<Item>
+		<Element>ContactSequence</Element>
+		<Characteristics>O</Characteristics>
+		<Type name="xs:unsignedInt"/>
+		<Description>
+			<p>Number indicating the order in which the person should be contacted.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_MetadataType"/>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+	</Item>
+	<xhtml:Example name="StudentContact" xmlns="">
+		<StudentContact RefId="D3E34B379D75101A8C3D00AA001A1652" StudentPersonalRefId="DEE34B359D75101A8C3D00AA001A1652">
+			<Name Type="04">
+				<LastName>Johnson</LastName>
+				<FirstName>Alicia</FirstName>
+			</Name>
+			<Demographics>
+				<Gender>F</Gender>
+			</Demographics>
+			<AddressList>
+				<Address Type="0123">
+					<Street>
+						<Line1>6799 33rd Ave.</Line1>
+						<StreetNumber>6799</StreetNumber>
+						<StreetName>33rd</StreetName>
+						<StreetType>Ave.</StreetType>
+					</Street>
+					<City>Chicago</City>
+					<StateProvince>IL</StateProvince>
+					<Country>US</Country>
+					<PostalCode>60660</PostalCode>
+				</Address>
+			</AddressList>
+			<PhoneNumberList>
+				<PhoneNumber Type="0096">
+					<Number>(604) 555-1212</Number>
+				</PhoneNumber>
+			</PhoneNumberList>
+			<EmailList>
+				<Email Type="Primary">contact@sifinfo.org</Email>
+			</EmailList>
+			<Relationship>
+				<Code>1735</Code>
+			</Relationship>
+			<EmployerType>1805</EmployerType>
+			<EducationalLevel>1051</EducationalLevel>
+			<ContactFlags>
+				<PickupRights>Yes</PickupRights>
+			</ContactFlags>
+		</StudentContact>
+	</xhtml:Example>
+</DataObject>

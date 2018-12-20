@@ -1,0 +1,80 @@
+<DataObject name="AggregateCharacteristicInfo"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <EventsReported>true</EventsReported>
+  <Key>@RefId</Key>
+  <Item>
+    <Element>AggregateCharacteristicInfo</Element>
+    <Description>
+      <p>This object defines the attribute of a group of objects that implicitly or explicitly defines a subset of the group.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Key for aggregate characteristic information.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>
+        Describes the supercategory of the characteristic described in the <code>Definition</code> element below.
+      </p>
+    </Description>
+    <Type name="xs:string"></Type>
+    <ItemExample>Gender</ItemExample>
+    <ItemExample>Ethnicity</ItemExample>
+    <ItemExample>Grade</ItemExample>
+    <ItemExample>Economic Status</ItemExample>
+    <ItemExample>LEP Status</ItemExample>
+    <ItemExample>IEP Status</ItemExample>
+    <ItemExample>Migrant Status</ItemExample>
+  </Item>
+  <Item>
+    <Element>Definition</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Defines the aggregate characteristic information.</p>
+    </Description>
+    <ItemExample>White</ItemExample>
+    <ItemExample>Male</ItemExample>
+    <ItemExample>Dropout</ItemExample>
+    <Type name="xs:token"></Type>
+  </Item>
+  <Item>
+    <Element>ElementName</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>
+        Reference to SIF elements or external authority (e.g., <code>StudentPersonal/Gender</code>).
+      </p>
+    </Description>
+    <ItemExample>Dropout Status</ItemExample>
+    <Type name="xs:token"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <AggregateCharacteristicInfo RefId="06AF1D69FB064AB388983505714F18FB">
+      <Description>Ethnicity</Description>
+      <Definition>Hispanic</Definition>
+      <ElementName>StudentPersonal/Demographics/Ethnicity</ElementName>
+    </AggregateCharacteristicInfo>
+  </xhtml:Example>
+</DataObject>

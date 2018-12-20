@@ -1,0 +1,303 @@
+<DataObject name="LearningStandardDocument"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>LearningStandardDocument</Element>
+    <Description>
+      <p>
+        A curriculum standards document or the like published by a national, state, district, school site, professional association or other interested party. The
+        LearningStandardDocument reflects an expectation of student work.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Id for the standards document</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <!--<Item>
+    <Attribute>xml:lang</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The default language of the text used for the content in the learning standard document.</p>
+    </Description>
+  </Item>-->
+
+  <Item>
+    <Element>RefURI</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:anyURI"></Type>
+	<Description>
+      <p>A URI that establishes uniqueness of the object instance.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>Title</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Name of standard document, i.e., "Washington Essential Academic Learning Requirements."</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>ShortName</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:token"></Type>
+	<Description>
+      <p>A short name for the document.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>DocumentVersion</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:token"></Type>
+	<Description>
+      <p>Identifies the version of the document that this object instance represents. Note that new versions of documents must generate new RefIds and therefore a new object instance.  This element is immutable in that once the object has been published with a value (other than blank) it must never be changed. </p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Description of the standards document.</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  <Item>
+    <Element>Source</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        Defines source of standard document.  This is the descriptive type of the organization listed in <code>Organization</code>. It serves to describe the type of the standards contained within the document.
+      </p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>National</Code>
+      </Value>
+      <Value>
+        <Code>State</Code>
+      </Value>
+      <Value>
+        <Code>Regional</Code>
+      </Value>
+      <Value>
+        <Code>District</Code>
+      </Value>
+      <Value>
+        <Code>Site</Code>
+      </Value>
+      <Value>
+        <Code>Classroom</Code>
+      </Value>
+      <Value>
+        <Code>Publisher</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>Organizations</Element>
+    <Characteristics>M</Characteristics>
+     <Description>
+      <p>Names of organization represented by the document, i.e., "National Council of Teachers of Mathematics (NCTM)," "Washington," "Seattle School District."</p>
+    </Description>
+   <Type ref="CommonTypes" name="OrganizationListType"></Type>
+  </Item>
+
+  <Item>
+    <Element>Authors</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Name of the organization that authored the standards document, i.e. "Mid-Continent Research for Education &amp; Learning (McREL)." May be the same as "Organization" above.</p>
+    </Description>
+   <Type ref="CommonTypes" name="AuthorListType"></Type>
+  </Item>
+
+  <Item>
+    <Element>OrganizationContactPoint</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A brief description of how to contact the organization maintaining the standards. It could be a phone number, email address, or URL.</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  <Item>
+    <Element>SubjectAreas</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="SubjectAreaListType"></Type>
+  </Item>
+
+ <Item>
+    <Element>DocumentStatus</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description></Description>
+    <Values>
+      <Value>
+        <Code>Draft</Code>
+      </Value>
+      <Value>
+        <Code>Adopted</Code>
+      </Value>
+      <Value>
+        <Code>Archived</Code>
+      </Value>
+      <Value>
+        <Code>Unknown</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>DocumentDate</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The date the current status was achieved.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>LocalAdoptionDate</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The date the local organization adopted this standard document</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>LocalArchiveDate</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The date the local organization stopped using this standard document and superseded by a new document.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>EndOfLifeDate</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This is the date that the governing organization retired this document.&#160;</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>Copyright</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Copyright for document.</p>
+    </Description>
+     <Type ref="CommonTypes" name="CopyrightType"></Type>
+ </Item>
+
+  <Item>
+    <Element>GradeLevels</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>SIF common GradeLevels element</p>
+    </Description>
+    <Type ref="CommonTypes" name="GradeLevelsType"></Type>
+  </Item>
+  <Item>
+    <Element>RepositoryDate</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date document data was added to the repository</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>LearningStandardItemRefId</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Link to the first/top LearningStandardItem in the standard hierarchy</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+
+  </Item>
+  <Item>
+    <Element>RelatedLearningStandards</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="LearningStandardDocumentRefIdListType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <LearningStandardDocument RefId="A5A575C789175101B8E7F08ED123A823" xml:lang="en">
+      <Title>Washington Essential Academic Learning Requirements</Title>
+      <Description>This document addresses high school English Language Arts</Description>
+      <Source>State</Source>
+
+      <Organizations>
+        <Organization>State of Washington</Organization>
+      </Organizations>
+      <Authors>
+        <Author>McREL</Author>
+      </Authors>
+      <OrganizationContactPoint>http://www.mcrel.org</OrganizationContactPoint>
+      <SubjectAreas>
+        <SubjectArea>
+          <Code>01</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Text">English Language and Literature</OtherCode>
+          </OtherCodeList>
+        </SubjectArea>
+      </SubjectAreas>
+      <DocumentStatus>Adopted</DocumentStatus>
+      <DocumentDate>2001-04-15</DocumentDate>
+      <LocalAdoptionDate>2002-01-06</LocalAdoptionDate>
+      <EndOfLifeDate>2003-04-15</EndOfLifeDate>
+      <Copyright>
+        <Date>2001-02-05</Date>
+        <Holder>State of Washington</Holder>
+      </Copyright>
+      <GradeLevels>
+        <GradeLevel>
+          <Code>09</Code>
+        </GradeLevel>
+        <GradeLevel>
+          <Code>10</Code>
+        </GradeLevel>
+        <GradeLevel>
+          <Code>11</Code>
+        </GradeLevel>
+        <GradeLevel>
+          <Code>12</Code>
+        </GradeLevel>
+      </GradeLevels>
+      <RepositoryDate>2001-04-15</RepositoryDate>
+      <LearningStandardItemRefId>B7D26D789139214A8C7F08EA123A8234</LearningStandardItemRefId>
+      <RelatedLearningStandards>
+        <LearningStandardDocumentRefId>B216162FC98D202E62A64D53C991A25A</LearningStandardDocumentRefId>
+      </RelatedLearningStandards>
+    </LearningStandardDocument>
+  </xhtml:Example>
+</DataObject>

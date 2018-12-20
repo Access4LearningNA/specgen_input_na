@@ -1,0 +1,131 @@
+<DataObject name="StaffSectionAssignment"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>@RefId</Key>
+
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>StaffSectionAssignment</Element>
+    <Description>
+      <p>This object contains information about a teacher's assignment in a section.</p>
+    </Description>
+  </Item>
+  <Item>
+
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies this StaffSectionAssignment entity.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>StaffPersonalRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) of the teacher or educational staff to whom the assignment information applies.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SectionInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) of the section in which this staff (teacher) is assigned.</p>
+    </Description>
+    <Type ref="CommonTypes"  name="IdRefType"></Type>
+  </Item>
+
+	<Item>
+		<Element>AssignmentStartDate</Element>
+
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>Date from when this section assignment is effective and should be inclusive of the start and end date of the section coming from TermInfo.</p>
+		</Description>
+		<Type name="xs:dateTime"></Type>
+	 </Item>
+
+	<Item>
+		<Element>AssignmentEndDate</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+		  <p>Date when this section assignment comes to an end and should be inclusive of the start and end date of the section coming from TermInfo.</p>
+		</Description>
+		<Type name="xs:dateTime"></Type>
+	 </Item>
+
+
+  <Item>
+    <Element>TeacherOfRecord</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Indicates if the staff is the Teacher of Record during this assignment.</p>
+    </Description>
+	   <Values>
+		  <Value>
+			<Code>Yes</Code>
+		  </Value>
+		  <Value>
+			<Code>No</Code>
+		  </Value>
+		</Values>
+  </Item>
+
+  <Item>
+    <Element>Roles</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>List of one or more Roles.</p>
+    </Description>
+    <Type ref="CommonTypes"  name="RolesType"></Type>
+  </Item>
+
+
+  <Item>
+    <Element>PercentResponsible</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Percentage of Responsibility of the Teacher of Record.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+     <Facets>
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="100"/>
+      <xs:fractionDigits value="2"/>
+    </Facets>
+  </Item>
+
+ <Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+	</Item>
+
+  <xhtml:Example name="StaffSectionAssignment" xmlns="">
+    <StaffSectionAssignment RefId="E3D34B359D75101A8C3D00AA001A1652">
+	<StaffPersonalRefId>D3E34B359D75101A8C3D0004561A1652</StaffPersonalRefId>
+	<SectionInfoRefId>B359D3E34D75101A8C3D00AA001A1652</SectionInfoRefId>
+	<AssignmentStartDate>2011-09-15T09:30:00+06:00</AssignmentStartDate>
+	<AssignmentEndDate>2012-06-30T15:30:10+06:00</AssignmentEndDate>
+		<TeacherOfRecord>Yes</TeacherOfRecord>
+		<Roles>
+			<Role>LeadTeacher</Role>
+		</Roles>
+	<PercentResponsible>80</PercentResponsible>
+</StaffSectionAssignment>
+
+  </xhtml:Example>
+</DataObject>

@@ -1,0 +1,181 @@
+<DataObject name="CalendarDate"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <!-- Key Changed for REST -->
+
+  <EventsReported>true</EventsReported>
+
+  <Item>
+    <Element>CalendarDate</Element>
+    <Description>
+      <p>This object defines information related to a school calendar day in a given school calendar year. If both CalendarDate and CalendarSummary objects are supported, there must be an instance of this object for each date between CalendarSummary StartDate and EndDate, inclusive.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>A GUID that identifies an instance of this object. This RefId is new for 2.7M and MUST be supported like other objects that have a RefId (i.e. it is the key for the object).  The alternate keys MUST continue to be supported.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <Item>
+    <Attribute>Date</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>A specific school day that occurs within the school year.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Attribute>CalendarSummaryRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) of the calendar summary in which this calendar date is.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>SchoolInfoRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) of the school for which this calendar information is being reported.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>SchoolYear</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007" for the 2006-07 school year).</p>
+    </Description>
+    <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
+   <Item>
+    <Element>CalendarDateType</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Calendar date type information.</p>
+    </Description>
+     <Type ref="CommonTypes" name="CalendarDateInfoType"></Type>
+  </Item>
+  <Item>
+    <Element>CalendarDateNumber</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Order in which the calendar date falls within the school calendar.</p>
+    </Description>
+    <Type name="xs:unsignedInt"/>
+  </Item>
+    <Item>
+    <Element>StudentAttendance</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Information describing how the day relates to student attendance.</p>
+    </Description>
+    <Type ref="CommonTypes" name="AttendanceInfoType"></Type>
+  </Item>
+
+  <Item>
+    <Element>TeacherAttendance</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Information describing how the day relates to teacher attendance.</p>
+    </Description>
+     <Type ref="CommonTypes" name="AttendanceInfoType"></Type>
+  </Item>
+
+  <Item>
+    <Element>AdministratorAttendance</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Information describing how the day relates to administrator attendance.</p>
+    </Description>
+    <Type ref="CommonTypes" name="AttendanceInfoType"></Type>
+  </Item>
+
+  <Item>
+    <Element>BellScheduleDayList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A list of the bell schedules and the timetable day from that bell schedule to be used for the calendar date</p>
+    </Description>
+    <Type ref="CommonTypes" name="BellScheduleDayListType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example name="CalendarDate - Example 1" xmlns="">
+    <CalendarDate RefId="359D75101AD0A9D7A8C3DAD0A85103A2" Date="2007-08-31" CalendarSummaryRefId="B5739375800AC4CC63850BB2754114AA"
+      SchoolInfoRefId="B7A34E561C97345C0A4E11BB112B2753" SchoolYear="2007">
+      <CalendarDateType>
+        <Code>0845</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">20</OtherCode>
+          <OtherCode Codeset="Local">10</OtherCode>
+        </OtherCodeList>
+      </CalendarDateType>
+      <CalendarDateNumber>1</CalendarDateNumber>
+      <StudentAttendance>
+        <CountsTowardAttendance>No</CountsTowardAttendance>
+        <AttendanceValue>0.0</AttendanceValue>
+      </StudentAttendance>
+      <TeacherAttendance>
+        <CountsTowardAttendance>Yes</CountsTowardAttendance>
+        <AttendanceValue>1.0</AttendanceValue>
+      </TeacherAttendance>
+      <AdministratorAttendance>
+        <CountsTowardAttendance>Yes</CountsTowardAttendance>
+        <AttendanceValue>1.0</AttendanceValue>
+      </AdministratorAttendance>
+    </CalendarDate>
+  </xhtml:Example>
+  <xhtml:Example name="CalendarDate - Example 2" xmlns="">
+    <CalendarDate RefId="359D75101AD0A9D7A8C3DAD0A85103A2" Date="2007-08-31" CalendarSummaryRefId="B5739375800AC4CC63850BB2754114AA"
+                         SchoolInfoRefId="B7A34E561C97345C0A4E11BB112B2753"
+                         SchoolYear="2007">
+      <CalendarDateType>
+        <Code>0845</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">20</OtherCode>
+          <OtherCode Codeset="Local">10</OtherCode>
+        </OtherCodeList>
+      </CalendarDateType>
+      <CalendarDateNumber>1</CalendarDateNumber>
+      <StudentAttendance>
+        <CountsTowardAttendance>No</CountsTowardAttendance>
+        <AttendanceValue>0.0</AttendanceValue>
+      </StudentAttendance>
+      <TeacherAttendance>
+        <CountsTowardAttendance>Yes</CountsTowardAttendance>
+        <AttendanceValue>1.0</AttendanceValue>
+      </TeacherAttendance>
+      <AdministratorAttendance>
+        <CountsTowardAttendance>Yes</CountsTowardAttendance>
+        <AttendanceValue>1.0</AttendanceValue>
+      </AdministratorAttendance>
+      <BellScheduleDayList>
+        <BellScheduleDay>
+          <BellScheduleRefId>A157E79C10AC744ED90AF2871BEB90B3</BellScheduleRefId>
+          <TimetableDayIdentifier>A</TimetableDayIdentifier>
+        </BellScheduleDay>
+      </BellScheduleDayList>
+    </CalendarDate>
+
+  </xhtml:Example>
+</DataObject>

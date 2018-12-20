@@ -1,0 +1,155 @@
+<DataObject name="BusRouteInfo"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>BusRouteInfo</Element>
+    <Description>
+      <p>This object contains all of the information about a bus route.</p>
+    </Description>
+  </Item>
+  <Item>
+
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies this bus route.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+
+  </Item>
+
+  <Item>
+    <Element>BusInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies the bus that is associated with this route.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+
+  <Item>
+    <Element>RouteNumber</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        A unique identifier for the route.
+        It may contain any printable ASCII character. F
+        or instance, you may have route 16AM in the morning and a 16PM in the afternoon.
+      </p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>RouteType</Element>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The type of route.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Inbound</Code>
+      </Value>
+      <Value>
+        <Code>Outbound</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>MaximumLoad</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The maximum number of students who are on the bus at any point along this route.</p>
+    </Description>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>
+  <Item>
+    <Element>Description</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Short explanation of the route. It may be used to designate an area, or used to color-code bus routes (the "orange" route).</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  <Item>
+    <Element>Name</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Name of the driver who drives this route.</p>
+    </Description>
+    <Type ref="CommonTypes" name="NameType"></Type>
+  </Item>
+  <Item>
+    <Element>RouteDurationLoaded</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Refers to the amount of time that at least one student is riding the bus.</p>
+    </Description>
+    <Type name="xs:duration"/>
+  </Item>
+  <Item>
+    <Element>RouteDurationTotal</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Includes time when no student is on the bus, including time driving to and from the garage, etc.</p>
+    </Description>
+    <Type name="xs:duration"/>
+  </Item>
+
+  <Item>
+    <Element>RouteDistanceLoaded</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Refers to the distance the bus drives when at least one student is riding the bus.</p>
+    </Description>
+    <Type ref="CommonTypes" name="DistanceType"></Type>
+  </Item>
+
+  <Item>
+    <Element>RouteDistanceTotal</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Includes the total distance driven for this route including to and from garage.</p>
+    </Description>
+    <Type ref="CommonTypes" name="DistanceType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <BusRouteInfo RefId="D3E34B359D75101A8C3D00AA001A1652">
+      <BusInfoRefId>A2E35B359D75101A8C3D00AA001A0000</BusInfoRefId>
+      <RouteNumber>16AM</RouteNumber>
+      <RouteType>Inbound</RouteType>
+      <MaximumLoad>40</MaximumLoad>
+      <Description>1st Transfer Bus</Description>
+      <Name Type="02">
+        <LastName>Smith</LastName>
+        <FirstName>Jon</FirstName>
+      </Name>
+      <RouteDurationLoaded>PT16M45S</RouteDurationLoaded>
+      <RouteDurationTotal>PT28M00S</RouteDurationTotal>
+      <RouteDistanceLoaded Unit="m">5.23</RouteDistanceLoaded>
+      <RouteDistanceTotal Unit="m">9.9</RouteDistanceTotal>
+    </BusRouteInfo>
+  </xhtml:Example>
+</DataObject>

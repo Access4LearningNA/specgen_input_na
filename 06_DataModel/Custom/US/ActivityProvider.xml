@@ -1,0 +1,82 @@
+<DataObject name="ActivityProvider"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>ActivityProvider</Element>
+    <Description>
+      <p>This object contains information about educational providers of professional education courses and activities.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID for this object. The application that owns this object is responsible for generating this unique Id.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>LocalId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Local code used to represent this provider</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"></Type>
+  </Item>
+  <Item>
+    <Element>StateProvinceId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>State assigned provider number</p>
+    </Description>
+    <Type ref="CommonTypes" name="StateProvinceIdType"></Type>
+  </Item>
+  <Item>
+    <Element>Name</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Name of the provider.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>Address</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This element contains information related to provider's address information.</p>
+    </Description>
+    <Type ref="CommonTypes" name="AddressType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <ActivityProvider RefId="FE1078BA3261545A31905937B265CE01">
+      <LocalId>305.0</LocalId>
+      <StateProvinceId>4580</StateProvinceId>
+      <Name>Sunnyvalley College</Name>
+      <Address Type="0123">
+        <Street>
+          <Line1>1 Sunnyvalley Lane</Line1>
+        </Street>
+        <City>Sunnyvalley</City>
+        <StateProvince>OR</StateProvince>
+        <Country>US</Country>
+        <PostalCode>97497</PostalCode>
+      </Address>
+    </ActivityProvider>
+  </xhtml:Example>
+</DataObject>

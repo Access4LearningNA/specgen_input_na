@@ -1,0 +1,71 @@
+<DataObject name="SectionMarkInfo"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+	xmlns="http://sifassociation.org/SpecGen">
+	<EventsReported>true</EventsReported>
+	<Key>@SectionInfoRefId</Key>
+	<Key>@SchoolInfoRefId</Key>
+	<Item>
+		<Element>SectionMarkInfo</Element>
+		<Description>
+			<p>This object defines the marking periods (TermInfo) that marks (StudentSectionMarks) are recorded in for a particular section (SectionInfo) and lists the types of marks (MarkTypeInfo) that are valid for that marking period (TermInfo).</p>
+		</Description>
+	</Item>
+		<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>A GUID that identifies an instance of the object. This RefId is new for 2.7M and MUST be supported like other objects that have a RefId (i.e. it is the key for the object).  The alternate keys MUST continue to be supported.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Attribute>SectionInfoRefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The Id (GUID) that uniquely identifies the SectionInfo object that this item refers to.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Attribute>SchoolInfoRefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The Id (GUID) that uniquely identifies the School that these Mark Values apply to.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Element>TermMarkLists</Element>
+		<Characteristics>M</Characteristics>
+		<Type ref="CommonTypes" name="TermMarkListsType"/>
+	</Item>
+
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_MetadataType"/>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+	</Item>
+	<xhtml:Example xmlns="">
+		<SectionMarkInfo RefId="359D75101AD0A9D7A8C3DAD0A85103A2" SectionInfoRefId="11737E214A7C46BDBA4301CADCA75C87" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB">
+			<TermMarkLists>
+				<MarkInfoList TermInfoRefId="BDBA4301CA1A7C461737DCA75C87E214">
+					<MarkInfoRefId>A7C46BDBA4301CA11737E214DCA75C87</MarkInfoRefId>
+					<MarkInfoRefId>BA4301CADCA75C8711737E214A7C46BD</MarkInfoRefId>
+				</MarkInfoList>
+				<MarkInfoList TermInfoRefId="01CA1BDBA43A7C461737DCA75C87E214">
+					<MarkInfoRefId>A7C46BDBA4301CA11737E214DCA75C87</MarkInfoRefId>
+					<MarkInfoRefId>BA4301CADCA75C8711737E214A7C46BD</MarkInfoRefId>
+				</MarkInfoList>
+			</TermMarkLists>
+		</SectionMarkInfo>
+	</xhtml:Example>
+</DataObject>

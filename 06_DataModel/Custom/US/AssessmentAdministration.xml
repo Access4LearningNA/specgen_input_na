@@ -1,0 +1,131 @@
+<DataObject name="AssessmentAdministration"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>AssessmentAdministration</Element>
+    <Description>
+      <p>This object represents an assessment event. It includes information related to the time of administration, place of administration, and unusual events related to the administration.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Description>
+      <p>The GUID that uniquely identifies an instance of the object.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>AssessmentFormRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>The RefId of the assessment form used in the assessment administration.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>AdministrationName</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>SpecialConditions</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Special conditions or unusual events related to the administration event.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SpecialConditionActionListType"></Type>
+  </Item>
+
+
+  <Item>
+    <Element>AdministrationDateTime</Element>
+    <Characteristics>M</Characteristics>
+    <Type name="xs:dateTime"></Type>
+    <Description>
+      <p>Date and time the test is scheduled to be given.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>StartDateTime</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:dateTime"></Type>
+    <Description>
+      <p>Date and time testing begins.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>FinishDateTime</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:dateTime"></Type>
+    <Description>
+      <p>Date and time testing ends.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>DueDateTime</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:dateTime"></Type>
+    <Description>
+      <p>Date and time test is due.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>Address</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Address of the location where the administration takes place.</p>
+    </Description>
+    <Type ref="CommonTypes" name="AddressType"></Type>
+  </Item>
+  <Item>
+    <Element>StaffPersonalRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>Optional reference to a staff person associated with the administration.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>LEAInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>Optional reference to a school district associated with the administration.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Description>
+      <p>Optional reference to a school associated with the administration.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+
+  <xhtml:Example xmlns="">
+    <AssessmentAdministration RefId="E2E8045FD8884745AC588F1DDDBEE864" AssessmentFormRefId="78DA3F367AAE4E34995CE15530F531CC">
+      <SpecialConditions>
+        <SpecialCondition Code="25B">Fire drill during test.</SpecialCondition>
+      </SpecialConditions>
+      <AdministrationDateTime>2006-03-06T14:30:00-05:00</AdministrationDateTime>
+      <FinishDateTime>2006-03-06T15:30:00-05:00</FinishDateTime>
+    </AssessmentAdministration>
+  </xhtml:Example>
+</DataObject>

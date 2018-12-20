@@ -1,0 +1,139 @@
+<DataObject name="StudentPeriodAttendance"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <EventsReported>true</EventsReported>
+
+  <Key>@RefId</Key>
+  <Item>
+    <Element>StudentPeriodAttendance</Element>
+    <Description>
+      <p>
+        This object provides attendance for a student in the context of a SectionInfo object.
+        This object is used by all agents in a zone that provide period attendance,
+        but don't have the logic to determine whether or not they have sufficient rights to override attendance from another user or system.
+        Agents that represent a system that can validate attendance based on, among other things, its source, should subscribe to
+        StudentPeriodAttendance events to collect "suggested" attendance changes from the zone,
+        and should then publish "accepted" attendance changes as OfficialStudentPeriodAttendance events.
+        A rejected change would result in an event that reverts the system that generated the rejected event back to its previous state
+        or to some other state that represents the correct "official" attendance.
+      </p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Attribute>StudentPersonalRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID of the student that this attendance applies to.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>SectionInfoRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID of the section that this attendance applies to.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>SchoolInfoRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The school where the attendance was recorded.  Somewhat redundant, needed for requests.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>Date</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The date of the attendance event.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>TimetablePeriod</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>The period within which attendance is being reported, e.g. "4D".  Conditional on the SectionInfo object having MeetingTime elements.  If one or more are defined for the Section, this element is required.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>TimeIn</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The time the student entered or returned to this class.</p>
+    </Description>
+    <Type name="xs:time"></Type>
+  </Item>
+  <Item>
+    <Element>TimeOut</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The time the student left this class.</p>
+    </Description>
+    <Type name="xs:time"></Type>
+  </Item>
+  <Item>
+    <Element>AttendanceCode</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The local attendance code.</p>
+    </Description>
+     <Type ref="CommonTypes" name="AttendanceCodeType"></Type>
+  </Item>
+  <Item>
+    <Element>AuditInfo</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>An audit trail to help determine who entered this attendance event and when.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StudentAttendanceAuditInfoType"></Type>
+  </Item>
+
+  <Item>
+    <Element>AttendanceComment</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>This element contains the comments that are relevant to this attendance record.</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+
+
+  <xhtml:Example xmlns="">
+    <StudentPeriodAttendance RefId="98157AA013BA8C3D00AA012B359D7512" StudentPersonalRefId="A75A00101A8C301D02E3A05B359D0A00"
+      SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB" Date="2001-03-05" SectionInfoRefId="D02E3A05B359DA75A00101A8C3010A00">
+      <TimetablePeriod>P4</TimetablePeriod>
+      <AttendanceCode AttendanceCodeInfoRefId="1A0000359D75101A8C3D00AA00A2E35B">042</AttendanceCode>
+      <AuditInfo>
+        <CreationUser Type="School Admin">
+          <UserId>AttendanceKeeper</UserId>
+        </CreationUser>
+        <CreationDateTime>2006-09-26T15:43:00-05:00</CreationDateTime>
+      </AuditInfo>
+    </StudentPeriodAttendance>
+  </xhtml:Example>
+</DataObject>

@@ -1,0 +1,106 @@
+<DataObject name="GradingAssignmentScore"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <EventsReported>true</EventsReported>
+
+  <Key>@StudentPersonalRefId</Key>
+  <Key>@GradingAssignmentRefId</Key>
+
+  <Item>
+    <Element>GradingAssignmentScore</Element>
+    <Description>
+      <p>This object provides score information about a particular assignment.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>A GUID that identifies an instance of this object. This RefId is new for 2.7M and MUST be supported like other objects that have a RefId (i.e. it is the key for the object).  The alternate keys MUST continue to be supported.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <Item>
+    <Attribute>StudentPersonalRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>SectionInfoRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>SchoolInfoRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID that specifies the school this score was recorded at.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Attribute>GradingAssignmentRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>ScorePoints</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>The score represented as points.  Conditionally required that one or more of ScorePoints, ScorePercent or ScoreLetter must be filled in.</p>
+    </Description>
+    <Type name="xs:unsignedInt"></Type>
+  </Item>
+  <Item>
+    <Element>ScorePercent</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>The score represented as a percent.  Conditionally required that one or more of ScorePoints, ScorePercent or ScoreLetter must be filled in.</p>
+    </Description>
+    <Type name="xs:decimal"></Type>
+  </Item>
+  <Item>
+    <Element>ScoreLetter</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>The score represented as a letter grade.  Conditionally required that one or more of ScorePoints, ScorePercent or ScoreLetter must be filled in.</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  <Item>
+    <Element>ScoreDescription</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Text description of the score.</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+
+
+  <xhtml:Example xmlns="">
+    <GradingAssignmentScore RefId="359D75101AD0A9D7A8C3DAD0A85103A2"
+ StudentPersonalRefId="A75A00101A8C301D02E3A05B359D0A00" SectionInfoRefId="D0A0A27AD0A8510AD9D75101A8C3DA39"
+      SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB" GradingAssignmentRefId="359D75101AD0A9D7A8C3DAD0A85105D2">
+      <ScorePoints>45</ScorePoints>
+      <ScorePercent>90</ScorePercent>
+      <ScoreDescription>Excellent</ScoreDescription>
+    </GradingAssignmentScore>
+  </xhtml:Example>
+</DataObject>

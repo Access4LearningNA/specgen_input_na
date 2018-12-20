@@ -1,0 +1,294 @@
+<DataObject name="TestAccommodation"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <Key>@RefId</Key>
+  <EventsReported>false</EventsReported>
+  <Intro>
+    <p>
+      This object provides information about test accommodation(s) required for a particular student who is registered to
+      take a particular state test or who is about to be assigned by a teacher to take a course-related test,
+      is participating in one or more special program(s) and for whom this set of test accommodations is prescribed
+      in one or more specific special program plan(s).  At the time that a new special program plan is developed for
+      the student, any needed test / instructional accommodations must be specified as a part of that plan.
+      During the life of a plan, a test accommodation may be added or removed.
+    </p>
+    <p>
+      Note that although a test accommodation may not be permitted for a state assessment program because it nullifies the results,
+      it may be used for daily instruction.  However, in order to use a test accommodation for a state assessment program,
+      the test accommodation must be specified in the program plan and should be part of daily instruction.
+      The request for this object must supply the information necessary to identify the specific student and either
+      a specific high-stakes test or a subject area.
+    </p>
+  </Intro>
+
+  <Item>
+    <Element>TestAccommodation</Element>
+    <Description>
+      <p>
+        This object provides information about test accommodation(s) required for a particular student who is registered to
+        take a particular state test or who is about to be assigned by a teacher to take a course-related test,
+        is participating in one or more special program(s) and for whom this set of test accommodations is prescribed
+        in one or more specific special program plan(s).
+      </p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Unique Id for this set of test accommodations required for a particular student who is participating in a special program and for whom this set of test accommodation(s) is recommended / prescribed for this test administration (specific subject area and level) in a specific special programs plan.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <!--<Choice>-->
+  <Item>
+    <Element>StudentPersonalRefId</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Reference to StudentPersonal object.  Typically a vendor is allowed to receive a StateProvinceId or a student's Name, but not both together.  The student must be identified by StudentPersonalRefId, or Name and LocalId, or StateProvinceId.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Sequence>
+    <Item>
+      <Element>Name</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>The student's name as presented in StudentPersonal object, Name element with a Type of 02 (Current Legal Name).  If Type 02 is not available, Type of 04 (Name of Record).  Sub-elements to be used: LastName, FirstName, MiddleName.</p>
+      </Description>
+      <Type ref="CommonTypes" name="NameOfRecordType"></Type>
+    </Item>
+    <Item>
+      <Element>LocalId</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>The locally assigned identifier for this student.</p>
+      </Description>
+      <Type ref="CommonTypes" name="LocalIdType"></Type>
+    </Item>
+  </Sequence>
+  <Item>
+    <Element>StateProvinceId</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Reference to the state code identifying the student in the StudentPersonal object, as of the date of the response.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StateProvinceIdType"></Type>
+  </Item>
+  <!--</Choice>-->
+  <Item>
+    <Element>StateDistrictId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Reference to State code (StateProvinceId for LEAInfo) for the student's district of enrollment as of the date of the response (optional because school might be independent).</p>
+    </Description>
+    <Type ref="CommonTypes" name="StateProvinceIdType"></Type>
+  </Item>
+  <Item>
+    <Element>LEAInfoRefId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The RefId for the district to which the student's home school of enrollment belongs as of the date of the response (optional because school might be independent).</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The RefId for the student's home school of enrollment as of the date of the response.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>StateSchoolId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Reference to State code (StateProvinceId for SchoolInfo) for student's home school of enrollment as of the date of the response (optional because state may not require).</p>
+    </Description>
+    <Type ref="CommonTypes" name="StateProvinceIdType"></Type>
+  </Item>
+  <Item>
+    <Element>GradeLevel</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Code for the current actual grade placement of the student as of the date of the response  from StudentSchoolEnrollment.</p>
+    </Description>
+    <Type ref="CommonTypes" name="GradeLevelType"></Type>
+  </Item>
+  <Item>
+    <Element>AssessmentRegistrationRefId</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>RefId for the student's registration / assignment to take a particular test (test name, subject area, level, grade level, type) at a particular time or within a particular timeframe.  An assessment may also be identified by omitting this element and specifying the whole set (TestAdministration, TestSubjectArea, TestGradeLevel, TestAdministrationDateRange or PlannedTestAdministrationDate, and TestType).</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>TestAdministration</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Abbreviated name of the test for which this set of accommodations is to be provided.</p>
+    </Description>
+    <Type name="xs:token"></Type>
+  </Item>
+  <Item>
+    <Element>TestSubjectArea</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Subject area of the test.  Teachers may only supply this element, while a high-stakes test will supply the whole set (TestAdministration, TestSubjectArea, TestGradeLevel, TestAdministrationDateRange or PlannedTestAdministrationDate, and TestType).</p>
+    </Description>
+    <Type name="xs:token"></Type>
+  </Item>
+  <Item>
+    <Element>TestGradeLevel</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Grade level of the test.</p>
+    </Description>
+    <Type name="xs:token"></Type>
+  </Item>
+  <Item>
+    <Element>TestAdministrationDateRange</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>General date range of the test (e.g. "Spring 2005").  Date is identified by either TestAdministrationDateRange or PlannedTestAdministrationDate</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>PlannedTestAdministrationDate</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>The date the test is planned to be administered.  Should contain the most current known date (Date is needed in order to identify accommodations to be sent&#x2014;accommodations are date-dependent).</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+
+  <Item>
+    <Element>TestType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Identifies whether the test the student is to take is a standard or alternate.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>S001</Code>
+        <Text>Standard</Text>
+      </Value>
+      <Value>
+        <Code>S002</Code>
+        <Text>Alternate</Text>
+      </Value>
+      <Value>
+        <Code>9999</Code>
+        <Text>Other</Text>
+      </Value>
+    </Values>
+  </Item>
+
+  <Item>
+    <Element>AuthorizedActual</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Indicator - Identifies whether accommodations in this object are authorized or were actually used.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>S001</Code>
+        <Text>Authorized</Text>
+      </Value>
+      <Value>
+        <Code>S002</Code>
+        <Text>Actual (actually used during test administration)</Text>
+      </Value>
+      <Value>
+        <Code>S999</Code>
+        <Text>Other</Text>
+      </Value>
+    </Values>
+  </Item>
+
+  <Item>
+    <Element>ActualTestAdministrationDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The date the test was actually administered.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>StudentProgramAccommodations</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Container.  If the requested student no longer requires any accomodations, this element should be omitted.</p>
+    </Description>
+     <Type ref="CommonTypes" name="StudentProgramAccommodationListType"></Type>
+ </Item>
+   <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+
+  <xhtml:Example xmlns="">
+
+    <TestAccommodation RefId="AD634F59A742C1A4B3D11CC002B163A2">
+      <StudentPersonalRefId>A2E34F59A742C1A4B3D11CC002B163A2</StudentPersonalRefId>
+      <StateProvinceId>9289348</StateProvinceId>
+      <LEAInfoRefId>F3434F59A742C1A4B3D11CC002B163A2</LEAInfoRefId>
+      <SchoolInfoRefId>D93F4D183A42C1A4B3D11CC002B163A2</SchoolInfoRefId>
+      <StateSchoolId>98283</StateSchoolId>
+      <GradeLevel>
+        <Code>11</Code>
+      </GradeLevel>
+      <TestAdministration>Woodcock Johnson Tests of Achievement</TestAdministration>
+      <TestSubjectArea>Broad Reading</TestSubjectArea>
+      <TestGradeLevel>11</TestGradeLevel>
+      <PlannedTestAdministrationDate>2006-07-15</PlannedTestAdministrationDate>
+      <TestType>S001</TestType>
+      <AuthorizedActual>S002</AuthorizedActual>
+      <ActualTestAdministrationDate>2006-07-15</ActualTestAdministrationDate>
+      <StudentProgramAccommodations>
+        <StudentProgramAccommodation>
+          <StudentParticipationRefId>D3E34B359D75101A8C3D00AA001A1652</StudentParticipationRefId>
+          <StudentProgramType>
+            <Code>0270</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="StateProvince">0839</OtherCode>
+            </OtherCodeList>
+          </StudentProgramType>
+          <Accommodations>
+            <Accommodation>
+              <Code>S101</Code>
+              <AccommodationCategory>
+                <Code>S001</Code>
+              </AccommodationCategory>
+              <SpecialMaterials>true</SpecialMaterials>
+            </Accommodation>
+            <Accommodation>
+              <Code>S147</Code>
+              <AccommodationCategory>
+                <Code>S006</Code>
+              </AccommodationCategory>
+              <SpecialMaterials>false</SpecialMaterials>
+            </Accommodation>
+          </Accommodations>
+        </StudentProgramAccommodation>
+      </StudentProgramAccommodations>
+    </TestAccommodation>
+
+  </xhtml:Example>
+
+
+</DataObject>

@@ -1,0 +1,328 @@
+<DataObject name="SectionInfo"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+	xmlns="http://sifassociation.org/SpecGen">
+	<Key>@RefId</Key>
+	<EventsReported>true</EventsReported>
+	<Item>
+		<Element>SectionInfo</Element>
+		<Description>
+			<p>This object provides information about the section&#x2014;the specific time period a session of the course meets.</p>
+		</Description>
+	</Item>
+	<Item>
+		<Attribute>RefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The Id (GUID) that uniquely identifies this section entity.</p>
+		</Description>
+		<Type ref="CommonTypes" name="RefIdType"/>
+	</Item>
+	<Item>
+		<Attribute>SchoolCourseInfoRefId</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The Id (GUID) that identifies the course being taught in this section.</p>
+		</Description>
+		<Type ref="CommonTypes" name="IdRefType"/>
+	</Item>
+	<Item>
+		<Attribute>SchoolYear</Attribute>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>
+        School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g. <code>2007</code> for the 2006-07 school year).
+      </p>
+		</Description>
+		<Type ref="CommonTypes" name="SchoolYearType"/>
+	</Item>
+	<Item>
+		<Element>LocalId</Element>
+		<Characteristics>M</Characteristics>
+		<Description>
+			<p>The locally-assigned identifier for this course section.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocalIdType"/>
+	</Item>
+	<Item>
+		<Element>Description</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Description of the course section.</p>
+		</Description>
+		<Type name="xs:normalizedString"/>
+	</Item>
+	<Item>
+		<Element>ScheduleInfoList</Element>
+		<Characteristics>M</Characteristics>
+	    <Type ref="CommonTypes" name="ScheduleInfoListType"/>
+	</Item>
+
+	<Item>
+		<Element>MediumOfInstruction</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Medium through which the student receives instructional communication from the teacher.</p>
+		</Description>
+		<Type ref="CommonTypes" name="MediumOfInstructionType"/>
+	</Item>
+
+	<Item>
+		<Element>LanguageOfInstruction</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Language in which the section is taught.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LanguageOfInstructionType"/>
+	</Item>
+
+	<Item>
+		<Element>LocationOfInstruction</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Description of the location in which the section is taught.</p>
+		</Description>
+		<Type ref="CommonTypes" name="LocationOfInstructionType"/>
+	</Item>
+
+	<Item>
+		<Element>SummerSchool</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Is this a summer school assignment?</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>Yes</Code>
+			</Value>
+			<Value>
+				<Code>No</Code>
+			</Value>
+		</Values>
+	</Item>
+	<Item>
+		<Element>SchoolCourseInfoOverride</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Optional overrides of the course information for this section.</p>
+		</Description>
+		<Type ref="CommonTypes" name="SchoolCourseInfoOverrideType"/>
+	</Item>
+
+	<Item>
+		<Element>CourseSectionCode</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A section code that is linked to a course.  This should be a unique identifier within the school year and course (i.e. the class instance number for a course).  For example, Algebra I: Section 23 is different from English II: Section 23. </p>
+		</Description>
+		<Type name='xs:normalizedString'/>
+	</Item>
+	<Item>
+		<Element>SectionCode</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>A unique identifier of the section for the school year and across courses (i.e. unique across all courses).  For example, Algebra I sections range from 00122 to 00140 and English II courses range from 00141 to 00152.</p>
+		</Description>
+		<Type name='xs:normalizedString'/>
+	</Item>
+	<Item>
+		<Element>CountForAttendance</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>Indicates if attendance in this section is collected and used in attendance calculations.</p>
+		</Description>
+		<Values>
+			<Value>
+				<Code>Yes</Code>
+			</Value>
+			<Value>
+				<Code>No</Code>
+			</Value>
+		</Values>
+	</Item>
+	<Item>
+		<Element>BellScheduleRefId</Element>
+		<Characteristics>O</Characteristics>
+		<Description>
+			<p>The GUID of the bell schedule used by this section.</p>
+		</Description>
+		<Type ref='CommonTypes' name='IdRefType'/>
+	</Item>
+	<Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_MetadataType"/>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+	</Item>
+	<xhtml:Example name="SectionInfo - Example 1" xmlns="">
+		<SectionInfo RefId="D3E34B359D75101A8C3D00AA001A1652" SchoolCourseInfoRefId="A2E35B359D75101A8C3D00AA001A0000" SchoolYear="2006">
+			<LocalId>287-1</LocalId>
+			<ScheduleInfoList>
+				<ScheduleInfo TermInfoRefId="099BBC3227490063E97403434C5C2207">
+					<TeacherList>
+						<StaffPersonalRefId>A8C3A2E35B359D75101D00AA001A0000</StaffPersonalRefId>
+						<StaffPersonalRefId>A8C45DC6B3359D75101D00A456BE9000</StaffPersonalRefId>
+					</TeacherList>
+					<SectionRoomList>
+						<RoomInfoRefId>94785736AB3671090BDD87593A264086</RoomInfoRefId>
+					</SectionRoomList>
+					<MeetingTimeList>
+						<MeetingTime>
+							<TimetableDay>M</TimetableDay>
+							<TimetablePeriod>6</TimetablePeriod>
+						</MeetingTime>
+						<MeetingTime>
+							<TimetableDay>T</TimetableDay>
+							<TimetablePeriod>6</TimetablePeriod>
+						</MeetingTime>
+						<MeetingTime>
+							<TimetableDay>W</TimetableDay>
+							<TimetablePeriod>6</TimetablePeriod>
+						</MeetingTime>
+						<MeetingTime>
+							<TimetableDay>R</TimetableDay>
+							<TimetablePeriod>6</TimetablePeriod>
+						</MeetingTime>
+						<MeetingTime>
+							<TimetableDay>F</TimetableDay>
+							<TimetablePeriod>6</TimetablePeriod>
+						</MeetingTime>
+					</MeetingTimeList>
+				</ScheduleInfo>
+				<ScheduleInfo TermInfoRefId="A2334007263E97403434C5C220798765">
+					<TeacherList>
+						<StaffPersonalRefId>CC543E35B359D75101D00AA001A00703</StaffPersonalRefId>
+					</TeacherList>
+					<SectionRoomList>
+						<RoomInfoRefId>94785736AB3671090BDD87593A264086</RoomInfoRefId>
+					</SectionRoomList>
+					<MeetingTimeList>
+						<MeetingTime>
+							<TimetableDay>M</TimetableDay>
+							<TimetablePeriod>4</TimetablePeriod>
+						</MeetingTime>
+						<MeetingTime>
+							<TimetableDay>T</TimetableDay>
+							<TimetablePeriod>4</TimetablePeriod>
+						</MeetingTime>
+						<MeetingTime>
+							<TimetableDay>W</TimetableDay>
+							<TimetablePeriod>4</TimetablePeriod>
+						</MeetingTime>
+						<MeetingTime>
+							<TimetableDay>R</TimetableDay>
+							<TimetablePeriod>4</TimetablePeriod>
+						</MeetingTime>
+						<MeetingTime>
+							<TimetableDay>F</TimetableDay>
+							<TimetablePeriod>4</TimetablePeriod>
+						</MeetingTime>
+					</MeetingTimeList>
+				</ScheduleInfo>
+			</ScheduleInfoList>
+			<MediumOfInstruction>
+				<Code>0605</Code>
+			</MediumOfInstruction>
+			<LanguageOfInstruction>
+				<Code>eng</Code>
+			</LanguageOfInstruction>
+			<LocationOfInstruction>
+				<Code>0340</Code>
+				<OtherCodeList>
+					<OtherCode Codeset="Text">Pennsylvania College of Technology</OtherCode>
+				</OtherCodeList>
+			</LocationOfInstruction>
+			<SchoolCourseInfoOverride Override="Yes">
+				<CourseCode>CS101A</CourseCode>
+				<StateCourseCode>08-001A</StateCourseCode>
+				<DistrictCourseCode>CS101A</DistrictCourseCode>
+				<SubjectArea>
+					<Code>05</Code>
+					<OtherCodeList>
+						<OtherCode Codeset="Text">Graphic Arts for Beginners</OtherCode>
+					</OtherCodeList>
+				</SubjectArea>
+				<CourseTitle>Graphics Basics</CourseTitle>
+				<InstructionalLevel>
+					<Code>0570</Code>
+				</InstructionalLevel>
+				<CourseCredits Type="0585">0.50</CourseCredits>
+			</SchoolCourseInfoOverride>
+		</SectionInfo>
+	</xhtml:Example>
+	<xhtml:Example name="SectionInfo - Example 2" xmlns="">
+		<SectionInfo RefId="D3E34B359D75101A8C3D00AA001A1652" SchoolCourseInfoRefId="A2E35B359D75101A8C3D00AA001A0000" SchoolYear="2006">
+			<LocalId>287-1</LocalId>
+			<ScheduleInfoList>
+				<ScheduleInfo TermInfoRefId="099BBC3227490063E97403434C5C2207">
+					<TeacherList>
+						<StaffPersonalRefId>A8C3A2E35B359D75101D00AA001A0000</StaffPersonalRefId>
+						<StaffPersonalRefId>A8C45DC6B3359D75101D00A456BE9000</StaffPersonalRefId>
+					</TeacherList>
+					<SectionRoomList>
+						<RoomInfoRefId>94785736AB3671090BDD87593A264086</RoomInfoRefId>
+					</SectionRoomList>
+					<MeetingTimeList>
+						<MeetingTime>
+							<TimetableDay>A</TimetableDay>
+							<TimetablePeriod>P4</TimetablePeriod>
+						</MeetingTime>
+					</MeetingTimeList>
+				</ScheduleInfo>
+				<ScheduleInfo TermInfoRefId="099BBC3227490063E97403434C5C2207">
+					<TeacherList>
+						<StaffPersonalRefId>CC543E35B359D75101D00AA001A00703</StaffPersonalRefId>
+					</TeacherList>
+					<SectionRoomList>
+						<RoomInfoRefId>94785736AB3671090BDD87593A264086</RoomInfoRefId>
+					</SectionRoomList>
+					<MeetingTimeList>
+						<MeetingTime>
+							<TimetableDay>B</TimetableDay>
+							<TimetablePeriod>P5</TimetablePeriod>
+						</MeetingTime>
+					</MeetingTimeList>
+				</ScheduleInfo>
+			</ScheduleInfoList>
+			<MediumOfInstruction>
+				<Code>0605</Code>
+			</MediumOfInstruction>
+			<LanguageOfInstruction>
+				<Code>ach</Code>
+			</LanguageOfInstruction>
+			<LocationOfInstruction>
+				<Code>0340</Code>
+				<OtherCodeList>
+					<OtherCode Codeset="Text">Pennsylvania College of Technology</OtherCode>
+				</OtherCodeList>
+			</LocationOfInstruction>
+			<SchoolCourseInfoOverride Override="Yes">
+				<CourseCode>CS101A</CourseCode>
+				<StateCourseCode>08-001A</StateCourseCode>
+				<DistrictCourseCode>CS101A</DistrictCourseCode>
+				<SubjectArea>
+					<Code>05</Code>
+					<OtherCodeList>
+						<OtherCode Codeset="Text">Graphic Arts for Beginners</OtherCode>
+					</OtherCodeList>
+				</SubjectArea>
+				<CourseTitle>Graphics Basics</CourseTitle>
+				<InstructionalLevel>
+					<Code>0570</Code>
+				</InstructionalLevel>
+				<CourseCredits Type="0585">0.50</CourseCredits>
+			</SchoolCourseInfoOverride>
+			<CourseSectionCode>1</CourseSectionCode>
+			<SectionCode>Eng08-01</SectionCode>
+			<CountForAttendance>Yes</CountForAttendance>
+			<BellScheduleRefId>A157E79C10AC744ED90AF2871BEB90B3</BellScheduleRefId>
+		</SectionInfo>
+	</xhtml:Example>
+</DataObject>

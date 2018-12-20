@@ -1,0 +1,136 @@
+<DataObject name="FoodserviceTransaction"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <EventsReported>true</EventsReported>
+  <Key>@RefId</Key>
+  <Item>
+    <Element>FoodserviceTransaction</Element>
+    <Description>
+      <p>
+        This object communicates food service transaction information. This is the key object that will be present for every
+        food service transaction.
+      </p>
+      <p>
+		  Note: With SIF Implementation Specification version 2.4 the choice element depicted in the diagram below has changed.  In the XSD files, the choice element used to be rendered as a sequence of optional elements.  Now, in the XSD files, the choice element is rendered as an xs:choice.  This may cause problems with agents that treat the choice element as two optional elements rather than a choice of one and only one of the choices.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies food service transaction</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies the school/site of account transaction</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>Program</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="FundedProgramType"></Type>
+  </Item>
+  <Item>
+    <Element>TransactionDate</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Date of transaction</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Element>TransactionTime</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Time of transaction.</p>
+    </Description>
+    <Type name="xs:time"></Type>
+  </Item>
+  <Item>
+    <Element>TransactionTypes</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="FoodserviceTransactionListType"></Type>
+  </Item>
+  <Item>
+    <Element>Customer</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The customer can be a student or staff.</p>
+    </Description>
+     <Type ref="CommonTypes" name="FoodserviceCustomerType"></Type>
+ </Item>
+  <Item>
+    <Element>Amount</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="FSAmountType"></Type>
+  </Item>
+  <Item>
+    <Element>Tax</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Amount of tax.</p>
+      <p>Note: Final amount is Amount/Value + Tax</p>
+    </Description>
+    <Type ref="CommonTypes" name="MonetaryAmountType"/>
+  </Item>
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Description of the Transaction</p>
+    </Description>
+    <Type name="xs:string"></Type>
+  </Item>
+  <Item>
+    <Element>Voided</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>This flag tells us if the transaction is voided.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Yes</Code>
+      </Value>
+      <Value>
+        <Code>No</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <FoodserviceTransaction RefId="A9E34B359F44D51A8C3D00AA001A1652">
+      <SchoolInfoRefId>EFA054E90CDE45C9BB8A87E9F8F9B238</SchoolInfoRefId>
+      <Program Type="Foodservice">NSLP</Program>
+      <TransactionDate>2003-08-25</TransactionDate>
+      <TransactionTime>04:32:23-08:00</TransactionTime>
+      <TransactionTypes>
+        <TransactionType>Purchase</TransactionType>
+      </TransactionTypes>
+      <Customer SIF_RefObject="StudentPersonal" SIF_RefId="751177C738B047CD831375FA1CF50CBB">
+        <MealStatus Type="Reduced" />
+      </Customer>
+      <Amount Type="Value" Credits="0" Currency="USD">12.00</Amount>
+      <Description>Purchase of food items by a student</Description>
+      <Voided>No</Voided>
+    </FoodserviceTransaction>
+  </xhtml:Example>
+</DataObject>

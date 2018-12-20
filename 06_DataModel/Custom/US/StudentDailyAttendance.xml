@@ -1,0 +1,121 @@
+<DataObject name="StudentDailyAttendance"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+
+  <Key>@StudentPersonalRefId</Key>
+  <Key>@SchoolInfoRefId</Key>
+  <Key>@Date</Key>
+
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>StudentDailyAttendance</Element>
+    <Description>
+      <p>This object provides daily attendance information for a particular student in a particular school on a particular date.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>A GUID that identifies an instance of this object. This RefId is new for 2.7M and MUST be supported like other objects that have a RefId (i.e. it is the key for the object).  The alternate keys MUST continue to be supported.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <Item>
+    <Attribute>StudentPersonalRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) of the student for whom this attendance information is being reported.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+
+    <Attribute>SchoolInfoRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) of the school for which this attendance information is being reported.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+
+    <Attribute>Date</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The calendar date to which this attendance information relates.</p>
+    </Description>
+    <Type name="xs:date"></Type>
+  </Item>
+  <Item>
+    <Attribute>SchoolYear</Attribute>
+
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
+        School year for which this enrollment is applicable, expressed as the four-digit year in which the school year
+        ends (e.g. <code>2007</code> for the 2006-07 school year).
+      </p>
+    </Description>
+    <Type ref="CommonTypes" name="SchoolYearType"></Type>
+  </Item>
+  <Item>
+    <Element>AttendanceCodeInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) of the locally-defined daily attendance code information.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>TimeIn</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The time the student entered or returned to school.</p>
+    </Description>
+    <Type name="xs:time"></Type>
+  </Item>
+  <Item>
+    <Element>TimeOut</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The time the student left school.</p>
+    </Description>
+    <Type name="xs:time"></Type>
+  </Item>
+  <Item>
+    <Element>AttendanceNote</Element>
+
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Note related to this particular attendance.</p>
+    </Description>
+    <Type name="xs:normalizedString"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example name="StudentDailyAttendance" xmlns="">
+    <StudentDailyAttendance RefId="359D75101AD0A9D7A8C3DAD0A85103A2" StudentPersonalRefId="D3E34B359D75101A8C3D00AA001A1652" SchoolInfoRefId="CA285746359D75101A8C36432A901A16"
+      Date="2002-11-01" SchoolYear="2003">
+      <AttendanceCodeInfoRefId>84726485960937465A53B2781BB260AA</AttendanceCodeInfoRefId>
+      <TimeIn>13:30:00</TimeIn>
+      <TimeOut>12:05:00</TimeOut>
+      <AttendanceNote>Left for Orthodontist appt. and returned to school afterward.</AttendanceNote>
+    </StudentDailyAttendance>
+  </xhtml:Example>
+</DataObject>

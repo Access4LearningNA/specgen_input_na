@@ -1,0 +1,64 @@
+<DataObject name="FoodserviceTransactionPayMethod"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+
+  xmlns="http://sifassociation.org/SpecGen">
+  <EventsReported>true</EventsReported>
+  <Key>@RefId</Key>
+  <Item>
+    <Element>FoodserviceTransactionPayMethod</Element>
+    <Description>
+      <p>
+        This object communicates the funding for a given transaction. By the term funding we refer to the form of payment
+        that is made for the transaction.
+      </p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies the payment</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+  <Item>
+    <Element>FoodserviceTransactionRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that identifies food service transaction</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"></Type>
+  </Item>
+  <Item>
+    <Element>TransactionPayMethods</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="FoodservicePayMethodListType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+  </Item>
+  <xhtml:Example xmlns="">
+    <FoodserviceTransactionPayMethod RefId="FF8340A51D844EBDB156DE662BF373CE">
+      <FoodserviceTransactionRefId>A1D2C4527A484DB08DAD6C382F8F082F</FoodserviceTransactionRefId>
+      <TransactionPayMethods>
+        <TransactionPayMethod Type="Payment">
+          <Amounts>
+            <Amount Type="Cash" Credits="0">2.50</Amount>
+            <Amount Type="BreakfastCredit" Credits="1">1.50</Amount>
+          </Amounts>
+        </TransactionPayMethod>
+      </TransactionPayMethods>
+    </FoodserviceTransactionPayMethod>
+  </xhtml:Example>
+</DataObject>
