@@ -10,6 +10,29 @@
     <xi:include parse="text" href="US\StudentLEARelationship.xml"/>
   </Group>
 
+
+  <Group name="xPress Working Group" sort="false">
+    <Intro>
+      <p>
+        A simpler set of data objects that can be used by itself or in conjunction with the rest of the rich enterprise data model found here.
+        It is particularly useful when needing an API to communicate basics to applications that would otherwise be kept outside the zone.
+        Note:  For now includes all objects being introduced with Unity/4.0, even if they are not xPress objects.
+      </p>
+    </Intro>
+    
+    <xi:include parse="text" href="SIF3\studentProgramAssociations.xml"/>
+    <xi:include parse="text" href="SIF3\xCalendars.xml"/>
+    <xi:include parse="text" href="SIF3\xContacts.xml"/>
+    <xi:include parse="text" href="SIF3\xCourses.xml"/>
+    <xi:include parse="text" href="SIF3\xIndividualizedEducationPlans.xml"/>
+    <xi:include parse="text" href="SIF3\xLeas.xml"/>
+    <xi:include parse="text" href="SIF3\xRosters.xml"/>
+    <xi:include parse="text" href="SIF3\xSchools.xml"/>
+    <xi:include parse="text" href="SIF3\xStaffs.xml"/>
+    <xi:include parse="text" href="SIF3\xStudents.xml"/>
+    <xi:include parse="text" href="SIF3\xTransferIeps.xml"/>
+  </Group>
+
   <Group name="Data Warehouse Working Group" sort="false">
     <Intro>
       <p>

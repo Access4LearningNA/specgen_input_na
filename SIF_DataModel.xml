@@ -115,7 +115,7 @@
 			<!--Section A-->
 		<xi:include parse="text" href="80_BackMatter/Custom/DataModel-CommonTypes-Custom.xml"/>
 		<!--<xi:include parse="text" href="80_BackMatter/Generic-CommonTypes.xml"/>-->
-		
+		<xi:include parse="text" href="80_BackMatter/SIF3/CommonTypes.xml"/>
 	</Appendix>
 	
 		<!--Section B-->

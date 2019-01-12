@@ -6,6 +6,28 @@
 	xmlns:json="http://json.org/"
 xmlns="http://sifassociation.org/SpecGen">
 
+<CommonElement type="true" name='gUUIDType'>
+  <Item>
+    <Element>gUUIDType</Element>
+    <Description>Designed to accommodate the classic SIF format for a GUID (supported) or a proper UUID (preferred).></Description>
+    <Type name='xs:token'/>
+    <Facets>
+      <xs:pattern value="[0-9A-Fa-f\-]{32,36}"/> 
+    </Facets>
+  </Item>
+</CommonElement>
+
+<CommonElement type="true" name='RefIdType'>
+  <Item>
+    <Element>RefIdType</Element>
+    <Description>Designed to accommodate the classic SIF format for a GUID (supported) or a proper UUID (preferred).></Description>
+    <Type name='xs:token'/>
+    <Facets>
+      <xs:pattern value="[0-9A-Fa-f\-]{32,36}"/> 
+    </Facets>
+  </Item>
+</CommonElement>
+
 <CommonElement name="PartialDateType" type="true">
   <Item>
     <Element>PartialDateType</Element>
