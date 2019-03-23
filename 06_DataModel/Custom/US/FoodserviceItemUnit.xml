@@ -1,10 +1,4 @@
-<DataObject name="FoodserviceItemUnit"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="FoodserviceItemUnit">
   <EventsReported>true</EventsReported>
   <Key>@RefId</Key>
   <Item>
@@ -19,7 +13,7 @@
     <Description>
       <p>GUID that identifies this unit</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Element>FoodserviceItemRefId</Element>
@@ -27,7 +21,7 @@
     <Description>
       <p>GUID that identifies related item</p>
     </Description>
-    <Type ref="CommonTypes" relationship="defines unit for" count="*:1" name="IdRefType"></Type>
+    <Type ref="CommonTypes" relationship="defines unit for" count="*:1" name="IdRefType"/>
   </Item>
   <Item>
     <Element>Description</Element>
@@ -35,7 +29,7 @@
     <Description>
       <p>Description of unit ("cup", "teaspoon", etc.)</p>
     </Description>
-    <Type name="xs:string"></Type>
+    <Type name="xs:string"/>
   </Item>
   <Item>
     <Element>MeasureDescriptionCode</Element>
@@ -45,7 +39,7 @@
         Child Nutrition Database <a href="References.html#CNDB">[CNDB]</a> standard code describing unit. &#160;The database is updated on a yearly basis by the USDA.
       </p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>GramWeight</Element>
@@ -53,17 +47,17 @@
     <Description>
       <p>Gram weight of this item in terms of MeasureDescriptionCode</p>
     </Description>
-    <Type name="xs:decimal"></Type>
+    <Type name="xs:decimal"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <FoodserviceItemUnit RefId="D9837A776DD626777872361DD118873C">

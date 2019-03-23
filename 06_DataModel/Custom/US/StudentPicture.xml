@@ -1,13 +1,5 @@
-<DataObject name="StudentPicture"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
-
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="StudentPicture">
   <Key>@StudentPersonalRefId</Key>
-
   <EventsReported>true</EventsReported>
   <Item>
     <Element>StudentPicture</Element>
@@ -15,23 +7,21 @@
       <p>This object contains information about the student's picture.</p>
     </Description>
   </Item>
-
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>A GUID that identifies an instance of this object. This RefId is new for 2.7M and MUST be supported like other objects that have a RefId (i.e. it is the key for the object).  The alternate keys MUST continue to be supported.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
-
   <Item>
     <Attribute>StudentPersonalRefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>This is the GUID of the student whose picture this is.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Attribute>SchoolYear</Attribute>
@@ -42,12 +32,10 @@
         ends (e.g. <code>2007</code> for the 2006-07 school year).
       </p>
     </Description>
-    <Type ref="CommonTypes" name="SchoolYearType"></Type>
+    <Type ref="CommonTypes" name="SchoolYearType"/>
   </Item>
-
   <Item>
     <Element>PictureSource</Element>
-
     <Characteristics>M</Characteristics>
     <Description>
       <p>
@@ -56,36 +44,34 @@
     </Description>
     <Type ref="CommonTypes" name="PictureSourceType"/>
   </Item>
-
   <Item>
     <Element>OKToPublish</Element>
     <Description>
       <p>Can the picture be published?</p>
     </Description>
     <Characteristics>O</Characteristics>
-    <Values>
-      <Value>
-        <Code>Yes</Code>
-      </Value>
-      <Value>
-        <Code>No</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
-
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example name="StudentPicture" xmlns="">
-    <StudentPicture RefId="359D75101AD0A9D7A8C3DAD0A85103A2"
- StudentPersonalRefId="D3E34B359D75101A8C3D00AA001A1652" SchoolYear="1999">
+  <xhtml:Example xmlns="" name="StudentPicture">
+    <StudentPicture RefId="359D75101AD0A9D7A8C3DAD0A85103A2" StudentPersonalRefId="D3E34B359D75101A8C3D00AA001A1652" SchoolYear="1999">
       <PictureSource Type="URL">http://www.schoolsite.com/pictures/1999/1234.jpg</PictureSource>
     </StudentPicture>
   </xhtml:Example>

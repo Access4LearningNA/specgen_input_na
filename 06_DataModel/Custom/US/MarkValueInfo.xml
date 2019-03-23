@@ -1,149 +1,142 @@
-<DataObject name="MarkValueInfo"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:xi="http://www.w3.org/2001/XInclude"
-	xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-	xmlns="http://sifassociation.org/SpecGen">
-	<EventsReported>true</EventsReported>
-	<Key>@RefId</Key>
-	<Item>
-		<Element>MarkValueInfo</Element>
-		<Description>
-			<p>This object defines the types of values allowed for a mark and the domain for each mark value.  At least one of the Percentage, Numeric, Letter or Narrative nodes must be used to create a valid MarkValueInfo.</p>
-		</Description>
-	</Item>
-	<Item>
-		<Attribute>RefId</Attribute>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>The Id (GUID) that uniquely identifies this MarkValueInfo entity.</p>
-		</Description>
-		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>
-	<Item>
-		<Attribute>SchoolInfoRefId</Attribute>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>The Id (GUID) that uniquely identifies the School that these Mark Values apply to.</p>
-		</Description>
-		<Type ref="CommonTypes" name="IdRefType"/>
-	</Item>
-	<Item>
-		<Element>SchoolYear</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>The year that this  MarkValueInfo applies to.</p>
-		</Description>
-		<Type ref="CommonTypes" name="SchoolYearType"/>
-	</Item>
-	<Item>
-		<Element>Name</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>The text name of the value list ("Letter Grades", "Letter Grades (+/-)", "ESU", "Pass/Fail", "Override Grades", "Citizenship Comment Codes", etc.).</p>
-		</Description>
-		<Type name="xs:string"/>
-	</Item>
-	<Item>
-		<Element>Percentage</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Indicates whether a percent Mark is accepted (format ##0.00).</p>
-		</Description>
-		<Type ref="CommonTypes" name="MarkValuePercentageType"/>
-	</Item>
-	<Item>
-		<Element>Numeric</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Indicates whether a raw numeric score is accepted.</p>
-		</Description>
-		<Type ref="CommonTypes" name="MarkValueNumberType"/>
-	</Item>
-	<Item>
-		<Element>Letter</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Indicates whether a letter Mark is accepted.</p>
-		</Description>
-		<Type ref="CommonTypes" name="MarkValueLetterType"/>
-	</Item>
-
-	<Item>
-		<Element>Narrative</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>If present, indicates that a free-form text narrative is accepted.</p>
-		</Description>
-		<Type ref="CommonTypes" name="MarkValueNarrativeType"/>
-	</Item>
-	<Item>
-		<Element>SIF_Metadata</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="SIF_MetadataType"/>
-	</Item>
-	<Item>
-		<Element>SIF_ExtendedElements</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
-	</Item>
-	<xhtml:Example xmlns="">
-		<MarkValueInfo RefId="11737E214A7C46BDBA4301CADCA75C87" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB">
-			<SchoolYear>2004</SchoolYear>
-			<Name>Letter Grades</Name>
-			<Percentage IsAccepted="false"/>
-			<Numeric IsAccepted="false"/>
-			<Letter IsAccepted="true">
-				<ValidMark>
-					<Code>A</Code>
-					<NumericEquivalent>100</NumericEquivalent>
-				</ValidMark>
-				<ValidMark>
-					<Code>B</Code>
-					<NumericEquivalent>90</NumericEquivalent>
-				</ValidMark>
-				<ValidMark>
-					<Code>C</Code>
-					<NumericEquivalent>80</NumericEquivalent>
-				</ValidMark>
-				<ValidMark>
-					<Code>D</Code>
-					<NumericEquivalent>70</NumericEquivalent>
-				</ValidMark>
-				<ValidMark>
-					<Code>F</Code>
-					<NumericEquivalent>60</NumericEquivalent>
-				</ValidMark>
-			</Letter>
-			<Narrative IsAccepted="false"/>
-		</MarkValueInfo>
-	</xhtml:Example>
-	<xhtml:Example xmlns="">
-		<MarkValueInfo RefId="11737E214A7C46BDBA4301CADCA75C87" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB">
-			<SchoolYear>2004</SchoolYear>
-			<Name>Numeric Grade</Name>
-			<Percentage IsAccepted="false"/>
-			<Numeric IsAccepted="true">
-				<Precision>6</Precision>
-				<Scale>2</Scale>
-				<Low>0</Low>
-				<High>1000</High>
-			</Numeric>
-			<Letter IsAccepted="false"/>
-			<Narrative IsAccepted="false"/>
-		</MarkValueInfo>
-	</xhtml:Example>
-	<xhtml:Example xmlns="">
-		<MarkValueInfo RefId="11737E214A7C46BDBA4301CADCA75C87" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB">
-			<SchoolYear>2004</SchoolYear>
-			<Name>Free Form Comment</Name>
-			<Percentage IsAccepted="false"/>
-			<Numeric IsAccepted="false"/>
-			<Letter IsAccepted="false"/>
-			<Narrative IsAccepted="true">
-				<MaximumSize>255</MaximumSize>
-			</Narrative>
-		</MarkValueInfo>
-	</xhtml:Example>
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="MarkValueInfo">
+  <EventsReported>true</EventsReported>
+  <Key>@RefId</Key>
+  <Item>
+    <Element>MarkValueInfo</Element>
+    <Description>
+      <p>This object defines the types of values allowed for a mark and the domain for each mark value.  At least one of the Percentage, Numeric, Letter or Narrative nodes must be used to create a valid MarkValueInfo.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies this MarkValueInfo entity.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"/>
+  </Item>
+  <Item>
+    <Attribute>SchoolInfoRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies the School that these Mark Values apply to.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+    <Element>SchoolYear</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The year that this  MarkValueInfo applies to.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SchoolYearType"/>
+  </Item>
+  <Item>
+    <Element>Name</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The text name of the value list ("Letter Grades", "Letter Grades (+/-)", "ESU", "Pass/Fail", "Override Grades", "Citizenship Comment Codes", etc.).</p>
+    </Description>
+    <Type name="xs:string"/>
+  </Item>
+  <Item>
+    <Element>Percentage</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Indicates whether a percent Mark is accepted (format ##0.00).</p>
+    </Description>
+    <Type ref="CommonTypes" name="MarkValuePercentageType"/>
+  </Item>
+  <Item>
+    <Element>Numeric</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Indicates whether a raw numeric score is accepted.</p>
+    </Description>
+    <Type ref="CommonTypes" name="MarkValueNumberType"/>
+  </Item>
+  <Item>
+    <Element>Letter</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Indicates whether a letter Mark is accepted.</p>
+    </Description>
+    <Type ref="CommonTypes" name="MarkValueLetterType"/>
+  </Item>
+  <Item>
+    <Element>Narrative</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>If present, indicates that a free-form text narrative is accepted.</p>
+    </Description>
+    <Type ref="CommonTypes" name="MarkValueNarrativeType"/>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+  </Item>
+  <xhtml:Example xmlns="">
+    <MarkValueInfo RefId="11737E214A7C46BDBA4301CADCA75C87" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB">
+      <SchoolYear>2004</SchoolYear>
+      <Name>Letter Grades</Name>
+      <Percentage IsAccepted="false"/>
+      <Numeric IsAccepted="false"/>
+      <Letter IsAccepted="true">
+        <ValidMark>
+          <Code>A</Code>
+          <NumericEquivalent>100</NumericEquivalent>
+        </ValidMark>
+        <ValidMark>
+          <Code>B</Code>
+          <NumericEquivalent>90</NumericEquivalent>
+        </ValidMark>
+        <ValidMark>
+          <Code>C</Code>
+          <NumericEquivalent>80</NumericEquivalent>
+        </ValidMark>
+        <ValidMark>
+          <Code>D</Code>
+          <NumericEquivalent>70</NumericEquivalent>
+        </ValidMark>
+        <ValidMark>
+          <Code>F</Code>
+          <NumericEquivalent>60</NumericEquivalent>
+        </ValidMark>
+      </Letter>
+      <Narrative IsAccepted="false"/>
+    </MarkValueInfo>
+  </xhtml:Example>
+  <xhtml:Example xmlns="">
+    <MarkValueInfo RefId="11737E214A7C46BDBA4301CADCA75C87" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB">
+      <SchoolYear>2004</SchoolYear>
+      <Name>Numeric Grade</Name>
+      <Percentage IsAccepted="false"/>
+      <Numeric IsAccepted="true">
+        <Precision>6</Precision>
+        <Scale>2</Scale>
+        <Low>0</Low>
+        <High>1000</High>
+      </Numeric>
+      <Letter IsAccepted="false"/>
+      <Narrative IsAccepted="false"/>
+    </MarkValueInfo>
+  </xhtml:Example>
+  <xhtml:Example xmlns="">
+    <MarkValueInfo RefId="11737E214A7C46BDBA4301CADCA75C87" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB">
+      <SchoolYear>2004</SchoolYear>
+      <Name>Free Form Comment</Name>
+      <Percentage IsAccepted="false"/>
+      <Numeric IsAccepted="false"/>
+      <Letter IsAccepted="false"/>
+      <Narrative IsAccepted="true">
+        <MaximumSize>255</MaximumSize>
+      </Narrative>
+    </MarkValueInfo>
+  </xhtml:Example>
 </DataObject>

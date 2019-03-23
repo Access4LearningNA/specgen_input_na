@@ -1,167 +1,140 @@
-   <DataObject name="CurriculumStructure"
-     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xmlns:xi="http://www.w3.org/2001/XInclude"
-     xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-      xmlns="http://sifassociation.org/SpecGen">
-      <Key>@RefId</Key>
-      <EventsReported>true</EventsReported>
-      <Item>
-        <Element>CurriculumStructure</Element>
-        <Description>
-          <p>
-            An object designed to contain instructional objects such as units, lessons, activities, and assessments&#x2014;or other containers&#x2014;joined together
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="CurriculumStructure">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>CurriculumStructure</Element>
+    <Description>
+      <p>
+            An object designed to contain instructional objects such as units, lessons, activities, and assessments&#8212;or other containers&#8212;joined together
             under a particular topic and/or duration.
           </p>
-        </Description>
-      </Item>
-      <Item>
-
-        <Attribute>RefId</Attribute>
-        <Characteristics>M</Characteristics>
-        <Description>
-          <p>GUID for this particular object.</p>
-        </Description>
-        <Type ref="CommonTypes" name="RefIdType"></Type>
-      </Item>
-
-      <!--<Item>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID for this particular object.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"/>
+  </Item>
+  <!--<Item>
         <Attribute>xml:lang</Attribute>
         <Characteristics>M</Characteristics>
         <Description>
           <p>The default language of the text used for the content in object</p>
         </Description>
       </Item>-->
-
-      <Item>
-        <Element>Titles</Element>
-        <Characteristics>M</Characteristics>
-        <Description></Description>
-        <Type ref="CommonTypes" name="TitleListType"></Type>
-      </Item>
-
-      <Item>
-        <Element>Description</Element>
-
-        <Characteristics>O</Characteristics>
-        <Description>
-          <p>Description of this curriculum object</p>
-        </Description>
-        <Type name="xs:string"></Type>
-      </Item>
-      <Item>
-        <Element>SubjectArea</Element>
-
-        <Characteristics>O</Characteristics>
-        <Type ref="CommonTypes" name="SubjectAreaType"></Type>
-      </Item>
-      <Item>
-        <Element>CurriculumHierarchyLevel</Element>
-
-        <Characteristics>M</Characteristics>
-        <Description>
-          <p>Describes the position of this object in the curriculum hierarchy.</p>
-        </Description>
-        <Type ref="CommonTypes" name="CurriculumStructureCurriculumHierarchyLevelType"></Type>
-      </Item>
-
-
-      <Item>
-        <Element>PredecessorObjects</Element>
-
-        <Characteristics>O</Characteristics>
-        <Description>
-          <p>
+  <Item>
+    <Element>Titles</Element>
+    <Characteristics>M</Characteristics>
+    <Description/>
+    <Type ref="CommonTypes" name="TitleListType"/>
+  </Item>
+  <Item>
+    <Element>Description</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Description of this curriculum object</p>
+    </Description>
+    <Type name="xs:string"/>
+  </Item>
+  <Item>
+    <Element>SubjectArea</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SubjectAreaType"/>
+  </Item>
+  <Item>
+    <Element>CurriculumHierarchyLevel</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Describes the position of this object in the curriculum hierarchy.</p>
+    </Description>
+    <Type ref="CommonTypes" name="CurriculumStructureCurriculumHierarchyLevelType"/>
+  </Item>
+  <Item>
+    <Element>PredecessorObjects</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>
             CurriculumStructure objects directly above this one in the hierarchy tree.  These are repeatable because a single
             object can have multiple parent levels in the hierarcy.
           </p>
-        </Description>
-        <Type ref="CommonTypes" name="CurriculumStructureRefIdListType"></Type>
-      </Item>
-
-      <Item>
-        <Element>LearningObjectives</Element>
-
-        <Characteristics>O</Characteristics>
-        <Description>
-          <p>
+    </Description>
+    <Type ref="CommonTypes" name="CurriculumStructureRefIdListType"/>
+  </Item>
+  <Item>
+    <Element>LearningObjectives</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>
             Learning objectives for this object.
           </p>
-        </Description>
-        <Type ref="CommonTypes" name="LearningObjectiveListType"></Type>
-      </Item>
-
-
-      <Item>
-        <Element>ComponentObjects</Element>
-
-        <Characteristics>O</Characteristics>
-        <Description>
-          <p>
+    </Description>
+    <Type ref="CommonTypes" name="LearningObjectiveListType"/>
+  </Item>
+  <Item>
+    <Element>ComponentObjects</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>
             Component objects, if any, that make up this object.
           </p>
-        </Description>
-        <Type ref="CommonTypes" name="ComponentObjectListType"></Type>
-      </Item>
-
-
-
-
-      <Item>
-        <Element>LearningStandards</Element>
-
-        <Characteristics>O</Characteristics>
-        <Description>
-          <p>
+    </Description>
+    <Type ref="CommonTypes" name="ComponentObjectListType"/>
+  </Item>
+  <Item>
+    <Element>LearningStandards</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>
             Associated learning standards.
           </p>
-        </Description>
-         <Type ref="CommonTypes" name="LearningStandardItemRefIdListType"></Type>
-      </Item>
-      <Item>
-        <Element>SIF_Metadata</Element>
-        <Characteristics>O</Characteristics>
-        <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
-      </Item>
-      <Item>
-        <Element>SIF_ExtendedElements</Element>
-
-        <Characteristics>O</Characteristics>
-        <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
-      </Item>
-      <xhtml:Example xmlns="">
-        <CurriculumStructure RefId="B364631190F169CD8E3DF2BA2537EC8B" xml:lang="en">
-          <Titles>
-            <Title>Cellular Concepts</Title>
-          </Titles>
-          <Description>Reviews basic concepts in Cellular Biology</Description>
-          <SubjectArea>
-            <Code>03</Code>
-            <OtherCodeList>
-              <OtherCode Codeset="Text">Life and Physical Sciences</OtherCode>
-            </OtherCodeList>
-          </SubjectArea>
-          <CurriculumHierarchyLevel>
-            <Number>4</Number>
-            <Name>Unit</Name>
-            <Description>http://www.compasslearning.com/hierarchy004</Description>
-          </CurriculumHierarchyLevel>
-          <PredecessorObjects>
-            <CurriculumStructureRefId>3DD3294A068EC899EE586A6FEFFCF0EB</CurriculumStructureRefId>
-          </PredecessorObjects>
-          <LearningObjectives>
-            <LearningObjective>Teach students about the basics of cellular structure and lifecycle.</LearningObjective>
-          </LearningObjectives>
-          <ComponentObjects>
-            <ComponentObject SIF_RefObject="Lesson">3DD3294A068EC899EE586A6FEFFCF0EB</ComponentObject>
-            <ComponentObject SIF_RefObject="Lesson">8838B02258673F0094E5B426E59C26BC</ComponentObject>
-            <ComponentObject SIF_RefObject="Lesson">D41D8CD98F00B204E9800998ECF8427E</ComponentObject>
-            <ComponentObject SIF_RefObject="Lesson">DC3076B304B838BF11AF723DD7D4AED7</ComponentObject>
-          </ComponentObjects>
-          <LearningStandards>
-            <LearningStandardItemRefId>141216334645D859E2CA255B1C3BBD91</LearningStandardItemRefId>
-          </LearningStandards>
-        </CurriculumStructure>
-      </xhtml:Example>
-    </DataObject>
+    </Description>
+    <Type ref="CommonTypes" name="LearningStandardItemRefIdListType"/>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+  </Item>
+  <xhtml:Example xmlns="">
+    <CurriculumStructure RefId="B364631190F169CD8E3DF2BA2537EC8B" xml:lang="en">
+      <Titles>
+        <Title>Cellular Concepts</Title>
+      </Titles>
+      <Description>Reviews basic concepts in Cellular Biology</Description>
+      <SubjectArea>
+        <Code>03</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Text">Life and Physical Sciences</OtherCode>
+        </OtherCodeList>
+      </SubjectArea>
+      <CurriculumHierarchyLevel>
+        <Number>4</Number>
+        <Name>Unit</Name>
+        <Description>http://www.compasslearning.com/hierarchy004</Description>
+      </CurriculumHierarchyLevel>
+      <PredecessorObjects>
+        <CurriculumStructureRefId>3DD3294A068EC899EE586A6FEFFCF0EB</CurriculumStructureRefId>
+      </PredecessorObjects>
+      <LearningObjectives>
+        <LearningObjective>Teach students about the basics of cellular structure and lifecycle.</LearningObjective>
+      </LearningObjectives>
+      <ComponentObjects>
+        <ComponentObject SIF_RefObject="Lesson">3DD3294A068EC899EE586A6FEFFCF0EB</ComponentObject>
+        <ComponentObject SIF_RefObject="Lesson">8838B02258673F0094E5B426E59C26BC</ComponentObject>
+        <ComponentObject SIF_RefObject="Lesson">D41D8CD98F00B204E9800998ECF8427E</ComponentObject>
+        <ComponentObject SIF_RefObject="Lesson">DC3076B304B838BF11AF723DD7D4AED7</ComponentObject>
+      </ComponentObjects>
+      <LearningStandards>
+        <LearningStandardItemRefId>141216334645D859E2CA255B1C3BBD91</LearningStandardItemRefId>
+      </LearningStandards>
+    </CurriculumStructure>
+  </xhtml:Example>
+</DataObject>

@@ -1,13 +1,5 @@
-<DataObject name="StaffAssignment"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
-
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="StaffAssignment">
   <Key>@RefId</Key>
-
   <EventsReported>true</EventsReported>
   <Item>
     <Element>StaffAssignment</Element>
@@ -19,22 +11,22 @@
     </Description>
   </Item>
   <Item>
-
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The GUID that uniquely identifies a particular staff assignment.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
-
     <Attribute>SchoolInfoRefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The Id (GUID) that identifies the school where the staff member is assigned.</p>
     </Description>
-    <Type ref="CommonTypes" relationship="records staff assignment to" count="1:1" name="IdRefType"></Type>
+    <Type ref="CommonTypes" relationship="records staff assignment to" count="1:1" name="IdRefType"/>
+    <cedsId>000365</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000365</cedsURL>
   </Item>
   <Item>
     <Attribute>SchoolYear</Attribute>
@@ -44,7 +36,7 @@
         School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., <code>2007</code> for the 2006-07 school year).
       </p>
     </Description>
-    <Type ref="CommonTypes" name="SchoolYearType"></Type>
+    <Type ref="CommonTypes" name="SchoolYearType"/>
   </Item>
   <Item>
     <Attribute>StaffPersonalRefId</Attribute>
@@ -52,7 +44,7 @@
     <Description>
       <p>Id (GUID) of this staff member, as represented in the StaffPersonal object.&#160;</p>
     </Description>
-    <Type ref="CommonTypes" relationship="records assignment for" count="*:1" name="IdRefType"></Type>
+    <Type ref="CommonTypes" relationship="records assignment for" count="*:1" name="IdRefType"/>
   </Item>
   <Item>
     <Element>Description</Element>
@@ -60,7 +52,7 @@
     <Description>
       <p>Short assignment description</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>PrimaryAssignment</Element>
@@ -70,14 +62,15 @@
         Is this the staff member's primary assignment?  Note: There must be one and only one instance of the object with a <code>Yes</code> value in this element per school year.
       </p>
     </Description>
-    <Values>
-      <Value>
-        <Code>Yes</Code>
-      </Value>
-      <Value>
-        <Code>No</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>JobStartDate</Element>
@@ -85,7 +78,9 @@
     <Description>
       <p>This is the date from which the staff assignment is valid (inclusive).</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
+    <cedsId>000143</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000143</cedsURL>
   </Item>
   <Item>
     <Element>JobEndDate</Element>
@@ -93,7 +88,9 @@
     <Description>
       <p>This is the date through which the staff assignment is valid (inclusive).</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
+    <cedsId>000646</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000646</cedsURL>
   </Item>
   <Item>
     <Element>JobFTE</Element>
@@ -101,7 +98,7 @@
     <Description>
       <p>Full-time job equivalent ratio for this assignment. (Format is x.xx; an employee who is full-time and who is 50% of their time on this assignment would be represented as 0.50)</p>
     </Description>
-    <Type name="xs:decimal"></Type>
+    <Type name="xs:decimal"/>
     <Facets>
       <xs:minInclusive value="0"/>
       <xs:maxInclusive value="1"/>
@@ -116,7 +113,6 @@
     </Description>
     <Type ref="CommonTypes" name="JobFunctionType"/>
   </Item>
-
   <Item>
     <Element>TeachingAssignment</Element>
     <Characteristics>O</Characteristics>
@@ -125,14 +121,13 @@
     </Description>
     <Type ref="CommonTypes" name="TeachingAssignmentType"/>
   </Item>
-
   <Item>
     <Element>GradeLevels</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>An indication of the grade level(s) the individual is assigned</p>
     </Description>
-    <Type ref="CommonTypes" name="GradeLevelsType"></Type>
+    <Type ref="CommonTypes" name="GradeLevelsType"/>
   </Item>
   <Item>
     <Element>ItinerantTeacher</Element>
@@ -140,17 +135,17 @@
     <Description>
       <p>Is this staff itinerant for this assignment?</p>
     </Description>
-    <Values>
-      <Value>
-        <Code>Yes</Code>
-      </Value>
-      <Value>
-        <Code>No</Code>
-      </Value>
-      <Value>
-        <Code>NA</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
+    <cedsId>000528</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000528</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>InstructionalLevel</Element>
@@ -158,7 +153,7 @@
     <Description>
       <p>An indication of the general nature of instruction provided throughout a course.</p>
     </Description>
-    <Type ref="CommonTypes" name="InstructionalLevelType"></Type>
+    <Type ref="CommonTypes" name="InstructionalLevelType"/>
   </Item>
   <Item>
     <Element>EmployeePersonalRefId</Element>
@@ -166,22 +161,20 @@
     <Description>
       <p>A GUID referencing an EmployeePersonal object to be able to establish a link between HR employee objects and SIS staff objects.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
-
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example name="StaffAssignment" xmlns="">
-    <StaffAssignment RefId="D3E34B359D75101A8C3D00AA001A1652" SchoolInfoRefId="A8C3D3E34B359D75101D00AA001A1652"
-      SchoolYear="2004" StaffPersonalRefId="D3E34B359D75101A8C3D00AA001A1651">
+  <xhtml:Example xmlns="" name="StaffAssignment">
+    <StaffAssignment RefId="D3E34B359D75101A8C3D00AA001A1652" SchoolInfoRefId="A8C3D3E34B359D75101D00AA001A1652" SchoolYear="2004" StaffPersonalRefId="D3E34B359D75101A8C3D00AA001A1651">
       <Description>First grade elementary teacher</Description>
       <PrimaryAssignment>Yes</PrimaryAssignment>
       <JobStartDate>2000-09-05</JobStartDate>

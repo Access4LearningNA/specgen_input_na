@@ -1,49 +1,41 @@
-<DataObject name="EmploymentRecord"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="EmploymentRecord">
   <Key>@SIF_RefId</Key>
   <Key>@SIF_RefObject</Key>
   <EventsReported>true</EventsReported>
-
   <Item>
     <Element>EmploymentRecord</Element>
     <Description>
       <p>This object contains a snapshot (view) of employment information for an employee.</p>
     </Description>
   </Item>
-
   <Item>
-	<Attribute>RefId</Attribute>
-	<Characteristics>M</Characteristics>
-	<Description>
-	  <p>A GUID that identifies an instance of this object. This RefId is new for 2.7M and MUST be supported like other objects that have a RefId (i.e. it is the key for the object).  The alternate keys MUST continue to be supported.</p>
-	</Description>
-	<Type ref="CommonTypes" name="RefIdType"></Type>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>A GUID that identifies an instance of this object. This RefId is new for 2.7M and MUST be supported like other objects that have a RefId (i.e. it is the key for the object).  The alternate keys MUST continue to be supported.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
-
   <Item>
     <Attribute>SIF_RefId</Attribute>
     <Characteristics>O</Characteristics>
     <Description>
       <p>The GUID can either refer to the EmployeePersonal or StaffPersonal object.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Attribute>SIF_RefObject</Attribute>
     <Characteristics>M</Characteristics>
-    <Values>
-      <Value>
-        <Code>EmployeePersonal</Code>
-      </Value>
-      <Value>
-        <Code>StaffPersonal</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>SIF_RefObjectCodeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>LEAInfoRefId</Element>
@@ -54,7 +46,7 @@
         that employs the staff member.
       </p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>Active</Element>
@@ -62,7 +54,9 @@
     <Description>
       <p>Staff is currently active and/or employed.</p>
     </Description>
-    <Type name="xs:boolean"></Type>
+    <Type name="xs:boolean"/>
+    <cedsId>000347</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000347</cedsURL>
   </Item>
   <Item>
     <Element>FullTimeStatus</Element>
@@ -70,7 +64,15 @@
     <Description>
       <p>Full-time status of employee.</p>
     </Description>
-    <Type ref="ExternalCodeSets" name="NCES0476FullTimeStatusType"></Type>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>HireDate</Element>
@@ -78,7 +80,7 @@
     <Description>
       <p>Date the employee was hired.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>TerminationDate</Element>
@@ -86,7 +88,7 @@
     <Description>
       <p>Date the employee resigned.  Present if a HireDate is entered and a TerminationDate is available.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>TotalYearsExperience</Element>
@@ -94,7 +96,9 @@
     <Description>
       <p>Total number of years of prior experience.</p>
     </Description>
-    <Type name="xs:unsignedInt"></Type>
+    <Type name="xs:unsignedInt"/>
+    <cedsId>000302</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000302</cedsURL>
   </Item>
   <Item>
     <Element>PositionTitle</Element>
@@ -102,7 +106,9 @@
     <Description>
       <p>Employee's current position title.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
+    <cedsId>000213</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000213</cedsURL>
   </Item>
   <Item>
     <Element>PositionNumber</Element>
@@ -110,7 +116,7 @@
     <Description>
       <p>Employee's level or category assigned by employer.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>SeniorityDate</Element>
@@ -118,7 +124,7 @@
     <Description>
       <p>Date employee has seniority.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>TenureDate</Element>
@@ -126,20 +132,18 @@
     <Description>
       <p>Date employee is tenured.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-
-
   <xhtml:Example xmlns="">
     <EmploymentRecord RefId="359D75101AD0A9D7A8C3DAD0A85103A2" SIF_RefObject="EmployeePersonal" SIF_RefId="CDF90651225DAC3859DEA3458BC39522">
       <LEAInfoRefId>8545A0A6E5CC40CB9B5C07C9E0696725</LEAInfoRefId>

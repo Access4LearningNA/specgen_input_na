@@ -1,10 +1,4 @@
-<DataObject name="StudentDemographicRecord"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="StudentDemographicRecord">
   <Key>@RefId</Key>
   <EventsReported>false</EventsReported>
   <Item>
@@ -18,20 +12,18 @@
       </p>
     </Description>
   </Item>
-
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
     <Description>
       <p>The Id (GUID) of this record.</p>
     </Description>
   </Item>
-
   <Item>
     <Attribute>SIF_RefId</Attribute>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
     <Description>
       <p>
         The GUID of an associated object, either <code>StudentRecordExchange</code> or <code>StudentPersonal</code>.
@@ -46,62 +38,53 @@
         The associated object type.
       </p>
     </Description>
-    <Values>
-      <Value>
-        <Code>StudentRecordExchange</Code>
-      </Value>
-      <Value>
-        <Code>StudentPersonal</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
   </Item>
-
-
+  <Item>
+    <Attribute>SIF_RefObjectCodeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
   <Item>
     <Element>ReportingDate</Element>
     <Characteristics>M</Characteristics>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
     <Description>
       <p>The date this record was prepared.</p>
     </Description>
   </Item>
-
   <Item>
     <Element>StudentPersonalData</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>Collects elements of interest from StudentPersonal.</p>
     </Description>
-     <Type ref="CommonTypes" name="StudentPersonalDataType"></Type>
- </Item>
-
-
+    <Type ref="CommonTypes" name="StudentPersonalDataType"/>
+  </Item>
   <Item>
     <Element>StudentContactsSummary</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Reports up to two parents/guardians of the student.</p>
     </Description>
-     <Type ref="CommonTypes" name="StudentContactsSummaryType"></Type>
+    <Type ref="CommonTypes" name="StudentContactsSummaryType"/>
   </Item>
-
-
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-
   <xhtml:Example xmlns="">
     <StudentDemographicRecord RefId="0B4AC4176FED4F00BCB6FBF1AE466FD2" SIF_RefObject="StudentRecordExchange" SIF_RefId="0EAF9D6DA4854F348103B04BFEAC65B2">
-
       <ReportingDate>2006-09-26</ReportingDate>
-
       <StudentPersonalData>
         <LocalId>00356</LocalId>
         <StateProvinceId>2983472</StateProvinceId>
@@ -115,27 +98,20 @@
           <Gender>F</Gender>
         </DemographicsData>
       </StudentPersonalData>
-
       <StudentContactsSummary>
-
         <ParentGuardian1>
           <Name Type="04">
             <LastName>Costis</LastName>
             <FirstName>George</FirstName>
           </Name>
         </ParentGuardian1>
-
         <ParentGuardian2>
           <Name Type="04">
             <LastName>Costis</LastName>
             <FirstName>Martha</FirstName>
           </Name>
         </ParentGuardian2>
-
       </StudentContactsSummary>
-
     </StudentDemographicRecord>
-
   </xhtml:Example>
-
 </DataObject>

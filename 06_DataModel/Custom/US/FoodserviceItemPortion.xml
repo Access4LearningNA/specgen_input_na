@@ -1,10 +1,4 @@
-<DataObject name="FoodserviceItemPortion"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="FoodserviceItemPortion">
   <EventsReported>true</EventsReported>
   <Key>@RefId</Key>
   <Item>
@@ -23,7 +17,7 @@
     <Description>
       <p>GUID that identifies this item's portion</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Element>FoodserviceItemUnitRefId</Element>
@@ -31,7 +25,7 @@
     <Description>
       <p>GUID that identifies related item portion</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>ItemPortionQuantity</Element>
@@ -39,7 +33,7 @@
     <Description>
       <p>Quantity of item portion (number of units)</p>
     </Description>
-    <Type name="xs:decimal"></Type>
+    <Type name="xs:decimal"/>
   </Item>
   <Item>
     <Element>ItemPortionType</Element>
@@ -47,26 +41,15 @@
     <Description>
       <p>Type of item unit</p>
     </Description>
-    <Values>
-      <Value>
-        <Code>Component</Code>
-      </Value>
-      <Value>
-        <Code>Entree</Code>
-      </Value>
-      <Value>
-        <Code>AlaCarte</Code>
-      </Value>
-      <Value>
-        <Code>Bonus</Code>
-      </Value>
-      <Value>
-        <Code>Combo</Code>
-      </Value>
-      <Value>
-        <Code>NonFood</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>Description</Element>
@@ -74,17 +57,17 @@
     <Description>
       <p>Optional description of amount</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <FoodserviceItemPortion RefId="EF521958AB474559B2AE7BD82647C66B">

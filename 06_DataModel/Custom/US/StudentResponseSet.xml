@@ -1,24 +1,16 @@
-<DataObject name="StudentResponseSet"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="StudentResponseSet">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
-
   <Item>
     <Element>StudentResponseSet</Element>
     <Description>
       <p>This object transmits the student's responses to stimuli presented in an assessment. These are the raw, unscored responses.</p>
     </Description>
   </Item>
-
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
     <Description>
       <p>The GUID that uniquely identifies an instance of the object.</p>
     </Description>
@@ -26,7 +18,7 @@
   <Item>
     <Attribute>AssessmentAdministrationRefId</Attribute>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
     <Description>
       <p>The administration associated with the response set.</p>
     </Description>
@@ -34,7 +26,7 @@
   <Item>
     <Attribute>StudentPersonalRefId</Attribute>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
     <Description>
       <p>The student associated with the response set.</p>
     </Description>
@@ -42,7 +34,7 @@
   <Item>
     <Attribute>AssessmentRegistrationRefId</Attribute>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
     <Description>
       <p>The registration associated with the response set.</p>
     </Description>
@@ -53,20 +45,19 @@
     <Description>
       <p>Container for item elements.</p>
     </Description>
-    <Type ref="CommonTypes" name="StudentResponseSetItemListType"></Type>
+    <Type ref="CommonTypes" name="StudentResponseSetItemListType"/>
   </Item>
-   <Item>
+  <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-
-  <xhtml:Example name="StudentResponseSet - Example 1" xmlns="">
+  <xhtml:Example xmlns="" name="StudentResponseSet - Example 1">
     <StudentResponseSet RefId="A32F55CC14004172A7CD8E8FB5187DD0" AssessmentAdministrationRefId="BB181B05598C46D2B8D533483D91392E" StudentPersonalRefId="8F0934CC2F0448F8BBD788AA1ADE691B">
       <Items>
         <Item>
@@ -82,8 +73,7 @@
       </Items>
     </StudentResponseSet>
   </xhtml:Example>
-
-  <xhtml:Example name="StudentResponseSet - Example 2" xmlns="">
+  <xhtml:Example xmlns="" name="StudentResponseSet - Example 2">
     <StudentResponseSet RefId="A32F55CC14004172A7CD8E8FB5187DD0" AssessmentAdministrationRefId="BB181B05598C46D2B8D533483D91392E" StudentPersonalRefId="8F0934CC2F0448F8BBD788AA1ADE691B">
       <Items>
         <Item>
@@ -100,6 +90,5 @@
         </Item>
       </Items>
     </StudentResponseSet>
-
   </xhtml:Example>
 </DataObject>

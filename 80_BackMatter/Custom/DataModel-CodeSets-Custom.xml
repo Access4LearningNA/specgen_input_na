@@ -2,32 +2,2339 @@
 	xmlns:xi="http://www.w3.org/2001/XInclude"
 xmlns="http://sifassociation.org/SpecGen">
 
-<Grouping code="LearningStandardItem" name="LearningStandardItem" file="no">
+<Grouping code="x" name="x" file="no">
 
   <CodeSet>
-    <ID>Relationship Types</ID>
-
+    <ID>Session Type</ID>
     <Values>
       <Value>
-        <Code>Content</Code>
-        <Text>A link to another state or school content standard</Text>
+        <Code>FullSchoolYear</Code>
+        <Text>A regular school term consisting of no major subdivision of time segments. It usually begins in the late summer or early fall and ends in late spring or early summer (e.g., elementary school).</Text>
       </Value>
       <Value>
-        <Code>PD</Code><Text></Text>A link to a professional development standard
+        <Code>Intersession</Code>
+        <Text>A short session which occurs between longer sessions.</Text>
       </Value>
       <Value>
-        <Code>State</Code>
-        <Text>A link to a standard from another state.  The purpose of this is to express relationships between state standards.</Text>
+        <Code>LongSession</Code>
+        <Text>A session that is longer than a semester but shorter than a full year.</Text>
+      </Value>
+      <Value>
+        <Code>MiniTerm</Code>
+        <Text>A school term which is shorter than a regular session..</Text>
+      </Value>
+      <Value>
+        <Code>Quarter</Code>
+        <Text>One of four equal segments into which a school year is divided.</Text>
+      </Value>
+      <Value>
+        <Code>Quinmester</Code>
+        <Text>One of five equal segments into which a school year is divided.</Text>
+      </Value>
+      <Value>
+        <Code>Semester</Code>
+        <Text>One of two equal segments into which a school year is divided.</Text>
+      </Value>
+      <Value>
+        <Code>SummerTerm</Code>
+        <Text>A school term which takes place in the summer between two regular school terms.</Text>
+      </Value>
+      <Value>
+        <Code>Trimester</Code>
+        <Text>One of three equal segments into which a school year is divided.</Text>
+      </Value>
+      <Value>
+        <Code>TwelveMonth</Code>
+        <Text>An educational program that operates on a full twelve month cycle.</Text>
       </Value>
       <Value>
         <Code>Other</Code>
-        <Text>Any other type of relationship between the current standard and the target standard item.</Text>
+        <Text>The session type is in a category not yet defined in CEDS.</Text>
       </Value>
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Person Name Type</ID>
+ 	<Values>
+      <Value>
+        <Code>Alias</Code>
+        <Text>The value specified for Other Name is the person's Alias.</Text>
+      </Value>
+      <Value>
+        <Code>Nickname</Code>
+        <Text>The value specified for Other Name is the person's Nickname.</Text>
+      </Value>
+      <Value>
+        <Code>OtherName</Code>
+        <Text>The value specified for Other Name is the person's Other name.</Text>
+      </Value>
+      <Value>
+        <Code>PreviousLegalName</Code>
+        <Text>The value specified for Other Name is the person's Previous legal name.</Text>
+      </Value>
+      <Value>
+        <Code>PreferredFamilyName</Code>
+        <Text>The value specified for Other Name is the person's Preferred Family Name.</Text>
+      </Value>
+      <Value>
+        <Code>PreferredGivenName</Code>
+        <Text>The value specified for Other Name is the person's Preferred Given Name.</Text>
+      </Value>
+      <Value>
+        <Code>FullName</Code>
+        <Text>The value specified for Other Name is the person's Full Name.</Text>
+      </Value>
+      <Value>
+        <Code>LegalName</Code>
+        <Text>The value specified for Other Name is the person's Legal Name.</Text>
+      </Value>
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Person Id System</ID> 	
+ 	<Values>
+      <Value>
+        <Code>Alias</Code>
+        <Text></Text>
+      </Value>
+      <Value>
+        <Code>USVisa</Code>
+        <Text></Text>
+      </Value>
+      <Value>
+        <Code>PIN</Code>
+        <Text></Text>
+      </Value>
+      <Value>
+        <Code>DriversLicense</Code>
+        <Text></Text>
+      </Value>
+      <Value>
+        <Code>Medicaid</Code>
+        <Text></Text>
+      </Value>
+      <Value>
+        <Code>Healthcare</Code>
+        <Text></Text>
+      </Value>  
+      <Value>
+        <Code>ProfessionalCertificate</Code>
+        <Text></Text>
+      </Value>  
+      <Value>
+        <Code>Institution</Code>
+        <Text></Text>
+      </Value>
+      <Value>
+        <Code>OtherFederal</Code>
+        <Text></Text>
+      </Value>
+      <Value>
+        <Code>SelectiveService</Code>
+        <Text></Text>
+      </Value>
+      <Value>
+        <Code>Other</Code>
+        <Text></Text>
+      </Value>
+      <Value>
+        <Code>CanadianSIN</Code>
+        <Text>The related Student Identifier uses the student's Canadian Social Insurance Number.</Text>
+      </Value>
+      <Value>
+        <Code>District</Code>
+        <Text>The related Student Identifier uses the student's district-assigned number.</Text>
+      </Value>
+      <Value>
+        <Code>Family</Code>
+        <Text>The related Student Identifier uses the student's family unit number.</Text>
+      </Value>
+      <Value>
+        <Code>Federal</Code>
+        <Text>The related Student Identifier uses the student's federal identification number.</Text>
+      </Value>
+      <Value>
+        <Code>NationalMigrant</Code>
+        <Text>The related Student Identifier uses the student's national migrant number.</Text>
+      </Value>
+      <Value>
+        <Code>School</Code>
+        <Text>The related Student Identifier uses the student's school-assigned number.</Text>
+      </Value>
+      <Value>
+        <Code>SSN</Code>
+        <Text>The related Student Identifier uses the student's Social Security Administration number.</Text>
+      </Value>
+      <Value>
+        <Code>State</Code>
+        <Text>The related Student Identifier uses the student's state-assigned number.</Text>
+      </Value>
+      <Value>
+        <Code>StateMigrant</Code>
+        <Text>The related Student Identifier uses the student's State migrant number.</Text>
+      </Value>
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Address Type For Learner Or Family</ID>
+ 	<Values>
+      <Value>
+        <Code>Mailing</Code>
+        <Text>Mailing is specified as the type of address listed for a learner or a parent, guardian, family member or related person.</Text>
+      </Value>
+      <Value>
+        <Code>Physical</Code>
+        <Text>Physical is specified as the type of address listed for a learner or a parent, guardian, family member or related person.</Text>
+      </Value>
+      <Value>
+        <Code>Shipping</Code>
+        <Text>Shipping is specified as the type of address listed for a learner or a parent, guardian, family member or related person.</Text>
+      </Value>
+      <Value>
+        <Code>Billing</Code>
+        <Text>Billing address is specified as the type of address listed for a learner or a parent, guardian, family member or related person.</Text>
+      </Value>
+      <Value>
+        <Code>OnCampus</Code>
+        <Text>On campus is specified as the type of address listed for a learner or a parent, guardian, family member or related person.</Text>
+      </Value>
+      <Value>
+        <Code>OffCampus</Code>
+        <Text>Off-campus, temporary is specified as the type of address listed for a learner or a parent, guardian, family member or related person.</Text>
+      </Value>
+      <Value>
+        <Code>PermanentStudent</Code>
+        <Text>Permanent, student is specified as the type of address listed for a learner or a parent, guardian, family member or related person.</Text>
+      </Value>
+      <Value>
+        <Code>PermanentAdmission</Code>
+        <Text>Permanent, at time of admission is specified as the type of address listed for a learner or a parent, guardian, family member or related person.</Text>
+      </Value>
+      <Value>
+        <Code>FatherAddress</Code>
+        <Text>Father's address is specified as the type of address listed for a learner or a parent, guardian, family member or related person.</Text>
+      </Value>
+      <Value>
+        <Code>MotherAddress</Code>
+        <Text>Mother's address is specified as the type of address listed for a learner or a parent, guardian, family member or related person.</Text>
+      </Value>
+      <Value>
+        <Code>GuardianAddress</Code>
+        <Text>Guardian's address is specified as the type of address listed for a learner or a parent, guardian, family member or related person.</Text>
+      </Value>
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>State Code US</ID>
+ 	<Values>
+      <Value>
+        <Code>AK</Code>
+        <Text>Alaska</Text>
+      </Value>
+      <Value>
+        <Code>AL</Code>
+        <Text>Alabama</Text>
+      </Value>
+      <Value>
+        <Code>AR</Code>
+        <Text>Arkansas</Text>
+      </Value>
+      <Value>
+        <Code>AS</Code>
+        <Text>American Samoa</Text>
+      </Value>
+      <Value>
+        <Code>AZ</Code>
+        <Text>Arizona</Text>
+      </Value>
+      <Value>
+        <Code>CA</Code>
+        <Text>California</Text>
+      </Value>
+      <Value>
+        <Code>CO</Code>
+        <Text>Colorado</Text>
+      </Value>
+      <Value>
+        <Code>CT</Code>
+        <Text>Connecticut</Text>
+      </Value>
+      <Value>
+        <Code>DC</Code>
+        <Text>District of Columbia</Text>
+      </Value>
+      <Value>
+        <Code>DE</Code>
+        <Text>Delaware</Text>
+      </Value>
+      <Value>
+        <Code>FL</Code>
+        <Text>Florida</Text>
+      </Value>
+      <Value>
+        <Code>FM</Code>
+        <Text>Federated States of Micronesia</Text>
+      </Value>
+      <Value>
+        <Code>GA</Code>
+        <Text>Georgia</Text>
+      </Value>
+      <Value>
+        <Code>GU</Code>
+        <Text>Guam</Text>
+      </Value>
+      <Value>
+        <Code>HI</Code>
+        <Text>Hawaii</Text>
+      </Value>
+      <Value>
+        <Code>IA</Code>
+        <Text>Iowa</Text>
+      </Value>
+      <Value>
+        <Code>ID</Code>
+        <Text>Idaho</Text>
+      </Value>
+      <Value>
+        <Code>IL</Code>
+        <Text>Illinois</Text>
+      </Value>
+      <Value>
+        <Code>IN</Code>
+        <Text>Indiana</Text>
+      </Value>
+      <Value>
+        <Code>KS</Code>
+        <Text>Kansas</Text>
+      </Value>
+      <Value>
+        <Code>KY</Code>
+        <Text>Kentucky</Text>
+      </Value>
+      <Value>
+        <Code>LA</Code>
+        <Text>Louisiana</Text>
+      </Value>
+      <Value>
+        <Code>MA</Code>
+        <Text>Massachusetts</Text>
+      </Value>
+      <Value>
+        <Code>MD</Code>
+        <Text>Maryland</Text>
+      </Value>
+      <Value>
+        <Code>ME</Code>
+        <Text>Maine</Text>
+      </Value>
+      <Value>
+        <Code>MH</Code>
+        <Text>Marshall Islands</Text>
+      </Value>
+      <Value>
+        <Code>MI</Code>
+        <Text>Michigan</Text>
+      </Value>
+      <Value>
+        <Code>MN</Code>
+        <Text>Minnesota</Text>
+      </Value>
+      <Value>
+        <Code>MO</Code>
+        <Text>Missouri</Text>
+      </Value>
+      <Value>
+        <Code>MP</Code>
+        <Text>Northern Marianas</Text>
+      </Value>
+      <Value>
+        <Code>MS</Code>
+        <Text>Mississippi</Text>
+      </Value>
+      <Value>
+        <Code>MT</Code>
+        <Text>Montana</Text>
+      </Value>
+      <Value>
+        <Code>NC</Code>
+        <Text>North Carolina</Text>
+      </Value>
+      <Value>
+        <Code>ND</Code>
+        <Text>North Dakota</Text>
+      </Value>
+      <Value>
+        <Code>NE</Code>
+        <Text>Nebraska</Text>
+      </Value>
+      <Value>
+        <Code>NH</Code>
+        <Text>New Hampshire</Text>
+      </Value>
+      <Value>
+        <Code>NJ</Code>
+        <Text>New Jersey</Text>
+      </Value>
+      <Value>
+        <Code>NM</Code>
+        <Text>New Mexico</Text>
+      </Value>
+      <Value>
+        <Code>NV</Code>
+        <Text>Nevada</Text>
+      </Value>
+      <Value>
+        <Code>NY</Code>
+        <Text>New York</Text>
+      </Value>
+      <Value>
+        <Code>OH</Code>
+        <Text>Ohio</Text>
+      </Value>
+      <Value>
+        <Code>OK</Code>
+        <Text>Oklahoma</Text>
+      </Value>
+      <Value>
+        <Code>OR</Code>
+        <Text>Oregon</Text>
+      </Value>
+      <Value>
+        <Code>PA</Code>
+        <Text>Pennsylvania</Text>
+      </Value>
+      <Value>
+        <Code>PR</Code>
+        <Text>Puerto Rico</Text>
+      </Value>
+      <Value>
+        <Code>PW</Code>
+        <Text>Palau</Text>
+      </Value>
+      <Value>
+        <Code>RI</Code>
+        <Text>Rhode Island</Text>
+      </Value>
+      <Value>
+        <Code>SC</Code>
+        <Text>South Carolina</Text>
+      </Value>
+      <Value>
+        <Code>SD</Code>
+        <Text>South Dakota</Text>
+      </Value>
+      <Value>
+        <Code>TN</Code>
+        <Text>Tennessee</Text>
+      </Value>
+      <Value>
+        <Code>TX</Code>
+        <Text>Texas</Text>
+      </Value>
+      <Value>
+        <Code>UT</Code>
+        <Text>Utah</Text>
+      </Value>
+      <Value>
+        <Code>VA</Code>
+        <Text>Virginia</Text>
+      </Value>
+      <Value>
+        <Code>VI</Code>
+        <Text>Virgin Islands</Text>
+      </Value>
+      <Value>
+        <Code>VT</Code>
+        <Text>Vermont</Text>
+      </Value>
+      <Value>
+        <Code>WA</Code>
+        <Text>Washington</Text>
+      </Value>
+      <Value>
+        <Code>WI</Code>
+        <Text>Wisconsin</Text>
+      </Value>
+      <Value>
+        <Code>WV</Code>
+        <Text>West Virginia</Text>
+      </Value>
+      <Value>
+        <Code>WY</Code>
+        <Text>Wyoming</Text>
+      </Value>
+      <Value>
+        <Code>AA</Code>
+        <Text>Armed Forces America</Text>
+      </Value>
+      <Value>
+        <Code>AE</Code>
+        <Text>Armed Forces Africa, Canada, Europe, and Mideast</Text>
+      </Value>
+      <Value>
+        <Code>AP</Code>
+        <Text>Armed Forces Pacific</Text>
+      </Value>
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Country Code</ID>
+ 	<Values>
+      <Value>
+        <Code>AF</Code>
+        <Text>Afghanistan</Text>
+      </Value>
+      <Value>
+        <Code>AX</Code>
+        <Text>Aland Islands</Text>
+      </Value>
+      <Value>
+        <Code>AL</Code>
+        <Text>Albania</Text>
+      </Value>
+      <Value>
+        <Code>DZ</Code>
+        <Text>Algeria</Text>
+      </Value>
+      <Value>
+        <Code>AS</Code>
+        <Text>American Samoa</Text>
+      </Value>
+      <Value>
+        <Code>AD</Code>
+        <Text>Andorra</Text>
+      </Value>
+      <Value>
+        <Code>AO</Code>
+        <Text>Angola</Text>
+      </Value>
+      <Value>
+        <Code>AI</Code>
+        <Text>Anguilla</Text>
+      </Value>
+      <Value>
+        <Code>AQ</Code>
+        <Text>Antarctica</Text>
+      </Value>
+      <Value>
+        <Code>AG</Code>
+        <Text>Antigua and Barbuda</Text>
+      </Value>
+      <Value>
+        <Code>AR</Code>
+        <Text>Argentina</Text>
+      </Value>
+      <Value>
+        <Code>AM</Code>
+        <Text>Armenia</Text>
+      </Value>
+      <Value>
+        <Code>AW</Code>
+        <Text>Aruba</Text>
+      </Value>
+      <Value>
+        <Code>AU</Code>
+        <Text>Australia</Text>
+      </Value>
+      <Value>
+        <Code>AT</Code>
+        <Text>Austria</Text>
+      </Value>
+      <Value>
+        <Code>AZ</Code>
+        <Text>Azerbaijan</Text>
+      </Value>
+      <Value>
+        <Code>BS</Code>
+        <Text>Bahamas</Text>
+      </Value>
+      <Value>
+        <Code>BH</Code>
+        <Text>Bahrain</Text>
+      </Value>
+      <Value>
+        <Code>BD</Code>
+        <Text>Bangladesh</Text>
+      </Value>
+      <Value>
+        <Code>BB</Code>
+        <Text>Barbados</Text>
+      </Value>
+      <Value>
+        <Code>BY</Code>
+        <Text>Belarus</Text>
+      </Value>
+      <Value>
+        <Code>BE</Code>
+        <Text>Belgium</Text>
+      </Value>
+      <Value>
+        <Code>BZ</Code>
+        <Text>Belize</Text>
+      </Value>
+      <Value>
+        <Code>BJ</Code>
+        <Text>Benin</Text>
+      </Value>
+      <Value>
+        <Code>BM</Code>
+        <Text>Bermuda</Text>
+      </Value>
+      <Value>
+        <Code>BT</Code>
+        <Text>Bhutan</Text>
+      </Value>
+      <Value>
+        <Code>BO</Code>
+        <Text>Bolivia (Plurinational State of)</Text>
+      </Value>
+      <Value>
+        <Code>BQ</Code>
+        <Text>Bonaire, Sint Eustatius and Saba</Text>
+      </Value>
+      <Value>
+        <Code>BA</Code>
+        <Text>Bosnia and Herzegovina</Text>
+      </Value>
+      <Value>
+        <Code>BW</Code>
+        <Text>Botswana</Text>
+      </Value>
+      <Value>
+        <Code>BV</Code>
+        <Text>Bouvet Island</Text>
+      </Value>
+      <Value>
+        <Code>BR</Code>
+        <Text>Brazil</Text>
+      </Value>
+      <Value>
+        <Code>IO</Code>
+        <Text>British Indian Ocean Territory</Text>
+      </Value>
+      <Value>
+        <Code>BN</Code>
+        <Text>Brunei Darussalam</Text>
+      </Value>
+      <Value>
+        <Code>BG</Code>
+        <Text>Bulgaria</Text>
+      </Value>
+      <Value>
+        <Code>BF</Code>
+        <Text>Burkina Faso</Text>
+      </Value>
+      <Value>
+        <Code>BI</Code>
+        <Text>Burundi</Text>
+      </Value>
+      <Value>
+        <Code>KH</Code>
+        <Text>Cambodia</Text>
+      </Value>
+      <Value>
+        <Code>CM</Code>
+        <Text>Cameroon</Text>
+      </Value>
+      <Value>
+        <Code>CA</Code>
+        <Text>Canada</Text>
+      </Value>
+      <Value>
+        <Code>CV</Code>
+        <Text>Cabo Verde</Text>
+      </Value>
+      <Value>
+        <Code>KY</Code>
+        <Text>Cayman Islands</Text>
+      </Value>
+      <Value>
+        <Code>CF</Code>
+        <Text>Central African Republic</Text>
+      </Value>
+      <Value>
+        <Code>TD</Code>
+        <Text>Chad</Text>
+      </Value>
+      <Value>
+        <Code>CL</Code>
+        <Text>Chile</Text>
+      </Value>
+      <Value>
+        <Code>CN</Code>
+        <Text>China</Text>
+      </Value>
+      <Value>
+        <Code>CX</Code>
+        <Text>Christmas Island</Text>
+      </Value>
+      <Value>
+        <Code>CC</Code>
+        <Text>Cocos (Keeling) Island</Text>
+      </Value>
+      <Value>
+        <Code>CO</Code>
+        <Text>Colombia</Text>
+      </Value>
+      <Value>
+        <Code>KM</Code>
+        <Text>Comoros</Text>
+      </Value>
+      <Value>
+        <Code>CG</Code>
+        <Text>Congo</Text>
+      </Value>
+      <Value>
+        <Code>CD</Code>
+        <Text>Congo, Democratic Republic of the</Text>
+      </Value>
+      <Value>
+        <Code>CK</Code>
+        <Text>Cook Islands</Text>
+      </Value>
+      <Value>
+        <Code>CR</Code>
+        <Text>Costa Rica</Text>
+      </Value>
+      <Value>
+        <Code>CI</Code>
+        <Text>Côte D'Ivoire</Text>
+      </Value>
+      <Value>
+        <Code>HR</Code>
+        <Text>Croatia</Text>
+      </Value>
+      <Value>
+        <Code>CU</Code>
+        <Text>Cuba</Text>
+      </Value>
+      <Value>
+        <Code>CW</Code>
+        <Text>Curaçao</Text>
+      </Value>
+      <Value>
+        <Code>CY</Code>
+        <Text>Cyprus</Text>
+      </Value>
+      <Value>
+        <Code>CZ</Code>
+        <Text>Czechia</Text>
+      </Value>
+      <Value>
+        <Code>DK</Code>
+        <Text>Denmark</Text>
+      </Value>
+      <Value>
+        <Code>DJ</Code>
+        <Text>Djibouti</Text>
+      </Value>
+      <Value>
+        <Code>DM</Code>
+        <Text>Dominica</Text>
+      </Value>
+      <Value>
+        <Code>DO</Code>
+        <Text>Dominican Republic</Text>
+      </Value>
+      <Value>
+        <Code>EC</Code>
+        <Text>Ecuador</Text>
+      </Value>
+      <Value>
+        <Code>EG</Code>
+        <Text>Egypt</Text>
+      </Value>
+      <Value>
+        <Code>SV</Code>
+        <Text>El Salvador</Text>
+      </Value>
+      <Value>
+        <Code>GQ</Code>
+        <Text>Equatorial Guinea</Text>
+      </Value>
+      <Value>
+        <Code>ER</Code>
+        <Text>Eritrea</Text>
+      </Value>
+      <Value>
+        <Code>EE</Code>
+        <Text>Estonia</Text>
+      </Value>
+      <Value>
+        <Code>ET</Code>
+        <Text>Ethiopia</Text>
+      </Value>
+      <Value>
+        <Code>FK</Code>
+        <Text>Falkland Islands (Malvinas)</Text>
+      </Value>
+      <Value>
+        <Code>FO</Code>
+        <Text>Faroe Islands</Text>
+      </Value>
+      <Value>
+        <Code>FJ</Code>
+        <Text>Fiji</Text>
+      </Value>
+      <Value>
+        <Code>FI</Code>
+        <Text>Finland</Text>
+      </Value>
+      <Value>
+        <Code>FR</Code>
+        <Text>France</Text>
+      </Value>
+      <Value>
+        <Code>GF</Code>
+        <Text>French Guiana</Text>
+      </Value>
+      <Value>
+        <Code>PF</Code>
+        <Text>French Polynesia</Text>
+      </Value>
+      <Value>
+        <Code>TF</Code>
+        <Text>French Southern Territories</Text>
+      </Value>
+      <Value>
+        <Code>GA</Code>
+        <Text>Gabon</Text>
+      </Value>
+      <Value>
+        <Code>GM</Code>
+        <Text>Gambia</Text>
+      </Value>
+      <Value>
+        <Code>GE</Code>
+        <Text>Georgia</Text>
+      </Value>
+      <Value>
+        <Code>DE</Code>
+        <Text>Germany</Text>
+      </Value>
+      <Value>
+        <Code>GH</Code>
+        <Text>Ghana</Text>
+      </Value>
+      <Value>
+        <Code>GI</Code>
+        <Text>Gibraltar</Text>
+      </Value>
+      <Value>
+        <Code>GR</Code>
+        <Text>Greece</Text>
+      </Value>
+      <Value>
+        <Code>GL</Code>
+        <Text>Greenland</Text>
+      </Value>
+      <Value>
+        <Code>GD</Code>
+        <Text>Grenada</Text>
+      </Value>
+      <Value>
+        <Code>GP</Code>
+        <Text>Guadeloupe</Text>
+      </Value>
+      <Value>
+        <Code>GU</Code>
+        <Text>Guam</Text>
+      </Value>
+      <Value>
+        <Code>GT</Code>
+        <Text>Guatemala</Text>
+      </Value>
+      <Value>
+        <Code>GG</Code>
+        <Text>Guernsey</Text>
+      </Value>
+      <Value>
+        <Code>GN</Code>
+        <Text>Guinea</Text>
+      </Value>
+      <Value>
+        <Code>GW</Code>
+        <Text>Guinea-Bissau</Text>
+      </Value>
+      <Value>
+        <Code>GY</Code>
+        <Text>Guyana</Text>
+      </Value>
+      <Value>
+        <Code>HT</Code>
+        <Text>Haiti</Text>
+      </Value>
+      <Value>
+        <Code>HM</Code>
+        <Text>Heard Island and McDonald Islands</Text>
+      </Value>
+      <Value>
+        <Code>VA</Code>
+        <Text>Holy See</Text>
+      </Value>
+      <Value>
+        <Code>HN</Code>
+        <Text>Honduras</Text>
+      </Value>
+      <Value>
+        <Code>HK</Code>
+        <Text>Hong Kong</Text>
+      </Value>
+      <Value>
+        <Code>HU</Code>
+        <Text>Hungary</Text>
+      </Value>
+      <Value>
+        <Code>IS</Code>
+        <Text>Iceland</Text>
+      </Value>
+      <Value>
+        <Code>IN</Code>
+        <Text>India</Text>
+      </Value>
+      <Value>
+        <Code>ID</Code>
+        <Text>Indonesia</Text>
+      </Value>
+      <Value>
+        <Code>IR</Code>
+        <Text>Iran (Islamic Republic of)</Text>
+      </Value>
+      <Value>
+        <Code>IQ</Code>
+        <Text>Iraq</Text>
+      </Value>
+      <Value>
+        <Code>IE</Code>
+        <Text>Ireland</Text>
+      </Value>
+      <Value>
+        <Code>IM</Code>
+        <Text>Isle of Man</Text>
+      </Value>
+      <Value>
+        <Code>IL</Code>
+        <Text>Israel</Text>
+      </Value>
+      <Value>
+        <Code>IT</Code>
+        <Text>Italy</Text>
+      </Value>
+      <Value>
+        <Code>JM</Code>
+        <Text>Jamaica</Text>
+      </Value>
+      <Value>
+        <Code>JP</Code>
+        <Text>Japan</Text>
+      </Value>
+      <Value>
+        <Code>JE</Code>
+        <Text>Jersey</Text>
+      </Value>
+      <Value>
+        <Code>JO</Code>
+        <Text>Jordan</Text>
+      </Value>
+      <Value>
+        <Code>KZ</Code>
+        <Text>Kazakhstan</Text>
+      </Value>
+      <Value>
+        <Code>KE</Code>
+        <Text>Kenya</Text>
+      </Value>
+      <Value>
+        <Code>KI</Code>
+        <Text>Kiribati</Text>
+      </Value>
+      <Value>
+        <Code>KP</Code>
+        <Text>Korea (Democratic People's Republic of)</Text>
+      </Value>
+      <Value>
+        <Code>KR</Code>
+        <Text>Korea, Republic of</Text>
+      </Value>
+      <Value>
+        <Code>KW</Code>
+        <Text>Kuwait</Text>
+      </Value>
+      <Value>
+        <Code>KG</Code>
+        <Text>Kyrgyzstan</Text>
+      </Value>
+      <Value>
+        <Code>LA</Code>
+        <Text>Lao People's Democratic Republic</Text>
+      </Value>
+      <Value>
+        <Code>LV</Code>
+        <Text>Latvia</Text>
+      </Value>
+      <Value>
+        <Code>LB</Code>
+        <Text>Lebanon</Text>
+      </Value>
+      <Value>
+        <Code>LS</Code>
+        <Text>Lesotho</Text>
+      </Value>
+      <Value>
+        <Code>LR</Code>
+        <Text>Liberia</Text>
+      </Value>
+      <Value>
+        <Code>LY</Code>
+        <Text>Libya</Text>
+      </Value>
+      <Value>
+        <Code>LI</Code>
+        <Text>Liechtenstein</Text>
+      </Value>
+      <Value>
+        <Code>LT</Code>
+        <Text>Lithuania</Text>
+      </Value>
+      <Value>
+        <Code>LU</Code>
+        <Text>Luxembourg</Text>
+      </Value>
+      <Value>
+        <Code>MO</Code>
+        <Text>Macao</Text>
+      </Value>
+      <Value>
+        <Code>MK</Code>
+        <Text>Macedonia, The Former Yugoslav Republic of</Text>
+      </Value>
+      <Value>
+        <Code>MG</Code>
+        <Text>Madagascar</Text>
+      </Value>
+      <Value>
+        <Code>MW</Code>
+        <Text>Malawi</Text>
+      </Value>
+      <Value>
+        <Code>MY</Code>
+        <Text>Malaysia</Text>
+      </Value>
+      <Value>
+        <Code>MV</Code>
+        <Text>Maldives</Text>
+      </Value>
+      <Value>
+        <Code>ML</Code>
+        <Text>Mali</Text>
+      </Value>
+      <Value>
+        <Code>MT</Code>
+        <Text>Malta</Text>
+      </Value>
+      <Value>
+        <Code>MH</Code>
+        <Text>Marshall Islands</Text>
+      </Value>
+      <Value>
+        <Code>MQ</Code>
+        <Text>Martinique</Text>
+      </Value>
+      <Value>
+        <Code>MR</Code>
+        <Text>Mauritania</Text>
+      </Value>
+      <Value>
+        <Code>MU</Code>
+        <Text>Mauritius</Text>
+      </Value>
+      <Value>
+        <Code>YT</Code>
+        <Text>Mayotte</Text>
+      </Value>
+      <Value>
+        <Code>MX</Code>
+        <Text>Mexico</Text>
+      </Value>
+      <Value>
+        <Code>FM</Code>
+        <Text>Micronesia (Federated States of)</Text>
+      </Value>
+      <Value>
+        <Code>MD</Code>
+        <Text>Moldova, Republic of</Text>
+      </Value>
+      <Value>
+        <Code>MC</Code>
+        <Text>Monaco</Text>
+      </Value>
+      <Value>
+        <Code>MN</Code>
+        <Text>Mongolia</Text>
+      </Value>
+      <Value>
+        <Code>ME</Code>
+        <Text>Montenegro</Text>
+      </Value>
+      <Value>
+        <Code>MS</Code>
+        <Text>Montserrat</Text>
+      </Value>
+      <Value>
+        <Code>MA</Code>
+        <Text>Morocco</Text>
+      </Value>
+      <Value>
+        <Code>MZ</Code>
+        <Text>Mozambique</Text>
+      </Value>
+      <Value>
+        <Code>MM</Code>
+        <Text>Myanmar</Text>
+      </Value>
+      <Value>
+        <Code>NA</Code>
+        <Text>Namibia</Text>
+      </Value>
+      <Value>
+        <Code>NR</Code>
+        <Text>Nauru</Text>
+      </Value>
+      <Value>
+        <Code>NP</Code>
+        <Text>Nepal</Text>
+      </Value>
+      <Value>
+        <Code>NL</Code>
+        <Text>Netherlands</Text>
+      </Value>
+      <Value>
+        <Code>NC</Code>
+        <Text>New Caledonia</Text>
+      </Value>
+      <Value>
+        <Code>NZ</Code>
+        <Text>New Zealand</Text>
+      </Value>
+      <Value>
+        <Code>NI</Code>
+        <Text>Nicaragua</Text>
+      </Value>
+      <Value>
+        <Code>NE</Code>
+        <Text>Niger</Text>
+      </Value>
+      <Value>
+        <Code>NG</Code>
+        <Text>Nigeria</Text>
+      </Value>
+      <Value>
+        <Code>NU</Code>
+        <Text>Niue</Text>
+      </Value>
+      <Value>
+        <Code>NF</Code>
+        <Text>Norfolk Island</Text>
+      </Value>
+      <Value>
+        <Code>MP</Code>
+        <Text>Northern Mariana Islands</Text>
+      </Value>
+      <Value>
+        <Code>NO</Code>
+        <Text>Norway</Text>
+      </Value>
+      <Value>
+        <Code>OM</Code>
+        <Text>Oman</Text>
+      </Value>
+      <Value>
+        <Code>PK</Code>
+        <Text>Pakistan</Text>
+      </Value>
+      <Value>
+        <Code>PW</Code>
+        <Text>Palau</Text>
+      </Value>
+      <Value>
+        <Code>PS</Code>
+        <Text>Palestine, State of</Text>
+      </Value>
+      <Value>
+        <Code>PA</Code>
+        <Text>Panama</Text>
+      </Value>
+      <Value>
+        <Code>PG</Code>
+        <Text>Papua New Guinea</Text>
+      </Value>
+      <Value>
+        <Code>PY</Code>
+        <Text>Paraguay</Text>
+      </Value>
+      <Value>
+        <Code>PE</Code>
+        <Text>Peru</Text>
+      </Value>
+      <Value>
+        <Code>PH</Code>
+        <Text>Philippines</Text>
+      </Value>
+      <Value>
+        <Code>PN</Code>
+        <Text>Pitcairn</Text>
+      </Value>
+      <Value>
+        <Code>PL</Code>
+        <Text>Poland</Text>
+      </Value>
+      <Value>
+        <Code>PT</Code>
+        <Text>Portugal</Text>
+      </Value>
+      <Value>
+        <Code>PR</Code>
+        <Text>Puerto Rico</Text>
+      </Value>
+      <Value>
+        <Code>QA</Code>
+        <Text>Qatar</Text>
+      </Value>
+      <Value>
+        <Code>RE</Code>
+        <Text>Réunion</Text>
+      </Value>
+      <Value>
+        <Code>RO</Code>
+        <Text>Romania</Text>
+      </Value>
+      <Value>
+        <Code>RU</Code>
+        <Text>Russian Federation</Text>
+      </Value>
+      <Value>
+        <Code>RW</Code>
+        <Text>Rwanda</Text>
+      </Value>
+      <Value>
+        <Code>BL</Code>
+        <Text>Saint Barthélemy</Text>
+      </Value>
+      <Value>
+        <Code>SH</Code>
+        <Text>Saint Helena, Ascension and Tristan Da Cunha</Text>
+      </Value>
+      <Value>
+        <Code>KN</Code>
+        <Text>Saint Kitts and Nevis</Text>
+      </Value>
+      <Value>
+        <Code>LC</Code>
+        <Text>Saint Lucia</Text>
+      </Value>
+      <Value>
+        <Code>MF</Code>
+        <Text>Saint Martin (French Part)</Text>
+      </Value>
+      <Value>
+        <Code>PM</Code>
+        <Text>Saint Pierre and Miquelon</Text>
+      </Value>
+      <Value>
+        <Code>VC</Code>
+        <Text>Saint Vincent and the Grenadines</Text>
+      </Value>
+      <Value>
+        <Code>WS</Code>
+        <Text>Samoa</Text>
+      </Value>
+      <Value>
+        <Code>SM</Code>
+        <Text>San Marino</Text>
+      </Value>
+      <Value>
+        <Code>ST</Code>
+        <Text>Sao Tome and Principe</Text>
+      </Value>
+      <Value>
+        <Code>SA</Code>
+        <Text>Saudi Arabia</Text>
+      </Value>
+      <Value>
+        <Code>SN</Code>
+        <Text>Senegal</Text>
+      </Value>
+      <Value>
+        <Code>RS</Code>
+        <Text>Serbia</Text>
+      </Value>
+      <Value>
+        <Code>SC</Code>
+        <Text>Seychelles</Text>
+      </Value>
+      <Value>
+        <Code>SL</Code>
+        <Text>Sierra Leone</Text>
+      </Value>
+      <Value>
+        <Code>SG</Code>
+        <Text>Singapore</Text>
+      </Value>
+      <Value>
+        <Code>SX</Code>
+        <Text>Sint Maarten (Dutch Part)</Text>
+      </Value>
+      <Value>
+        <Code>SK</Code>
+        <Text>Slovakia</Text>
+      </Value>
+      <Value>
+        <Code>SI</Code>
+        <Text>Slovenia</Text>
+      </Value>
+      <Value>
+        <Code>SB</Code>
+        <Text>Solomon Islands</Text>
+      </Value>
+      <Value>
+        <Code>SO</Code>
+        <Text>Somalia</Text>
+      </Value>
+      <Value>
+        <Code>ZA</Code>
+        <Text>South Africa</Text>
+      </Value>
+      <Value>
+        <Code>GS</Code>
+        <Text>South Georgia and the South Sandwich Islands</Text>
+      </Value>
+      <Value>
+        <Code>SS</Code>
+        <Text>South Sudan</Text>
+      </Value>
+      <Value>
+        <Code>ES</Code>
+        <Text>Spain</Text>
+      </Value>
+      <Value>
+        <Code>LK</Code>
+        <Text>Sri Lanka</Text>
+      </Value>
+      <Value>
+        <Code>SD</Code>
+        <Text>Sudan</Text>
+      </Value>
+      <Value>
+        <Code>SR</Code>
+        <Text>Suriname</Text>
+      </Value>
+      <Value>
+        <Code>SJ</Code>
+        <Text>Svalbard and Jan Mayen</Text>
+      </Value>
+       <Value>
+        <Code>SZ</Code>
+        <Text>Swaziland</Text>
+      </Value>
+      <Value>
+        <Code>SE</Code>
+        <Text>Sweden</Text>
+      </Value>
+      <Value>
+        <Code>CH</Code>
+        <Text>Switzerland</Text>
+      </Value>
+      <Value>
+        <Code>SY</Code>
+        <Text>Syrian Arab Republic</Text>
+      </Value>
+      <Value>
+        <Code>TW</Code>
+        <Text>Taiwan</Text>
+      </Value>
+      <Value>
+        <Code>TJ</Code>
+        <Text>Tajikistan</Text>
+      </Value>
+      <Value>
+        <Code>TZ</Code>
+        <Text>Tanzania, United Republic of</Text>
+      </Value>
+      <Value>
+        <Code>TH</Code>
+        <Text>Thailand</Text>
+      </Value>
+      <Value>
+        <Code>TL</Code>
+        <Text>Timor-Leste</Text>
+      </Value>
+      <Value>
+        <Code>TG</Code>
+        <Text>Togo</Text>
+      </Value>
+      <Value>
+        <Code>TK</Code>
+        <Text>Tokelau</Text>
+      </Value>
+      <Value>
+        <Code>TO</Code>
+        <Text>Tonga</Text>
+      </Value>
+      <Value>
+        <Code>TT</Code>
+        <Text>Trinidad and Tobago</Text>
+      </Value>
+      <Value>
+        <Code>TN</Code>
+        <Text>Tunisia</Text>
+      </Value>
+      <Value>
+        <Code>TR</Code>
+        <Text>Turkey</Text>
+      </Value>
+      <Value>
+        <Code>TM</Code>
+        <Text>Turkmenistan</Text>
+      </Value>
+      <Value>
+        <Code>TC</Code>
+        <Text>Turks and Caicos Islands</Text>
+      </Value>
+      <Value>
+        <Code>TV</Code>
+        <Text>Tuvalu</Text>
+      </Value>
+      <Value>
+        <Code>UG</Code>
+        <Text>Uganda</Text>
+      </Value>
+      <Value>
+        <Code>UA</Code>
+        <Text>Ukraine</Text>
+      </Value>
+      <Value>
+        <Code>AE</Code>
+        <Text>United Arab Emirates</Text>
+      </Value>
+      <Value>
+        <Code>GB</Code>
+        <Text>United Kingdom of Great Britain and Northern Ireland</Text>
+      </Value>
+      <Value>
+        <Code>US</Code>
+        <Text>United States of America</Text>
+      </Value>
+      <Value>
+        <Code>UM</Code>
+        <Text>United States Minor Outlying Islands</Text>
+      </Value>
+      <Value>
+        <Code>UY</Code>
+        <Text>Uruguay</Text>
+      </Value>
+      <Value>
+        <Code>UZ</Code>
+        <Text>Uzbekistan</Text>
+      </Value>
+      <Value>
+        <Code>VU</Code>
+        <Text>Vanuatu</Text>
+      </Value>
+      <Value>
+        <Code>VE</Code>
+        <Text>Venezuela</Text>
+      </Value>
+      <Value>
+        <Code>VN</Code>
+        <Text>Vietnam</Text>
+      </Value>
+      <Value>
+        <Code>VG</Code>
+        <Text>Virgin Islands (British)</Text>
+      </Value>
+      <Value>
+        <Code>VI</Code>
+        <Text>Virgin Islands (U.S.)</Text>
+      </Value>
+      <Value>
+        <Code>WF</Code>
+        <Text>Wallis and Futuna</Text>
+      </Value>
+      <Value>
+        <Code>EH</Code>
+        <Text>Western Sahara</Text>
+      </Value>
+      <Value>
+        <Code>YE</Code>
+        <Text>Yemen</Text>
+      </Value>
+      <Value>
+        <Code>ZM</Code>
+        <Text>Zambia</Text>
+      </Value>
+      <Value>
+        <Code>ZW</Code>
+        <Text>Zimbabwe</Text>
+      </Value>
+    </Values>
+  </CodeSet>  
+
+  <CodeSet>
+    <ID>Telephone Number Type</ID>
+    <Values>
+      <Value>
+        <Code>Home</Code>
+        <Text>Home phone number is the type of communication number listed for a person.</Text>
+      </Value>
+      <Value>
+        <Code>Work</Code>
+        <Text>Work phone number is the type of communication number listed for a person.</Text>
+      </Value>
+      <Value>
+        <Code>Mobile</Code>
+        <Text>Mobile phone number is the type of communication number listed for a person.</Text>
+      </Value>
+      <Value>
+        <Code>Fax</Code>
+        <Text>Fax number is the type of communication number listed for a person.</Text>
+      </Value>
+      <Value>
+        <Code>Text</Code>
+        <Text>Text number is the type of communication number listed for a person.</Text>
+      </Value>
+      <Value>
+        <Code>Other</Code>
+        <Text>The type of communication number listed for a person is in a category not yet defined in CEDS.</Text>
+      </Value> 
+    </Values>
+  </CodeSet>
+  
+  <CodeSet>
+    <ID>Email Type</ID>
+    <Values>
+      <Value>
+        <Code>Home</Code>
+        <Text>Home/personal is the type of electronic mail (e-mail) address listed for a person or organization.</Text>
+      </Value>
+      <Value>
+        <Code>Work</Code>
+        <Text>Work is the type of electronic mail (e-mail) address listed for a person or organization.</Text>
+      </Value>
+      <Value>
+        <Code>Organizational</Code>
+        <Text>Organizational (school) address is the type of electronic mail (e-mail) address listed for a person or organization.</Text>
+      </Value>
+      <Value>
+        <Code>Other</Code>
+        <Text>Other is the type of electronic mail (e-mail) address listed for a person or organization.</Text>
+      </Value> 
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Sex</ID>
+    <Values>
+      <Value>
+        <Code>Male</Code>
+        <Text>Male</Text>
+      </Value>
+      <Value>
+        <Code>Female</Code>
+        <Text>Female</Text>
+      </Value>
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Employer</ID>
+    <Values>
+      <Value>
+        <Code>Government_1803</Code>
+        <Text>Government</Text>
+      </Value>
+      <Value>
+        <Code>Military_1804</Code>
+        <Text>Military</Text>
+      </Value>
+      <Value>
+        <Code>PrivateOrganization_1805</Code>
+        <Text>Private Organization</Text>
+      </Value>
+      <Value>
+        <Code>Self-employed_1806</Code>
+        <Text>Self-employed</Text>
+      </Value>
+      <Value>
+        <Code>MilitaryDepartmentOfDefense_1807</Code>
+        <Text>Military Department of Defense</Text>
+      </Value>
+      <Value>
+        <Code>AgriculturalFisherySeasonal_1808</Code>
+        <Text>Agricultural Fishery Seasonal</Text>
+      </Value>
+      <Value>
+        <Code>Other_9999</Code>
+        <Text>Other</Text>
+      </Value> 
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Person Relationship To Learner</ID>
+    <Values>
+      <Value>
+        <Code>Aunt</Code>
+        <Text>The person is the learner's Aunt.</Text>
+      </Value>
+      <Value>
+        <Code>Brother</Code>
+        <Text>The person is the learner's Brother.</Text>
+      </Value>
+      <Value>
+        <Code>BrotherInlaw</Code>
+        <Text>The person is the learner's Brother-in-law.</Text>
+      </Value>
+      <Value>
+        <Code>CourtAppointedGuardian</Code>
+        <Text>The person is the learner's Court Appointed Guardian.</Text>
+      </Value>
+      <Value>
+        <Code>Daughter</Code>
+        <Text>The person is the learner's Daughter.</Text>
+      </Value>
+      <Value>
+        <Code>DaughterInLaw</Code>
+        <Text>The person is the learner's Daughter-in-law.</Text>
+      </Value> 
+      <Value>
+        <Code>Employer</Code>
+        <Text>The person is the learner's Employer.</Text>
+      </Value>
+      <Value>
+        <Code>Father</Code>
+        <Text>The person is the learner's Father.</Text>
+      </Value>
+      <Value>
+        <Code>FathersSignificantOther</Code>
+        <Text>The person is the Significant Other of the learner's Father.</Text>
+      </Value>
+      <Value>
+        <Code>FathersCivilPartner</Code>
+        <Text>The person is a legal partner of the learner's father, established by a civil union other than marriage.</Text>
+      </Value>
+      <Value>
+        <Code>FatherInLaw</Code>
+        <Text>The person is the father of the learner's spouse.</Text>
+      </Value>
+      <Value>
+        <Code>Fiance</Code>
+        <Text>The person is a man who is engaged to be married to the learner.</Text>
+      </Value>
+      <Value>
+        <Code>Fiancee</Code>
+        <Text>The person is a woman who is engaged to be married to the learner.</Text>
+      </Value>
+      <Value>
+        <Code>Friend</Code>
+        <Text>The person is the learner's Friend.</Text>
+      </Value>
+      <Value>
+        <Code>Grandfather</Code>
+        <Text>The person is the learner's Grandfather.</Text>
+      </Value>
+      <Value>
+        <Code>Grandmother</Code>
+        <Text>The person is the learner's Grandmother.</Text>
+      </Value>
+      <Value>
+        <Code>Husband</Code>
+        <Text>The person is the learner's Husband.</Text>
+      </Value>
+      <Value>
+        <Code>MothersSignificantOther</Code>
+        <Text>The person is the Significant Other of the learner's Mother.</Text>
+      </Value>
+      <Value>
+        <Code>Mother</Code>
+        <Text>The person is the learner's Mother.</Text>
+      </Value>
+      <Value>
+        <Code>MothersCivilPartner</Code>
+        <Text>The person is a legal partner of the learner's mother, established by a civil union other than marriage.</Text>
+      </Value>
+      <Value>
+        <Code>Nephew</Code>
+        <Text>The person is the learner's Nephew.</Text>
+      </Value>
+      <Value>
+        <Code>Niece</Code>
+        <Text>The person is the learner's Niece.</Text>
+      </Value>
+      <Value>
+        <Code>Other</Code>
+        <Text>The person is related to the learner in a way not represented by other standard options.</Text>
+      </Value>
+      <Value>
+        <Code>SignificantOther</Code>
+        <Text>The person is the Significant Other of the learner.</Text>
+      </Value>
+      <Value>
+        <Code>Sister</Code>
+        <Text>The person is the learner's Sister.</Text>
+      </Value>
+      <Value>
+        <Code>Son</Code>
+        <Text>The person is the learner's Son.</Text>
+      </Value>
+      <Value>
+        <Code>Unknown</Code>
+        <Text>The person's relationship to the learner is Unknown.</Text>
+      </Value>
+      <Value>
+        <Code>Uncle</Code>
+        <Text>The person is the learner's Uncle.</Text>
+      </Value>
+      <Value>
+        <Code>Ward</Code>
+        <Text>The person is the learner's Ward.</Text>
+      </Value>
+      <Value>
+        <Code>Wife</Code>
+        <Text>The person is the learner's Wife.</Text>
+      </Value>
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Course Code System</ID>
+    <Values>
+      <Value>
+        <Code>Intermediate</Code>
+        <Text>The related Course Code is based on the intermediate agency defined course code system.</Text>
+      </Value>
+      <Value>
+        <Code>LEA</Code>
+        <Text>The related Course Code is based on the LEA defined course code system.</Text>
+      </Value>
+      <Value>
+        <Code>NCES</Code>
+        <Text>The related Course Code is based on the NCES Pilot Standard National Course Classification System for Secondary Education Codes.</Text>
+      </Value>
+      <Value>
+        <Code>Other</Code>
+        <Text>The related Course Code is based on a course code system not yet categorized within CEDS.</Text>
+      </Value>
+      <Value>
+        <Code>SCED</Code>
+        <Text>The related Course Code is based on the School Codes for the Exchange of Data (SCED) course code system.</Text>
+      </Value>
+      <Value>
+        <Code>School</Code>
+        <Text>The related Course Code is based on the school's course code system.</Text>
+      </Value> 
+      <Value>
+        <Code>State</Code>
+        <Text>The related Course Code is based on the State course code system.</Text>
+      </Value> 
+      <Value>
+        <Code>University</Code>
+        <Text>The related Course Code is based on the University course code system.</Text>
+      </Value> 
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Grade Level</ID>
+    <Values>
+      <Value>
+        <Code>IT</Code>
+        <Text>Infant/toddler</Text>
+      </Value>
+      <Value>
+        <Code>PR</Code>
+        <Text>Preschool</Text>
+      </Value>
+      <Value>
+        <Code>PK</Code>
+        <Text>Prekindergarten</Text>
+      </Value>
+      <Value>
+        <Code>TK</Code>
+        <Text>Transitional Kindergarten</Text>
+      </Value>
+      <Value>
+        <Code>KG</Code>
+        <Text>Kindergarten</Text>
+      </Value>
+      <Value>
+        <Code>01</Code>
+        <Text>First grade</Text>
+      </Value> 
+      <Value>
+        <Code>02</Code>
+        <Text>Second grade</Text>
+      </Value> 
+      <Value>
+        <Code>03</Code>
+        <Text>Third grade</Text>
+      </Value>
+      <Value>
+        <Code>04</Code>
+        <Text>Fourth grade</Text>
+      </Value>
+      <Value>
+        <Code>05</Code>
+        <Text>Fifth grade</Text>
+      </Value>
+      <Value>
+        <Code>06</Code>
+        <Text>Sixth grade</Text>
+      </Value>
+      <Value>
+        <Code>07</Code>
+        <Text>Seventh grade</Text>
+      </Value>
+      <Value>
+        <Code>08</Code>
+        <Text>Eighth grade</Text>
+      </Value>
+      <Value>
+        <Code>09</Code>
+        <Text>Ninth grade</Text>
+      </Value>
+      <Value>
+        <Code>10</Code>
+        <Text>Tenth grade</Text>
+      </Value>
+      <Value>
+        <Code>11</Code>
+        <Text>Eleventh grade</Text>
+      </Value>
+      <Value>
+        <Code>12</Code>
+        <Text>Twelfth grade</Text>
+      </Value>
+      <Value>
+        <Code>13</Code>
+        <Text>Grade 13</Text>
+      </Value>
+      <Value>
+        <Code>PS</Code>
+        <Text></Text>
+      </Value>
+      <Value>
+        <Code>UG</Code>
+        <Text></Text>
+      </Value>
+      <Value>
+        <Code>Other</Code>
+        <Text>Other</Text>
+      </Value> 
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Address Type For Organization</ID>
+    <Values>
+      <Value>
+        <Code>Mailing</Code>
+        <Text>Mailing is specified as the type of address listed for an organization.</Text>
+      </Value>
+      <Value>
+        <Code>Physical</Code>
+        <Text>Physical is specified as the type of address listed for an organization.</Text>
+      </Value>
+      <Value>
+        <Code>Shipping</Code>
+        <Text>Shipping is specified as the type of address listed for an organization.</Text>
+      </Value>
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Day Of Week</ID>
+    <Values>
+      <Value>
+        <Code>Sunday</Code>
+        <Text>Sunday</Text>
+      </Value>
+      <Value>
+        <Code>Monday</Code>
+        <Text>Monday</Text>
+      </Value>
+      <Value>
+        <Code>Tuesday</Code>
+        <Text>Tuesday</Text>
+      </Value>
+      <Value>
+        <Code>Wednesday</Code>
+        <Text>Wednesday</Text>
+      </Value>
+      <Value>
+        <Code>Thursday</Code>
+        <Text>Thursday</Text>
+      </Value>
+      <Value>
+        <Code>Friday</Code>
+        <Text>Friday</Text>
+      </Value>
+      <Value>
+        <Code>Saturday</Code>
+        <Text>Saturday</Text>
+      </Value> 
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Exit Or Withdrawal</ID>
+    <Values>
+      <Value>
+        <Code>1907</Code>
+        <Text>Student is in a different public school in the same local education agency</Text>
+      </Value>
+      <Value>
+        <Code>1908</Code>
+        <Text>Transferred to a public school in a different local education agency in the same state</Text>
+      </Value>
+      <Value>
+        <Code>1909</Code>
+        <Text>Transferred to a public school in a different state</Text>
+      </Value>      
+      <Value>
+        <Code>1910</Code>
+        <Text>Transferred to a private, non-religiously-affiliated school in the same local education agency</Text>
+      </Value>
+      <Value>
+        <Code>1911</Code>
+        <Text>Transferred to a private, non-religiously-affiliated school in a different LEA in the same state</Text>
+      </Value>
+      <Value>
+        <Code>1912</Code>
+        <Text>Transferred to a private, non-religiously-affiliated school in a different state</Text>
+      </Value>
+      <Value>
+        <Code>1913</Code>
+        <Text>Transferred to a private, religiously-affiliated school in the same local education agency</Text>
+      </Value> 
+      <Value>
+        <Code>1914</Code>
+        <Text>Transferred to a private, religiously-affiliated school in a different LEA in the same state</Text>
+      </Value> 
+      <Value>
+        <Code>1915</Code>
+        <Text>Transferred to a private, religiously-affiliated school in a different state</Text>
+      </Value>
+      <Value>
+        <Code>1916</Code>
+        <Text>Transferred to a school outside of the country</Text>
+      </Value>
+      <Value>
+        <Code>1917</Code>
+        <Text>Transferred to an institution</Text>
+      </Value>
+      <Value>
+        <Code>1918</Code>
+        <Text>Transferred to home schooling</Text>
+      </Value>
+      <Value>
+        <Code>1919</Code>
+        <Text>Transferred to a charter school</Text>
+      </Value>
+      <Value>
+        <Code>1921</Code>
+        <Text>Graduated with regular, advanced, International Baccalaureate, or other type of diploma</Text>
+      </Value>
+      <Value>
+        <Code>1922</Code>
+        <Text>Completed school with other credentials</Text>
+      </Value>
+      <Value>
+        <Code>1923</Code>
+        <Text>Died or is permanently incapacitated</Text>
+      </Value> 
+      <Value>
+        <Code>1924</Code>
+        <Text>Withdrawn due to illness</Text>
+      </Value> 
+      <Value>
+        <Code>1925</Code>
+        <Text>Expelled or involuntarily withdrawn</Text>
+      </Value> 
+      <Value>
+        <Code>1926</Code>
+        <Text>Reached maximum age for services</Text>
+      </Value>
+      <Value>
+        <Code>1927</Code>
+        <Text>Discontinued schooling</Text>
+      </Value>
+      <Value>
+        <Code>1928</Code>
+        <Text>Completed grade 12, but did not meet all graduation requirements</Text>
+      </Value>
+      <Value>
+        <Code>1930</Code>
+        <Text>Enrolled in a postsecondary early admission program, eligible to return</Text>
+      </Value>
+      <Value>
+        <Code>1931</Code>
+        <Text>Not enrolled, unknown status</Text>
+      </Value>
+      <Value>
+        <Code>3499</Code>
+        <Text>Student is in the same LEA, receiving education services, but is not assigned to a particular school</Text>
+      </Value>
+      <Value>
+        <Code>3502</Code>
+        <Text>Not enrolled, eligible to return</Text>
+      </Value> 
+      <Value>
+        <Code>3503</Code>
+        <Text>Enrolled in a foreign exchange program, eligible to return</Text>
+      </Value> 
+      <Value>
+        <Code>3504</Code>
+        <Text>Withdrawn from school, under the age for compulsory attendance; eligible to return</Text>
+      </Value> 
+      <Value>
+        <Code>3505</Code>
+        <Text>Exited</Text>
+      </Value>
+      <Value>
+        <Code>3508</Code>
+        <Text>Student is in a charter school managed by the same local education agency</Text>
+      </Value>
+      <Value>
+        <Code>3509</Code>
+        <Text>Completed with a state-recognized equivalency certificate</Text>
+      </Value>
+      <Value>
+        <Code>9999</Code>
+        <Text>Other</Text>
+      </Value>
+      <Value>
+        <Code>73060</Code>
+        <Text>Officially withdrew and enrolled in ABE, adult secondary education, or adult ESL program</Text>
+      </Value>
+      <Value>
+        <Code>73061</Code>
+        <Text>Officially withdrew and enrolled in a workforce training program</Text>
+      </Value>
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Education Staff Classification</ID>
+    <Values>
+      <Value>
+        <Code>Administrative Support Staff</Code>
+        <Text>Staff members who provide direct support to administrators, business office support, data processing, or support of the teaching and administrative duties of the office of the principal or department chairpersons, including clerical staff and secretaries.</Text>
+      </Value>
+      <Value>
+        <Code>Administrators</Code>
+        <Text>Executive officers or managers of education agencies or institutions, including superintendents, deputies, and assistant superintendents; other persons with district-wide responsibilities: e.g., business managers, administrative assistants, and professional instructional support staff. In addition, staff members whose activities are concerned with directing and managing the operation of a particular school including principals, assistant principals, and other assistants; persons who supervise school operations, assign duties to staff members, supervise and maintain the records of the school, and coordinate school instructional activities with those of the education agency, including department chairpersons.</Text>
+      </Value>
+      <Value>
+        <Code>All Other Support Staff</Code>
+        <Text>Support staff not reported in instructional or student support. Other support staff includes employees such as data processing, health, plant and equipment maintenance, bus drivers, security, and food service workers.</Text>
+      </Value>
+      <Value>
+        <Code>Behavioral Specialists</Code>
+        <Text>Behavioral Specialists</Text>
+      </Value>      
+      <Value>
+        <Code>Early Learning Assistant Teachers</Code>
+        <Text>Assistant Teachers of general level instruction and/or services delivery classified by state and local practice from birth to Kindergarten.</Text>
+      </Value>
+      <Value>
+        <Code>Early Learning Teachers</Code>
+        <Text>Teachers of general level instruction and/or service delivery classified by state and local practice from birth to Kindergarten.</Text>
+      </Value>
+      <Value>
+        <Code>Elementary Teachers</Code>
+        <Text>Teachers of general level instruction classified by state and local practice as elementary and composed of any span of grades not above grade 8.</Text>
+      </Value>      
+      <Value>
+        <Code>Family Service Workers</Code>
+        <Text>Professional staff members assigned specific duties related to staff providing in-home and other services (including needs assessment, development of service plans, family advocacy, and coordination of service delivery) to families of children participating in early care and education programs.</Text>
+      </Value>
+      <Value>
+        <Code>Health Specialists</Code>
+        <Text>Professional staff members or supervisors assigned specific duties related to providing any Health services that are not specific to mental health.</Text>
+      </Value> 
+      <Value>
+        <Code>Home Visitors</Code>
+        <Text>Professional staff members assigned specific duties related to visiting a child or pregnant woman's home for the purpose of assisting parents in fostering the growth and development of their child.</Text>
+      </Value> 
+      <Value>
+        <Code>Instructional Coordinators</Code>
+        <Text>Staff supervising instructional programs including professional staff members or supervisors in an early learning program assigned specific duties related to instruction , or supervisors at a school district or sub-district level including curriculum coordinators or supervisors; in-service training staff; Title I supervisors; home economics supervisors; educational television staff; coordinators and supervisors of audiovisual services; and staff engaged in development of computer-assisted instruction.</Text>
+      </Value>
+      <Value>
+        <Code>Kindergarten Teachers</Code>
+        <Text>Teachers of a group or class that is part of a public school program and is taught during the year preceding the first grade.</Text>
+      </Value>
+      <Value>
+        <Code>Librarians/Media Specialists</Code>
+        <Text>A professional staff member or supervisor assigned specific duties and school time for professional library and media service activities. Activities include: selecting, acquiring, preparing, cataloging, and circulating books and other printed materials; planning the use of library and media services by students, teachers and other members of the instructional staff; and guiding individuals in their use of media services and library materials, (whether maintained separately or as part of an instructional materials center).</Text>
+      </Value>
+      <Value>
+        <Code>Library/Media Support Staff</Code>
+        <Text>Staff members who render other library or media services, such as preparing, caring for, and making available to members of the instructional staff the equipment, films, filmstrips, transparencies, tapes, TV programs, and similar materials (whether maintained separately as part of an instructional materials center).</Text>
+      </Value>
+      <Value>
+        <Code>Mental Health Specialists</Code>
+        <Text>Professional staff members or supervisors assigned specific duties related to Mental Health.</Text>
+      </Value>
+      <Value>
+        <Code>Nutrition Specialists</Code>
+        <Text>Professional staff members or supervisors assigned specific duties related to Nutrition.</Text>
+      </Value>
+      <Value>
+        <Code>Paraprofessionals</Code>
+        <Text>Paraprofessionals are employees who provide instructional support, including those who: (1) provide one-on-one tutoring if such tutoring is scheduled at a time when a student would not otherwise receive instruction from a teacher, (2) assist with classroom management, such as organizing instructional and other materials, (3) provide instructional assistance in a computer laboratory, (4) conduct parental involvement activities, (5) provide support in a library or media center, (6) act as a translator, or (7) provide instructional support services under the direct supervision of a teacher.</Text>
+      </Value> 
+      <Value>
+        <Code>Part C Early Interventionists</Code>
+        <Text>Professional staff members employed to provide early intervention services to infants and toddlers with disabilities or at-risk of experiencing a substantial developmental delay as defined by Part C of the Individuals with Disabilities Education Act (IDEA): The Early Intervention Program for Infants and Toddlers with Disabilities.</Text>
+      </Value> 
+      <Value>
+        <Code>Part C Service Coordinators</Code>
+        <Text>Professional staff members employed to coordinate early intervention services to infants and toddlers with disabilities or at-risk of experiencing a substantial developmental delay as defined by Part C of the Individuals with Disabilities Education Act (IDEA): The Early Intervention Program for Infants and Toddlers with Disabilities.</Text>
+      </Value> 
+      <Value>
+        <Code>School Counselors</Code>
+        <Text>Professional staff members assigned specific duties and school time for any of the following activities: counseling with students and parents, consulting with other staff members on learning problems, evaluating student abilities, assisting students in making education and career choices, assisting students in personal and social development, providing referral assistance, and/or working with other staff members in planning and conducting guidance programs for students. School counselors may be reported by elementary and secondary level when that information is available.</Text>
+      </Value>
+      <Value>
+        <Code>Secondary Teachers</Code>
+        <Text>Teachers of a general level of instruction classified by state and local practice as secondary and composed of any span of grades beginning with the next grade following the elementary grades and ending with or below grade 12.</Text>
+      </Value>
+      <Value>
+        <Code>Social Workers</Code>
+        <Text>Social workers assist people by helping them cope with and solve issues in their everyday lives, such as family and personal problems and dealing with relationships.</Text>
+      </Value>
+      <Value>
+        <Code>Special Education Teachers</Code>
+        <Text>Special Education teachers include teachers employed to provide special education services to children with disabilities, including preschool teachers, itinerant/consulting teachers, and home/hospital teachers. This should include teachers of children with disabilities in separate schools and facilities.</Text>
+      </Value>
+      <Value>
+        <Code>Special Needs Specialists</Code>
+        <Text>Professional staff members or supervisors assigned specific duties related to special needs learners.</Text>
+      </Value>
+      <Value>
+        <Code>Student Support Services Staff</Code>
+        <Text>Professional and supervisory staff providing non-instructional services to students including attendance officers; staff providing health, psychology, speech pathology, audiology, or social services; and supervisors of the preceding staff and of health, transportation, and food service workers.</Text>
+      </Value>
+      <Value>
+        <Code>Ungraded Teachers</Code>
+        <Text>Teachers of classes or programs to which students are assigned without standard grade designation.</Text>
+      </Value> 
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Race Type</ID>
+    <Values>
+      <Value>
+        <Code>AmericanIndianOrAlaskaNative</Code>
+        <Text></Text>
+      </Value>
+      <Value>
+        <Code>Asian</Code>
+        <Text></Text>
+      </Value>
+      <Value>
+        <Code>BlackOrAfricanAmerican</Code>
+        <Text></Text>
+      </Value>
+      <Value>
+        <Code>NativeHawaiianOrOtherPacificIslander</Code>
+        <Text></Text>
+      </Value>
+      <Value>
+        <Code>White</Code>
+        <Text></Text>
+      </Value>
+      <Value>
+        <Code>DemographicRaceTwoOrMoreRaces</Code>
+        <Text></Text>
+      </Value>
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Responsible School Type</ID>
+    <Values>
+      <Value>
+        <Code>Accountability</Code>
+        <Text>The role/relationship type assigned to an organization, institution, or agency responsible for student learning under Federal ESEA and State accountability plans. (e.g. for AYP reporting)</Text>
+      </Value>
+      <Value>
+        <Code>Attendance</Code>
+        <Text>The role/relationship assigned to an organization, institution, or agency operating the physical or virtual site in which delivery of educational services take place.</Text>
+      </Value>
+      <Value>
+        <Code>Funding</Code>
+        <Text>The role/relationship assigned to an organization, institution, or agency responsible for funding related to a student enrollment.</Text>
+      </Value>
+      <Value>
+        <Code>Graduation</Code>
+        <Text>The role/relationship assigned to an organization, institution, or agency responsible for issuing/awarding diplomas. (e.g. for graduation-rate reporting)</Text>
+      </Value>
+      <Value>
+        <Code>IEP</Code>
+        <Text>The role/relationship type assigned to an organization, institution, or agency responsible for the enrolled student’s IEP, a written instructional plan for students with disabilities designated as special education students under the Individuals with Disabilities Education Act (IDEA-Part B) which includes: 1) a statement of present levels of educational performance of a child; 2) a statement of annual goals including short-term instructional objectives; 3) a statement of specific education and related services to be provided and the extent to which the child will be able to participate in regular educational programs; 4) a projected date for initiation and anticipated duration of services; and 5) appropriate objectives, criteria and evaluation procedures and schedules for determining, on at least an annual basis, whether instructional objectives are being achieved.</Text>
+      </Value>
+      <Value>
+        <Code>Transportation</Code>
+        <Text>The role/relationship type assigned to an organization, institution, or agency responsible for transporting the student to the physical location of the school or facility in which educational services are delivered.</Text>
+      </Value>
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Membership Type</ID>
+    <Values>
+      <Value>
+        <Code>Home</Code>
+        <Text>Home</Text>
+      </Value>
+      <Value>
+        <Code>Concurrent</Code>
+        <Text>Concurrent</Text>
+      </Value>
+      <Value>
+        <Code>Summer</Code>
+        <Text>Summer</Text>
+      </Value>
+    </Values>
+  </CodeSet>
+
+  <CodeSet>
+    <ID>Language Type</ID>
+    <Values>
+      <Value>
+        <Code>Correspondence</Code>
+        <Text>The language specified by the related Language Code is the language the person uses for correspondence.</Text>
+      </Value>
+      <Value>
+        <Code>Dominant</Code>
+        <Text>The language specified by the related Language Code is the person's dominant language.</Text>
+      </Value>
+      <Value>
+        <Code>Home</Code>
+        <Text>The language specified by the related Language Code is the language the person uses at home.</Text>
+      </Value>
+      <Value>
+        <Code>Native</Code>
+        <Text>The language specified by the related Language Code is the person's native language.</Text>
+      </Value>
+      <Value>
+        <Code>OtherLanguageProficiency</Code>
+        <Text>The language specified by the related Language Code is the language the person's other language proficiency.</Text>
+      </Value>
+      <Value>
+        <Code>Other</Code>
+        <Text>The function and context in which a person uses the language specified by the related Language Code is in a category not yet defined in CEDS.</Text>
+      </Value>
+    </Values>
+  </CodeSet>
+
+</Grouping>
+
+<Grouping code="LearningStandardItem" name="LearningStandardItem" file="no">
+
+  <CodeSet>
+    <ID>Organization Identification System</ID>
+
+    <Values>
+      <Value>
+        <Code>School</Code>
+        <Text>The Organization Identifier is a School-assigned number.</Text>
+      </Value>
+      <Value>
+        <Code>LEA</Code>
+        <Text>The Organization Identifier is a Local Education Agency assigned number.</Text>
+      </Value>
+      <Value>
+        <Code>NCES</Code>
+        <Text>The Organization Identifier is a National Center for Education Statistics assigned number.</Text>
+      </Value>
+      <Value>
+        <Code>Other</Code>
+        <Text>The Organization Identifier is from an identification system not yet defined in CEDS.</Text>
+      </Value>
+      <Value>
+        <Code>OtherFederal</Code>
+        <Text>The Organization Identifier is an other federally assigned number.</Text>
+      </Value>
+      <Value>
+        <Code>SEA</Code>
+        <Text>The Organization Identifier is a State Education Agency assigned number.</Text>
+      </Value>
+      <Value>
+        <Code>ACT</Code>
+        <Text>The Organization Identifier is from the College Board/ACT program code set of PK-grade 12 institutions.</Text>
+      </Value> 
+      <Value>
+        <Code>FEIN</Code>
+        <Text>The Organization Identifier is the organization's Federal identification number.</Text>
+      </Value> 
+      <Value>
+        <Code>DUNS</Code>
+        <Text>The Organization Identifier is the organization's Dun and Bradstreet number.</Text>
+      </Value> 
     </Values>
 
   </CodeSet>
 
 
+
+  <CodeSet>
+    <ID>Course Code System</ID>
+
+    <Values>
+      <Value>
+        <Code>Intermediate</Code>
+        <Text>The related Course Code is based on the intermediate agency defined course code system.</Text>
+      </Value>
+      <Value>
+        <Code>LEA</Code>
+        <Text>The related Course Code is based on the LEA defined course code system.</Text>
+      </Value>
+      <Value>
+        <Code>NCES</Code>
+        <Text>The related Course Code is based on the NCES Pilot Standard National Course Classification System for Secondary Education Codes.</Text>
+      </Value>
+      <Value>
+        <Code>Other</Code>
+        <Text>The related Course Code is based on a course code system not yet categorized within CEDS.</Text>
+      </Value>
+      <Value>
+        <Code>SCED</Code>
+        <Text>The related Course Code is based on the School Codes for the Exchange of Data (SCED) course code system.</Text>
+      </Value>
+      <Value>
+        <Code>School</Code>
+        <Text>The related Course Code is based on the school's course code system.</Text>
+      </Value> 
+      <Value>
+        <Code>State</Code>
+        <Text>The related Course Code is based on the State course code system.</Text>
+      </Value> 
+      <Value>
+        <Code>University</Code>
+        <Text>The related Course Code is based on the University course code system.</Text>
+      </Value> 
+    </Values>
+
+  </CodeSet>
 
 </Grouping>
 

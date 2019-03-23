@@ -1,10 +1,4 @@
-<DataObject name="FoodserviceTransactionDetails"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="FoodserviceTransactionDetails">
   <EventsReported>true</EventsReported>
   <Key>@RefId</Key>
   <Item>
@@ -22,7 +16,7 @@
     <Description>
       <p>GUID that identifies transaction details</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Element>FoodserviceTransactionRefId</Element>
@@ -30,12 +24,12 @@
     <Description>
       <p>GUID that identifies food service transaction</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>Amounts</Element>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="FSAmountListType"></Type>
+    <Type ref="CommonTypes" name="FSAmountListType"/>
   </Item>
   <Item>
     <Element>Description</Element>
@@ -43,17 +37,17 @@
     <Description>
       <p>Description</p>
     </Description>
-    <Type name="xs:string"></Type>
+    <Type name="xs:string"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <FoodserviceTransactionDetails RefId="E50EE86118004F238D21B86E70B5B4AA">

@@ -1,10 +1,4 @@
-<DataObject name="ProfessionalDevelopmentProgram"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="ProfessionalDevelopmentProgram">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Intro>
@@ -24,7 +18,7 @@
     <Description>
       <p>GUID for this object.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Element>LearningStandardItems</Element>
@@ -34,7 +28,7 @@
         Associated <code>LearningStandardItem</code> objects.
       </p>
     </Description>
-     <Type ref="CommonTypes" name="LearningStandardItemRefIdListType"></Type>
+    <Type ref="CommonTypes" name="LearningStandardItemRefIdListType"/>
   </Item>
   <Item>
     <Element>LocalProgramId</Element>
@@ -42,7 +36,7 @@
     <Description>
       <p>An element for setting local program identifiers.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>ProgramName</Element>
@@ -50,7 +44,7 @@
     <Description>
       <p>The name or title of the program.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>ProgramType</Element>
@@ -58,7 +52,7 @@
     <Description>
       <p>The type of program whether it be a grant, learning plan, or system training.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>FundingSource</Element>
@@ -71,12 +65,12 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <ProfessionalDevelopmentProgram RefId="E6F37470472D49EE86C1FA8EE47D8244">

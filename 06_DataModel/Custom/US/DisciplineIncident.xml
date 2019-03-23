@@ -1,24 +1,16 @@
-<DataObject name="DisciplineIncident"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="DisciplineIncident">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
-
   <Item>
     <Element>DisciplineIncident</Element>
     <Description>
       <p>This object provides information on incidents involving violence, weapons, drugs, and other safety and discipline issues.</p>
     </Description>
   </Item>
-
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
     <Description>
       <p>The unique identifier (GUID) of this discipline incident.</p>
     </Description>
@@ -29,7 +21,7 @@
     <Description>
       <p>School year in which the incident occurred, and for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007" for the 2006-07 school year).</p>
     </Description>
-    <Type ref="CommonTypes" name="SchoolYearType"></Type>
+    <Type ref="CommonTypes" name="SchoolYearType"/>
   </Item>
   <Item>
     <Element>AgencyReporting</Element>
@@ -37,7 +29,7 @@
     <Description>
       <p>The Id (GUID) of the school or LEA reporting the incident, usually the school in which the incident occurred.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Attribute>SIF_RefObject</Attribute>
@@ -60,7 +52,9 @@
     <Description>
       <p>The locally-defined unique identifier (within the school or school district) to identify this specific incident or occurrence.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
+    <cedsId>000501</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000501</cedsURL>
   </Item>
   <Item>
     <Element>IncidentDate</Element>
@@ -68,7 +62,9 @@
     <Description>
       <p>The date when the incident occurred.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
+    <cedsId>000502</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000502</cedsURL>
   </Item>
   <Item>
     <Element>IncidentTime</Element>
@@ -76,25 +72,27 @@
     <Description>
       <p>The time when the incident occurred.</p>
     </Description>
-    <Type ref="CommonTypes" name="IncidentTimeType"></Type>
+    <Type ref="CommonTypes" name="IncidentTimeType"/>
+    <cedsId>000503</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000503</cedsURL>
   </Item>
-
   <Item>
     <Element>IncidentLocation</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The locally-defined identifier or description of the location where the incident occurred.</p>
     </Description>
-    <Type ref="CommonTypes" name="IncidentLocationType"></Type>
+    <Type ref="CommonTypes" name="IncidentLocationType"/>
+    <cedsId>000617</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000617</cedsURL>
   </Item>
-
   <Item>
     <Element>IncidentLocationRefId</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>GUID of the SIF object that relates to the school or location where the incident occurred, if applicable.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Attribute>SIF_RefObject</Attribute>
@@ -120,7 +118,7 @@
         Cost may be reported by specific monetary amount or range.
       </p>
     </Description>
-    <Type name="xs:string"></Type>
+    <Type name="xs:string"/>
   </Item>
   <Item>
     <Element>IncidentReporter</Element>
@@ -128,101 +126,88 @@
     <Description>
       <p>Information regarding the individual who reported the incident.</p>
     </Description>
-    <Type ref="CommonTypes" name="IncidentReporterType"></Type>
+    <Type ref="CommonTypes" name="IncidentReporterType"/>
+    <cedsId>000507</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000507</cedsURL>
   </Item>
-
   <Item>
     <Element>RelatedToList</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>List of categories to which the incident is related.</p>
     </Description>
-   <Type ref="CommonTypes" name="RelatedToListType"></Type>
+    <Type ref="CommonTypes" name="RelatedToListType"/>
   </Item>
-
   <Item>
     <Element>WeaponTypeList</Element>
     <Characteristics>C</Characteristics>
     <Description>
       <p>List of weapons involved in the incident. If the incident involves weapons, the element must have a value.</p>
-
       <p>Each weapon used in the incident is identified by a WeaponType entry. When multiple weapons of a single type are used, each weapon has a separate entry in this list.</p>
-
       <p>Weapons used by individual offenders are also reported in WeaponTypeList entries associated to the offender.</p>
     </Description>
-    <Type ref="CommonTypes" name="WeaponTypeListType"></Type>
+    <Type ref="CommonTypes" name="WeaponTypeListType"/>
   </Item>
-
   <Item>
     <Element>IncidentCategory</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The category or description for this incident.</p>
     </Description>
-    <Type ref="CommonTypes" name="IncidentCategoryContainerType"></Type>
+    <Type ref="CommonTypes" name="IncidentCategoryContainerType"/>
   </Item>
-
-
   <Item>
     <Element>OffenderList</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>List of offenders.</p>
     </Description>
-    <Type ref="CommonTypes" name="OffenderListType"></Type>
+    <Type ref="CommonTypes" name="OffenderListType"/>
   </Item>
-
-
   <Item>
     <Element>VictimList</Element>
     <Characteristics>C</Characteristics>
     <Description>
       <p>List of victim(s) if the incident is directed toward specific persons or their property.</p>
     </Description>
-    <Type ref="CommonTypes" name="VictimListType"></Type>
+    <Type ref="CommonTypes" name="VictimListType"/>
   </Item>
-
-
   <Item>
     <Element>IncidentDescription</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>A long text description of full details and a report of what occurred.</p>
     </Description>
-    <Type name='xs:string'/>
+    <Type name="xs:string"/>
+    <cedsId>000508</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000508</cedsURL>
   </Item>
-
   <Item>
     <Element>IncidentActionList</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>List of actions taken on the incident, regardless of actions relating to individual offenders.</p>
     </Description>
-    <Type ref="CommonTypes" name="IncidentActionListType"></Type>
+    <Type ref="CommonTypes" name="IncidentActionListType"/>
   </Item>
-
-
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-
-  <xhtml:Example name="Discipline Incident" xmlns="">
-    <DisciplineIncident RefId="A1544ED564995254A4568EFFC5100BD1"
-      SchoolYear="2007">
+  <xhtml:Example xmlns="" name="Discipline Incident">
+    <DisciplineIncident RefId="A1544ED564995254A4568EFFC5100BD1" SchoolYear="2007">
       <AgencyReporting SIF_RefObject="SchoolInfo">0847987235489729AAA73011BB365EC3</AgencyReporting>
       <IncidentNumber>56501</IncidentNumber>
       <IncidentDate>2007-04-14</IncidentDate>
       <IncidentTime Type="100">13:20:30</IncidentTime>
       <IncidentLocation Type="3014">232</IncidentLocation>
-      <IncidentLocationRefId
-        SIF_RefObject="SchoolInfo">0847987235489729AAA73011BB365EC3</IncidentLocationRefId>
+      <IncidentLocationRefId SIF_RefObject="SchoolInfo">0847987235489729AAA73011BB365EC3</IncidentLocationRefId>
       <IncidentCost>500.00</IncidentCost>
       <IncidentReporter Type="3422">
         <Name Type="04">

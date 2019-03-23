@@ -1,0 +1,124 @@
+<DataObject xmlns="http://sifassociation.org/SpecGen" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:json="http://json.org/" name="xContact">
+  <Key>@refId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>xContact</Element>
+  </Item>
+  <Item>
+    <Attribute>refId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="gRefIdType"/>
+  </Item>
+  <Item>
+    <Element>name</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Name of the contact.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xPersonNameTypeType"/>
+  </Item>
+  <Item>
+    <Element>otherNames</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Other names of the contact.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xPersonNameType"/>
+  </Item>
+  <Item>
+    <Element>localId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique number or alphanumeric code assigned to a staff member by a district or LEA.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xPersonIdType"/>
+  </Item>
+  <Item>
+    <Element>loginId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The login identifier for the person.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xLoginIdType"/>
+    <cedsId>001170</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001170</cedsURL>
+  </Item>
+  <Item>
+    <Element>otherIds</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Other Ids of the contact.</p>
+    </Description>
+    <Type ref="CodeSets" name="xPersonIdSystemType"/>
+  </Item>
+  <Item>
+    <Element>address</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Address of the student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xCountryCodeType"/>
+  </Item>
+  <Item>
+    <Element>phoneNumber</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Phone number of the contact.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xTelephoneTypeType"/>
+  </Item>
+  <Item>
+    <Element>otherPhoneNumbers</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Other phone numbers for the contact.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xTelephoneType"/>
+  </Item>
+  <Item>
+    <Element>email</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The numbers, letters, and symbols used to identify an electronic mail (e-mail) user within the network to which the person or organization belongs.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xEmailTypeType"/>
+    <cedsId>000088</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000088</cedsURL>
+  </Item>
+  <Item>
+    <Element>otherEmails</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Other emails of the contact.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xEmailType"/>
+    <cedsId>000088</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000088</cedsURL>
+  </Item>
+  <Item>
+    <Element>sex</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The concept describing the biological traits that distinguish the males and females of a species.</p>
+    </Description>
+    <Type ref="CodeSets" name="xSexType"/>
+    <cedsId>000255</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000255</cedsURL>
+  </Item>
+  <Item>
+    <Element>employerType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A code that defines the employer type.</p>
+    </Description>
+    <Type ref="CodeSets" name="xEmployerType"/>
+  </Item>
+  <Item>
+    <Element>relationships</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Relationships that this contact has with the student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="gRefIdPointerType"/>
+  </Item>
+</DataObject>

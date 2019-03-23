@@ -1,0 +1,27 @@
+<DataObject xmlns="http://sifassociation.org/SpecGen" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:json="http://json.org/" name="xTransferIEP">
+  <Key>@refId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>xTransferIEP</Element>
+  </Item>
+  <Item>
+    <Attribute>refId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="gRefIdType"/>
+  </Item>
+  <Item>
+    <Element>referenceObjects</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="xAddressTypeForOrganizationType"/>
+  </Item>
+  <Item>
+    <Element>iep</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="iepPlanCommonAuthorizationParentGuardianAuthorization"/>
+  </Item>
+  <Item>
+    <Element>historyList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="iepCommonLeaRefIdPointerType"/>
+  </Item>
+</DataObject>

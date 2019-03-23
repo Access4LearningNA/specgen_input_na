@@ -1,10 +1,4 @@
-<DataObject name="BusPositionInfo"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="BusPositionInfo">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
@@ -14,66 +8,57 @@
     </Description>
   </Item>
   <Item>
-
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The GUID that identifies the bus. This object only has meaning as current data for this particular bus.</p>
     </Description>
-    <Type ref="CommonTypes" relationship="records position of" count="?:1" name="IdRefType"></Type>
+    <Type ref="CommonTypes" relationship="records position of" count="?:1" name="IdRefType"/>
   </Item>
   <Item>
     <Element>Date</Element>
-
     <Characteristics>M</Characteristics>
     <Description>
       <p>The date of the report from the bus.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>Time</Element>
-
     <Characteristics>M</Characteristics>
     <Description>
       <p>The time of the report from the bus.</p>
     </Description>
-    <Type name="xs:time"></Type>
+    <Type name="xs:time"/>
   </Item>
   <Item>
     <Element>GridLocation</Element>
-
     <Characteristics>M</Characteristics>
     <Description>
       <p>The location of the bus.</p>
     </Description>
-    <Type ref="CommonTypes" name="GridLocationType"></Type>
+    <Type ref="CommonTypes" name="GridLocationType"/>
   </Item>
   <Item>
     <Element>TelematicsId</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>Id of the hardware unit on the bus that tracks and reports location and status. The interpretation of the content is deployment specific, but the format must be compact.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
-
   <Item>
     <Element>TelemetryList</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="TelemetryListType"></Type>
+    <Type ref="CommonTypes" name="TelemetryListType"/>
   </Item>
-
-
-
   <Item>
     <Element>BusDriver</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Information identifying the driver.</p>
     </Description>
-    <Type ref="CommonTypes" name="BusStaffType"></Type>
+    <Type ref="CommonTypes" name="BusStaffType"/>
   </Item>
   <Item>
     <Element>BusStaffList</Element>
@@ -81,10 +66,8 @@
     <Description>
       <p>List identifying other staff. This may include aides, nurses, proctors, etc.</p>
     </Description>
-    <Type ref="CommonTypes" name="BusStaffListType"></Type>
+    <Type ref="CommonTypes" name="BusStaffListType"/>
   </Item>
-
-
   <Item>
     <Element>RouteStatus</Element>
     <Characteristics>C</Characteristics>
@@ -94,9 +77,8 @@
         Absence means the bus is not operating a route.
       </p>
     </Description>
-    <Type ref="CommonTypes" name="BusRouteStatusType"></Type>
+    <Type ref="CommonTypes" name="BusRouteStatusType"/>
   </Item>
-
   <Item>
     <Element>OtherStatus</Element>
     <Characteristics>C</Characteristics>
@@ -110,7 +92,7 @@
       <p>Maintenance</p>
       <p>Repair</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>Odometer</Element>
@@ -118,33 +100,31 @@
     <Description>
       <p>Current odometer reading.</p>
     </Description>
-    <Type ref="CommonTypes" name="DistanceType"></Type>
+    <Type ref="CommonTypes" name="DistanceType"/>
   </Item>
-   <Item>
+  <Item>
     <Element>Speedometer</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Current speedometer reading.</p>
     </Description>
-    <Type ref="CommonTypes" name="DistanceType"></Type>
+    <Type ref="CommonTypes" name="DistanceType"/>
   </Item>
-   <Item>
+  <Item>
     <Element>Students</Element>
     <Characteristics>O</Characteristics>
     <Description>A list of students and their statuses.   The complete list may be sent with some events (e.g. change in RouteStatus) per district policy, but it is more typical of responses.</Description>
-    <Type ref="CommonTypes" name="BusPositionStudentListType"></Type>
+    <Type ref="CommonTypes" name="BusPositionStudentListType"/>
   </Item>
-
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
-
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <BusPositionInfo RefId="A2E35B359D75101A8C3D00AA001A0000">

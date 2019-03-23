@@ -1,10 +1,4 @@
-<DataObject name="LearningStandardDocument"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="LearningStandardDocument">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
@@ -17,15 +11,13 @@
     </Description>
   </Item>
   <Item>
-
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>Id for the standards document</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
-
   <!--<Item>
     <Attribute>xml:lang</Attribute>
     <Characteristics>M</Characteristics>
@@ -33,12 +25,11 @@
       <p>The default language of the text used for the content in the learning standard document.</p>
     </Description>
   </Item>-->
-
   <Item>
     <Element>RefURI</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:anyURI"></Type>
-	<Description>
+    <Type name="xs:anyURI"/>
+    <Description>
       <p>A URI that establishes uniqueness of the object instance.</p>
     </Description>
   </Item>
@@ -48,21 +39,23 @@
     <Description>
       <p>Name of standard document, i.e., "Washington Essential Academic Learning Requirements."</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
+    <cedsId>000694</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000694</cedsURL>
   </Item>
   <Item>
     <Element>ShortName</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:token"></Type>
-	<Description>
+    <Type name="xs:token"/>
+    <Description>
       <p>A short name for the document.</p>
     </Description>
   </Item>
   <Item>
     <Element>DocumentVersion</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:token"></Type>
-	<Description>
+    <Type name="xs:token"/>
+    <Description>
       <p>Identifies the version of the document that this object instance represents. Note that new versions of documents must generate new RefIds and therefore a new object instance.  This element is immutable in that once the object has been published with a value (other than blank) it must never be changed. </p>
     </Description>
   </Item>
@@ -72,190 +65,159 @@
     <Description>
       <p>Description of the standards document.</p>
     </Description>
-    <Type name="xs:string"></Type>
+    <Type name="xs:string"/>
   </Item>
   <Item>
     <Element>Source</Element>
-
     <Characteristics>M</Characteristics>
     <Description>
       <p>
         Defines source of standard document.  This is the descriptive type of the organization listed in <code>Organization</code>. It serves to describe the type of the standards contained within the document.
       </p>
     </Description>
-    <Values>
-      <Value>
-        <Code>National</Code>
-      </Value>
-      <Value>
-        <Code>State</Code>
-      </Value>
-      <Value>
-        <Code>Regional</Code>
-      </Value>
-      <Value>
-        <Code>District</Code>
-      </Value>
-      <Value>
-        <Code>Site</Code>
-      </Value>
-      <Value>
-        <Code>Classroom</Code>
-      </Value>
-      <Value>
-        <Code>Publisher</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>Organizations</Element>
     <Characteristics>M</Characteristics>
-     <Description>
+    <Description>
       <p>Names of organization represented by the document, i.e., "National Council of Teachers of Mathematics (NCTM)," "Washington," "Seattle School District."</p>
     </Description>
-   <Type ref="CommonTypes" name="OrganizationListType"></Type>
+    <Type ref="CommonTypes" name="OrganizationListType"/>
   </Item>
-
   <Item>
     <Element>Authors</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Name of the organization that authored the standards document, i.e. "Mid-Continent Research for Education &amp; Learning (McREL)." May be the same as "Organization" above.</p>
     </Description>
-   <Type ref="CommonTypes" name="AuthorListType"></Type>
+    <Type ref="CommonTypes" name="AuthorListType"/>
   </Item>
-
   <Item>
     <Element>OrganizationContactPoint</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>A brief description of how to contact the organization maintaining the standards. It could be a phone number, email address, or URL.</p>
     </Description>
-    <Type name="xs:string"></Type>
+    <Type name="xs:string"/>
+    <cedsId>000693</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000693</cedsURL>
   </Item>
   <Item>
     <Element>SubjectAreas</Element>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="SubjectAreaListType"></Type>
+    <Type ref="CommonTypes" name="SubjectAreaListType"/>
   </Item>
-
- <Item>
+  <Item>
     <Element>DocumentStatus</Element>
-
     <Characteristics>M</Characteristics>
-    <Description></Description>
-    <Values>
-      <Value>
-        <Code>Draft</Code>
-      </Value>
-      <Value>
-        <Code>Adopted</Code>
-      </Value>
-      <Value>
-        <Code>Archived</Code>
-      </Value>
-      <Value>
-        <Code>Unknown</Code>
-      </Value>
-    </Values>
+    <Description/>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>DocumentDate</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>The date the current status was achieved.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
+    <cedsId>000700</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000700</cedsURL>
   </Item>
   <Item>
     <Element>LocalAdoptionDate</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>The date the local organization adopted this standard document</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>LocalArchiveDate</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>The date the local organization stopped using this standard document and superseded by a new document.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>EndOfLifeDate</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>This is the date that the governing organization retired this document.&#160;</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
+    <cedsId>000701</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000701</cedsURL>
   </Item>
   <Item>
     <Element>Copyright</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>Copyright for document.</p>
     </Description>
-     <Type ref="CommonTypes" name="CopyrightType"></Type>
- </Item>
-
+    <Type ref="CommonTypes" name="CopyrightType"/>
+  </Item>
   <Item>
     <Element>GradeLevels</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>SIF common GradeLevels element</p>
     </Description>
-    <Type ref="CommonTypes" name="GradeLevelsType"></Type>
+    <Type ref="CommonTypes" name="GradeLevelsType"/>
   </Item>
   <Item>
     <Element>RepositoryDate</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>Date document data was added to the repository</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>LearningStandardItemRefId</Element>
-
     <Characteristics>M</Characteristics>
     <Description>
       <p>Link to the first/top LearningStandardItem in the standard hierarchy</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
-
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>RelatedLearningStandards</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="LearningStandardDocumentRefIdListType"></Type>
+    <Type ref="CommonTypes" name="LearningStandardDocumentRefIdListType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
-
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <LearningStandardDocument RefId="A5A575C789175101B8E7F08ED123A823" xml:lang="en">
       <Title>Washington Essential Academic Learning Requirements</Title>
       <Description>This document addresses high school English Language Arts</Description>
       <Source>State</Source>
-
       <Organizations>
         <Organization>State of Washington</Organization>
       </Organizations>

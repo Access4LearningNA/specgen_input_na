@@ -1,0 +1,96 @@
+<DataObject xmlns="http://sifassociation.org/SpecGen" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:json="http://json.org/" name="address">
+  <Key>@refId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>address</Element>
+    <Description>
+      <p>This object contains address data.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>refId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="gRefIdType"/>
+  </Item>
+  <Item>
+    <Element>gridLocation</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:string"/>
+  </Item>
+  <Item>
+    <Element>addressType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The type or category of this address. For example, mailing, physical, permanent, etc.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>localId</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:string"/>
+  </Item>
+  <Item>
+    <Element>street</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="gStreetType"/>
+  </Item>
+  <Item>
+    <Element>city</Element>
+    <Characteristics>M</Characteristics>
+    <Type name="xs:normalizedString"/>
+  </Item>
+  <Item>
+    <Element>subregion</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A second-order subdivision of the country, e.g. county, shire.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>stateProvince</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A first-order national subdivision of the country, e.g. state, province.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>country</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>postalCode</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A number that identifies each postal delivery area in a country used as a portion of an address</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+</DataObject>

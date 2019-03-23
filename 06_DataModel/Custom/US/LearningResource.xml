@@ -1,10 +1,4 @@
-<DataObject name="LearningResource"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="LearningResource">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
@@ -17,15 +11,13 @@
     </Description>
   </Item>
   <Item>
-
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>GUID assigned to this LearningResource.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
-
   <!--<Item>
     <Attribute>xml:lang</Attribute>
     <Characteristics>M</Characteristics>
@@ -33,101 +25,93 @@
       <p>The default language used in the LearningResource object.</p>
     </Description>
   </Item>-->
-
   <Item>
     <Element>Name</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>Name of learning resource.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>Author</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>Name of organization or company that created the resource.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
+    <cedsId>000696</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000696</cedsURL>
   </Item>
-
   <Item>
     <Element>Contacts</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>Contains contact information about resource authors.</p>
     </Description>
-    <Type ref="CommonTypes" name="LearningResourceContactListType"></Type>
+    <Type ref="CommonTypes" name="LearningResourceContactListType"/>
   </Item>
-
   <Item>
     <Element>Location</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>Description of location of resource, i.e. location in library or URL, community resource, outside resource supplier.</p>
     </Description>
-    <Type ref="CommonTypes" name="LearningResourceLocationType"></Type>
+    <Type ref="CommonTypes" name="LearningResourceLocationType"/>
   </Item>
-   <Item>
+  <Item>
     <Element>Status</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>Describes availability status of resource, e.g. "checked out."</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>Description</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>Description of the resource, e.g., "This textbook is intended for grade 4 social studies students and addresses..."</p>
     </Description>
-    <Type name="xs:string"></Type>
+    <Type name="xs:string"/>
+    <cedsId>000697</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000697</cedsURL>
   </Item>
   <Item>
     <Element>GradeLevels</Element>
-
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="GradeLevelsType"></Type>
+    <Type ref="CommonTypes" name="GradeLevelsType"/>
   </Item>
   <Item>
     <Element>SubjectAreas</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SubjectAreaListType"></Type>
+    <Type ref="CommonTypes" name="SubjectAreaListType"/>
   </Item>
   <Item>
     <Element>MediaTypes</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>
         Resource media types.
       </p>
     </Description>
-    <Type ref="CommonTypes" name="MediaTypeListType"></Type>
+    <Type ref="CommonTypes" name="MediaTypeListType"/>
   </Item>
-   <Item>
+  <Item>
     <Element>UseAgreement</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>Describes terms of use for resource.</p>
     </Description>
-    <Type name="xs:string"></Type>
+    <Type name="xs:string"/>
   </Item>
   <Item>
     <Element>AgreementDate</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>A date that defines the date of agreement.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>Approvals</Element>
@@ -135,57 +119,51 @@
     <Description>
       <p>Authorizations to use this resource. For example, this resource may be included as part of the district's standard curriculum model.</p>
     </Description>
-    <Type ref="CommonTypes" name="ApprovalListType"></Type>
+    <Type ref="CommonTypes" name="ApprovalListType"/>
   </Item>
-
   <Item>
     <Element>Evaluations</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Evaluations/review of the resource.</p>
     </Description>
-    <Type ref="CommonTypes" name="LearningResourceEvaluationListType"></Type>
+    <Type ref="CommonTypes" name="LearningResourceEvaluationListType"/>
   </Item>
-
-
   <Item>
     <Element>Components</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>Lesson or activity-sized portions of a resource.</p>
     </Description>
-    <Type ref="CommonTypes" name="LearningResourceComponentListType"></Type>
+    <Type ref="CommonTypes" name="LearningResourceComponentListType"/>
   </Item>
-
   <Item>
     <Element>LearningStandards</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>References to LearningStandardItems.</p>
     </Description>
-    <Type ref="CommonTypes" name="LearningStandardItemRefIdListType"></Type>
+    <Type ref="CommonTypes" name="LearningStandardItemRefIdListType"/>
   </Item>
   <Item>
     <Element>LearningResourcePackageRefId</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>
         Reference to a <code>LearningResourcePackage</code>, a transport envelope for teaching and learning object files.
       </p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
-
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <LearningResource RefId="6938D88F82A37EFD88892429EC6AB1B5" xml:lang="en">

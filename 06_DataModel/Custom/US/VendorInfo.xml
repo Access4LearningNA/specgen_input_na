@@ -1,10 +1,4 @@
-<DataObject name="VendorInfo"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="VendorInfo">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
@@ -19,7 +13,7 @@
     <Description>
       <p>Vendor Id.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Element>Name</Element>
@@ -27,7 +21,7 @@
     <Description>
       <p>Name of the vendor.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>ContactInfo</Element>
@@ -35,7 +29,7 @@
     <Description>
       <p>Contact information.</p>
     </Description>
-    <Type ref="CommonTypes" name="ContactInfoType"></Type>
+    <Type ref="CommonTypes" name="ContactInfoType"/>
   </Item>
   <Item>
     <Element>CustomerId</Element>
@@ -43,7 +37,7 @@
     <Description>
       <p>Account number or other Id.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>EmployeePersonalRefId</Element>
@@ -54,7 +48,7 @@
         the VendorInfo when tracking expense and tuition reimbursement.  This is the GUID of the associated EmployeePersonal object.
       </p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>Send1099</Element>
@@ -62,7 +56,7 @@
     <Description>
       <p>Send 1099 to this vendor.</p>
     </Description>
-    <Type name="xs:boolean"></Type>
+    <Type name="xs:boolean"/>
   </Item>
   <Item>
     <Element>FederalTaxId</Element>
@@ -70,18 +64,17 @@
     <Description>
       <p>Taxpayer identification number/Federal tax Id for this vendor.</p>
     </Description>
-    <Type ref="CommonTypes" name="FederalTaxIdType"></Type>
+    <Type ref="CommonTypes" name="FederalTaxIdType"/>
   </Item>
-
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <VendorInfo RefId="AB3647C568654CF45678DD34EF564E22">

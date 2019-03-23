@@ -1,10 +1,4 @@
-<DataObject name='StudentContactPersonal'
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="StudentContactPersonal">
   <Intro>
     This object contains information about the people who are referenced as student contacts.
   </Intro>
@@ -20,69 +14,68 @@
     <Attribute>RefId</Attribute>
     <Description>The Id (GUID) that uniquely identifies the instance of the object.</Description>
     <Characteristics>M</Characteristics>
-    <Type ref='CommonTypes' name='RefIdType'/>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
-
   <Item>
     <Element>PersonInfo</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>Common element containing person demographic information.</p>
     </Description>
-    <Type ref="CommonTypes" name="PersonInfoType"></Type>
+    <Type ref="CommonTypes" name="PersonInfoType"/>
   </Item>
-
   <Item>
     <Element>EmployerType</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Code that defines the employer type.</p>
     </Description>
-    <Type ref="ExternalCodeSets" name="NCES0614EmployerTypeType"></Type>
+    <Type name="xs:token"/>
   </Item>
-
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
   <Item>
     <Element>EducationLevel</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>The highest level of education completed by the contact person.</p>
     </Description>
-    <Type ref="CommonTypes" name="EducationalLevelType"></Type>
+    <Type ref="CommonTypes" name="EducationalLevelType"/>
   </Item>
-
-<Item>
+  <Item>
     <Element>OptOutEmail</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>A "yes" value indicates person may only be contacted as authorized via email.  This usually indicates they have requested contact be limited to essential purposes and use/release of their contact information (e.g. to Parent Teacher organizations) may be limited.</p>
     </Description>
-    <Values>
-      <Value>
-        <Code>Yes</Code>
-      </Value>
-      <Value>
-        <Code>No</Code>
-      </Value>
-      <Value>
-        <Code>Unknown</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
   </Item>
-
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
-
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-
-  <xhtml:Example name="StudentContactPersonal - Example 1" xmlns=''>
-    <StudentContactPersonal RefId='6472B2610947583A463DBB345291B001'>
+  <xhtml:Example xmlns="" name="StudentContactPersonal - Example 1">
+    <StudentContactPersonal RefId="6472B2610947583A463DBB345291B001">
       <PersonInfo>
         <Name Type="04">
           <LastName>Johnson</LastName>
@@ -117,6 +110,5 @@
       <EmployerType>1805</EmployerType>
       <EducationLevel>1051</EducationLevel>
     </StudentContactPersonal>
-
   </xhtml:Example>
 </DataObject>

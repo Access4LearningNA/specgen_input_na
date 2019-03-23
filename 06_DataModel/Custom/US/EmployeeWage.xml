@@ -1,10 +1,4 @@
-<DataObject name="EmployeeWage"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="EmployeeWage">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
@@ -19,7 +13,7 @@
     <Description>
       <p>The GUID of the employee's pay information.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Attribute>EmployeePersonalRefId</Attribute>
@@ -27,22 +21,22 @@
     <Description>
       <p>The GUID that refers to the EmployeePersonal object.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>PayRates</Element>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="PayRateListType"></Type>
+    <Type ref="CommonTypes" name="PayRateListType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <EmployeeWage RefId="CDF90651225DAC3859D2A3458BC39583" EmployeePersonalRefId="CD490651225DAC3859DEA3458BC39522">

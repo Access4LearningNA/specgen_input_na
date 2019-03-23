@@ -1,13 +1,5 @@
-<DataObject name="LEAInfo"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
-
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="LEAInfo">
   <Key>@RefId</Key>
-
   <EventsReported>true</EventsReported>
   <Item>
     <Element>LEAInfo</Element>
@@ -16,92 +8,85 @@
     </Description>
   </Item>
   <Item>
-
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The GUID of the LEA whose information this is.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Element>LocalId</Element>
-
     <Characteristics>M</Characteristics>
     <Description>
       <p>The locally-assigned identifier for this LEA.</p>
     </Description>
-    <Type ref="CommonTypes" name="LocalIdType"></Type>
+    <Type ref="CommonTypes" name="LocalIdType"/>
+    <cedsId>000365</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000365</cedsURL>
   </Item>
   <Item>
     <Element>StateProvinceId</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>The state-assigned identifier for this LEA.</p>
     </Description>
-    <Type ref="CommonTypes" name="StateProvinceIdType"></Type>
+    <Type ref="CommonTypes" name="StateProvinceIdType"/>
   </Item>
   <Item>
     <Element>NCESId</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>The NCES-assigned identifier for this LEA.</p>
     </Description>
-    <Type ref="CommonTypes" name="NCESIdType"></Type>
+    <Type ref="CommonTypes" name="NCESIdType"/>
   </Item>
   <Item>
     <Element>LEAName</Element>
-
     <Characteristics>M</Characteristics>
     <Description>
       <p>Name of LEA.</p>
     </Description>
-    <Type ref="CommonTypes" name="LEANameType"></Type>
+    <Type ref="CommonTypes" name="LEANameType"/>
   </Item>
   <Item>
     <Element>LEAURL</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>URL for the LEA.</p>
     </Description>
-    <Type name="xs:anyURI"></Type>
+    <Type name="xs:anyURI"/>
+    <cedsId>000704</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000704</cedsURL>
   </Item>
   <Item>
     <Element>EducationAgencyType</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>The classification of the education agency within the geographic boundaries of a state according to the level of administrative and operational control.</p>
     </Description>
-     <Type ref="CommonTypes" name="EducationAgencyTypeType"></Type>
+    <Type ref="CommonTypes" name="EducationAgencyTypeType"/>
   </Item>
-
- <Item>
+  <Item>
     <Element>LEAContactList</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="LEAContactListType"></Type>
+    <Type ref="CommonTypes" name="LEAContactListType"/>
   </Item>
-
   <Item>
     <Element>PhoneNumberList</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>The LEA's phone number(s).</p>
     </Description>
-    <Type ref="CommonTypes" name="PhoneNumberList"></Type>
+    <Type ref="CommonTypes" name="PhoneNumberList"/>
   </Item>
   <Item>
     <Element>AddressList</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>The LEA's address(es).</p>
     </Description>
-    <Type ref="CommonTypes" name="AddressList"></Type>
+    <Type ref="CommonTypes" name="AddressList"/>
   </Item>
   <Item>
     <Element>IdentificationInfoList</Element>
@@ -109,7 +94,7 @@
     <Description>
       <p>Other identification information associated with an LEA, such as the locally-defined code/identifier, etc.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdentificationInfoList"></Type>
+    <Type ref="CommonTypes" name="IdentificationInfoList"/>
   </Item>
   <Item>
     <Element>GradeLevels</Element>
@@ -117,36 +102,35 @@
     <Description>
       <p>Collection of grade levels offered in this LEA.</p>
     </Description>
-    <Type ref="CommonTypes" name="GradeLevelsType"></Type>
+    <Type ref="CommonTypes" name="GradeLevelsType"/>
   </Item>
   <Item>
     <Element>OperationalStatus</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>Operational condition of an LEA.</p>
     </Description>
-    <Type ref="CommonTypes" name="OperationalStatusType"></Type>
+    <Type ref="CommonTypes" name="OperationalStatusType"/>
+    <cedsId>000174</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000174</cedsURL>
   </Item>
   <Item>
     <Element>CongressionalDistrict</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>Number for the US congressional district where the LEA is located.</p>
     </Description>
-    <Type ref="CommonTypes" name="CongressionalDistrictType"></Type>
+    <Type ref="CommonTypes" name="CongressionalDistrictType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
-
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <LEAInfo RefId="D3E34B359D75101A8C3D00AA001A1652">

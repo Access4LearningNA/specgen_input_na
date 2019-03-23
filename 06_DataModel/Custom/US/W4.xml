@@ -1,116 +1,106 @@
-<DataObject name="W4"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:xi="http://www.w3.org/2001/XInclude"
-	xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-	xmlns="http://sifassociation.org/SpecGen">
-	<Key>@EmployeePersonalRefId</Key>
-	<EventsReported>true</EventsReported>
-	<Item>
-		<Element>W4</Element>
-		<Description>
-			<p>
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="W4">
+  <Key>@EmployeePersonalRefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>W4</Element>
+    <Description>
+      <p>
         This object contains the information completed on a W4 tax form. (Please note that this object is defined to
         represent the current deductions allowances for the employee; this is not intended to circumvent or replace IRS
         reporting standards but to faciliatate movement of W4 data from system to system within the LEA.)
       </p>
-		</Description>
-	</Item>
-
+    </Description>
+  </Item>
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>A GUID that identifies an instance of this object. This RefId is new for 2.7M and MUST be supported like other objects that have a RefId (i.e. it is the key for the object).  The alternate keys MUST continue to be supported.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
-
-	<Item>
-		<Attribute>EmployeePersonalRefId</Attribute>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>This is the GUID that points to the employee represented in the EmployeePersonal object.</p>
-		</Description>
-		<Type ref="CommonTypes" name="IdRefType"/>
-	</Item>
-	<Item>
-		<Element>W4Date</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Date W4 was completed.</p>
-		</Description>
-		<Type name="xs:date"/>
-	</Item>
-	<Item>
-		<Element>MaritalStatusRate</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>This denotes the current martial status of the employee</p>
-		</Description>
-		<Values>
-			<Value>
-				<Code>Married</Code>
-			</Value>
-			<Value>
-				<Code>Single</Code>
-			</Value>
-			<Value>
-				<Code>MarriedSingleRate</Code>
-			</Value>
-		</Values>
-	</Item>
-	<Item>
-		<Element>FederalAllowancesNumber</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Number of federal allowances.</p>
-		</Description>
-		<Type name="xs:unsignedInt"/>
-	</Item>
-	<Item>
-		<Element>StateAllowancesNumber</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Number of state allowances.</p>
-		</Description>
-		<Type name="xs:unsignedInt"/>
-	</Item>
-	<Item>
-		<Element>StateProvince</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>State of residence.</p>
-		</Description>
-		<Type ref="CommonTypes" name="StateProvinceType"/>
-	</Item>
-	<Item>
-		<Element>Exempt</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Is this employee exempt from federal and state exemptions?</p>
-		</Description>
-		<Type name="xs:boolean"/>
-	</Item>
-	<Item>
-		<Element>SIF_Metadata</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="SIF_MetadataType"/>
-	</Item>
-	<Item>
-		<Element>SIF_ExtendedElements</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
-	</Item>
-	<xhtml:Example xmlns="">
-		<W4 RefId="359D75101AD0A9D7A8C3DAD0A85103A2" EmployeePersonalRefId="DD5906EFD512EFDA253764EDA5897321">
-			<W4Date>1998-12-01</W4Date>
-			<MaritalStatusRate>Married</MaritalStatusRate>
-			<FederalAllowancesNumber>5</FederalAllowancesNumber>
-			<StateAllowancesNumber>3</StateAllowancesNumber>
-			<StateProvince>NY</StateProvince>
-			<Exempt>true</Exempt>
-		</W4>
-	</xhtml:Example>
+  <Item>
+    <Attribute>EmployeePersonalRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>This is the GUID that points to the employee represented in the EmployeePersonal object.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+    <Element>W4Date</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Date W4 was completed.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>
+  <Item>
+    <Element>MaritalStatusRate</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>This denotes the current martial status of the employee</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>FederalAllowancesNumber</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Number of federal allowances.</p>
+    </Description>
+    <Type name="xs:unsignedInt"/>
+  </Item>
+  <Item>
+    <Element>StateAllowancesNumber</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Number of state allowances.</p>
+    </Description>
+    <Type name="xs:unsignedInt"/>
+  </Item>
+  <Item>
+    <Element>StateProvince</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>State of residence.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StateProvinceType"/>
+  </Item>
+  <Item>
+    <Element>Exempt</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Is this employee exempt from federal and state exemptions?</p>
+    </Description>
+    <Type name="xs:boolean"/>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+  </Item>
+  <xhtml:Example xmlns="">
+    <W4 RefId="359D75101AD0A9D7A8C3DAD0A85103A2" EmployeePersonalRefId="DD5906EFD512EFDA253764EDA5897321">
+      <W4Date>1998-12-01</W4Date>
+      <MaritalStatusRate>Married</MaritalStatusRate>
+      <FederalAllowancesNumber>5</FederalAllowancesNumber>
+      <StateAllowancesNumber>3</StateAllowancesNumber>
+      <StateProvince>NY</StateProvince>
+      <Exempt>true</Exempt>
+    </W4>
+  </xhtml:Example>
 </DataObject>

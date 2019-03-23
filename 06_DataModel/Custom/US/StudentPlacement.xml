@@ -1,10 +1,4 @@
-<DataObject name="StudentPlacement"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="StudentPlacement">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Intro>
@@ -29,7 +23,7 @@
     <Description>
       <p>This is the unique identification code</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Attribute>StudentParticipationRefId</Attribute>
@@ -37,7 +31,7 @@
     <Description>
       <p>This is the reference code for student eligibility for participation</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Attribute>StudentPersonalRefId</Attribute>
@@ -45,7 +39,7 @@
     <Description>
       <p>The GUID of the student that this object is linked to.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>StudentPlacementAsOfDate</Element>
@@ -53,8 +47,7 @@
     <Description>
       <p>Effective date (NOT the entry date) of this StudentPlacement instance for the identified student and program.   It is intended that each time the contents of this instance of the object changes, it will be published with a new RefId.</p>
     </Description>
-    <Type name="xs:date"></Type>
-
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>Service</Element>
@@ -62,51 +55,36 @@
     <Description>
       <p>Specialized instruction or related / transitional service provided to this student.</p>
     </Description>
-    <Type ref="CommonTypes" name="StudentPlacementServiceType"></Type>
- </Item>
-
+    <Type ref="CommonTypes" name="StudentPlacementServiceType"/>
+  </Item>
   <Item>
     <Element>ServiceCategory</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Category of service (for example, whether it is instruction or a related / transitional service or a supplemental service).  Typically designated by a state.</p>
     </Description>
-    <Values>
-      <Value>
-        <Code>S001</Code>
-        <Text>Service is instructional</Text>
-      </Value>
-      <Value>
-        <Code>S002</Code>
-        <Text>Service is a related service (e.g. speech / language, vision)</Text>
-      </Value>
-      <Value>
-        <Code>S003</Code>
-        <Text>Service is transitional</Text>
-      </Value>
-      <Value>
-        <Code>S004</Code>
-        <Text>Service is itinerant</Text>
-      </Value>
-      <Value>
-        <Code>S999</Code>
-        <Text>Service is of another category</Text>
-      </Value>
-
-    </Values>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>ServiceFundingSources</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="StudentPlacementServiceFundingSourceListType"></Type>
+    <Type ref="CommonTypes" name="StudentPlacementServiceFundingSourceListType"/>
   </Item>
-   <Item>
+  <Item>
     <Element>ServicingPublicAgency</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>The GUID of the public agency (a district / LEA) to which the "ServicingSchool" reports / belongs.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Attribute>SIF_RefObject</Attribute>
@@ -123,7 +101,7 @@
     <Description>
       <p>The GUID of the school responsible for providing and coordinating this service (but physical location where service delivered could be different and is identified in SchoolWhereServiceDelivered).</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Attribute>SIF_RefObject</Attribute>
@@ -140,7 +118,7 @@
     <Description>
       <p>The GUID of the school where the service is delivered.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Attribute>SIF_RefObject</Attribute>
@@ -154,18 +132,18 @@
   <Item>
     <Element>ServiceProviderType</Element>
     <Characteristics>O</Characteristics>
-     <Description>
+    <Description>
       <p>Used for an individual providing the service.  Review by state / program, may be required.  Service provider title (such as Physical Therapist or Psychologist).</p>
     </Description>
-     <Type ref="CommonTypes" name="ServiceProviderTypeType"></Type>
-</Item>
+    <Type ref="CommonTypes" name="ServiceProviderTypeType"/>
+  </Item>
   <Item>
     <Element>AgencyType</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Identifies an agency or clinic that will provide the specified service.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>ServiceProviderName</Element>
@@ -173,25 +151,23 @@
     <Description>
       <p>The name of the person who delivers the service.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>ServiceSetting</Element>
     <Characteristics>O</Characteristics>
-   <Description>
+    <Description>
       <p>Setting where service is provided (Regular Class, Resource Room, Homebound, Detention Center, etc.).</p>
     </Description>
-      <Type ref="CommonTypes" name="ServiceSettingType"></Type>
- </Item>
-
-
+    <Type ref="CommonTypes" name="ServiceSettingType"/>
+  </Item>
   <Item>
     <Element>WhenServiceProvided</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>General timing of service delivery relative to school calendar / schedule.</p>
     </Description>
-    <Type ref="CommonTypes" name="WhenServiceProvidedType"></Type>
+    <Type ref="CommonTypes" name="WhenServiceProvidedType"/>
   </Item>
   <Item>
     <Element>LatestStartDate</Element>
@@ -199,7 +175,7 @@
     <Description>
       <p>Date by which service is supposed to start for this student.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>StartDate</Element>
@@ -207,7 +183,7 @@
     <Description>
       <p>Actual date this service began for this student.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>EndDate</Element>
@@ -215,15 +191,15 @@
     <Description>
       <p>Actual date this service ended for this student.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>FrequencyTime</Element>
     <Characteristics>O</Characteristics>
-     <Description>
+    <Description>
       <p>Code for the frequency that the service is provided.</p>
     </Description>
-    <Type ref="CommonTypes" name="FrequencyTimeType"></Type>
+    <Type ref="CommonTypes" name="FrequencyTimeType"/>
   </Item>
   <Item>
     <Element>DirectTime</Element>
@@ -231,7 +207,7 @@
     <Description>
       <p>Number of units of time per session spent directly providing the service to the student.</p>
     </Description>
-    <Type ref="CommonTypes" name="SessionDurationType"></Type>
+    <Type ref="CommonTypes" name="SessionDurationType"/>
   </Item>
   <Item>
     <Element>IndirectTime</Element>
@@ -239,15 +215,15 @@
     <Description>
       <p>Number of units of time per session NOT spent directly providing the service to the student but rather spent providing consultation services to someone related to the student (e.g. parent, a general ed teacher, a new service provider, etc.).</p>
     </Description>
-    <Type ref="CommonTypes" name="SessionDurationType"></Type>
+    <Type ref="CommonTypes" name="SessionDurationType"/>
   </Item>
-   <Item>
+  <Item>
     <Element>TotalServiceDuration</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Total of the direct and indirect time as it relates to the FrequencyTime; e.g., DirectTime 60 + IndirectTime 30 = 90.</p>
     </Description>
-    <Type ref="CommonTypes" name="SessionDurationType"></Type>
+    <Type ref="CommonTypes" name="SessionDurationType"/>
   </Item>
   <Item>
     <Element>IncludedInSpecialEducationFTE</Element>
@@ -255,7 +231,7 @@
     <Description>
       <p>Indicates whether the direct time for this service is included in the calculation of a student's special education FTE.</p>
     </Description>
-    <Type name="xs:boolean"></Type>
+    <Type name="xs:boolean"/>
   </Item>
   <Item>
     <Element>SpecialNeedsTransportation</Element>
@@ -263,7 +239,7 @@
     <Description>
       <p>Indicates whether the student requires transportation to the location of Placement/Service.</p>
     </Description>
-    <Type name="xs:boolean"></Type>
+    <Type name="xs:boolean"/>
   </Item>
   <Item>
     <Element>AssistiveTechnology</Element>
@@ -271,7 +247,7 @@
     <Description>
       <p>Indicates whether the student requires assistive technology for this Placement/Service.</p>
     </Description>
-    <Type name="xs:boolean"></Type>
+    <Type name="xs:boolean"/>
   </Item>
   <Item>
     <Element>EntryPerson</Element>
@@ -279,21 +255,18 @@
     <Description>
       <p>Identification / name of the person who created the transaction that led to the creation of this instance of the object.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
-
-
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-
   <xhtml:Example xmlns="">
     <StudentPlacement RefId="A3E34B359A75101D8C3A00DD001D1652" StudentParticipationRefId="D3E34B359D75101A8C3D00AA001A1652" StudentPersonalRefId="A2E34F59A742C1A4B3D11CC002B163A2">
       <StudentPlacementAsOfDate>2006-07-13</StudentPlacementAsOfDate>

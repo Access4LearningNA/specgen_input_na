@@ -1,10 +1,4 @@
-<DataObject name="AssessmentForm"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="AssessmentForm">
   <Key>@RefId</Key>
   <EventsReported>false</EventsReported>
   <Item>
@@ -15,7 +9,7 @@
   </Item>
   <Item>
     <Attribute>RefId</Attribute>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The GUID that uniquely identifies an instance of the object.</p>
@@ -23,7 +17,7 @@
   </Item>
   <Item>
     <Attribute>AssessmentRefId</Attribute>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The RefId of the assessment related to this form.</p>
@@ -35,14 +29,17 @@
       <p>Indicates whether this assessment (form) is a standard administration or alternate.</p>
     </Description>
     <Characteristics>O</Characteristics>
-    <Values>
-      <Value>
-        <Code>standard</Code>
-      </Value>
-      <Value>
-        <Code>alternate</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
+    <cedsId>000029</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000029</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>FormName</Element>
@@ -50,7 +47,7 @@
       <p>Text description for this particular arrangement of questions, etc.</p>
     </Description>
     <Characteristics>M</Characteristics>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>FormNumbers</Element>
@@ -58,7 +55,7 @@
     <Description>
       <p>Reference numbers for the form.</p>
     </Description>
-    <Type ref="CommonTypes" name="AssessmentFormNumberListType"></Type>
+    <Type ref="CommonTypes" name="AssessmentFormNumberListType"/>
   </Item>
   <Item>
     <Element>Level</Element>
@@ -66,9 +63,11 @@
       <p>Indicates the level of the form.</p>
     </Description>
     <Characteristics>O</Characteristics>
-    <Type name="xs:token"></Type>
+    <Type name="xs:token"/>
     <ItemExample>Grade 3</ItemExample>
     <ItemExample>Leveling System</ItemExample>
+    <cedsId>000177</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000177</cedsURL>
   </Item>
   <Item>
     <Element>Period</Element>
@@ -76,11 +75,13 @@
       <p>The time period in which the form is intended to be administered.</p>
     </Description>
     <Characteristics>O</Characteristics>
-    <Type name="xs:token"></Type>
+    <Type name="xs:token"/>
+    <cedsId>000408</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000408</cedsURL>
   </Item>
   <Item>
     <Element>GradeLevels</Element>
-    <Type ref="CommonTypes" name="GradeLevelsType"></Type>
+    <Type ref="CommonTypes" name="GradeLevelsType"/>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Grade levels this assessment is designed to evaluate.</p>
@@ -92,19 +93,18 @@
     <Description>
       <p>Associated subtests (score types).  Each form can provide scores in one or more subtest areas.</p>
     </Description>
-    <Type ref="CommonTypes" name="AssessmentSubTestRefIdListType"></Type>
+    <Type ref="CommonTypes" name="AssessmentSubTestRefIdListType"/>
   </Item>
-   <Item>
+  <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-
   <xhtml:Example xmlns="">
     <AssessmentForm RefId="13F3C7AFF8464EE1862B0622A010883E" AssessmentRefId="77C5D8A7345B4BE883053228C9708512">
       <AssessmentType>standard</AssessmentType>

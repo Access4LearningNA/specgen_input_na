@@ -1,10 +1,4 @@
-<DataObject name="AccountingPeriod"
-			xmlns:xs="http://www.w3.org/2001/XMLSchema"
-			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-			xmlns:xi="http://www.w3.org/2001/XInclude"
-			xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-      xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="AccountingPeriod">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
@@ -19,7 +13,7 @@
     <Description>
       <p>GUID that identifies this accounting period.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Element>Name</Element>
@@ -27,12 +21,12 @@
     <Description>
       <p>Name of the accounting period.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>Description</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:string"></Type>
+    <Type name="xs:string"/>
   </Item>
   <Item>
     <Element>FiscalYearRefId</Element>
@@ -40,7 +34,7 @@
     <Description>
       <p>Fiscal year to which this accounting period belongs.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>StartDate</Element>
@@ -48,7 +42,7 @@
     <Description>
       <p>Start date of the accounting period.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>EndDate</Element>
@@ -56,17 +50,17 @@
     <Description>
       <p>End date of the accounting period.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <AccountingPeriod RefId="A08CC23B059C400CAA9F9BBD3DFF94F1">

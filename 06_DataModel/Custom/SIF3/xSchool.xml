@@ -1,0 +1,103 @@
+<DataObject xmlns="http://sifassociation.org/SpecGen" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:json="http://json.org/" name="xSchool">
+  <Key>@refId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>xSchool</Element>
+    <Description>
+      <p>xSchool is a composite object that provides essential information about a school building or campus. The refId of a xSchool object coincides with the refId of a corresponding school object.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>refId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="gRefIdType"/>
+  </Item>
+  <Item>
+    <Element>leaRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Refid of the LEA of which the school is a part.</p>
+    </Description>
+    <Type ref="CommonTypes" name="gRefIdPointerType"/>
+  </Item>
+  <Item>
+    <Element>lea</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An administrative unit within K-12 education at the local level which exists primarily to operate schools or to contract for educational services. These units may or may not be co-extensive with county, city, or town boundaries. </p>
+    </Description>
+    <Type ref="CommonTypes" name="xTelephoneListType"/>
+  </Item>
+  <Item>
+    <Element>localId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique number or alphanumeric code assigned to a school by a district or LEA.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xOrganizationIdType"/>
+    <cedsId>001071</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001071</cedsURL>
+  </Item>
+  <Item>
+    <Element>stateProvinceId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique number or alphanumeric code assigned to a school by a state.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xOrganizationIdType"/>
+    <cedsId>001071</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001071</cedsURL>
+  </Item>
+  <Item>
+    <Element>otherIds</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A list of other Ids for the school.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xOtherOrganizationIdType"/>
+  </Item>
+  <Item>
+    <Element>schoolName</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The full legally accepted name of the institution.</p>
+    </Description>
+    <Type name="xs:string"/>
+    <cedsId>000191</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000191</cedsURL>
+  </Item>
+  <Item>
+    <Element>gradeLevels</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The specific grade or combination of grades offered by an education institution.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xGradeLevelType"/>
+    <cedsId>000131</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000131</cedsURL>
+  </Item>
+  <Item>
+    <Element>address</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Address of the school.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xCountryCodeType"/>
+  </Item>
+  <Item>
+    <Element>phoneNumber</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Phone number of the school.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xTelephoneTypeType"/>
+  </Item>
+  <Item>
+    <Element>otherPhoneNumbers</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A list of other phone numbers for the school.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xTelephoneType"/>
+  </Item>
+</DataObject>

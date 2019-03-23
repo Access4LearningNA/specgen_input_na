@@ -1,10 +1,4 @@
-<DataObject name="BusRouteDetail"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="BusRouteDetail">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
@@ -14,31 +8,28 @@
     </Description>
   </Item>
   <Item>
-
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>GUID that identifies this object.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
-
     <Attribute>BusRouteInfoRefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>GUID that identifies the bus route.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
-
   <Item>
     <Element>BusStopInfoRefId</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>GUID that identifies a bus stop on the route.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>ArrivalTime</Element>
@@ -46,18 +37,17 @@
     <Description>
       <p>The time that the bus associated with this route will stop at this bus stop.</p>
     </Description>
-    <Type name="xs:time"></Type>
+    <Type name="xs:time"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
-
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <BusRouteDetail RefId="D3E34B359D75101A8C3D00AA001A1652" BusRouteInfoRefId="C2F23F450B86234B9B3D00AA001A1652">

@@ -1,0 +1,92 @@
+<DataObject xmlns="http://sifassociation.org/SpecGen" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:json="http://json.org/" name="xStaff">
+  <Key>@refId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>xStaff</Element>
+    <Description>
+      <p>xStaff is a composite object that provides a view of the most commonly used core data elements for teachers and non-teaching staff. The refId of a xStaff object coincides with the refId of a corresponding staff object.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>refId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="gRefIdType"/>
+  </Item>
+  <Item>
+    <Element>name</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Name of the staff person.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xPersonNameTypeType"/>
+  </Item>
+  <Item>
+    <Element>localId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique number or alphanumeric code assigned to a staff member by a district or LEA.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xPersonIdType"/>
+  </Item>
+  <Item>
+    <Element>loginId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The login identifier for the person.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xLoginIdType"/>
+    <cedsId>001170</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001170</cedsURL>
+  </Item>
+  <Item>
+    <Element>stateProvinceId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique number or alphanumeric code assigned to a staff member by a state.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xPersonIdType"/>
+    <cedsId>001070</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001070</cedsURL>
+  </Item>
+  <Item>
+    <Element>otherIds</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Other Ids for the person.</p>
+    </Description>
+    <Type ref="CodeSets" name="xPersonIdSystemType"/>
+  </Item>
+  <Item>
+    <Element>sex</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The concept describing the biological traits that distinguish the males and females of a species.</p>
+    </Description>
+    <Type ref="CodeSets" name="xSexType"/>
+    <cedsId>000255</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000255</cedsURL>
+  </Item>
+  <Item>
+    <Element>email</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="xEmailTypeType"/>
+    <cedsId>000088</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000088</cedsURL>
+  </Item>
+  <Item>
+    <Element>primaryAssignment</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The primary district, school, and function to which the person is assigned.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xEducationStaffClassificationType"/>
+  </Item>
+  <Item>
+    <Element>otherAssignments</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Other locations and functions to which the person is assigned.</p>
+    </Description>
+    <Type ref="CommonTypes" name="gRefIdPointerType"/>
+  </Item>
+</DataObject>

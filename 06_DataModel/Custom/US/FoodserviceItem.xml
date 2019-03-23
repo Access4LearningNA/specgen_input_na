@@ -1,10 +1,4 @@
-<DataObject name="FoodserviceItem"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="FoodserviceItem">
   <EventsReported>true</EventsReported>
   <Key>@RefId</Key>
   <Item>
@@ -19,7 +13,7 @@
     <Description>
       <p>GUID that identifies this item</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Element>LocalId</Element>
@@ -27,7 +21,7 @@
     <Description>
       <p>Item number as presented to user.</p>
     </Description>
-    <Type ref="CommonTypes" name="LocalIdType"></Type>
+    <Type ref="CommonTypes" name="LocalIdType"/>
   </Item>
   <Item>
     <Element>Description</Element>
@@ -35,7 +29,7 @@
     <Description>
       <p>Description of Item</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>ElectronicIdList</Element>
@@ -43,7 +37,7 @@
     <Description>
       <p>Electronic identifier(s) associated with this item.</p>
     </Description>
-    <Type ref="CommonTypes" name="ElectronicIdListType"></Type>
+    <Type ref="CommonTypes" name="ElectronicIdListType"/>
   </Item>
   <Item>
     <Element>ItemCategory</Element>
@@ -55,7 +49,7 @@
         The Child Nutrition Database <a href="References.html#CNDB">[CNDB]</a> is updated on a yearly basis by the USDA.
       </p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
     <ItemExample>Milk</ItemExample>
     <ItemExample>Meat</ItemExample>
     <ItemExample>Vegetables</ItemExample>
@@ -64,12 +58,12 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <FoodserviceItem RefId="EF521958AB474559B2AE7BD82647C66B">

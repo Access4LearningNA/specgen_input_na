@@ -1,0 +1,162 @@
+<DataObject xmlns="http://sifassociation.org/SpecGen" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:json="http://json.org/" name="xStudent">
+  <Key>@refId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>xStudent</Element>
+    <Description>
+      <p>xStudent is a composite object that provides a view of the most commonly used core data elements for students, and references to important associated objects like contacts. The refId of a xStudent object coincides with the refId of a corresponding student object.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>refId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="gRefIdType"/>
+  </Item>
+  <Item>
+    <Element>name</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Name of Student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xPersonNameTypeType"/>
+  </Item>
+  <Item>
+    <Element>otherNames</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="xPersonNameType"/>
+  </Item>
+  <Item>
+    <Element>localId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique number or alphanumeric code assigned to a staff member by a district or LEA.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xPersonIdType"/>
+    <cedsId>001071</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001071</cedsURL>
+  </Item>
+  <Item>
+    <Element>loginId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The login identifier for the person.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xLoginIdType"/>
+    <cedsId>001170</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001170</cedsURL>
+  </Item>
+  <Item>
+    <Element>stateProvinceId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique number or alphanumeric code assigned to a student by a state.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xPersonIdType"/>
+    <cedsId>001071</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001071</cedsURL>
+  </Item>
+  <Item>
+    <Element>otherIds</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Other Ids for the student</p>
+    </Description>
+    <Type ref="CodeSets" name="xPersonIdSystemType"/>
+  </Item>
+  <Item>
+    <Element>address</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Address of the student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xCountryCodeType"/>
+  </Item>
+  <Item>
+    <Element>otherAddresses</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Address of the student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xStateCodeUSType"/>
+  </Item>
+  <Item>
+    <Element>phoneNumber</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Phone number of the student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xTelephoneTypeType"/>
+  </Item>
+  <Item>
+    <Element>otherPhoneNumbers</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Other phone numbers for the student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xTelephoneType"/>
+  </Item>
+  <Item>
+    <Element>email</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Email of the student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xEmailTypeType"/>
+  </Item>
+  <Item>
+    <Element>otherEmails</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Other emails for the student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xEmailType"/>
+  </Item>
+  <Item>
+    <Element>demographics</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Demographic information about the student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="gCitizenshipStatusType"/>
+  </Item>
+  <Item>
+    <Element>enrollment</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Current enrollment information for the student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="gRefIdPointerType"/>
+  </Item>
+  <Item>
+    <Element>otherEnrollments</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Other enrollment information for the student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xPersonReferenceType"/>
+  </Item>
+  <Item>
+    <Element>academicSummary</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Summary academic information for the student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xAcademicSummaryType"/>
+  </Item>
+  <Item>
+    <Element>studentContacts</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Persons that may be contacted regarding the student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xContactStudentRelationshipListType"/>
+  </Item>
+  <Item>
+    <Element>languages</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Languages of the student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xLanguageTypeType"/>
+  </Item>
+</DataObject>

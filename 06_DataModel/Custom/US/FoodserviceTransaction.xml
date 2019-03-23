@@ -1,10 +1,4 @@
-<DataObject name="FoodserviceTransaction"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="FoodserviceTransaction">
   <EventsReported>true</EventsReported>
   <Key>@RefId</Key>
   <Item>
@@ -25,7 +19,7 @@
     <Description>
       <p>GUID that identifies food service transaction</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Element>SchoolInfoRefId</Element>
@@ -33,12 +27,12 @@
     <Description>
       <p>GUID that identifies the school/site of account transaction</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>Program</Element>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="FundedProgramType"></Type>
+    <Type ref="CommonTypes" name="FundedProgramType"/>
   </Item>
   <Item>
     <Element>TransactionDate</Element>
@@ -46,7 +40,7 @@
     <Description>
       <p>Date of transaction</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>TransactionTime</Element>
@@ -54,12 +48,12 @@
     <Description>
       <p>Time of transaction.</p>
     </Description>
-    <Type name="xs:time"></Type>
+    <Type name="xs:time"/>
   </Item>
   <Item>
     <Element>TransactionTypes</Element>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="FoodserviceTransactionListType"></Type>
+    <Type ref="CommonTypes" name="FoodserviceTransactionListType"/>
   </Item>
   <Item>
     <Element>Customer</Element>
@@ -67,12 +61,12 @@
     <Description>
       <p>The customer can be a student or staff.</p>
     </Description>
-     <Type ref="CommonTypes" name="FoodserviceCustomerType"></Type>
- </Item>
+    <Type ref="CommonTypes" name="FoodserviceCustomerType"/>
+  </Item>
   <Item>
     <Element>Amount</Element>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="FSAmountType"></Type>
+    <Type ref="CommonTypes" name="FSAmountType"/>
   </Item>
   <Item>
     <Element>Tax</Element>
@@ -89,7 +83,7 @@
     <Description>
       <p>Description of the Transaction</p>
     </Description>
-    <Type name="xs:string"></Type>
+    <Type name="xs:string"/>
   </Item>
   <Item>
     <Element>Voided</Element>
@@ -97,24 +91,25 @@
     <Description>
       <p>This flag tells us if the transaction is voided.</p>
     </Description>
-    <Values>
-      <Value>
-        <Code>Yes</Code>
-      </Value>
-      <Value>
-        <Code>No</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <FoodserviceTransaction RefId="A9E34B359F44D51A8C3D00AA001A1652">
@@ -126,7 +121,7 @@
         <TransactionType>Purchase</TransactionType>
       </TransactionTypes>
       <Customer SIF_RefObject="StudentPersonal" SIF_RefId="751177C738B047CD831375FA1CF50CBB">
-        <MealStatus Type="Reduced" />
+        <MealStatus Type="Reduced"/>
       </Customer>
       <Amount Type="Value" Credits="0" Currency="USD">12.00</Amount>
       <Description>Purchase of food items by a student</Description>

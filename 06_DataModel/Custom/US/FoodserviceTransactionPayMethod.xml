@@ -1,10 +1,4 @@
-<DataObject name="FoodserviceTransactionPayMethod"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="FoodserviceTransactionPayMethod">
   <EventsReported>true</EventsReported>
   <Key>@RefId</Key>
   <Item>
@@ -22,7 +16,7 @@
     <Description>
       <p>GUID that identifies the payment</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Element>FoodserviceTransactionRefId</Element>
@@ -30,23 +24,22 @@
     <Description>
       <p>GUID that identifies food service transaction</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>TransactionPayMethods</Element>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="FoodservicePayMethodListType"></Type>
+    <Type ref="CommonTypes" name="FoodservicePayMethodListType"/>
   </Item>
-
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <FoodserviceTransactionPayMethod RefId="FF8340A51D844EBDB156DE662BF373CE">

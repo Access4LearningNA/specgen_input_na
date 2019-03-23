@@ -1,79 +1,66 @@
-<DataObject name="SectionCorrelation"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:xi="http://www.w3.org/2001/XInclude"
-	xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-	xmlns="http://sifassociation.org/SpecGen">
-	<Key>@RefId</Key>
-	<EventsReported>true</EventsReported>
-	<Item>
-		<Element>SectionCorrelation</Element>
-		<Description>
-			<p>This object provides information about the classes being correlated for some program purpose, for example, career tech or team scheduling.</p>
-		</Description>
-	</Item>
-
-	<Item>
-		<Attribute>RefId</Attribute>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>The Id (GUID) that uniquely identifies this correlation.</p>
-		</Description>
-		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>
-
-	<Item>
-		<Element>CorrelationName</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>The classes being correlated for some program purpose, for example, career tech or team scheduling.</p>
-		</Description>
-		<Type name="xs:normalizedString"></Type>
-	</Item>
-
-	<Item>
-		<Element>CorrelationType</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>The type of correlation.</p>
-		</Description>
-		<Type ref="CommonTypes" name="CorrelationTypeType"/>
-	</Item>
-
-	<Item>
-		<Element>CorrelationSectionList</Element>
-		<Characteristics>O</Characteristics>
-		<Description>The list of SectionInfo objects being correlated.</Description>
-		<Type ref="CommonTypes" name="CorrelationSectionListType"/>
-	</Item>
-
-
-	<Item>
-		<Element>SIF_Metadata</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="SIF_MetadataType"></Type>
-	</Item>
-	<Item>
-		<Element>SIF_ExtendedElements</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
-	</Item>
-
-    <xhtml:Example name="SectionCorrelation" xmlns="">
-		<SectionCorrelation RefId="6472B2610947583A463DBB345291B001">
-			<CorrelationName>ComputerizedMilling</CorrelationName>
-			<CorrelationType>
-				<Code>c</Code>
-				<OtherCodeList>
-				  <OtherCode Codeset="Other">CM1</OtherCode>
-				</OtherCodeList>
-			</CorrelationType>
-			<CorrelationSectionList>
-				<CorrelationSection Primary= "yes">FE886483013210000FFF002500F11F4E</CorrelationSection>
-				<CorrelationSection Primary= "no">AE886483013210001F4F002500F11F41</CorrelationSection>
-				<CorrelationSection Primary= "no">EE886483013210001F1F002500F11F49</CorrelationSection>
-			</CorrelationSectionList>
-		</SectionCorrelation>
-	</xhtml:Example>
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="SectionCorrelation">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>SectionCorrelation</Element>
+    <Description>
+      <p>This object provides information about the classes being correlated for some program purpose, for example, career tech or team scheduling.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies this correlation.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"/>
+  </Item>
+  <Item>
+    <Element>CorrelationName</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The classes being correlated for some program purpose, for example, career tech or team scheduling.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+  </Item>
+  <Item>
+    <Element>CorrelationType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The type of correlation.</p>
+    </Description>
+    <Type ref="CommonTypes" name="CorrelationTypeType"/>
+  </Item>
+  <Item>
+    <Element>CorrelationSectionList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>The list of SectionInfo objects being correlated.</Description>
+    <Type ref="CommonTypes" name="CorrelationSectionListType"/>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+  </Item>
+  <xhtml:Example xmlns="" name="SectionCorrelation">
+    <SectionCorrelation RefId="6472B2610947583A463DBB345291B001">
+      <CorrelationName>ComputerizedMilling</CorrelationName>
+      <CorrelationType>
+        <Code>c</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Other">CM1</OtherCode>
+        </OtherCodeList>
+      </CorrelationType>
+      <CorrelationSectionList>
+        <CorrelationSection Primary="yes">FE886483013210000FFF002500F11F4E</CorrelationSection>
+        <CorrelationSection Primary="no">AE886483013210001F4F002500F11F41</CorrelationSection>
+        <CorrelationSection Primary="no">EE886483013210001F1F002500F11F49</CorrelationSection>
+      </CorrelationSectionList>
+    </SectionCorrelation>
+  </xhtml:Example>
 </DataObject>

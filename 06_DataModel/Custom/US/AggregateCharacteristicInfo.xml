@@ -1,10 +1,4 @@
-<DataObject name="AggregateCharacteristicInfo"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="AggregateCharacteristicInfo">
   <EventsReported>true</EventsReported>
   <Key>@RefId</Key>
   <Item>
@@ -19,7 +13,7 @@
     <Description>
       <p>Key for aggregate characteristic information.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Element>Description</Element>
@@ -29,7 +23,7 @@
         Describes the supercategory of the characteristic described in the <code>Definition</code> element below.
       </p>
     </Description>
-    <Type name="xs:string"></Type>
+    <Type name="xs:string"/>
     <ItemExample>Gender</ItemExample>
     <ItemExample>Ethnicity</ItemExample>
     <ItemExample>Grade</ItemExample>
@@ -47,7 +41,7 @@
     <ItemExample>White</ItemExample>
     <ItemExample>Male</ItemExample>
     <ItemExample>Dropout</ItemExample>
-    <Type name="xs:token"></Type>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>ElementName</Element>
@@ -58,17 +52,17 @@
       </p>
     </Description>
     <ItemExample>Dropout Status</ItemExample>
-    <Type name="xs:token"></Type>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <AggregateCharacteristicInfo RefId="06AF1D69FB064AB388983505714F18FB">

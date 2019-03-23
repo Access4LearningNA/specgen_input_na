@@ -1,10 +1,4 @@
-<DataObject name="StudentTransportInfo"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="StudentTransportInfo">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
@@ -19,59 +13,63 @@
     </Description>
   </Item>
   <Item>
-
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>GUID that identifies this object.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
-
     <Attribute>StudentPersonalRefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>GUID that identifies the student that this object refers to.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
-
     <Attribute>Type</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The direction of transportation that this object refers to.</p>
     </Description>
-    <Values>
-      <Value>
-        <Code>Inbound</Code>
-      </Value>
-      <Value>
-        <Code>Outbound</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
   </Item>
   <Item>
-
+    <Attribute>TypeCodeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
     <Attribute>DayOfWeek</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>This attribute indicates the day(s) of the week to which this object refers.</p>
     </Description>
-    <Type name="xs:token"></Type>
+    <Type name="xs:token"/>
     <Facets>
       <xs:pattern value="(Mo)?(Tu)?(We)?(Th)?(Fr)?(Sa)?(Su)?"/>
     </Facets>
   </Item>
   <Item>
-
+    <Attribute>DayOfWeekCodeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
     <Attribute>SchoolInfoRefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>GUID referring to the school that the student attends on these day(s) of the week.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>Eligibility</Element>
@@ -82,57 +80,45 @@
         Note: this element has been deprecated&#8212;use <code>TransportationStatus</code> and <code>PublicExpense</code>.
       </p>
     </Description>
-    <Values>
-      <Value>
-        <Code>Bus</Code>
-      </Value>
-      <Value>
-        <Code>Walk</Code>
-      </Value>
-      <Value>
-        <Code>BusHazard</Code>
-      </Value>
-      <Value>
-        <Code>BusOutOfAttendance</Code>
-      </Value>
-      <Value>
-        <Code>ParentPay</Code>
-      </Value>
-      <Value>
-        <Code>Unknown</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>HomeToSchoolDistance</Element>
     <Characteristics>O</Characteristics>
     <Description>
-      <p>Distance between the student’s home address and the school.</p>
+      <p>Distance between the student&#8217;s home address and the school.</p>
     </Description>
-    <Type ref="CommonTypes" name="DistanceType"></Type>
+    <Type ref="CommonTypes" name="DistanceType"/>
   </Item>
-   <Item>
+  <Item>
     <Element>WalkToStopDistance</Element>
     <Characteristics>O</Characteristics>
     <Description>
-      <p>Distance between the student’s address and the bus stop where they are picked up or dropped off.</p>
+      <p>Distance between the student&#8217;s address and the bus stop where they are picked up or dropped off.</p>
     </Description>
-    <Type ref="CommonTypes" name="DistanceType"></Type>
+    <Type ref="CommonTypes" name="DistanceType"/>
   </Item>
- <Item>
+  <Item>
     <Element>StopToSchoolDistance</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Distance between the bus stop where a student is picked up or dropped off and the school.</p>
     </Description>
-    <Type ref="CommonTypes" name="DistanceType"></Type>
+    <Type ref="CommonTypes" name="DistanceType"/>
   </Item>
   <Item>
     <Element>OriginPoint</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="OriginPointType"></Type>
+    <Type ref="CommonTypes" name="OriginPointType"/>
   </Item>
-
   <Item>
     <Element>HomeBusRouteDetail</Element>
     <Characteristics>O</Characteristics>
@@ -143,7 +129,7 @@
         Note: this element has been deprecated&#8212;use <code>OriginPoint</code> and <code>DestinationPoint</code>.
       </p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Attribute>SIF_RefObject</Attribute>
@@ -154,14 +140,11 @@
       </Value>
     </Values>
   </Item>
-
   <Item>
     <Element>TransferPoints</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="TransferPointListType"></Type>
+    <Type ref="CommonTypes" name="TransferPointListType"/>
   </Item>
-
-
   <Item>
     <Element>SchoolBusRouteDetail</Element>
     <Characteristics>O</Characteristics>
@@ -172,7 +155,7 @@
         Note: this element has been deprecated&#8212;use <code>OriginPoint</code> and <code>DestinationPoint</code>.
       </p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Attribute>SIF_RefObject</Attribute>
@@ -183,20 +166,26 @@
       </Value>
     </Values>
   </Item>
-
   <Item>
     <Element>DestinationPoint</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="DestinationPointType"></Type>
+    <Type ref="CommonTypes" name="DestinationPointType"/>
   </Item>
-
   <Item>
     <Element>StateAidQualification</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>The qualification status of a student entitling local education agency to receive state transportation aid.</p>
     </Description>
-    <Type ref="ExternalCodeSets" name="NCES0720StateTransportationAidQualificationType"></Type>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>TransportationStatus</Element>
@@ -204,7 +193,15 @@
     <Description>
       <p>Information about whether or not a student is transported to and/or from school or receives services, aid, or payment in lieu of transportation.</p>
     </Description>
-    <Type ref="ExternalCodeSets" name="NCES0719TransportationStatusType"></Type>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>PublicExpense</Element>
@@ -212,24 +209,28 @@
     <Description>
       <p>The eligibility of a student for transportation between home and school at local public expense because of distance, disability, or other reasons.</p>
     </Description>
-    <Type ref="ExternalCodeSets" name="NCES0721TransportationAtPublicExpenseEligibilityType"></Type>
+    <Type name="xs:token"/>
   </Item>
-
-
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
-
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
-    <StudentTransportInfo RefId="D3E34B359D75101A8C3D00AA001A1652" StudentPersonalRefId="C2F23F450B86234B9B3D00AA001A1652"
-      Type="Inbound" DayOfWeek="MoWeFr" SchoolInfoRefId="B7A34E561C97345C0A4E11BB112B2753">
+    <StudentTransportInfo RefId="D3E34B359D75101A8C3D00AA001A1652" StudentPersonalRefId="C2F23F450B86234B9B3D00AA001A1652" Type="Inbound" DayOfWeek="MoWeFr" SchoolInfoRefId="B7A34E561C97345C0A4E11BB112B2753">
       <Eligibility>Bus</Eligibility>
       <HomeToSchoolDistance Unit="m">2.4</HomeToSchoolDistance>
       <WalkToStopDistance Unit="m">.4</WalkToStopDistance>

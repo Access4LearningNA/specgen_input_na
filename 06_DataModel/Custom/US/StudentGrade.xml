@@ -1,14 +1,6 @@
-<DataObject name="StudentGrade"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="StudentGrade">
   <EventsReported>true</EventsReported>
-
   <Key>@RefId</Key>
-
   <Intro>
     <p>
       This is an object that a LMS or other application will utilize to provide grades about students in a section to a grade book.
@@ -17,7 +9,6 @@
       This object is available to facilitate communication of the final grade from the LMS to the grade book.
     </p>
   </Intro>
-
   <Item>
     <Element>StudentGrade</Element>
     <Description>
@@ -32,7 +23,7 @@
         The Id (GUID) that uniquely identifies this object.
       </p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Element>StudentPersonalRefId</Element>
@@ -42,7 +33,7 @@
         The Id (GUID) that uniquely identifies the <code>StudentPersonal</code> object that this item refers to.
       </p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>SectionInfoRefId</Element>
@@ -52,7 +43,7 @@
         The Id (GUID) that uniquely identifies the <code>SectionInfo</code> object that this item refers to.
       </p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>SchoolInfoRefId</Element>
@@ -60,7 +51,7 @@
     <Description>
       <p>The Id (GUID) that uniquely identifies the school that these values apply to.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>SchoolYear</Element>
@@ -70,30 +61,26 @@
         School year for which this information is applicable, expressed as the four-digit year in which the school year ends (e.g., <code>2008</code> for the 2007-08 school year).
       </p>
     </Description>
-    <Type ref="CommonTypes" name="SchoolYearType"></Type>
+    <Type ref="CommonTypes" name="SchoolYearType"/>
   </Item>
-
   <Item>
     <Element>Grade</Element>
     <Characteristics>M</Characteristics>
     <Description>
       This is the one grade given for this student and section. At least one numeric, percentage or letter must be provided as defined in the fields below. If <code>Grade/Numeric</code> is entered, <code>Grade/OutOf</code>, <code>Grade/Low</code> and <code>Grade/High</code> must also be entered.
     </Description>
-     <Type ref="CommonTypes" name="StudentGradeGradeType"></Type>
- </Item>
-
-
+    <Type ref="CommonTypes" name="StudentGradeGradeType"/>
+  </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-
   <xhtml:Example xmlns="">
     <StudentGrade RefId="0E54211E78674FC9B32E5FD5AC2A4CE0">
       <StudentPersonalRefId>A137D78E00BC744EF90AF2871CEB90A2</StudentPersonalRefId>

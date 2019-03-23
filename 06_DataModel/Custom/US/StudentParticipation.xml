@@ -1,17 +1,11 @@
-<DataObject name="StudentParticipation"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:xi="http://www.w3.org/2001/XInclude"
-	xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-	xmlns="http://sifassociation.org/SpecGen">
-	<Key>@RefId</Key>
-	<EventsReported>true</EventsReported>
-	<Item>
-		<Element>StudentParticipation</Element>
-		<Description>
-			<p>This object contains information pertaining to student eligibility for and participation in an individualized special program such as special education, ESL, Section 504, etc.</p>
-			<p>
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="StudentParticipation">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>StudentParticipation</Element>
+    <Description>
+      <p>This object contains information pertaining to student eligibility for and participation in an individualized special program such as special education, ESL, Section 504, etc.</p>
+      <p>
         Multiple instances of this object may be transmitted for a particular student because the student may participate in multiple programs
         and because the details of a student's participation in a given program may change over time.  A separate instance of this object must be
         generated for each program in which the student participates, and the <code>ProgramType</code> element is used to identify the particular
@@ -19,569 +13,578 @@
         be generated with the appropriate value in the <code>ProgramType</code> element, the effective date of the new profile in
         <code>StudentParticipationAsOfDate</code>, and a new <code>RefId</code>.
       </p>
-		</Description>
-	</Item>
-	<Item>
-		<Attribute>RefId</Attribute>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>This is the unique identification code</p>
-		</Description>
-		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>
-	<Item>
-		<Attribute>StudentPersonalRefId</Attribute>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>The GUID of the student that this object is linked to.</p>
-		</Description>
-		<Type ref="CommonTypes" name="IdRefType"/>
-	</Item>
-
-	<Item>
-		<Element>StudentParticipationAsOfDate</Element>
-		<Type name="xs:date"/>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>This is the unique identification code</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"/>
+  </Item>
+  <Item>
+    <Attribute>StudentPersonalRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The GUID of the student that this object is linked to.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+    <Element>StudentParticipationAsOfDate</Element>
+    <Type name="xs:date"/>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>
         Effective date (NOT the entry date) of this <code>StudentParticipation</code> instance for the identified student and program.
         Each time there is a change to the student's program participation profile, a new instance of this object is to be generated with
         the appropriate <code>StudentParticipationAsOfDate</code> and a new <code>RefId</code>.
       </p>
-		</Description>
-	</Item>
-	<Item>
-		<Element>ProgramType</Element>
-		<Characteristics>M</Characteristics>
-		<Type ref="CommonTypes" name="ProgramTypeType"/>
-	</Item>
-
-		<Item>
-		<Element>ProgramName</Element>
-		<Type name="xs:normalizedString"/>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>The name or title of the program.</p>
-		</Description>
-	</Item>
-	<Item>
-		<Element>ProgramFundingSources</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="ProgramFundingSourceListType"/>
-	</Item>
-	<Item>
-		<Element>ManagingPublicAgency</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>The GUID of the public agency (a district / LEA) to which the "ManagingSchool" reports / belongs.</p>
-		</Description>
-		<Type ref="CommonTypes" name="IdRefType"/>
-	</Item>
-	<Item>
-		<Attribute>SIF_RefObject</Attribute>
-		<Characteristics>M</Characteristics>
-		<Values>
-			<Value>
-				<Code>LEAInfo</Code>
-			</Value>
-		</Values>
-	</Item>
-	<Item>
-		<Element>ManagingSchool</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>The GUID of the school responsible for coordinating the student's program participation.</p>
-		</Description>
-		<Type ref="CommonTypes" name="IdRefType"/>
-	</Item>
-	<Item>
-		<Attribute>SIF_RefObject</Attribute>
-		<Characteristics>M</Characteristics>
-		<Values>
-			<Value>
-				<Code>SchoolInfo</Code>
-			</Value>
-		</Values>
-	</Item>
-	<Item>
-		<Element>PartCTransitionMeetingNotHeldReasons</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="PartCTransitionMeetingNotHeldReasonListType"/>
-	</Item>
-	<Item>
-		<Element>PartCTransitionMeetingDate</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Date the transition meeting was held for a Part C child.</p>
-		</Description>
-		<Type name="xs:date"/>
-	</Item>
-	<Item>
-		<Element>PartCTransitionMeetingOutcomes</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="PartCTransitionMeetingOutcomeListType"/>
-	</Item>
-	<Item>
-		<Element>ReferralDate</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Date student was referred for evaluation/program participation.</p>
-		</Description>
-		<Type name="xs:date"/>
-	</Item>
-	<Item>
-		<Element>ReferralSource</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="ReferralSourceType"/>
-	</Item>
-	<Item>
-		<Element>ProgramStatus</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="ProgramStatusType"/>
-	</Item>
-	<Item>
-		<Element>GiftedEligibilityCriteria</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>State / local code used to determine eligibility for Gifted / Talented program.</p>
-		</Description>
-		<Type name="xs:token"/>
-	</Item>
-	<Item>
-		<Element>EvaluationParentalConsentDate</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Date parent(s) consented to completion of evaluation of child for program participation.</p>
-		</Description>
-		<Type name="xs:date"/>
-	</Item>
-	<Item>
-		<Element>EvaluationDate</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Date the evaluation/assessment process for student was completed.</p>
-		</Description>
-		<Type name="xs:date"/>
-	</Item>
-	<Item>
-		<Element>EvaluationExtensionDate</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Actual date by which evaluation must be completed (for state use in determining timeliness in event that parent and LEA agreed to an extension beyond normal state deadline).</p>
-		</Description>
-		<Type name="xs:date"/>
-	</Item>
-	<Item>
-		<Element>ExtensionComments</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Contains any comments on the extension.  Optional even if an EvaluationExtensionDate is present.</p>
-		</Description>
-		<Type name="xs:string"/>
-	</Item>
-	<Item>
-		<Element>ReevaluationDate</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Date students will be reevaluated for continued placement in a support program(s).</p>
-		</Description>
-		<Type name="xs:date"/>
-	</Item>
-	<Item>
-		<Element>ExceptionalityCategories</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="ExceptionalityCategoryListType"/>
-	</Item>
-	<Item>
-		<Element>ProgramEligibilityDate</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Date student is eligible for beginning the support program(s).</p>
-		</Description>
-		<Type name="xs:date"/>
-	</Item>
-	<Item>
-		<Element>ProgramPlanType</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="ProgramPlanTypeType"/>
-	</Item>
-	<Item>
-		<Element>ProgramPlanDate</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Date the most recent program plan was completed and approved by the team responsible for developing it.  The date the parent consented to placement is NOREPDate.</p>
-		</Description>
-		<Type name="xs:date"/>
-	</Item>
-	<Item>
-		<Element>ProgramPlanEffectiveDate</Element>
-		<Characteristics>O</Characteristics>
-		<Type name="xs:date"/>
-		<Description>Date by which the plan must be implemented for the student.</Description>
-	</Item>
-	<Item>
-		<Element>NOREPDate</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Date the Notice of Recommended Educational Placement was signed and approved by the parent / guardian of the student.</p>
-		</Description>
-		<Type name="xs:date"/>
-	</Item>
-	<Item>
-		<Element>PlacementParentalConsentDate</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Date the parent(s) consented to the proposed placement.</p>
-		</Description>
-		<Type name="xs:date"/>
-	</Item>
-	<Item>
-		<Element>ProgramPlacementDate</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Date student began the support program.</p>
-		</Description>
-		<Type name="xs:date"/>
-	</Item>
-	<Item>
-		<Element>LeastRestrictiveEnvironment</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="LeastRestrictiveEnvironmentType"/>
-	</Item>
-	<Item>
-		<Element>ExtendedSchoolYear</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>For special education, indicates whether Extended School Year (ESY) / summer  services have been determined as necessary</p>
-		</Description>
-		<Type name="xs:boolean"/>
-	</Item>
-	<Item>
-		<Element>ExtendedDay</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>For special education, indicates whether Extended School Day (ESD) services have been determined as necessary.</p>
-		</Description>
-		<Type name="xs:boolean"/>
-	</Item>
-	<Item>
-		<Element>ProgramAvailability</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="ProgramAvailabilityType"/>
-	</Item>
-	<Item>
-		<Element>PrivateNotPlacedByPublic</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Indicates whether the student is enrolled by a parent/guardian in a private school and has special education/services provided at public expense.  Necessary for the OSEP federal IDEA reports..</p>
-		</Description>
-		<Type name="xs:boolean"/>
-	</Item>
-	<Item>
-		<Element>ProgramReviewDate</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Projected date of the program plan review (for IDEA, the projected annual IEP review date).</p>
-		</Description>
-		<Type name="xs:date"/>
-	</Item>
-	<Item>
-		<Element>FBADate</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>The most recent date on which the IEP Team completed a full and comprehensive review of all functional behavioral assessment materials.</p>
-		</Description>
-		<Type name="xs:date"/>
-	</Item>
-	<Item>
-		<Element>BIPDate</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>The most recent date on which the IEP Team approved a behavioral intervention plan.</p>
-		</Description>
-		<Type name="xs:date"/>
-	</Item>
-	<Item>
-		<Element>ProgramExitDate</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Date student exited support program(s).</p>
-		</Description>
-		<Type name="xs:date"/>
-	</Item>
-	<Item>
-		<Element>ProgramExitReason</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="ProgramExitReasonType"/>
-	</Item>
-
-	<Item>
-		<Element>ProjectedExitDate</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>The date on which it is projected that a student will exit program.  Has typically been provided when student turns 14; under new IDEA, may change to 16.</p>
-		</Description>
-		<Type name="xs:date"/>
-	</Item>
-	<Item>
-		<Element>ProjectedExitReason</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Review by program / state.  May be required if a ProjectedExitDate is present.  The projected reason for a student's exit from program.</p>
-		</Description>
-		<Type ref="CommonTypes" name="SourcedCodesetType"/>
-	</Item>
-	<Item>
-		<Element>PlannedAssessmentParticipation</Element>
-		<Characteristics>O</Characteristics>
-			<Description>
-				<p>The student's planned level of participation in statewide assessments.</p>
-			</Description>
-			<ItemExample>Accommodations - Students with Disabilities</ItemExample>
-			<ItemExample>Accommodations - Students with temporary or long-term disabilities and Section 504 students</ItemExample>
-			<ItemExample>Accommodations - English Language Learners</ItemExample>
-			<ItemExample>Exempted Students - Transfer</ItemExample>
-			<ItemExample>Excused - Prior to Test</ItemExample>
-			<ItemExample>Excused - During Testing</ItemExample>
-		<Type ref="CommonTypes" name="SourcedCodesetType"/>
-	</Item>
-	<Item>
-		<Element>TransitionPlanning</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Purpose / goal for recommended transition planning services.</p>
-		</Description>
-		<ItemExample>Postsecondary Ed - transition services should be targeted toward postsecondary education</ItemExample>
-		<ItemExample>Employment - transition services should be targeted toward employment</ItemExample>
-		<ItemExample>Community Living - transition services should be targeted toward community living</ItemExample>
-		<ItemExample>NA - not applicable (e.g., student is younger than age 16)</ItemExample>
-		<Type ref="CommonTypes" name="SourcedCodesetType"/>
-	</Item>
-	<Item>
-		<Element>StudentSpecialEducationFTE</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Calculated ratio of time the student is in a special ed setting.  Values range from 0.00 to 1.00.  If the student is in a special ed setting 25% of the time, the value is .25; if 100% of the time, the value is 1.00.</p>
-		</Description>
-		<Type name="xs:decimal"/>
-		<Facets>
-			<xs:minInclusive value="0"/>
-			<xs:maxInclusive value="1"/>
-			<xs:fractionDigits value="2"/>
-		</Facets>
-	</Item>
-	<Item>
-		<Element>EntryPerson</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Identification / name of the person who created the transaction that led to the creation of this instance of the object.</p>
-		</Description>
-		<Type name="xs:normalizedString"/>
-	</Item>
-	<Item>
-		<Element>ParticipationContact</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Primary contact for this record.</p>
-		</Description>
-		<Type name="xs:normalizedString"/>
-	</Item>
-	<Item>
-		<Element>AdditionalProgramAvailabilityList</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p/>
-		</Description>
-		<Type ref="CommonTypes" name="ProgramAvailabilityListType"/>
-	</Item>
-	<Item>
-		<Element>CaseManager</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>The name of the case manager responsible for the academic plans of this student.</p>
-		</Description>
-		<Type name='xs:normalizedString'/>
-	</Item>
-	<Item>
-		<Element>SIF_Metadata</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="SIF_MetadataType"/>
-	</Item>
-	<Item>
-		<Element>SIF_ExtendedElements</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
-	</Item>
-	<xhtml:Example name="StudentParticipation - Example 1" xmlns="">
-		<StudentParticipation RefId="D3E34B359D75101A8C3D00AA001A1652" StudentPersonalRefId="A2E34F59A742C1A4B3D11CC002B163A2">
-			<StudentParticipationAsOfDate>2006-07-13</StudentParticipationAsOfDate>
-			<ProgramType>
-				<Code>0270</Code>
-				<OtherCodeList>
-					<OtherCode Codeset="StateProvince">0839</OtherCode>
-				</OtherCodeList>
-			</ProgramType>
-			<ProgramName>Digital Learning Workshop</ProgramName>
-			<ProgramFundingSources>
-				<ProgramFundingSource>
-					<Code>0797</Code>
-				</ProgramFundingSource>
-			</ProgramFundingSources>
-			<ManagingPublicAgency SIF_RefObject="LEAInfo">F3434F59A742C1A4B3D11CC002B163A2</ManagingPublicAgency>
-			<ManagingSchool SIF_RefObject="SchoolInfo">D93F4D183A42C1A4B3D11CC002B163A2</ManagingSchool>
-			<PartCTransitionMeetingDate>2006-04-09</PartCTransitionMeetingDate>
-			<PartCTransitionMeetingOutcomes>
-				<PartCTransitionMeetingOutcome>
-					<Code>S001</Code>
-				</PartCTransitionMeetingOutcome>
-			</PartCTransitionMeetingOutcomes>
-			<ReferralDate>2005-09-04</ReferralDate>
-			<ReferralSource>
-				<Code>2148</Code>
-			</ReferralSource>
-			<ProgramStatus>
-				<Code>S004</Code>
-			</ProgramStatus>
-			<GiftedEligibilityCriteria>G938</GiftedEligibilityCriteria>
-			<EvaluationParentalConsentDate>2005-11-09</EvaluationParentalConsentDate>
-			<EvaluationDate>2005-11-25</EvaluationDate>
-			<EvaluationExtensionDate>2005-12-10</EvaluationExtensionDate>
-			<ExtensionComments>Reason that extension was allowed</ExtensionComments>
-			<ReevaluationDate>2008-11-25</ReevaluationDate>
-			<ExceptionalityCategories>
-				<ExceptionalityCategory>
-					<Code>2121</Code>
-					<ExceptionalityPriority>Primary</ExceptionalityPriority>
-				</ExceptionalityCategory>
-				<ExceptionalityCategory>
-					<Code>2134</Code>
-					<ExceptionalityPriority>Secondary</ExceptionalityPriority>
-				</ExceptionalityCategory>
-				<ExceptionalityCategory>
-					<Code>2127</Code>
-					<ExceptionalityPriority>Tertiary</ExceptionalityPriority>
-				</ExceptionalityCategory>
-			</ExceptionalityCategories>
-			<ProgramEligibilityDate>2006-01-04</ProgramEligibilityDate>
-			<ProgramPlanType>
-				<Code>2196</Code>
-			</ProgramPlanType>
-			<ProgramPlanDate>2006-01-02</ProgramPlanDate>
-			<NOREPDate>2006-01-09</NOREPDate>
-			<PlacementParentalConsentDate>2006-01-02</PlacementParentalConsentDate>
-			<ProgramPlacementDate>2006-01-09</ProgramPlacementDate>
-			<LeastRestrictiveEnvironment>
-				<Code>0135</Code>
-			</LeastRestrictiveEnvironment>
-			<ExtendedSchoolYear>true</ExtendedSchoolYear>
-			<ExtendedDay>false</ExtendedDay>
-			<ProgramAvailability>
-				<Code>0231</Code>
-				<OtherCodeList>
-					<OtherCode Codeset="StateProvince">2674</OtherCode>
-				</OtherCodeList>
-			</ProgramAvailability>
-			<PrivateNotPlacedByPublic>true</PrivateNotPlacedByPublic>
-			<ProgramReviewDate>2007-01-09</ProgramReviewDate>
-			<FBADate>2006-04-15</FBADate>
-			<BIPDate>2006-04-24</BIPDate>
-			<ProgramExitReason>
-				<Code>2216</Code>
-			</ProgramExitReason>
-			<ProjectedExitDate>2009-01-04</ProjectedExitDate>
-			<ProjectedExitReason Codeset="StateProvince">9568</ProjectedExitReason>
-			<PlannedAssessmentParticipation Codeset="StateProvince">Accommodations - Students with Disabilities</PlannedAssessmentParticipation>
-			<TransitionPlanning Codeset="StateProvince">Postsecondary Ed - transition services should be targeted toward postsecondary education</TransitionPlanning>
-			<StudentSpecialEducationFTE>0.45</StudentSpecialEducationFTE>
-			<EntryPerson>Jill Anderson</EntryPerson>
-			<ParticipationContact>John Mason</ParticipationContact>
-		</StudentParticipation>
-	</xhtml:Example>
-	<xhtml:Example name="StudentParticipation - Example 2" xmlns="">
-		<StudentParticipation RefId="D3E34B359D75101A8C3D00AA001A1652" StudentPersonalRefId="A2E34F59A742C1A4B3D11CC002B163A2">
-			<StudentParticipationAsOfDate>2006-07-13</StudentParticipationAsOfDate>
-			<ProgramType>
-				<Code>0270</Code>
-				<OtherCodeList>
-					<OtherCode Codeset="StateProvince">0839</OtherCode>
-				</OtherCodeList>
-			</ProgramType>
-			<ProgramFundingSources>
-				<ProgramFundingSource>
-					<Code>0797</Code>
-				</ProgramFundingSource>
-			</ProgramFundingSources>
-			<ManagingPublicAgency SIF_RefObject="LEAInfo">F3434F59A742C1A4B3D11CC002B163A2</ManagingPublicAgency>
-			<ManagingSchool SIF_RefObject="SchoolInfo">D93F4D183A42C1A4B3D11CC002B163A2</ManagingSchool>
-			<PartCTransitionMeetingDate>2006-04-09</PartCTransitionMeetingDate>
-			<PartCTransitionMeetingOutcomes>
-				<PartCTransitionMeetingOutcome>
-					<Code>S001</Code>
-				</PartCTransitionMeetingOutcome>
-			</PartCTransitionMeetingOutcomes>
-			<ReferralDate>2005-09-04</ReferralDate>
-			<ReferralSource>
-				<Code>2148</Code>
-			</ReferralSource>
-			<ProgramStatus>
-				<Code>S004</Code>
-			</ProgramStatus>
-			<GiftedEligibilityCriteria>G938</GiftedEligibilityCriteria>
-			<EvaluationParentalConsentDate>2005-11-09</EvaluationParentalConsentDate>
-			<EvaluationDate>2005-11-25</EvaluationDate>
-			<EvaluationExtensionDate>2005-12-10</EvaluationExtensionDate>
-			<ExtensionComments>Reason that extension was allowed</ExtensionComments>
-			<ReevaluationDate>2008-11-25</ReevaluationDate>
-			<ExceptionalityCategories>
-				<ExceptionalityCategory>
-					<Code>2121</Code>
-					<ExceptionalityPriority>Primary</ExceptionalityPriority>
-				</ExceptionalityCategory>
-				<ExceptionalityCategory>
-					<Code>2134</Code>
-					<ExceptionalityPriority>Secondary</ExceptionalityPriority>
-				</ExceptionalityCategory>
-				<ExceptionalityCategory>
-					<Code>2127</Code>
-					<ExceptionalityPriority>Tertiary</ExceptionalityPriority>
-				</ExceptionalityCategory>
-			</ExceptionalityCategories>
-			<ProgramEligibilityDate>2006-01-04</ProgramEligibilityDate>
-			<ProgramPlanType>
-				<Code>2196</Code>
-			</ProgramPlanType>
-			<ProgramPlanDate>2006-01-02</ProgramPlanDate>
-			<NOREPDate>2006-01-09</NOREPDate>
-			<PlacementParentalConsentDate>2006-01-02</PlacementParentalConsentDate>
-			<ProgramPlacementDate>2006-01-09</ProgramPlacementDate>
-			<LeastRestrictiveEnvironment>
-				<Code>0135</Code>
-			</LeastRestrictiveEnvironment>
-			<ExtendedSchoolYear>true</ExtendedSchoolYear>
-			<ExtendedDay>false</ExtendedDay>
-			<PrivateNotPlacedByPublic>true</PrivateNotPlacedByPublic>
-			<ProgramReviewDate>2007-01-09</ProgramReviewDate>
-			<FBADate>2006-04-15</FBADate>
-			<BIPDate>2006-04-24</BIPDate>
-			<ProgramExitReason>
-				<Code>2216</Code>
-			</ProgramExitReason>
-			<ProjectedExitDate>2009-01-04</ProjectedExitDate>
-			<ProjectedExitReason Codeset="StateProvince">9568</ProjectedExitReason>
-			<PlannedAssessmentParticipation Codeset="StateProvince">Accommodations - Students with Disabilities</PlannedAssessmentParticipation>
-			<TransitionPlanning Codeset="StateProvince">Postsecondary Ed - transition services should be targeted toward postsecondary education</TransitionPlanning>
-			<StudentSpecialEducationFTE>0.45</StudentSpecialEducationFTE>
-			<EntryPerson>Jill Anderson</EntryPerson>
-			<ParticipationContact>John Mason</ParticipationContact>
-			<AdditionalProgramAvailabilityList>
-				<ProgramAvailability>
-					<Code>0231</Code>
-					<OtherCodeList>
-						<OtherCode Codeset="StateProvince">2674</OtherCode>
-					</OtherCodeList>
-				</ProgramAvailability>
-			</AdditionalProgramAvailabilityList>
-			<CaseManager>Carol Martinson</CaseManager>
-		</StudentParticipation>
-	</xhtml:Example>
+    </Description>
+    <cedsId>000590</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000590</cedsURL>
+  </Item>
+  <Item>
+    <Element>ProgramType</Element>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="ProgramTypeType"/>
+  </Item>
+  <Item>
+    <Element>ProgramName</Element>
+    <Type name="xs:normalizedString"/>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The name or title of the program.</p>
+    </Description>
+    <cedsId>000626</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000626</cedsURL>
+  </Item>
+  <Item>
+    <Element>ProgramFundingSources</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="ProgramFundingSourceListType"/>
+  </Item>
+  <Item>
+    <Element>ManagingPublicAgency</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The GUID of the public agency (a district / LEA) to which the "ManagingSchool" reports / belongs.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+    <Values>
+      <Value>
+        <Code>LEAInfo</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>ManagingSchool</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The GUID of the school responsible for coordinating the student's program participation.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+    <Attribute>SIF_RefObject</Attribute>
+    <Characteristics>M</Characteristics>
+    <Values>
+      <Value>
+        <Code>SchoolInfo</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>PartCTransitionMeetingNotHeldReasons</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="PartCTransitionMeetingNotHeldReasonListType"/>
+  </Item>
+  <Item>
+    <Element>PartCTransitionMeetingDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date the transition meeting was held for a Part C child.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>
+  <Item>
+    <Element>PartCTransitionMeetingOutcomes</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="PartCTransitionMeetingOutcomeListType"/>
+  </Item>
+  <Item>
+    <Element>ReferralDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date student was referred for evaluation/program participation.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>
+  <Item>
+    <Element>ReferralSource</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="ReferralSourceType"/>
+  </Item>
+  <Item>
+    <Element>ProgramStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="ProgramStatusType"/>
+  </Item>
+  <Item>
+    <Element>GiftedEligibilityCriteria</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>State / local code used to determine eligibility for Gifted / Talented program.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>EvaluationParentalConsentDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date parent(s) consented to completion of evaluation of child for program participation.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>
+  <Item>
+    <Element>EvaluationDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date the evaluation/assessment process for student was completed.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>
+  <Item>
+    <Element>EvaluationExtensionDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Actual date by which evaluation must be completed (for state use in determining timeliness in event that parent and LEA agreed to an extension beyond normal state deadline).</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>
+  <Item>
+    <Element>ExtensionComments</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Contains any comments on the extension.  Optional even if an EvaluationExtensionDate is present.</p>
+    </Description>
+    <Type name="xs:string"/>
+  </Item>
+  <Item>
+    <Element>ReevaluationDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date students will be reevaluated for continued placement in a support program(s).</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>
+  <Item>
+    <Element>ExceptionalityCategories</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="ExceptionalityCategoryListType"/>
+  </Item>
+  <Item>
+    <Element>ProgramEligibilityDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date student is eligible for beginning the support program(s).</p>
+    </Description>
+    <Type name="xs:date"/>
+    <cedsId>000590</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000590</cedsURL>
+  </Item>
+  <Item>
+    <Element>ProgramPlanType</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="ProgramPlanTypeType"/>
+  </Item>
+  <Item>
+    <Element>ProgramPlanDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date the most recent program plan was completed and approved by the team responsible for developing it.  The date the parent consented to placement is NOREPDate.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>
+  <Item>
+    <Element>ProgramPlanEffectiveDate</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:date"/>
+    <Description>Date by which the plan must be implemented for the student.</Description>
+  </Item>
+  <Item>
+    <Element>NOREPDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date the Notice of Recommended Educational Placement was signed and approved by the parent / guardian of the student.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>
+  <Item>
+    <Element>PlacementParentalConsentDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date the parent(s) consented to the proposed placement.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>
+  <Item>
+    <Element>ProgramPlacementDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date student began the support program.</p>
+    </Description>
+    <Type name="xs:date"/>
+    <cedsId>000590</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000590</cedsURL>
+  </Item>
+  <Item>
+    <Element>LeastRestrictiveEnvironment</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="LeastRestrictiveEnvironmentType"/>
+  </Item>
+  <Item>
+    <Element>ExtendedSchoolYear</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>For special education, indicates whether Extended School Year (ESY) / summer  services have been determined as necessary</p>
+    </Description>
+    <Type name="xs:boolean"/>
+  </Item>
+  <Item>
+    <Element>ExtendedDay</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>For special education, indicates whether Extended School Day (ESD) services have been determined as necessary.</p>
+    </Description>
+    <Type name="xs:boolean"/>
+  </Item>
+  <Item>
+    <Element>ProgramAvailability</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="ProgramAvailabilityType"/>
+  </Item>
+  <Item>
+    <Element>PrivateNotPlacedByPublic</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Indicates whether the student is enrolled by a parent/guardian in a private school and has special education/services provided at public expense.  Necessary for the OSEP federal IDEA reports..</p>
+    </Description>
+    <Type name="xs:boolean"/>
+  </Item>
+  <Item>
+    <Element>ProgramReviewDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Projected date of the program plan review (for IDEA, the projected annual IEP review date).</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>
+  <Item>
+    <Element>FBADate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The most recent date on which the IEP Team completed a full and comprehensive review of all functional behavioral assessment materials.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>
+  <Item>
+    <Element>BIPDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The most recent date on which the IEP Team approved a behavioral intervention plan.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>
+  <Item>
+    <Element>ProgramExitDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date student exited support program(s).</p>
+    </Description>
+    <Type name="xs:date"/>
+    <cedsId>000263</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000263</cedsURL>
+  </Item>
+  <Item>
+    <Element>ProgramExitReason</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="ProgramExitReasonType"/>
+  </Item>
+  <Item>
+    <Element>ProjectedExitDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The date on which it is projected that a student will exit program.  Has typically been provided when student turns 14; under new IDEA, may change to 16.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>
+  <Item>
+    <Element>ProjectedExitReason</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Review by program / state.  May be required if a ProjectedExitDate is present.  The projected reason for a student's exit from program.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SourcedCodesetType"/>
+    <cedsId>000222</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000222</cedsURL>
+  </Item>
+  <Item>
+    <Element>PlannedAssessmentParticipation</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The student's planned level of participation in statewide assessments.</p>
+    </Description>
+    <ItemExample>Accommodations - Students with Disabilities</ItemExample>
+    <ItemExample>Accommodations - Students with temporary or long-term disabilities and Section 504 students</ItemExample>
+    <ItemExample>Accommodations - English Language Learners</ItemExample>
+    <ItemExample>Exempted Students - Transfer</ItemExample>
+    <ItemExample>Excused - Prior to Test</ItemExample>
+    <ItemExample>Excused - During Testing</ItemExample>
+    <Type ref="CommonTypes" name="SourcedCodesetType"/>
+  </Item>
+  <Item>
+    <Element>TransitionPlanning</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Purpose / goal for recommended transition planning services.</p>
+    </Description>
+    <ItemExample>Postsecondary Ed - transition services should be targeted toward postsecondary education</ItemExample>
+    <ItemExample>Employment - transition services should be targeted toward employment</ItemExample>
+    <ItemExample>Community Living - transition services should be targeted toward community living</ItemExample>
+    <ItemExample>NA - not applicable (e.g., student is younger than age 16)</ItemExample>
+    <Type ref="CommonTypes" name="SourcedCodesetType"/>
+  </Item>
+  <Item>
+    <Element>StudentSpecialEducationFTE</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Calculated ratio of time the student is in a special ed setting.  Values range from 0.00 to 1.00.  If the student is in a special ed setting 25% of the time, the value is .25; if 100% of the time, the value is 1.00.</p>
+    </Description>
+    <Type name="xs:decimal"/>
+    <Facets>
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="1"/>
+      <xs:fractionDigits value="2"/>
+    </Facets>
+  </Item>
+  <Item>
+    <Element>EntryPerson</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Identification / name of the person who created the transaction that led to the creation of this instance of the object.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+  </Item>
+  <Item>
+    <Element>ParticipationContact</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Primary contact for this record.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+  </Item>
+  <Item>
+    <Element>AdditionalProgramAvailabilityList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p/>
+    </Description>
+    <Type ref="CommonTypes" name="ProgramAvailabilityListType"/>
+  </Item>
+  <Item>
+    <Element>CaseManager</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The name of the case manager responsible for the academic plans of this student.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+  </Item>
+  <xhtml:Example xmlns="" name="StudentParticipation - Example 1">
+    <StudentParticipation RefId="D3E34B359D75101A8C3D00AA001A1652" StudentPersonalRefId="A2E34F59A742C1A4B3D11CC002B163A2">
+      <StudentParticipationAsOfDate>2006-07-13</StudentParticipationAsOfDate>
+      <ProgramType>
+        <Code>0270</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">0839</OtherCode>
+        </OtherCodeList>
+      </ProgramType>
+      <ProgramName>Digital Learning Workshop</ProgramName>
+      <ProgramFundingSources>
+        <ProgramFundingSource>
+          <Code>0797</Code>
+        </ProgramFundingSource>
+      </ProgramFundingSources>
+      <ManagingPublicAgency SIF_RefObject="LEAInfo">F3434F59A742C1A4B3D11CC002B163A2</ManagingPublicAgency>
+      <ManagingSchool SIF_RefObject="SchoolInfo">D93F4D183A42C1A4B3D11CC002B163A2</ManagingSchool>
+      <PartCTransitionMeetingDate>2006-04-09</PartCTransitionMeetingDate>
+      <PartCTransitionMeetingOutcomes>
+        <PartCTransitionMeetingOutcome>
+          <Code>S001</Code>
+        </PartCTransitionMeetingOutcome>
+      </PartCTransitionMeetingOutcomes>
+      <ReferralDate>2005-09-04</ReferralDate>
+      <ReferralSource>
+        <Code>2148</Code>
+      </ReferralSource>
+      <ProgramStatus>
+        <Code>S004</Code>
+      </ProgramStatus>
+      <GiftedEligibilityCriteria>G938</GiftedEligibilityCriteria>
+      <EvaluationParentalConsentDate>2005-11-09</EvaluationParentalConsentDate>
+      <EvaluationDate>2005-11-25</EvaluationDate>
+      <EvaluationExtensionDate>2005-12-10</EvaluationExtensionDate>
+      <ExtensionComments>Reason that extension was allowed</ExtensionComments>
+      <ReevaluationDate>2008-11-25</ReevaluationDate>
+      <ExceptionalityCategories>
+        <ExceptionalityCategory>
+          <Code>2121</Code>
+          <ExceptionalityPriority>Primary</ExceptionalityPriority>
+        </ExceptionalityCategory>
+        <ExceptionalityCategory>
+          <Code>2134</Code>
+          <ExceptionalityPriority>Secondary</ExceptionalityPriority>
+        </ExceptionalityCategory>
+        <ExceptionalityCategory>
+          <Code>2127</Code>
+          <ExceptionalityPriority>Tertiary</ExceptionalityPriority>
+        </ExceptionalityCategory>
+      </ExceptionalityCategories>
+      <ProgramEligibilityDate>2006-01-04</ProgramEligibilityDate>
+      <ProgramPlanType>
+        <Code>2196</Code>
+      </ProgramPlanType>
+      <ProgramPlanDate>2006-01-02</ProgramPlanDate>
+      <NOREPDate>2006-01-09</NOREPDate>
+      <PlacementParentalConsentDate>2006-01-02</PlacementParentalConsentDate>
+      <ProgramPlacementDate>2006-01-09</ProgramPlacementDate>
+      <LeastRestrictiveEnvironment>
+        <Code>0135</Code>
+      </LeastRestrictiveEnvironment>
+      <ExtendedSchoolYear>true</ExtendedSchoolYear>
+      <ExtendedDay>false</ExtendedDay>
+      <ProgramAvailability>
+        <Code>0231</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">2674</OtherCode>
+        </OtherCodeList>
+      </ProgramAvailability>
+      <PrivateNotPlacedByPublic>true</PrivateNotPlacedByPublic>
+      <ProgramReviewDate>2007-01-09</ProgramReviewDate>
+      <FBADate>2006-04-15</FBADate>
+      <BIPDate>2006-04-24</BIPDate>
+      <ProgramExitReason>
+        <Code>2216</Code>
+      </ProgramExitReason>
+      <ProjectedExitDate>2009-01-04</ProjectedExitDate>
+      <ProjectedExitReason Codeset="StateProvince">9568</ProjectedExitReason>
+      <PlannedAssessmentParticipation Codeset="StateProvince">Accommodations - Students with Disabilities</PlannedAssessmentParticipation>
+      <TransitionPlanning Codeset="StateProvince">Postsecondary Ed - transition services should be targeted toward postsecondary education</TransitionPlanning>
+      <StudentSpecialEducationFTE>0.45</StudentSpecialEducationFTE>
+      <EntryPerson>Jill Anderson</EntryPerson>
+      <ParticipationContact>John Mason</ParticipationContact>
+    </StudentParticipation>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="StudentParticipation - Example 2">
+    <StudentParticipation RefId="D3E34B359D75101A8C3D00AA001A1652" StudentPersonalRefId="A2E34F59A742C1A4B3D11CC002B163A2">
+      <StudentParticipationAsOfDate>2006-07-13</StudentParticipationAsOfDate>
+      <ProgramType>
+        <Code>0270</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">0839</OtherCode>
+        </OtherCodeList>
+      </ProgramType>
+      <ProgramFundingSources>
+        <ProgramFundingSource>
+          <Code>0797</Code>
+        </ProgramFundingSource>
+      </ProgramFundingSources>
+      <ManagingPublicAgency SIF_RefObject="LEAInfo">F3434F59A742C1A4B3D11CC002B163A2</ManagingPublicAgency>
+      <ManagingSchool SIF_RefObject="SchoolInfo">D93F4D183A42C1A4B3D11CC002B163A2</ManagingSchool>
+      <PartCTransitionMeetingDate>2006-04-09</PartCTransitionMeetingDate>
+      <PartCTransitionMeetingOutcomes>
+        <PartCTransitionMeetingOutcome>
+          <Code>S001</Code>
+        </PartCTransitionMeetingOutcome>
+      </PartCTransitionMeetingOutcomes>
+      <ReferralDate>2005-09-04</ReferralDate>
+      <ReferralSource>
+        <Code>2148</Code>
+      </ReferralSource>
+      <ProgramStatus>
+        <Code>S004</Code>
+      </ProgramStatus>
+      <GiftedEligibilityCriteria>G938</GiftedEligibilityCriteria>
+      <EvaluationParentalConsentDate>2005-11-09</EvaluationParentalConsentDate>
+      <EvaluationDate>2005-11-25</EvaluationDate>
+      <EvaluationExtensionDate>2005-12-10</EvaluationExtensionDate>
+      <ExtensionComments>Reason that extension was allowed</ExtensionComments>
+      <ReevaluationDate>2008-11-25</ReevaluationDate>
+      <ExceptionalityCategories>
+        <ExceptionalityCategory>
+          <Code>2121</Code>
+          <ExceptionalityPriority>Primary</ExceptionalityPriority>
+        </ExceptionalityCategory>
+        <ExceptionalityCategory>
+          <Code>2134</Code>
+          <ExceptionalityPriority>Secondary</ExceptionalityPriority>
+        </ExceptionalityCategory>
+        <ExceptionalityCategory>
+          <Code>2127</Code>
+          <ExceptionalityPriority>Tertiary</ExceptionalityPriority>
+        </ExceptionalityCategory>
+      </ExceptionalityCategories>
+      <ProgramEligibilityDate>2006-01-04</ProgramEligibilityDate>
+      <ProgramPlanType>
+        <Code>2196</Code>
+      </ProgramPlanType>
+      <ProgramPlanDate>2006-01-02</ProgramPlanDate>
+      <NOREPDate>2006-01-09</NOREPDate>
+      <PlacementParentalConsentDate>2006-01-02</PlacementParentalConsentDate>
+      <ProgramPlacementDate>2006-01-09</ProgramPlacementDate>
+      <LeastRestrictiveEnvironment>
+        <Code>0135</Code>
+      </LeastRestrictiveEnvironment>
+      <ExtendedSchoolYear>true</ExtendedSchoolYear>
+      <ExtendedDay>false</ExtendedDay>
+      <PrivateNotPlacedByPublic>true</PrivateNotPlacedByPublic>
+      <ProgramReviewDate>2007-01-09</ProgramReviewDate>
+      <FBADate>2006-04-15</FBADate>
+      <BIPDate>2006-04-24</BIPDate>
+      <ProgramExitReason>
+        <Code>2216</Code>
+      </ProgramExitReason>
+      <ProjectedExitDate>2009-01-04</ProjectedExitDate>
+      <ProjectedExitReason Codeset="StateProvince">9568</ProjectedExitReason>
+      <PlannedAssessmentParticipation Codeset="StateProvince">Accommodations - Students with Disabilities</PlannedAssessmentParticipation>
+      <TransitionPlanning Codeset="StateProvince">Postsecondary Ed - transition services should be targeted toward postsecondary education</TransitionPlanning>
+      <StudentSpecialEducationFTE>0.45</StudentSpecialEducationFTE>
+      <EntryPerson>Jill Anderson</EntryPerson>
+      <ParticipationContact>John Mason</ParticipationContact>
+      <AdditionalProgramAvailabilityList>
+        <ProgramAvailability>
+          <Code>0231</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">2674</OtherCode>
+          </OtherCodeList>
+        </ProgramAvailability>
+      </AdditionalProgramAvailabilityList>
+      <CaseManager>Carol Martinson</CaseManager>
+    </StudentParticipation>
+  </xhtml:Example>
 </DataObject>

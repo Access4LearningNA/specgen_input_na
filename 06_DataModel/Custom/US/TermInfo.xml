@@ -1,13 +1,5 @@
-<DataObject name="TermInfo"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
-
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="TermInfo">
   <Key>@RefId</Key>
-
   <EventsReported>true</EventsReported>
   <Item>
     <Element>TermInfo</Element>
@@ -16,25 +8,22 @@
     </Description>
   </Item>
   <Item>
-
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The Id (GUID) that uniquely identifies this TermInfo entity.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
-
     <Attribute>SchoolInfoRefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The Id (GUID) that identifies the school where the term is used.</p>
     </Description>
-    <Type ref="CommonTypes" relationship="records term information for" count="*:1" name="IdRefType"></Type>
+    <Type ref="CommonTypes" relationship="records term information for" count="*:1" name="IdRefType"/>
   </Item>
   <Item>
-
     <Attribute>SchoolYear</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
@@ -42,34 +31,31 @@
         School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., <code>2007</code> for the 2006-07 school year).
       </p>
     </Description>
-    <Type ref="CommonTypes" name="SchoolYearType"></Type>
+    <Type ref="CommonTypes" name="SchoolYearType"/>
   </Item>
   <Item>
     <Element>StartDate</Element>
-
     <Characteristics>M</Characteristics>
     <Description>
       <p>Starting date of the term.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>EndDate</Element>
-
     <Characteristics>M</Characteristics>
     <Description>
       <p>Ending date of the term (CCYYMMDD).</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>Description</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>Text-based description of the term.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>RelativeDuration</Element>
@@ -86,28 +72,25 @@
   </Item>
   <Item>
     <Element>TermCode</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>Locally-defined code.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>Track</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>The name, description, or code of the track that contains this term. This is used when there are multiple tracks within a school. For instance, kindergarten commonly has a different set of terms than other grades within the school.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>TermSpan</Element>
-
     <Characteristics>O</Characteristics>
-    <Description></Description>
-    <Type ref="CommonTypes" name="TermSpanType"></Type>
+    <Description/>
+    <Type ref="CommonTypes" name="TermSpanType"/>
   </Item>
   <Item>
     <Element>MarkingTerm</Element>
@@ -115,14 +98,15 @@
     <Description>
       <p>Does this TermInfo represent a marking period?</p>
     </Description>
-    <Values>
-      <Value>
-        <Code>Yes</Code>
-      </Value>
-      <Value>
-        <Code>No</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>SchedulingTerm</Element>
@@ -130,14 +114,15 @@
     <Description>
       <p>Does this TermInfo represent a scheduling term?</p>
     </Description>
-    <Values>
-      <Value>
-        <Code>Yes</Code>
-      </Value>
-      <Value>
-        <Code>No</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>AttendanceTerm</Element>
@@ -145,29 +130,28 @@
     <Description>
       <p>Does this TermInfo represent an attendance term?</p>
     </Description>
-    <Values>
-      <Value>
-        <Code>Yes</Code>
-      </Value>
-      <Value>
-        <Code>No</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
-
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example name="TermInfo" xmlns="">
-    <TermInfo RefId="7E59D75101A80A70016375DE097A0726" SchoolInfoRefId="A2E35B359D75101A8C3D00AA001A0000"
-      SchoolYear="2004">
+  <xhtml:Example xmlns="" name="TermInfo">
+    <TermInfo RefId="7E59D75101A80A70016375DE097A0726" SchoolInfoRefId="A2E35B359D75101A8C3D00AA001A0000" SchoolYear="2004">
       <StartDate>2003-01-05</StartDate>
       <EndDate>2004-04-01</EndDate>
       <Description>Spring Semester 2004</Description>

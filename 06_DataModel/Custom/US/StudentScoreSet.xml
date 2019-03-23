@@ -1,13 +1,6 @@
-<DataObject name="StudentScoreSet"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="StudentScoreSet">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
-
   <Item>
     <Element>StudentScoreSet</Element>
     <Description>
@@ -17,7 +10,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
     <Description>
       <p>The GUID that uniquely identifies an instance of the object.</p>
     </Description>
@@ -25,15 +18,25 @@
   <Item>
     <Attribute>ScoreMetric</Attribute>
     <Characteristics>M</Characteristics>
-    <Type ref="ExternalCodeSets" name="NCES0056AssessmentReportingMethodType"></Type>
+    <Type name="xs:token"/>
     <Description>
       <p>The metric or scale used to report the score.</p>
     </Description>
+    <cedsId>000417</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000417</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>ScoreMetricCodeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Attribute>AssessmentAdministrationRefId</Attribute>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
     <Description>
       <p>The administration associated with this score set.</p>
     </Description>
@@ -41,7 +44,7 @@
   <Item>
     <Attribute>StudentPersonalRefId</Attribute>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
     <Description>
       <p>The student associated with this score set.</p>
     </Description>
@@ -49,7 +52,7 @@
   <Item>
     <Attribute>AssessmentRegistrationRefId</Attribute>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
     <Description>
       <p>The registration associated with this score set.</p>
     </Description>
@@ -60,21 +63,18 @@
     <Description>
       <p>Container for score elements. </p>
     </Description>
-     <Type ref="CommonTypes" name="StudentScoreSetScoreListType"></Type>
+    <Type ref="CommonTypes" name="StudentScoreSetScoreListType"/>
   </Item>
-
-
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-
   <xhtml:Example xmlns="">
     <StudentScoreSet RefId="5810E283E928459CBBA76EFE1963F784" ScoreMetric="0512" AssessmentAdministrationRefId="1F971F3D414E4146932566638290E6C1" StudentPersonalRefId="8F0934CC2F0448F8BBD788AA1ADE691B">
       <Scores>

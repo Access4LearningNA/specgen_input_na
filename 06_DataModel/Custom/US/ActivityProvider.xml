@@ -1,10 +1,4 @@
-<DataObject name="ActivityProvider"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="ActivityProvider">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
@@ -19,7 +13,7 @@
     <Description>
       <p>GUID for this object. The application that owns this object is responsible for generating this unique Id.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Element>LocalId</Element>
@@ -27,7 +21,7 @@
     <Description>
       <p>Local code used to represent this provider</p>
     </Description>
-    <Type ref="CommonTypes" name="LocalIdType"></Type>
+    <Type ref="CommonTypes" name="LocalIdType"/>
   </Item>
   <Item>
     <Element>StateProvinceId</Element>
@@ -35,7 +29,7 @@
     <Description>
       <p>State assigned provider number</p>
     </Description>
-    <Type ref="CommonTypes" name="StateProvinceIdType"></Type>
+    <Type ref="CommonTypes" name="StateProvinceIdType"/>
   </Item>
   <Item>
     <Element>Name</Element>
@@ -43,7 +37,7 @@
     <Description>
       <p>Name of the provider.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>Address</Element>
@@ -51,17 +45,17 @@
     <Description>
       <p>This element contains information related to provider's address information.</p>
     </Description>
-    <Type ref="CommonTypes" name="AddressType"></Type>
+    <Type ref="CommonTypes" name="AddressType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <ActivityProvider RefId="FE1078BA3261545A31905937B265CE01">

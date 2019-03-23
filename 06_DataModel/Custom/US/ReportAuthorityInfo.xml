@@ -1,146 +1,140 @@
-<DataObject name="ReportAuthorityInfo"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:xi="http://www.w3.org/2001/XInclude"
-	xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-	xmlns="http://sifassociation.org/SpecGen">
-	<Key>@RefId</Key>
-	<EventsReported>true</EventsReported>
-	<Item>
-		<Element>ReportAuthorityInfo</Element>
-		<Description>
-			<p>
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="ReportAuthorityInfo">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>ReportAuthorityInfo</Element>
+    <Description>
+      <p>
         This object contains information on authorities that provide ReportManifest objects and/or collect SIF_ReportObject
         objects, such as state departments of education, regional service agencies, or other report collecting agencies.
       </p>
-		</Description>
-	</Item>
-	<Item>
-		<Attribute>RefId</Attribute>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>The unique identifier for this agency/report authority.</p>
-		</Description>
-		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>
-	<Item>
-		<Element>AuthorityName</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Name of the agency/report authority.</p>
-		</Description>
-		<Type name="xs:normalizedString"/>
-	</Item>
-	<Item>
-		<Element>AuthorityId</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>The zone unique case-sensitive identifier for the authority. This will be the contents of the SIF_SourceId element in the header of requests for reports.</p>
-		</Description>
-		<Type name="xs:token"/>
-	</Item>
-	<Item>
-		<Element>AuthorityDepartment</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Department, office, or subdivision of the agency/report authority.</p>
-		</Description>
-		<Type name="xs:normalizedString"/>
-	</Item>
-	<Item>
-		<Element>AuthorityLevel</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Level of the authority.</p>
-		</Description>
-		<Values>
-			<Value>
-				<Code>Federal</Code>
-			</Value>
-			<Value>
-				<Code>State</Code>
-			</Value>
-			<Value>
-				<Code>RSA</Code>
-			</Value>
-			<Value>
-				<Code>LEA</Code>
-			</Value>
-			<Value>
-				<Code>School</Code>
-			</Value>
-			<Value>
-				<Code>Other</Code>
-			</Value>
-		</Values>
-	</Item>
-	<Item>
-		<Element>ContactInfo</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Information on the contact person in this agency.</p>
-		</Description>
-		<Type ref="CommonTypes" name="ContactInfoType"/>
-	</Item>
-	<Item>
-		<Element>Address</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="AddressType"/>
-	</Item>
-	<Item>
-		<Element>PhoneNumber</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="PhoneNumberType"/>
-	</Item>
-	<Item>
-		<Element>SIF_Metadata</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="SIF_MetadataType"/>
-	</Item>
-	<Item>
-		<Element>SIF_ExtendedElements</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
-	</Item>
-	<xhtml:Example xmlns="">
-		<ReportAuthorityInfo RefId="9746375937BB2A10AAB2758C46A12001">
-			<AuthorityName>XX State Department of Education</AuthorityName>
-			<AuthorityId>StateDOEDataWarehouse</AuthorityId>
-			<AuthorityDepartment>Bureau of Special Education</AuthorityDepartment>
-			<AuthorityLevel>State</AuthorityLevel>
-			<ContactInfo>
-				<Name Type="02">
-					<Prefix>Dr.</Prefix>
-					<LastName>Geisel</LastName>
-					<FirstName>Theodore</FirstName>
-					<PreferredName>Ted</PreferredName>
-				</Name>
-				<PositionTitle>State Superintendent</PositionTitle>
-				<EmailList>
-					<Email Type="Primary">drseuss@state.xx.us</Email>
-				</EmailList>
-				<PhoneNumberList>
-					<PhoneNumber Type="0096">
-						<Number>(555) 555-0001</Number>
-					</PhoneNumber>
-				</PhoneNumberList>
-			</ContactInfo>
-			<Address Type="0123">
-				<Street>
-					<Line1>6799 33rd Ave.</Line1>
-					<StreetNumber>6799</StreetNumber>
-					<StreetName>33rd</StreetName>
-					<StreetType>Ave.</StreetType>
-				</Street>
-				<City>Chicago</City>
-				<StateProvince>IL</StateProvince>
-				<Country>US</Country>
-				<PostalCode>60660</PostalCode>
-			</Address>
-			<PhoneNumber Type="0096">
-				<Number>(555) 555-0000</Number>
-			</PhoneNumber>
-		</ReportAuthorityInfo>
-	</xhtml:Example>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The unique identifier for this agency/report authority.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"/>
+  </Item>
+  <Item>
+    <Element>AuthorityName</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Name of the agency/report authority.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+  </Item>
+  <Item>
+    <Element>AuthorityId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The zone unique case-sensitive identifier for the authority. This will be the contents of the SIF_SourceId element in the header of requests for reports.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>AuthorityDepartment</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Department, office, or subdivision of the agency/report authority.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+  </Item>
+  <Item>
+    <Element>AuthorityLevel</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Level of the authority.</p>
+    </Description>
+    <Values>
+      <Value>
+        <Code>Federal</Code>
+      </Value>
+      <Value>
+        <Code>State</Code>
+      </Value>
+      <Value>
+        <Code>RSA</Code>
+      </Value>
+      <Value>
+        <Code>LEA</Code>
+      </Value>
+      <Value>
+        <Code>School</Code>
+      </Value>
+      <Value>
+        <Code>Other</Code>
+      </Value>
+    </Values>
+  </Item>
+  <Item>
+    <Element>ContactInfo</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Information on the contact person in this agency.</p>
+    </Description>
+    <Type ref="CommonTypes" name="ContactInfoType"/>
+  </Item>
+  <Item>
+    <Element>Address</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="AddressType"/>
+  </Item>
+  <Item>
+    <Element>PhoneNumber</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="PhoneNumberType"/>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+  </Item>
+  <xhtml:Example xmlns="">
+    <ReportAuthorityInfo RefId="9746375937BB2A10AAB2758C46A12001">
+      <AuthorityName>XX State Department of Education</AuthorityName>
+      <AuthorityId>StateDOEDataWarehouse</AuthorityId>
+      <AuthorityDepartment>Bureau of Special Education</AuthorityDepartment>
+      <AuthorityLevel>State</AuthorityLevel>
+      <ContactInfo>
+        <Name Type="02">
+          <Prefix>Dr.</Prefix>
+          <LastName>Geisel</LastName>
+          <FirstName>Theodore</FirstName>
+          <PreferredName>Ted</PreferredName>
+        </Name>
+        <PositionTitle>State Superintendent</PositionTitle>
+        <EmailList>
+          <Email Type="Primary">drseuss@state.xx.us</Email>
+        </EmailList>
+        <PhoneNumberList>
+          <PhoneNumber Type="0096">
+            <Number>(555) 555-0001</Number>
+          </PhoneNumber>
+        </PhoneNumberList>
+      </ContactInfo>
+      <Address Type="0123">
+        <Street>
+          <Line1>6799 33rd Ave.</Line1>
+          <StreetNumber>6799</StreetNumber>
+          <StreetName>33rd</StreetName>
+          <StreetType>Ave.</StreetType>
+        </Street>
+        <City>Chicago</City>
+        <StateProvince>IL</StateProvince>
+        <Country>US</Country>
+        <PostalCode>60660</PostalCode>
+      </Address>
+      <PhoneNumber Type="0096">
+        <Number>(555) 555-0000</Number>
+      </PhoneNumber>
+    </ReportAuthorityInfo>
+  </xhtml:Example>
 </DataObject>

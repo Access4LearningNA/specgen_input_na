@@ -1,10 +1,4 @@
-<DataObject name="ProfessionalDevelopmentActivities"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="ProfessionalDevelopmentActivities">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
@@ -22,7 +16,7 @@
     <Description>
       <p>GUID for this object.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Attribute>ActivityProviderRefId</Attribute>
@@ -30,7 +24,7 @@
     <Description>
       <p>References the ActivityProvider object</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>ProfessionalDevelopmentProgramRefId</Element>
@@ -38,7 +32,7 @@
     <Description>
       <p>Reference to associated professional development program.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>LearningStandardItems</Element>
@@ -48,7 +42,7 @@
         Associated <code>LearningStandardItem</code> objects.
       </p>
     </Description>
-    <Type ref="CommonTypes" name="LearningStandardItemRefIdListType"></Type>
+    <Type ref="CommonTypes" name="LearningStandardItemRefIdListType"/>
   </Item>
   <Item>
     <Element>LocalId</Element>
@@ -56,7 +50,7 @@
     <Description>
       <p>Locally assigned number or provider referenced course number used to represent the course or activity</p>
     </Description>
-    <Type ref="CommonTypes" name="LocalIdType"></Type>
+    <Type ref="CommonTypes" name="LocalIdType"/>
   </Item>
   <Item>
     <Element>StartDate</Element>
@@ -64,7 +58,7 @@
     <Description>
       <p>The starting date of the course or activity</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>EndDate</Element>
@@ -72,7 +66,7 @@
     <Description>
       <p>The ending date of the course or activity</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>Description</Element>
@@ -80,7 +74,7 @@
     <Description>
       <p>The description of the course or activity</p>
     </Description>
-    <Type name="xs:string"></Type>
+    <Type name="xs:string"/>
   </Item>
   <Item>
     <Element>ClockHours</Element>
@@ -88,7 +82,7 @@
     <Description>
       <p>The actual number of hours required for the course or activity</p>
     </Description>
-    <Type name="xs:decimal"></Type>
+    <Type name="xs:decimal"/>
   </Item>
   <Item>
     <Element>Credits</Element>
@@ -96,7 +90,7 @@
     <Description>
       <p>Number of credits that can be earned by completing the course or activity.</p>
     </Description>
-    <Type name="xs:decimal"></Type>
+    <Type name="xs:decimal"/>
   </Item>
   <Item>
     <Element>Stipend</Element>
@@ -117,12 +111,12 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <ProfessionalDevelopmentActivities RefId="CCD1254884AE54687FF4567DACD34653" ActivityProviderRefId="CAD125488EE54687FF4567DACD346532">

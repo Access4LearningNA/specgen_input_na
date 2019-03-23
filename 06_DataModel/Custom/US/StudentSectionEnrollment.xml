@@ -1,13 +1,5 @@
-<DataObject name="StudentSectionEnrollment"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
-
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="StudentSectionEnrollment">
   <Key>@RefId</Key>
-
   <EventsReported>true</EventsReported>
   <Item>
     <Element>StudentSectionEnrollment</Element>
@@ -16,31 +8,28 @@
     </Description>
   </Item>
   <Item>
-
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The Id (GUID) that uniquely identifies this StudentSectionEnrollment entity.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
-
     <Attribute>StudentPersonalRefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The Id (GUID) of the student to whom the enrollment information applies.</p>
     </Description>
-    <Type ref="CommonTypes" relationship="records section enrollment for" count="*:1" name="IdRefType"></Type>
+    <Type ref="CommonTypes" relationship="records section enrollment for" count="*:1" name="IdRefType"/>
   </Item>
   <Item>
-
     <Attribute>SectionInfoRefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The Id (GUID) of the section in which this student is enrolled.</p>
     </Description>
-    <Type ref="CommonTypes" relationship="records student enrollment in" count="1:1" name="IdRefType"></Type>
+    <Type ref="CommonTypes" relationship="records student enrollment in" count="1:1" name="IdRefType"/>
   </Item>
   <Item>
     <Attribute>SchoolYear</Attribute>
@@ -51,25 +40,27 @@
         year ends (e.g. <code>2007</code> for the 2006-07 school year).
       </p>
     </Description>
-    <Type ref="CommonTypes" name="SchoolYearType"></Type>
+    <Type ref="CommonTypes" name="SchoolYearType"/>
   </Item>
   <Item>
     <Element>EntryDate</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>Date from when this course section enrollment is valid.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
+    <cedsId>000097</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000097</cedsURL>
   </Item>
   <Item>
     <Element>ExitDate</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>The last school calendar day (membership day) the student was enrolled in the course section (inclusive).</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
+    <cedsId>000651</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000651</cedsURL>
   </Item>
   <Item>
     <Element>ScheduleInfoOverrideList</Element>
@@ -77,33 +68,31 @@
     <Description>
       <p>A complete replacement of the standard SectionInfo/ScheduleInfoList for this student's course enrollment.</p>
     </Description>
-     <Type ref="CommonTypes" name="ScheduleInfoOverrideListType"></Type>
+    <Type ref="CommonTypes" name="ScheduleInfoOverrideListType"/>
   </Item>
-
   <Item>
     <Element>CreditsAttempted</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Number of credits the student is attempting to earn. If present, this element's value overrides the credits in SchoolCourseInfo and SectionInfo.</p>
     </Description>
-    <Type ref="CommonTypes" name="CreditsAttemptedType"></Type>
+    <Type ref="CommonTypes" name="CreditsAttemptedType"/>
   </Item>
-
-
   <Item>
     <Element>DualCredit</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Indicates whether this course is applicable in having dual credits. This value overrides the SchoolCourseInfo DualCredit value at the student section level..</p>
     </Description>
-    <Values>
-      <Value>
-        <Code>Yes</Code>
-      </Value>
-      <Value>
-        <Code>No</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>CTEConcentrator</Element>
@@ -111,30 +100,28 @@
     <Description>
       <p>Indicates whether this is a CTE concentrator for this course.  This value overrides the SchoolCourseInfo CTEConcentrator value at the student section level..</p>
     </Description>
-    <Values>
-      <Value>
-        <Code>Yes</Code>
-      </Value>
-      <Value>
-        <Code>No</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
   </Item>
-
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
-
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example name="StudentSectionEnrollment" xmlns="">
-    <StudentSectionEnrollment RefId="983AC16598793002C3D00AA00456789D" StudentPersonalRefId="CAE293165987101A8C3D00AA00456789"
-      SectionInfoRefId="9076AB23E386112B7EA2256100BB3312" SchoolYear="2002">
+  <xhtml:Example xmlns="" name="StudentSectionEnrollment">
+    <StudentSectionEnrollment RefId="983AC16598793002C3D00AA00456789D" StudentPersonalRefId="CAE293165987101A8C3D00AA00456789" SectionInfoRefId="9076AB23E386112B7EA2256100BB3312" SchoolYear="2002">
       <EntryDate>2001-09-05</EntryDate>
       <ExitDate>2002-03-01</ExitDate>
       <ScheduleInfoOverrideList>
@@ -173,7 +160,7 @@
       </ScheduleInfoOverrideList>
       <CreditsAttempted Type="0588">1</CreditsAttempted>
       <DualCredit>Yes</DualCredit>
-	  <CTEConcentrator>Yes</CTEConcentrator>
+      <CTEConcentrator>Yes</CTEConcentrator>
     </StudentSectionEnrollment>
   </xhtml:Example>
 </DataObject>

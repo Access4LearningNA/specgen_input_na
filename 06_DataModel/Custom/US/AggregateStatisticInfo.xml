@@ -1,10 +1,4 @@
-<DataObject name="AggregateStatisticInfo"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="AggregateStatisticInfo">
   <EventsReported>true</EventsReported>
   <Key>@RefId</Key>
   <Item>
@@ -19,7 +13,7 @@
     <Description>
       <p>Key</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Element>StatisticName</Element>
@@ -27,7 +21,7 @@
     <Description>
       <p>Name of Aggregate Statistic</p>
     </Description>
-    <Type name="xs:token"></Type>
+    <Type name="xs:token"/>
     <ItemExample>Total Enrollment</ItemExample>
     <ItemExample>Diploma Recipients</ItemExample>
   </Item>
@@ -37,15 +31,15 @@
     <Description>
       <p>Rule for calculating the aggregate statistic</p>
     </Description>
-    <Type ref="CommonTypes" name="CalculationRuleType"></Type>
+    <Type ref="CommonTypes" name="CalculationRuleType"/>
   </Item>
-   <Item>
+  <Item>
     <Element>ApprovalDate</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Date for which the statistic is initially valid</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>ExpirationDate</Element>
@@ -53,7 +47,7 @@
     <Description>
       <p>Date after which the statistic is no longer valid</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>ExclusionRules</Element>
@@ -61,16 +55,15 @@
     <Description>
       <p>Rules for which statistic may not be reported.</p>
     </Description>
-    <Type ref="CommonTypes" name="ExclusionRuleListType"></Type>
+    <Type ref="CommonTypes" name="ExclusionRuleListType"/>
   </Item>
-
   <Item>
     <Element>Source</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>System providing the data: i.e., SIS, Transportation,</p>
     </Description>
-    <Type name="xs:token"></Type>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>EffectiveDate</Element>
@@ -78,7 +71,7 @@
     <Description>
       <p>Effective date of the statistic</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>DiscontinueDate</Element>
@@ -86,69 +79,39 @@
     <Description>
       <p>Discontinue date of the statistic</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>Location</Element>
     <Characteristics>O</Characteristics>
-    <Description></Description>
-    <Type ref="CommonTypes" name="AggregateStatisticInfoLocationType"></Type>
+    <Description/>
+    <Type ref="CommonTypes" name="AggregateStatisticInfoLocationType"/>
   </Item>
-
   <Item>
     <Element>Measure</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Type of the statistic.</p>
     </Description>
-    <Values>
-      <Value>
-        <Code>Count</Code>
-      </Value>
-      <Value>
-        <Code>Minimum</Code>
-      </Value>
-      <Value>
-        <Code>Maximum</Code>
-      </Value>
-      <Value>
-        <Code>Percent</Code>
-      </Value>
-      <Value>
-        <Code>Mean</Code>
-      </Value>
-      <Value>
-        <Code>Median</Code>
-      </Value>
-      <Value>
-        <Code>Mode</Code>
-      </Value>
-      <Value>
-        <Code>Sum</Code>
-      </Value>
-      <Value>
-        <Code>StandardDeviation</Code>
-      </Value>
-      <Value>
-        <Code>UnduplicatedCount</Code>
-      </Value>
-      <Value>
-        <Code>FTE</Code>
-      </Value>
-      <Value>
-        <Code>Other</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <AggregateStatisticInfo RefId="A5DECBD3161B4F5D9F46EBA64C87B002">

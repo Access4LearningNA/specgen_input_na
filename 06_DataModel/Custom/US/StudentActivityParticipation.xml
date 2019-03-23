@@ -1,47 +1,35 @@
-<DataObject name="StudentActivityParticipation"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="StudentActivityParticipation">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
-
   <Intro>
     <p>This object provides information on a co-curricular or extra-curricular activity in which a student participates during a given school year.</p>
   </Intro>
-
   <Item>
     <Element>StudentActivityParticipation</Element>
     <Description>
       <p>The co-curricular or extra-curricular activity in which the student participates.</p>
     </Description>
   </Item>
-
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
     <Description>
       <p>GUID that uniquely identifies this instance of the object.</p>
     </Description>
   </Item>
-
   <Item>
     <Attribute>StudentPersonalRefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>GUID that identifies the student participating in the activity.</Description>
     <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
-
   <Item>
     <Attribute>StudentActivityInfoRefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>GUID that identifies the activity in which the student participates.</Description>
     <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
-
   <Item>
     <Attribute>SchoolYear</Attribute>
     <Characteristics>M</Characteristics>
@@ -50,7 +38,6 @@
     </Description>
     <Type ref="CommonTypes" name="SchoolYearType"/>
   </Item>
-
   <Item>
     <Element>ParticipationComment</Element>
     <Characteristics>O</Characteristics>
@@ -62,43 +49,40 @@
     <Characteristics>O</Characteristics>
     <Description>This is the date which the activity participation is valid (inclusive).</Description>
     <Type name="xs:date"/>
+    <cedsId>000007</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000007</cedsURL>
   </Item>
-
   <Item>
     <Element>EndDate</Element>
     <Characteristics>O</Characteristics>
     <Description>This is the date through which the activity participation is valid (inclusive).  If element is supported by the publisher/responder, should contain a date if the student withdraws from the activity before the end of the school year.</Description>
     <Type name="xs:date"/>
+    <cedsId>000008</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000008</cedsURL>
   </Item>
-
   <Item>
     <Element>Role</Element>
     <Characteristics>O</Characteristics>
     <Description>Specific role the student plays in the activity (e.g., band leader, student body president).</Description>
     <Type name="xs:normalizedString"/>
   </Item>
-
   <Item>
     <Element>RecognitionList</Element>
     <Characteristics>O</Characteristics>
     <Description>List of awards and other types of recognition given to the student for this activity.</Description>
-    <Type ref="CommonTypes" name="RecognitionListType"></Type>
+    <Type ref="CommonTypes" name="RecognitionListType"/>
   </Item>
-
-
-
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-
-  <xhtml:Example name="StudentActivityParticipation" xmlns="">
+  <xhtml:Example xmlns="" name="StudentActivityParticipation">
     <StudentActivityParticipation RefId="9ECC96830E02406F926C1C4D3542D122" StudentPersonalRefId="646C5D4AC8294886A02B971695C7BC06" StudentActivityInfoRefId="6472B2610947583A463DBB345291B001" SchoolYear="2009">
       <ParticipationComment>First year of participation</ParticipationComment>
       <StartDate>2008-09-01</StartDate>
@@ -107,6 +91,5 @@
         <Recognition Code="0745"/>
       </RecognitionList>
     </StudentActivityParticipation>
-
   </xhtml:Example>
 </DataObject>

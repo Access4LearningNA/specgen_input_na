@@ -1,13 +1,5 @@
-<DataObject name="SEAInfo"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
-
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="SEAInfo">
   <Key>@RefId</Key>
-
   <EventsReported>false</EventsReported>
   <Item>
     <Element>SEAInfo</Element>
@@ -16,101 +8,92 @@
     </Description>
   </Item>
   <Item>
-
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The GUID of the SEA whose information this is.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
-
   <Item>
     <Element>LocalId</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>The locally-assigned identifier for this SEA.</p>
     </Description>
-    <Type ref="CommonTypes" name="LocalIdType"></Type>
+    <Type ref="CommonTypes" name="LocalIdType"/>
   </Item>
   <Item>
     <Element>NCESId</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>The NCES-assigned identifier for this SEA.</p>
     </Description>
-    <Type ref="CommonTypes" name="NCESIdType"></Type>
+    <Type ref="CommonTypes" name="NCESIdType"/>
   </Item>
   <Item>
     <Element>SEAName</Element>
-
     <Characteristics>M</Characteristics>
     <Description>
       <p>The full legally accepted name of the SEA.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
+    <cedsId>002191</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/002191</cedsURL>
   </Item>
   <Item>
     <Element>SEAURL</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>URL for the SEA.</p>
     </Description>
-    <Type name="xs:anyURI"></Type>
+    <Type name="xs:anyURI"/>
   </Item>
-
   <Item>
     <Element>CSSOContact</Element>
     <Characteristics>M</Characteristics>
     <Description>Chief State School Officer contact information.</Description>
-    <Type ref="CommonTypes" name="ContactInfoType"></Type>
+    <Type ref="CommonTypes" name="ContactInfoType"/>
   </Item>
-
   <Item>
     <Element>SEAContactList</Element>
     <Characteristics>O</Characteristics>
     <Description>Information on contact persons for this SEA.</Description>
-    <Type ref="CommonTypes" name="SEAContactListType"></Type>
+    <Type ref="CommonTypes" name="SEAContactListType"/>
   </Item>
-
   <Item>
     <Element>PhoneNumberList</Element>
     <Characteristics>O</Characteristics>
     <Description>The SEA's phone number(s).</Description>
-    <Type ref="CommonTypes" name="PhoneNumberListType"></Type>
+    <Type ref="CommonTypes" name="PhoneNumberListType"/>
   </Item>
   <Item>
     <Element>AddressList</Element>
     <Characteristics>O</Characteristics>
     <Description>The SEA's address(es).</Description>
-    <Type ref="CommonTypes" name="AddressListType"></Type>
+    <Type ref="CommonTypes" name="AddressListType"/>
   </Item>
   <Item>
     <Element>OperationalStatus</Element>
     <Characteristics>O</Characteristics>
     <Description>This element is deprecated as of SIF Data Model Implementation Specification v2.5.  This element applies to LEAs but not to SEAs. </Description>
-    <Type ref="CommonTypes" name="OperationalStatusType"></Type>
+    <Type ref="CommonTypes" name="OperationalStatusType"/>
   </Item>
   <Item>
     <Element>EDENInfo</Element>
     <Characteristics>O</Characteristics>
     <Description>Container element for EDEN-specific information.</Description>
-      <Type ref="CommonTypes" name="EDENInfoType"></Type>
+    <Type ref="CommonTypes" name="EDENInfoType"/>
   </Item>
-
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
-
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <SEAInfo RefId="D3E34B359D75101A8C3D00AA001A1652">

@@ -1,10 +1,4 @@
-<DataObject name="AssessmentAdministration"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="AssessmentAdministration">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
@@ -16,7 +10,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
     <Description>
       <p>The GUID that uniquely identifies an instance of the object.</p>
     </Description>
@@ -24,7 +18,7 @@
   <Item>
     <Attribute>AssessmentFormRefId</Attribute>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
     <Description>
       <p>The RefId of the assessment form used in the assessment administration.</p>
     </Description>
@@ -32,7 +26,9 @@
   <Item>
     <Element>AdministrationName</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
+    <cedsId>000410</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000410</cedsURL>
   </Item>
   <Item>
     <Element>SpecialConditions</Element>
@@ -40,14 +36,12 @@
     <Description>
       <p>Special conditions or unusual events related to the administration event.</p>
     </Description>
-    <Type ref="CommonTypes" name="SpecialConditionActionListType"></Type>
+    <Type ref="CommonTypes" name="SpecialConditionActionListType"/>
   </Item>
-
-
   <Item>
     <Element>AdministrationDateTime</Element>
     <Characteristics>M</Characteristics>
-    <Type name="xs:dateTime"></Type>
+    <Type name="xs:dateTime"/>
     <Description>
       <p>Date and time the test is scheduled to be given.</p>
     </Description>
@@ -55,7 +49,7 @@
   <Item>
     <Element>StartDateTime</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:dateTime"></Type>
+    <Type name="xs:dateTime"/>
     <Description>
       <p>Date and time testing begins.</p>
     </Description>
@@ -63,15 +57,17 @@
   <Item>
     <Element>FinishDateTime</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:dateTime"></Type>
+    <Type name="xs:dateTime"/>
     <Description>
       <p>Date and time testing ends.</p>
     </Description>
+    <cedsId>000023</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000023</cedsURL>
   </Item>
   <Item>
     <Element>DueDateTime</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:dateTime"></Type>
+    <Type name="xs:dateTime"/>
     <Description>
       <p>Date and time test is due.</p>
     </Description>
@@ -82,12 +78,12 @@
     <Description>
       <p>Address of the location where the administration takes place.</p>
     </Description>
-    <Type ref="CommonTypes" name="AddressType"></Type>
+    <Type ref="CommonTypes" name="AddressType"/>
   </Item>
   <Item>
     <Element>StaffPersonalRefId</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
     <Description>
       <p>Optional reference to a staff person associated with the administration.</p>
     </Description>
@@ -95,7 +91,7 @@
   <Item>
     <Element>LEAInfoRefId</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
     <Description>
       <p>Optional reference to a school district associated with the administration.</p>
     </Description>
@@ -103,7 +99,7 @@
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
     <Description>
       <p>Optional reference to a school associated with the administration.</p>
     </Description>
@@ -111,14 +107,13 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-
   <xhtml:Example xmlns="">
     <AssessmentAdministration RefId="E2E8045FD8884745AC588F1DDDBEE864" AssessmentFormRefId="78DA3F367AAE4E34995CE15530F531CC">
       <SpecialConditions>

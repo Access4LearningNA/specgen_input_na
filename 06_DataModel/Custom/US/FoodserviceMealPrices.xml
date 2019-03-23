@@ -1,10 +1,4 @@
-<DataObject name="FoodserviceMealPrices"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="FoodserviceMealPrices">
   <EventsReported>true</EventsReported>
   <Key>@RefId</Key>
   <Item>
@@ -19,7 +13,7 @@
     <Description>
       <p>GUID that identifies this meal price.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Element>SchoolInfoRefId</Element>
@@ -27,27 +21,27 @@
     <Description>
       <p>GUID that identifies the school this meal price belongs to</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>Program</Element>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="FundedProgramType"></Type>
+    <Type ref="CommonTypes" name="FundedProgramType"/>
   </Item>
   <Item>
     <Element>Prices</Element>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="MealPriceListType"></Type>
+    <Type ref="CommonTypes" name="MealPriceListType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <FoodserviceMealPrices RefId="EF521958AB474559B2AE7BD82647C66B">
@@ -56,7 +50,7 @@
       <Prices>
         <Price>
           <Value Currency="USD">999.99</Value>
-          <MealStatus Type="Free" />
+          <MealStatus Type="Free"/>
           <MealType>FirstMeal</MealType>
           <GradeLevels>
             <GradeLevel>
@@ -75,7 +69,7 @@
         </Price>
         <Price>
           <Value>999.99</Value>
-          <MealStatus Type="Free" />
+          <MealStatus Type="Free"/>
           <MealType>SecondMeal</MealType>
           <GradeLevels>
             <GradeLevel>
@@ -94,7 +88,7 @@
         </Price>
         <Price>
           <Value>999.99</Value>
-          <MealStatus Type="Reduced" />
+          <MealStatus Type="Reduced"/>
           <MealType>FirstMeal</MealType>
           <GradeLevels>
             <GradeLevel>
@@ -113,7 +107,7 @@
         </Price>
         <Price>
           <Value>999.99</Value>
-          <MealStatus Type="None" />
+          <MealStatus Type="None"/>
           <MealType>FirstMeal</MealType>
           <GradeLevels>
             <GradeLevel>

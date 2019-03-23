@@ -1,10 +1,4 @@
-<DataObject name="EmployeePersonal"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="EmployeePersonal">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
@@ -19,7 +13,7 @@
     <Description>
       <p>The GUID that uniquely identifies this employee.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Element>StateProvinceId</Element>
@@ -27,7 +21,7 @@
     <Description>
       <p>The state-assigned identifier for this staff member.</p>
     </Description>
-    <Type ref="CommonTypes" name="StateProvinceIdType"></Type>
+    <Type ref="CommonTypes" name="StateProvinceIdType"/>
   </Item>
   <Item>
     <Element>OtherIdList</Element>
@@ -35,7 +29,7 @@
     <Description>
       <p>List all "other" Ids associated with the employee.</p>
     </Description>
-		<Type ref="CommonTypes" name="EmployeePersonalOtherIdListType"/>
+    <Type ref="CommonTypes" name="EmployeePersonalOtherIdListType"/>
   </Item>
   <Item>
     <Element>Name</Element>
@@ -43,7 +37,7 @@
     <Description>
       <p>Name of employee.</p>
     </Description>
-    <Type ref="CommonTypes" name="NameOfRecordType"></Type>
+    <Type ref="CommonTypes" name="NameOfRecordType"/>
   </Item>
   <Item>
     <Element>Demographics</Element>
@@ -51,7 +45,7 @@
     <Description>
       <p>This element contains information related to employee demographics.</p>
     </Description>
-    <Type ref="CommonTypes" name="DemographicsType"></Type>
+    <Type ref="CommonTypes" name="DemographicsType"/>
   </Item>
   <Item>
     <Element>AddressList</Element>
@@ -59,7 +53,7 @@
     <Description>
       <p>The employee's address(es).</p>
     </Description>
-    <Type ref="CommonTypes" name="AddressListType"></Type>
+    <Type ref="CommonTypes" name="AddressListType"/>
   </Item>
   <Item>
     <Element>PhoneNumberList</Element>
@@ -67,7 +61,7 @@
     <Description>
       <p>The employee's phone number(s).</p>
     </Description>
-    <Type ref="CommonTypes" name="PhoneNumberListType"></Type>
+    <Type ref="CommonTypes" name="PhoneNumberListType"/>
   </Item>
   <Item>
     <Element>EmailList</Element>
@@ -75,17 +69,17 @@
     <Description>
       <p>The employee's e-mail address(es).</p>
     </Description>
-    <Type ref="CommonTypes" name="EmailListType"></Type>
+    <Type ref="CommonTypes" name="EmailListType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <EmployeePersonal RefId="CD590651225DAC3859DEA3458BC39583">

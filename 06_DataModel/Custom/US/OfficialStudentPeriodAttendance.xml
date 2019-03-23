@@ -1,12 +1,5 @@
-<DataObject name="OfficialStudentPeriodAttendance"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="OfficialStudentPeriodAttendance">
   <EventsReported>true</EventsReported>
-
   <Item>
     <Element>OfficialStudentPeriodAttendance</Element>
     <Description>
@@ -15,12 +8,10 @@
         for generating a corresponding OfficialStudentPeriodAttendance event once any unofficial events have been processed.
       </p>
     </Description>
-    <Type ref="GradeBookWorkingGroup" complex="extension" name="StudentPeriodAttendance"></Type>
+    <Type ref="GradeBookWorkingGroup" complex="extension" name="StudentPeriodAttendance"/>
   </Item>
-
   <xhtml:Example xmlns="">
-    <OfficialStudentPeriodAttendance RefId="98157AA013BA8C3D00AA012B359D7512" StudentPersonalRefId="A75A00101A8C301D02E3A05B359D0A00"
-      SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB" Date="2001-03-05" SectionInfoRefId="D02E3A05B359DA75A00101A8C3010A00">
+    <OfficialStudentPeriodAttendance RefId="98157AA013BA8C3D00AA012B359D7512" StudentPersonalRefId="A75A00101A8C301D02E3A05B359D0A00" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB" Date="2001-03-05" SectionInfoRefId="D02E3A05B359DA75A00101A8C3010A00">
       <TimetablePeriod>P4</TimetablePeriod>
       <AttendanceCode AttendanceCodeInfoRefId="1A0000359D75101A8C3D00AA00A2E35B">042</AttendanceCode>
       <AuditInfo>

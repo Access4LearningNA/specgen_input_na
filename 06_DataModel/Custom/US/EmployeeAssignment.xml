@@ -1,10 +1,4 @@
-<DataObject name="EmployeeAssignment"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="EmployeeAssignment">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
@@ -23,7 +17,7 @@
     <Description>
       <p>The GUID that uniquely identifies a particular HR staff assignment.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Attribute>EmployeePersonalRefId</Attribute>
@@ -31,7 +25,7 @@
     <Description>
       <p>This GUID referencing the parent EmployeePersonal object</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>Description</Element>
@@ -39,7 +33,7 @@
     <Description>
       <p>Short assignment description</p>
     </Description>
-    <Type name="xs:string"></Type>
+    <Type name="xs:string"/>
   </Item>
   <Item>
     <Element>PrimaryAssignment</Element>
@@ -49,14 +43,17 @@
         Is this the staff member's primary assignment? There must be one and only one instance of the object with <code>Yes</code> in this value per school year.
       </p>
     </Description>
-    <Values>
-      <Value>
-        <Code>Yes</Code>
-      </Value>
-      <Value>
-        <Code>No</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
+    <cedsId>000525</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000525</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>LocationInfoRefId</Element>
@@ -67,7 +64,7 @@
         The GUID references the LocationInfo object.
       </p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>JobStartDate</Element>
@@ -75,7 +72,9 @@
     <Description>
       <p>This is the date from which the staff assignment is valid (inclusive).</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
+    <cedsId>000526</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000526</cedsURL>
   </Item>
   <Item>
     <Element>JobEndDate</Element>
@@ -83,7 +82,9 @@
     <Description>
       <p>This is the date through which the staff assignment is valid (inclusive).  Present if the JobStartDate is entered and a JobEndDate is available.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
+    <cedsId>000527</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000527</cedsURL>
   </Item>
   <Item>
     <Element>JobFTE</Element>
@@ -91,12 +92,14 @@
     <Description>
       <p>Full-time job equivalent ratio for this assignment. (Format is x.xx; an employee who is full-time and who spends 50% of their time on this assignment would be represented as 0.50)</p>
     </Description>
-    <Type name="xs:decimal"></Type>
+    <Type name="xs:decimal"/>
     <Facets>
       <xs:minInclusive value="0"/>
       <xs:maxInclusive value="1"/>
       <xs:fractionDigits value="2"/>
     </Facets>
+    <cedsId>000118</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000118</cedsURL>
   </Item>
   <Item>
     <Element>JobClassification</Element>
@@ -104,15 +107,15 @@
     <Description>
       <p>The specific group of duties or responsibilities of position.</p>
     </Description>
-    <Type ref="CommonTypes" name="JobClassificationType"></Type>
+    <Type ref="CommonTypes" name="JobClassificationType"/>
   </Item>
- <Item>
+  <Item>
     <Element>ProgramType</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>The type of instructional or non-instructional program.</p>
     </Description>
-    <Type ref="CommonTypes" name="EmployeeAssignmentProgramType"></Type>
+    <Type ref="CommonTypes" name="EmployeeAssignmentProgramType"/>
   </Item>
   <Item>
     <Element>FundingSource</Element>
@@ -120,17 +123,17 @@
     <Description>
       <p>Provider of funds for the program or service.</p>
     </Description>
-     <Type ref="CommonTypes" name="FundingSourceType"></Type>
- </Item>
-   <Item>
+    <Type ref="CommonTypes" name="FundingSourceType"/>
+  </Item>
+  <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <EmployeeAssignment RefId="FE1078BA3261545A31905937B265CE01" EmployeePersonalRefId="BE1078BA3261545A31905937B265CE02">

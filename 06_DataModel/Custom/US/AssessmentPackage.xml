@@ -1,22 +1,12 @@
-<DataObject name="AssessmentPackage"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
-
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="AssessmentPackage">
   <Key>@RefId</Key>
   <EventsReported>false</EventsReported>
-
   <!--
 					<Namespace prefix="imscp" namespace="http://www.imsglobal.org/xsd/imscp_v1p1"/>
 
 					<Import namespace="http://www.imsglobal.org/xsd/imscp_v1p1" schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p2.xsd"/>
 					-->
-
   <Intro>
-
     <!--
 						<ul>
 							<li>
@@ -30,7 +20,6 @@
 						</ul>
 -->
   </Intro>
-
   <Item>
     <Element>AssessmentPackage</Element>
     <Description>
@@ -42,7 +31,6 @@
       <p>
         A wrapper for any external standard that can define or transmit the content of an assessment.
       </p>
-
     </Description>
   </Item>
   <Item>
@@ -53,7 +41,7 @@
         The GUID that uniquely identifies an object instance in a zone.
       </p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Element>XMLData</Element>
@@ -61,7 +49,7 @@
     <Description>
       <p>Contains an arbitary XML element, encoded in UTF-8.</p>
     </Description>
-    <Type ref="CommonTypes" name="XMLDataType"></Type>
+    <Type ref="CommonTypes" name="XMLDataType"/>
   </Item>
   <!--
 					<Item>
@@ -114,15 +102,14 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-
-	<!-- not validated
+  <!-- not validated
   <xhtml:Example xmlns="">
     <AssessmentPackage RefId="495A00194CA340E3A33777B42E59C4F2">
       <XMLData Description="Assessment">...</XMLData>

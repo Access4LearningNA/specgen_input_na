@@ -1,10 +1,4 @@
-<DataObject name="FinancialIncomeStatement"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="FinancialIncomeStatement">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
@@ -19,7 +13,7 @@
     <Description>
       <p>GUID that identifies this income statement.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Element>GenerationDate</Element>
@@ -27,7 +21,7 @@
     <Description>
       <p>Generation date.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>GenerationTime</Element>
@@ -35,7 +29,7 @@
     <Description>
       <p>Generation time.</p>
     </Description>
-    <Type name="xs:time"></Type>
+    <Type name="xs:time"/>
   </Item>
   <Item>
     <Element>LocationInfoRefId</Element>
@@ -43,7 +37,7 @@
     <Description>
       <p>LocationInfo reference.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>Period</Element>
@@ -51,30 +45,30 @@
     <Description>
       <p>Period of the income statement.</p>
     </Description>
-     <Type ref="CommonTypes" name="PeriodType"></Type>
- </Item>
+    <Type ref="CommonTypes" name="PeriodType"/>
+  </Item>
   <Item>
     <Element>Amounts</Element>
     <Characteristics>M</Characteristics>
-     <Description>
-     <p>Amount in the account.</p>
-	 </Description>
-     <Type ref="CommonTypes" name="FinancialIncomeStatementMonetaryAmountListType"></Type>
- </Item>
+    <Description>
+      <p>Amount in the account.</p>
+    </Description>
+    <Type ref="CommonTypes" name="FinancialIncomeStatementMonetaryAmountListType"/>
+  </Item>
   <Item>
     <Element>Program</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="FundedProgramType"></Type>
+    <Type ref="CommonTypes" name="FundedProgramType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <FinancialIncomeStatement RefId="E72C08BD41894187BA07B00C1401BE3F">
@@ -86,10 +80,8 @@
         <EndDate>2003-03-31</EndDate>
       </Period>
       <Amounts>
-        <Amount FinancialAccountAccountingPeriodLocationInfoRefId="B595A5959A8F43448DF0F5C635CD0E1D"
-          FinancialClassRefId="7582E711FDEE468686CBE623A7C31743" Currency="USD">99999999.99</Amount>
-        <Amount FinancialAccountAccountingPeriodLocationInfoRefId="DE0E6B3C73F6413AA9C1EFCCA57B356B"
-          FinancialClassRefId="7582E711FDEE468686CBE623A7C31743" Currency="USD">99999999.99</Amount>
+        <Amount FinancialAccountAccountingPeriodLocationInfoRefId="B595A5959A8F43448DF0F5C635CD0E1D" FinancialClassRefId="7582E711FDEE468686CBE623A7C31743" Currency="USD">99999999.99</Amount>
+        <Amount FinancialAccountAccountingPeriodLocationInfoRefId="DE0E6B3C73F6413AA9C1EFCCA57B356B" FinancialClassRefId="7582E711FDEE468686CBE623A7C31743" Currency="USD">99999999.99</Amount>
       </Amounts>
       <Program Type="Foodservice">NSLP</Program>
     </FinancialIncomeStatement>

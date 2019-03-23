@@ -1,10 +1,4 @@
-<DataObject name="FoodserviceSales"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="FoodserviceSales">
   <EventsReported>true</EventsReported>
   <Key>@RefId</Key>
   <Item>
@@ -19,7 +13,7 @@
     <Description>
       <p>GUID that identifies the daily meal sales object</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Element>SchoolInfoRefId</Element>
@@ -27,7 +21,7 @@
     <Description>
       <p>School for which the sales object applies</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>Date</Element>
@@ -35,28 +29,27 @@
     <Description>
       <p>Date on which the sales occurred.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>Program</Element>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="FundedProgramType"></Type>
+    <Type ref="CommonTypes" name="FundedProgramType"/>
   </Item>
   <Item>
     <Element>SalesAmounts</Element>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="FoodserviceSalesAmountListType"></Type>
+    <Type ref="CommonTypes" name="FoodserviceSalesAmountListType"/>
   </Item>
-
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <FoodserviceSales RefId="E57A732918E1473F80C2CFA7774DAA6A">

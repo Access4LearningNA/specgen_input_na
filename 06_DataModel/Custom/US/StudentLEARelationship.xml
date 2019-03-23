@@ -1,10 +1,4 @@
-<DataObject name="StudentLEARelationship"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="StudentLEARelationship">
   <EventsReported>true</EventsReported>
   <Key>@RefId</Key>
   <Item>
@@ -15,21 +9,16 @@
         relationship/affiliation to a single LEA for a specific school year as of the time a <code>SIF_Event</code> or <code>SIF_Response</code> is generated
         by the system of record. This object is not designed to operate on a historical/longitudinal basis in the default context.
       </p>
-
-      <p>
-        <code>StudentLEARelationship</code> instances must not span multiple school years.
+      <p><code>StudentLEARelationship</code> instances must not span multiple school years.
       </p>
-
       <p>
         Only one instance of the <code>StudentLEARelationship</code> object with <code>MembershipType=Home</code> may exist for a specific time interval
         between <code>EntryDate</code> and <code>ExitDate</code> (inclusive) for a given student, LEA, and school year.
       </p>
-
       <p>
         Multiple instances of the <code>StudentLEARelationship</code> object with <code>MembershipType=Concurrent</code> may exist for a specific time
         interval between <code>EntryDate</code> and <code>ExitDate</code> (inclusive) for a given student, LEA, and school year.
       </p>
-
       <p>
         Multiple instances of <code>StudentLEARelationship</code> will occur for specific or overlapping time intervals if a student has affiliations
         with multiple LEA's. This will most likely be detected during aggregate data collection from multiple LEA's.
@@ -44,7 +33,7 @@
     <Description>
       <p>The unique identifier for a particular affiliation between a student and a LEA.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Attribute>StudentPersonalRefId</Attribute>
@@ -54,7 +43,7 @@
         The SIF RefId of the <code>StudentPersonal</code> object to which this instance of <code>StudentLEARelationship</code> refers.
       </p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Attribute>LEAInfoRefId</Attribute>
@@ -64,7 +53,7 @@
         The SIF RefId of the <code>LEAInfo</code> object to which this instance of <code>StudentLEARelationship</code> refers.
       </p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Attribute>SchoolYear</Attribute>
@@ -74,7 +63,7 @@
         Contains the SIF school year to which this instance of <code>StudentLEARelationship</code> applies. <code>StudentLEARelationship</code> must not span multiple school years.
       </p>
     </Description>
-    <Type ref="CommonTypes" name="SchoolYearType"></Type>
+    <Type ref="CommonTypes" name="SchoolYearType"/>
   </Item>
   <Item>
     <Element>MembershipType</Element>
@@ -84,20 +73,15 @@
         The type of this affiliation as it relates to the LEA identified in <code>LEAInfoRefId</code>.
       </p>
     </Description>
-    <Values>
-      <Value>
-        <Code>Home</Code>
-        <Text>The LEA is responsible for reporting the student's membership/child accounting information.</Text>
-      </Value>
-      <Value>
-        <Code>Concurrent</Code>
-        <Text>The LEA is not the primary reporting unit for the student's membership/child accounting information.</Text>
-      </Value>
-      <Value>
-        <Code>Summer</Code>
-        <Text>A summer school enrollment, not part of the regular school year.</Text>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>LEARelationshipType</Element>
@@ -105,7 +89,7 @@
     <Description>
       <p>An instance of the OrganizationRelationshipType common element that describes the details of the student's affiliation with the LEA.</p>
     </Description>
-    <Type ref="CommonTypes" name="OrganizationRelationshipType"></Type>
+    <Type ref="CommonTypes" name="OrganizationRelationshipType"/>
   </Item>
   <Item>
     <Element>EntryDate</Element>
@@ -113,14 +97,13 @@
     <Description>
       <p>The date from when this affiliation is valid.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>EntryType</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="StudentEntryTypeType"></Type>
+    <Type ref="CommonTypes" name="StudentEntryTypeType"/>
   </Item>
-
   <Item>
     <Element>ExitDate</Element>
     <Characteristics>C</Characteristics>
@@ -130,20 +113,18 @@
         The conditional characteristic of this element is defined such that if the student has exited the LEA, then <code>ExitDate</code> must have a value.
       </p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>ExitType</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="StudentExitTypeType"></Type>
+    <Type ref="CommonTypes" name="StudentExitTypeType"/>
   </Item>
-
   <Item>
     <Element>ExitStatus</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="StudentExitStatusType"></Type>
+    <Type ref="CommonTypes" name="StudentExitStatusType"/>
   </Item>
-
   <Item>
     <Element>NonResidentAttendReason</Element>
     <Characteristics>C</Characteristics>
@@ -153,7 +134,15 @@
         The conditional characteristic of this element is defined such that if the LEA participating in this affiliation is outside of the student's usual attendance area, as indicated in the <code>LEARelationshipType/ResidencyStatus</code> element, then this element must be reported.
       </p>
     </Description>
-    <Type ref="ExternalCodeSets" name="NCES0599NonResidentAttendanceRationaleType"/>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>GradeLevel</Element>
@@ -166,19 +155,15 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
-    <StudentLEARelationship
-      RefId="98C3D3224B35AA75101D00AA201B1652"
-      StudentPersonalRefId="D3E34B359D75101A8C3D00AA001A1652"
-      LEAInfoRefId="D3E34B359D7511AA223D00AA001A165A"
-      SchoolYear="2007">
+    <StudentLEARelationship RefId="98C3D3224B35AA75101D00AA201B1652" StudentPersonalRefId="D3E34B359D75101A8C3D00AA001A1652" LEAInfoRefId="D3E34B359D7511AA223D00AA001A165A" SchoolYear="2007">
       <MembershipType>Home</MembershipType>
       <LEARelationshipType>
         <ResidencyStatus>

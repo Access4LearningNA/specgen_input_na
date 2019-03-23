@@ -1,10 +1,4 @@
-<DataObject name="AssessmentItem"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="AssessmentItem">
   <Key>@RefId</Key>
   <EventsReported>false</EventsReported>
   <Item>
@@ -20,12 +14,12 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Attribute>AssessmentFormRefId</Attribute>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
     <Description>
       <p>This RefId points to the assessment form of which the item is a part.</p>
     </Description>
@@ -36,26 +30,17 @@
     <Description>
       <p>A value that indicates the response type for the item.</p>
     </Description>
-    <Values>
-      <Value>
-        <Code>multiple-choice</Code>
-      </Value>
-      <Value>
-        <Code>multiple-multiple choice</Code>
-      </Value>
-      <Value>
-        <Code>true-false</Code>
-      </Value>
-      <Value>
-        <Code>fill-in-the-blank</Code>
-      </Value>
-      <Value>
-        <Code>short-answer</Code>
-      </Value>
-      <Value>
-        <Code>essay</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
+    <cedsId>000390</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000390</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>ResponseTypeCodeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>ItemLabel</Element>
@@ -72,6 +57,8 @@
       <p>Name or short description of the item.</p>
     </Description>
     <Type name="xs:string"/>
+    <cedsId>000398</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000398</cedsURL>
   </Item>
   <Item>
     <Element>LearningStandardItems</Element>
@@ -126,14 +113,15 @@
     </Description>
     <Type ref="CommonTypes" name="AssessmentItemChoiceListType"/>
   </Item>
-
   <Item>
     <Element>ItemScoreMaximum</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>The maximum item score possible for this item.</p>
     </Description>
-    <Type name='xs:token'/>
+    <Type name="xs:token"/>
+    <cedsId>000419</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000419</cedsURL>
   </Item>
   <Item>
     <Element>ItemScoreMinimum</Element>
@@ -141,7 +129,9 @@
     <Description>
       <p>The minimum item score possible for this item.</p>
     </Description>
-    <Type name='xs:token'/>
+    <Type name="xs:token"/>
+    <cedsId>000418</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000418</cedsURL>
   </Item>
   <Item>
     <Element>PerformanceLevels</Element>
@@ -154,18 +144,15 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-
-  <xhtml:Example name="AssessmentItem - Example 1" xmlns="">
-    <AssessmentItem RefId="C294F3E190F019AD8E1DFC8367537EC8"
-            AssessmentFormRefId="9372CB8EA910FF87D5672CAEF01387AA"
-            ResponseType="multiple-choice">
+  <xhtml:Example xmlns="" name="AssessmentItem - Example 1">
+    <AssessmentItem RefId="C294F3E190F019AD8E1DFC8367537EC8" AssessmentFormRefId="9372CB8EA910FF87D5672CAEF01387AA" ResponseType="multiple-choice">
       <ItemLabel>5</ItemLabel>
       <ItemName>Geometry diagnostic</ItemName>
       <LearningStandardItems>
@@ -213,11 +200,8 @@
       </ResponseChoices>
     </AssessmentItem>
   </xhtml:Example>
-
-  <xhtml:Example name="AssessmentItem - Example 2" xmlns="">
-    <AssessmentItem RefId="C294F3E190F019AD8E1DFC8367537EC8"
-            AssessmentFormRefId="9372CB8EA910FF87D5672CAEF01387AA"
-            ResponseType="multiple-choice">
+  <xhtml:Example xmlns="" name="AssessmentItem - Example 2">
+    <AssessmentItem RefId="C294F3E190F019AD8E1DFC8367537EC8" AssessmentFormRefId="9372CB8EA910FF87D5672CAEF01387AA" ResponseType="multiple-choice">
       <ItemLabel>5</ItemLabel>
       <ItemName>Geometry diagnostic</ItemName>
       <LearningStandardItems>

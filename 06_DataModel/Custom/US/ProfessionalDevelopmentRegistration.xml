@@ -1,10 +1,4 @@
-<DataObject name="ProfessionalDevelopmentRegistration"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="ProfessionalDevelopmentRegistration">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Intro>
@@ -17,7 +11,7 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Attribute>EmployeePersonalRefId</Attribute>
@@ -33,30 +27,15 @@
     <Description>
       <p>Tracks the status of the user in the professional development activity.</p>
     </Description>
-    <Values>
-      <Value>
-        <Code>Registered</Code>
-        <Text>Represents the user has registered for the activity.</Text>
-      </Value>
-      <Value>
-        <Code>Withdrawn</Code>
-        <Text>Represents that the user has withdrawn from the activity without completing.</Text>
-      </Value>
-      <Value>
-        <Code>Complete</Code>
-        <Text>Represents that a user has completed the activity and has received credit and show have a record in the employee credit object to represent this.</Text>
-      </Value>
-      <Value>
-        <Code>Incomplete</Code>
-        <Text>Represents that the user did not receive credit for this activity for whatever reason.</Text>
-      </Value>
-      <Value>
-        <Code>In Progress</Code>
-        <Text>
-          Represents that the user has not yet finished the <code>ProfessionalDevelopmentActivity</code> or <code>ProfessionalDevelopmentProgram</code> but hasn't withdrawn.
-        </Text>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>ProfessionalDevelopmentActivityRefId</Element>
@@ -93,12 +72,12 @@
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <ProfessionalDevelopmentRegistration RefId="ACB1254742AE54CC874567DFCD196832" EmployeePersonalRefId="D4E1EA3D82614CA39361514E5F115B14">

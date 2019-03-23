@@ -1,10 +1,4 @@
-<DataObject name="LearningStandardAssociation"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="LearningStandardAssociation">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
@@ -13,32 +7,28 @@
       This object associates learning standards with particular learning resources.
     </Description>
   </Item>
-
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The Id (GUID) that uniquely identifies this LearningStandardAssociation.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
-
   <Item>
     <Element>RefURI</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:anyURI"></Type>
-	<Description>
+    <Type name="xs:anyURI"/>
+    <Description>
       <p>A URI that establishes uniqueness.</p>
     </Description>
   </Item>
-
-   <Item>
+  <Item>
     <Element>LearningStandardRefId</Element>
     <Characteristics>M</Characteristics>
     <Description>A RefId that identifies a Learning Standard.</Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
-
   <Item>
     <Attribute>ObjectType</Attribute>
     <Characteristics>M</Characteristics>
@@ -46,91 +36,80 @@
       <p>Declares whether the this RefId references a LearningStandardItem or a LearningStandardDocument</p>
     </Description>
     <Values>
-		<Value>
-			<Code>LearningStandardItem</Code>
-		</Value>
-		<Value>
-			<Code>LearningStandardDocument</Code>
-		</Value>
+      <Value>
+        <Code>LearningStandardItem</Code>
+      </Value>
+      <Value>
+        <Code>LearningStandardDocument</Code>
+      </Value>
     </Values>
   </Item>
-
-
   <Item>
     <Element>TargetObjects</Element>
     <Characteristics>M</Characteristics>
     <Description>List of target objects for the learning standard linkage.</Description>
-    <Type ref="CommonTypes" name="TargetObjectListType"></Type>
+    <Type ref="CommonTypes" name="TargetObjectListType"/>
   </Item>
-
-
- <Item>
-	 <Element>StartDate</Element>
-	 <Characteristics>M</Characteristics>
-	 <Description>Start date of the learning standard association.</Description>
-	 <Type name="xs:date"></Type>
- </Item>
-
   <Item>
-	 <Element>EndDate</Element>
-	 <Characteristics>O</Characteristics>
-	 <Description>End date of the learning standard association.</Description>
-	 <Type name="xs:date"></Type>
- </Item>
-
-  <Item>
-	 <Element>AuthoritativeSource</Element>
-	 <Characteristics>M</Characteristics>
-	 <Description>Body or organization creating this association.</Description>
-	 <Type name="xs:normalizedString"></Type>
- </Item>
-
-<Item>
- <Element>Creator</Element>
- <Characteristics>M</Characteristics>
- <Description>Name of the Creator of the relationship.</Description>
-	<Type ref="CommonTypes"  name="TypedCreatorType"></Type>
+    <Element>StartDate</Element>
+    <Characteristics>M</Characteristics>
+    <Description>Start date of the learning standard association.</Description>
+    <Type name="xs:date"/>
   </Item>
-
   <Item>
-	 <Element>CreationDate</Element>
-	 <Characteristics>O</Characteristics>
-	 <Description>Creation date of the relationship.</Description>
-	 <Type name="xs:date"></Type>
- </Item>
-
+    <Element>EndDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>End date of the learning standard association.</Description>
+    <Type name="xs:date"/>
+  </Item>
+  <Item>
+    <Element>AuthoritativeSource</Element>
+    <Characteristics>M</Characteristics>
+    <Description>Body or organization creating this association.</Description>
+    <Type name="xs:normalizedString"/>
+  </Item>
+  <Item>
+    <Element>Creator</Element>
+    <Characteristics>M</Characteristics>
+    <Description>Name of the Creator of the relationship.</Description>
+    <Type ref="CommonTypes" name="TypedCreatorType"/>
+  </Item>
+  <Item>
+    <Element>CreationDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>Creation date of the relationship.</Description>
+    <Type name="xs:date"/>
+  </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-
-  <xhtml:Example name="LearningStandardAssociation Example" xmlns="">
+  <xhtml:Example xmlns="" name="LearningStandardAssociation Example">
     <LearningStandardAssociation RefId="869670E8540A43509515AFB767FADD9A">
-	  <LearningStandardRefId ObjectType="LearningStandardItem">DCE34B359D75101A8C3D00AA001A1652</LearningStandardRefId>
-	  <TargetObjects>
-	    <TargetObject ObjectType="LearningResource" >
-			<SIF_RefId>1947AB893C29F73910FEC3827A239CB1</SIF_RefId>
-			<AssociationStrength>1</AssociationStrength>
-			<AssociationType>prerequisite</AssociationType>
-		</TargetObject>
-        <TargetObject ObjectType="LearningResource" >
-			<SIF_RefId>DE072A87EFAD4B778AF9FAF83C94839E</SIF_RefId>
-			<AssociationStrength>.5</AssociationStrength>
-			<AssociationType>predecessor</AssociationType>
-		</TargetObject>
-	  </TargetObjects>
- 	  <StartDate>2012-01-21</StartDate>
-	  <EndDate>2015-01-21</EndDate>
-	  <AuthoritativeSource>Math Department Curriculum 2012-2013</AuthoritativeSource>
-	  <Creator Type="StaffPersonal" SIF_RefId="1652D3E34F419D75101A8C3D00AA001A">Curriculum Director Halstead</Creator>
-	  <CreationDate>2011-11-20</CreationDate>
+      <LearningStandardRefId ObjectType="LearningStandardItem">DCE34B359D75101A8C3D00AA001A1652</LearningStandardRefId>
+      <TargetObjects>
+        <TargetObject ObjectType="LearningResource">
+          <SIF_RefId>1947AB893C29F73910FEC3827A239CB1</SIF_RefId>
+          <AssociationStrength>1</AssociationStrength>
+          <AssociationType>prerequisite</AssociationType>
+        </TargetObject>
+        <TargetObject ObjectType="LearningResource">
+          <SIF_RefId>DE072A87EFAD4B778AF9FAF83C94839E</SIF_RefId>
+          <AssociationStrength>.5</AssociationStrength>
+          <AssociationType>predecessor</AssociationType>
+        </TargetObject>
+      </TargetObjects>
+      <StartDate>2012-01-21</StartDate>
+      <EndDate>2015-01-21</EndDate>
+      <AuthoritativeSource>Math Department Curriculum 2012-2013</AuthoritativeSource>
+      <Creator Type="StaffPersonal" SIF_RefId="1652D3E34F419D75101A8C3D00AA001A">Curriculum Director Halstead</Creator>
+      <CreationDate>2011-11-20</CreationDate>
     </LearningStandardAssociation>
-
   </xhtml:Example>
 </DataObject>

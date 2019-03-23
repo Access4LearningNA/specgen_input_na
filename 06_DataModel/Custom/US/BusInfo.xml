@@ -1,10 +1,4 @@
-<DataObject name="BusInfo"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="BusInfo">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
@@ -14,91 +8,78 @@
     </Description>
   </Item>
   <Item>
-
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>GUID that identifies this bus.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Element>VehicleNumber</Element>
-
     <Characteristics>M</Characteristics>
     <Description>
       <p>Vehicle number of the bus.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>SeatingCapacity</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>The number of people who can ride on the bus at the same time.</p>
     </Description>
-    <Type name="xs:unsignedInt"></Type>
+    <Type name="xs:unsignedInt"/>
   </Item>
   <Item>
     <Element>Contractor</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>The name of the contractor for this bus.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
-
   <Item>
     <Element>EquipmentList</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>Describes any special equipment that is on this bus.</p>
     </Description>
-    <Type ref="CommonTypes" name="BusInfoEquipmentListType"></Type>
+    <Type ref="CommonTypes" name="BusInfoEquipmentListType"/>
   </Item>
-
-
   <Item>
     <Element>ManufactureYear</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>The manufacture year of the bus (CCYY).</p>
     </Description>
-    <Type name="xs:gYear"></Type>
+    <Type name="xs:gYear"/>
   </Item>
-
   <Item>
     <Element>VehicleIdentificationNumber</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>The Vehicle Identification Number (VIN) of the bus.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
-
   <Item>
     <Element>LicensePlateNumber</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>The vehicle's license plate number.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
-
-
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
-
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <BusInfo RefId="D3E34B359D75101A8C3D00AA001A1652">

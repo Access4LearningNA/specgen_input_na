@@ -1,10 +1,4 @@
-<DataObject name="SchoolCourseInfo"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="SchoolCourseInfo">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
@@ -14,13 +8,14 @@
     </Description>
   </Item>
   <Item>
-
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The Id (GUID) that uniquely identifies the school course.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
+    <cedsId>000056</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000056</cedsURL>
   </Item>
   <Item>
     <Attribute>SchoolInfoRefId</Attribute>
@@ -28,7 +23,7 @@
     <Description>
       <p>The Id (GUID) that identifies the school where the course is offered.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Attribute>SchoolYear</Attribute>
@@ -38,7 +33,7 @@
         School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g. <code>2007</code> for the 2006-07 school year).
       </p>
     </Description>
-    <Type ref="CommonTypes" name="SchoolYearType"></Type>
+    <Type ref="CommonTypes" name="SchoolYearType"/>
   </Item>
   <Item>
     <Element>CourseCode</Element>
@@ -46,7 +41,9 @@
     <Description>
       <p>School-defined local code for the course.</p>
     </Description>
-    <Type ref="CommonTypes" name="CourseCodeType"></Type>
+    <Type ref="CommonTypes" name="CourseCodeType"/>
+    <cedsId>000055</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000055</cedsURL>
   </Item>
   <Item>
     <Element>StateCourseCode</Element>
@@ -54,7 +51,7 @@
     <Description>
       <p>State-defined standard course code used to report information about courses.</p>
     </Description>
-    <Type ref="CommonTypes" name="StateCourseCodeType"></Type>
+    <Type ref="CommonTypes" name="StateCourseCodeType"/>
   </Item>
   <Item>
     <Element>DistrictCourseCode</Element>
@@ -62,81 +59,92 @@
     <Description>
       <p>The corresponding district course code.</p>
     </Description>
-    <Type ref="CommonTypes" name="DistrictCourseCodeType"></Type>
+    <Type ref="CommonTypes" name="DistrictCourseCodeType"/>
   </Item>
   <Item>
     <Element>SubjectAreaList</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SubjectAreaListType"></Type>
+    <Type ref="CommonTypes" name="SubjectAreaListType"/>
     <Description>
       <p>Subject matter areas.</p>
     </Description>
   </Item>
   <Item>
     <Element>CourseTitle</Element>
-
     <Characteristics>M</Characteristics>
     <Description>
       <p>Title of the course.</p>
     </Description>
-    <Type ref="CommonTypes" name="CourseTitleType"></Type>
+    <Type ref="CommonTypes" name="CourseTitleType"/>
+    <cedsId>000067</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000067</cedsURL>
   </Item>
   <Item>
     <Element>Description</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>Textual description of the course.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>InstructionalLevel</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>An indication of the general nature and difficulty of instruction provided.</p>
     </Description>
-    <Type ref="CommonTypes" name="InstructionalLevelType"></Type>
+    <Type ref="CommonTypes" name="InstructionalLevelType"/>
   </Item>
   <Item>
     <Element>CourseCredits</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>The number of credits awarded upon course completion.</p>
     </Description>
-    <Type ref="CommonTypes" name="CourseCreditsType"></Type>
+    <Type ref="CommonTypes" name="CourseCreditsType"/>
+    <cedsId>000060</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000060</cedsURL>
   </Item>
   <Item>
     <Element>CoreAcademicCourse</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>Does the course meet the state definition of a core academic course?</p>
     </Description>
-    <Values>
-      <Value>
-        <Code>Yes</Code>
-      </Value>
-      <Value>
-        <Code>No</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
+    <cedsId>000013</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000013</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>GraduationRequirement</Element>
-
     <Characteristics>O</Characteristics>
     <Description>
       <p>Does the state require that the course be completed for graduation?</p>
     </Description>
-    <Type ref="CommonTypes" name="GraduationRequirementType"></Type>
+    <Type name="xs:token"/>
+    <cedsId>000137</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000137</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>Department</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
     <Description>
       <p>Department with jurisdiction over this course.</p>
     </Description>
@@ -150,23 +158,23 @@
         NOTE:  SCED codes currently only apply to secondary courses.  This element may be sent with <code>xsi:nil="true"</code> or omitted for elementary courses.
       </p>
     </Description>
-    <Type ref="CommonTypes" name="SCEDCodeType"></Type>
+    <Type ref="CommonTypes" name="SCEDCodeType"/>
   </Item>
-
-   <Item>
+  <Item>
     <Element>DualCredit</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Indicates whether this course is applicable in having dual credits.</p>
     </Description>
-    <Values>
-      <Value>
-        <Code>Yes</Code>
-      </Value>
-      <Value>
-        <Code>No</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>CTEConcentrator</Element>
@@ -174,26 +182,25 @@
     <Description>
       <p>Indicates whether this is a CTE concentrator for this course.</p>
     </Description>
-    <Values>
-      <Value>
-        <Code>Yes</Code>
-      </Value>
-      <Value>
-        <Code>No</Code>
-      </Value>
-    </Values>
+    <Type name="xs:token"/>
   </Item>
-
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
-
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <SchoolCourseInfo RefId="9D75101A8C3D00AA001A0000A2E35B35" SchoolInfoRefId="101A8C3D00AA001A0000A2E35B359D75" SchoolYear="2006">
@@ -217,7 +224,7 @@
       <CoreAcademicCourse>No</CoreAcademicCourse>
       <GraduationRequirement>No</GraduationRequirement>
       <DualCredit>Yes</DualCredit>
-	  <CTEConcentrator>Yes</CTEConcentrator>
+      <CTEConcentrator>Yes</CTEConcentrator>
     </SchoolCourseInfo>
   </xhtml:Example>
 </DataObject>

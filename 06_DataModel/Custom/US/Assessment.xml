@@ -1,10 +1,4 @@
-<DataObject name="Assessment"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="Assessment">
   <Key>@RefId</Key>
   <EventsReported>false</EventsReported>
   <Intro>
@@ -16,31 +10,37 @@
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
     <Description>
       <p>The GUID that uniquely identifies this object.</p>
     </Description>
+    <cedsId>000364</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000364</cedsURL>
   </Item>
   <Item>
     <Element>Name</Element>
     <Characteristics>M</Characteristics>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
     <Description>
       <p>Name of the test.</p>
     </Description>
+    <cedsId>000028</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000028</cedsURL>
   </Item>
   <Item>
     <Element>AssessmentId</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
     <Description>
       <p>The state, local or publisher unique Id for the assessment.</p>
     </Description>
+    <cedsId>000630</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000630</cedsURL>
   </Item>
   <Item>
     <Element>AssessmentPackageRefId</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" relationship="content/resources defined by" count="*:1" name="IdRefType"></Type>
+    <Type ref="CommonTypes" relationship="content/resources defined by" count="*:1" name="IdRefType"/>
   </Item>
   <Item>
     <Element>AssessmentDescriptors</Element>
@@ -50,20 +50,18 @@
     <Description>
       <p>Describes what type of assessment this represents.</p>
     </Description>
-    <Type ref="CommonTypes" name="AssessmentDescriptorListType"></Type>
+    <Type ref="CommonTypes" name="AssessmentDescriptorListType"/>
   </Item>
-
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-
   <xhtml:Example xmlns="">
     <Assessment RefId="CC2834DE9138FAB032EF399BA72A8234">
       <Name>TAKS Test</Name>
@@ -87,5 +85,4 @@
       </SIF_Metadata>
     </Assessment>
   </xhtml:Example>
-
 </DataObject>

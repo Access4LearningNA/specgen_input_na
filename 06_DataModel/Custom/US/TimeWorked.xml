@@ -1,10 +1,4 @@
-<DataObject name="TimeWorked"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="TimeWorked">
   <Key>@RefId</Key>
   <EventsReported>true</EventsReported>
   <Item>
@@ -19,7 +13,7 @@
     <Description>
       <p>GUID for this object. The application that owns this object is responsible for generating this unique Id.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Element>EmployeePersonalRefId</Element>
@@ -27,7 +21,7 @@
     <Description>
       <p>References associated EmployeePersonal object.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>LocationInfoRefId</Element>
@@ -35,7 +29,7 @@
     <Description>
       <p>Site where employee actually worked.  References LocationInfo object.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>JobFunction</Element>
@@ -43,7 +37,7 @@
     <Description>
       <p>The purpose of the activities as related to students.</p>
     </Description>
-    <Type ref="CommonTypes" name="JobFunctionType"></Type>
+    <Type ref="CommonTypes" name="JobFunctionType"/>
   </Item>
   <Item>
     <Element>RegularHours</Element>
@@ -51,7 +45,7 @@
     <Description>
       <p>Regular hours worked.  Enter 0 if no hours worked.</p>
     </Description>
-    <Type name="xs:decimal"></Type>
+    <Type name="xs:decimal"/>
   </Item>
   <Item>
     <Element>OvertimeHours</Element>
@@ -59,7 +53,7 @@
     <Description>
       <p>Overtime hours worked.  Enter 0 if no overtime hours worked.</p>
     </Description>
-    <Type name="xs:decimal"></Type>
+    <Type name="xs:decimal"/>
   </Item>
   <Item>
     <Element>PayPeriod</Element>
@@ -67,17 +61,17 @@
     <Description>
       <p>Pay period hours were worked in.</p>
     </Description>
-    <Type name="xs:normalizedString"></Type>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="">
     <TimeWorked RefId="CCD1254884EE54687FF4567DACD34653">

@@ -1,109 +1,101 @@
-<DataObject name="IdMApplication"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:xi="http://www.w3.org/2001/XInclude"
-	xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-	xmlns="http://sifassociation.org/SpecGen">
-	<Key>@RefId</Key>
-	<EventsReported>true</EventsReported>
-	<Item>
-		<Element>IdMApplication</Element>
-		<Description>
-			<p>A software application or system for which access is controlled through the identity management system.</p>
-		</Description>
-	</Item>
-	<Item>
-		<Attribute>RefId</Attribute>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>GUID that uniquely identifies an instance of this object.</p>
-		</Description>
-		<Type ref="CommonTypes" name="RefIdType"/>
-	</Item>
-	<Item>
-		<Element>Name</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>A short name for the application</p>
-		</Description>
-		<Type name="xs:token"/>
-	</Item>
-	<Item>
-		<Element>URI</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>The URI of the application.</p>
-		</Description>
-		<Type name="xs:anyURI"/>
-	</Item>
-	<Item>
-		<Element>DefaultFunction</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>A short description of the default or main function of the application.</p>
-		</Description>
-		<Type name="xs:token"/>
-	</Item>
-	<Item>
-		<Element>FunctionList</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>A list of short descriptions of other functions the application performs. </p>
-		</Description>
-		<Type ref="CommonTypes" name="FunctionListType"/>
-	</Item>
-
-	<Item>
-		<Element>DefaultIdentityProvider</Element>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>The RefID of the application that is used as the Identity Provider (i.e., authentication provider) for the framework.  </p>
-		</Description>
-		<Type ref="CommonTypes" name="IdRefType"/>
-	</Item>
-	<Item>
-		<Element>IdentityProviderList</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>If the application can use multiple Identity Providers (authentication providers) to authenticate the user, for example Google directory service, LDAP, AD, etc., there could be multiple such providers in this list.</p>
-		</Description>
-		<Type ref="CommonTypes" name="IdentityProviderListType"/>
-	</Item>
-
-	<Item>
-		<Element>StartDate</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>Start date of the association of this application to the Identity Provider application.</p>
-		</Description>
-		<Type name="xs:date"/>
-	</Item>
-	<Item>
-		<Element>EndDate</Element>
-		<Characteristics>O</Characteristics>
-		<Description>
-			<p>End date of the association of this application to the Identity Provider application.</p>
-		</Description>
-		<Type name="xs:date"/>
-	</Item>
-	<Item>
-		<Element>SIF_Metadata</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="SIF_MetadataType"/>
-	</Item>
-	<Item>
-		<Element>SIF_ExtendedElements</Element>
-		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
-	</Item>
-	<xhtml:Example name= "IdMApplication" xmlns="">
-		<IdMApplication RefId="FE1078BA3261545A31905937B265CE01">
-			<Name>myApplication</Name>
-			<URI>http://myApplication.com</URI>
-			<DefaultFunction>Student Information</DefaultFunction>
-			<DefaultIdentityProvider>DE1078BA3261545A31905937B265CE47</DefaultIdentityProvider>
-			<StartDate>2001-09-05</StartDate>
-		</IdMApplication>
-	</xhtml:Example>
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="IdMApplication">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>IdMApplication</Element>
+    <Description>
+      <p>A software application or system for which access is controlled through the identity management system.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>GUID that uniquely identifies an instance of this object.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"/>
+  </Item>
+  <Item>
+    <Element>Name</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>A short name for the application</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>URI</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The URI of the application.</p>
+    </Description>
+    <Type name="xs:anyURI"/>
+  </Item>
+  <Item>
+    <Element>DefaultFunction</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>A short description of the default or main function of the application.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>FunctionList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A list of short descriptions of other functions the application performs. </p>
+    </Description>
+    <Type ref="CommonTypes" name="FunctionListType"/>
+  </Item>
+  <Item>
+    <Element>DefaultIdentityProvider</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The RefID of the application that is used as the Identity Provider (i.e., authentication provider) for the framework.  </p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+    <Element>IdentityProviderList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>If the application can use multiple Identity Providers (authentication providers) to authenticate the user, for example Google directory service, LDAP, AD, etc., there could be multiple such providers in this list.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdentityProviderListType"/>
+  </Item>
+  <Item>
+    <Element>StartDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Start date of the association of this application to the Identity Provider application.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>
+  <Item>
+    <Element>EndDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>End date of the association of this application to the Identity Provider application.</p>
+    </Description>
+    <Type name="xs:date"/>
+  </Item>
+  <Item>
+    <Element>SIF_Metadata</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
+  </Item>
+  <Item>
+    <Element>SIF_ExtendedElements</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+  </Item>
+  <xhtml:Example xmlns="" name="IdMApplication">
+    <IdMApplication RefId="FE1078BA3261545A31905937B265CE01">
+      <Name>myApplication</Name>
+      <URI>http://myApplication.com</URI>
+      <DefaultFunction>Student Information</DefaultFunction>
+      <DefaultIdentityProvider>DE1078BA3261545A31905937B265CE47</DefaultIdentityProvider>
+      <StartDate>2001-09-05</StartDate>
+    </IdMApplication>
+  </xhtml:Example>
 </DataObject>

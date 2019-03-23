@@ -1,0 +1,118 @@
+<DataObject xmlns="http://sifassociation.org/SpecGen" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:json="http://json.org/" name="xCourse">
+  <Key>@refId</Key>
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>xCourse</Element>
+    <Description>
+      <p>xCourse is a composite object that provides essential information about a course. The refId of a xCourse object coincides with the refId of a corresponding course object.</p>
+    </Description>
+  </Item>
+  <Item>
+    <Attribute>refId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="gRefIdType"/>
+  </Item>
+  <Item>
+    <Element>schoolRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Refid of the school in which the course is delivered.</p>
+    </Description>
+    <Type ref="CommonTypes" name="gRefIdPointerType"/>
+  </Item>
+  <Item>
+    <Element>schoolCourseId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The actual code that identifies the organization of subject matter and related learning experiences provided for the instruction of students.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xCourseIdType"/>
+    <cedsId>000055</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000055</cedsURL>
+  </Item>
+  <Item>
+    <Element>leaCourseId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The actual code that identifies the organization of subject matter and related learning experiences provided for the instruction of students as defined at the district level (i.e. district course code).</p>
+    </Description>
+    <Type ref="CommonTypes" name="xCourseIdType"/>
+    <cedsId>000055</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000055</cedsURL>
+  </Item>
+  <Item>
+    <Element>otherIds</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A system that is used to identify the organization of subject matter and related learning experiences provided for the instruction of students.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xCourseCodeSystemType"/>
+    <cedsId>000055</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000055</cedsURL>
+  </Item>
+  <Item>
+    <Element>courseTitle</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The descriptive name given to a course of study offered in a school or other institution or organization. In departmentalized classes at the elementary, secondary, and postsecondary levels (and for staff development activities), this refers to the name by which a course is identified (e.g., American History, English III). For elementary and other non-departmentalized classes, it refers to any portion of the instruction for which a grade or report is assigned (e.g., reading, composition, spelling, and language arts).</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000067</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000067</cedsURL>
+  </Item>
+  <Item>
+    <Element>description</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A description of the course content and/or goals. Reference may be made to state or national content standards.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+    <cedsId>000517</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000517</cedsURL>
+  </Item>
+  <Item>
+    <Element>subject</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="xSubjectType"/>
+  </Item>
+  <Item>
+    <Element>applicableEducationLevels</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The education level, grade level or primary instructional level at which a course is intended.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xGradeLevelType"/>
+    <cedsId>001301</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001301</cedsURL>
+  </Item>
+  <Item>
+    <Element>scedCourseCode</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>SCED code for the course.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>001517</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001517</cedsURL>
+  </Item>
+  <Item>
+    <Element>scedCourseLevelCode</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>SCED Course Level Code.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>001516</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001516</cedsURL>
+  </Item>
+  <Item>
+    <Element>scedCourseSubjectAreaCode</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>SCED Course Subject Area Code.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>001518</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001518</cedsURL>
+  </Item>
+</DataObject>

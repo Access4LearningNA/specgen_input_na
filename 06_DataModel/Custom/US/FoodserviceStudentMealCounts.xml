@@ -1,10 +1,4 @@
-<DataObject name="FoodserviceStudentMealCounts"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="FoodserviceStudentMealCounts">
   <EventsReported>false</EventsReported>
   <Key>@RefId</Key>
   <Item>
@@ -19,7 +13,7 @@
     <Description>
       <p>GUID that identifies the daily meal sales object</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
   <Item>
     <Element>SchoolInfoRefId</Element>
@@ -27,7 +21,7 @@
     <Description>
       <p>School for which the sales object applies</p>
     </Description>
-    <Type ref="CommonTypes" relationship="records student meal counts per program for" count="*:1" name="IdRefType"></Type>
+    <Type ref="CommonTypes" relationship="records student meal counts per program for" count="*:1" name="IdRefType"/>
   </Item>
   <Item>
     <Element>Date</Element>
@@ -35,29 +29,28 @@
     <Description>
       <p>Date on which the sales occurred.</p>
     </Description>
-    <Type name="xs:date"></Type>
+    <Type name="xs:date"/>
   </Item>
   <Item>
     <Element>Program</Element>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="FundedProgramType"></Type>
+    <Type ref="CommonTypes" name="FundedProgramType"/>
   </Item>
   <Item>
     <Element>Counts</Element>
     <Characteristics>M</Characteristics>
-     <Type ref="CommonTypes" name="FSCountListType"></Type>
+    <Type ref="CommonTypes" name="FSCountListType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-
   <xhtml:Example xmlns="">
     <FoodserviceStudentMealCounts RefId="E822BCDC9E7A40F787ED8183D3B485B5">
       <SchoolInfoRefId>F2F9D9B212B94489BC3F9FD6AB75F54A</SchoolInfoRefId>
@@ -65,28 +58,28 @@
       <Program Type="Foodservice">NSLP</Program>
       <Counts>
         <Count>
-          <MealStatus Type="Free" />
+          <MealStatus Type="Free"/>
           <MealType>FirstMeal</MealType>
           <Amount Type="Value" Credits="0">99999.99</Amount>
           <Tax>9999.99</Tax>
           <Value>99999</Value>
         </Count>
         <Count>
-          <MealStatus Type="Reduced" />
+          <MealStatus Type="Reduced"/>
           <MealType>FirstMeal</MealType>
           <Amount Type="Value" Credits="0">99999.99</Amount>
           <Tax>9999.99</Tax>
           <Value>99999</Value>
         </Count>
         <Count>
-          <MealStatus Type="Free" />
+          <MealStatus Type="Free"/>
           <MealType>SecondMeal</MealType>
           <Amount Type="Value" Credits="0">99999.99</Amount>
           <Tax>9999.99</Tax>
           <Value>99999</Value>
         </Count>
         <Count>
-          <MealStatus Type="None" />
+          <MealStatus Type="None"/>
           <MealType>SecondMeal</MealType>
           <Amount Type="Value" Credits="0">99999.99</Amount>
           <Tax>9999.99</Tax>

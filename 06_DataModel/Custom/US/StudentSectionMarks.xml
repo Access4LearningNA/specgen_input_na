@@ -1,38 +1,29 @@
-<DataObject name="StudentSectionMarks"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="StudentSectionMarks">
   <Key>@StudentPersonalRefId</Key>
   <Key>@SectionInfoRefId</Key>
   <Key>@TermInfoRefId</Key>
   <EventsReported>true</EventsReported>
-
   <Item>
     <Element>StudentSectionMarks</Element>
     <Description>
       <p>This object contains the marks entered for a student in a class section for a specific marking period.</p>
     </Description>
   </Item>
-
   <Item>
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>A GUID that identifies an instance of this object. This RefId is new for 2.7M and MUST be supported like other objects that have a RefId (i.e. it is the key for the object).  The alternate keys MUST continue to be supported.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"></Type>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
-
   <Item>
     <Attribute>StudentPersonalRefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The Id (GUID) that uniquely identifies the StudentPersonal object that this item refers to.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Attribute>SectionInfoRefId</Attribute>
@@ -40,7 +31,7 @@
     <Description>
       <p>The Id (GUID) that uniquely identifies the SectionInfo object that this item refers to.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Attribute>TermInfoRefId</Attribute>
@@ -48,16 +39,15 @@
     <Description>
       <p>The Id (GUID) that identifies the marking period that the following marks are recorded in.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
-
   <Item>
     <Attribute>SchoolInfoRefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The Id (GUID) that uniquely identifies the School that these Mark Values apply to.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdRefType"></Type>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
   <Item>
     <Element>IsFinal</Element>
@@ -65,7 +55,7 @@
     <Description>
       <p>Indicates if the grades are "Final" from the perspective of the teacher or school.  Does not mean that change events will not occur for this item.</p>
     </Description>
-    <Type name="xs:boolean"></Type>
+    <Type name="xs:boolean"/>
   </Item>
   <Item>
     <Element>MarkList</Element>
@@ -73,23 +63,20 @@
     <Description>
       <p>A list of marks received for this student in this section.  For each Mark entry, at least one of the sub-elements must be specified.</p>
     </Description>
-    <Type ref="CommonTypes" name="StudentSectionMarkListType"></Type>
+    <Type ref="CommonTypes" name="StudentSectionMarkListType"/>
   </Item>
-
-
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-
   <xhtml:Example xmlns="">
-    <StudentSectionMarks RefId="359D75101AD0A9D7A8C3DAD0A85103A2" StudentPersonalRefId="11737EA4301CADCA75C87214A7C46BDB" SectionInfoRefId="11737E214A7C46BDBA4301CADCA75C99"  TermInfoRefId="BDBA4301CA1A7C461737DCA75C87E214" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB">
+    <StudentSectionMarks RefId="359D75101AD0A9D7A8C3DAD0A85103A2" StudentPersonalRefId="11737EA4301CADCA75C87214A7C46BDB" SectionInfoRefId="11737E214A7C46BDBA4301CADCA75C99" TermInfoRefId="BDBA4301CA1A7C461737DCA75C87E214" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB">
       <IsFinal>true</IsFinal>
       <MarkList>
         <Mark MarkInfoRefId="A7C46BDBA4301CA11737E214DCA75C87">

@@ -1,10 +1,4 @@
-<DataObject name='BellSchedule'
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-
-  xmlns="http://sifassociation.org/SpecGen">
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="BellSchedule">
   <Intro>
     The BellSchedule is an object that a SIS (or another student scheduling application) can utilize to provide school / school year scheduling information, including timetable days, periods and bell schedules to other applications that may require this detailed scheduling information.
 
@@ -23,76 +17,69 @@
     <Attribute>RefId</Attribute>
     <Description>The Id (GUID) that uniquely identifies an instance of the object.</Description>
     <Characteristics>M</Characteristics>
-    <Type ref='CommonTypes' name='RefIdType'/>
+    <Type ref="CommonTypes" name="RefIdType"/>
   </Item>
-
   <Item>
     <Element>SchoolInfoRefId</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The Id (GUID) that uniquely identifies the school to which this bell schedule information applies</p>
     </Description>
-    <Type ref='CommonTypes' name='IdRefType'/>
+    <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
-
   <Item>
     <Element>SchoolYear</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007" for the 2006-07 school year).</p>
     </Description>
-    <Type ref="CommonTypes" name="SchoolYearType"></Type>
+    <Type ref="CommonTypes" name="SchoolYearType"/>
   </Item>
-
   <Item>
     <Element>BellScheduleName</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>A name that uniquely identifies a particular BellSchedule from others for the same school and year.</p>
     </Description>
-    <Type name='xs:normalizedString'/>
+    <Type name="xs:normalizedString"/>
+    <cedsId>000598</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000598</cedsURL>
   </Item>
-
   <Item>
     <Element>TimetableDayList</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The timetable days for this school year bell schedule.  This essentially provides a list of the time day identifiers that are used in the BellPeriod definitions below with some additional properties for each.  The identifiers defined here may be referenced by other objects / elements like MeetingTime.</p>
     </Description>
-   <Type ref="CommonTypes" name="TimetableDayListType"></Type>
+    <Type ref="CommonTypes" name="TimetableDayListType"/>
   </Item>
-
   <Item>
     <Element>TimetablePeriodList</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The timetable periods for this school year bell schedule.  This essentially provides a list of the time period identifiers that are used in the BellPeriod definitions below with some addition properties for each.  The identifiers defined here may be referenced by other objects / elements like MeetingTime.</p>
     </Description>
-    <Type ref="CommonTypes" name="TimetablePeriodListType"></Type>
+    <Type ref="CommonTypes" name="TimetablePeriodListType"/>
   </Item>
-
   <Item>
     <Element>BellPeriodList</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The bell periods for this school year bell schedule.</p>
     </Description>
-     <Type ref="CommonTypes" name="BellPeriodListType"></Type>
+    <Type ref="CommonTypes" name="BellPeriodListType"/>
   </Item>
-
-
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+    <Type ref="CommonTypes" name="SIF_MetadataType"/>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-
-  <xhtml:Example name="BellSchedule - Example 1" xmlns=''>
+  <xhtml:Example xmlns="" name="BellSchedule - Example 1">
     <BellSchedule RefId="A157E79C10AC744ED90AF2871BEB90B3">
       <SchoolInfoRefId>B7A34E561C97345C0A4E11BB112B2753</SchoolInfoRefId>
       <SchoolYear>2009</SchoolYear>
@@ -315,6 +302,5 @@
         </BellPeriod>
       </BellPeriodList>
     </BellSchedule>
-
   </xhtml:Example>
 </DataObject>

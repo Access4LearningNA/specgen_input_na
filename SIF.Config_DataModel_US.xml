@@ -3,13 +3,14 @@
 	
 	<globalSettings>
 		<inputDocument>SIF_DataModel.xml</inputDocument>
-		<sifNamespace>http://www.sifassociation.org/datamodel/us/1.0</sifNamespace>
+		<sifNamespace>http://www.sifassociation.org/datamodel/na/4.x</sifNamespace>
 		<localizationCode>us</localizationCode>
-		<schemaVersion>1.0</schemaVersion>
+		<schemaVersion>4.0</schemaVersion>
 		<!--
 	    <jsonExamplesXslt>98_Xslt/sif2JsonLM.xsl</jsonExamplesXslt> -->
 		<resolveExtensions>true</resolveExtensions>
 		<isDraft>true</isDraft>
+		<includeCEDS>true</includeCEDS>
 	</globalSettings>
 	
 	<htmlDocuments>
