@@ -18,12 +18,12 @@
     <Description>
       <p>Name of Student.</p>
     </Description>
-    <Type ref="CommonTypes" name="xPersonNameTypeType"/>
+    <Type ref="CommonTypes" name="xPersonNameType"/>
   </Item>
   <Item>
     <Element>otherNames</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="xPersonNameType"/>
+    <Type ref="CommonTypes" name="xOtherPersonNameListType"/>
   </Item>
   <Item>
     <Element>localId</Element>
@@ -61,7 +61,7 @@
     <Description>
       <p>Other Ids for the student</p>
     </Description>
-    <Type ref="CodeSets" name="xPersonIdSystemType"/>
+    <Type ref="CommonTypes" name="xOtherPersonIdListType"/>
   </Item>
   <Item>
     <Element>address</Element>
@@ -69,7 +69,7 @@
     <Description>
       <p>Address of the student.</p>
     </Description>
-    <Type ref="CommonTypes" name="xCountryCodeType"/>
+    <Type ref="CommonTypes" name="xPersonAddressType"/>
   </Item>
   <Item>
     <Element>otherAddresses</Element>
@@ -77,7 +77,7 @@
     <Description>
       <p>Address of the student.</p>
     </Description>
-    <Type ref="CommonTypes" name="xStateCodeUSType"/>
+    <Type ref="CommonTypes" name="xOtherPersonAddressListType"/>
   </Item>
   <Item>
     <Element>phoneNumber</Element>
@@ -85,7 +85,7 @@
     <Description>
       <p>Phone number of the student.</p>
     </Description>
-    <Type ref="CommonTypes" name="xTelephoneTypeType"/>
+    <Type ref="CommonTypes" name="xTelephoneType"/>
   </Item>
   <Item>
     <Element>otherPhoneNumbers</Element>
@@ -93,7 +93,7 @@
     <Description>
       <p>Other phone numbers for the student.</p>
     </Description>
-    <Type ref="CommonTypes" name="xTelephoneType"/>
+    <Type ref="CommonTypes" name="xTelephoneListType"/>
   </Item>
   <Item>
     <Element>email</Element>
@@ -101,7 +101,7 @@
     <Description>
       <p>Email of the student.</p>
     </Description>
-    <Type ref="CommonTypes" name="xEmailTypeType"/>
+    <Type ref="CommonTypes" name="xEmailType"/>
   </Item>
   <Item>
     <Element>otherEmails</Element>
@@ -109,7 +109,7 @@
     <Description>
       <p>Other emails for the student.</p>
     </Description>
-    <Type ref="CommonTypes" name="xEmailType"/>
+    <Type ref="CommonTypes" name="xEmailListType"/>
   </Item>
   <Item>
     <Element>demographics</Element>
@@ -117,7 +117,7 @@
     <Description>
       <p>Demographic information about the student.</p>
     </Description>
-    <Type ref="CommonTypes" name="gCitizenshipStatusType"/>
+    <Type ref="CommonTypes" name="xDemographicsType"/>
   </Item>
   <Item>
     <Element>enrollment</Element>
@@ -125,7 +125,7 @@
     <Description>
       <p>Current enrollment information for the student.</p>
     </Description>
-    <Type ref="CommonTypes" name="gRefIdPointerType"/>
+    <Type ref="CommonTypes" name="xEnrollmentType"/>
   </Item>
   <Item>
     <Element>otherEnrollments</Element>
@@ -133,7 +133,7 @@
     <Description>
       <p>Other enrollment information for the student.</p>
     </Description>
-    <Type ref="CommonTypes" name="xPersonReferenceType"/>
+    <Type ref="CommonTypes" name="xEnrollmentListType"/>
   </Item>
   <Item>
     <Element>academicSummary</Element>
@@ -149,7 +149,7 @@
     <Description>
       <p>Persons that may be contacted regarding the student.</p>
     </Description>
-    <Type ref="CommonTypes" name="xContactStudentRelationshipListType"/>
+    <Type ref="CommonTypes" name="xStudentContactListType"/>
   </Item>
   <Item>
     <Element>languages</Element>
@@ -157,6 +157,6 @@
     <Description>
       <p>Languages of the student.</p>
     </Description>
-    <Type ref="CommonTypes" name="xLanguageTypeType"/>
+    <Type ref="CommonTypes" name="xLanguageListType"/>
   </Item>
 </DataObject>

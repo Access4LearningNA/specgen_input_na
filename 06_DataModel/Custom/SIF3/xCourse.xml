@@ -46,7 +46,7 @@
     <Description>
       <p>A system that is used to identify the organization of subject matter and related learning experiences provided for the instruction of students.</p>
     </Description>
-    <Type ref="CommonTypes" name="xCourseCodeSystemType"/>
+    <Type ref="CommonTypes" name="xOtherCourseIdListType"/>
     <cedsId>000055</cedsId>
     <cedsURL>https://ceds.ed.gov/element/000055</cedsURL>
   </Item>
@@ -81,7 +81,7 @@
     <Description>
       <p>The education level, grade level or primary instructional level at which a course is intended.</p>
     </Description>
-    <Type ref="CommonTypes" name="xGradeLevelType"/>
+    <Type ref="CommonTypes" name="xApplicableEducationLevelListType"/>
     <cedsId>001301</cedsId>
     <cedsURL>https://ceds.ed.gov/element/001301</cedsURL>
   </Item>

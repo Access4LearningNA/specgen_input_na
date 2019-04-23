@@ -10,12 +10,12 @@
   <Item>
     <Attribute>refId</Attribute>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="gRefIdType"/>
+    <Type ref="CommonTypes" name="latitudeSimpleType"/>
   </Item>
   <Item>
     <Element>gridLocation</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:string"/>
+    <Type ref="CommonTypes" name="codesetNameSimpleType"/>
   </Item>
   <Item>
     <Element>addressType</Element>
@@ -36,7 +36,7 @@
   <Item>
     <Element>localId</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:string"/>
+    <Type ref="CommonTypes" name="gLocalIdType"/>
   </Item>
   <Item>
     <Element>street</Element>
@@ -54,7 +54,7 @@
     <Description>
       <p>A second-order subdivision of the country, e.g. county, shire.</p>
     </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="codesetNameSimpleType"/>
   </Item>
   <Item>
     <Element>stateProvince</Element>

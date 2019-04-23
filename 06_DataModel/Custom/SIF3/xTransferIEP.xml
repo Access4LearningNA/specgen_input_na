@@ -12,16 +12,16 @@
   <Item>
     <Element>referenceObjects</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="xAddressTypeForOrganizationType"/>
+    <Type ref="CommonTypes" name="tiepReferenceObjectsType"/>
   </Item>
   <Item>
     <Element>iep</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="iepPlanCommonAuthorizationParentGuardianAuthorization"/>
+    <Type ref="CommonTypes" name="xIepType"/>
   </Item>
   <Item>
     <Element>historyList</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="iepCommonLeaRefIdPointerType"/>
+    <Type ref="CommonTypes" name="tiepHistoryList"/>
   </Item>
 </DataObject>

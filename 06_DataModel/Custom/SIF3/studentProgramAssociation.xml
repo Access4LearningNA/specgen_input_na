@@ -42,7 +42,7 @@
     <Description>
       <p>The date from when this enrollment is valid.</p>
     </Description>
-    <Type name="xs:date"/>
+    <Type ref="CommonTypes" name="codesetNameSimpleType"/>
   </Item>
   <Item>
     <Element>entryType</Element>
@@ -154,7 +154,7 @@
     <Description>
       <p>Managing school for this student in the program. Overrides the value in program object.</p>
     </Description>
-    <Type name="xs:string"/>
+    <Type ref="CommonTypes" name="gLocalIdType"/>
   </Item>
   <Item>
     <Element>managingSchoolRefId</Element>

@@ -66,7 +66,7 @@
     <Description>
       <p>The address of the LEA.</p>
     </Description>
-    <Type ref="CommonTypes" name="xCountryCodeType"/>
+    <Type ref="CommonTypes" name="xOrganizationAddressType"/>
   </Item>
   <Item>
     <Element>phoneNumber</Element>
@@ -74,7 +74,7 @@
     <Description>
       <p>The phone number of the LEA.</p>
     </Description>
-    <Type ref="CommonTypes" name="xTelephoneTypeType"/>
+    <Type ref="CommonTypes" name="xTelephoneType"/>
   </Item>
   <Item>
     <Element>otherPhoneNumbers</Element>
@@ -82,6 +82,6 @@
     <Description>
       <p>A list of other phone numbers for the LEA.</p>
     </Description>
-    <Type ref="CommonTypes" name="xTelephoneType"/>
+    <Type ref="CommonTypes" name="xTelephoneListType"/>
   </Item>
 </DataObject>

@@ -26,7 +26,7 @@
     <Description>
       <p>An administrative unit within K-12 education at the local level which exists primarily to operate schools or to contract for educational services. These units may or may not be co-extensive with county, city, or town boundaries. </p>
     </Description>
-    <Type ref="CommonTypes" name="xTelephoneListType"/>
+    <Type ref="CommonTypes" name="xLeaType"/>
   </Item>
   <Item>
     <Element>localId</Element>
@@ -54,7 +54,7 @@
     <Description>
       <p>A list of other Ids for the school.</p>
     </Description>
-    <Type ref="CommonTypes" name="xOtherOrganizationIdType"/>
+    <Type ref="CommonTypes" name="xOtherOrganizationIdListType"/>
   </Item>
   <Item>
     <Element>schoolName</Element>
@@ -72,7 +72,7 @@
     <Description>
       <p>The specific grade or combination of grades offered by an education institution.</p>
     </Description>
-    <Type ref="CommonTypes" name="xGradeLevelType"/>
+    <Type ref="CommonTypes" name="xYearGroupListType"/>
     <cedsId>000131</cedsId>
     <cedsURL>https://ceds.ed.gov/element/000131</cedsURL>
   </Item>
@@ -82,7 +82,7 @@
     <Description>
       <p>Address of the school.</p>
     </Description>
-    <Type ref="CommonTypes" name="xCountryCodeType"/>
+    <Type ref="CommonTypes" name="xOrganizationAddressType"/>
   </Item>
   <Item>
     <Element>phoneNumber</Element>
@@ -90,7 +90,7 @@
     <Description>
       <p>Phone number of the school.</p>
     </Description>
-    <Type ref="CommonTypes" name="xTelephoneTypeType"/>
+    <Type ref="CommonTypes" name="xTelephoneType"/>
   </Item>
   <Item>
     <Element>otherPhoneNumbers</Element>
@@ -98,6 +98,6 @@
     <Description>
       <p>A list of other phone numbers for the school.</p>
     </Description>
-    <Type ref="CommonTypes" name="xTelephoneType"/>
+    <Type ref="CommonTypes" name="xTelephoneListType"/>
   </Item>
 </DataObject>

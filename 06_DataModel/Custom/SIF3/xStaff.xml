@@ -18,7 +18,7 @@
     <Description>
       <p>Name of the staff person.</p>
     </Description>
-    <Type ref="CommonTypes" name="xPersonNameTypeType"/>
+    <Type ref="CommonTypes" name="xPersonNameType"/>
   </Item>
   <Item>
     <Element>localId</Element>
@@ -54,7 +54,7 @@
     <Description>
       <p>Other Ids for the person.</p>
     </Description>
-    <Type ref="CodeSets" name="xPersonIdSystemType"/>
+    <Type ref="CommonTypes" name="xOtherPersonIdListType"/>
   </Item>
   <Item>
     <Element>sex</Element>
@@ -69,7 +69,7 @@
   <Item>
     <Element>email</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="xEmailTypeType"/>
+    <Type ref="CommonTypes" name="xEmailType"/>
     <cedsId>000088</cedsId>
     <cedsURL>https://ceds.ed.gov/element/000088</cedsURL>
   </Item>
@@ -79,7 +79,7 @@
     <Description>
       <p>The primary district, school, and function to which the person is assigned.</p>
     </Description>
-    <Type ref="CommonTypes" name="xEducationStaffClassificationType"/>
+    <Type ref="CommonTypes" name="xStaffPersonAssignmentType"/>
   </Item>
   <Item>
     <Element>otherAssignments</Element>
@@ -87,6 +87,6 @@
     <Description>
       <p>Other locations and functions to which the person is assigned.</p>
     </Description>
-    <Type ref="CommonTypes" name="gRefIdPointerType"/>
+    <Type ref="CommonTypes" name="xStaffPersonAssignmentListType"/>
   </Item>
 </DataObject>

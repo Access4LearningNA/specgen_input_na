@@ -34,6 +34,6 @@
     <Description>
       <p>A list of sessions for the calendar.</p>
     </Description>
-    <Type ref="CommonTypes" name="xSessionType"/>
+    <Type ref="CommonTypes" name="xSessionListType"/>
   </Item>
 </DataObject>

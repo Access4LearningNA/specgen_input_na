@@ -15,12 +15,9 @@
       <p>
         A simpler set of data objects that can be used by itself or in conjunction with the rest of the rich enterprise data model found here.
         It is particularly useful when needing an API to communicate basics to applications that would otherwise be kept outside the zone.
-        Note:  For now includes all objects being introduced with Unity/4.0, even if they are not xPress objects.
       </p>
     </Intro>
 
-    <xi:include parse="text" href="SIF3\address.xml"/>
-    <xi:include parse="text" href="SIF3\studentProgramAssociation.xml"/>
     <xi:include parse="text" href="SIF3\xCalendar.xml"/>
     <xi:include parse="text" href="SIF3\xContact.xml"/>
     <xi:include parse="text" href="SIF3\xCourse.xml"/>
@@ -228,6 +225,9 @@
         and by making the communication between applications as efficient as possible by ensuring that only the minimum required amount of data is exchanged in each transaction.
       </p>
     </Intro>
+    
+    <xi:include parse="text" href="SIF3\address.xml"/>
+    <xi:include parse="text" href="SIF3\studentProgramAssociation.xml"/>    
     <xi:include parse="text" href="US\StudentActivityInfo.xml"/>
     <xi:include parse="text" href="US\StudentActivityParticipation.xml"/>
     <xi:include parse="text" href="US\DisciplineIncident.xml"/>
@@ -258,6 +258,7 @@
     <xi:include parse="text" href="US\StaffEvaluation.xml"/>
     <xi:include parse="text" href="US\SectionCorrelation.xml"/>    
   </Group>
+  
   <Group name="Transportation and Geographic Information Working Group">
     <Intro>
       <p>

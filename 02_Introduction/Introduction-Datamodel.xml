@@ -146,6 +146,6 @@
 
     </p>
   </Section>
-  <xi:include parse="text" href="custom/ChangeLog-Datamodel.xml"/>
+  <!-- <xi:include parse="text" href="custom/ChangeLog-Datamodel.xml"/> -->
 </Section>
 

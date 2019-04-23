@@ -15,7 +15,7 @@
     <Description>
       <p>Name of the contact.</p>
     </Description>
-    <Type ref="CommonTypes" name="xPersonNameTypeType"/>
+    <Type ref="CommonTypes" name="xPersonNameType"/>
   </Item>
   <Item>
     <Element>otherNames</Element>
@@ -23,7 +23,7 @@
     <Description>
       <p>Other names of the contact.</p>
     </Description>
-    <Type ref="CommonTypes" name="xPersonNameType"/>
+    <Type ref="CommonTypes" name="xOtherPersonNameListType"/>
   </Item>
   <Item>
     <Element>localId</Element>
@@ -49,7 +49,7 @@
     <Description>
       <p>Other Ids of the contact.</p>
     </Description>
-    <Type ref="CodeSets" name="xPersonIdSystemType"/>
+    <Type ref="CommonTypes" name="xOtherPersonIdListType"/>
   </Item>
   <Item>
     <Element>address</Element>
@@ -57,7 +57,7 @@
     <Description>
       <p>Address of the student.</p>
     </Description>
-    <Type ref="CommonTypes" name="xCountryCodeType"/>
+    <Type ref="CommonTypes" name="xPersonAddressType"/>
   </Item>
   <Item>
     <Element>phoneNumber</Element>
@@ -65,7 +65,7 @@
     <Description>
       <p>Phone number of the contact.</p>
     </Description>
-    <Type ref="CommonTypes" name="xTelephoneTypeType"/>
+    <Type ref="CommonTypes" name="xTelephoneType"/>
   </Item>
   <Item>
     <Element>otherPhoneNumbers</Element>
@@ -73,7 +73,7 @@
     <Description>
       <p>Other phone numbers for the contact.</p>
     </Description>
-    <Type ref="CommonTypes" name="xTelephoneType"/>
+    <Type ref="CommonTypes" name="xTelephoneListType"/>
   </Item>
   <Item>
     <Element>email</Element>
@@ -81,7 +81,7 @@
     <Description>
       <p>The numbers, letters, and symbols used to identify an electronic mail (e-mail) user within the network to which the person or organization belongs.</p>
     </Description>
-    <Type ref="CommonTypes" name="xEmailTypeType"/>
+    <Type ref="CommonTypes" name="xEmailType"/>
     <cedsId>000088</cedsId>
     <cedsURL>https://ceds.ed.gov/element/000088</cedsURL>
   </Item>
@@ -91,7 +91,7 @@
     <Description>
       <p>Other emails of the contact.</p>
     </Description>
-    <Type ref="CommonTypes" name="xEmailType"/>
+    <Type ref="CommonTypes" name="xEmailListType"/>
     <cedsId>000088</cedsId>
     <cedsURL>https://ceds.ed.gov/element/000088</cedsURL>
   </Item>
@@ -119,6 +119,6 @@
     <Description>
       <p>Relationships that this contact has with the student.</p>
     </Description>
-    <Type ref="CommonTypes" name="gRefIdPointerType"/>
+    <Type ref="CommonTypes" name="xContactStudentRelationshipListType"/>
   </Item>
 </DataObject>

@@ -15,9 +15,12 @@
 	<!--Title Page-->
 	<TitlePage>
 		<h1>
-			<xi:include parse="text" href="90_Properties/SIF Association Trademark Name.txt"/>&#x2122;<br/>
-			<xi:include parse="text" href="90_Properties_DataModel/SIF-Specification-Title-DataModel.txt"/>
+			<xi:include parse="text" href="90_Properties/SIF Association Trademark Name.txt"/><br/>
+			<xi:include parse="text" href="90_Properties_DataModel/SIF-Specification-Marketing-DataModel.txt"/>
 		</h1>
+        <h3>
+            <xi:include parse="text" href="90_Properties_DataModel/SIF-Specification-Title-DataModel.txt"/>
+        </h3>
 		<h2>
 			<xi:include parse="text" href="90_Properties/SIF-Specification-ReleaseDate.txt"/>
 		</h2>
@@ -34,10 +37,12 @@
 			<dd>
 				<xi:include parse="text"  href="90_Properties_DataModel/SIF-Specification-Navigation-This Version.xml"/>
 			</dd>
+			<!--
 			<dt>Previous version:</dt>
 			<dd>
 				<xi:include parse="text"  href="90_Properties_DataModel/SIF-Specification-Navigation-Previous Version.xml"/>
 			</dd>
+			-->
 			<dt>Latest version:</dt>
 			<dd>
 				<xi:include parse="text"  href="90_Properties_DataModel/SIF-Specification-Navigation-Latest Version.xml"/>
@@ -87,8 +92,8 @@
 		<a href="ImplementationSpecification.xls">Excel spreadsheet</a>.</p>
 		<br/>
 		<br/>
-		<p>Copyright &#xA9;<xi:include parse="text" href="90_Properties/SIF-Specification-ReleaseYear.txt"/> <a href="http://www.sifassociation.org">
-				<xi:include parse="text" href="90_Properties/SIF Association Trademark Name.txt"/> (SIF&#x2122;) Association</a>.  All Rights Reserved.
+		<p>Copyright &#xA9; <xi:include parse="text" href="90_Properties/SIF-Specification-ReleaseYear.txt"/> <a href="httpS://www.a4l.org">
+				SIF<sup>®</sup> Association (dba) <xi:include parse="text" href="90_Properties/SIF Association Trademark Name.txt"/></a>.  All Rights Reserved.
 		</p>
 	</TitlePage>
 	

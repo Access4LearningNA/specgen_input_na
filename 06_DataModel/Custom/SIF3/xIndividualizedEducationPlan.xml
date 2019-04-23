@@ -15,16 +15,16 @@
   <Item>
     <Element>iepAdministrativeData</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="iepCommonStaffRefIdPointerType"/>
+    <Type ref="CommonTypes" name="iepAdministrativeDataType"/>
   </Item>
   <Item>
     <Element>iepEligibility</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="iepCommonStudentContactRefIdPointerType"/>
+    <Type ref="CommonTypes" name="iepEligibilityType"/>
   </Item>
   <Item>
     <Element>iepPlan</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:string"/>
+    <Type ref="CommonTypes" name="iepPlanType"/>
   </Item>
 </DataObject>

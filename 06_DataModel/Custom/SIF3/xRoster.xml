@@ -77,7 +77,7 @@
     <Description>
       <p>A list of meeting times for the section.</p>
     </Description>
-    <Type ref="CommonTypes" name="xExitOrWithdrawalType"/>
+    <Type ref="CommonTypes" name="xMeetingTimeListType"/>
   </Item>
   <Item>
     <Element>students</Element>
@@ -85,7 +85,7 @@
     <Description>
       <p>A list of students associated with the roster.</p>
     </Description>
-    <Type ref="CommonTypes" name="gRefIdPointerType"/>
+    <Type ref="CommonTypes" name="xStudentReferenceListType"/>
   </Item>
   <Item>
     <Element>primaryStaff</Element>
@@ -93,7 +93,7 @@
     <Description>
       <p>The primary staff person for the section.</p>
     </Description>
-    <Type ref="CommonTypes" name="gRefIdPointerType"/>
+    <Type ref="CommonTypes" name="xStaffReferenceType"/>
   </Item>
   <Item>
     <Element>otherStaffs</Element>
@@ -101,6 +101,6 @@
     <Description>
       <p>Other staff persons associated with the section.</p>
     </Description>
-    <Type ref="CommonTypes" name="xPersonReferenceType"/>
+    <Type ref="CommonTypes" name="xStaffReferenceListType"/>
   </Item>
 </DataObject>
