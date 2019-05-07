@@ -14,23 +14,26 @@
     </Description>
   </Item>
   <Item>
+
     <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The unique identifier for this report manifest.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"/>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
   <Item>
+
     <Attribute>ReportAuthorityInfoRefId</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
       <p>Id (GUID) of the authority providing this manifest.</p>
     </Description>
-    <Type ref="CommonTypes" relationship="records manifest provider as" count="*:1" name="IdRefType"/>
+    <Type ref="CommonTypes" relationship="records manifest provider as" count="*:1" name="IdRefType"></Type>
   </Item>
   <Item>
     <Element>SIF_Version</Element>
+
     <Characteristics>M</Characteristics>
     <Description>
       <p>
@@ -38,16 +41,18 @@
         the responding agent <span class="rfc2119">SHOULD</span> attempt to return the report data in the version specified by <code>SIF_Message/@Version</code>,
         if that version matches the wildcard version.  If not, the responding agent can return the data in any version it chooses that matches the wildcard version.
       </p>
+
     </Description>
-    <Type ref="CommonTypes" name="VersionWithWildcardsType"/>
+    <Type ref="CommonTypes" name="VersionWithWildcardsType"></Type>
   </Item>
   <Item>
     <Element>SIF_MaxBufferSize</Element>
+
     <Characteristics>M</Characteristics>
     <Description>
       <p>Specifies the maximum size of a packet to be returned to the report authority.</p>
     </Description>
-    <Type name="xs:unsignedInt"/>
+    <Type name="xs:unsignedInt"></Type>
   </Item>
   <Item>
     <Element>ReceivingAuthority</Element>
@@ -55,7 +60,7 @@
     <Description>
       <p>The GUID of the authority for whom the report is intended, usually the same authority that defines this manifest.</p>
     </Description>
-    <Type ref="CommonTypes" relationship="records report recipient as" count="*:1" name="IdRefType"/>
+    <Type ref="CommonTypes" relationship="records report recipient as" count="*:1" name="IdRefType"></Type>
   </Item>
   <Item>
     <Attribute>SIF_RefObject</Attribute>
@@ -71,30 +76,35 @@
   </Item>
   <Item>
     <Element>ReportName</Element>
+
     <Characteristics>M</Characteristics>
     <Description>
       <p>The authority's accepted name for the report.</p>
     </Description>
-    <Type name="xs:normalizedString"/>
+    <Type name="xs:normalizedString"></Type>
   </Item>
   <Item>
     <Element>Description</Element>
+
     <Characteristics>O</Characteristics>
     <Description>
       <p>The description for the report.</p>
     </Description>
-    <Type name="xs:string"/>
+    <Type name="xs:string"></Type>
   </Item>
   <Item>
     <Element>ReportingPeriod</Element>
+
     <Characteristics>O</Characteristics>
     <Description>
       <p>Information on the period of time over which the report spans.</p>
     </Description>
-    <Type ref="CommonTypes" name="ReportingPeriodType"/>
+    <Type ref="CommonTypes" name="ReportingPeriodType"></Type>
   </Item>
+
   <Item>
     <Element>ReportDefinitionSource</Element>
+
     <Characteristics>M</Characteristics>
     <Description>
       <p>
@@ -105,9 +115,10 @@
         the SIF_ExtendedQuery element below contains the definition.
       </p>
     </Description>
-    <Type name="xs:string"/>
+    <Type name="xs:string"></Type>
   </Item>
   <Item>
+
     <Attribute>Type</Attribute>
     <Characteristics>M</Characteristics>
     <Description>
@@ -141,7 +152,7 @@
         If the <code>Type</code> attribute is <code>SIF_ExtendedQuery</code>, then <code>QueryLanguage</code> should also be <code>SIF_ExtendedQuery</code>.
       </p>
     </Description>
-    <Type name="xs:token"/>
+    <Type name="xs:token"></Type>
   </Item>
   <Item>
     <Element>ReportFormatList</Element>
@@ -153,11 +164,12 @@
         format by examining the ContentType attribute.
       </p>
     </Description>
-    <Type ref="CommonTypes" name="ReportingFormattingListType"/>
+    <Type ref="CommonTypes" name="ReportFormatListType"></Type>
   </Item>
-  <Choice optional="true">
+  <Choice  optional="true">
     <Item>
       <Element>SIF_QueryGroup</Element>
+
       <Characteristics>C</Characteristics>
       <Description>
         <p>
@@ -165,8 +177,8 @@
           is <code>SIF_Query</code>.
         </p>
       </Description>
-      <Type ref="CommonTypes" name="SIF_QueryListType"/>
-    </Item>
+   <Type ref="CommonTypes" name="SIF_QueryListType"></Type>
+     </Item>
     <Item>
       <Element>SIF_ExtendedQuery</Element>
       <Characteristics>C</Characteristics>
@@ -176,18 +188,19 @@
           is <code>SIF_ExtendedQuery</code>.
         </p>
       </Description>
-      <Type ref="Infrastructure" name="SIF_ExtendedQuery"/>
+      <Type ref="Infrastructure" name="SIF_ExtendedQuery"></Type>
     </Item>
   </Choice>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"/>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
+
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
     <ReportManifest RefId="C234516384746B387459000F84723A00" ReportAuthorityInfoRefId="84756373645746363738484848484832">
@@ -209,10 +222,10 @@
       <ReportDefinitionSource Type="URL" QueryLanguage="Description">http://www.state.edu/IDEAEligible.html</ReportDefinitionSource>
       <SIF_QueryGroup>
         <SIF_Query>
-          <SIF_QueryObject ObjectName="StudentPersonal"/>
+          <SIF_QueryObject ObjectName="StudentPersonal" />
         </SIF_Query>
         <SIF_Query>
-          <SIF_QueryObject ObjectName="StudentSchoolEnrollment"/>
+          <SIF_QueryObject ObjectName="StudentSchoolEnrollment" />
           <SIF_ConditionGroup Type="And">
             <SIF_Conditions Type="None">
               <SIF_Condition>
@@ -236,7 +249,7 @@
           </SIF_ConditionGroup>
         </SIF_Query>
         <SIF_Query>
-          <SIF_QueryObject ObjectName="StudentParticipation"/>
+          <SIF_QueryObject ObjectName="StudentParticipation" />
           <SIF_ConditionGroup Type="And">
             <SIF_Conditions Type="None">
               <SIF_Condition>
@@ -256,7 +269,7 @@
               <SIF_Condition>
                 <SIF_Element>ProgramExitDate</SIF_Element>
                 <SIF_Operator>EQ</SIF_Operator>
-                <SIF_Value/>
+                <SIF_Value></SIF_Value>
               </SIF_Condition>
               <SIF_Condition>
                 <SIF_Element>ProgramExitDate</SIF_Element>

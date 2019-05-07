@@ -118,10 +118,10 @@
 			<p>Common and supporting types referenced in this specification are included here as a reference.</p>
 		</Intro>
 			<!--Section A-->
-		<xi:include parse="text" href="80_BackMatter/Custom/DataModel-CommonTypes-Custom.xml"/>
-		<!--<xi:include parse="text" href="80_BackMatter/Generic-CommonTypes.xml"/>-->
+		<xi:include parse="text" href="80_BackMatter/DataModel-CommonTypes.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="80_BackMatter/TypesLinda.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="80_BackMatter/TypesNick.xml"/>		
 		<xi:include parse="text" href="80_BackMatter/Custom/SIF3/CommonTypes.xml"/>
-		
 	</Appendix>
 	
 		<!--Section B-->

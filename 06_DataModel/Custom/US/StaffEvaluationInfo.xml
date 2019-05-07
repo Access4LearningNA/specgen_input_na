@@ -1,0 +1,206 @@
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="StaffEvaluation">
+
+  <Key>@RefId</Key>
+
+  <EventsReported>true</EventsReported>
+  <Item>
+    <Element>StaffEvaluation</Element>
+    <Description>
+      <p>This Staff Evaluation Object is to meet the new APPR Regulations from the Federal government and are being enforced by the states.</p>
+    </Description>
+  </Item>
+
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies this StaffEvaluation instance. This RefId is new for 2.7M and MUST be supported like other objects that have a RefId (i.e. it is the key for the object).  The alternate keys MUST continue to be supported.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
+  </Item>
+
+  <Item>
+    <Element>StaffPersonalRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) of the staff being evaluated.</p>
+    </Description>
+    <Type ref="CommonTypes"  name="IdRefType"></Type>
+  </Item>
+
+  <Item>
+    <Element>SchoolInfoRefId</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) of the School the staff member resides and where they are being evaluated.</p>
+    </Description>
+    <Type ref="CommonTypes"  name="IdRefType"></Type>
+  </Item>
+
+<Item>
+	<Element>NCESId</Element>
+	<Characteristics>O</Characteristics>
+	<Description>
+	  <p>The NCES-assigned identifier of the school or district where the evaluator resides.</p>
+	</Description>
+	<Type ref="CommonTypes"  name="NCESIdType"></Type>
+</Item>
+
+<Item>
+	<Element>EvaluatorStateProvinceId</Element>
+	<Characteristics>O</Characteristics>
+	<Description>
+	  <p>The identifier that has been assigned by the state to the administrator that is administering the evaluation</p>
+	</Description>
+	<Type ref="CommonTypes"  name="StateProvinceIdType"></Type>
+</Item>
+
+<Item>
+	<Element>BargainingUnit</Element>
+	<Characteristics>O</Characteristics>
+	<Description>
+	  <p>This is the unit that the person being observed is part of.</p>
+	</Description>
+	<Type name="xs:normalizedString"></Type>
+</Item>
+
+<Item>
+	<Element>EvaluationCycleName</Element>
+	<Characteristics>O</Characteristics>
+	<Description>
+	  <p>The type of evaluation that will take place for that individual.</p>
+	</Description>
+	<Type name="xs:normalizedString"></Type>
+</Item>
+
+<Item>
+	<Element>EvaluationPreconferenceDate</Element>
+	<Characteristics>O</Characteristics>
+	<Description>
+	  <p>When the Evaluation was first discussed and the goals for the evaluation were discussed.</p>
+	</Description>
+	<Type name="xs:date"></Type>
+ </Item>
+
+<Item>
+	<Element>ProjectedEvaluationDate</Element>
+	<Characteristics>O</Characteristics>
+	<Description>
+	  <p>When the evaluation is anticipated to happen.</p>
+	</Description>
+	<Type name="xs:date"></Type>
+</Item>
+
+<Item>
+	<Element>EvaluationDate</Element>
+	<Characteristics>M</Characteristics>
+	<Description>
+	  <p>Date of when the evaluation actually was observed.</p>
+	</Description>
+	<Type name="xs:date"></Type>
+</Item>
+
+<Item>
+	<Element>EvaluationPostconferenceDate</Element>
+	<Characteristics>O</Characteristics>
+	<Description>
+	  <p>Date of Postconference where the evaluation will be discussed.</p>
+	</Description>
+	<Type name="xs:date"></Type>
+</Item>
+
+<Item>
+	<Element>EvaluationSystem</Element>
+	<Characteristics>M</Characteristics>
+	<Description>
+	  <p>This is the name of the tool being used.</p>
+	</Description>
+	<Type name="xs:normalizedString"></Type>
+</Item>
+
+<Item>
+	<Element>EvaluationParts</Element>
+	<Characteristics>O</Characteristics>
+	<Description>
+	  <p>The set of the Evaluation Parts.</p>
+	</Description>
+	<Type ref="CommonTypes"  name="EvaluationPartsType"></Type>
+ </Item>
+
+<Item>
+	<Element>EvaluationHolisticScore</Element>
+	<Characteristics>M</Characteristics>
+	<Description>
+	  <p>The  overall Score for the evaluation.</p>
+	</Description>
+	<Type name="xs:normalizedString"></Type>
+</Item>
+
+<Item>
+	<Element>EvaluationHolisticScale</Element>
+	<Characteristics>M</Characteristics>
+	<Description>
+	  <p>This is the overall Scale that is being used for the evaluation.</p>
+	</Description>
+	<Type name="xs:normalizedString"></Type>
+ </Item>
+
+  <Item>
+	 <Element>EvaluationRecommendation</Element>
+	 <Characteristics>O</Characteristics>
+	 <Description>
+	  <p>What was done because of a summative evaluation.</p>
+	</Description>
+	<Type ref="CommonTypes" name="EvaluationRecommendationType"/>
+ </Item>
+
+
+
+ <Item>
+		<Element>SIF_Metadata</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_MetadataType"></Type>
+	</Item>
+	<Item>
+		<Element>SIF_ExtendedElements</Element>
+		<Characteristics>O</Characteristics>
+		<Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
+	</Item>
+
+  <xhtml:Example name="StaffEvaluation" xmlns="">
+    <StaffEvaluation RefId="359D75101AD0A9D7A8C3DAD0A85103A2">
+		<StaffPersonalRefId>DCE34B359D75101A8C3D00AA001A1652</StaffPersonalRefId>
+		<SchoolInfoRefId>1947AB893C29F73910FEC3827A239CB1</SchoolInfoRefId>
+		<NCESId>421575003045</NCESId>
+		<EvaluatorStateProvinceId>L65432765</EvaluatorStateProvinceId>
+		<BargainingUnit>RTA</BargainingUnit>
+		<EvaluationCycleName>P1</EvaluationCycleName>
+		<EvaluationPreconferenceDate>2011-09-01</EvaluationPreconferenceDate>
+		<ProjectedEvaluationDate>2012-10-12</ProjectedEvaluationDate>
+		<EvaluationDate>2012-10-13</EvaluationDate>
+		<EvaluationPostconferenceDate>2012-10-12</EvaluationPostconferenceDate>
+		<EvaluationSystem>My Learning Plan:OASYS</EvaluationSystem>
+		<EvaluationParts>
+			<EvaluationPart>
+				<Name>Using Assessment in Instruction</Name>
+				<Score>3</Score>
+				<Scale>1-4</Scale>
+			</EvaluationPart>
+			<EvaluationPart>
+				<Name> Demonstrating Knowledge of Resources </Name>
+				<Score>4</Score>
+				<Scale>1-4</Scale>
+			</EvaluationPart>
+		</EvaluationParts>
+		<EvaluationHolisticScore>100-Mastery</EvaluationHolisticScore>
+		<EvaluationHolisticScale>1-100 Mastery, Proficient, Standards Met, Below Standards</EvaluationHolisticScale>
+		<EvaluationRecommendation>
+			<Code>02338</Code>
+			<OtherCodeList>
+				<OtherCode Codeset="Local">S</OtherCode>
+				<OtherCode Codeset="Text">Semester</OtherCode>
+			</OtherCodeList>
+		</EvaluationRecommendation>
+	</StaffEvaluation>
+  </xhtml:Example>
+</DataObject>

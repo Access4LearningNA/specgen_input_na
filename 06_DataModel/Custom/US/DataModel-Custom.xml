@@ -1,0 +1,338 @@
+<IncludeGroup xmlns="http://sifassociation.org/SpecGen" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!--xi:include parse="xml" xmlns:xi="http://www.w3.org/2001/XInclude" href="DataModel-Vertical Reporting Task Force.xml"/-->
+
+  <Group name="Data Model Task Force" sort="false" >
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\SEAInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentLEARelationship.xml"/>
+  </Group>
+
+  <Group name="Data Warehouse Working Group" sort="false">
+    <Intro>
+      <p>
+        The mission of the Data Warehouse Working Group is to lead the definition of the detailed data that schools and parents need to improve student achievement and organizational effectiveness.
+        It will represent to the other SIF Association working groups the interests of the school administrators, guidance counselors, teachers, parents and students who can benefit from the analysis of integrated SIF K-12 data.
+      </p>
+    </Intro>
+
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\AggregateStatisticInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\AggregateCharacteristicInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\AggregateStatisticFact.xml"/>
+
+
+
+  </Group>
+  <Group name="Food Services Working Group">
+    <Intro>
+      <p>
+        The Food Services Working Group specifies, implements, and promotes a standard set of messages and automated communication mechanisms
+        that allow computer applications for the food service sector of the education industry to effectively exchange information
+        with all SIF applications.
+      </p>
+    </Intro>
+
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentMeal.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FoodserviceItem.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FoodserviceItemUnit.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FoodserviceItemPortion.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FoodserviceReimbursementRates.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FoodserviceMealPrices.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StaffMeal.xml"/>  
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FoodserviceTransaction.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FoodserviceTransactionDetails.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FoodserviceTransactionPayMethod.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FoodserviceSales.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FoodserviceItemSales.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FoodserviceMenuPlan.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FoodserviceMilkSales.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FoodservicePurchaseTransaction.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FoodserviceStaffEnrollmentCount.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FoodserviceStaffMealCounts.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FoodserviceStudentEnrollmentCount.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FoodserviceStudentMealCounts.xml"/>
+  </Group>
+  <Group name="Student Record Exchange Task Force" sort="false">
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentRecordExchange.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentDemographicRecord.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentAcademicRecord.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentSpecialEducationRecord.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentRecordPackage.xml"/>
+  </Group>
+
+  <Group name="Grade Book Working Group">
+    <Intro>
+      <p>The goal of the Grade Book Working Group is an efficient, functional standard that supports the entire SIF structure, allowing for easy, bi-directional transfer of data integral to grading.</p>
+    </Intro>
+
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\MarkValueInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\MarkInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\SectionMarkInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentSectionMarks.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\GradingCategory.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\GradingAssignment.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\GradingAssignmentScore.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentPeriodAttendance.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\OfficialStudentPeriodAttendance.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentGrade.xml"/>
+  </Group>
+
+
+  <Group name="Human Resources &amp; Financials Working Group">
+    <Intro>
+      <p>The Human Resources &amp; Financials Working Group defines the SIF specifications for human resources and financial application software, focusing solely on defining specifications for the information required by the other SIF application groups from the human resource and financial applications in order to prevent duplicate input of the same data, or to keep applications in sync with data that is primarily maintained in human resource and financial applications.</p>
+    </Intro>
+
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\Billing.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\Payment.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\EmployeeAssignment.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\EmployeeContract.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\EmploymentRecord.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\EmployeePersonal.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\EmployeePicture.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FinancialAnnual.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FinancialBudget.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\TimeWorked.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\VendorInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\W4.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\EmployeeWage.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\LocationInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\Purchasing.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\AccountingPeriod.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FinancialAccount.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FinancialAccountAccountingPeriodLocationInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FinancialClass.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FinancialIncomeStatement.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FinancialTransaction.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\FiscalYear.xml"/>
+
+  </Group>
+  <Group name="Professional Development Working Group">
+    <Intro>
+      <p>
+        The Professional Development Working Group assesses the interoperability needs of state and local education
+        agencies with regard to professional development.  This includes:
+      </p>
+      <ul>
+        <li>Assessment of professional certification requirements related to the "Highly Qualified Teacher Provisions of No Child Left Behind."</li>
+        <li>
+          Training for administrative and teaching staff on new systems and/or educational programs directed to
+          best practices to be implemented in the schools.
+        </li>
+        <li>
+          Developing data objects that can transport professional development course information, assessment of performance in these courses,
+          and the longitudinal data needed to track professional development of staff.
+        </li>
+      </ul>
+    </Intro>
+
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\ActivityProvider.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\EmployeeCredit.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\EmployeeRecertification.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\EmployeeCredential.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\ProfessionalDevelopmentActivities.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\ProfessionalDevelopmentProgram.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\ProfessionalDevelopmentRegistration.xml"/>
+  </Group>
+
+
+  <Group name="Special Programs Working Group">
+    <Intro>
+      <p>The Special Programs Working Group's mission is to focus on support within SIF for effective data exchange regarding special education and other individualized programs.</p>
+    </Intro>
+
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentParticipation.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentPlacement.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\TestAccommodation.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentSpecialEducationSummary.xml"/>
+  </Group>
+
+  <Group name="Assessment Working Group">
+    <Intro>
+      <p>
+        The Assessment Working Group concentrates on ensuring that assessment results can be made available in a timely manner and
+        that the results are transmitted in a meaningful manner.
+      </p>
+    </Intro>
+
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\Assessment.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\AssessmentItem.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\ItemCharacteristics.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\AssessmentSubTest.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\AssessmentAdministration.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\AssessmentForm.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\AssessmentRegistration.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentResponseSet.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentScoreSet.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\AssessmentPackage.xml"/>
+	
+
+		
+  </Group>
+
+  <Group name="Assessment: sif3 Namespace">
+	<Intro>
+      <p> These Assessment objects are being published as part of a new namespace. The convention for the namespace prefix will be: sif3. This approach allows either the existing set of Assessment objects or these new objects to be used in a SIF message. The colon is left out of the prefix only for this printed document. Schema files will be published separately for objects in the sif3 namespace. </p>
+	  <p>These objects can be used without declaring a second SIF namespace by using the convention of prepending the object names with "sif3:" Or, for agents and parsers that are namespace aware, the sif3 namespace can be declared in XML instance documents. In this case the sif3 prefix is still required because SIF messages use elementFormDefault=qualified. </p>
+	</Intro>
+	<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\sif3Assessment.xml"/>
+	<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\sif3AssessmentForm.xml"/>
+	<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\sif3AssessmentItem.xml"/>
+	<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\sif3AssessmentSection.xml"/>
+	<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\sif3AssessmentAsset.xml"/>
+	<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\sif3AssessmentItemAssociation.xml"/>
+	<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\sif3AssessmentAdministration.xml"/>
+	<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\sif3AssessmentSession.xml"/>
+	<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\sif3AssessmentSubTest.xml"/>
+	<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\sif3AssessmentScoreTable.xml"/>
+	<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\sif3AssessmentRubric.xml"/>
+	<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\sif3AssessmentRegistration.xml"/>
+	<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\sif3StudentResponseSet.xml"/>
+	<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\sif3StudentScoreSet.xml"/>
+	
+  </Group>
+
+  
+  <Group name="Instructional Services Task Force">
+    <Intro>
+      <p>The goal of Instructional Services Task Force is to create, design and advocate a set of specifications that feature data objects which will advance interoperability standards of information needed in instruction and educational service delivery in the classroom and instructional settings.</p>
+    </Intro>
+
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\LearningStandardDocument.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\LearningStandardItem.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\CurriculumStructure.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\Lesson.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\Activity.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\Assignment.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\LearningResource.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\LearningResourcePackage.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\ContentCatalog.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\Person.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\PersonRoleAssociation.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\ResponseToIntervention.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\RTIResults.xml"/>
+    <!--<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\ResponseToInterventionResults.xml"/>-->
+	<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\LearningStandardAssociation.xml"/>
+  </Group>
+
+  <Group name="Library Automation Working Group">
+    <Intro>
+      <p>The Library Automation Working Group provides the library automation entities necessary to effectively exchange relevant data via the framework.</p>
+    </Intro>
+
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\LibraryPatronStatus.xml"/>
+
+
+  </Group>
+
+  <Group name="Student Information Systems Working Group">
+    <Intro>
+      <p>
+        The Student Information Systems Working Group provides maximum
+        interoperability between K-12 applications that need to exchange SIS
+        information such as student, teacher, school, and enrollment using SIF by designing SIF data objects that are easy to understand, implement and extend,
+        and by making the communication between applications as efficient as possible by ensuring that only the minimum required amount of data is exchanged in each transaction.
+      </p>
+    </Intro>
+
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentActivityInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentActivityParticipation.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\DisciplineIncident.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\CalendarSummary.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\CalendarDate.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentAttendanceSummary.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\AttendanceCodeInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\RoomInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\RoomType.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\SchoolCourseInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\SchoolInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\SectionInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StaffPersonal.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentContact.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentDailyAttendance.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentPersonal.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentPicture.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentSchoolEnrollment.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentSectionEnrollment.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\TermInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentSnapshot.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\LEAInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StaffAssignment.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\BellSchedule.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentContactPersonal.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentContactRelationship.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StaffSectionAssignment.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StaffEvaluationInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\SectionCorrelation.xml"/>
+  </Group>
+  <Group name="Transportation and Geographic Information Working Group">
+    <Intro>
+      <p>
+        The goal of Transportation and Geographic Information Working Group is to provide the wealth of information currently locked in the
+        transportation department to the rest of the school community, including transportation as well as geographic information for students.
+      </p>
+    </Intro>
+
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\BusEquipment.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\BusInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\BusRouteDetail.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\BusRouteInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\BusStopInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentTransportInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\BusPositionInfo.xml"/>
+
+  </Group>
+  <Group name="Vertical Reporting Task Force">
+    <Intro>
+      <p>The Vertical Reporting Task Force has the following responsibilities:</p>
+      <ul>
+        <li>Ensuring that all interested members have a chance to participate in raising and addressing issues</li>
+        <li>Developing business and use cases related to vertical reporting</li>
+        <li>Delivering proposed changes to the SIF Association and new data objects required to address specific use cases</li>
+        <li>Demonstrating to interested parties outside the SIF Association that it is addressing infrastructure and data object issues</li>
+        <li>Encouraging pilot programs and implementations of vertical reporting using SIF</li>
+      </ul>
+    </Intro>
+
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\ReportManifest.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\ReportAuthorityInfo.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\SIF_ReportObject.xml"/>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\StudentLocator.xml"/>
+
+
+
+
+  </Group>
+  <Group name="Infrastructure Working Group">
+    <Intro>
+      <p>
+        In addition to SIF messages and strictly infrastructure-related objects like <code>SIF_ZoneStatus</code>, the Infrastructure
+        Working Group occasionally defines data model objects that either do not fall neatly within the purview of currently
+        existing data model working groups (e.g. the Authentication object) or that can be provided by the ZIS and agents
+        alike&#x2014;typically metadata about a zone as opposed to data directly originating from the K-12 instructional and
+        administrative environment (e.g. <code>SIF_LogEntry</code>).
+      </p>
+    </Intro>
+
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\Authentication.xml"/>
+  </Group>
+  
+  <Group name="Facilities and Energy Management">
+    <Intro>
+      <p>
+        The Facility and Energy Management Project Team is responsible for the planning and designing of data objects for energy usage
+      </p>
+    </Intro>
+    <xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\EnergyUsage.xml"/>
+  </Group>
+  
+    <Group name="Identity Management Project Team">
+		<Intro>
+			<p>Local Education Authorities (LEAs) across the globe are dealing with the issues of managing users across a rapidly increasing number of applications. Many of these applications within the educational enterprise interface directly with learners, parents, and teachers. Each new application requires digital identity and profile data for operational purposes. A significant burden is placed on individual users to manage and secure their login credentials across applications. In many instances, users end up having to remember many user names and passwords and deal with profile information that is not consistent or up to date across the various applications that they access.</p>
+			<p>There is a great need to provide a standards-based solution for identity management and role-based security within the education industry. While many standards have been developed to solve this problem, there is no common profile within education that suppliers and end users can adopt. The SIFA has been solving issues of interoperability like this for many years. Educational applications built to support the SIF standard can also benefit from a set of profiles developed by SIFA that are targeted at solving the needs of sharing and using digital identities within an educational enterprise.</p>
+		</Intro>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\IdMApplication.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\IdMAuthentication.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\IdMAuthorization.xml"/>
+		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="US\UserOrganizationAssociation.xml"/>
+  </Group>
+  
+</IncludeGroup>

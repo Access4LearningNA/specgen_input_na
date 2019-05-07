@@ -276,24 +276,6 @@
     <xi:include parse="text" href="US\BusPositionInfo.xml"/>
   </Group>
   
-  <Group name="Vertical Reporting Task Force">
-    <Intro>
-      <p>The Vertical Reporting Task Force has the following responsibilities:</p>
-      <ul>
-        <li>Ensuring that all interested members have a chance to participate in raising and addressing issues</li>
-        <li>Developing business and use cases related to vertical reporting</li>
-        <li>Delivering proposed changes to the SIF Association and new data objects required to address specific use cases</li>
-        <li>Demonstrating to interested parties outside the SIF Association that it is addressing infrastructure and data object issues</li>
-        <li>Encouraging pilot programs and implementations of vertical reporting using SIF</li>
-      </ul>
-    </Intro>
-
-    <xi:include parse="text" href="US\ReportManifest.xml"/>
-    <xi:include parse="text" href="US\ReportAuthorityInfo.xml"/>
-    <xi:include parse="text" href="US\SIF_ReportObject.xml"/>
-    <xi:include parse="text" href="US\StudentLocator.xml"/>
-  </Group>
-
   <Group name="Infrastructure Working Group">
     <Intro>
       <p>

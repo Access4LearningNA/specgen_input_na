@@ -78,7 +78,7 @@
     <Description>
       <p>The LEA's phone number(s).</p>
     </Description>
-    <Type ref="CommonTypes" name="PhoneNumberList"/>
+    <Type ref="CommonTypes" name="PhoneNumberListType"/>
   </Item>
   <Item>
     <Element>AddressList</Element>
@@ -86,7 +86,7 @@
     <Description>
       <p>The LEA's address(es).</p>
     </Description>
-    <Type ref="CommonTypes" name="AddressList"/>
+    <Type ref="CommonTypes" name="AddressListType"/>
   </Item>
   <Item>
     <Element>IdentificationInfoList</Element>
@@ -94,7 +94,7 @@
     <Description>
       <p>Other identification information associated with an LEA, such as the locally-defined code/identifier, etc.</p>
     </Description>
-    <Type ref="CommonTypes" name="IdentificationInfoList"/>
+    <Type ref="CommonTypes" name="IdentificationInfoListType"/>
   </Item>
   <Item>
     <Element>GradeLevels</Element>

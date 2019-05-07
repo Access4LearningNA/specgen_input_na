@@ -1,0 +1,2872 @@
+<IncludeGroup xmlns:json="http://json.org/" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://sifassociation.org/SpecGen">
+  <CommonElement name="RolesType" type="true" dm="true">
+    <Item>
+      <Element>RolesType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>List of one or more Roles.</p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>Role</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>One of a set of possible enumerated Role values.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="LocationOfInstructionType" type="true" dm="true">
+    <Item>
+      <Element>LocationOfInstructionType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Description of the location in which the section is taught.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>Code</Element>
+      <Characteristics>M</Characteristics>
+      <Type name="xs:token"/>
+      <Description>
+        <p>Code representing the location of instruction.</p>
+      </Description>
+      <cedsId>000524</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000524</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>OtherCodeList</Element>
+      <Characteristics>O</Characteristics>
+      <Type ref="CommonTypes" name="OtherCodeListType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="AttendanceInfoType" type="true" dm="true">
+    <Item>
+      <Element>AttendanceInfoType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Information describing how the day relates to attendance.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>CountsTowardAttendance</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Designates whether this date should be counted toward student attendance.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>AttendanceValue</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>
+        Amount of the school day in which the student should be in attendance (Format is x.x; a student who should be in attendance a full day would be represented as 1.0).  If <code>CountsTowardAttendance</code> equals <code>Yes</code> then <code>AttendanceValue</code> must be greater than zero.
+			</p>
+      </Description>
+      <Type name="xs:decimal"/>
+      <Facets>
+        <xs:minInclusive value="0"/>
+        <xs:maxInclusive value="1"/>
+        <xs:fractionDigits value="1"/>
+      </Facets>
+    </Item>
+  </CommonElement>
+  <CommonElement name="AlertMessageType" type="true" dm="true">
+    <Item>
+      <Element>AlertMessageType</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>This is an alert message that is associated with the student.</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Attribute>Type</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>This attribute specifies what type of alert message this is.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>TypeCodeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="VictimListType" type="true" dm="true">
+    <Item>
+      <Element>VictimListType</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>List of victim(s) if the incident is directed toward specific persons or their property.</p>
+      </Description>
+      <List mode="List">
+		</List>
+    </Item>
+    <Item>
+      <Element>Victim</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Information regarding the victim(s) in the incident.</p>
+      </Description>
+      <Type ref="CommonTypes" name="VictimType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="IncidentLocationType" type="true" dm="true">
+    <Item>
+      <Element>IncidentLocationType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The locally-defined identifier or description of the location where the incident occurred.</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Attribute>Type</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Identifies where the incident occurred.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>TypeCodeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="MedicalAlertMessageType" type="true" dm="true">
+    <Item>
+      <Element>MedicalAlertMessageType</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Medical alert associated with the student.</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Attribute>Severity</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The level of severity of this medical alert.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>SeverityCodeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="TimetablePeriodListType" type="true" dm="true">
+    <Item>
+      <Element>TimetablePeriodListType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The timetable periods for this school year bell schedule.  This essentially provides a list of the time period identifiers that are used in the BellPeriod definitions below with some addition properties for each.  The identifiers defined here may be referenced by other objects / elements like MeetingTime</p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>TimetablePeriod</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>An entry for each unique timetable period.</p>
+      </Description>
+      <Type ref="CommonTypes" name="TimetablePeriodType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="BellPeriodType" type="true" dm="true">
+    <Item>
+      <Element>BellPeriodType</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>An entry for each unique bell period for the bell schedule.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>TimetableDayIdentifier</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The unique identifier for the timetable day used for the bell period (from the day list above).</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>TimetablePeriodIdentifier</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The unique identifier for the timetable period used for the bell period (from the period list above).</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>StartTime</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The starting time for the bell period.</p>
+      </Description>
+      <Type name="xs:time"/>
+    </Item>
+    <Item>
+      <Element>EndTime</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The ending time for the bell period.</p>
+      </Description>
+      <Type name="xs:time"/>
+    </Item>
+    <Item>
+      <Element>RegularSchoolPeriod</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Indicates if the bell period is part of the regular school day (i.e. is not a before or after school or break period).</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>InstructionalMinutes</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The number of minutes to be counted for instruction for the bell period.</p>
+      </Description>
+      <Type name="xs:unsignedInt"/>
+    </Item>
+    <Item>
+      <Element>UseInAttendanceCalculations</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Indicates if the bell period should be included in attendance calculations.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="MedicalAlertMessagesType" type="true" dm="true">
+    <Item>
+      <Element>MedicalAlertMessagesType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A list of medical altert messages associated with the student.</p>
+      </Description>
+      <List mode="List">
+		</List>
+    </Item>
+    <Item>
+      <Element>MedicalAlertMessage</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Medical alert associated with the student.</p>
+      </Description>
+      <Type ref="CommonTypes" name="MedicalAlertMessageType"/>
+      <cedsId>000439</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000439</cedsURL>
+    </Item>
+  </CommonElement>
+  <CommonElement name="SEAContactType" type="true" dm="true">
+    <Item>
+      <Element>SEAContactType</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>Container element for SEA contact information.</Description>
+    </Item>
+    <Item>
+      <Element>PublishInDirectory</Element>
+      <Characteristics>O</Characteristics>
+      <Description>Indicates whether or not this SEA contact's information should be published in a directory of SEA information.</Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>ContactInfo</Element>
+      <Characteristics>M</Characteristics>
+      <Description>Contact information for a person at the SEA.</Description>
+      <Type ref="CommonTypes" name="ContactInfoType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="IncidentActionListType" type="true" dm="true">
+    <Item>
+      <Element>IncidentActionListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>List of actions taken on the incident, regardless of actions relating to individual offenders.</p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>IncidentAction</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Information regarding the action(s) taken in response to the incident.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IncidentActionType"/>
+      <cedsId>000545</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000545</cedsURL>
+    </Item>
+  </CommonElement>
+  <CommonElement name="OtherIdList2Type" type="true" dm="true">
+    <Item>
+      <Element>OtherIdList2Type</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Lists all "other" identifiers associated with the entity.</p>
+      </Description>
+      <List mode="List">
+		</List>
+    </Item>
+    <Item>
+      <Element>OtherId</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Lists an "other" identifier associated with the entity.</p>
+      </Description>
+      <Type ref="CommonTypes" name="OtherId2Type"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="PromotionInfoType" type="true" dm="true">
+    <Item>
+      <Element>PromotionInfoType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Information on a student&#8217;s promotion, retention, or demotion related to this enrollment instance.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>PromotionStatus</Element>
+      <Characteristics>O</Characteristics>
+      <Description>This value should be set if this enrollment instance is closed for an end-of-year closeout or a mid-year promotion or demotion. A value other than NA should be specified when the enrollment instance represents an end-of-year closeout or mid-year promotion/demotion.</Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>Promotion</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>This element is mutually exclusive with Nonpromotion, and its child elements should only be populated if the value of PromotionStatus is "Promoted".</p>
+      </Description>
+      <Type ref="CommonTypes" name="PromotionType"/>
+    </Item>
+    <Item>
+      <Element>Nonpromotion</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>This element is mutually exclusive with Promotion, and its child elements should only be populated if the value of PromotionStatus is "Retained" or "Demoted".</p>
+      </Description>
+      <Type ref="CommonTypes" name="NonpromotionType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="CreditsAttemptedType" type="true" dm="true">
+    <Item>
+      <Element>CreditsAttemptedType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Number of credits the student is attempting to earn. If present, this element's value overrides the credits in SchoolCourseInfo and SectionInfo.</p>
+      </Description>
+      <Type name="xs:decimal"/>
+    </Item>
+    <Item>
+      <Attribute>Type</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The type of credit.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000650</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000650</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>TypeCodeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="MeetingTimeListType" type="true" dm="true">
+    <Item>
+      <Element>MeetingTimeListType</Element>
+      <Characteristics>O</Characteristics>
+      <List mode="List">
+		</List>
+    </Item>
+    <Item>
+      <Element>MeetingTime</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Time(s) this section meets.
+
+				<br/>
+				<br/>Note:  If the reference to BellSchedule below (BellScheduleRefId) exists in this object, then the TimetableDayList/TimetableDay/Identifier value and the  TimetablePeriodList/TimetablePeriod/Identifier value in the BellSchedule object <span class="rfc2119">MUST</span> exactly match, respectively, the MeetingTime/TimetableDay and MeetingTime/TimetablePeriod values in this object.
+			</p>
+      </Description>
+      <Type ref="CommonTypes" name="MeetingTimeType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="BellScheduleDayType" type="true" dm="true">
+    <Item>
+      <Element>BellScheduleDayType</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+    </Item>
+    <Item>
+      <Element>BellScheduleRefId</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The GUID of a bell schedule to be utilized for the calendar date.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+    <Item>
+      <Element>TimetableDayIdentifier</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The unique identifier of a timetable day to be utilized for the calendar date (from the list of timetable days defined for the calendar in the referenced BellSchedule object).</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="OffenderListType" type="true" dm="true">
+    <Item>
+      <Element>OffenderListType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>List of offenders.</p>
+      </Description>
+      <List mode="List">
+		</List>
+    </Item>
+    <Item>
+      <Element>Offender</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Information regarding the offender(s)/perpetrator(s).</p>
+      </Description>
+      <Type ref="CommonTypes" name="OffenderType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ScheduleInfoListType" type="true" dm="true">
+    <Item>
+      <Element>ScheduleInfoListType</Element>
+      <Characteristics>M</Characteristics>
+      <List mode="List">
+		</List>
+    </Item>
+    <Item>
+      <Element>ScheduleInfo</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>The schedule-related information for a section repeating for each term in which the section is scheduled. The TermInfoRefId attribute value should repeat as necessary to show the appropriate relationship between meeting times, teachers and rooms. </p>
+      </Description>
+      <Type ref="CommonTypes" name="ScheduleInfoType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="RelatedToListType" type="true" dm="true">
+    <Item>
+      <Element>RelatedToListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>List of categories to which the incident is related.</p>
+      </Description>
+      <List mode="List">
+		</List>
+    </Item>
+    <Item>
+      <Element>RelatedTo</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p>Identifies if incident was related to a specific category.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000509</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000509</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="BellScheduleDayListType" type="true" dm="true">
+    <Item>
+      <Element>BellScheduleDayListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A list of the bell schedules and the timetable day from that bell schedule to be used for the calendar date.</p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>BellScheduleDay</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type ref="CommonTypes" name="BellScheduleDayType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="VictimType" type="true" dm="true">
+    <Item>
+      <Element>VictimType</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Information regarding the victim(s) in the incident.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Attribute>Type</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Identifies the type of individual victimized in the incident.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>TypeCodeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>Name</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The name of the victim.</p>
+      </Description>
+      <Type ref="CommonTypes" name="NameType"/>
+    </Item>
+    <Item>
+      <Element>SIF_RefId</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>If the Victim Type attribute identifies the victim as a Student or Staff Member, then this element should contain the Id (GUID) of the student  or staff to whom this information relates.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+    <Item>
+      <Attribute>SIF_RefObject</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>SIF Object to which the SIFRefId relates.</p>
+      </Description>
+      <Values>
+        <Value>
+          <Code>StudentPersonal</Code>
+        </Value>
+        <Value>
+          <Code>StaffPersonal</Code>
+        </Value>
+        <Value>
+          <Code>EmployeePersonal</Code>
+        </Value>
+      </Values>
+    </Item>
+    <Item>
+      <Element>Injury</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Identifies whether or not this specific victim was physically injured, and if so, identify whether the injury was major or minor.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="IdentityProviderListType" type="true" dm="true">
+    <Item>
+      <Element>IdentityProviderListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>If the application can use multiple Identity Providers (authentication providers) to authenticate the user, for example Google directory service, LDAP, AD, etc., there could be multiple such providers in this list.</p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>IdentityProvider</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>RefId of an Identity Provider application.</p>
+      </Description>
+      <!--Type name="sif:IdRefType"/-->
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="WeaponTypeListType" type="true" dm="true">
+    <Item>
+      <Element>WeaponTypeListType</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>List of weapons involved in the incident. If the incident involves weapons, the element must have a value.</p>
+        <p>Each weapon used in the incident is identified by a WeaponType entry. When multiple weapons of a single type are used, each weapon has a separate entry in this list.</p>
+        <p>Weapons used by individual offenders are also reported in WeaponTypeList entries associated to the offender.</p>
+      </Description>
+      <List mode="List">
+		</List>
+    </Item>
+    <Item>
+      <Element>WeaponType</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Identifies the type of weapon used during an incident.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000557</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000557</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="StudentActivityTypeType" type="true" dm="true">
+    <Item>
+      <Element>StudentActivityTypeType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>Information regarding the co-curricular or extra-curricular activity.</Description>
+    </Item>
+    <Item>
+      <Element>Code</Element>
+      <Characteristics>M</Characteristics>
+      <Description>Code identifying the co-curricular or extra-curricular activity.</Description>
+      <Type name="xs:token">
+        <Values type="subset">
+          <Value>
+            <Code>0721</Code>
+          </Value>
+          <Value>
+            <Code>0729</Code>
+          </Value>
+          <Value>
+            <Code>0628</Code>
+          </Value>
+          <Value>
+            <Code>0683</Code>
+          </Value>
+          <Value>
+            <Code>0700</Code>
+          </Value>
+          <Value>
+            <Code>0629</Code>
+          </Value>
+          <Value>
+            <Code>0677</Code>
+          </Value>
+          <Value>
+            <Code>0630</Code>
+          </Value>
+          <Value>
+            <Code>0631</Code>
+          </Value>
+          <Value>
+            <Code>0633</Code>
+          </Value>
+          <Value>
+            <Code>0634</Code>
+          </Value>
+          <Value>
+            <Code>0718</Code>
+          </Value>
+          <Value>
+            <Code>0691</Code>
+          </Value>
+          <Value>
+            <Code>0713</Code>
+          </Value>
+          <Value>
+            <Code>0667</Code>
+          </Value>
+          <Value>
+            <Code>0722</Code>
+          </Value>
+          <Value>
+            <Code>0680</Code>
+          </Value>
+          <Value>
+            <Code>0701</Code>
+          </Value>
+          <Value>
+            <Code>0635</Code>
+          </Value>
+          <Value>
+            <Code>0636</Code>
+          </Value>
+          <Value>
+            <Code>0684</Code>
+          </Value>
+          <Value>
+            <Code>0685</Code>
+          </Value>
+          <Value>
+            <Code>0707</Code>
+          </Value>
+          <Value>
+            <Code>0637</Code>
+          </Value>
+          <Value>
+            <Code>0696</Code>
+          </Value>
+          <Value>
+            <Code>0688</Code>
+          </Value>
+          <Value>
+            <Code>0694</Code>
+          </Value>
+          <Value>
+            <Code>0705</Code>
+          </Value>
+          <Value>
+            <Code>0639</Code>
+          </Value>
+          <Value>
+            <Code>0638</Code>
+          </Value>
+          <Value>
+            <Code>0640</Code>
+          </Value>
+          <Value>
+            <Code>0724</Code>
+          </Value>
+          <Value>
+            <Code>0702</Code>
+          </Value>
+          <Value>
+            <Code>0703</Code>
+          </Value>
+          <Value>
+            <Code>0719</Code>
+          </Value>
+          <Value>
+            <Code>0641</Code>
+          </Value>
+          <Value>
+            <Code>0642</Code>
+          </Value>
+          <Value>
+            <Code>0706</Code>
+          </Value>
+          <Value>
+            <Code>0644</Code>
+          </Value>
+          <Value>
+            <Code>0679</Code>
+          </Value>
+          <Value>
+            <Code>0690</Code>
+          </Value>
+          <Value>
+            <Code>0717</Code>
+          </Value>
+          <Value>
+            <Code>0645</Code>
+          </Value>
+          <Value>
+            <Code>0697</Code>
+          </Value>
+          <Value>
+            <Code>0693</Code>
+          </Value>
+          <Value>
+            <Code>0646</Code>
+          </Value>
+          <Value>
+            <Code>0732</Code>
+          </Value>
+          <Value>
+            <Code>0674</Code>
+          </Value>
+          <Value>
+            <Code>0676</Code>
+          </Value>
+          <Value>
+            <Code>0673</Code>
+          </Value>
+          <Value>
+            <Code>0730</Code>
+          </Value>
+          <Value>
+            <Code>0726</Code>
+          </Value>
+          <Value>
+            <Code>0704</Code>
+          </Value>
+          <Value>
+            <Code>0727</Code>
+          </Value>
+          <Value>
+            <Code>0678</Code>
+          </Value>
+          <Value>
+            <Code>9999</Code>
+          </Value>
+          <Value>
+            <Code>0725</Code>
+          </Value>
+          <Value>
+            <Code>0735</Code>
+          </Value>
+          <Value>
+            <Code>0681</Code>
+          </Value>
+          <Value>
+            <Code>0689</Code>
+          </Value>
+          <Value>
+            <Code>0668</Code>
+          </Value>
+          <Value>
+            <Code>0672</Code>
+          </Value>
+          <Value>
+            <Code>0714</Code>
+          </Value>
+          <Value>
+            <Code>0647</Code>
+          </Value>
+          <Value>
+            <Code>0733</Code>
+          </Value>
+          <Value>
+            <Code>0648</Code>
+          </Value>
+          <Value>
+            <Code>0664</Code>
+          </Value>
+          <Value>
+            <Code>0649</Code>
+          </Value>
+          <Value>
+            <Code>0650</Code>
+          </Value>
+          <Value>
+            <Code>0699</Code>
+          </Value>
+          <Value>
+            <Code>0665</Code>
+          </Value>
+          <Value>
+            <Code>0651</Code>
+          </Value>
+          <Value>
+            <Code>0652</Code>
+          </Value>
+          <Value>
+            <Code>0653</Code>
+          </Value>
+          <Value>
+            <Code>0723</Code>
+          </Value>
+          <Value>
+            <Code>0695</Code>
+          </Value>
+          <Value>
+            <Code>0655</Code>
+          </Value>
+          <Value>
+            <Code>0728</Code>
+          </Value>
+          <Value>
+            <Code>0716</Code>
+          </Value>
+          <Value>
+            <Code>0656</Code>
+          </Value>
+          <Value>
+            <Code>0657</Code>
+          </Value>
+          <Value>
+            <Code>0658</Code>
+          </Value>
+          <Value>
+            <Code>0708</Code>
+          </Value>
+          <Value>
+            <Code>0659</Code>
+          </Value>
+          <Value>
+            <Code>0682</Code>
+          </Value>
+          <Value>
+            <Code>0734</Code>
+          </Value>
+          <Value>
+            <Code>0660</Code>
+          </Value>
+          <Value>
+            <Code>0715</Code>
+          </Value>
+          <Value>
+            <Code>0712</Code>
+          </Value>
+          <Value>
+            <Code>0661</Code>
+          </Value>
+          <Value>
+            <Code>0662</Code>
+          </Value>
+          <Value>
+            <Code>0663</Code>
+          </Value>
+          <Value>
+            <Code>0692</Code>
+          </Value>
+        </Values>
+      </Type>
+      <cedsId>000006</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000006</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>OtherCodeList</Element>
+      <Characteristics>O</Characteristics>
+      <Type ref="CommonTypes" name="OtherCodeListType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="HomeEnrollmentType" type="true" dm="true">
+    <Item>
+      <Element>HomeEnrollmentType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>
+        Enrollment-related information for the school that is responsible for reporting the student's
+        membership/child accounting information. This is most likely the primary enrollment site for the student.
+			</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>StudentSchoolEnrollmentRefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The Id (GUID) of the StudentSchoolEnrollment object from which the enrollment information is derived.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+    <Item>
+      <Element>SchoolName</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Name of the school.</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>SchoolInfoRefId</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>
+        The Id (GUID) of the school.  Provide both the HomeEnrollment/SchoolInfoRefId and HomeEnrollment/LocalId elements if possible.
+        If not, one or the other must be provided.
+			</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+    <Item>
+      <Element>LocalId</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>
+        The locally-defined identifier for this school.
+        Provide both the HomeEnrollment/LocalId and HomeEnrollment/SchoolId elements if possible.
+        If not, one or the other must be provided.
+			</p>
+      </Description>
+      <Type ref="CommonTypes" name="LocalIdType"/>
+    </Item>
+    <Item>
+      <Element>StateProvinceId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The state or province defined identifier for this school.</p>
+      </Description>
+      <Type ref="CommonTypes" name="StateProvinceIdType"/>
+    </Item>
+    <Item>
+      <Element>Status</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Enrollment status as of the SnapDate.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>GradeLevel</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Grade or academic level of student.</p>
+      </Description>
+      <Type ref="CommonTypes" name="GradeLevelType"/>
+    </Item>
+    <Item>
+      <Element>Homeroom</Element>
+      <Characteristics>O</Characteristics>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+    <Item>
+      <Attribute>SIF_RefObject</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The name of the SIF object referenced.</p>
+      </Description>
+      <Values>
+        <Value>
+          <Code>RoomInfo</Code>
+        </Value>
+      </Values>
+    </Item>
+    <Item>
+      <Element>HomeroomNumber</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The locally-defined identifier for this room.</p>
+      </Description>
+      <Type ref="CommonTypes" name="HomeroomNumberType"/>
+    </Item>
+    <Item>
+      <Element>FullYearEnrollment</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>An indication as to whether or not the student was enrolled for the whole school year. If the SchoolYear is in progress as of the SnapDate, use the value "Unknown".</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="RoomListType" type="true" dm="true">
+    <Item>
+      <Element>RoomListType</Element>
+      <Characteristics>O</Characteristics>
+      <List mode="List">
+		</List>
+    </Item>
+    <Item>
+      <Element>RoomInfoRefId</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>The Id (GUID) of the room in which this section is taught.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="DisciplineActionListType" type="true" dm="true">
+    <Item>
+      <Element>DisciplineActionListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>List of actions taken.</p>
+        <p>Note:  There is also a SIF type called ActionList.  It is one of two types of lists.  Do not confuse this element with the SIF type called ActionList.  This problem will be resolved in the next major release.</p>
+      </Description>
+      <List mode="List">
+		</List>
+    </Item>
+    <Item>
+      <Element>Action</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p>Information regarding the action(s) taken against the offender in response to the incident.</p>
+      </Description>
+      <Type ref="CommonTypes" name="DisciplineActionType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="MediumOfInstructionType" type="true" dm="true">
+    <Item>
+      <Element>MediumOfInstructionType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Medium through which the student receives instructional communication from the teacher.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>Code</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Code representing the medium of instruction.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>OtherCodeList</Element>
+      <Characteristics>O</Characteristics>
+      <Type ref="CommonTypes" name="OtherCodeListType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="DisciplineActionType" type="true" dm="true">
+    <Item>
+      <Element>DisciplineActionType</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p>Information regarding the action(s) taken against the offender in response to the incident.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>Code</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Specific action taken toward this offender.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000488</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000488</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>OtherCodeList</Element>
+      <Characteristics>O</Characteristics>
+      <Type ref="CommonTypes" name="OtherCodeListType"/>
+      <Description>
+        <p>List of other codes or strings that crosswalk to or serve as translations of the Code element.  If Code changes and OtherCode elements are supported, both Code and all associated OtherCode elements must be present.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>StartDate</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The date on which the disciplinary action begins.</p>
+      </Description>
+      <Type name="xs:date"/>
+      <cedsId>000083</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000083</cedsURL>
+    </Item>
+    <Item>
+      <Element>EndDate</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The date through which the disciplinary action is in effect, inclusive.</p>
+      </Description>
+      <Type name="xs:date"/>
+      <cedsId>000082</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000082</cedsURL>
+    </Item>
+    <Item>
+      <Element>Duration</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Identifies the length, in school days, of the disciplinary action.  Note: decimal places may be used for fractions of school days.</p>
+      </Description>
+      <Type name="xs:decimal"/>
+      <cedsId>000511</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000511</cedsURL>
+    </Item>
+    <Item>
+      <Element>ZeroTolerance</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Identifies whether or not this action taken against a student was imposed as a consequence of state or local zero tolerance policies.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>FullYearExpulsion</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Identifies whether or not the action involved an expulsion with or without services for a period of one full year (i.e., 365 days).</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000513</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000513</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>ShortenedExpulsion</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Identifies whether or not the action involved an expulsion with or without services that is shortened to a term of less than one year by the superintendent or chief administrator of a school district.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000514</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000514</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>PoliceNotification</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Identifies whether or not the offender's action included notification of local law enforcement, regardless of whether official action was taken.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>Arrest</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Identifies whether or not the offender was arrested.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>AlternativeEducation</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Identifies whether or not the offender was assigned to an Alternative Education facility.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000578</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000578</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="PromotionType" type="true" dm="true">
+    <Item>
+      <Element>PromotionType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>This element is mutually exclusive with Nonpromotion, and its child elements should only be populated if the value of PromotionStatus is "Promoted".</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>Code</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The reason the student was promoted.  This element should only be populated if the value of PromotionStatus is &#8220;Promoted&#8221;.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000530</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000530</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>OtherCodeList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type ref="CommonTypes" name="OtherCodeListType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="CorrelationSectionType" type="true" dm="true">
+    <Item>
+      <Element>CorrelationSectionType</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Reference to a SectionInfo object to be correlated.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+    <Item>
+      <Attribute>Primary</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>Indicate whether a SectionInfo is primary.  Only one SectionInfo in the CorrelationSectionList can be primary.</Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>PrimaryCodeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="OtherId2Type" type="true" dm="true">
+    <Item>
+      <Element>OtherId2Type</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Lists an "other" identifier associated with the entity.</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Attribute>Type</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Code that defines the type of this other Id.</p>
+      </Description>
+      <Type ref="ExternalCodeSets" name="NCES0147IdentificationSystemType"/>
+      <Values type="subset">
+        <Value>
+          <Code>0164</Code>
+        </Value>
+        <Value>
+          <Code>0339</Code>
+        </Value>
+        <Value>
+          <Code>0338</Code>
+        </Value>
+        <Value>
+          <Code>0879</Code>
+        </Value>
+        <Value>
+          <Code>9999</Code>
+        </Value>
+        <Value>
+          <Code>0222</Code>
+        </Value>
+        <Value>
+          <Code>0764</Code>
+        </Value>
+        <Value>
+          <Code>0154</Code>
+        </Value>
+        <Value>
+          <Code>0004</Code>
+        </Value>
+        <Value>
+          <Code>0113</Code>
+        </Value>
+        <Value>
+          <Code>5013</Code>
+        </Value>
+      </Values>
+    </Item>
+  </CommonElement>
+  <CommonElement name="FunctionListType" type="true" dm="true">
+    <Item>
+      <Element>FunctionListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A list of short descriptions of other functions the application performs. </p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>Function</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="SEAContactListType" type="true" dm="true">
+    <Item>
+      <Element>SEAContactListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>Information on contact persons for this SEA.</Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>SEAContact</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>Container element for SEA contact information.</Description>
+      <Type ref="CommonTypes" name="SEAContactType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="LEAContactListType" type="true" dm="true">
+    <Item>
+      <Element>LEAContactListType</Element>
+      <Characteristics>O</Characteristics>
+      <List mode="List">
+		</List>
+    </Item>
+    <Item>
+      <Element>LEAContact</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Information on contact persons for this LEA.</p>
+      </Description>
+      <Type ref="CommonTypes" name="LEAContactType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="RecognitionListType" type="true" dm="true">
+    <Item>
+      <Element>RecognitionListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>List of awards and other types of recognition given to the student for this activity.</Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>Recognition</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>The nature of recognition given to the student for the successful completion of work in a co-curricular or extra-curricular activity.</Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Code</Attribute>
+      <Characteristics>M</Characteristics>
+      <Type ref="ExternalCodeSets" name="NCES0674HonorsTypeType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="OffenderType" type="true" dm="true">
+    <Item>
+      <Element>OffenderType</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Information regarding the offender(s)/perpetrator(s).</p>
+      </Description>
+    </Item>
+    <Item>
+      <Attribute>Type</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Identifies the type of offender involved in the incident.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>TypeCodeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>Name</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The name of the offender.</p>
+      </Description>
+      <Type ref="CommonTypes" name="NameType"/>
+    </Item>
+    <Item>
+      <Element>SIF_RefId</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>If the Offender Type attribute identifies the offender as a Student or Staff Member, then this element should contain the Id (GUID) of the student or staff to whom this information relates.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+    <Item>
+      <Attribute>SIF_RefObject</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>SIF Object to which the SIFRefId relates.</p>
+      </Description>
+      <Values>
+        <Value>
+          <Code>StudentPersonal</Code>
+        </Value>
+        <Value>
+          <Code>StaffPersonal</Code>
+        </Value>
+        <Value>
+          <Code>EmployeePersonal</Code>
+        </Value>
+      </Values>
+    </Item>
+    <Item>
+      <Element>Injury</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Identifies whether or not this specific offender was physically injured, and if so, identifies whether the injury was major or minor.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000510</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000510</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>ManifestationDetermination</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Information relating to a manifestation determination meeting.</p>
+      </Description>
+      <Type ref="CommonTypes" name="ManifestationDeterminationType"/>
+    </Item>
+    <Item>
+      <Element>ActionList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>List of actions taken.</p>
+        <p>Note:  There is also a SIF type called ActionList.  It is one of two types of lists.  Do not confuse this element with the SIF type called ActionList.  This problem will be resolved in the next major release.</p>
+      </Description>
+      <Type ref="CommonTypes" name="DisciplineActionListType"/>
+    </Item>
+    <Item>
+      <Element>WeaponTypeList</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>List of weapons involved in the incident used by the offender. If the incident involves weapons, the element must have a value.</p>
+        <p>Each weapon used by the offender is identified by a WeaponType entry. When multiple weapons of a single type are used by the offender, each weapon has a separate entry in this list.</p>
+        <p>(Note: All weapons used in the incident are reported in WeaponTypeList entries for the incident, including those weapons related to this offender.)</p>
+      </Description>
+      <Type ref="CommonTypes" name="WeaponTypeListType"/>
+    </Item>
+    <Item>
+      <Element>RelatedToList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>List of categories to which the offender&#8217;s incident is related.</p>
+      </Description>
+      <Type ref="CommonTypes" name="RelatedToListType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="SchoolCourseInfoOverrideType" type="true" dm="true">
+    <Item>
+      <Element>SchoolCourseInfoOverrideType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Optional overrides of the course information for this section.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Attribute>Override</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Designates whether or not SchoolCourseInfo information has been overridden with different values for this section.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>OverrideCodeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>CourseCode</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Override of the school-defined course code for this section.</p>
+      </Description>
+      <Type ref="CommonTypes" name="CourseCodeType"/>
+    </Item>
+    <Item>
+      <Element>StateCourseCode</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Override of the state-defined course code for this section.</p>
+      </Description>
+      <Type ref="CommonTypes" name="StateCourseCodeType"/>
+    </Item>
+    <Item>
+      <Element>DistrictCourseCode</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Override of the district course code for this section.</p>
+      </Description>
+      <Type ref="CommonTypes" name="DistrictCourseCodeType"/>
+    </Item>
+    <Item>
+      <Element>SubjectArea</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Override of the subject matter area for this section.</p>
+      </Description>
+      <Type ref="CommonTypes" name="SubjectAreaType"/>
+    </Item>
+    <Item>
+      <Element>CourseTitle</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Override of the course title for this section.</p>
+      </Description>
+      <Type ref="CommonTypes" name="CourseTitleType"/>
+      <cedsId>000067</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000067</cedsURL>
+    </Item>
+    <Item>
+      <Element>InstructionalLevel</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Override of the instructional level for this section.</p>
+      </Description>
+      <Type ref="CommonTypes" name="InstructionalLevelType"/>
+    </Item>
+    <Item>
+      <Element>CourseCredits</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Override of the course credits for this section.</p>
+      </Description>
+      <Type ref="CommonTypes" name="CourseCreditsType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="IncidentReporterType" type="true" dm="true">
+    <Item>
+      <Element>IncidentReporterType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Information regarding the individual who reported the incident.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Attribute>Type</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Identifies the type of individual who reported the incident.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000506</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000506</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>TypeCodeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>Name</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The name of the individual reporting the incident.</p>
+      </Description>
+      <Type ref="CommonTypes" name="NameType"/>
+    </Item>
+    <Item>
+      <Element>SIF_RefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>GUID of the SIF object that relates to the person who reported the incident, if applicable.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+    <Item>
+      <Attribute>SIF_RefObject</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The name of the SIF object to which the GUID relates.</p>
+      </Description>
+      <Values>
+        <Value>
+          <Code>StudentPersonal</Code>
+        </Value>
+        <Value>
+          <Code>StaffPersonal</Code>
+        </Value>
+        <Value>
+          <Code>EmployeePersonal</Code>
+        </Value>
+        <Value>
+          <Code>StudentContact</Code>
+        </Value>
+      </Values>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ScheduleInfoOverrideType" type="true" dm="true">
+    <Item>
+      <Element>ScheduleInfoOverrideType</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>
+        A complete replacement of the standard SectionInfo/ScheduleInfo for this student's course enrollment.
+        If the student's schedule for this course is different than the standard schedule as defined in SectionInfo,
+        a ScheduleInfoOverride must be provided for each term in which the course is offered,
+        along with the appropriate value for Override. See the use cases for this object for scenario examples.
+			</p>
+      </Description>
+    </Item>
+    <Item>
+      <Attribute>Override</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Designates whether or not scheduling information has been overridden with different values for this student.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>OverrideCodeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>TermInfoRefId</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The Id (GUID) of the term to which this override information relates for this student.</p>
+      </Description>
+      <Type ref="CommonTypes" name="RefIdType"/>
+    </Item>
+    <Item>
+      <Element>MeetingTimeList</Element>
+      <Characteristics>O</Characteristics>
+      <Type ref="CommonTypes" name="MeetingTimeListType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="IncidentTimeType" type="true" dm="true">
+    <Item>
+      <Element>IncidentTimeType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The time when the incident occurred.</p>
+      </Description>
+      <Type name="xs:time"/>
+    </Item>
+    <Item>
+      <Attribute>Type</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Identifies whether or not the incident occurred during school hours. </p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>TypeCodeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="CorrelationTypeType" type="true" dm="true">
+    <Item>
+      <Element>CorrelationTypeType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The type of correlation.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>Code</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The code for the type of correlation.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>OtherCodeList</Element>
+      <Characteristics>O</Characteristics>
+      <Type ref="CommonTypes" name="OtherCodeListType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ScheduleInfoOverrideListType" type="true" dm="true">
+    <Item>
+      <Element>ScheduleInfoOverrideListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A complete replacement of the standard SectionInfo/ScheduleInfoList for this student's course enrollment.</p>
+      </Description>
+      <List mode="List">
+		</List>
+    </Item>
+    <Item>
+      <Element>ScheduleInfoOverride</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>
+        A complete replacement of the standard SectionInfo/ScheduleInfo for this student's course enrollment.
+        If the student's schedule for this course is different than the standard schedule as defined in SectionInfo,
+        a ScheduleInfoOverride must be provided for each term in which the course is offered,
+        along with the appropriate value for Override. See the use cases for this object for scenario examples.
+			</p>
+      </Description>
+      <Type ref="CommonTypes" name="ScheduleInfoOverrideType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="StudentMostRecentContainerType" type="true" dm="true">
+    <Item>
+      <Element>StudentMostRecentContainerType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>
+        Container for elements reflecting the most recent enrollment of a student.  If the student is
+        currently enrolled in the district, the elements contain current information.
+			</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>SchoolLocalId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Local identifier representing the school in which the student is or was most recently enrolled in the district.</p>
+      </Description>
+      <Type ref="CommonTypes" name="LocalIdType"/>
+    </Item>
+    <Item>
+      <Element>HomeroomLocalId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>
+        Local identifier representing the current or most recent homeroom in which the student is or was most recently assigned in the district.  Use the value from <code>RoomInfo/HomeroomNumber</code> if supported.  If not supported, use the value from <code>RoomInfo/RoomNumber</code>.  If neither is supported, use the most appropriate value from the agent&#8217;s application.
+			</p>
+      </Description>
+      <Type ref="CommonTypes" name="LocalIdType"/>
+    </Item>
+    <Item>
+      <Element>GradeLevel</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The current or most recent grade level of the student in the district.</p>
+      </Description>
+      <Type ref="ComonTypes" name="GradeLevelType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="TimetableDayListType" type="true" dm="true">
+    <Item>
+      <Element>TimetableDayListType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The timetable days for this school year bell schedule.  This essentially provides a list of the time day identifiers that are used in the BellPeriod definitions below with some additional properties for each.  The identifiers defined here may be referenced by other objects / elements like MeetingTime.</p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>TimetableDay</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>An entry for each unique timetable day.</p>
+      </Description>
+      <Type ref="CommonTypes" name="TimetableDayType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="EDENInfoType" type="true" dm="true">
+    <Item>
+      <Element>EDENInfoType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>Container element for EDEN-specific information.</Description>
+    </Item>
+    <Item>
+      <Element>FIPSStateCode</Element>
+      <Characteristics>O</Characteristics>
+      <Description>The two-digit Federal Information Processing Standard (FIPS) Code for the State, District of Columbia, and the possessions and freely associated areas of the United States (e.g. Puerto Rico).</Description>
+      <Type name="xs:token"/>
+      <Facets>
+        <xs:pattern value="[0-9]{2}|[A-Z]{2}"/>
+      </Facets>
+      <cedsId>000052</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000052</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>AgencyIdNumber</Element>
+      <Characteristics>O</Characteristics>
+      <Description>A number used in EDEN to uniquely uniquely identify state agencies.</Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="TeachingAssignmentType" type="true" dm="true">
+    <Item>
+      <Element>TeachingAssignmentType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The teacher field taught by the individual</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>Code</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Code representing the type of teaching assignment.</p>
+      </Description>
+      <Union>
+        <Type ref="ExternalCodeSets" name="NCES0436TeachingAssignmentType"/>
+        <Type name="xs:token">
+          <Values type="additional">
+            <Value>
+              <Code>NA</Code>
+              <Text>Not applicable</Text>
+            </Value>
+          </Values>
+        </Type>
+      </Union>
+      <cedsId>002276</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/002276</cedsURL>
+    </Item>
+    <Item>
+      <Element>OtherCodeList</Element>
+      <Characteristics>O</Characteristics>
+      <Type ref="CommonTypes" name="OtherCodeListType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="LanguageOfInstructionType" type="true" dm="true">
+    <Item>
+      <Element>LanguageOfInstructionType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Language in which the section is taught.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>Code</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Code representing the language of instruction.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000448</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000448</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>OtherCodeList</Element>
+      <Characteristics>O</Characteristics>
+      <Type ref="CommonTypes" name="OtherCodeListType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="PictureSourceType" type="true" dm="true">
+    <Item>
+      <Element>PictureSourceType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>
+        This element defines the picture. If the Type attribute is URL, this is the location of the picture in <a href="References.html#JPEG">[JPEG]</a> format; if Type is JPEG, this is the <a href="References.html#JPEG">[JPEG]</a> image data encoded using the Base64 Content-Transfer-Encoding defined in Section 6.8 of <a href="References.html#RFC2045">[RFC 2045]</a>.
+			</p>
+      </Description>
+      <Type ref="CommonTypes" name="URIOrBinaryType"/>
+    </Item>
+    <Item>
+      <Attribute>Type</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The way the picture is specified.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>TypeCodeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="CalendarDateInfoType" type="true" dm="true">
+    <Item>
+      <Element>CalendarDateInfoType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Calendar date type information.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>Code</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Code indicating the type of school day.</p>
+      </Description>
+      <Union>
+        <Type ref="ExternalCodeSets" name="NCES0084CalendarEventType"/>
+        <Type name="xs:token">
+          <Values type="additional">
+            <Value>
+              <Code>INST</Code>
+              <Text>Instructional School Day</Text>
+            </Value>
+            <Value>
+              <Code>MKUP</Code>
+              <Text>Instructional day that is scheduled solely to make up for emergency days or early dismissal days.</Text>
+            </Value>
+          </Values>
+        </Type>
+      </Union>
+      <cedsId>000603</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000603</cedsURL>
+    </Item>
+    <Item>
+      <Element>OtherCodeList</Element>
+      <Characteristics>O</Characteristics>
+      <Type ref="CommonTypes" name="OtherCodeListType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ManifestationDeterminationType" type="true" dm="true">
+    <Item>
+      <Element>ManifestationDeterminationType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Information relating to a manifestation determination meeting.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>MeetingHeld</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Was a manifestation determination meeting held for this student regarding this offense?</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>MeetingDate</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Date of the manifestation determination meeting, if applicable.</p>
+      </Description>
+      <Type name="xs:date"/>
+    </Item>
+    <Item>
+      <Element>DueToDisability</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Did the team determine that the offense was a manifestation of the student's disability?</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>MeetingOutcome</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Text description of the outcome of the meeting: for example, hearing completed, pending, or refused by student's parents.</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="IncidentActionType" type="true" dm="true">
+    <Item>
+      <Element>IncidentActionType</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Information regarding the action(s) taken in response to the incident.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>StartDate</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The date on which the action begins.</p>
+      </Description>
+      <Type name="xs:date"/>
+      <cedsId>000083</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000083</cedsURL>
+    </Item>
+    <Item>
+      <Element>EndDate</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The date through which the action is in effect, inclusive.</p>
+      </Description>
+      <Type name="xs:date"/>
+      <cedsId>000082</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000082</cedsURL>
+    </Item>
+    <Item>
+      <Element>Duration</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Identifies the length, in school days, of the action. Note: decimal places may be used for fractions of school days.</p>
+      </Description>
+      <Type name="xs:decimal"/>
+      <cedsId>000511</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000511</cedsURL>
+    </Item>
+    <Item>
+      <Element>ZeroTolerance</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Identifies whether or not this action was imposed as a consequence of state or local zero tolerance policies.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000512</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000512</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>PoliceNotification</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Identifies whether there was notification of local law enforcement, regardless of whether official action was taken.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000512</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000512</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>Arrest</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Identifies whether there were any arrests.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="BellPeriodListType" type="true" dm="true">
+    <Item>
+      <Element>BellPeriodListType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The bell periods for this school year bell schedule.</p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>BellPeriod</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>An entry for each unique bell period for the bell schedule.</p>
+      </Description>
+      <Type ref="CommonTypes" name="BellPeriodType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="EducationAgencyTypeType" type="true" dm="true">
+    <Item>
+      <Element>EducationAgencyTypeType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The classification of the education agency within the geographic boundaries of a state according to the level of administrative and operational control.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>Code</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Code indicating the operational/administrative level.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000537</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000537</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>OtherCodeList</Element>
+      <Characteristics>O</Characteristics>
+      <Type ref="CommonTypes" name="OtherCodeListType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="TimetableDayType" type="true" dm="true">
+    <Item>
+      <Element>TimetableDayType</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>An entry for each unique timetable day</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>Identifier</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The unique identifier for the timetable day for this school calendar.</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>Name</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The name of the timetable day.</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="EvaluationPartsType" type="true" dm="true">
+    <Item>
+      <Element>EvaluationPartsType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The set of the Evaluation Parts.</p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>EvaluationPart</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Container for parts of the evaluation.</p>
+      </Description>
+      <Type ref="CommonTypes" name="EvaluationPartType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="NonpromotionType" type="true" dm="true">
+    <Item>
+      <Element>NonpromotionType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>This element is mutually exclusive with Promotion, and its child elements should only be populated if the value of PromotionStatus is "Retained" or "Demoted".</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>Code</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The reason the student was promoted.  This element should only be populated if the value of PromotionStatus is &#8220;Promoted&#8221;.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000531</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000531</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>OtherCodeList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type ref="CommonTypes" name="OtherCodeListType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ScheduleInfoType" type="true" dm="true">
+    <Item>
+      <Element>ScheduleInfoType</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>The schedule-related information for a section repeating for each term in which the section is scheduled. The TermInfoRefId attribute value should repeat as necessary to show the appropriate relationship between meeting times, teachers and rooms. </p>
+      </Description>
+    </Item>
+    <Item>
+      <Attribute>TermInfoRefId</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The Id (GUID) of the term to which this schedule information relates.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+    <Item>
+      <Element>TeacherList</Element>
+      <Characteristics>O</Characteristics>
+      <Type ref="CommonTypes" name="StaffListType"/>
+    </Item>
+    <Item>
+      <Element>SectionRoomList</Element>
+      <Characteristics>O</Characteristics>
+      <Type ref="CommonTypes" name="RoomListType"/>
+    </Item>
+    <Item>
+      <Element>MeetingTimeList</Element>
+      <Characteristics>O</Characteristics>
+      <Type ref="CommonTypes" name="MeetingTimeListType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="IncidentCategoryContainerType" type="true" dm="true">
+    <Item>
+      <Element>IncidentCategoryContainerType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The category or description for this incident.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>Code</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Identifies the type of incident being reported.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>OtherCodeList</Element>
+      <Characteristics>O</Characteristics>
+      <Type ref="CommonTypes" name="OtherCodeListType"/>
+      <Description>
+        <p>List of other codes or strings that crosswalk to or serve as translations of the Code element.  If Code changes and OtherCode elements are supported, both Code and all associated OtherCode elements must be present.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>CodeComment</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A short comment clarifying the discipline code (e.g. for Nonsexual Harassment could detail "Racial comment, pushing, name-calling" or "Cell phone violation. Second offense.")</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="AlertMessagesType" type="true" dm="true">
+    <Item>
+      <Element>AlertMessagesType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A list of alert messages associated with the student.</p>
+      </Description>
+      <List mode="List">
+		</List>
+    </Item>
+    <Item>
+      <Element>AlertMessage</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>This is an alert message that is associated with the student.</p>
+      </Description>
+      <Type ref="CommonTypes" name="AlertMessageType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="PrincipalInfoType" type="true" dm="true">
+    <Item>
+      <Element>PrincipalInfoType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Information about the school's principal.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>ContactName</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The name of the principal.</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>ContactTitle</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The principal's title.</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="LEAContactType" type="true" dm="true">
+    <Item>
+      <Element>LEAContactType</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Information on contact persons for this LEA.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>PublishInDirectory</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Indicates whether or not this LEA contact's information should be published in a directory of LEA information.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>ContactInfo</Element>
+      <Characteristics>M</Characteristics>
+      <Type ref="CommonTypes" name="ContactInfoType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="EvaluationRecommendationType" type="true" dm="true">
+    <Item>
+      <Element>EvaluationRecommendationType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>What was done because of a summative evaluation.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>Code</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The code for the decision taken during the summative evaluation. This element corresponds to the global CEDS Id 000102  Currently this is limited to 80 characters.</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>OtherCodeList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Other codes for the decision taken during the summative evaluation.</p>
+      </Description>
+      <Type ref="CommonTypes" name="OtherCodeListType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="TimetablePeriodType" type="true" dm="true">
+    <Item>
+      <Element>TimetablePeriodType</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>An entry for each unique timetable period.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>Identifier</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The unique identifier for the timetable period for this school calendar.</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>Name</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The name of the timetable period.</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="CorrelationSectionListType" type="true" dm="true">
+    <Item>
+      <Element>CorrelationSectionListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>The list of SectionInfo objects being correlated.</Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>CorrelationSection</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Reference to a SectionInfo object to be correlated.</p>
+      </Description>
+      <Type ref="CommonTypes" name="CorrelationSectionType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="StaffListType" type="true" dm="true">
+    <Item>
+      <Element>StaffListType</Element>
+      <Characteristics>O</Characteristics>
+      <List mode="List">
+		</List>
+    </Item>
+    <Item>
+      <Element>StaffPersonalRefId</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>GUID that identifies the staff person.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ContactFlagsType" type="true" dm="true">
+    <Item>
+      <Element>ContactFlagsType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>
+        Contains Yes/No characteristics of the contact person's role.  Provide a <code>Yes</code> value for all that apply.
+        At least one of the child elements of <code>ContactFlags</code> must have a <code>Yes</code> value.
+        Do not publish the <code>StudentContact</code> instance if one of the child elements does not have a <code>Yes</code> value.
+			</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>ParentLegalGuardian</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>Does the individual have parental or legal guardianship responsibility for the student?</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>PickupRights</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>This element tells whether or not the contact has pickup rights.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>LivesWith</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>Does the student live with this contact?</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>AccessToRecords</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>Does this contact have access to the student's records?</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>EmergencyContact</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>Should this contact be notified in case of emergency?</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>HasCustody</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>Does this contact have or share custody of the student?</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>DisciplinaryContact</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>Is this person to be contacted in case of disciplinary action?</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>PrimaryCareProvider</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>Does this person provide daily living or personal assistance to the student?</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>Other</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>This person has a relationship to student(s) that the school needs to document but no other contact flag value is 'Yes'.  An example is a parent who enrolled the student but is deceased and is no longer a valid contact.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="EvaluationPartType" type="true" dm="true">
+    <Item>
+      <Element>EvaluationPartType</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Container for parts of the evaluation.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>Name</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>This is the name of a part that could receive a score.</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>Score</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>This is a subscore that is part of the evaluation.</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>Scale</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>This is the scale for the Subscore that is part of the evaluation.</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="SchoolFocusListType" type="true" dm="true">
+    <Item>
+      <Element>SchoolFocusListType</Element>
+      <Characteristics>O</Characteristics>
+      <List mode="List">
+		</List>
+    </Item>
+    <Item>
+      <Element>SchoolFocus</Element>
+      <Characteristics>MR</Characteristics>
+      <xs:maxOccurs value="6"/>
+      <Description>
+        <p>The type of educational institution as classified by its focus.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000039</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000039</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+</IncludeGroup>

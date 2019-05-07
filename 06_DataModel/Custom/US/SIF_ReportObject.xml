@@ -22,7 +22,7 @@
     <Description>
       <p>The Id (GUID) that uniquely identifies this instance of a report.</p>
     </Description>
-    <Type ref="CommonTypes" name="RefIdType"/>
+    <Type ref="CommonTypes" name="RefIdType"></Type>
   </Item>
   <Choice>
     <Item>
@@ -36,7 +36,7 @@
           See examples of the usage of the object below.
         </p>
       </Description>
-      <Type ref="CommonTypes" name="ReportInfoType"/>
+    <Type ref="CommonTypes" name="ReportInfoType"></Type>
     </Item>
     <Item>
       <Element>ReportData</Element>
@@ -48,7 +48,7 @@
           See examples of the usage of the object below.
         </p>
       </Description>
-      <Type ref="CommonTypes" name="ReportDataObjectType"/>
+      <Type ref="CommonTypes" name="ReportDataObjectType"></Type>
     </Item>
     <Item>
       <Element>SIF_ExtendedQueryResults</Element>
@@ -59,18 +59,18 @@
           This element or <code>ReportInfo</code> or <code>ReportData</code> is included but never at the same time.
         </p>
       </Description>
-      <Type ref="Infrastructure" name="SIF_ExtendedQueryResults"/>
+      <Type ref="Infrastructure" name="SIF_ExtendedQueryResults"></Type>
     </Item>
   </Choice>
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_MetadataType"/>
+    <Type ref="CommonTypes" name="SIF_MetadataType"></Type>
   </Item>
   <Item>
     <Element>SIF_ExtendedElements</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
+    <Type ref="CommonTypes" name="SIF_ExtendedElementsType"></Type>
   </Item>
   <xhtml:Example xmlns="">
     <SIF_Message xmlns="http://www.sifinfo.org/infrastructure/2.x" Version="2.5">
@@ -165,7 +165,8 @@
           </SIF_ReportObject>
           <SIF_ReportObject RefId="B234516384746B387459000F84723A00">
             <ReportData>
-              <StudentSchoolEnrollment RefId="5DF9A510F33F11D7B64C970DE3494F35" StudentPersonalRefId="5D1F2390F33F11D7B64CD17E020C45AB" SchoolInfoRefId="56E86900F33F11D7B64CBCCE0CB2E03A" MembershipType="Home" TimeFrame="Current" SchoolYear="2003">
+              <StudentSchoolEnrollment RefId="5DF9A510F33F11D7B64C970DE3494F35" StudentPersonalRefId="5D1F2390F33F11D7B64CD17E020C45AB"
+                SchoolInfoRefId="56E86900F33F11D7B64CBCCE0CB2E03A" MembershipType="Home" TimeFrame="Current" SchoolYear="2003">
                 <EntryDate>2002-09-02</EntryDate>
                 <EntryType>
                   <Code>1838</Code>
