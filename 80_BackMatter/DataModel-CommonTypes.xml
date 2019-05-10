@@ -13,10 +13,6 @@
         <p>Code representing the general nature and difficulty of instruction provided.</p>
       </Description>
       <Type name="xs:token"/>
-      <cedsId>000247</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000247</cedsURL>
-      <!--<cedsId xmlns="http://sifassociation.org/SpecGen">002055</cedsId>-->
-      <!--<cedsURL xmlns="http://sifassociation.org/SpecGen">https://ceds.ed.gov/element/002055</cedsURL>-->
     </Item>
     <Item>
       <Attribute>Codeset</Attribute>
@@ -304,8 +300,6 @@
       <Type name="xs:token"/>
       <cedsId>000634</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000634</cedsURL>
-      <!--<cedsId xmlns="http://sifassociation.org/SpecGen">000206</cedsId>-->
-      <!--<cedsURL xmlns="http://sifassociation.org/SpecGen">https://ceds.ed.gov/element/000206</cedsURL>-->
     </Item>
     <Item>
       <Attribute>TypeCodeset</Attribute>
@@ -697,8 +691,6 @@
       <Type name="xs:token"/>
       <cedsId>000618</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000618</cedsURL>
-      <!--<cedsId xmlns="http://sifassociation.org/SpecGen">000428</cedsId>-->
-      <!--<cedsURL xmlns="http://sifassociation.org/SpecGen">https://ceds.ed.gov/element/000428</cedsURL>-->
     </Item>
     <Item>
       <Attribute>Codeset</Attribute>
@@ -1680,8 +1672,6 @@
       <Type name="xs:token"/>
       <cedsId>000280</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000280</cedsURL>
-      <!--<cedsId xmlns="http://sifassociation.org/SpecGen">000167</cedsId>-->
-      <!--<cedsURL xmlns="http://sifassociation.org/SpecGen">https://ceds.ed.gov/element/000167</cedsURL>-->
     </Item>
     <Item>
       <Attribute>TypeCodeset</Attribute>
@@ -1704,8 +1694,6 @@
       <Type name="xs:normalizedString"/>
       <cedsId>000279</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000279</cedsURL>
-      <!--<cedsId xmlns="http://sifassociation.org/SpecGen">000281</cedsId>-->
-      <!--<cedsURL xmlns="http://sifassociation.org/SpecGen">https://ceds.ed.gov/element/000281</cedsURL>-->
     </Item>
     <Item>
       <Element>Extension</Element>
@@ -2000,6 +1988,10 @@
       </p>
       <p> Any usage of metadata is optional unless made a requirement within individual SIF objects, or if a SIF or local profile or zone installation mandates it.  SIF_Metadata allows for the usage of metadata in agents and applications that choose to support it. </p>
       <p>This element is designed to operate much like SIF_ExtendedElements.  It is an approved common element that is part of any data object.</p>
+      <p>
+        <strong>DEPRECATED</strong>
+      </p>
+      <p>The International community is already working on a generic replacement for SIF_Metadata and it has been deprecated as of SIF Data Model Implementation Specification (NA) 4.0.</p>
     </Intro>
     <Item>
       <Element>SIF_MetadataType</Element>
@@ -2469,14 +2461,8 @@
         <p>Code representing the grade level.</p>
       </Description>
       <Type name="xs:token"/>
-      <cedsId>000126</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000126</cedsURL>
-      <!--<cedsId xmlns="http://sifassociation.org/SpecGen">000125</cedsId>-->
-      <!--<cedsURL xmlns="http://sifassociation.org/SpecGen">https://ceds.ed.gov/element/000125</cedsURL>-->
-      <!--<cedsId xmlns="http://sifassociation.org/SpecGen">000125</cedsId>-->
-      <!--<cedsURL xmlns="http://sifassociation.org/SpecGen">https://ceds.ed.gov/element/000125</cedsURL>-->
-      <!--<cedsId xmlns="http://sifassociation.org/SpecGen">000131</cedsId>-->
-      <!--<cedsURL xmlns="http://sifassociation.org/SpecGen">https://ceds.ed.gov/element/000131</cedsURL>-->
+      <cedsId>000100</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000100</cedsURL>
     </Item>
     <Item>
       <Attribute>Codeset</Attribute>
@@ -3288,8 +3274,6 @@
       <Type name="xs:token"/>
       <cedsId>000010</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000010</cedsURL>
-      <!--<cedsId xmlns="http://sifassociation.org/SpecGen">000722</cedsId>-->
-      <!--<cedsURL xmlns="http://sifassociation.org/SpecGen">https://ceds.ed.gov/element/000722</cedsURL>-->
     </Item>
     <Item>
       <Attribute>TypeCodeset</Attribute>
@@ -4030,15 +4014,18 @@
       <Description>
         <p>The subject area code (i.e., the first two digits of the course classification code).</p>
       </Description>
-      <Union>
-        <Type ref="ExternalCodeSets" name="SCEDSecondaryCoursesType"/>
-        <Type ref="ExternalCodeSets" name="SCEDNonSecondaryCoursesType"/>
-      </Union>
-      <cedsId>000248</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000248</cedsURL>
-      <!--<cedsId xmlns="http://sifassociation.org/SpecGen">000702</cedsId>-->
-      <!--<cedsURL xmlns="http://sifassociation.org/SpecGen">https://ceds.ed.gov/element/000702</cedsURL>-->
+      <Type name="xs:token"/>
+      <cedsId>000702</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000702</cedsURL>
     </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>    
     <Item>
       <Element>OtherCodeList</Element>
       <Characteristics>O</Characteristics>
@@ -4303,8 +4290,6 @@
       <Type name="xs:normalizedString"/>
       <cedsId>000522</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000522</cedsURL>
-      <!--<cedsId xmlns="http://sifassociation.org/SpecGen">000520</cedsId>-->
-      <!--<cedsURL xmlns="http://sifassociation.org/SpecGen">https://ceds.ed.gov/element/000520</cedsURL>-->
     </Item>
     <xhtml:Example xmlns="">
       <MeetingTime>

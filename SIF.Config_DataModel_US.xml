@@ -9,7 +9,7 @@
 		<!--
 	    <jsonExamplesXslt>98_Xslt/sif2JsonLM.xsl</jsonExamplesXslt> -->
 		<resolveExtensions>true</resolveExtensions>
-		<isDraft>true</isDraft>
+		<isDraft>false</isDraft>
 		<includeCEDS>true</includeCEDS>
 	</globalSettings>
 	
@@ -37,7 +37,7 @@
 	<xsdDocuments>
 	
 		<xsdDocument>
-			<xsdTitle>SIF_MessageNoIncludes</xsdTitle>
+			<xsdTitle>Schema_NoIncludes_Lax</xsdTitle>
 			<diagram>true</diagram>
 			<isDataModelXsd>false</isDataModelXsd>
 			<singleSchema>true</singleSchema>
@@ -47,7 +47,7 @@
 		</xsdDocument>
 		
 		<xsdDocument>
-			<xsdTitle>SIF_MessageNoIncludesAnnotated</xsdTitle>
+			<xsdTitle>Schema_NoIncludes_Annotated_Lax</xsdTitle>
 			<diagram>false</diagram>
 			<isDataModelXsd>false</isDataModelXsd>
 			<singleSchema>true</singleSchema>
@@ -57,7 +57,7 @@
 		</xsdDocument>
 		
 		<xsdDocument>
-			<xsdTitle>SIF_Message</xsdTitle>
+			<xsdTitle>Schema_Lax</xsdTitle>
 			<diagram>false</diagram>
 			<isDataModelXsd>false</isDataModelXsd>
 			<singleSchema>false</singleSchema>
@@ -67,7 +67,7 @@
 		</xsdDocument>
 		
 		<xsdDocument>
-			<xsdTitle>SIF_MessageAnnotated</xsdTitle>
+			<xsdTitle>Schema_Annotated_Lax</xsdTitle>
 			<diagram>false</diagram>
 			<isDataModelXsd>false</isDataModelXsd>
 			<singleSchema>false</singleSchema>
@@ -77,7 +77,7 @@
 		</xsdDocument>
 		
 		<xsdDocument>
-			<xsdTitle>DataModelNoIncludes</xsdTitle>
+			<xsdTitle>Schema_NoIncludes_Strict</xsdTitle>
 			<diagram>false</diagram>
 			<isDataModelXsd>true</isDataModelXsd>
 			<singleSchema>true</singleSchema>
@@ -87,7 +87,7 @@
 		</xsdDocument>
 		
 		<xsdDocument>
-			<xsdTitle>DataModelNoIncludesAnnotated</xsdTitle>
+			<xsdTitle>Schema_NoIncludes_Annotated_Strict</xsdTitle>
 			<diagram>false</diagram>
 			<isDataModelXsd>true</isDataModelXsd>
 			<singleSchema>true</singleSchema>
@@ -97,7 +97,7 @@
 		</xsdDocument>
 		
 		<xsdDocument>
-			<xsdTitle>DataModel</xsdTitle>
+			<xsdTitle>Schema_Strict</xsdTitle>
 			<diagram>false</diagram>
 			<isDataModelXsd>true</isDataModelXsd>
 			<singleSchema>false</singleSchema>
@@ -107,7 +107,7 @@
 		</xsdDocument>
 		
 		<xsdDocument>
-			<xsdTitle>DataModelAnnotated</xsdTitle>
+			<xsdTitle>Schema_Annotated_Strict</xsdTitle>
 			<diagram>false</diagram>
 			<isDataModelXsd>true</isDataModelXsd>
 			<singleSchema>false</singleSchema>

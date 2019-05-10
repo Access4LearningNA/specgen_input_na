@@ -8,8 +8,6 @@
 	<BuildComment>
 		<xi:include parse="text" href="90_Properties_DataModel/SIF-Specification-Title-DataModel.txt"/>
 		(<xi:include parse="text"  href="90_Properties/SIF-Specification-ReleaseDate.txt"/>)
-		
-		Infrastructure Version: <xi:include parse="text" href="90_Properties/SIF-Infrastructure-Version.txt"/>
 	</BuildComment>
 	
 	<!--Title Page-->
@@ -28,7 +26,7 @@
 		<br/>
 		<br/>
 		<p>
-			<img src="images/zone.jpg" alt=""/>
+			<img src="images/unity.png" alt="Logo combining Data Model and Privacy"/>
 		</p>
 		<br/>
 		<br/>
@@ -47,38 +45,39 @@
 			<dd>
 				<xi:include parse="text"  href="90_Properties_DataModel/SIF-Specification-Navigation-Latest Version.xml"/>
 			</dd>
-			<dt>Schemas</dt>
+			<dt>Primary Schema</dt>
 			<dd>
-				<a href="XSD/SIF_MessageNoIncludes/SIF_Message.xsd">SIF_Message (single file, non-annotated)</a>
-				<a href="XSD/SIF_MessageNoIncludes.zip">(ZIP archive)</a>
+				<a href="XSD/Schema_NoIncludes_Strict/SIF_Message.xsd">Schema_NoIncludes_Strict (single file, non-annotated)</a>
+				<a href="XSD/Schema_NoIncludes_Strict.zip">(ZIP archive)</a>
+			</dd>			
+			<dt>Other Schemas</dt>
+			<dd>
+				<a href="XSD/Schema_NoIncludes_Lax/SIF_Message.xsd">Schema_NoIncludes_Lax (single file, non-annotated)</a>
+				<a href="XSD/Schema_NoIncludes_Lax.zip">(ZIP archive)</a>
 			</dd>
 			<dd>
-				<a href="XSD/SIF_MessageNoIncludesAnnotated/SIF_Message.xsd">SIF_Message (single file, annotated)</a>
-				<a href="XSD/SIF_MessageNoIncludesAnnotated.zip">(ZIP archive)</a>
+				<a href="XSD/Schema_NoIncludes_Annotated_Lax/SIF_Message.xsd">Schema_NoIncludes_Annotated_Lax (single file, annotated)</a>
+				<a href="XSD/Schema_NoIncludes_Annotated_Lax.zip">(ZIP archive)</a>
 			</dd>
 			<dd>
-				<a href="XSD/SIF_Message/SIF_Message.xsd">SIF_Message (includes, non-annotated)</a>
-				<a href="XSD/SIF_Message.zip">(ZIP archive)</a>
+				<a href="XSD/Schema_Lax/SIF_Message.xsd">Schema_Lax (includes, non-annotated)</a>
+				<a href="XSD/Schema_Lax.zip">(ZIP archive)</a>
 			</dd>
 			<dd>
-				<a href="XSD/SIF_MessageAnnotated/SIF_Message.xsd">SIF_Message (includes, annotated)</a>
-				<a href="XSD/SIF_MessageAnnotated.zip">(ZIP archive)</a>
+				<a href="XSD/Schema_Annotated_Lax/SIF_Message.xsd">Schema_Annotated_Lax (includes, annotated)</a>
+				<a href="XSD/Schema_Annotated_Lax.zip">(ZIP archive)</a>
 			</dd>
 			<dd>
-				<a href="XSD/DataModelNoIncludes/SIF_Message.xsd">DataModel (single file, non-annotated)</a>
-				<a href="XSD/DataModelNoIncludes.zip">(ZIP archive)</a>
+				<a href="XSD/Schema_NoIncludes_Annotated_Strict/SIF_Message.xsd">Schema_NoIncludes_Annotated_Strict (single file, annotated)</a>
+				<a href="XSD/Schema_NoIncludes_Annotated_Strict.zip">(ZIP archive)</a>
 			</dd>
 			<dd>
-				<a href="XSD/DataModelNoIncludesAnnotated/SIF_Message.xsd">DataModel (single file, annotated)</a>
-				<a href="XSD/DataModelNoIncludesAnnotated.zip">(ZIP archive)</a>
+				<a href="XSD/Schema_Strict/SIF_Message.xsd">Schema_Strict (includes, non-annotated)</a>
+				<a href="XSD/Schema_Strict.zip">(ZIP archive)</a>
 			</dd>
 			<dd>
-				<a href="XSD/DataModel/SIF_Message.xsd">DataModel (includes, non-annotated)</a>
-				<a href="XSD/DataModel.zip">(ZIP archive)</a>
-			</dd>
-			<dd>
-				<a href="XSD/DataModelAnnotated/SIF_Message.xsd">DataModel (includes, annotated)</a>
-				<a href="XSD/DataModelAnnotated.zip">(ZIP archive)</a>
+				<a href="XSD/Schema_Annotated_Strict/SIF_Message.xsd">Schema_Annotated_Strict (includes, annotated)</a>
+				<a href="XSD/Schema_Annotated_Strict.zip">(ZIP archive)</a>
 			</dd>
 			<dd style="font-size: smaller">
 				<br/>
@@ -137,11 +136,11 @@
 		</Appendix>
 	
 		<!--Section C-->
-	<xi:include parse="xml" href="80_BackMatter/DataModel-ExternalCodeSets.xml"/>
+	<!--<xi:include parse="xml" href="80_BackMatter/DataModel-ExternalCodeSets.xml"/>-->
 	
 	
 		<!--Section D-->
-	<xi:include parse="text" href="80_BackMatter/BackgroundSupplementaryDocumentation.xml"/>
+	<!--<xi:include parse="text" href="80_BackMatter/BackgroundSupplementaryDocumentation.xml"/>-->
 	
 		<!--Section -->
 	<Appendix name="Index of Tables"/>

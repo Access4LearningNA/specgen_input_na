@@ -1,19 +1,19 @@
-<DataObject xmlns="http://sifassociation.org/SpecGen" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:json="http://json.org/" name="studentProgramAssociation">
+<DataObject xmlns="http://sifassociation.org/SpecGen" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:json="http://json.org/" name="StudentProgramAssociation">
   <Key>@refId</Key>
   <EventsReported>true</EventsReported>
   <Item>
-    <Element>studentProgramAssociation</Element>
+    <Element>StudentProgramAssociation</Element>
     <Description>
       <p>Links a student to participation in a program.</p>
     </Description>
   </Item>
   <Item>
-    <Attribute>refId</Attribute>
+    <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
     <Type ref="CommonTypes" name="gRefIdType"/>
   </Item>
   <Item>
-    <Element>studentRefId</Element>
+    <Element>StudentRefId</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The Id (UUID) of the student to whom this information is linked.</p>
@@ -21,7 +21,7 @@
     <Type ref="CommonTypes" name="gRefIdPointerType"/>
   </Item>
   <Item>
-    <Element>programRefId</Element>
+    <Element>ProgramRefId</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>The Id (GUID) of the program to which this enrollment applies.</p>
@@ -29,7 +29,7 @@
     <Type ref="CommonTypes" name="gRefIdPointerType"/>
   </Item>
   <Item>
-    <Element>schoolYear</Element>
+    <Element>SchoolYear</Element>
     <Characteristics>M</Characteristics>
     <Description>
       <p>School year for which this enrollment is applicable, expressed as the four-digit year in which the school year ends (e.g. 2007 for the 2006-07 school year). StudentSchoolEnrollment instances must not span multiple school years.</p>
@@ -37,15 +37,15 @@
     <Type name="xs:gYear"/>
   </Item>
   <Item>
-    <Element>entryDate</Element>
+    <Element>EntryDate</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>The date from when this enrollment is valid.</p>
     </Description>
-    <Type ref="CommonTypes" name="codesetNameSimpleType"/>
+    <Type name="xs:date"/>
   </Item>
   <Item>
-    <Element>entryType</Element>
+    <Element>EntryType</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Code indicating the type of entry for this enrollment.</p>
@@ -61,7 +61,7 @@
     <Type name="xs:token"/>
   </Item>
   <Item>
-    <Element>yearGroup</Element>
+    <Element>YearGroup</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Grade or academic level of student for this enrollment.</p>
@@ -77,7 +77,7 @@
     <Type name="xs:token"/>
   </Item>
   <Item>
-    <Element>exitDate</Element>
+    <Element>ExitDate</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>The last school calendar day of this enrollment. If the student has exited the school or the enrollment has a RecordClosureReason, ExitDate must have a value.</p>
@@ -85,7 +85,7 @@
     <Type name="xs:date"/>
   </Item>
   <Item>
-    <Element>exitStatus</Element>
+    <Element>ExitStatus</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Code indicating the closure status for this enrollment.</p>
@@ -101,7 +101,7 @@
     <Type name="xs:token"/>
   </Item>
   <Item>
-    <Element>exitType</Element>
+    <Element>ExitType</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Code indicating the type of exit for this enrollment.</p>
@@ -117,7 +117,7 @@
     <Type name="xs:token"/>
   </Item>
   <Item>
-    <Element>fte</Element>
+    <Element>FTE</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Full-time equivalent numeric value of the student's program load during this enrollment, expressed in decimal form, where 1.00 represents a full-time enrollment.</p>
@@ -125,7 +125,7 @@
     <Type ref="CommonTypes" name="gFractionDecimal"/>
   </Item>
   <Item>
-    <Element>ftptStatus</Element>
+    <Element>FTPTStatus</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>An indication of whether the student is enrolled full time or part time.</p>
@@ -133,7 +133,7 @@
     <Type ref="CommonTypes" name="gFullTimeStatusType"/>
   </Item>
   <Item>
-    <Element>placementType</Element>
+    <Element>PlacementType</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Provides additional detail concerning enrollment in the program, e.g., Resident, State Placed.</p>
@@ -149,7 +149,7 @@
     <Type name="xs:token"/>
   </Item>
   <Item>
-    <Element>managingSchoolLocalId</Element>
+    <Element>ManagingSchoolLocalId</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Managing school for this student in the program. Overrides the value in program object.</p>
@@ -157,7 +157,7 @@
     <Type ref="CommonTypes" name="gLocalIdType"/>
   </Item>
   <Item>
-    <Element>managingSchoolRefId</Element>
+    <Element>ManagingSchoolRefId</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>SIF RefId for the managing school. Overrides the value in the program object.</p>
@@ -165,11 +165,11 @@
     <Type ref="CommonTypes" name="gRefIdPointerType"/>
   </Item>
   <Item>
-    <Element>fundingSourceList</Element>
+    <Element>FundingSourceList</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Student-specific funding sources for the student in the program.</p>
     </Description>
-    <Type name="xs:string"/>
+    <Type name="fundingSourceType"/>
   </Item>
 </DataObject>

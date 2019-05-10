@@ -1,24 +1,24 @@
-<DataObject xmlns="http://sifassociation.org/SpecGen" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:json="http://json.org/" name="address">
+<DataObject xmlns="http://sifassociation.org/SpecGen" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:json="http://json.org/" name="Address">
   <Key>@refId</Key>
   <EventsReported>true</EventsReported>
   <Item>
-    <Element>address</Element>
+    <Element>Address</Element>
     <Description>
       <p>This object contains address data.</p>
     </Description>
   </Item>
   <Item>
-    <Attribute>refId</Attribute>
+    <Attribute>RefId</Attribute>
     <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="latitudeSimpleType"/>
+    <Type ref="CommonTypes" name="gRefIdType"/>
   </Item>
   <Item>
-    <Element>gridLocation</Element>
+    <Element>GridLocation</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="codesetNameSimpleType"/>
+    <Type ref="CommonTypes" name="gridLocationType"/>
   </Item>
   <Item>
-    <Element>addressType</Element>
+    <Element>AddressType</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>The type or category of this address. For example, mailing, physical, permanent, etc.</p>
@@ -34,30 +34,38 @@
     <Type name="xs:token"/>
   </Item>
   <Item>
-    <Element>localId</Element>
+    <Element>LocalId</Element>
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="gLocalIdType"/>
   </Item>
   <Item>
-    <Element>street</Element>
+    <Element>Street</Element>
     <Characteristics>M</Characteristics>
     <Type ref="CommonTypes" name="gStreetType"/>
   </Item>
   <Item>
-    <Element>city</Element>
+    <Element>City</Element>
     <Characteristics>M</Characteristics>
     <Type name="xs:normalizedString"/>
   </Item>
   <Item>
-    <Element>subregion</Element>
+    <Element>Subregion</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>A second-order subdivision of the country, e.g. county, shire.</p>
     </Description>
-    <Type ref="CommonTypes" name="codesetNameSimpleType"/>
+    <Type name="xs:normalizedString"/>
   </Item>
   <Item>
-    <Element>stateProvince</Element>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>StateProvince</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>A first-order national subdivision of the country, e.g. state, province.</p>
@@ -73,7 +81,7 @@
     <Type name="xs:token"/>
   </Item>
   <Item>
-    <Element>country</Element>
+    <Element>Country</Element>
     <Characteristics>O</Characteristics>
     <Type name="xs:token"/>
   </Item>
@@ -86,7 +94,7 @@
     <Type name="xs:token"/>
   </Item>
   <Item>
-    <Element>postalCode</Element>
+    <Element>PostalCode</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>A number that identifies each postal delivery area in a country used as a portion of an address</p>

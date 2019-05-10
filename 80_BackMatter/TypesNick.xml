@@ -352,10 +352,8 @@
         <p>Link to associated LearningStandardItem object.</p>
       </Description>
       <Type ref="CommonTypes" name="IdRefType"/>
-      <cedsId>000381</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000381</cedsURL>
-      <!--<cedsId xmlns="http://sifassociation.org/SpecGen">000605</cedsId>-->
-      <!--<cedsURL xmlns="http://sifassociation.org/SpecGen">https://ceds.ed.gov/element/000605</cedsURL>-->
+      <cedsId>000605</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000605</cedsURL>
     </Item>
   </CommonElement>
   <CommonElement name="AssessmentItemChoiceListType" type="true" dm="true">
@@ -4439,10 +4437,8 @@
         <p>The metric or scale used to report the scores.</p>
       </Description>
       <Type name="xs:token"/>
-      <cedsId>000027</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000027</cedsURL>
-      <!--<cedsId xmlns="http://sifassociation.org/SpecGen">000417</cedsId>-->
-      <!--<cedsURL xmlns="http://sifassociation.org/SpecGen">https://ceds.ed.gov/element/000417</cedsURL>-->
+      <cedsId>000417</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000417</cedsURL>
     </Item>
     <Item>
       <Attribute>ScoreMetricCodeset</Attribute>
@@ -7036,10 +7032,8 @@ balances, or changes therein, e.g. the code for  Debt Service Funds, or Capital 
         <p>The GUID of the public agency (a district / LEA) to which the "ManagingSchool" reports / belongs.</p>
       </Description>
       <Type ref="CommonTypes" name="IdRefType"/>
-      <cedsId>000594</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000594</cedsURL>
-      <!--<cedsId xmlns="http://sifassociation.org/SpecGen">000638</cedsId>-->
-      <!--<cedsURL xmlns="http://sifassociation.org/SpecGen">https://ceds.ed.gov/element/000638</cedsURL>-->
+      <cedsId>000638</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000638</cedsURL>
     </Item>
     <Item>
       <Attribute>SIF_RefObject</Attribute>

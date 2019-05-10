@@ -6,7 +6,7 @@
     <Item>
       <Element>authorizingOfficialsList</Element>
       <Characteristics>O</Characteristics>
-      <Type ref="CommonTypes" name="acceptedSimpleType"/>
+      <Type ref="CommonTypes" name="authorizingOfficialsList"/>
     </Item>
     <Item>
       <Element>parentGuardianAuthorization</Element>
@@ -22,6 +22,19 @@
       <Type name="xs:date"/>
     </Item>
   </CommonElement>
+  <CommonElement name="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementType" type="true" dm="true">
+    <Item>
+      <Element>iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementType</Element>
+      <Description>
+        <p> Definition of the way we will know the student has achieved the goal </p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>criterion</Element>
+      <Characteristics>O</Characteristics>
+      <Type ref="CommonTypes" name="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementCriterionType"/>
+    </Item>
+  </CommonElement>  
   <CommonElement name="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveType" type="true" dm="true">
     <Item>
       <Element>iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveType</Element>
@@ -44,7 +57,7 @@
     <Item>
       <Element>measurement</Element>
       <Characteristics>OR</Characteristics>
-      <Type ref="CommonTypes" name="parentAcceptanceSimpleType"/>
+      <Type ref="CommonTypes" name="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementType"/>
     </Item>
     <Item>
       <Element>parentAcceptance</Element>
@@ -75,7 +88,7 @@
       <Description>
         <p> Official determination that the disability has adverse effects </p>
       </Description>
-      <Type ref="CommonTypes" name="eligibleSimpleType"/>
+      <Type name="xs:normalizedString"/>
     </Item>
     <Item>
       <Element>eligible</Element>
@@ -83,7 +96,7 @@
       <Description>
         <p> A person having intellectual disability; hearing impairment, including deafness; speech or language impairment; visual impairment, including blindness; serious emotional disturbance (hereafter referred to as emotional disturbance); orthopedic impairment; autism; traumatic brain injury; developmental delay; other health impairment; specific learning disability; deaf-blindness; or multiple disabilities and who, by reason thereof, receive special education and related services under the Individuals with Disabilities Education Act (IDEA) according to an Individualized Education Program (IEP), Individual Family Service Plan (IFSP), or service plan. </p>
       </Description>
-      <Type name="xs:string"/>
+      <Type ref="CommonTypes" name="iepEligibleType"/>
       <cedsId>000151</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000151</cedsURL>
     </Item>
@@ -212,11 +225,10 @@
       <Type ref="CommonTypes" name="xPersonReferenceType"/>
     </Item>
   </CommonElement>
-  <CommonElement name="standardPurposeSimpleType" type="true">
+  <CommonElement name="iepStandardPurposeType" type="true">
     <Item>
-      <Element>standardPurposeSimpleType</Element>
+      <Element>iepStandardPurposeType</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:normalizedString"/>
       <Values>
         <Value>
           <Code>report</Code>
@@ -253,45 +265,6 @@
       <Type name="xs:normalizedString"/>
       <cedsId>001722</cedsId>
       <cedsURL>https://ceds.ed.gov/element/001722</cedsURL>
-    </Item>
-  </CommonElement>
-  <CommonElement name="gLaxCodedElementType" type="true" dm="true">
-    <Item>
-      <Element>gLaxCodedElementType</Element>
-    </Item>
-    <Item>
-      <Attribute>codesetName</Attribute>
-      <Characteristics>O</Characteristics>
-      <Type name="xs:string"/>
-    </Item>
-    <Item>
-      <Element>code</Element>
-      <Characteristics>M</Characteristics>
-      <Type ref="CommonTypes" name="hexValueSimpleType"/>
-    </Item>
-    <Item>
-      <Element>hexValue</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>As of version 3.4 hex values are not published with the code sets.</p>
-      </Description>
-      <Type ref="CommonTypes" name="hexValueDashedSimpleType"/>
-    </Item>
-    <Item>
-      <Element>hexValueDashed</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>This element is deprecated as of version 3.3 and should not be used.</p>
-      </Description>
-      <Type ref="CommonTypes" name="codesetNameSimpleType"/>
-    </Item>
-    <Item>
-      <Element>otherCodeList</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element. If Code changes and OtherCodes are supported, both Code and all associated OtherCode elements must be present.</p>
-      </Description>
-      <Type name="xs:string"/>
     </Item>
   </CommonElement>
   <CommonElement name="iepPlanPresentLevelPerformancePersonalEvaluationNeedsListType" type="true" dm="true">
@@ -360,24 +333,22 @@
       <Type ref="CommonTypes" name="iepCommonAccommodationType"/>
     </Item>
   </CommonElement>
-  <CommonElement name="string" type="true" dm="true">
+  <CommonElement name="fundingSourceType" type="true" dm="true">
     <Item>
-      <Element>string</Element>
+      <Element>fundingSourceType</Element>
     </Item>
     <Item>
-      <Attribute>codesetName</Attribute>
-      <Characteristics>O</Characteristics>
-      <Type ref="CommonTypes" name="otherCodeSimpleType"/>
-    </Item>
-    <Item>
-      <Element>otherCode</Element>
-      <Characteristics>OR</Characteristics>
-      <Type name="xs:string"/>
-    </Item>
-    <Item>
-      <Element>fundingSource</Element>
+      <Element>FundingSource</Element>
       <Characteristics>OR</Characteristics>
       <Type ref="CommonTypes" name="gCodedElementType"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
     </Item>
   </CommonElement>
   <CommonElement name="iepPlanAmendmentListAmendmentChangeListChangeType" type="true" dm="true">
@@ -471,7 +442,6 @@
       <Description>
         <p> History List of Transmit Permissions </p>
       </Description>
-      <Type complex="extension" name="iepTransmitPermissionType"/>
     </Item>
     <Item>
       <Element>transmitPermission</Element>
@@ -544,11 +514,10 @@
       <cedsURL>https://ceds.ed.gov/element/000279</cedsURL>
     </Item>
   </CommonElement>
-  <CommonElement name="roleSimpleType" type="true">
+  <CommonElement name="iepRoleType" type="true">
     <Item>
-      <Element>roleSimpleType</Element>
+      <Element>iepRoleType</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:normalizedString"/>
       <Values>
         <Value>
           <Code>PSYCH</Code>
@@ -596,7 +565,7 @@
       <Description>
         <p> Proved identity of report author </p>
       </Description>
-      <Type ref="CommonTypes" name="roleSimpleType"/>
+      <Type ref="CommonTypes" name="iepCommonAuthorizingPersonType"/>
     </Item>
     <Item>
       <Element>role</Element>
@@ -604,7 +573,7 @@
       <Description>
         <p> Professional occupation category or relationship to student </p>
       </Description>
-      <Type name="xs:string"/>
+      <Type ref="CommonTypes" name="iepRoleType"/>
     </Item>
     <Item>
       <Element>explanation</Element>
@@ -699,7 +668,7 @@
       <Description>
         <p> Current accommodation Category </p>
       </Description>
-      <Type name="xs:string"/>
+      <Type ref="CommonTypes" name="iepCategoryType"/>
     </Item>
     <Item>
       <Element>explanation</Element>
@@ -750,7 +719,7 @@
       <Description>
         <p> Category of achievement </p>
       </Description>
-      <Type name="xs:string"/>
+      <Type ref="CommonTypes" name="iepCategoryType"/>
     </Item>
     <Item>
       <Element>title</Element>
@@ -775,16 +744,6 @@
         <p> Explanation of when this achievement should take place </p>
       </Description>
       <Type name="xs:normalizedString"/>
-    </Item>
-  </CommonElement>
-  <CommonElement name="hexValueDashedSimpleType" type="true">
-    <Item>
-      <Element>hexValueDashedSimpleType</Element>
-      <Characteristics>O</Characteristics>
-      <Type name="xs:token"/>
-      <Facets>
-        <xs:pattern>[0-9A-F]{2}\-[0-9A-F]{2}\-[0-9A-F]{2}\-[0-9A-F]{2}</xs:pattern>
-      </Facets>
     </Item>
   </CommonElement>
   <CommonElement name="iepPlanPresentLevelPerformancePersonalEvaluationPersonalGoalsListType" type="true" dm="true">
@@ -837,7 +796,6 @@
       <Description>
         <p> List of previous IEPs and contact information for additional research. </p>
       </Description>
-      <Type complex="extension" name="tiepHistoryListItemType"/>
     </Item>
     <Item>
       <Element>historyItem</Element>
@@ -861,7 +819,6 @@
   <CommonElement name="xContactStudentRelationshipListType" type="true" dm="true">
     <Item>
       <Element>xContactStudentRelationshipListType</Element>
-      <Type complex="extension" name="xContactStudentRelationshipType"/>
     </Item>
     <Item>
       <Element>relationship</Element>
@@ -879,7 +836,7 @@
       <Description>
         <p> Academic subject affected by this issue </p>
       </Description>
-      <Type name="xs:string"/>
+      <Type ref="CommonTypes" name="academicSubjectSimpleType"/>
       <cedsId>001518</cedsId>
       <cedsURL>https://ceds.ed.gov/element/001518</cedsURL>
     </Item>
@@ -897,7 +854,7 @@
       <Description>
         <p> The particular ways that the disability interferes with academic attainment </p>
       </Description>
-      <Type ref="CommonTypes" name="typeSimpleType"/>
+      <Type name="xs:normalizedString"/>
     </Item>
     <Item>
       <Element>accommodation</Element>
@@ -924,7 +881,6 @@
       <Description>
         <p>A list of sessions.</p>
       </Description>
-      <Type complex="extension" name="xSessionType"/>
     </Item>
     <Item>
       <Element>sessionList</Element>
@@ -963,7 +919,7 @@
       <Description>
         <p> How the child's disability affects the child's functional performance. </p>
       </Description>
-      <Type ref="CommonTypes" name="categorySimpleType"/>
+      <Type name="xs:normalizedString"/>
       <cedsId>001706</cedsId>
       <cedsURL>https://ceds.ed.gov/element/001706</cedsURL>
     </Item>
@@ -973,11 +929,10 @@
       <Type ref="CommonTypes" name="iepPlanPresentLevelPerformanceFunctionalSummaryAccommodationListType"/>
     </Item>
   </CommonElement>
-  <CommonElement name="environmentForEarlyChildhoodSimpleType" type="true">
+  <CommonElement name="iepEnvironmentForEarlyChildhoodType" type="true">
     <Item>
-      <Element>environmentForEarlyChildhoodSimpleType</Element>
+      <Element>iepEnvironmentForEarlyChildhoodType</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:normalizedString"/>
       <Values>
         <Value>
           <Code>REC09YOTHLOC</Code>
@@ -1015,7 +970,6 @@
       <Description>
         <p> List of organizations referenced in the IEP </p>
       </Description>
-      <Type complex="extension" name="xOrganizationType"/>
     </Item>
     <Item>
       <Element>referenceOrganization</Element>
@@ -1099,12 +1053,12 @@
     <Item>
       <Attribute>refId</Attribute>
       <Characteristics>M</Characteristics>
-      <Type ref="CommonTypes" name="latitudeSimpleType"/>
+      <Type ref="CommonTypes" name="gRefIdType"/>
     </Item>
     <Item>
       <Element>gridLocation</Element>
       <Characteristics>O</Characteristics>
-      <Type ref="CommonTypes" name="codesetNameSimpleType"/>
+      <Type ref="CommonTypes" name="gridLocationType"/>
     </Item>
     <Item>
       <Element>localId</Element>
@@ -1127,7 +1081,7 @@
       <Description>
         <p>A second-order subdivision of the country, e.g. county, shire.</p>
       </Description>
-      <Type ref="CommonTypes" name="codesetNameSimpleType"/>
+      <Type name="xs:normalizedString"/>
     </Item>
     <Item>
       <Element>stateProvince</Element>
@@ -1135,12 +1089,12 @@
       <Description>
         <p>A first-order national subdivision of the country, e.g. state, province.</p>
       </Description>
-      <Type ref="CommonTypes" name="gStateProvinceType"/>
+      <Type name="xs:token"/>
     </Item>
     <Item>
       <Element>country</Element>
       <Characteristics>O</Characteristics>
-      <Type ref="CommonTypes" name="gCountryType"/>
+      <Type name="xs:token"/>
     </Item>
     <Item>
       <Element>postalCode</Element>
@@ -1157,7 +1111,6 @@
       <Description>
         <p> History List of Amendments to IEP </p>
       </Description>
-      <Type complex="extension" name="iepPlanAmendmentListAmendmentType"/>
     </Item>
     <Item>
       <Element>amendment</Element>
@@ -1165,11 +1118,10 @@
       <Type ref="CommonTypes" name="iepPlanAmendmentListAmendmentType"/>
     </Item>
   </CommonElement>
-  <CommonElement name="extendsSchoolYearSimpleType" type="true">
+  <CommonElement name="iepExtendsSchoolYearType" type="true">
     <Item>
-      <Element>extendsSchoolYearSimpleType</Element>
+      <Element>iepExtendsSchoolYearType</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:token"/>
       <Values>
         <Value>
           <Code>Yes</Code>
@@ -1231,7 +1183,7 @@
       <Description>
         <p>Pointer to xStaff when service provider is a staff member </p>
       </Description>
-      <Type ref="CommonTypes" name="roleSimpleType"/>
+      <Type ref="CommonTypes" name="iepCommonStaffRefIdPointerType"/>
     </Item>
     <Item>
       <Element>role</Element>
@@ -1239,16 +1191,15 @@
       <Description>
         <p> Titles of personnel employed and contracted to provide special education and related services for children with disabilities. </p>
       </Description>
-      <Type name="xs:string"/>
+      <Type ref="CommonTypes" name="iepRoleType"/>
       <cedsId>000558</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000558</cedsURL>
     </Item>
   </CommonElement>
-  <CommonElement name="lifecyclePurposeSimpleType" type="true">
+  <CommonElement name="iepLifecyclePurposeType" type="true">
     <Item>
-      <Element>lifecyclePurposeSimpleType</Element>
+      <Element>iepLifecyclePurposeType</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:normalizedString"/>
       <Values>
         <Value>
           <Code>Initial</Code>
@@ -1265,7 +1216,6 @@
       <Description>
         <p>A list of staff person assignments.</p>
       </Description>
-      <Type complex="extension" name="xStaffPersonAssignmentType"/>
     </Item>
     <Item>
       <Element>staffPersonAssignment</Element>
@@ -1283,12 +1233,12 @@
     <Item>
       <Element>personal</Element>
       <Characteristics>OR</Characteristics>
-      <Type ref="CommonTypes" name="academicSubjectSimpleType"/>
+      <Type ref="CommonTypes" name="iepPlanPresentLevelPerformancePersonalType"/>
     </Item>
     <Item>
       <Element>academic</Element>
       <Characteristics>OR</Characteristics>
-      <Type ref="CommonTypes" name="disabilityCodeListSimpleType"/>
+      <Type ref="CommonTypes" name="iepPlanPresentLevelPerformanceAcademicType"/>
     </Item>
     <Item>
       <Element>functional</Element>
@@ -1311,7 +1261,7 @@
       <Description>
         <p> A designation of the type of program developed for a student. </p>
       </Description>
-      <Type name="xs:string"/>
+      <Type ref="CommonTypes" name="iepProgramTypeType"/>
       <cedsId>000320</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000320</cedsURL>
     </Item>
@@ -1359,45 +1309,6 @@
         <p> The Uniform Resource Locator (URL) location of information about course content. </p>
       </Description>
       <Type name="xs:normalizedString"/>
-    </Item>
-  </CommonElement>
-  <CommonElement name="gCountryType" type="true" dm="true">
-    <Item>
-      <Element>gCountryType</Element>
-    </Item>
-    <Item>
-      <Attribute>codesetName</Attribute>
-      <Characteristics>M</Characteristics>
-      <Type name="xs:string"/>
-    </Item>
-    <Item>
-      <Element>code</Element>
-      <Characteristics>M</Characteristics>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Element>hexValue</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>As of version 3.4 hex values are not published with the code sets.</p>
-      </Description>
-      <Type name="xs:string"/>
-    </Item>
-    <Item>
-      <Element>hexValueDashed</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>This element is deprecated as of version 3.3 and should not be used.</p>
-      </Description>
-      <Type name="xs:string"/>
-    </Item>
-    <Item>
-      <Element>otherCodeList</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element. If Code changes and OtherCodes are supported, both Code and all associated OtherCode elements must be present.</p>
-      </Description>
-      <Type name="xs:string"/>
     </Item>
   </CommonElement>
   <CommonElement name="iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataValuesListDataValueType" type="true" dm="true">
@@ -1448,11 +1359,10 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-  <CommonElement name="environmentForSchoolAgeSimpleType" type="true">
+  <CommonElement name="iepEnvironmentForSchoolAgeType" type="true">
     <Item>
-      <Element>environmentForSchoolAgeSimpleType</Element>
+      <Element>iepEnvironmentForSchoolAgeType</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:normalizedString"/>
       <Values>
         <Value>
           <Code>RC80</Code>
@@ -1504,7 +1414,7 @@
       <Description>
         <p> How the child's disability affects the child's academic achievement. </p>
       </Description>
-      <Type ref="CommonTypes" name="categorySimpleType"/>
+      <Type name="xs:normalizedString"/>
       <cedsId>001705</cedsId>
       <cedsURL>https://ceds.ed.gov/element/001705</cedsURL>
     </Item>
@@ -1547,7 +1457,7 @@
       <Description>
         <p> Description of evaluation procedure and result used for determining eligibility. </p>
       </Description>
-      <Type ref="CommonTypes" name="typeSimpleType"/>
+      <Type name="xs:normalizedString"/>
       <cedsId>001730</cedsId>
       <cedsURL>https://ceds.ed.gov/element/001730</cedsURL>
     </Item>
@@ -1557,7 +1467,7 @@
       <Description>
         <p>Category of evaluation used for IDEA eligibility.</p>
       </Description>
-      <Type name="xs:string"/>
+      <Type ref="CommonTypes" name="iepTypeType"/>
       <cedsId>001729</cedsId>
       <cedsURL>https://ceds.ed.gov/element/001729</cedsURL>
     </Item>
@@ -1586,45 +1496,6 @@
         <p> Identity of person making the evaluation </p>
       </Description>
       <Type ref="CommonTypes" name="iepCommonServiceProviderType"/>
-    </Item>
-  </CommonElement>
-  <CommonElement name="gYearGroupType" type="true" dm="true">
-    <Item>
-      <Element>gYearGroupType</Element>
-    </Item>
-    <Item>
-      <Attribute>codesetName</Attribute>
-      <Characteristics>M</Characteristics>
-      <Type name="xs:string"/>
-    </Item>
-    <Item>
-      <Element>code</Element>
-      <Characteristics>M</Characteristics>
-      <Type ref="CommonTypes" name="hexValueSimpleType"/>
-    </Item>
-    <Item>
-      <Element>hexValue</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>As of version 3.4 hex values are not published with the code sets.</p>
-      </Description>
-      <Type ref="CommonTypes" name="hexValueDashedSimpleType"/>
-    </Item>
-    <Item>
-      <Element>hexValueDashed</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>This element is deprecated as of version 3.3 and should not be used.</p>
-      </Description>
-      <Type ref="CommonTypes" name="codesetNameSimpleType"/>
-    </Item>
-    <Item>
-      <Element>otherCodeList</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element. If Code changes and OtherCodes are supported, both Code and all associated OtherCode elements must be present.</p>
-      </Description>
-      <Type name="xs:string"/>
     </Item>
   </CommonElement>
   <CommonElement name="xMeetingTimeListType" type="true" dm="true">
@@ -3180,7 +3051,7 @@
       <Description>
         <p> The title or name of the assessment. </p>
       </Description>
-      <Type ref="CommonTypes" name="subjectSimpleType"/>
+      <Type name="xs:normalizedString"/>
       <cedsId>000028</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000028</cedsURL>
     </Item>
@@ -3190,7 +3061,7 @@
       <Description>
         <p> The topic category evaluated by this assessment </p>
       </Description>
-      <Type name="xs:string"/>
+      <Type ref="CommonTypes" name="iepSubjectType"/>
     </Item>
     <Item>
       <Element>url</Element>
@@ -3388,67 +3259,67 @@
       <Element>gStreetType</Element>
     </Item>
     <Item>
-      <Element>line1</Element>
+      <Element>Line1</Element>
       <Characteristics>M</Characteristics>
       <Type name="xs:normalizedString"/>
     </Item>
     <Item>
-      <Element>line2</Element>
+      <Element>Line2</Element>
       <Characteristics>O</Characteristics>
       <Type name="xs:normalizedString"/>
     </Item>
     <Item>
-      <Element>line3</Element>
+      <Element>Line3</Element>
       <Characteristics>O</Characteristics>
       <Type name="xs:normalizedString"/>
     </Item>
     <Item>
-      <Element>complex</Element>
+      <Element>Complex</Element>
       <Characteristics>O</Characteristics>
       <Type name="xs:normalizedString"/>
     </Item>
     <Item>
-      <Element>streetNumber</Element>
+      <Element>StreetNumber</Element>
       <Characteristics>O</Characteristics>
       <Type name="xs:token"/>
     </Item>
     <Item>
-      <Element>streetPrefix</Element>
+      <Element>StreetPrefix</Element>
       <Characteristics>O</Characteristics>
       <Type name="xs:token"/>
     </Item>
     <Item>
-      <Element>streetName</Element>
+      <Element>StreetName</Element>
       <Characteristics>O</Characteristics>
       <Type name="xs:normalizedString"/>
     </Item>
     <Item>
-      <Element>streetType</Element>
+      <Element>StreetType</Element>
       <Characteristics>O</Characteristics>
       <Type name="xs:token"/>
     </Item>
     <Item>
-      <Element>streetSuffix</Element>
+      <Element>StreetSuffix</Element>
       <Characteristics>O</Characteristics>
       <Type name="xs:token"/>
     </Item>
     <Item>
-      <Element>apartmentType</Element>
+      <Element>ApartmentType</Element>
       <Characteristics>O</Characteristics>
       <Type name="xs:token"/>
     </Item>
     <Item>
-      <Element>apartmentNumberPrefix</Element>
+      <Element>ApartmentNumberPrefix</Element>
       <Characteristics>O</Characteristics>
       <Type name="xs:token"/>
     </Item>
     <Item>
-      <Element>apartmentNumber</Element>
+      <Element>ApartmentNumber</Element>
       <Characteristics>O</Characteristics>
       <Type name="xs:token"/>
     </Item>
     <Item>
-      <Element>apartmentNumberSuffix</Element>
+      <Element>ApartmentNumberSuffix</Element>
       <Characteristics>O</Characteristics>
       <Type name="xs:token"/>
     </Item>
@@ -3581,12 +3452,6 @@
       <cedsURL>https://ceds.ed.gov/element/000121</cedsURL>
     </Item>
   </CommonElement>
-  <CommonElement name="parentAcceptanceSimpleType" type="true">
-    <Item>
-      <Element>parentAcceptanceSimpleType</Element>
-      <Characteristics>O</Characteristics>
-    </Item>
-  </CommonElement>
   <CommonElement name="gExitTypeType" type="true" dm="true">
     <Item>
       <Element>gExitTypeType</Element>
@@ -3657,7 +3522,7 @@
       <Description>
         <p> The setting in which children ages 6 through 21, receive special education and related services. </p>
       </Description>
-      <Type ref="CommonTypes" name="environmentForEarlyChildhoodSimpleType"/>
+      <Type ref="CommonTypes" name="iepEnvironmentForSchoolAgeType"/>
       <cedsId>000535</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000535</cedsURL>
     </Item>
@@ -3667,7 +3532,7 @@
       <Description>
         <p> The program in which children ages 3 through 5 attend and in which these children receive special education and related services. </p>
       </Description>
-      <Type name="xs:string"/>
+      <Type ref="CommonTypes" name="iepEnvironmentForEarlyChildhoodType"/>
       <cedsId>000559</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000559</cedsURL>
     </Item>
@@ -3675,16 +3540,16 @@
       <Element>placementRationale</Element>
       <Characteristics>O</Characteristics>
       <Description>
-        <p> The rationale for the placement decision and if applicable, an explanation of the extent, if any, to which the child will not participate with nondisabled children in the regular class and in the activities described in paragraph (a)(4) of CFR. &#167;300.320. </p>
+        <p> The rationale for the placement decision and if applicable, an explanation of the extent, if any, to which the child will not participate with nondisabled children in the regular class and in the activities described in paragraph (a)(4) of CFR. §300.320. </p>
       </Description>
-      <Type ref="CommonTypes" name="categorySimpleType"/>
+      <Type name="xs:normalizedString"/>
       <cedsId>001704</cedsId>
       <cedsURL>https://ceds.ed.gov/element/001704</cedsURL>
     </Item>
     <Item>
       <Element>scheduleModification</Element>
       <Characteristics>O</Characteristics>
-      <Type ref="CommonTypes" name="categorySimpleType"/>
+      <Type ref="CommonTypes" name="iepPlanPlacementScheduleModificationType"/>
     </Item>
     <Item>
       <Element>transportation</Element>
@@ -3719,7 +3584,7 @@
       <Description>
         <p> Indication parent agreed to evaluate student. </p>
       </Description>
-      <Type name="xs:string"/>
+      <Type ref="CommonTypes" name="acceptedSimpleType"/>
       <cedsId>001726</cedsId>
       <cedsURL>https://ceds.ed.gov/element/001726</cedsURL>
     </Item>
@@ -3761,12 +3626,6 @@
       <Element>transferPermissionList</Element>
       <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepTransmitPermissionListType"/>
-    </Item>
-  </CommonElement>
-  <CommonElement name="disabilityCodeListSimpleType" type="true">
-    <Item>
-      <Element>disabilityCodeListSimpleType</Element>
-      <Characteristics>O</Characteristics>
     </Item>
   </CommonElement>
   <CommonElement name="iepPlanAnnualGoalServicesListServiceFrequencyDurationType" type="true" dm="true">
@@ -3819,9 +3678,9 @@
       <Element>parentObservations</Element>
       <Characteristics>O</Characteristics>
       <Description>
-        <p> Explanation of parent's observations of student&#8217;s characteristics and history used for determining eligibility. </p>
+        <p> Explanation of parent's observations of student’s characteristics and history used for determining eligibility. </p>
       </Description>
-      <Type ref="CommonTypes" name="acceptedSimpleType"/>
+      <Type name="xs:normalizedString"/>
       <cedsId>001732</cedsId>
       <cedsURL>https://ceds.ed.gov/element/001732</cedsURL>
     </Item>
@@ -3848,123 +3707,12 @@
     <Item>
       <Element>curriculum</Element>
       <Characteristics>O</Characteristics>
-      <Type ref="CommonTypes" name="programTypeSimpleType"/>
+      <Type name="xs:normalizedString"/>
     </Item>
     <Item>
       <Element>specialCategoryList</Element>
       <Characteristics>OR</Characteristics>
       <Type ref="CommonTypes" name="iepPlanPresentLevelPerformanceConsequenceOfDisabilitySpecialCategoryListType"/>
-    </Item>
-  </CommonElement>
-  <CommonElement name="standardGradeLevelSimpleType" type="true">
-    <Item>
-      <Element>standardGradeLevelSimpleType</Element>
-      <Characteristics>O</Characteristics>
-      <Type name="xs:normalizedString"/>
-      <Values>
-        <Value>
-          <Code>IT</Code>
-        </Value>
-        <Value>
-          <Code>PR</Code>
-        </Value>
-        <Value>
-          <Code>PK</Code>
-        </Value>
-        <Value>
-          <Code>TK</Code>
-        </Value>
-        <Value>
-          <Code>KG</Code>
-        </Value>
-        <Value>
-          <Code>01</Code>
-        </Value>
-        <Value>
-          <Code>02</Code>
-        </Value>
-        <Value>
-          <Code>03</Code>
-        </Value>
-        <Value>
-          <Code>04</Code>
-        </Value>
-        <Value>
-          <Code>05</Code>
-        </Value>
-        <Value>
-          <Code>06</Code>
-        </Value>
-        <Value>
-          <Code>07</Code>
-        </Value>
-        <Value>
-          <Code>08</Code>
-        </Value>
-        <Value>
-          <Code>09</Code>
-        </Value>
-        <Value>
-          <Code>10</Code>
-        </Value>
-        <Value>
-          <Code>11</Code>
-        </Value>
-        <Value>
-          <Code>12</Code>
-        </Value>
-        <Value>
-          <Code>13</Code>
-        </Value>
-        <Value>
-          <Code>PS</Code>
-        </Value>
-        <Value>
-          <Code>UG</Code>
-        </Value>
-        <Value>
-          <Code>Other</Code>
-        </Value>
-      </Values>
-    </Item>
-  </CommonElement>
-  <CommonElement name="gStateProvinceType" type="true" dm="true">
-    <Item>
-      <Element>gStateProvinceType</Element>
-    </Item>
-    <Item>
-      <Attribute>codesetName</Attribute>
-      <Characteristics>M</Characteristics>
-      <Type name="xs:string"/>
-    </Item>
-    <Item>
-      <Element>code</Element>
-      <Characteristics>M</Characteristics>
-      <Type ref="CommonTypes" name="hexValueSimpleType"/>
-    </Item>
-    <Item>
-      <Element>hexValue</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>As of version 3.4 hex values are not published with the code sets.</p>
-      </Description>
-      <Type ref="CommonTypes" name="hexValueDashedSimpleType"/>
-    </Item>
-    <Item>
-      <Element>hexValueDashed</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>This element is deprecated as of version 3.3 and should not be used.</p>
-      </Description>
-      <Type ref="CommonTypes" name="codesetNameSimpleType"/>
-    </Item>
-    <Item>
-      <Element>otherCodeList</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element. If Code changes and OtherCodes are supported, both Code and all associated OtherCode elements must be present.</p>
-      </Description>
-      <Type name="xs:string"/>
     </Item>
   </CommonElement>
   <CommonElement name="xRosterType" type="true" dm="true">
@@ -4162,7 +3910,7 @@
       <Description>
         <p> Type of related or ancillary services provided to a person or a group of persons within the formal educational system or offered by an outside agency which provides non-instructional services to support the general welfare of students. This includes physical and emotional health, the ability to select an appropriate course of study, admission to appropriate educational programs, and the ability to adjust to and remain in school through the completion of programs. In serving a student with an identified disability, related services include developmental, corrective, or supportive services required to ensure that the person benefits from special education. </p>
       </Description>
-      <Type ref="CommonTypes" name="inclusiveSettingIndicatorSimpleType"/>
+      <Type ref="CommonTypes" name="iepTypeType"/>
       <cedsId>000273</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000273</cedsURL>
     </Item>
@@ -4172,7 +3920,7 @@
       <Description>
         <p> Indicates that services are provided to the child in a place where children of all abilities learn together. </p>
       </Description>
-      <Type name="xs:string"/>
+      <Type ref="CommonTypes" name="iepInclusiveSettingIndicatorType"/>
       <cedsId>001634</cedsId>
       <cedsURL>https://ceds.ed.gov/element/001634</cedsURL>
     </Item>
@@ -4212,7 +3960,7 @@
       <Description>
         <p> The reason given for declining the recommended services. </p>
       </Description>
-      <Type ref="CommonTypes" name="extendsSchoolYearSimpleType"/>
+      <Type name="xs:normalizedString"/>
       <cedsId>001488</cedsId>
       <cedsURL>https://ceds.ed.gov/element/001488</cedsURL>
     </Item>
@@ -4222,7 +3970,7 @@
       <Description>
         <p> Determination if this service continues outside school year. </p>
       </Description>
-      <Type name="xs:string"/>
+      <Type ref="CommonTypes" name="iepExtendsSchoolYearType"/>
       <cedsId>001717</cedsId>
       <cedsURL>https://ceds.ed.gov/element/001717</cedsURL>
     </Item>
@@ -4408,7 +4156,7 @@
       <Description>
         <p> The description of the place where an assessment is administered. </p>
       </Description>
-      <Type ref="CommonTypes" name="categorySimpleType"/>
+      <Type name="xs:string"/>
       <cedsId>000597</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000597</cedsURL>
     </Item>
@@ -4418,7 +4166,7 @@
       <Description>
         <p> A category of accommodations needed for a given assessment. </p>
       </Description>
-      <Type name="xs:string"/>
+      <Type ref="CommonTypes" name="iepCategoryType"/>
       <cedsId>000383</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000383</cedsURL>
     </Item>
@@ -4428,7 +4176,7 @@
       <Description>
         <p> Explanation for choice of other or information refining category selection. </p>
       </Description>
-      <Type ref="CommonTypes" name="typeSimpleType"/>
+      <Type name="xs:normalizedString"/>
     </Item>
     <Item>
       <Element>achievementStandard</Element>
@@ -4446,7 +4194,7 @@
       <Description>
         <p> The percent of correct results that will be considered to represent successful achievement of a goal. </p>
       </Description>
-      <Type name="xs:string"/>
+      <Type ref="CommonTypes" name="accuracyPercentEvaluationSimpleType"/>
       <cedsId>001691</cedsId>
       <cedsURL>https://ceds.ed.gov/element/001691</cedsURL>
     </Item>
@@ -4503,11 +4251,10 @@
       <Type ref="CommonTypes" name="gUUIDType"/>
     </Item>
   </CommonElement>
-  <CommonElement name="periodSimpleType" type="true">
+  <CommonElement name="iepPeriodType" type="true">
     <Item>
-      <Element>periodSimpleType</Element>
+      <Element>iepPeriodType</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:normalizedString"/>
       <Values>
         <Value>
           <Code>day</Code>
@@ -4583,11 +4330,10 @@
       <cedsURL>https://ceds.ed.gov/element/000826</cedsURL>
     </Item>
   </CommonElement>
-  <CommonElement name="statusSimpleType" type="true">
+  <CommonElement name="iepStatusType" type="true">
     <Item>
-      <Element>statusSimpleType</Element>
+      <Element>iepStatusType</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:normalizedString"/>
       <Values>
         <Value>
           <Code>SatisfactoryProgress</Code>
@@ -4662,7 +4408,6 @@
   <CommonElement name="tiepHistoryListItemType" type="true" dm="true">
     <Item>
       <Element>tiepHistoryListItemType</Element>
-      <Type complex="extension" name="iepCommonLeaRefIdPointerType"/>
     </Item>
     <Item>
       <Element>lea</Element>
@@ -4784,11 +4529,10 @@
       <Type ref="CommonTypes" name="xEnrollmentType"/>
     </Item>
   </CommonElement>
-  <CommonElement name="inclusiveSettingIndicatorSimpleType" type="true">
+  <CommonElement name="iepInclusiveSettingIndicatorType" type="true">
     <Item>
-      <Element>inclusiveSettingIndicatorSimpleType</Element>
+      <Element>iepInclusiveSettingIndicatorType</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:normalizedString"/>
       <Values>
         <Value>
           <Code>Yes</Code>
@@ -4838,6 +4582,29 @@
       <Type name="xs:string"/>
     </Item>
   </CommonElement>
+  <CommonElement name="iepPlanAnnualGoalProgressReportListProgressReportMeasurementType" type="true" dm="true">
+    <Item>
+      <Element>iepPlanAnnualGoalProgressReportListProgressReportMeasurementType</Element>
+    </Item>
+    <Item>
+      <Element>explanation</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p> Explanation of measurement process and importance of data that was measured. </p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>dataNames</Element>
+      <Characteristics>O</Characteristics>
+      <Type ref="CommonTypes" name="iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataNamesType"/>
+    </Item>
+    <Item>
+      <Element>dataValuesList</Element>
+      <Characteristics>OR</Characteristics>
+      <Type ref="CommonTypes" name="iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataValuesListType"/>
+    </Item>
+  </CommonElement>
   <CommonElement name="iepPlanAnnualGoalProgressReportListProgressReportType" type="true" dm="true">
     <Item>
       <Element>iepPlanAnnualGoalProgressReportListProgressReportType</Element>
@@ -4846,7 +4613,7 @@
       <Element>description</Element>
       <Characteristics>O</Characteristics>
       <Description>
-        <p> A description of the progress made toward achievement of the student&#8217;s progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan. </p>
+        <p> A description of the progress made toward achievement of the student’s progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan. </p>
       </Description>
       <Type name="xs:normalizedString"/>
       <cedsId>001700</cedsId>
@@ -4855,7 +4622,7 @@
     <Item>
       <Element>measurement</Element>
       <Characteristics>OR</Characteristics>
-      <Type ref="CommonTypes" name="statusSimpleType"/>
+      <Type ref="CommonTypes" name="iepPlanAnnualGoalProgressReportListProgressReportMeasurementType"/>
     </Item>
     <Item>
       <Element>status</Element>
@@ -4863,7 +4630,7 @@
       <Description>
         <p> Status toward achievement of the annual goal or short-term objectives. </p>
       </Description>
-      <Type name="xs:string"/>
+      <Type ref="CommonTypes" name="iepStatusType"/>
       <cedsId>001702</cedsId>
       <cedsURL>https://ceds.ed.gov/element/001702</cedsURL>
     </Item>
@@ -4879,7 +4646,7 @@
       <Element>date</Element>
       <Characteristics>O</Characteristics>
       <Description>
-        <p> The date parents are notified of the student&#8217;s progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan. </p>
+        <p> The date parents are notified of the student’s progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan. </p>
       </Description>
       <Type name="xs:date"/>
       <cedsId>001699</cedsId>
@@ -5095,7 +4862,7 @@
       <Description>
         <p> Current accommodation Category </p>
       </Description>
-      <Type name="xs:string"/>
+      <Type ref="CommonTypes" name="iepCategoryType"/>
     </Item>
     <Item>
       <Element>explanation</Element>
@@ -5154,6 +4921,22 @@
       <cedsURL>https://ceds.ed.gov/element/001724</cedsURL>
     </Item>
   </CommonElement>
+  <CommonElement name="iepPlanAnnualGoalIndependentActionsListType" type="true" dm="true">
+    <Item>
+      <Element>iepPlanAnnualGoalIndependentActionsListType</Element>
+      <Description>
+        <p> Activities or actions to be accomplished outside of a service context </p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>independentAction</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p> Activity or action to be accomplished outside of a service context </p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+  </CommonElement>
   <CommonElement name="iepPlanAnnualGoalType" type="true" dm="true">
     <Item>
       <Element>iepPlanAnnualGoalType</Element>
@@ -5164,7 +4947,7 @@
       <Description>
         <p> Description of status toward achievement of the annual goal or short-term objectives. </p>
       </Description>
-      <Type ref="CommonTypes" name="categorySimpleType"/>
+      <Type name="xs:normalizedString"/>
       <cedsId>001703</cedsId>
       <cedsURL>https://ceds.ed.gov/element/001703</cedsURL>
     </Item>
@@ -5181,7 +4964,7 @@
     <Item>
       <Element>independentActionsList</Element>
       <Characteristics>OR</Characteristics>
-      <Type ref="CommonTypes" name="typeSimpleType"/>
+      <Type ref="CommonTypes" name="iepPlanAnnualGoalIndependentActionsListType"/>
     </Item>
     <Item>
       <Element>servicesList</Element>
@@ -5196,7 +4979,7 @@
     <Item>
       <Element>progressReportList</Element>
       <Characteristics>OR</Characteristics>
-      <Type ref="CommonTypes" name="acceptedSimpleType"/>
+      <Type ref="CommonTypes" name="iepPlanAnnualGoalProgressReportListType"/>
     </Item>
     <Item>
       <Element>parentAcceptance</Element>
@@ -5217,7 +5000,7 @@
       <Description>
         <p> The procedures and/or instruments that will be used to measure achievement of a goal or short-term objective. </p>
       </Description>
-      <Type ref="CommonTypes" name="accuracyPercentEvaluationSimpleType"/>
+      <Type name="xs:normalizedString"/>
       <cedsId>001695</cedsId>
       <cedsURL>https://ceds.ed.gov/element/001695</cedsURL>
     </Item>
@@ -5282,7 +5065,7 @@
       <Description>
         <p> Indicates authorizer agreement to a document or plan, such as plan for delivery of student services, program, or improvement plan. </p>
       </Description>
-      <Type name="xs:string"/>
+      <Type ref="CommonTypes" name="iepAcceptedType"/>
       <cedsId>001721</cedsId>
       <cedsURL>https://ceds.ed.gov/element/001721</cedsURL>
     </Item>
@@ -5414,11 +5197,10 @@
       <Type ref="CommonTypes" name="iepPlanAccommodationsListAccommodationApplicabiltyListType"/>
     </Item>
   </CommonElement>
-  <CommonElement name="eligibleSimpleType" type="true">
+  <CommonElement name="iepEligibleType" type="true">
     <Item>
-      <Element>eligibleSimpleType</Element>
+      <Element>iepEligibleType</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:token"/>
       <Values>
         <Value>
           <Code>Yes</Code>
@@ -5747,7 +5529,7 @@
       <Element>gLocalIdType</Element>
     </Item>
     <Item>
-      <Element>idType</Element>
+      <Element>IdType</Element>
       <Characteristics>O</Characteristics>
       <Type name="xs:token"/>
     </Item>
@@ -5760,16 +5542,15 @@
       <Type name="xs:token"/>
     </Item>
     <Item>
-      <Element>idValue</Element>
+      <Element>IdValue</Element>
       <Characteristics>M</Characteristics>
       <Type name="xs:string"/>
     </Item>
   </CommonElement>
-  <CommonElement name="typeSimpleType" type="true">
+  <CommonElement name="iepTypeType" type="true">
     <Item>
-      <Element>typeSimpleType</Element>
+      <Element>iepTypeType</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:normalizedString"/>
       <Values>
         <Value>
           <Code>Academic Achievement</Code>
@@ -5881,17 +5662,10 @@
       <Type ref="CommonTypes" name="iepEligibilityIdeaDisabilityDecisionsType"/>
     </Item>
   </CommonElement>
-  <CommonElement name="idValueSimpleType" type="true">
+  <CommonElement name="iepAcceptedType" type="true">
     <Item>
-      <Element>idValueSimpleType</Element>
+      <Element>iepAcceptedType</Element>
       <Characteristics>O</Characteristics>
-    </Item>
-  </CommonElement>
-  <CommonElement name="acceptedSimpleType" type="true">
-    <Item>
-      <Element>acceptedSimpleType</Element>
-      <Characteristics>O</Characteristics>
-      <Type name="xs:normalizedString"/>
       <Values>
         <Value>
           <Code>Yes</Code>
@@ -5902,17 +5676,10 @@
       </Values>
     </Item>
   </CommonElement>
-  <CommonElement name="otherCodeSimpleType" type="true">
+  <CommonElement name="iepProgramTypeType" type="true">
     <Item>
-      <Element>otherCodeSimpleType</Element>
+      <Element>iepProgramTypeType</Element>
       <Characteristics>O</Characteristics>
-    </Item>
-  </CommonElement>
-  <CommonElement name="programTypeSimpleType" type="true">
-    <Item>
-      <Element>programTypeSimpleType</Element>
-      <Characteristics>O</Characteristics>
-      <Type name="xs:normalizedString"/>
       <Values>
         <Value>
           <Code>05978</Code>
@@ -5975,15 +5742,47 @@
       <cedsURL>https://ceds.ed.gov/element/000055</cedsURL>
     </Item>
   </CommonElement>
+  <CommonElement name="effectivePeriodType" type="true" dm="true">
+    <Item>
+      <Element>effectivePeriodType</Element>
+    </Item>
+    <Item>
+      <Element>start</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p> The year, month and day on which the status of the service plan for a child is established or significantly altered. </p>
+      </Description>
+      <Type name="xs:date"/>
+      <cedsId>001236</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/1236</cedsURL>
+    </Item>
+    <Item>
+      <Element>end</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p> The year, month and day on which the status of the service plan for a child effectively ends. </p>
+      </Description>
+      <Type name="xs:date"/>
+      <cedsId>001683</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001683</cedsURL>
+    </Item>
+    <Item>
+      <Element>evaluationDate</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p> Evaluation Date </p>
+      </Description>
+      <Type name="xs:date"/>
+    </Item>
+  </CommonElement>  
   <CommonElement name="iepPlanType" type="true" dm="true">
     <Item>
       <Element>iepPlanType</Element>
-      <Type complex="extension" name="standardGradeLevelSimpleType"/>
     </Item>
     <Item>
       <Element>effectivePeriod</Element>
       <Characteristics>OR</Characteristics>
-      <Type ref="CommonTypes" name="standardGradeLevelSimpleType"/>
+      <Type ref="CommonTypes" name="effectivePeriodType"/>
     </Item>
     <Item>
       <Element>enrollmentGradeLevel</Element>
@@ -6008,7 +5807,7 @@
     <Item>
       <Element>standardizedAssessmentResultList</Element>
       <Characteristics>OR</Characteristics>
-      <Type ref="CommonTypes" name="environmentForSchoolAgeSimpleType"/>
+      <Type ref="CommonTypes" name="iepPlanStandardizedAssessmentResultListType"/>
     </Item>
     <Item>
       <Element>placement</Element>
@@ -6101,6 +5900,35 @@
       <cedsURL>https://ceds.ed.gov/element/000214</cedsURL>
     </Item>
   </CommonElement>
+  <CommonElement name="iepTransmitPermissionDestinationType" type="true" dm="true">
+    <Item>
+        <Element>iepTransmitPermissionDestinationType</Element>
+    </Item>
+    <Item>
+        <Element>lea</Element>
+        <Characteristics>O</Characteristics>
+        <Description>
+            <p>Pointer to school district or other Local Educational Agency that needs access to IEP</p>
+        </Description>
+        <Type ref="CommonTypes" name="iepCommonLeaRefIdPointerType"/>
+    </Item>
+    <Item>
+        <Element>serviceProvider</Element>
+        <Characteristics>O</Characteristics>
+        <Description>
+            <p>Service provider that needs access to IEP</p>
+        </Description>
+        <Type ref="CommonTypes" name="iepCommonServiceProviderType"/>
+    </Item>
+    <Item>
+        <Element>other</Element>
+        <Characteristics>O</Characteristics>
+        <Description>
+            <p>Other person or organization (eg, court, prison, government) that needs access to IEP</p>
+        </Description>
+        <Type ref="CommonTypes" name="iepCommonExternalPartyType"/>
+    </Item>        
+  </CommonElement>
   <CommonElement name="iepTransmitPermissionType" type="true" dm="true">
     <Item>
       <Element>iepTransmitPermissionType</Element>
@@ -6129,7 +5957,7 @@
     <Item>
       <Element>destination</Element>
       <Characteristics>O</Characteristics>
-      <Type ref="CommonTypes" name="standardPurposeSimpleType"/>
+      <Type ref="CommonTypes" name="iepTransmitPermissionDestinationType"/>
     </Item>
     <Item>
       <Element>purpose</Element>
@@ -6160,7 +5988,7 @@
       <Description>
         <p> Explanation of what the student wants to accomplish in life </p>
       </Description>
-      <Type ref="CommonTypes" name="categorySimpleType"/>
+      <Type name="xs:normalizedString"/>
     </Item>
     <Item>
       <Element>desiredOutcomeList</Element>
@@ -6222,11 +6050,10 @@
       <Type name="xs:normalizedString"/>
     </Item>
   </CommonElement>
-  <CommonElement name="categorySimpleType" type="true">
+  <CommonElement name="iepCategoryType" type="true">
     <Item>
-      <Element>categorySimpleType</Element>
+      <Element>iepCategoryType</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:normalizedString"/>
       <Values>
         <Value>
           <Code>IndependentLiving</Code>
@@ -6240,6 +6067,19 @@
       </Values>
     </Item>
   </CommonElement>
+  <CommonElement name="iepEligibilityParticipantReportListType" type="true" dm="true">
+    <Item>
+      <Element>iepEligibilityParticipantReportListType</Element>
+      <Description>
+        <p> Documentation produced by people who have participated in the eligibility determination </p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>participantReport</Element>
+      <Characteristics>O</Characteristics>
+      <Type ref="CommonTypes" name="iepEligibilityParticipantReportListParticipantReportType"/>
+    </Item>
+  </CommonElement>  
   <CommonElement name="iepEligibilityType" type="true" dm="true">
     <Item>
       <Element>iepEligibilityType</Element>
@@ -6252,7 +6092,7 @@
     <Item>
       <Element>evaluationResultList</Element>
       <Characteristics>OR</Characteristics>
-      <Type ref="CommonTypes" name="disabilityCodeListSimpleType"/>
+      <Type ref="CommonTypes" name="iepEligibilityEvaluationResultListType"/>
     </Item>
     <Item>
       <Element>ideaDisability</Element>
@@ -6262,7 +6102,7 @@
     <Item>
       <Element>eligibilityParticipantReportList</Element>
       <Characteristics>OR</Characteristics>
-      <Type ref="CommonTypes" name="lifecyclePurposeSimpleType"/>
+      <Type ref="CommonTypes" name="iepEligibilityParticipantReportListType"/>
     </Item>
     <Item>
       <Element>lifecyclePurpose</Element>
@@ -6270,7 +6110,7 @@
       <Description>
         <p>Purpose within the IEP lifecycle for which the eligibility evaluation is conducted.</p>
       </Description>
-      <Type name="xs:string"/>
+      <Type ref="CommonTypes" name="iepLifecyclePurposeType"/>
       <cedsId>001728</cedsId>
       <cedsURL>https://ceds.ed.gov/element/001728</cedsURL>
     </Item>
@@ -6321,7 +6161,7 @@
       <Description>
         <p> The number of service events in a service repetition period. </p>
       </Description>
-      <Type ref="CommonTypes" name="periodSimpleType"/>
+      <Type name="xs:integer"/>
     </Item>
     <Item>
       <Element>period</Element>
@@ -6329,7 +6169,7 @@
       <Description>
         <p> The period in which the service events must be repeated. </p>
       </Description>
-      <Type name="xs:string"/>
+      <Type ref="CommonTypes" name="iepPeriodType"/>
     </Item>
   </CommonElement>
   <CommonElement name="xApplicableEducationLevelListType" type="true" dm="true">
@@ -6350,11 +6190,10 @@
       <cedsURL>https://ceds.ed.gov/element/001301</cedsURL>
     </Item>
   </CommonElement>
-  <CommonElement name="subjectSimpleType" type="true">
+  <CommonElement name="iepSubjectType" type="true">
     <Item>
-      <Element>subjectSimpleType</Element>
+      <Element>iepSubjectType</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:normalizedString"/>
       <Values>
         <Value>
           <Code>Reading</Code>
@@ -6517,7 +6356,7 @@
       <Description>
         <p> Intended purpose for sending the IEP </p>
       </Description>
-      <Type name="xs:string"/>
+      <Type ref="CommonTypes" name="iepStandardPurposeType"/>
     </Item>
     <Item>
       <Element>otherPurpose</Element>
@@ -6538,7 +6377,7 @@
       <Description>
         <p> Indicator if special standard is required </p>
       </Description>
-      <Type name="xs:string"/>
+      <Type ref="CommonTypes" name="iepTypeType"/>
     </Item>
     <Item>
       <Element>name</Element>
@@ -6547,139 +6386,6 @@
         <p> Name of alternative standard </p>
       </Description>
       <Type name="xs:normalizedString"/>
-    </Item>
-  </CommonElement>
-  <CommonElement name="studentProgramAssociationType" type="true" dm="true">
-    <Item>
-      <Element>studentProgramAssociationType</Element>
-      <Description>
-        <p>A person associated with an organization. An organization includes instructional organizations such as class.</p>
-      </Description>
-    </Item>
-    <Item>
-      <Attribute>refId</Attribute>
-      <Characteristics>M</Characteristics>
-      <Type ref="CommonTypes" name="gRefIdType"/>
-    </Item>
-    <Item>
-      <Element>studentRefId</Element>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>The Id (UUID) of the student to whom this information is linked.</p>
-      </Description>
-      <Type ref="CommonTypes" name="gRefIdPointerType"/>
-    </Item>
-    <Item>
-      <Element>programRefId</Element>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>The Id (GUID) of the program to which this enrollment applies.</p>
-      </Description>
-      <Type ref="CommonTypes" name="gRefIdPointerType"/>
-    </Item>
-    <Item>
-      <Element>schoolYear</Element>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>School year for which this enrollment is applicable, expressed as the four-digit year in which the school year ends (e.g. 2007 for the 2006-07 school year). StudentSchoolEnrollment instances must not span multiple school years.</p>
-      </Description>
-      <Type name="xs:gYear"/>
-    </Item>
-    <Item>
-      <Element>entryDate</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The date from when this enrollment is valid.</p>
-      </Description>
-      <Type ref="CommonTypes" name="codesetNameSimpleType"/>
-    </Item>
-    <Item>
-      <Element>entryType</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Code indicating the type of entry for this enrollment.</p>
-      </Description>
-      <Type ref="CommonTypes" name="codesetNameSimpleType"/>
-    </Item>
-    <Item>
-      <Element>yearGroup</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Grade or academic level of student for this enrollment.</p>
-      </Description>
-      <Type ref="CommonTypes" name="gYearGroupType"/>
-    </Item>
-    <Item>
-      <Element>exitDate</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The last school calendar day of this enrollment. If the student has exited the school or the enrollment has a RecordClosureReason, ExitDate must have a value.</p>
-      </Description>
-      <Type name="xs:date"/>
-    </Item>
-    <Item>
-      <Element>exitStatus</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Code indicating the closure status for this enrollment.</p>
-      </Description>
-      <Type ref="CommonTypes" name="gExitStatusType"/>
-    </Item>
-    <Item>
-      <Element>exitType</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Code indicating the type of exit for this enrollment.</p>
-      </Description>
-      <Type ref="CommonTypes" name="gExitTypeType"/>
-    </Item>
-    <Item>
-      <Element>fte</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Full-time equivalent numeric value of the student's program load during this enrollment, expressed in decimal form, where 1.00 represents a full-time enrollment.</p>
-      </Description>
-      <Type ref="CommonTypes" name="gFractionDecimal"/>
-    </Item>
-    <Item>
-      <Element>ftptStatus</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>An indication of whether the student is enrolled full time or part time.</p>
-      </Description>
-      <Type ref="CommonTypes" name="gFullTimeStatusType"/>
-    </Item>
-    <Item>
-      <Element>placementType</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Provides additional detail concerning enrollment in the program, e.g., Resident, State Placed.</p>
-      </Description>
-      <Type ref="CommonTypes" name="gCodedElementType"/>
-    </Item>
-    <Item>
-      <Element>managingSchoolLocalId</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Managing school for this student in the program. Overrides the value in program object.</p>
-      </Description>
-      <Type ref="CommonTypes" name="gLocalIdType"/>
-    </Item>
-    <Item>
-      <Element>managingSchoolRefId</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>SIF RefId for the managing school. Overrides the value in the program object.</p>
-      </Description>
-      <Type ref="CommonTypes" name="gRefIdPointerType"/>
-    </Item>
-    <Item>
-      <Element>fundingSourceList</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Student-specific funding sources for the student in the program.</p>
-      </Description>
-      <Type name="xs:string"/>
     </Item>
   </CommonElement>
   <CommonElement name="iepPlanAnnualGoalMeasurableObjectiveMeasurementCriterionMetricTrialCountEvaluationType" type="true" dm="true">
@@ -6907,6 +6613,27 @@
       <Type name="xs:decimal"/>
     </Item>
   </CommonElement>
+  <CommonElement name="gridLocationType" type="true" dm="true">
+    <Item>
+      <Element>gridLocationType</Element>
+    </Item>
+    <Item>
+      <Element>Latitude</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Latitude in decimal degrees.</p>
+      </Description>
+      <Type ref="CommonTypes" name="latitudeSimpleType"/>
+    </Item>
+    <Item>
+      <Element>Longitude</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Longitude in decimal degrees.</p>
+      </Description>
+      <Type ref="CommonTypes" name="longitudeSimpleType"/>
+    </Item>
+  </CommonElement>
   <CommonElement name="iepEligibilityIdeaDisabilitySpecificLearningDisabilitySpecialDiagnosisJustificationsPrimaryCauseExclusionsType" type="true" dm="true">
     <Item>
       <Element>iepEligibilityIdeaDisabilitySpecificLearningDisabilitySpecialDiagnosisJustificationsPrimaryCauseExclusionsType</Element>
@@ -7050,6 +6777,27 @@
       <Type name="xs:boolean"/>
     </Item>
   </CommonElement>
+  <CommonElement name="iepPlanPlacementTransportationOutsideSchoolType" type="true" dm="true">
+    <Item>
+      <Element>iepPlanPlacementTransportationOutsideSchoolType</Element>
+    </Item>
+    <Item>
+      <Element>category</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p> Annotation of whether special transportation is needed </p>
+      </Description>
+      <Type ref="CommonTypes" name="iepCategoryType"/>
+    </Item>
+    <Item>
+      <Element>explanation</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p> Explanation of the particular accommodation(s) needed </p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+  </CommonElement>  
   <CommonElement name="iepPlanPlacementTransportationType" type="true" dm="true">
     <Item>
       <Element>iepPlanPlacementTransportationType</Element>
@@ -7057,7 +6805,7 @@
     <Item>
       <Element>outsideSchool</Element>
       <Characteristics>O</Characteristics>
-      <Type ref="CommonTypes" name="categorySimpleType"/>
+      <Type ref="CommonTypes" name="iepPlanPlacementTransportationOutsideSchoolType"/>
     </Item>
     <Item>
       <Element>insideSchool</Element>
@@ -7328,7 +7076,6 @@
       <Description>
         <p>A list of languages.</p>
       </Description>
-      <Type complex="extension" name="xLanguageType"/>
     </Item>
     <Item>
       <Element>language</Element>
@@ -7339,22 +7086,6 @@
       <Type ref="CommonTypes" name="xLanguageType"/>
       <cedsId>000317</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000317</cedsURL>
-    </Item>
-  </CommonElement>
-  <CommonElement name="codesetNameSimpleType" type="true">
-    <Item>
-      <Element>codesetNameSimpleType</Element>
-      <Characteristics>O</Characteristics>
-    </Item>
-  </CommonElement>
-  <CommonElement name="hexValueSimpleType" type="true">
-    <Item>
-      <Element>hexValueSimpleType</Element>
-      <Characteristics>O</Characteristics>
-      <Type name="xs:hexBinary"/>
-      <Facets>
-        <xs:length value="4"/>
-      </Facets>
     </Item>
   </CommonElement>
   <CommonElement name="iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultType" type="true" dm="true">
@@ -7616,7 +7347,6 @@
     <Item>
       <Element>academicSubjectSimpleType</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:normalizedString"/>
       <Values>
         <Value>
           <Code>01</Code>
@@ -7789,7 +7519,6 @@
     <Item>
       <Element>otherStaff</Element>
       <Characteristics>OR</Characteristics>
-      <Type ref="CommonTypes" name="xStaffReferenceType"/>
     </Item>
   </CommonElement>
   <CommonElement name="xMeetingTimeType" type="true" dm="true">
