@@ -2246,6 +2246,64 @@ xmlns="http://sifassociation.org/SpecGen">
     </Values>
   </CodeSet>
 
+  <CodeSet>
+    <ID>Disability</ID>
+    <Values>
+      <Value>
+        <Code>AUT</Code>
+        <Text>Autism</Text>
+      </Value>
+      <Value>
+        <Code>DB</Code>
+        <Text>Deaf-blindness</Text>
+      </Value>
+      <Value>
+        <Code>DD</Code>
+        <Text>Developmental delay</Text>
+      </Value>
+      <Value>
+        <Code>EMN</Code>
+        <Text>Emotional disturbance</Text>
+      </Value>
+      <Value>
+        <Code>HI</Code>
+        <Text>Hearing impairment</Text>
+      </Value>
+      <Value>
+        <Code>ID</Code>
+        <Text>Intellectual Disability</Text>
+      </Value>
+      <Value>
+        <Code>MD</Code>
+        <Text>Multiple disabilities</Text>
+      </Value>
+      <Value>
+        <Code>OI</Code>
+        <Text>Orthopedic impairment</Text>
+      </Value>
+      <Value>
+        <Code>OHI</Code>
+        <Text>Other health impairment</Text>
+      </Value>
+      <Value>
+        <Code>SLD</Code>
+        <Text>Specific learning disability</Text>
+      </Value>
+      <Value>
+        <Code>SLI</Code>
+        <Text>Speech or language impairment</Text>
+      </Value>
+      <Value>
+        <Code>TBI</Code>
+        <Text>Traumatic brain injury</Text>
+      </Value>
+      <Value>
+        <Code>VI</Code>
+        <Text>Visual impairment</Text>
+      </Value>
+    </Values>
+  </CodeSet>
+
 </Grouping>
 
 <Grouping code="LearningStandardItem" name="LearningStandardItem" file="no">

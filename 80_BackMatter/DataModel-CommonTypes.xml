@@ -2064,6 +2064,14 @@
       <Type ref="CommonTypes" name="AddressType"/>
     </Item>
     <Item>
+      <Element>AddressRefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Reference to an address.</p>
+      </Description>
+      <Type ref="CommonTypes" name="gRefIdPointerType"/>
+    </Item>     
+    <Item>
       <Element>EmailList</Element>
       <Characteristics>O</Characteristics>
       <Description>

@@ -92,6 +92,14 @@
     <Type ref="CommonTypes" name="AddressListType"/>
   </Item>
   <Item>
+    <Element>AddressRefIdList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>References to separate potentially reusable, shared, or pre-verified addresses.</p>
+    </Description>    
+    <Type ref="CommonTypes" name="AddressRefIdListType"/>
+  </Item>  
+  <Item>
     <Element>PhoneNumberList</Element>
     <Characteristics>O</Characteristics>
     <Description>
