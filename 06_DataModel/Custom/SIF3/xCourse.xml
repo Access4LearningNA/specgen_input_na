@@ -115,4 +115,21 @@
     <cedsId>001518</cedsId>
     <cedsURL>https://ceds.ed.gov/element/001518</cedsURL>
   </Item>
+  <xhtml:Example xmlns="">
+    <xCourse refId="0B629B89-B1A0-42D2-B912-5F6A325C98AA">
+      <schoolRefId>66667705-6C51-4C30-A22A-77CEA0FBCF53</schoolRefId>
+      <otherIds>
+        <otherId>
+          <type>Other</type>
+          <id>JMS0868</id>
+        </otherId>
+      </otherIds>
+      <courseTitle>Blocks</courseTitle>
+      <description>Test Description 1</description>
+      <subject>Special Education</subject>
+      <applicableEducationLevels>
+        <applicableEducationLevel>07</applicableEducationLevel>
+      </applicableEducationLevels>
+    </xCourse>
+  </xhtml:Example>
 </DataObject>

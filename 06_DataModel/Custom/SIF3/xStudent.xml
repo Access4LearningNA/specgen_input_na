@@ -159,4 +159,67 @@
     </Description>
     <Type ref="CommonTypes" name="xLanguageListType"/>
   </Item>
+  <xhtml:Example xmlns="">
+    <xStudent refId="0A1F09F5-37BB-4111-89E8-037B251832F0">
+      <name>
+        <type>LegalName</type>
+        <familyName>Huber</familyName>
+        <givenName>Hilel</givenName>
+        <middleName>W</middleName>
+      </name>
+      <otherIds>
+        <otherId>
+          <type>District</type>
+          <id>625186</id>
+        </otherId>
+        <otherId>
+          <type>State</type>
+          <id>836454234</id>
+        </otherId>
+      </otherIds>
+      <phoneNumber>
+        <phoneNumberType>Home</phoneNumberType>
+        <number>5555431753</number>
+        <primaryIndicator>true</primaryIndicator>
+      </phoneNumber>
+      <email>
+        <emailType>Organizational</emailType>
+        <emailAddress>HilelHuber@JohnsonCityMS.edu</emailAddress>
+      </email>
+      <otherEmails>
+        <email>
+          <emailType>Home</emailType>
+          <emailAddress>HilelHuber@Personal.com</emailAddress>
+        </email>
+      </otherEmails>
+      <demographics>
+        <races>
+          <race>
+            <race>BlackOrAfricanAmerican</race>
+          </race>
+        </races>
+        <hispanicLatinoEthnicity>false</hispanicLatinoEthnicity>
+        <sex>Male</sex>
+        <birthDate>1998-06-10</birthDate>
+        <usCitizenshipStatus>0</usCitizenshipStatus>
+      </demographics>
+      <enrollment>
+        <leaRefId>9BA8379D-9A9D-4D59-9202-E976CADF5526</leaRefId>
+        <schoolRefId>66667705-6C51-4C30-A22A-77CEA0FBCF53</schoolRefId>
+        <membershipType>Home</membershipType>
+        <entryDate>2016-08-24</entryDate>
+        <homeRoomNumber>265</homeRoomNumber>
+        <counselor>
+          <refId>936647C1-1568-4F43-9E75-00007A8B7ED4</refId>
+          <localId>676834362</localId>
+          <givenName>Felix</givenName>
+          <familyName>Pomp</familyName>
+        </counselor>
+      </enrollment>
+      <studentContacts>
+        <contactPersonRefId>3E95AFAC-55C1-44A6-9A31-2C4E25F11A2E</contactPersonRefId>
+        <contactPersonRefId>19AD67A8-DF48-4A50-8651-2C738E3585C9</contactPersonRefId>
+      </studentContacts>
+    </xStudent>
+  </xhtml:Example>
 </DataObject>

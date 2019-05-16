@@ -121,4 +121,48 @@
     </Description>
     <Type ref="CommonTypes" name="xContactStudentRelationshipListType"/>
   </Item>
+  <xhtml:Example xmlns="">
+    <xContact refId="05dd5254-43d7-11e6-beb8-9e71128cae77">
+        <name>
+            <type>LegalName</type>
+            <prefix>Mr.</prefix>
+            <familyName>Loewen</familyName>
+            <givenName>John</givenName>
+            <middleName>Robert</middleName>
+        </name>
+        <loginId>jloewen</loginId>
+        <address>
+          <addressType>Physical</addressType>
+          <line1>29249 Sudden Valley Dr.</line1>
+          <city>Bothell</city>
+          <stateProvince>WA</stateProvince>
+          <countryCode>US</countryCode>
+          <postalCode>98011</postalCode>
+        </address>
+        <phoneNumber>
+            <phoneNumberType>Home</phoneNumberType>
+            <number>360-555-5555</number>
+            <primaryIndicator>true</primaryIndicator>
+        </phoneNumber>
+        <email>
+            <emailType>Work</emailType>
+            <emailAddress>jloewen@company.com</emailAddress>
+        </email>
+        <sex>Male</sex>
+        <employerType>PrivateOrganization_1805</employerType>
+        <relationships>
+            <relationship>
+                <studentRefId>0D70D733-6483-47B4-B638-01980AF45E2D</studentRefId>
+                <relationshipCode>Father</relationshipCode>
+                <livesWith>true</livesWith>
+                <primaryContactIndicator>true</primaryContactIndicator>
+                <emergencyContactIndicator>true</emergencyContactIndicator>
+                <financialResponsibilityIndicator>true</financialResponsibilityIndicator>
+                <custodialIndicator>true</custodialIndicator>
+                <communicationsIndicator>true</communicationsIndicator>
+                <contactSequence>2</contactSequence>
+            </relationship>
+        </relationships>
+    </xContact>
+  </xhtml:Example>
 </DataObject>

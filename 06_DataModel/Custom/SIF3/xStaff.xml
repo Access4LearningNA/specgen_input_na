@@ -89,4 +89,42 @@
     </Description>
     <Type ref="CommonTypes" name="xStaffPersonAssignmentListType"/>
   </Item>
+  <xhtml:Example xmlns="">
+    <xStaff refId="0A363E64-8A65-4873-A971-006192DE8D55">
+      <name>
+        <type>LegalName</type>
+        <familyName>Olson</familyName>
+        <givenName>Brandon</givenName>
+        <middleName>X</middleName>
+      </name>
+      <otherIds>
+        <otherId>
+          <type>School</type>
+          <id>1358627</id>
+        </otherId>
+        <otherId>
+          <type>District</type>
+          <id>471442674</id>
+        </otherId>
+        <otherId>
+          <type>PIN</type>
+          <id>6348</id>
+        </otherId>
+        <otherId>
+          <type>State</type>
+          <id>847585242</id>
+        </otherId>
+      </otherIds>
+      <sex>Male</sex>
+      <email>
+        <emailType>Organizational</emailType>
+        <emailAddress>BrandonOlson@JohnsonCityMS.edu</emailAddress>
+      </email>
+      <primaryAssignment>
+        <leaRefId>9BA8379D-9A9D-4D59-9202-E976CADF5526</leaRefId>
+        <schoolRefId>66667705-6C51-4C30-A22A-77CEA0FBCF53</schoolRefId>
+        <jobFunction>Secondary Teachers</jobFunction>
+      </primaryAssignment>
+    </xStaff>
+  </xhtml:Example>
 </DataObject>

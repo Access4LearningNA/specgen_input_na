@@ -101,4 +101,28 @@
     </Description>
     <Type name="xs:token"/>
   </Item>
+  <xhtml:Example xmlns="">
+    <Address refId="812D940C-3f1a-4Db6-Bb2E-66EDB58785BD">
+      <GridLocation>
+        <Latitude>83</Latitude>
+        <Longitude>-169</Longitude>
+      </GridLocation>
+      <AddressType CodesetName="EbZ5&amp;h;">Home</AddressType>
+      <LocalId>
+        <IdType CodesetName="4tIX">State</IdType>
+        <IdValue>1234567890</IdValue>
+      </LocalId>
+      <Street>
+        <Line1>114 Lost Fork Ln.</Line1>
+        <StreetName>Lost Fork</StreetName>
+        <StreetType>Lane</StreetType>
+        <StreetSuffix>Ln.</StreetSuffix>
+      </Street>
+      <City>Bothell</City>
+      <Subregion>Snohomish</Subregion>
+      <StateProvince CodesetName="mKb9My[TWMH">WA</StateProvince>
+      <Country CodesetName="|RTz_d5Oh^">US</Country>
+      <PostalCode>98607</PostalCode>
+    </Address>
+  </xhtml:Example>
 </DataObject>

@@ -36,4 +36,30 @@
     </Description>
     <Type ref="CommonTypes" name="xSessionListType"/>
   </Item>
+  <xhtml:Example xmlns="">
+    <xCalendar refId="B0FD06FD-5F35-4D96-B2EA-AA96CD2D0F38">
+      <schoolRefId>66667705-6C51-4C30-A22A-77CEA0FBCF53</schoolRefId>
+      <schoolYear>2014</schoolYear>
+      <sessions>
+        <sessionList>
+          <sessionType>Semester</sessionType>
+          <sessionCode>S1-1415</sessionCode>
+          <description>Spring 2014-15</description>
+          <markingTerm>false</markingTerm>
+          <schedulingTerm>false</schedulingTerm>
+          <startDate>2015-01-19</startDate>
+          <endDate>2015-06-25</endDate>
+        </sessionList>
+        <sessionList>
+          <sessionType>Semester</sessionType>
+          <sessionCode>S1-1415</sessionCode>
+          <description>Fall 2014-15</description>
+          <markingTerm>false</markingTerm>
+          <schedulingTerm>false</schedulingTerm>
+          <startDate>2014-09-08</startDate>
+          <endDate>2014-01-16</endDate>
+        </sessionList>
+      </sessions>
+    </xCalendar>
+  </xhtml:Example>
 </DataObject>

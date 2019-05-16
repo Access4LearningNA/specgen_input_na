@@ -100,4 +100,36 @@
     </Description>
     <Type ref="CommonTypes" name="xTelephoneListType"/>
   </Item>
+  <xhtml:Example xmlns="">
+    <xSchool refId="66667705-6C51-4C30-A22A-77CEA0FBCF53">
+      <leaRefId>9BA8379D-9A9D-4D59-9202-E976CADF5526</leaRefId>
+      <localId>542334</localId>
+      <stateProvinceId>566725</stateProvinceId>
+      <otherIds>
+        <otherId>
+          <type>NCES</type>
+          <id>34423</id>
+        </otherId>
+      </otherIds>
+      <schoolName>Johnson City MS</schoolName>
+      <address>
+        <line1>12 Tree Lane</line1>
+        <city>Johnson City</city>
+        <stateProvince>NY</stateProvince>
+        <postalCode>13790</postalCode>
+      </address>
+      <phoneNumber>
+        <phoneNumberType>Other</phoneNumberType>
+        <number>555-216-8230</number>
+        <primaryIndicator>true</primaryIndicator>
+      </phoneNumber>
+      <otherPhoneNumbers>
+        <phoneNumber>
+          <phoneNumberType>Other</phoneNumberType>
+          <number>555-064-8358</number>
+          <primaryIndicator>false</primaryIndicator>
+        </phoneNumber>
+      </otherPhoneNumbers>
+    </xSchool>
+  </xhtml:Example>
 </DataObject>
