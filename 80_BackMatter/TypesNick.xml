@@ -1057,28 +1057,15 @@
     <Item>
       <Element>AssessmentDescriptor</Element>
       <Characteristics>OR</Characteristics>
-      <Union>
-        <Type ref="ExternalCodeSets" name="NCES0067AssessmentTypeType"/>
-        <Type name="xs:token">
-          <Values type="additional">
-            <Value>
-              <Code>Statewide</Code>
-            </Value>
-            <Value>
-              <Code>Formative</Code>
-            </Value>
-            <Value>
-              <Code>Local Summative</Code>
-            </Value>
-            <Value>
-              <Code>Diagnostic</Code>
-            </Value>
-            <Value>
-              <Code>Benchmark</Code>
-            </Value>
-          </Values>
-        </Type>
-      </Union>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
     </Item>
   </CommonElement>
   <CommonElement name="CourseHistoryTermListType" type="true" dm="true">
@@ -1454,135 +1441,15 @@
       <Description>
         <p>Funding source for the program, may be more than one.</p>
       </Description>
-      <Union>
-        <Type ref="ExternalCodeSets" name="NCES0222ProgramFundingSourceType">
-          <Values type="subset">
-            <Value>
-              <Code>0797</Code>
-            </Value>
-            <Value>
-              <Code>0617</Code>
-            </Value>
-            <Value>
-              <Code>0622</Code>
-            </Value>
-            <Value>
-              <Code>0654</Code>
-            </Value>
-            <Value>
-              <Code>9999</Code>
-            </Value>
-          </Values>
-        </Type>
-        <Type name="xs:token">
-          <Values type="additional">
-            <Value>
-              <Code>S001</Code>
-              <Text>Education for the Disadvantaged, ESEA I-A</Text>
-            </Value>
-            <Value>
-              <Code>S002</Code>
-              <Text>English Language Acquisition, Language Enhancement and Academic Achievement, ESEA III-A</Text>
-            </Value>
-            <Value>
-              <Code>S003</Code>
-              <Text>Foreign Language Assistance, ESEA V-D</Text>
-            </Value>
-            <Value>
-              <Code>S004</Code>
-              <Text>Gifted and Talented, Javits, ESEA V-D</Text>
-            </Value>
-            <Value>
-              <Code>S005</Code>
-              <Text>Homeless Children and Youths, ESEA X-C (MVHAA VII-B)</Text>
-            </Value>
-            <Value>
-              <Code>S006</Code>
-              <Text>Impact Aid, ESEA, Title VIII</Text>
-            </Value>
-            <Value>
-              <Code>S007</Code>
-              <Text>Indian Education, ESEA Title VII</Text>
-            </Value>
-            <Value>
-              <Code>S008</Code>
-              <Text>Migrant, ESEA I-C</Text>
-            </Value>
-            <Value>
-              <Code>S009</Code>
-              <Text>Migrant, HEA IV-A</Text>
-            </Value>
-            <Value>
-              <Code>S010</Code>
-              <Text>Neglected and Delinquent, ESEA I-D</Text>
-            </Value>
-            <Value>
-              <Code>S011</Code>
-              <Text>Other ESEA reading programs</Text>
-            </Value>
-            <Value>
-              <Code>S012</Code>
-              <Text>Public School Choice, ESEA I-A</Text>
-            </Value>
-            <Value>
-              <Code>S013</Code>
-              <Text>Reading First, ESEA I-B</Text>
-            </Value>
-            <Value>
-              <Code>S014</Code>
-              <Text>Rural Education, ESEA VI-B</Text>
-            </Value>
-            <Value>
-              <Code>S015</Code>
-              <Text>Safe Schools and Citizenship Education, ESEA IV-A and V-D</Text>
-            </Value>
-            <Value>
-              <Code>S016</Code>
-              <Text>School Choice, ESEA, Title V-B,-C,-D</Text>
-            </Value>
-            <Value>
-              <Code>S017</Code>
-              <Text>Special Education Early Intervening Services, IDEA, Part B</Text>
-            </Value>
-            <Value>
-              <Code>S018</Code>
-              <Text>Special Education Grants for Infants and Families Ages 0-2, IDEA, Part C</Text>
-            </Value>
-            <Value>
-              <Code>S019</Code>
-              <Text>Special Education Preschool Grants Ages 3-5, IDEA, Part B</Text>
-            </Value>
-            <Value>
-              <Code>S020</Code>
-              <Text>Special Education State Grants, IDEA, Part B</Text>
-            </Value>
-            <Value>
-              <Code>S021</Code>
-              <Text>State Scholars Capacity Building, ESEA V-D</Text>
-            </Value>
-            <Value>
-              <Code>S022</Code>
-              <Text>Supplemental Education Services, ESEA I-A</Text>
-            </Value>
-            <Value>
-              <Code>S023</Code>
-              <Text>Vocational Education (Carl D Perkins VTEA)</Text>
-            </Value>
-            <Value>
-              <Code>S024</Code>
-              <Text>Reading Proficiency</Text>
-            </Value>
-            <Value>
-              <Code>S025</Code>
-              <Text>Reading Sufficiency</Text>
-            </Value>
-            <Value>
-              <Code>S026</Code>
-              <Text>Alternative Education</Text>
-            </Value>
-          </Values>
-        </Type>
-      </Union>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
     </Item>
     <Item>
       <Element>OtherCodeList</Element>
@@ -1796,29 +1663,15 @@
       <Description>
         <p>Category represents the optimal educational setting in which the student should be placed (setting where child has most desirable learning environment).  Relates specifically to special education.</p>
       </Description>
-      <Union>
-        <Type ref="ExternalCodeSets" name="NCES0307ServiceSettingType"/>
-        <Type ref="ExternalCodeSets" name="NCES0798EarlyChildhoodProgramSettingType"/>
-        <Type ref="ExternalCodeSets" name="NCES0804EarlyChildhoodSpecialEducationSettingType">
-          <Values type="subset">
-            <Value>
-              <Code>2191</Code>
-            </Value>
-            <Value>
-              <Code>2190</Code>
-            </Value>
-            <Value>
-              <Code>2187</Code>
-            </Value>
-            <Value>
-              <Code>2188</Code>
-            </Value>
-            <Value>
-              <Code>2184</Code>
-            </Value>
-          </Values>
-        </Type>
-      </Union>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
     </Item>
     <Item>
       <Element>OtherCodeList</Element>
@@ -3098,11 +2951,15 @@
       <Description>
         <p>Setting where service is provided (Regular Class, Resource Room, Homebound, Detention Center, etc.).</p>
       </Description>
-      <Union>
-        <Type ref="ExternalCodeSets" name="NCES0307ServiceSettingType"/>
-        <Type ref="ExternalCodeSets" name="NCES0798EarlyChildhoodProgramSettingType"/>
-        <Type ref="ExternalCodeSets" name="NCES0804EarlyChildhoodSpecialEducationSettingType"/>
-      </Union>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
     </Item>
     <Item>
       <Element>OtherCodeList</Element>
@@ -3604,7 +3461,7 @@
     <Item>
       <Element>Address</Element>
       <Characteristics>O</Characteristics>
-      <Type ref="CommonTypes" name="AddressType"/>
+      <Type ref="CommonTypes" name="OldAddressType"/>
     </Item>
     <Item>
       <Element>PhoneNumber</Element>
@@ -4921,23 +4778,6 @@
       <Type ref="CommonTypes" name="LearningResourceComponentStrategyType"/>
     </Item>
   </CommonElement>
-  <CommonElement name="DriversLicenseNumberType" type="true" dm="true">
-    <Item>
-      <Element>DriversLicenseNumberType</Element>
-      <Description>
-        <p>The driver's license of the individual.</p>
-      </Description>
-      <Type name="xs:string"/>
-    </Item>
-    <Item>
-      <Attribute>StateProvince</Attribute>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>The state/province that issued the driver's license.</p>
-      </Description>
-      <Type ref="CommonTypes" name="StateProvinceType"/>
-    </Item>
-  </CommonElement>
   <CommonElement name="CalculationRuleType" type="true" dm="true">
     <Item>
       <Element>CalculationRuleType</Element>
@@ -5263,7 +5103,7 @@
       <Description>
         <p>Address of organization or company.</p>
       </Description>
-      <Type ref="CommonTypes" name="AddressType"/>
+      <Type ref="CommonTypes" name="OldAddressType"/>
     </Item>
     <Item>
       <Element>PhoneNumber</Element>
@@ -5323,10 +5163,15 @@
       <Description>
         <p>Type of the relationship between the current standard and the target standard.  The value identifies the type of standard of the target item. The purpose of this information is to allow applications to sort/display these relationships in the appropriate context.</p>
       </Description>
-      <Union>
-        <Type ref="CodeSets" name="LearningStandardItemRelationshipTypesType"/>
-        <Type name="xs:token"/>
-      </Union>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
     </Item>
   </CommonElement>
   <CommonElement name="MenuPlanQuantityType" type="true" dm="true">
@@ -5914,135 +5759,15 @@
       <Description>
         <p>Funding source for the program, may be more than one.</p>
       </Description>
-      <Union>
-        <Type ref="ExternalCodeSets" name="NCES0222ProgramFundingSourceType">
-          <Values type="subset">
-            <Value>
-              <Code>0797</Code>
-            </Value>
-            <Value>
-              <Code>0617</Code>
-            </Value>
-            <Value>
-              <Code>0622</Code>
-            </Value>
-            <Value>
-              <Code>0654</Code>
-            </Value>
-            <Value>
-              <Code>9999</Code>
-            </Value>
-          </Values>
-        </Type>
-        <Type name="xs:token">
-          <Values type="additional">
-            <Value>
-              <Code>S001</Code>
-              <Text>Education for the Disadvantaged, ESEA I-A</Text>
-            </Value>
-            <Value>
-              <Code>S002</Code>
-              <Text>English Language Acquisition, Language Enhancement and Academic Achievement, ESEA III-A</Text>
-            </Value>
-            <Value>
-              <Code>S003</Code>
-              <Text>Foreign Language Assistance, ESEA V-D</Text>
-            </Value>
-            <Value>
-              <Code>S004</Code>
-              <Text>Gifted and Talented, Javits, ESEA V-D</Text>
-            </Value>
-            <Value>
-              <Code>S005</Code>
-              <Text>Homeless Children and Youths, ESEA X-C (MVHAA VII-B)</Text>
-            </Value>
-            <Value>
-              <Code>S006</Code>
-              <Text>Impact Aid, ESEA, Title VIII</Text>
-            </Value>
-            <Value>
-              <Code>S007</Code>
-              <Text>Indian Education, ESEA Title VII</Text>
-            </Value>
-            <Value>
-              <Code>S008</Code>
-              <Text>Migrant, ESEA I-C</Text>
-            </Value>
-            <Value>
-              <Code>S009</Code>
-              <Text>Migrant, HEA IV-A</Text>
-            </Value>
-            <Value>
-              <Code>S010</Code>
-              <Text>Neglected and Delinquent, ESEA I-D</Text>
-            </Value>
-            <Value>
-              <Code>S011</Code>
-              <Text>Other ESEA reading programs</Text>
-            </Value>
-            <Value>
-              <Code>S012</Code>
-              <Text>Public School Choice, ESEA I-A</Text>
-            </Value>
-            <Value>
-              <Code>S013</Code>
-              <Text>Reading First, ESEA I-B</Text>
-            </Value>
-            <Value>
-              <Code>S014</Code>
-              <Text>Rural Education, ESEA VI-B</Text>
-            </Value>
-            <Value>
-              <Code>S015</Code>
-              <Text>Safe Schools and Citizenship Education, ESEA IV-A and V-D</Text>
-            </Value>
-            <Value>
-              <Code>S016</Code>
-              <Text>School Choice, ESEA, Title V-B,-C,-D</Text>
-            </Value>
-            <Value>
-              <Code>S017</Code>
-              <Text>Special Education Early Intervening Services, IDEA, Part B</Text>
-            </Value>
-            <Value>
-              <Code>S018</Code>
-              <Text>Special Education Grants for Infants and Families Ages 0-2, IDEA, Part C</Text>
-            </Value>
-            <Value>
-              <Code>S019</Code>
-              <Text>Special Education Preschool Grants Ages 3-5, IDEA, Part B</Text>
-            </Value>
-            <Value>
-              <Code>S020</Code>
-              <Text>Special Education State Grants, IDEA, Part B</Text>
-            </Value>
-            <Value>
-              <Code>S021</Code>
-              <Text>State Scholars Capacity Building, ESEA V-D</Text>
-            </Value>
-            <Value>
-              <Code>S022</Code>
-              <Text>Supplemental Education Services, ESEA I-A</Text>
-            </Value>
-            <Value>
-              <Code>S023</Code>
-              <Text>Vocational Education (Carl D Perkins VTEA)</Text>
-            </Value>
-            <Value>
-              <Code>S024</Code>
-              <Text>Reading Proficiency</Text>
-            </Value>
-            <Value>
-              <Code>S025</Code>
-              <Text>Reading Sufficiency</Text>
-            </Value>
-            <Value>
-              <Code>S026</Code>
-              <Text>Alternative Education</Text>
-            </Value>
-          </Values>
-        </Type>
-      </Union>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
     </Item>
     <Item>
       <Element>OtherCodeList</Element>
@@ -8261,39 +7986,17 @@ balances, or changes therein, e.g. the code for  Debt Service Funds, or Capital 
       <Description>
         <p>The document that outlines the student program/plan as approved by parents, guardians, and staff.</p>
       </Description>
-      <Union>
-        <Type ref="ExternalCodeSets" name="NCES0806IndividualizedProgramTypeType"/>
-        <Type name="xs:token">
-          <Values type="additional">
-            <Value>
-              <Code>S001</Code>
-              <Text>504 plan</Text>
-            </Value>
-            <Value>
-              <Code>S002</Code>
-              <Text>Student intervention / support plan</Text>
-            </Value>
-            <Value>
-              <Code>S003</Code>
-              <Text>GIEP - Individualized education program for gifted student</Text>
-            </Value>
-            <Value>
-              <Code>S004</Code>
-              <Text>Literacy plan</Text>
-            </Value>
-            <Value>
-              <Code>S005</Code>
-              <Text>Individualized transition plan</Text>
-            </Value>
-            <Value>
-              <Code>S006</Code>
-              <Text>Services plan</Text>
-            </Value>
-          </Values>
-        </Type>
-      </Union>
       <cedsId>000469</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000469</cedsURL>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>      
     </Item>
     <Item>
       <Element>OtherCodeList</Element>
@@ -8704,284 +8407,15 @@ balances, or changes therein, e.g. the code for  Debt Service Funds, or Capital 
       <Description>
         <p>Specialized instruction or related / transitional service provided to this student.</p>
       </Description>
-      <Union>
-        <Type ref="ExternalCodeSets" name="NCES0273StudentSupportServiceTypeType">
-          <Values type="subset">
-            <Value>
-              <Code>0290</Code>
-            </Value>
-            <Value>
-              <Code>0291</Code>
-            </Value>
-            <Value>
-              <Code>0292</Code>
-            </Value>
-            <Value>
-              <Code>0293</Code>
-            </Value>
-            <Value>
-              <Code>0295</Code>
-            </Value>
-            <Value>
-              <Code>0334</Code>
-            </Value>
-            <Value>
-              <Code>0297</Code>
-            </Value>
-            <Value>
-              <Code>0298</Code>
-            </Value>
-            <Value>
-              <Code>0299</Code>
-            </Value>
-            <Value>
-              <Code>0333</Code>
-            </Value>
-            <Value>
-              <Code>0302</Code>
-            </Value>
-            <Value>
-              <Code>0303</Code>
-            </Value>
-            <Value>
-              <Code>0304</Code>
-            </Value>
-            <Value>
-              <Code>0332</Code>
-            </Value>
-            <Value>
-              <Code>0305</Code>
-            </Value>
-            <Value>
-              <Code>0306</Code>
-            </Value>
-            <Value>
-              <Code>0308</Code>
-            </Value>
-            <Value>
-              <Code>0335</Code>
-            </Value>
-            <Value>
-              <Code>0336</Code>
-            </Value>
-            <Value>
-              <Code>0309</Code>
-            </Value>
-            <Value>
-              <Code>0310</Code>
-            </Value>
-            <Value>
-              <Code>0311</Code>
-            </Value>
-            <Value>
-              <Code>0312</Code>
-            </Value>
-            <Value>
-              <Code>0313</Code>
-            </Value>
-            <Value>
-              <Code>0331</Code>
-            </Value>
-            <Value>
-              <Code>0314</Code>
-            </Value>
-            <Value>
-              <Code>0315</Code>
-            </Value>
-            <Value>
-              <Code>0318</Code>
-            </Value>
-            <Value>
-              <Code>0319</Code>
-            </Value>
-            <Value>
-              <Code>0320</Code>
-            </Value>
-            <Value>
-              <Code>0294</Code>
-            </Value>
-            <Value>
-              <Code>0337</Code>
-            </Value>
-            <Value>
-              <Code>0321</Code>
-            </Value>
-            <Value>
-              <Code>0322</Code>
-            </Value>
-            <Value>
-              <Code>0323</Code>
-            </Value>
-            <Value>
-              <Code>0324</Code>
-            </Value>
-            <Value>
-              <Code>0325</Code>
-            </Value>
-            <Value>
-              <Code>0327</Code>
-            </Value>
-            <Value>
-              <Code>0329</Code>
-            </Value>
-            <Value>
-              <Code>0330</Code>
-            </Value>
-            <Value>
-              <Code>9999</Code>
-            </Value>
-          </Values>
-        </Type>
-        <Type ref="ExternalCodeSets" name="NCES0289TransitionalSupportServiceTypeType"/>
-        <Type ref="ExternalCodeSets" name="EDENHomelessEducationalSupportServicesAndActivitiesTypeOfServicesReceivedType">
-          <Values type="subset">
-            <Value>
-              <Code>TUT</Code>
-            </Value>
-            <Value>
-              <Code>EE</Code>
-            </Value>
-            <Value>
-              <Code>PD</Code>
-            </Value>
-            <Value>
-              <Code>MEDREF</Code>
-            </Value>
-            <Value>
-              <Code>TRANS</Code>
-            </Value>
-            <Value>
-              <Code>ECPGM</Code>
-            </Value>
-            <Value>
-              <Code>ASST</Code>
-            </Value>
-            <Value>
-              <Code>BASSUM</Code>
-            </Value>
-            <Value>
-              <Code>RECS</Code>
-            </Value>
-            <Value>
-              <Code>PARENT</Code>
-            </Value>
-            <Value>
-              <Code>COORD</Code>
-            </Value>
-            <Value>
-              <Code>COUNS</Code>
-            </Value>
-            <Value>
-              <Code>DOMV</Code>
-            </Value>
-            <Value>
-              <Code>CLOTH</Code>
-            </Value>
-            <Value>
-              <Code>SUPPLY</Code>
-            </Value>
-            <Value>
-              <Code>OTHREF</Code>
-            </Value>
-            <Value>
-              <Code>EMER</Code>
-            </Value>
-            <Value>
-              <Code>OTHER</Code>
-            </Value>
-          </Values>
-        </Type>
-        <Type ref="ExternalCodeSets" name="EDENMigrantStudentsServedMigrantServiceTypeType">
-          <Values type="subset">
-            <Value>
-              <Code>COS</Code>
-            </Value>
-            <Value>
-              <Code>AIS</Code>
-            </Value>
-            <Value>
-              <Code>RI</Code>
-            </Value>
-            <Value>
-              <Code>MI</Code>
-            </Value>
-            <Value>
-              <Code>HSCA</Code>
-            </Value>
-            <Value>
-              <Code>ANYSS</Code>
-            </Value>
-            <Value>
-              <Code>CS</Code>
-            </Value>
-            <Value>
-              <Code>ARS</Code>
-            </Value>
-          </Values>
-        </Type>
-        <Type ref="ExternalCodeSets" name="EDENLEPProgramTypeOfServicesReceivedType">
-          <Values type="subset">
-            <Value>
-              <Code>BILING</Code>
-            </Value>
-            <Value>
-              <Code>DUALLANG</Code>
-            </Value>
-            <Value>
-              <Code>TWOIMM</Code>
-            </Value>
-            <Value>
-              <Code>TRANSBIL</Code>
-            </Value>
-            <Value>
-              <Code>DEVBIL</Code>
-            </Value>
-            <Value>
-              <Code>HERITAGE</Code>
-            </Value>
-            <Value>
-              <Code>SHELENGL</Code>
-            </Value>
-            <Value>
-              <Code>STRUCIMM</Code>
-            </Value>
-            <Value>
-              <Code>SDAIE</Code>
-            </Value>
-            <Value>
-              <Code>CONTENTESL</Code>
-            </Value>
-            <Value>
-              <Code>PULLESL</Code>
-            </Value>
-            <Value>
-              <Code>OTHER</Code>
-            </Value>
-          </Values>
-        </Type>
-        <Type ref="ExternalCodeSets" name="EDENStudentsInNeglectedOrDelinquentProgramsNeglectedOrDelinquentServicesReceivedType">
-          <Values type="subset">
-            <Value>
-              <Code>TS</Code>
-            </Value>
-            <Value>
-              <Code>AS</Code>
-            </Value>
-            <Value>
-              <Code>DP</Code>
-            </Value>
-            <Value>
-              <Code>ASC</Code>
-            </Value>
-            <Value>
-              <Code>JT</Code>
-            </Value>
-          </Values>
-        </Type>
-        <Type ref="CodeSets" name="StudentPlacementTitleIServicesType"/>
-        <Type ref="CodeSets" name="StudentPlacementOtherServicesType"/>
-        <Type ref="CodeSets" name="StudentPlacementOtherTypesOfTransportationType"/>
-      </Union>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
     </Item>
     <Item>
       <Element>OtherCodeList</Element>
@@ -9938,7 +9372,7 @@ balances, or changes therein, e.g. the code for  Debt Service Funds, or Capital 
       <Description>
         <p>Address of the author.</p>
       </Description>
-      <Type ref="CommonTypes" name="AddressType"/>
+      <Type ref="CommonTypes" name="OldAddressType"/>
     </Item>
     <Item>
       <Element>Email</Element>
@@ -9978,23 +9412,17 @@ balances, or changes therein, e.g. the code for  Debt Service Funds, or Capital 
       <Description>
         <p>Review by program / state.  May be required if student has exited the program.</p>
       </Description>
-      <Union>
-        <Type ref="ExternalCodeSets" name="NCES0815ProgramExitReasonType"/>
-        <Type name="xs:token">
-          <Values type="additional">
-            <Value>
-              <Code>S001</Code>
-              <Text>Student choice</Text>
-            </Value>
-            <Value>
-              <Code>S002</Code>
-              <Text>Student served in other ways</Text>
-            </Value>
-          </Values>
-        </Type>
-      </Union>
+      <Type name="xs:token"/>
       <cedsId>000260</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000260</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
     </Item>
     <Item>
       <Element>OtherCodeList</Element>

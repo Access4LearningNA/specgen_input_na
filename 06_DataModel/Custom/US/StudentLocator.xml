@@ -211,7 +211,7 @@
 		<Description>
 			<p>The address(es) of the student.</p>
 		</Description>
-		<Type ref="CommonTypes" name="AddressType"/>
+		<Type ref="CommonTypes" name="OldAddressType"/>
 	</Item>
 	<Item>
 		<Element>Demographics</Element>

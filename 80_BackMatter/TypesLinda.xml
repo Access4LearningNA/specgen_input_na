@@ -361,25 +361,6 @@
       <cedsURL>https://ceds.ed.gov/element/000545</cedsURL>
     </Item>
   </CommonElement>
-  <CommonElement name="OtherIdList2Type" type="true" dm="true">
-    <Item>
-      <Element>OtherIdList2Type</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Lists all "other" identifiers associated with the entity.</p>
-      </Description>
-      <List mode="List">
-		</List>
-    </Item>
-    <Item>
-      <Element>OtherId</Element>
-      <Characteristics>MR</Characteristics>
-      <Description>
-        <p>Lists an "other" identifier associated with the entity.</p>
-      </Description>
-      <Type ref="CommonTypes" name="OtherId2Type"/>
-    </Item>
-  </CommonElement>
   <CommonElement name="PromotionInfoType" type="true" dm="true">
     <Item>
       <Element>PromotionInfoType</Element>
@@ -1425,59 +1406,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-  <CommonElement name="OtherId2Type" type="true" dm="true">
-    <Item>
-      <Element>OtherId2Type</Element>
-      <Characteristics>MR</Characteristics>
-      <Description>
-        <p>Lists an "other" identifier associated with the entity.</p>
-      </Description>
-      <Type name="xs:normalizedString"/>
-    </Item>
-    <Item>
-      <Attribute>Type</Attribute>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>Code that defines the type of this other Id.</p>
-      </Description>
-      <Type ref="ExternalCodeSets" name="NCES0147IdentificationSystemType"/>
-      <Values type="subset">
-        <Value>
-          <Code>0164</Code>
-        </Value>
-        <Value>
-          <Code>0339</Code>
-        </Value>
-        <Value>
-          <Code>0338</Code>
-        </Value>
-        <Value>
-          <Code>0879</Code>
-        </Value>
-        <Value>
-          <Code>9999</Code>
-        </Value>
-        <Value>
-          <Code>0222</Code>
-        </Value>
-        <Value>
-          <Code>0764</Code>
-        </Value>
-        <Value>
-          <Code>0154</Code>
-        </Value>
-        <Value>
-          <Code>0004</Code>
-        </Value>
-        <Value>
-          <Code>0113</Code>
-        </Value>
-        <Value>
-          <Code>5013</Code>
-        </Value>
-      </Values>
-    </Item>
-  </CommonElement>
   <CommonElement name="FunctionListType" type="true" dm="true">
     <Item>
       <Element>FunctionListType</Element>
@@ -1542,7 +1470,15 @@
     <Item>
       <Attribute>Code</Attribute>
       <Characteristics>M</Characteristics>
-      <Type ref="ExternalCodeSets" name="NCES0674HonorsTypeType"/>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
     </Item>
   </CommonElement>
   <CommonElement name="OffenderType" type="true" dm="true">
@@ -2029,19 +1965,17 @@
       <Description>
         <p>Code representing the type of teaching assignment.</p>
       </Description>
-      <Union>
-        <Type ref="ExternalCodeSets" name="NCES0436TeachingAssignmentType"/>
-        <Type name="xs:token">
-          <Values type="additional">
-            <Value>
-              <Code>NA</Code>
-              <Text>Not applicable</Text>
-            </Value>
-          </Values>
-        </Type>
-      </Union>
+      <Type name="xs:token"/>
       <cedsId>002276</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/002276</cedsURL>
+      <cedsURL>https://ceds.ed.gov/element/002276</cedsURL>      
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>      
     </Item>
     <Item>
       <Element>OtherCodeList</Element>
@@ -2123,23 +2057,17 @@
       <Description>
         <p>Code indicating the type of school day.</p>
       </Description>
-      <Union>
-        <Type ref="ExternalCodeSets" name="NCES0084CalendarEventType"/>
-        <Type name="xs:token">
-          <Values type="additional">
-            <Value>
-              <Code>INST</Code>
-              <Text>Instructional School Day</Text>
-            </Value>
-            <Value>
-              <Code>MKUP</Code>
-              <Text>Instructional day that is scheduled solely to make up for emergency days or early dismissal days.</Text>
-            </Value>
-          </Values>
-        </Type>
-      </Union>
+      <Type name="xs:token"/>
       <cedsId>000603</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000603</cedsURL>
+      <cedsURL>https://ceds.ed.gov/element/000603</cedsURL>      
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
     </Item>
     <Item>
       <Element>OtherCodeList</Element>

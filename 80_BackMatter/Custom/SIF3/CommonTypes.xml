@@ -6,12 +6,12 @@
     <Item>
       <Element>authorizingOfficialsList</Element>
       <Characteristics>O</Characteristics>
-      <Type ref="CommonTypes" name="authorizingOfficialsList"/>
+      <Type ref="CommonTypes" name="authorizingOfficialsListType"/>
     </Item>
     <Item>
       <Element>parentGuardianAuthorization</Element>
       <Characteristics>O</Characteristics>
-      <Type ref="CommonTypes" name="iepPlanCommonAuthorizationParentGuardianAuthorization"/>
+      <Type ref="CommonTypes" name="iepPlanCommonAuthorizationParentGuardianAuthorizationType"/>
     </Item>
     <Item>
       <Element>transferOfRightsNotificationDate</Element>
@@ -340,7 +340,6 @@
     <Item>
       <Element>FundingSource</Element>
       <Characteristics>OR</Characteristics>
-      <Type ref="CommonTypes" name="gCodedElementType"/>
     </Item>
     <Item>
       <Attribute>Codeset</Attribute>
@@ -469,14 +468,14 @@
       <Type ref="CommonTypes" name="iepEligibilityBackgroundReferralReferrerType"/>
     </Item>
   </CommonElement>
-  <CommonElement name="iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElements" type="true" dm="true">
+  <CommonElement name="iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementsType" type="true" dm="true">
     <Item>
-      <Element>iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElements</Element>
+      <Element>iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementsType</Element>
     </Item>
     <Item>
       <Element>rejectedDetailList</Element>
       <Characteristics>OR</Characteristics>
-      <Type ref="CommonTypes" name="iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementsRejectedDetailList"/>
+      <Type ref="CommonTypes" name="iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementsRejectedDetailListType"/>
     </Item>
     <Item>
       <Element>explanation</Element>
@@ -790,22 +789,6 @@
       <cedsURL>https://ceds.ed.gov/element/000087</cedsURL>
     </Item>
   </CommonElement>
-  <CommonElement name="tiepHistoryList" type="true" dm="true">
-    <Item>
-      <Element>tiepHistoryList</Element>
-      <Description>
-        <p> List of previous IEPs and contact information for additional research. </p>
-      </Description>
-    </Item>
-    <Item>
-      <Element>historyItem</Element>
-      <Characteristics>OR</Characteristics>
-      <Description>
-        <p> Documentation of existence of previous IEP and information about where to find out more information </p>
-      </Description>
-      <Type ref="CommonTypes" name="tiepHistoryListItemType"/>
-    </Item>
-  </CommonElement>
   <CommonElement name="xOtherCourseIdListType" type="true" dm="true">
     <Item>
       <Element>xOtherCourseIdListType</Element>
@@ -980,43 +963,6 @@
       <Type ref="CommonTypes" name="xOrganizationType"/>
     </Item>
   </CommonElement>
-  <CommonElement name="xCalendarType" type="true" dm="true">
-    <Item>
-      <Element>xCalendarType</Element>
-      <Description>
-        <p>The root object of SIF Composite objects.</p>
-      </Description>
-    </Item>
-    <Item>
-      <Attribute>refId</Attribute>
-      <Characteristics>M</Characteristics>
-      <Type ref="CommonTypes" name="gRefIdType"/>
-    </Item>
-    <Item>
-      <Element>schoolRefId</Element>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>The refid to which this calendar applies.</p>
-      </Description>
-      <Type ref="CommonTypes" name="gRefIdPointerType"/>
-    </Item>
-    <Item>
-      <Element>schoolYear</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The school year for the calendar.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xSchoolYearType"/>
-    </Item>
-    <Item>
-      <Element>sessions</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A list of sessions for the calendar.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xSessionListType"/>
-    </Item>
-  </CommonElement>
   <CommonElement name="iepPlanPresentLevelPerformancePersonalIntentionDesiredOutcomeListType" type="true" dm="true">
     <Item>
       <Element>iepPlanPresentLevelPerformancePersonalIntentionDesiredOutcomeListType</Element>
@@ -1030,9 +976,9 @@
       <Type ref="CommonTypes" name="iepPlanPresentLevelPerformancePersonalIntentionDesiredOutcomeListDesiredOutcomeType"/>
     </Item>
   </CommonElement>
-  <CommonElement name="authorizingOfficialsList" type="true" dm="true">
+  <CommonElement name="authorizingOfficialsListType" type="true" dm="true">
     <Item>
-      <Element>authorizingOfficialsList</Element>
+      <Element>authorizingOfficialsListType</Element>
       <Description>
         <p> Education officials authorizing </p>
       </Description>
@@ -1431,9 +1377,9 @@
       <Type ref="CommonTypes" name="iepPlanAnnualGoalCoursesListCourseType"/>
     </Item>
   </CommonElement>
-  <CommonElement name="gFractionDecimal" type="true">
+  <CommonElement name="gFractionDecimalType" type="true">
     <Item>
-      <Element>gFractionDecimal</Element>
+      <Element>gFractionDecimalType</Element>
       <Characteristics>O</Characteristics>
       <Description>
         <p>A real number between 0 and 1, with two digits of precision.</p>
@@ -3343,7 +3289,7 @@
     <Item>
       <Element>historyList</Element>
       <Characteristics>O</Characteristics>
-      <Type ref="CommonTypes" name="tiepHistoryList"/>
+      <Type ref="CommonTypes" name="tiepHistoryListType"/>
     </Item>
   </CommonElement>
   <CommonElement name="xAcademicSummaryType" type="true" dm="true">
@@ -3714,110 +3660,6 @@
       <Type ref="CommonTypes" name="iepPlanPresentLevelPerformanceConsequenceOfDisabilitySpecialCategoryListType"/>
     </Item>
   </CommonElement>
-  <CommonElement name="xRosterType" type="true" dm="true">
-    <Item>
-      <Element>xRosterType</Element>
-      <Description>
-        <p>The root object of SIF Composite objects.</p>
-      </Description>
-    </Item>
-    <Item>
-      <Attribute>refId</Attribute>
-      <Characteristics>M</Characteristics>
-      <Type ref="CommonTypes" name="gRefIdType"/>
-    </Item>
-    <Item>
-      <Element>courseRefId</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>RefId of the course for this section.</p>
-      </Description>
-      <Type ref="CommonTypes" name="gRefIdPointerType"/>
-    </Item>
-    <Item>
-      <Element>courseTitle</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The descriptive name given to a course of study offered in a school or other institution or organization. In departmentalized classes at the elementary, secondary, and postsecondary levels (and for staff development activities), this refers to the name by which a course is identified (e.g., American History, English III). For elementary and other non-departmentalized classes, it refers to any portion of the instruction for which a grade or report is assigned (e.g., reading, composition, spelling, and language arts).</p>
-      </Description>
-      <Type name="xs:token"/>
-      <cedsId>000067</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000067</cedsURL>
-    </Item>
-    <Item>
-      <Element>sectionRefId</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>RefId of the section.</p>
-      </Description>
-      <Type ref="CommonTypes" name="gRefIdPointerType"/>
-    </Item>
-    <Item>
-      <Element>subject</Element>
-      <Characteristics>O</Characteristics>
-      <Type ref="CommonTypes" name="xSubjectType"/>
-    </Item>
-    <Item>
-      <Element>schoolRefId</Element>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>RefId of the school.</p>
-      </Description>
-      <Type ref="CommonTypes" name="gRefIdPointerType"/>
-    </Item>
-    <Item>
-      <Element>schoolSectionId</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique number or alphanumeric code assigned by an institution, school, school system, state, or other agency or entity for a particular course-section.</p>
-      </Description>
-      <Type name="xs:token"/>
-      <cedsId>000978</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000978</cedsURL>
-    </Item>
-    <Item>
-      <Element>schoolYear</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The year for a reported school session.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xSchoolYearType"/>
-      <cedsId>000243</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000243</cedsURL>
-    </Item>
-    <Item>
-      <Element>meetingTimes</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A list of meeting times for the section.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xMeetingTimeListType"/>
-    </Item>
-    <Item>
-      <Element>students</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A list of students associated with the roster.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xStudentReferenceListType"/>
-    </Item>
-    <Item>
-      <Element>primaryStaff</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The primary staff person for the section.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xStaffReferenceType"/>
-    </Item>
-    <Item>
-      <Element>otherStaffs</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Other staff persons associated with the section.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xStaffReferenceListType"/>
-    </Item>
-  </CommonElement>
   <CommonElement name="xOrganizationIdentificationSystemType" type="true">
     <Item>
       <Element>xOrganizationIdentificationSystemType</Element>
@@ -3972,131 +3814,6 @@
       <Type ref="CommonTypes" name="iepExtendsSchoolYearType"/>
       <cedsId>001717</cedsId>
       <cedsURL>https://ceds.ed.gov/element/001717</cedsURL>
-    </Item>
-  </CommonElement>
-  <CommonElement name="xContactType" type="true" dm="true">
-    <Item>
-      <Element>xContactType</Element>
-      <Description>
-        <p>The root object of SIF Composite objects.</p>
-      </Description>
-    </Item>
-    <Item>
-      <Attribute>refId</Attribute>
-      <Characteristics>M</Characteristics>
-      <Type ref="CommonTypes" name="gRefIdType"/>
-    </Item>
-    <Item>
-      <Element>name</Element>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>Name of the contact.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xPersonNameType"/>
-    </Item>
-    <Item>
-      <Element>otherNames</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Other names of the contact.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xOtherPersonNameListType"/>
-    </Item>
-    <Item>
-      <Element>localId</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique number or alphanumeric code assigned to a staff member by a district or LEA.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xPersonIdType"/>
-    </Item>
-    <Item>
-      <Element>loginId</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The login identifier for the person.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xLoginIdType"/>
-      <cedsId>001170</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/001170</cedsURL>
-    </Item>
-    <Item>
-      <Element>otherIds</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Other Ids of the contact.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xOtherPersonIdListType"/>
-    </Item>
-    <Item>
-      <Element>address</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Address of the student.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xPersonAddressType"/>
-    </Item>
-    <Item>
-      <Element>phoneNumber</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Phone number of the contact.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xTelephoneType"/>
-    </Item>
-    <Item>
-      <Element>otherPhoneNumbers</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Other phone numbers for the contact.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xTelephoneListType"/>
-    </Item>
-    <Item>
-      <Element>email</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The numbers, letters, and symbols used to identify an electronic mail (e-mail) user within the network to which the person or organization belongs.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xEmailType"/>
-      <cedsId>000088</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000088</cedsURL>
-    </Item>
-    <Item>
-      <Element>otherEmails</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Other emails of the contact.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xEmailListType"/>
-      <cedsId>000088</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000088</cedsURL>
-    </Item>
-    <Item>
-      <Element>sex</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The concept describing the biological traits that distinguish the males and females of a species.</p>
-      </Description>
-      <Type ref="CodeSets" name="xSexType"/>
-      <cedsId>000255</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000255</cedsURL>
-    </Item>
-    <Item>
-      <Element>employerType</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A code that defines the employer type.</p>
-      </Description>
-      <Type ref="CodeSets" name="xEmployerType"/>
-    </Item>
-    <Item>
-      <Element>relationships</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Relationships that this contact has with the student.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xContactStudentRelationshipListType"/>
     </Item>
   </CommonElement>
   <CommonElement name="iepPlanPresentLevelPerformanceAcademicDeficitListType" type="true" dm="true">
@@ -4388,9 +4105,9 @@
       <Type ref="CommonTypes" name="iepPlanPresentLevelPerformanceAcademicSummaryAccommodationListAccommodationType"/>
     </Item>
   </CommonElement>
-  <CommonElement name="tiepReferenceObjectStaffList" type="true" dm="true">
+  <CommonElement name="tiepReferenceObjectStaffListType" type="true" dm="true">
     <Item>
-      <Element>tiepReferenceObjectStaffList</Element>
+      <Element>tiepReferenceObjectStaffListType</Element>
       <Description>
         <p> List of staff members referenced in the IEP </p>
       </Description>
@@ -4711,107 +4428,6 @@
       <Type ref="CodeSets" name="xDayOfWeekType"/>
     </Item>
   </CommonElement>
-  <CommonElement name="xSchoolType" type="true" dm="true">
-    <Item>
-      <Element>xSchoolType</Element>
-      <Description>
-        <p>The root object of SIF Composite objects.</p>
-      </Description>
-    </Item>
-    <Item>
-      <Attribute>refId</Attribute>
-      <Characteristics>M</Characteristics>
-      <Type ref="CommonTypes" name="gRefIdType"/>
-    </Item>
-    <Item>
-      <Element>leaRefId</Element>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>Refid of the LEA of which the school is a part.</p>
-      </Description>
-      <Type ref="CommonTypes" name="gRefIdPointerType"/>
-    </Item>
-    <Item>
-      <Element>lea</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>An administrative unit within K-12 education at the local level which exists primarily to operate schools or to contract for educational services. These units may or may not be co-extensive with county, city, or town boundaries. </p>
-      </Description>
-      <Type ref="CommonTypes" name="xLeaType"/>
-    </Item>
-    <Item>
-      <Element>localId</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique number or alphanumeric code assigned to a school by a district or LEA.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xOrganizationIdType"/>
-      <cedsId>001071</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/001071</cedsURL>
-    </Item>
-    <Item>
-      <Element>stateProvinceId</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique number or alphanumeric code assigned to a school by a state.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xOrganizationIdType"/>
-      <cedsId>001071</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/001071</cedsURL>
-    </Item>
-    <Item>
-      <Element>otherIds</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A list of other Ids for the school.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xOtherOrganizationIdListType"/>
-    </Item>
-    <Item>
-      <Element>schoolName</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The full legally accepted name of the institution.</p>
-      </Description>
-      <Type name="xs:string"/>
-      <cedsId>000191</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000191</cedsURL>
-    </Item>
-    <Item>
-      <Element>gradeLevels</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The specific grade or combination of grades offered by an education institution.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xYearGroupListType"/>
-      <cedsId>000131</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000131</cedsURL>
-    </Item>
-    <Item>
-      <Element>address</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Address of the school.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xOrganizationAddressType"/>
-    </Item>
-    <Item>
-      <Element>phoneNumber</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Phone number of the school.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xTelephoneType"/>
-    </Item>
-    <Item>
-      <Element>otherPhoneNumbers</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A list of other phone numbers for the school.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xTelephoneListType"/>
-    </Item>
-  </CommonElement>
   <CommonElement name="iepPlanPresentLevelPerformanceAcademicSummaryAccommodationListAccommodationType" type="true" dm="true">
     <Item>
       <Element>iepPlanPresentLevelPerformanceAcademicSummaryAccommodationListAccommodationType</Element>
@@ -4856,9 +4472,9 @@
       <Type ref="CommonTypes" name="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveType"/>
     </Item>
   </CommonElement>
-  <CommonElement name="iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementsRejectedDetailList" type="true" dm="true">
+  <CommonElement name="iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementsRejectedDetailListType" type="true" dm="true">
     <Item>
-      <Element>iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementsRejectedDetailList</Element>
+      <Element>iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementsRejectedDetailListType</Element>
     </Item>
     <Item>
       <Element>description</Element>
@@ -5028,9 +4644,9 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-  <CommonElement name="iepPlanCommonAuthorizationParentGuardianAuthorization" type="true" dm="true">
+  <CommonElement name="iepPlanCommonAuthorizationParentGuardianAuthorizationType" type="true" dm="true">
     <Item>
-      <Element>iepPlanCommonAuthorizationParentGuardianAuthorization</Element>
+      <Element>iepPlanCommonAuthorizationParentGuardianAuthorizationType</Element>
     </Item>
     <Item>
       <Element>accepted</Element>
@@ -5045,7 +4661,7 @@
     <Item>
       <Element>rejectedPlanElements</Element>
       <Characteristics>OR</Characteristics>
-      <Type ref="CommonTypes" name="iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElements"/>
+      <Type ref="CommonTypes" name="iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementsType"/>
     </Item>
     <Item>
       <Element>authorizingParentGuardian</Element>
@@ -5087,9 +4703,9 @@
       <Type name="xs:normalizedString"/>
     </Item>
   </CommonElement>
-  <CommonElement name="tiepReferenceObjectContactList" type="true" dm="true">
+  <CommonElement name="tiepReferenceObjectContactListType" type="true" dm="true">
     <Item>
-      <Element>tiepReferenceObjectContactList</Element>
+      <Element>tiepReferenceObjectContactListType</Element>
       <Description>
         <p> List of contacts referenced in the IEP </p>
       </Description>
@@ -5445,9 +5061,9 @@
       <cedsURL>https://ceds.ed.gov/element/000902</cedsURL>
     </Item>
   </CommonElement>
-  <CommonElement name="tiepReferenceObjectLeaList" type="true" dm="true">
+  <CommonElement name="tiepReferenceObjectLeaListType" type="true" dm="true">
     <Item>
-      <Element>tiepReferenceObjectLeaList</Element>
+      <Element>tiepReferenceObjectLeaListType</Element>
       <Description>
         <p> List of schools or other LEAs referenced in the IEP </p>
       </Description>
@@ -6516,122 +6132,6 @@
       <cedsURL>https://ceds.ed.gov/element/000826</cedsURL>
     </Item>
   </CommonElement>
-  <CommonElement name="xCourseType" type="true" dm="true">
-    <Item>
-      <Element>xCourseType</Element>
-      <Description>
-        <p>The root object of SIF Composite objects.</p>
-      </Description>
-    </Item>
-    <Item>
-      <Attribute>refId</Attribute>
-      <Characteristics>M</Characteristics>
-      <Type ref="CommonTypes" name="gRefIdType"/>
-    </Item>
-    <Item>
-      <Element>schoolRefId</Element>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>Refid of the school in which the course is delivered.</p>
-      </Description>
-      <Type ref="CommonTypes" name="gRefIdPointerType"/>
-    </Item>
-    <Item>
-      <Element>schoolCourseId</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The actual code that identifies the organization of subject matter and related learning experiences provided for the instruction of students.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xCourseIdType"/>
-      <cedsId>000055</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000055</cedsURL>
-    </Item>
-    <Item>
-      <Element>leaCourseId</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The actual code that identifies the organization of subject matter and related learning experiences provided for the instruction of students as defined at the district level (i.e. district course code).</p>
-      </Description>
-      <Type ref="CommonTypes" name="xCourseIdType"/>
-      <cedsId>000055</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000055</cedsURL>
-    </Item>
-    <Item>
-      <Element>otherIds</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A system that is used to identify the organization of subject matter and related learning experiences provided for the instruction of students.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xOtherCourseIdListType"/>
-      <cedsId>000055</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000055</cedsURL>
-    </Item>
-    <Item>
-      <Element>courseTitle</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The descriptive name given to a course of study offered in a school or other institution or organization. In departmentalized classes at the elementary, secondary, and postsecondary levels (and for staff development activities), this refers to the name by which a course is identified (e.g., American History, English III). For elementary and other non-departmentalized classes, it refers to any portion of the instruction for which a grade or report is assigned (e.g., reading, composition, spelling, and language arts).</p>
-      </Description>
-      <Type name="xs:token"/>
-      <cedsId>000067</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000067</cedsURL>
-    </Item>
-    <Item>
-      <Element>description</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A description of the course content and/or goals. Reference may be made to state or national content standards.</p>
-      </Description>
-      <Type name="xs:normalizedString"/>
-      <cedsId>000517</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000517</cedsURL>
-    </Item>
-    <Item>
-      <Element>subject</Element>
-      <Characteristics>O</Characteristics>
-      <Type ref="CommonTypes" name="xSubjectType"/>
-    </Item>
-    <Item>
-      <Element>applicableEducationLevels</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The education level, grade level or primary instructional level at which a course is intended.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xApplicableEducationLevelListType"/>
-      <cedsId>001301</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/001301</cedsURL>
-    </Item>
-    <Item>
-      <Element>scedCourseCode</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>SCED code for the course.</p>
-      </Description>
-      <Type name="xs:token"/>
-      <cedsId>001517</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/001517</cedsURL>
-    </Item>
-    <Item>
-      <Element>scedCourseLevelCode</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>SCED Course Level Code.</p>
-      </Description>
-      <Type name="xs:token"/>
-      <cedsId>001516</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/001516</cedsURL>
-    </Item>
-    <Item>
-      <Element>scedCourseSubjectAreaCode</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>SCED Course Subject Area Code.</p>
-      </Description>
-      <Type name="xs:token"/>
-      <cedsId>001518</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/001518</cedsURL>
-    </Item>
-  </CommonElement>
   <CommonElement name="latitudeSimpleType" type="true">
     <Item>
       <Element>latitudeSimpleType</Element>
@@ -6747,7 +6247,7 @@
       <Description>
         <p>List of school or other Local Education Agencies referenced in this IEP</p>
       </Description>
-      <Type ref="CommonTypes" name="tiepReferenceObjectLeaList"/>
+      <Type ref="CommonTypes" name="tiepReferenceObjectLeaListType"/>
     </Item>
     <Item>
       <Element>contactList</Element>
@@ -6755,7 +6255,7 @@
       <Description>
         <p>List of xContact objects for people who referenced in this IEP</p>
       </Description>
-      <Type ref="CommonTypes" name="tiepReferenceObjectContactList"/>
+      <Type ref="CommonTypes" name="tiepReferenceObjectContactListType"/>
     </Item>
     <Item>
       <Element>staffList</Element>
@@ -6763,7 +6263,7 @@
       <Description>
         <p>List of xStaff objects for staff members who participate in this IEP</p>
       </Description>
-      <Type ref="CommonTypes" name="tiepReferenceObjectStaffList"/>
+      <Type ref="CommonTypes" name="tiepReferenceObjectStaffListType"/>
     </Item>
     <Item>
       <Element>organizationList</Element>
@@ -6867,135 +6367,6 @@
       <Type ref="CommonTypes" name="iepPlanCommonAuthorizationType"/>
     </Item>
   </CommonElement>
-  <CommonElement name="xStaffType" type="true" dm="true">
-    <Item>
-      <Element>xStaffType</Element>
-      <Description>
-        <p>The root object of SIF Composite objects.</p>
-      </Description>
-    </Item>
-    <Item>
-      <Attribute>refId</Attribute>
-      <Characteristics>M</Characteristics>
-      <Type ref="CommonTypes" name="gRefIdType"/>
-    </Item>
-    <Item>
-      <Element>name</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Name of the staff person.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xPersonNameType"/>
-    </Item>
-    <Item>
-      <Element>localId</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique number or alphanumeric code assigned to a staff member by a district or LEA.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xPersonIdType"/>
-    </Item>
-    <Item>
-      <Element>loginId</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The login identifier for the person.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xLoginIdType"/>
-      <cedsId>001170</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/001170</cedsURL>
-    </Item>
-    <Item>
-      <Element>stateProvinceId</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique number or alphanumeric code assigned to a staff member by a state.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xPersonIdType"/>
-      <cedsId>001070</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/001070</cedsURL>
-    </Item>
-    <Item>
-      <Element>otherIds</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Other Ids for the person.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xOtherPersonIdListType"/>
-    </Item>
-    <Item>
-      <Element>sex</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The concept describing the biological traits that distinguish the males and females of a species.</p>
-      </Description>
-      <Type ref="CodeSets" name="xSexType"/>
-      <cedsId>000255</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000255</cedsURL>
-    </Item>
-    <Item>
-      <Element>email</Element>
-      <Characteristics>O</Characteristics>
-      <Type ref="CommonTypes" name="xEmailType"/>
-      <cedsId>000088</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000088</cedsURL>
-    </Item>
-    <Item>
-      <Element>primaryAssignment</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The primary district, school, and function to which the person is assigned.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xStaffPersonAssignmentType"/>
-    </Item>
-    <Item>
-      <Element>otherAssignments</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Other locations and functions to which the person is assigned.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xStaffPersonAssignmentListType"/>
-    </Item>
-  </CommonElement>
-  <CommonElement name="gCodedElementType" type="true" dm="true">
-    <Item>
-      <Element>gCodedElementType</Element>
-    </Item>
-    <Item>
-      <Attribute>codesetName</Attribute>
-      <Characteristics>M</Characteristics>
-      <Type name="xs:string"/>
-    </Item>
-    <Item>
-      <Element>code</Element>
-      <Characteristics>M</Characteristics>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Element>hexValue</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>As of version 3.4 hex values are not published with the code sets.</p>
-      </Description>
-      <Type name="xs:string"/>
-    </Item>
-    <Item>
-      <Element>hexValueDashed</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>This element is deprecated as of version 3.3 and should not be used.</p>
-      </Description>
-      <Type name="xs:string"/>
-    </Item>
-    <Item>
-      <Element>otherCodeList</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element. If Code changes and OtherCodes are supported, both Code and all associated OtherCode elements must be present.</p>
-      </Description>
-      <Type name="xs:string"/>
-    </Item>
-  </CommonElement>
   <CommonElement name="xEmailListType" type="true" dm="true">
     <Item>
       <Element>xEmailListType</Element>
@@ -7011,109 +6382,6 @@
       <cedsURL>https://ceds.ed.gov/element/000088</cedsURL>
     </Item>
   </CommonElement>
-  <CommonElement name="xLeaType" type="true" dm="true">
-    <Item>
-      <Element>xLeaType</Element>
-      <Description>
-        <p>The root object of SIF Composite objects.</p>
-      </Description>
-    </Item>
-    <Item>
-      <Attribute>refId</Attribute>
-      <Characteristics>M</Characteristics>
-      <Type ref="CommonTypes" name="gRefIdType"/>
-    </Item>
-    <Item>
-      <Element>localId</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique number or alphanumeric code assigned to a local education agency by a school system.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xOrganizationIdType"/>
-      <cedsId>001068</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/001068</cedsURL>
-    </Item>
-    <Item>
-      <Element>leaRefId</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The refId for the LEA.</p>
-      </Description>
-      <Type ref="CommonTypes" name="gRefIdPointerType"/>
-    </Item>
-    <Item>
-      <Element>stateProvinceId</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique number or alphanumeric code assigned to a local education agency by a state.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xOrganizationIdType"/>
-      <cedsId>001068</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/001068</cedsURL>
-    </Item>
-    <Item>
-      <Element>ncesId</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique number or alphanumeric code assigned to a local education agency by NCES.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xOrganizationIdType"/>
-      <cedsId>001068</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/001068</cedsURL>
-    </Item>
-    <Item>
-      <Element>leaName</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The name of a non-person entity such as an organization, institution, agency or business; in this case, a Local Education Agency.</p>
-      </Description>
-      <Type name="xs:string"/>
-      <cedsId>000204</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000204</cedsURL>
-    </Item>
-    <Item>
-      <Element>address</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The address of the LEA.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xOrganizationAddressType"/>
-    </Item>
-    <Item>
-      <Element>phoneNumber</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The phone number of the LEA.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xTelephoneType"/>
-    </Item>
-    <Item>
-      <Element>otherPhoneNumbers</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A list of other phone numbers for the LEA.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xTelephoneListType"/>
-    </Item>
-  </CommonElement>
-  <CommonElement name="xLanguageListType" type="true" dm="true">
-    <Item>
-      <Element>xLanguageListType</Element>
-      <Description>
-        <p>A list of languages.</p>
-      </Description>
-    </Item>
-    <Item>
-      <Element>language</Element>
-      <Characteristics>OR</Characteristics>
-      <Description>
-        <p>The specific language or dialect that a person uses to communicate.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xLanguageType"/>
-      <cedsId>000317</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000317</cedsURL>
-    </Item>
-  </CommonElement>
   <CommonElement name="iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultType" type="true" dm="true">
     <Item>
       <Element>iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultType</Element>
@@ -7127,166 +6395,6 @@
       <Element>accommodationList</Element>
       <Characteristics>OR</Characteristics>
       <Type ref="CommonTypes" name="iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListType"/>
-    </Item>
-  </CommonElement>
-  <CommonElement name="xStudentType" type="true" dm="true">
-    <Item>
-      <Element>xStudentType</Element>
-      <Description>
-        <p>The root object of relaxed SIF objects. The refId for relaxed-type objects may be omitted. That is, the value may or may not be known by the returning system. </p>
-      </Description>
-    </Item>
-    <Item>
-      <Attribute>refId</Attribute>
-      <Characteristics>M</Characteristics>
-      <Type ref="CommonTypes" name="gRefIdType"/>
-    </Item>
-    <Item>
-      <Element>name</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Name of Student.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xPersonNameType"/>
-    </Item>
-    <Item>
-      <Element>otherNames</Element>
-      <Characteristics>O</Characteristics>
-      <Type ref="CommonTypes" name="xOtherPersonNameListType"/>
-    </Item>
-    <Item>
-      <Element>localId</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique number or alphanumeric code assigned to a staff member by a district or LEA.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xPersonIdType"/>
-      <cedsId>001071</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/001071</cedsURL>
-    </Item>
-    <Item>
-      <Element>loginId</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>The login identifier for the person.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xLoginIdType"/>
-      <cedsId>001170</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/001170</cedsURL>
-    </Item>
-    <Item>
-      <Element>stateProvinceId</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique number or alphanumeric code assigned to a student by a state.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xPersonIdType"/>
-      <cedsId>001071</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/001071</cedsURL>
-    </Item>
-    <Item>
-      <Element>otherIds</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Other Ids for the student</p>
-      </Description>
-      <Type ref="CommonTypes" name="xOtherPersonIdListType"/>
-    </Item>
-    <Item>
-      <Element>address</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Address of the student.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xPersonAddressType"/>
-    </Item>
-    <Item>
-      <Element>otherAddresses</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Address of the student.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xOtherPersonAddressListType"/>
-    </Item>
-    <Item>
-      <Element>phoneNumber</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Phone number of the student.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xTelephoneType"/>
-    </Item>
-    <Item>
-      <Element>otherPhoneNumbers</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Other phone numbers for the student.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xTelephoneListType"/>
-    </Item>
-    <Item>
-      <Element>email</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Email of the student.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xEmailType"/>
-    </Item>
-    <Item>
-      <Element>otherEmails</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Other emails for the student.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xEmailListType"/>
-    </Item>
-    <Item>
-      <Element>demographics</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Demographic information about the student.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xDemographicsType"/>
-    </Item>
-    <Item>
-      <Element>enrollment</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Current enrollment information for the student.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xEnrollmentType"/>
-    </Item>
-    <Item>
-      <Element>otherEnrollments</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Other enrollment information for the student.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xEnrollmentListType"/>
-    </Item>
-    <Item>
-      <Element>academicSummary</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Summary academic information for the student.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xAcademicSummaryType"/>
-    </Item>
-    <Item>
-      <Element>studentContacts</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Persons that may be contacted regarding the student.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xStudentContactListType"/>
-    </Item>
-    <Item>
-      <Element>languages</Element>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>Languages of the student.</p>
-      </Description>
-      <Type ref="CommonTypes" name="xLanguageListType"/>
     </Item>
   </CommonElement>
   <CommonElement name="xContactStudentRelationshipType" type="true" dm="true">
@@ -7628,6 +6736,52 @@
         <p>The RefId of the school calendar.</p>
       </Description>
       <Type ref="CommonTypes" name="gRefIdPointerType"/>
+    </Item>
+  </CommonElement>
+    <CommonElement name="gUUIDType" type="true">
+    <Item>
+      <Element>gUUIDType</Element>
+      <Description>UUID or legacy GUID, used as object identifier. UUIDs are to be generated using version 1 or 4 as specified in RFC 4122, section 4.1.3.</Description>
+      <Type name="xs:token"/>
+      <Facets>
+        <xs:pattern value="[0-9A-F\-]{32,36}"/>
+      </Facets>
+    </Item>
+  </CommonElement>
+    <CommonElement name="xLanguageListType" type="true" dm="true">
+    <Item>
+      <Element>xLanguageListType</Element>
+      <Description>
+        <p>A list of languages.</p>
+      </Description>
+      <Type complex="extension" name="xLanguageType"/>
+    </Item>
+    <Item>
+      <Element>language</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p>The specific language or dialect that a person uses to communicate.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xLanguageType"/>
+      <cedsId>000317</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000317</cedsURL>
+    </Item>
+  </CommonElement>
+  <CommonElement name="tiepHistoryListType" type="true" dm="true">
+    <Item>
+      <Element>tiepHistoryListType</Element>
+      <Description>
+        <p> List of previous IEPs and contact information for additional research. </p>
+      </Description>
+      <Type complex="extension" name="tiepHistoryListItemType"/>
+    </Item>
+    <Item>
+      <Element>historyItem</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p> Documentation of existence of previous IEP and information about where to find out more information </p>
+      </Description>
+      <Type ref="CommonTypes" name="tiepHistoryListItemType"/>
     </Item>
   </CommonElement>
 </IncludeGroup>

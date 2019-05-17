@@ -78,7 +78,7 @@
     <Description>
       <p>Address of the location where the administration takes place.</p>
     </Description>
-    <Type ref="CommonTypes" name="AddressType"/>
+    <Type ref="CommonTypes" name="OldAddressType"/>
   </Item>
   <Item>
     <Element>StaffPersonalRefId</Element>

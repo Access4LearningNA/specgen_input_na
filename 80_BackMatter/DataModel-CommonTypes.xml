@@ -362,7 +362,15 @@
       <Description>
         <p>A code representing the highest level of education completed by a person.</p>
       </Description>
-      <Type ref="ExternalCodeSets" name="NCES0332HighestLevelOfEducationCompletedType"/>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
     </Item>
     <xhtml:Example xmlns="">
       <EducationalLevel>1057</EducationalLevel>
@@ -583,19 +591,17 @@
       <Description>
         <p> Exceptionality description/code which identifies the exceptionality or areas of need of the student. Not all programs require identification of an exceptionality. If required for this program type, must have at least one element with ExceptionalityPriority value of <code>Primary</code>. </p>
       </Description>
-      <Union>
-        <Type ref="ExternalCodeSets" name="NCES0768PrimaryDisabilityTypeType"/>
-        <Type name="xs:token">
-          <Values type="additional">
-            <Value>
-              <Code>9999</Code>
-              <Text>Other (not valid for special education)</Text>
-            </Value>
-          </Values>
-        </Type>
-      </Union>
+      <Type name="xs:token"/>
       <cedsId>000218</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000218</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
     </Item>
     <Item>
       <Element>OtherCodeList</Element>
@@ -1159,207 +1165,15 @@
         <p>Identifies the individualized program for which the student's participation is described in this instance.</p>
       </Description>
       <Characteristics>M</Characteristics>
-      <Union>
-        <Type ref="ExternalCodeSets" name="NCES0274StudentFamilyProgramTypeType">
-          <Values type="subset">
-            <Value>
-              <Code>0241</Code>
-            </Value>
-            <Value>
-              <Code>0242</Code>
-            </Value>
-            <Value>
-              <Code>0244</Code>
-            </Value>
-            <Value>
-              <Code>0245</Code>
-            </Value>
-            <Value>
-              <Code>0248</Code>
-            </Value>
-            <Value>
-              <Code>0875</Code>
-            </Value>
-            <Value>
-              <Code>0249</Code>
-            </Value>
-            <Value>
-              <Code>0250</Code>
-            </Value>
-            <Value>
-              <Code>0876</Code>
-            </Value>
-            <Value>
-              <Code>0251</Code>
-            </Value>
-            <Value>
-              <Code>0253</Code>
-            </Value>
-            <Value>
-              <Code>0255</Code>
-            </Value>
-            <Value>
-              <Code>0256</Code>
-            </Value>
-            <Value>
-              <Code>2389</Code>
-            </Value>
-            <Value>
-              <Code>2381</Code>
-            </Value>
-            <Value>
-              <Code>0246</Code>
-            </Value>
-            <Value>
-              <Code>0283</Code>
-            </Value>
-            <Value>
-              <Code>0284</Code>
-            </Value>
-            <Value>
-              <Code>2393</Code>
-            </Value>
-            <Value>
-              <Code>0263</Code>
-            </Value>
-            <Value>
-              <Code>0265</Code>
-            </Value>
-            <Value>
-              <Code>0267</Code>
-            </Value>
-            <Value>
-              <Code>0289</Code>
-            </Value>
-            <Value>
-              <Code>0270</Code>
-            </Value>
-            <Value>
-              <Code>0272</Code>
-            </Value>
-            <Value>
-              <Code>0278</Code>
-            </Value>
-            <Value>
-              <Code>9999</Code>
-            </Value>
-          </Values>
-        </Type>
-        <Type ref="ExternalCodeSets" name="NCES0229ProgramTypeType">
-          <Values type="subset">
-            <Value>
-              <Code>0300</Code>
-            </Value>
-            <Value>
-              <Code>0400</Code>
-            </Value>
-            <Value>
-              <Code>0800</Code>
-            </Value>
-            <Value>
-              <Code>1300</Code>
-            </Value>
-            <Value>
-              <Code>1400</Code>
-            </Value>
-            <Value>
-              <Code>1800</Code>
-            </Value>
-            <Value>
-              <Code>1900</Code>
-            </Value>
-            <Value>
-              <Code>2200</Code>
-            </Value>
-            <Value>
-              <Code>2300</Code>
-            </Value>
-            <Value>
-              <Code>2400</Code>
-            </Value>
-            <Value>
-              <Code>2900</Code>
-            </Value>
-            <Value>
-              <Code>3000</Code>
-            </Value>
-            <Value>
-              <Code>3100</Code>
-            </Value>
-            <Value>
-              <Code>3200</Code>
-            </Value>
-          </Values>
-        </Type>
-        <Type name="xs:token">
-          <Values type="additional">
-            <Value>
-              <Code>S001</Code>
-              <Text>Supplemental education services</Text>
-            </Value>
-            <Value>
-              <Code>S002</Code>
-              <Text>Early intervening services</Text>
-            </Value>
-            <Value>
-              <Code>S003</Code>
-              <Text>Individual learning / graduation plan</Text>
-            </Value>
-            <Value>
-              <Code>S004</Code>
-              <Text>Exchange program - foreign student attending district school</Text>
-            </Value>
-            <Value>
-              <Code>S005</Code>
-              <Text>Exchange program - district student attending foreign school</Text>
-            </Value>
-            <Value>
-              <Code>S006</Code>
-              <Text>Home schooling</Text>
-            </Value>
-            <Value>
-              <Code>S007</Code>
-              <Text>Early childhood full-day program for 3-year-old students</Text>
-            </Value>
-            <Value>
-              <Code>S008</Code>
-              <Text>Early childhood full-day program for 4-year-old students</Text>
-            </Value>
-            <Value>
-              <Code>S009</Code>
-              <Text>Early childhood half-day program for 3-year-old students</Text>
-            </Value>
-            <Value>
-              <Code>S010</Code>
-              <Text>Early childhood half-day program for 4-year-old students</Text>
-            </Value>
-            <Value>
-              <Code>S011</Code>
-              <Text>Kindergarten full-day program</Text>
-            </Value>
-            <Value>
-              <Code>S012</Code>
-              <Text>Kindergarten half-day program</Text>
-            </Value>
-            <Value>
-              <Code>S013</Code>
-              <Text>Neglected and Delinquent (ESEA I-D)</Text>
-            </Value>
-            <Value>
-              <Code>S014</Code>
-              <Text>Reading First (Title I-B-1 and I-B-2)</Text>
-            </Value>
-            <Value>
-              <Code>S015</Code>
-              <Text>Education for homeless children and youths (MVHAA Title VII-B)</Text>
-            </Value>
-            <Value>
-              <Code>S016</Code>
-              <Text>Rural education (ESEA VI-B)</Text>
-            </Value>
-          </Values>
-        </Type>
-      </Union>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
     </Item>
     <Item>
       <Element>OtherCodeList</Element>
@@ -1909,7 +1723,7 @@
     <Item>
       <Element>Address</Element>
       <Characteristics>MR</Characteristics>
-      <Type ref="CommonTypes" complex="extension" name="AddressType"/>
+      <Type ref="CommonTypes" complex="extension" name="OldAddressType"/>
     </Item>
     <Item>
       <Attribute>SIF_Action</Attribute>
@@ -2061,7 +1875,7 @@
       <Description>
         <p>Address of the contact.</p>
       </Description>
-      <Type ref="CommonTypes" name="AddressType"/>
+      <Type ref="CommonTypes" name="OldAddressType"/>
     </Item>
     <Item>
       <Element>AddressRefId</Element>
@@ -2335,11 +2149,15 @@
       <Description>
         <p>A state or province code. Note: When dealing with countries other than the United States or Canada, state/province codes/values other than those referenced here can be used.</p>
       </Description>
-      <Union>
-        <Type ref="ExternalCodeSets" name="USPSAbbreviationsType"/>
-        <Type ref="ExternalCodeSets" name="CanadaPostProvincesAndTerritoriesType"/>
-        <Type name="xs:token"/>
-      </Union>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
     </Item>
     <xhtml:Example xmlns="">
       <StateProvince>IL</StateProvince>
@@ -2367,10 +2185,15 @@
       <Description>
         <p>A country code.</p>
       </Description>
-      <Union>
-        <Type ref="ExternalCodeSets" name="ISO31661EnglishCountryNamesAndCodeElementsType"/>
-        <Type ref="ExternalCodeSets" name="ISO31663CodeForFormerlyUsedNamesOfCountriesType"/>
-      </Union>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
     </Item>
     <xhtml:Example xmlns="">
       <Country>US</Country>
@@ -2754,10 +2577,15 @@
         <p>Operational condition of an institution.</p>
         <p>For schools, use 0256 School Status Type.  For LEAs, use 0032 Agency Status.</p>
       </Description>
-      <Union>
-        <Type ref="ExternalCodeSets" name="NCES0256SchoolStatusType"/>
-        <Type ref="ExternalCodeSets" name="NCES0032AgencyStatusType"/>
-      </Union>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
     </Item>
     <xhtml:Example xmlns="">
       <OperationalStatus>0820</OperationalStatus>
@@ -3262,12 +3090,12 @@
       </Name>
     </xhtml:Example>
   </CommonElement>
-  <CommonElement name="AddressType" type="true">
+  <CommonElement name="OldAddressType" type="true">
     <Intro>
       <p> This element represents an address. This element occurs within objects and elements such as StaffPersonal and StudentPersonal/StudentAddress, etc. </p>
     </Intro>
     <Item>
-      <Element>AddressType</Element>
+      <Element>OldAddressType</Element>
       <Characteristics>M</Characteristics>
       <Description>
         <p>This element contains address data.</p>
@@ -3778,21 +3606,15 @@
         <p>The general racial category which reflects the individual's recognition of his or her community or with which the individual most identifies.</p>
         <p>In a given SIF implementation Agents must have alignment on the use of the NCES and deprecated SPEEDE code sets. Agents are not required to translate between the code sets.</p>
       </Description>
-      <Union>
-        <Type ref="ExternalCodeSets" name="NCES0849RaceType"/>
-        <Type name="xs:token">
-          <Values type="additional">
-            <Value>
-              <Code>A</Code>
-              <Text>Asian (deprecated)</Text>
-            </Value>
-            <Value>
-              <Code>H</Code>
-              <Text>Hispanic (deprecated)</Text>
-            </Value>
-          </Values>
-        </Type>
-      </Union>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
     </Item>
     <Item>
       <Element>OtherCodeList</Element>
@@ -5067,7 +4889,7 @@
       <Element>GUIDType</Element>
       <Type name="xs:token"/>
       <Facets>
-        <xs:pattern value="[0-9A-F]{32}"/>
+        <xs:pattern value="[0-9A-F\-]{32,36}"/>
       </Facets>
       <Description>SIF format for a GUID.</Description>
     </Item>

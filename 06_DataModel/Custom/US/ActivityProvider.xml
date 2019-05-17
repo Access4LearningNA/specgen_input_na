@@ -45,7 +45,7 @@
     <Description>
       <p>This element contains information related to provider's address information.</p>
     </Description>
-    <Type ref="CommonTypes" name="AddressType"/>
+    <Type ref="CommonTypes" name="OldAddressType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>

@@ -80,7 +80,7 @@
 	<Item>
 		<Element>Address</Element>
 		<Characteristics>O</Characteristics>
-		<Type ref="CommonTypes" name="AddressType"/>
+		<Type ref="CommonTypes" name="OldAddressType"/>
 	</Item>
 	<Item>
 		<Element>PhoneNumber</Element>

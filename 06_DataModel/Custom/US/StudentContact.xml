@@ -47,56 +47,6 @@
     </Description>
     <Type ref="CommonTypes" name="OtherIdListType"/>
   </Item>
-  <!-- The subset was removed so that an additional OtherId Type was not required.  Subset needs to be specified in documentation
-	<Item>
-		<Element>/OtherId</Element>
-		<Characteristics>MR</Characteristics>
-		<Description>
-			<p>Lists an "other" identifier associated with the contact.</p>
-		</Description>
-		<Type name="xs:normalizedString"/>
-	</Item>
-	<Item>
-		<Attribute>Type</Attribute>
-		<Characteristics>M</Characteristics>
-		<Description>
-			<p>Code that defines the type of this other Id.</p>
-		</Description>
-		<Type ref="ExternalCodeSets" name="NCES0147IdentificationSystemType"/>
-		<Values type="subset">
-			<Value>
-				<Code>0328</Code>
-			</Value>
-			<Value>
-				<Code>0164</Code>
-			</Value>
-			<Value>
-				<Code>0339</Code>
-			</Value>
-			<Value>
-				<Code>9999</Code>
-			</Value>
-			<Value>
-				<Code>0222</Code>
-			</Value>
-			<Value>
-				<Code>0154</Code>
-			</Value>
-			<Value>
-				<Code>0399</Code>
-			</Value>
-			<Value>
-				<Code>0004</Code>
-			</Value>
-			<Value>
-				<Code>0113</Code>
-			</Value>
-			<Value>
-				<Code>5013</Code>
-			</Value>
-		</Values>
-	</Item>
-     -->
   <Item>
     <Element>Name</Element>
     <Characteristics>M</Characteristics>

@@ -84,7 +84,7 @@
     <Description>
       <p>The address of the student.</p>
     </Description>
-    <Type ref="CommonTypes" name="AddressType"/>
+    <Type ref="CommonTypes" name="OldAddressType"/>
   </Item>
   <Item>
     <Element>RaceList</Element>
