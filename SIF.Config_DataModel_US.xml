@@ -11,6 +11,7 @@
 		<resolveExtensions>true</resolveExtensions>
 		<isDraft>false</isDraft>
 		<includeCEDS>true</includeCEDS>
+		<examplesValidatorFile>XSD\Schema_NoIncludes_Lax\SIF_Message.xsd</examplesValidatorFile>
 	</globalSettings>
 	
 	<htmlDocuments>

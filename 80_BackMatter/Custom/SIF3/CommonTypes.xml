@@ -6715,7 +6715,7 @@
       <Description>
         <p>An indication of the time of day the class ends.</p>
       </Description>
-      <Type ref="CodeSets" name="xExitOrWithdrawalType"/>
+      <Type name="xs:time"/>
       <cedsId>000520</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000520</cedsURL>
     </Item>
@@ -6738,13 +6738,13 @@
       <Type ref="CommonTypes" name="gRefIdPointerType"/>
     </Item>
   </CommonElement>
-    <CommonElement name="gUUIDType" type="true">
+  <CommonElement name="gUUIDType" type="true">
     <Item>
       <Element>gUUIDType</Element>
       <Description>UUID or legacy GUID, used as object identifier. UUIDs are to be generated using version 1 or 4 as specified in RFC 4122, section 4.1.3.</Description>
       <Type name="xs:token"/>
       <Facets>
-        <xs:pattern value="[0-9A-F\-]{32,36}"/>
+        <xs:pattern value="[0-9A-Fa-f\-]{32,36}"/>
       </Facets>
     </Item>
   </CommonElement>

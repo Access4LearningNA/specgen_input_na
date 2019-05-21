@@ -88,7 +88,8 @@
 		</dl>
 		<p>Please refer to the <a href="errata/">errata</a> for this document, which may include some normative corrections.</p>
 		<p>This document is also available in these non-normative formats: <a href="ImplementationSpecification.zip">ZIP archive</a>, <a href="ImplementationSpecification.pdf">PDF (for printing as a single file)</a>,
-		<a href="ImplementationSpecification.xls">Excel spreadsheet</a>.</p>
+		<a href="ImplementationSpecification.xlsx">Excel spreadsheet</a>.</p>
+		<p>Summaries of the changes in this release can be found with the <a href="BackgroundSupplementaryDocumentationNonNormative.html#BackgroundSupplementaryDocumentationNonNormative">Background Supplementary Documentation</a></p>
 		<br/>
 		<br/>
 		<p>Copyright &#xA9; <xi:include parse="text" href="90_Properties/SIF-Specification-ReleaseYear.txt"/> <a href="httpS://www.a4l.org">
@@ -140,7 +141,7 @@
 	
 	
 		<!--Section D-->
-	<!--<xi:include parse="text" href="80_BackMatter/BackgroundSupplementaryDocumentation.xml"/>-->
+	<xi:include parse="text" href="80_BackMatter/BackgroundSupplementaryDocumentation.xml"/>
 	
 		<!--Section -->
 	<Appendix name="Index of Tables"/>

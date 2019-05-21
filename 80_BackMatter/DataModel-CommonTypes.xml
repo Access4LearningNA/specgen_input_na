@@ -617,20 +617,10 @@
       <Type name="xs:token"/>
     </Item>
     <xhtml:Example xmlns="">
-      <ExceptionalityCategories>
-        <ExceptionalityCategory>
-          <Code>2121</Code>
-          <ExceptionalityPriority>Primary</ExceptionalityPriority>
-        </ExceptionalityCategory>
-        <ExceptionalityCategory>
-          <Code>2134</Code>
-          <ExceptionalityPriority>Secondary</ExceptionalityPriority>
-        </ExceptionalityCategory>
-        <ExceptionalityCategory>
-          <Code>2127</Code>
-          <ExceptionalityPriority>Tertiary</ExceptionalityPriority>
-        </ExceptionalityCategory>
-      </ExceptionalityCategories>
+      <ExceptionalityCategory>
+        <Code>2121</Code>
+        <ExceptionalityPriority>Primary</ExceptionalityPriority>
+      </ExceptionalityCategory>
     </xhtml:Example>
   </CommonElement>
   <CommonElement name="DemographicsType" type="true">
@@ -3185,28 +3175,6 @@
       <cedsId>000597</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000597</cedsURL>
     </Item>
-    <xhtml:Example xmlns="">
-      <Address Type="0123">
-        <Street>
-          <Line1>1 IBM Plaza</Line1>
-          <Line2>Suite 2000</Line2>
-          <StreetNumber>1</StreetNumber>
-          <StreetName>IBM</StreetName>
-          <StreetType>Plaza</StreetType>
-          <ApartmentType>Suite</ApartmentType>
-          <ApartmentNumber>2000</ApartmentNumber>
-        </Street>
-        <City>Chicago</City>
-        <County>Cook</County>
-        <StateProvince>IL</StateProvince>
-        <Country>US</Country>
-        <PostalCode>60611</PostalCode>
-        <GridLocation>
-          <Latitude>41.850000</Latitude>
-          <Longitude>-87.650000</Longitude>
-        </GridLocation>
-      </Address>
-    </xhtml:Example>
   </CommonElement>
   <CommonElement name="RightsElementsType" type="true">
     <Item>
@@ -4234,7 +4202,7 @@
       <Type name="xs:normalizedString"/>
     </Item>
     <xhtml:Example xmlns="">
-      <Name Type="04">
+      <Name>
         <Prefix>Mr.</Prefix>
         <LastName>Woodall</LastName>
         <FirstName>Charles</FirstName>
@@ -4889,7 +4857,7 @@
       <Element>GUIDType</Element>
       <Type name="xs:token"/>
       <Facets>
-        <xs:pattern value="[0-9A-F\-]{32,36}"/>
+        <xs:pattern value="[0-9A-Fa-f\-]{32,36}"/>
       </Facets>
       <Description>SIF format for a GUID.</Description>
     </Item>

@@ -113,8 +113,6 @@
       <schoolYear>2014</schoolYear>
       <meetingTimes>
         <meetingTime>
-          <sessionCode>S1-1415</sessionCode>
-          <schoolCalendarRefId>B0FD06FD-5F35-4D96-B2EA-AA96CD2D0F38</schoolCalendarRefId> 
           <timeTableDay>AB</timeTableDay>
           <classMeetingDays>
             <bellScheduleDay>Monday</bellScheduleDay>
@@ -123,6 +121,8 @@
           <roomNumber>115</roomNumber>
           <classBeginningTime>09:00:00</classBeginningTime>
           <classEndingTime>09:55:00</classEndingTime>
+          <sessionCode>S1-1415</sessionCode>
+          <schoolCalendarRefId>B0FD06FD-5F35-4D96-B2EA-AA96CD2D0F38</schoolCalendarRefId>           
         </meetingTime>
       </meetingTimes>
       <students>

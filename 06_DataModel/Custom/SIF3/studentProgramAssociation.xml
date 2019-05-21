@@ -173,18 +173,18 @@
     <Type name="fundingSourceType"/>
   </Item>
   <xhtml:Example xmlns="">
-    <StudentProgramAssociation refId="Cd9aA9fd-1179-4fab-B205-db7e03b93bE4">
+    <StudentProgramAssociation RefId="Cd9aA9fd-1179-4fab-B205-db7e03b93bE4">
       <StudentRefId>Bac68eb8-0DFa-43b0-Dd4b-7B1c85C15beA</StudentRefId>
       <ProgramRefId>B45A3aDf-d7C0-4Fa0-2FEd-34721aaf7d6F</ProgramRefId>
       <SchoolYear>2014</SchoolYear>
       <EntryDate>2014-05-02</EntryDate>
-      <EntryType codesetName="j|[J'ZnKN">FullTime</EntryType>
-      <YearGroup codesetName="https://ceds.ed.gov/element/000100">07</YearGroup>
+      <EntryType Codeset="j|[J'ZnKN">FullTime</EntryType>
+      <YearGroup Codeset="https://ceds.ed.gov/element/000100">07</YearGroup>
       <ExitDate>2014-07-16</ExitDate>
-      <ExitStatus codesetName="https://ceds.ed.gov/element/000108">Temporary</ExitStatus>
-      <exitType codesetName="https://ceds.ed.gov/element/000110">01907</exitType>
-      <fte>0</fte>
-      <ftptStatus>F</ftptStatus>
+      <ExitStatus Codeset="https://ceds.ed.gov/element/000108">Temporary</ExitStatus>
+      <ExitType Codeset="https://ceds.ed.gov/element/000110">01907</ExitType>
+      <FTE>0</FTE>
+      <FTPTStatus>F</FTPTStatus>
     </StudentProgramAssociation>
   </xhtml:Example>
 </DataObject>

@@ -37,6 +37,14 @@
     <Type name="xs:token"/>
   </Item>
   <Item>
+    <Attribute>Type</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The type of the program. Type identifies the list of values.</p>
+    </Description>
+    <Type name="xs:string"/>
+  </Item>  
+  <Item>
     <Attribute>Codeset</Attribute>
     <Characteristics>O</Characteristics>
     <Description>
