@@ -123,7 +123,7 @@
     <Description>
       <p>Provider of funds for the program or service.</p>
     </Description>
-    <Type ref="CommonTypes" name="FundingSourceType"/>
+    <Type ref="CommonTypes" name="OldFundingSourceType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>

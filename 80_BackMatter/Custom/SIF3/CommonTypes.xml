@@ -678,13 +678,6 @@
       <Type name="xs:normalizedString"/>
     </Item>
   </CommonElement>
-  <CommonElement name="longitudeSimpleType" type="true">
-    <Item>
-      <Element>longitudeSimpleType</Element>
-      <Characteristics>O</Characteristics>
-      <Type name="xs:decimal"/>
-    </Item>
-  </CommonElement>
   <CommonElement name="iepPlanAccommodationsListType" type="true" dm="true">
     <Item>
       <Element>iepPlanAccommodationsListType</Element>
@@ -6130,34 +6123,6 @@
       <Type ref="CommonTypes" name="xOtherOrganizationIdType"/>
       <cedsId>000826</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000826</cedsURL>
-    </Item>
-  </CommonElement>
-  <CommonElement name="latitudeSimpleType" type="true">
-    <Item>
-      <Element>latitudeSimpleType</Element>
-      <Characteristics>O</Characteristics>
-      <Type name="xs:decimal"/>
-    </Item>
-  </CommonElement>
-  <CommonElement name="gridLocationType" type="true" dm="true">
-    <Item>
-      <Element>gridLocationType</Element>
-    </Item>
-    <Item>
-      <Element>Latitude</Element>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>Latitude in decimal degrees.</p>
-      </Description>
-      <Type ref="CommonTypes" name="latitudeSimpleType"/>
-    </Item>
-    <Item>
-      <Element>Longitude</Element>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>Longitude in decimal degrees.</p>
-      </Description>
-      <Type ref="CommonTypes" name="longitudeSimpleType"/>
     </Item>
   </CommonElement>
   <CommonElement name="iepEligibilityIdeaDisabilitySpecificLearningDisabilitySpecialDiagnosisJustificationsPrimaryCauseExclusionsType" type="true" dm="true">

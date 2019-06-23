@@ -15,7 +15,7 @@
   <Item>
     <Element>GridLocation</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="gridLocationType"/>
+    <Type ref="CommonTypes" name="GridLocationType"/>
   </Item>
   <Item>
     <Element>AddressType</Element>

@@ -1,8 +1,8 @@
-<DataObject xmlns="http://sifassociation.org/SpecGen" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:json="http://json.org/" name="xTransferIEP">
+<DataObject xmlns="http://sifassociation.org/SpecGen" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:json="http://json.org/" name="xTransferIep">
   <Key>@refId</Key>
   <EventsReported>true</EventsReported>
   <Item>
-    <Element>xTransferIEP</Element>
+    <Element>xTransferIep</Element>
   </Item>
   <Item>
     <Attribute>refId</Attribute>
@@ -22,6 +22,6 @@
   <Item>
     <Element>historyList</Element>
     <Characteristics>O</Characteristics>
-    <Type ref="CommonTypes" name="tiepHistoryList"/>
+    <Type ref="CommonTypes" name="tiepHistoryListType"/>
   </Item>
 </DataObject>

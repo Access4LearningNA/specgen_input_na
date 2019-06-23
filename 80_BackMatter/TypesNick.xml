@@ -8170,9 +8170,9 @@ balances, or changes therein, e.g. the code for  Debt Service Funds, or Capital 
       <Type name="xs:date"/>
     </Item>
   </CommonElement>
-  <CommonElement name="FundingSourceType" type="true" dm="true">
+  <CommonElement name="OldFundingSourceType" type="true" dm="true">
     <Item>
-      <Element>FundingSourceType</Element>
+      <Element>OldFundingSourceType</Element>
       <Description>
         <p>Provider of funds for the program or service.</p>
       </Description>

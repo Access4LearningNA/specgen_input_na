@@ -12,6 +12,7 @@
 		<includeCEDS>true</includeCEDS>
 		<examplesValidatorFile>XSD\Schema_NoIncludes_Lax\SIF_Message.xsd</examplesValidatorFile>
 		<defaultExample>XML</defaultExample>
+		<includePrivacy>false</includePrivacy>
 	</globalSettings>
 	
 	<htmlDocuments>

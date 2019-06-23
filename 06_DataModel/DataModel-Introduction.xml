@@ -53,7 +53,7 @@ in non-empty and non-error responses to requests for entire SIF objects (e.g., n
 Mandatory attributes <span class="rfc2119">MUST</span> always be present if their corresponding element is present.
 </p>
 <p>
-SIF Adapters and message brokers MUST supply data according to the types specified in the Type columns and their corresponding equivalents in the most recent schema files associated with this specification. If there is a discrepancy between object and element definitions in this specification and the corresponding schema files, the definition in the schema files takes precedence; every effort will be made to note discrepancies in the <a href="errata/1.html">errata</a> for this document as they are identified.
+SIF Adapters and message brokers MUST supply data according to the types specified in the Type columns and their corresponding equivalents in the most recent schema files associated with this specification. If there is a discrepancy between object and element definitions in this specification and the corresponding schema files, the definition in the schema files takes precedence; every effort will be made to note discrepancies in the <a href="background/DataModelErrata.pdf">errata</a> for this document as they are identified.
 </p>
 </Section>
 <Section name="Conventions">

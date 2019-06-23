@@ -27,7 +27,7 @@
     <xi:include parse="text" href="SIF3\xSchool.xml"/>
     <xi:include parse="text" href="SIF3\xStaff.xml"/>
     <xi:include parse="text" href="SIF3\xStudent.xml"/>
-    <xi:include parse="text" href="SIF3\xTransferIEP.xml"/>
+    <xi:include parse="text" href="SIF3\xTransferIep.xml"/>
   </Group>
 
   <Group name="Data Warehouse Working Group" sort="false">
