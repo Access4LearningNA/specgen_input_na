@@ -3340,6 +3340,124 @@
       <Type ref="CommonTypes" name="AnnualItemType"/>
     </Item>
   </CommonElement>
+  <CommonElement name="ResponsableSchoolListType" type="true" dm="true">
+    <Item>
+      <Element>ResponsableSchoolListType</Element>
+      <List mode="List">
+			</List>
+    </Item>
+    <Item>
+      <Element>ResponsableSchool</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Schools that are responsible for this enrollment.</p>
+      </Description>
+      <Type ref="CommonTypes" name="ResponsableSchoolType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ResponsableLEAListType" type="true" dm="true">
+    <Item>
+      <Element>ResponsableLEAListType</Element>
+      <List mode="List">
+			</List>
+    </Item>
+    <Item>
+      <Element>ResponsableLEA</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>LEAs that are responsable for this enrollment.</p>
+      </Description>
+      <Type ref="CommonTypes" name="ResponsableLEAType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ResponsableSchoolType" type="true" dm="true">
+    <Item>
+      <Element>ResponsableSchoolType</Element>
+      <Description>
+        <p>School that is responsible for a student enrollment.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>SchoolInfoRefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>References to one of the SchoolInfos that is responsable for this enrollment.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+    <Item>
+      <Element>Id</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Entry in the list of all responsible schools for this student.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000638</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000638</cedsURL>
+    </Item>
+    <Item>
+      <Element>Type</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The type of responsibility the corisponding school has for the student.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000595</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000595</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ResponsableLEAType" type="true" dm="true">
+    <Item>
+      <Element>ResponsableLEAType</Element>
+      <Description>
+        <p>LEA that is responsible for a student enrollment.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>LEAInfoRefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>References to one of the LEAInfos that is responsable for this enrollment.</p>
+      </Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+    <Item>
+      <Element>Id</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Entry in the list of all responsible LEAs for this student.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000637</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000637</cedsURL>
+    </Item>
+    <Item>
+      <Element>Type</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The type of responsibility the corisponding LEA has for the student.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000594</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000594</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
   <CommonElement name="StudentScoreSetScoreType" type="true" dm="true">
     <Item>
       <Element>StudentScoreSetScoreType</Element>
@@ -3362,8 +3480,8 @@
       <Description>
         <p>The value of the score.</p>
       </Description>
-      <cedsId>000724</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000724</cedsURL>
+      <cedsId>000245</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000245</cedsURL>
     </Item>
     <Item>
       <Element>DiagnosticStatement</Element>
@@ -3768,6 +3886,34 @@
       <cedsId>000138</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000138</cedsURL>
     </Item>
+    <Item>
+      <Element>GraduationRateSurveyCohortYear</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The academic year in which a student entered as part of the GRS cohort.</p>
+      </Description>
+      <Type ref="CommonTypes" name="SchoolYearType"/>
+      <cedsId>000132</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000132</cedsURL>
+    </Item>
+    <Item>
+      <Element>GraduationRateSurveyIndicator</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>An indication of whether or not the student is in a GRS cohort; meaning the student began as a first-time, full-time, degree seeking student in the fall of a given year.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000133</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000133</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>    
     <Item>
       <Element>AcademicTrack</Element>
       <Characteristics>O</Characteristics>
@@ -5599,6 +5745,16 @@
         <p>The name of the performance level.</p>
       </Description>
       <Type name="xs:normalizedString"/>
+      <cedsId>000718</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000718</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>LevelIdentifier</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique number or alphanumeric code assigned to an assessment performance level.</p>
+      </Description>
+      <Type name="xs:token"/>
       <cedsId>000717</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000717</cedsURL>
     </Item>
@@ -5742,6 +5898,24 @@
       </Description>
       <cedsId>000229</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000229</cedsURL>
+    </Item>
+    <Item>
+      <Element>CredentialConferred</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>An indicator of the category of credential conferred by a state occupational licensing entity or industry organization for competency in a specific area measured by a set of pre-established standards.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000783</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000783</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
     </Item>
     <Item>
       <Element>SIF_ExtendedElements</Element>
@@ -6522,6 +6696,8 @@ balances, or changes therein, e.g. the code for  Debt Service Funds, or Capital 
 				</p>
       </Description>
       <Type name="xs:string"/>
+      <cedsId>000415</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000415</cedsURL>
     </Item>
     <Item>
       <Attribute>Code</Attribute>
@@ -9791,6 +9967,24 @@ balances, or changes therein, e.g. the code for  Debt Service Funds, or Capital 
         <p>Number of days present.</p>
       </Description>
     </Item>
+    <Item>
+      <Element>ProgressLevel</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The amount of progress shown in academic subjects.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000561</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000561</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>  
     <Item>
       <Element>SIF_ExtendedElements</Element>
       <Characteristics>O</Characteristics>

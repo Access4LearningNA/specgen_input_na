@@ -1,0 +1,147 @@
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="StudentCareerTechnical">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Intro>
+    <p>
+      For a person for whom instruction, services, and/or care are provided in a Career and Technical Education program and who has met the state-defined threshold of Career and Technical Education participation, as defined in the state's approved Perkins IV State Plan.
+    </p>
+  </Intro>
+  <Item>
+    <Element>StudentCareerTechnical</Element>
+    <Description>Holds career and technical elements for a student.</Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies the record.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"/>
+  </Item>
+  <Item>
+    <Attribute>StudentPersonalRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that identifies the school where federal funds being tracked.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+    <Element>EducationCompleter</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication of a student who reached a state-defined threshold of a career and technical education program/pathway.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000036</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000036</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>Concentrator</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication of a student who has met the state-defined threshold of career and technical education concentrators, as defined in the State's approved Perkins IV State Plan.</p>
+    </Description>
+    <Type name="xs:string"/>
+  </Item>
+  <Item>
+    <Element>Participant</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication a student has met the state-defined threshold of Career and Technical Education participation as defined in the State's approved Perkins IV State Plan.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000592</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000592</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>NontraditionalGenderStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication of whether CTE participants were members of an underrepresented gender group (where one gender comprises less than 25 percent of the persons employed in those occupations or field of work).</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000588</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000588</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>DisplacedHomemaker</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A person who ; (A) (i) has worked primarily without remuneration to care for a home and family, and for that reason has diminished marketable skills; (ii) has been dependent on the income of another family member but is no longer supported by that income; or (iii) is a parent whose youngest dependent child will become ineligible to receive assistance under part A of title IV of the Social Security Act (42 U.S.C. 601 et seq.) not later than 2 years after the date on which the parent applies for assistance under such title; and (B) is unemployed or underemployed and is experiencing difficulty in obtaining or upgrading employment.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000084</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000084</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>ProgramParticipationExitDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The year, month and day on which the person ceased to participate in a program.</p>
+    </Description>
+    <Type name="xs:date"/>
+    <cedsId>000263</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000263</cedsURL>
+  </Item>
+  <Item>
+    <Element>ProgramParticipationStartDate</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The year, month and day on which the person began to participate in a program.</p>
+    </Description>
+    <Type name="xs:date"/>
+    <cedsId>000590</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000590</cedsURL>
+  </Item>
+  <Item>
+    <Element>SingleParentOrSinglePregnantWoman</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A student who, at some time during the school year, is either a pregnant female student who is unmarried; or a male or female student who is unmarried or legally separated from a spouse and has a minor child or children.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000580</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000580</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+</DataObject>

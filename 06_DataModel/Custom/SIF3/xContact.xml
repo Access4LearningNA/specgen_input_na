@@ -32,6 +32,8 @@
       <p>A unique number or alphanumeric code assigned to a staff member by a district or LEA.</p>
     </Description>
     <Type ref="CommonTypes" name="xPersonIdType"/>
+    <cedsId>001572</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001572</cedsURL>
   </Item>
   <Item>
     <Element>loginId</Element>

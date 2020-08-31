@@ -125,6 +125,16 @@
     </Description>
     <Type ref="CommonTypes" name="OldFundingSourceType"/>
   </Item>
+
+  <Item>
+    <Element>SpecialEducation</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>For tracking common special eduction effort.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SpecialEductionType"/>
+  </Item>
+  
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>

@@ -73,6 +73,52 @@
       <p>A unique indicator (usually a URL) that points to the codeset used.</p>
     </Description>
     <Type name="xs:token"/>
+  </Item>  
+  <Item>
+    <Element>SpecificDisabilityIdentified</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p> An indication of whether a person is classified as disabled under the American's with Disability Act (ADA). </p>
+    </Description>
+    <Type name="xs:boolean"/>
+    <cedsId>000577</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000577</cedsURL>
+  </Item>
+  <Item>
+    <Element>EnvironmentForSchoolAge</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p> The setting in which children ages 6 through 21, receive special education and related services. </p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000535</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000535</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>EnvironmentForEarlyChildhood</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p> The program in which children ages 3 through 5 attend and in which these children receive special education and related services. </p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000559</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000559</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>NeglectedOrDelinquentParticipationList</Element>

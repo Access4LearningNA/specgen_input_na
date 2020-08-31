@@ -1,0 +1,47 @@
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="LEAFederalFund">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Intro>
+    <p>
+      Holds federal funding elements for a Local Education Agency.
+    </p>
+  </Intro>
+  <Item>
+    <Element>LEAFederalFund</Element>
+    <Description>Holds federal funding elements for an LEA.</Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies the LEA.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"/>
+  </Item>
+  <Item>
+    <Attribute>LEAInfoRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that identifies the school where federal funds being tracked.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+    <Element>FederalProgramList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The federal programs the LEA is participating in.</p>
+    </Description>
+    <Type ref="CommonTypes" name="FederalProgramListType"/>
+  </Item>
+  <Item>
+    <Element>REAPAlternativeFundingStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication that the local education agency (LEA) notified the state of the LEA's intention to use REAP-Flex Alternative Uses of Funding Authority during the school year as specified in the Title VI, Section 6211 of ESEA as amended.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000560</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000560</cedsURL>
+  </Item>
+</DataObject>

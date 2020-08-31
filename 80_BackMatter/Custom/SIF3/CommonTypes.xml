@@ -192,6 +192,8 @@
         <p>Home Room number</p>
       </Description>
       <Type name="xs:token"/>
+      <cedsId>000364</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000364</cedsURL>
     </Item>
     <Item>
       <Element>homeRoomTeacher</Element>
@@ -3183,8 +3185,8 @@
         <p>A unique number or alphanumeric code assigned to a student by a school, school system, a state, or other agency or entity.</p>
       </Description>
       <Type ref="CommonTypes" name="xPersonIdType"/>
-      <cedsId>001071</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/001071</cedsURL>
+      <cedsId>001572</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001572</cedsURL>
     </Item>
   </CommonElement>
   <CommonElement name="gStreetType" type="true" dm="true">
@@ -3257,6 +3259,7 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
+  <!--
   <CommonElement name="xTransferIepType" type="true" dm="true">
     <Item>
       <Element>xTransferIepType</Element>
@@ -3285,6 +3288,7 @@
       <Type ref="CommonTypes" name="tiepHistoryListType"/>
     </Item>
   </CommonElement>
+  -->
   <CommonElement name="xAcademicSummaryType" type="true" dm="true">
     <Item>
       <Element>xAcademicSummaryType</Element>
@@ -3448,6 +3452,8 @@
       <Element>schoolYear</Element>
       <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanPlacementScheduleModificationSchoolYearType"/>
+      <cedsId>000243</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000243</cedsURL>
     </Item>
   </CommonElement>
   <CommonElement name="iepPlanPlacementType" type="true" dm="true">
@@ -4419,6 +4425,8 @@
       <Element>bellScheduleDay</Element>
       <Characteristics>O</Characteristics>
       <Type ref="CodeSets" name="xDayOfWeekType"/>
+      <cedsId>000521</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000521</cedsURL>
     </Item>
   </CommonElement>
   <CommonElement name="iepPlanPresentLevelPerformanceAcademicSummaryAccommodationListAccommodationType" type="true" dm="true">
@@ -5485,8 +5493,8 @@
         <p>The name of the city in which an address is located.</p>
       </Description>
       <Type name="xs:normalizedString"/>
-      <cedsId>00040</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/00040</cedsURL>
+      <cedsId>000040</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000040</cedsURL>
     </Item>
     <Item>
       <Element>stateProvince</Element>
@@ -6375,6 +6383,8 @@
       <Element>relationshipCode</Element>
       <Characteristics>O</Characteristics>
       <Type ref="CodeSets" name="xPersonRelationshipToLearnerType"/>
+      <cedsId>000425</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000425</cedsURL>      
     </Item>
     <Item>
       <Element>restrictions</Element>
@@ -6384,7 +6394,7 @@
       </Description>
       <Type name="xs:string"/>
       <cedsId>001424</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/0001424</cedsURL>
+      <cedsURL>https://ceds.ed.gov/element/001424</cedsURL>
     </Item>
     <Item>
       <Element>livesWith</Element>
@@ -6425,6 +6435,8 @@
       <Element>custodialIndicator</Element>
       <Characteristics>O</Characteristics>
       <Type name="xs:boolean"/>
+      <cedsId>000329</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000329</cedsURL>
     </Item>
     <Item>
       <Element>communicationsIndicator</Element>
@@ -6585,6 +6597,8 @@
       <Element>localId</Element>
       <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="xPersonIdType"/>
+      <cedsId>001070</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001070</cedsURL>
     </Item>
     <Item>
       <Element>givenName</Element>

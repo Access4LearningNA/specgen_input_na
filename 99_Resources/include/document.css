@@ -1,8 +1,8 @@
 body { background-color: white }
 
-h1 { text-indent:  0%; color: #005696; border-width: 3px; border-style: solid; padding: 5px; border-color: #005696; margin-bottom: 0px }
+h1 { text-indent:  0%; color: #005696; border-width: 3px; border-style: solid; padding: 5px; border-color: #005696; margin-bottom: 18px }
 h2 { text-indent:  0%; color: #005696; margin-top: 27px; margin-bottom: 18px }
-h3 { text-indent:  0%; color: #005696; padding-left: 5px; margin-top: 0px; margin-bottom: 0px }
+h3 { text-indent:  0%; color: #005696; margin-top: 24px; margin-bottom: 15px }
 h4 { text-indent:  0%; color: #005696; margin-top: 21px; margin-bottom: 12px }
 h5 { text-indent:  0%; color: #005696; margin-top: 18px; margin-bottom:  9px }
 h6 { text-indent:  0%; color: #005696; margin-top: 15px; margin-bottom:  6px }
@@ -111,6 +111,11 @@ li.folder ul { margin-left: 16px; margin-top: 2px; margin-bottom: 0px; padding-t
 
 .index-name { font-size: smaller }
 .index-number { font-size: smaller }
+
+.charOverride {
+	display:block;
+	color: #005696; font-family: monospace; font-weight:bold;
+}
 
 @media print
 {

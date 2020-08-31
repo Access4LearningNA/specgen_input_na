@@ -53,6 +53,8 @@
     <Description>
       <p>Date and time testing begins.</p>
     </Description>
+    <cedsId>001021</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001021</cedsURL>
   </Item>
   <Item>
     <Element>FinishDateTime</Element>
@@ -61,8 +63,8 @@
     <Description>
       <p>Date and time testing ends.</p>
     </Description>
-    <cedsId>000023</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000023</cedsURL>
+    <cedsId>001022</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001022</cedsURL>
   </Item>
   <Item>
     <Element>DueDateTime</Element>

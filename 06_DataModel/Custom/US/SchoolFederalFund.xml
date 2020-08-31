@@ -1,0 +1,75 @@
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="SchoolFederalFund">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Intro>
+    <p>
+      Holds federal funding elements for a school.
+    </p>
+  </Intro>
+  <Item>
+    <Element>SchoolFederalFund</Element>
+    <Description>Holds federal funding elements for a school.</Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies the school.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"/>
+  </Item>
+  <Item>
+    <Attribute>SchoolInfoRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that identifies the school where federal funds being tracked.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+    <Element>ConsolidatedMEPFundsStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication of whether the school has a school-wide program, as defined by current law, in which federal Migrant Education Program (MEP) funds are consolidated.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000542</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000542</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>SchoolImprovementAllocation</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The amount of Section 1003(a) and 1003(g) allocations to LEAs and Schools.</p>
+    </Description>
+    <Type name="xs:decimal"/>
+    <cedsId>000480</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000480</cedsURL>
+  </Item>
+  <Item>
+    <Element>SchoolImprovementGrantInterventionType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The type of intervention used by the school under the School Improvement Grant (SIG).</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000239</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000239</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+</DataObject>

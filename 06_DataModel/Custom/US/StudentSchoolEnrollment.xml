@@ -102,8 +102,8 @@
       <p>The date from when this enrollment is valid.</p>
     </Description>
     <Type name="xs:date"/>
-    <cedsId>002097</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/002097</cedsURL>
+    <cedsId>000097</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000097</cedsURL>
   </Item>
   <Item>
     <Element>EntryType</Element>
@@ -220,6 +220,16 @@
     <Type ref="CommonTypes" name="StudentExitTypeType"/>
   </Item>
   <Item>
+    <Element>ExitGradeLevel</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The grade level or primary instructional level at which a student exits a school, program, or an educational institution.</p>
+    </Description>
+    <Type ref="CommonTypes" name="GradeLevelType"/>
+    <cedsId>001210</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001210</cedsURL>    
+  </Item>  
+  <Item>
     <Element>RecordClosureReason</Element>
     <Characteristics>O</Characteristics>
     <Description>
@@ -298,6 +308,16 @@
       <p>A unique indicator (usually a URL) that points to the codeset used.</p>
     </Description>
     <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>ResponsableSchoolList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="ResponsableSchoolListType"/>
+  </Item>
+  <Item>
+    <Element>ResponsableLEAList</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="ResponsableLEAListType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>

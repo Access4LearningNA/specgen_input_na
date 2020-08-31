@@ -1,0 +1,47 @@
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="LEAAccountability">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Intro>
+    <p>
+      Holds EDFacts accountability elements for a Local Education Agency.
+    </p>
+  </Intro>
+  <Item>
+    <Element>LEAAccountability</Element>
+    <Description>Holds EDFacts accountability elements for a Local Education Agency.</Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies the Local Education Agency.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"/>
+  </Item>
+  <Item>
+    <Attribute>LEAInfoRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that identifies the LEA where accountability is being tracked.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+    <Element>GunFreeSchoolsActReportingStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication of whether the school or local education agency (LEA) submitted a Gun-Free Schools Act (GFSA) of 1994 report to the state, as defined by Title 18, Section 921.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000134</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000134</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+</DataObject>

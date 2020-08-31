@@ -2398,6 +2398,8 @@
         <p>Identifies the type of incident being reported.</p>
       </Description>
       <Type name="xs:token"/>
+      <cedsId>000545</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000545</cedsURL>
     </Item>
     <Item>
       <Attribute>Codeset</Attribute>
@@ -2785,8 +2787,8 @@
         <p>The type of educational institution as classified by its focus.</p>
       </Description>
       <Type name="xs:token"/>
-      <cedsId>000039</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000039</cedsURL>
+      <cedsId>000181</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000181</cedsURL>
     </Item>
     <Item>
       <Attribute>Codeset</Attribute>

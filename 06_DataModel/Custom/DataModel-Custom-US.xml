@@ -8,6 +8,8 @@
   <Group name="Data Model Task Force" sort="false" >
     <xi:include parse="text" href="US\SEAInfo.xml"/>
     <xi:include parse="text" href="US\StudentLEARelationship.xml"/>
+    <xi:include parse="text" href="US\SEAAccountability.xml"/>
+    <xi:include parse="text" href="US\SEAFederalFund.xml"/>
   </Group>
 
   <Group name="xPress Working Group" sort="false">
@@ -165,6 +167,7 @@
     <xi:include parse="text" href="US\StudentPlacement.xml"/>
     <xi:include parse="text" href="US\TestAccommodation.xml"/>
     <xi:include parse="text" href="US\StudentSpecialEducationSummary.xml"/>
+    <xi:include parse="text" href="US\StudentCareerTechnical.xml"/>
   </Group>
 
   <Group name="Assessment Working Group">
@@ -205,7 +208,7 @@
     <xi:include parse="text" href="US\PersonRoleAssociation.xml"/>
     <xi:include parse="text" href="US\ResponseToIntervention.xml"/>
     <xi:include parse="text" href="US\RTIResults.xml"/>
-	<xi:include parse="text" href="US\LearningStandardAssociation.xml"/>
+	  <xi:include parse="text" href="US\LearningStandardAssociation.xml"/>
   </Group>
 
   <Group name="Library Automation Working Group">
@@ -256,7 +259,12 @@
     <xi:include parse="text" href="US\StudentContactRelationship.xml"/>
     <xi:include parse="text" href="US\StaffSectionAssignment.xml"/>
     <xi:include parse="text" href="US\StaffEvaluation.xml"/>
-    <xi:include parse="text" href="US\SectionCorrelation.xml"/>    
+    <xi:include parse="text" href="US\SectionCorrelation.xml"/>
+    <xi:include parse="text" href="US\SchoolAccountability.xml"/>
+    <xi:include parse="text" href="US\LEAAccountability.xml"/>
+    <xi:include parse="text" href="US\SchoolFederalFund.xml"/>
+    <xi:include parse="text" href="US\LEAFederalFund.xml"/>
+    <xi:include parse="text" href="US\StudentMigrant.xml"/>
   </Group>
   
   <Group name="Transportation and Geographic Information Working Group">

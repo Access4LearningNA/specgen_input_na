@@ -1,0 +1,37 @@
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="SEAFederalFund">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Intro>
+    <p>
+      Holds federal funding elements for a State Education Agency.
+    </p>
+  </Intro>
+  <Item>
+    <Element>SEAFederalFund</Element>
+    <Description>Holds federal funding elements for an SEA.</Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies the SEA.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"/>
+  </Item>
+  <Item>
+    <Attribute>SEAInfoRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that identifies the school where federal funds being tracked.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+    <Element>FederalProgramList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The federal programs the SEA is participating in.</p>
+    </Description>
+    <Type ref="CommonTypes" name="FederalProgramListType"/>
+  </Item>
+</DataObject>

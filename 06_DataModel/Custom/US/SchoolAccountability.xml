@@ -1,0 +1,183 @@
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="SchoolAccountability">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Intro>
+    <p>
+      Holds EDFacts accountability elements for a school.
+    </p>
+  </Intro>
+  <Item>
+    <Element>SchoolAccountability</Element>
+    <Description>Holds EDFacts accountability elements for a school.</Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies the school.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"/>
+  </Item>
+  <Item>
+    <Attribute>SchoolInfoRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that identifies the school where accountability is being tracked.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+    <Element>GunFreeSchoolsActReportingStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication of whether the school or local education agency (LEA) submitted a Gun-Free Schools Act (GFSA) of 1994 report to the state, as defined by Title 18, Section 921.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000134</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000134</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>HighSchoolGraduationRateIndicatorStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication of whether the school or district met the High School Graduation Rate requirement in accordance with state definition for the purposes of determining AYP.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000140</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000140</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>PersistentlyDangerousStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication of whether the school is identified as persistently dangerous in accordance with state definition.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000210</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000210</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>ProficiencyTargetStatusForMath</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication of whether the school or district met the math proficiency target in accordance with state definition for the purposes of determining AYP.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000221</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000221</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>ProficiencyTargetStatusForReadingAndLanguageArts</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication of whether the school or district met the reading/language arts proficiency target in accordance with state definition for the purposes of determining AYP.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000553</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000553</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>  
+  <Item>
+    <Element>SchoolOperationalStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The current status of the school operations, exclusive of scheduled breaks, holidays, or other temporary interruptions.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000553</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000553</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>ReconstitutedStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication that the school was restructured, transformed or otherwise changed as a consequence of the state&#8217;s accountability system under ESEA or as a result of School Improvement Grants (SIG).</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000230</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000230</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>SchoolImprovementExitDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date the school exited school improvement status.</p>
+    </Description>
+    <Type name="xs:date"/>
+    <cedsId>000481</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000481</cedsURL>
+  </Item>
+  <Item>
+    <Element>SchoolImprovementFundsStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication of whether the school received funds under Section 1003 of ESEA, as amended.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000238</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000238</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+</DataObject>

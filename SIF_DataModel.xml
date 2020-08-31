@@ -92,7 +92,7 @@
 		<br/>
 		<br/>
 		<p>Copyright &#xA9; <xi:include parse="text" href="90_Properties/SIF-Specification-ReleaseYear.txt"/> <a href="httpS://www.a4l.org">
-				SIF<sup>®</sup> Association (dba) <xi:include parse="text" href="90_Properties/SIF Association Trademark Name.txt"/></a>.  All Rights Reserved.
+				SIF<sup>®</sup> Association (dba <xi:include parse="text" href="90_Properties/SIF Association Trademark Name.txt"/></a>).  All Rights Reserved.
 		</p>
 	</TitlePage>
 	

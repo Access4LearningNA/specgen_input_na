@@ -1,0 +1,187 @@
+<DataObject xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://sifassociation.org/SpecGen" name="StudentMigrant">
+  <Key>@RefId</Key>
+  <EventsReported>true</EventsReported>
+  <Intro>
+    <p>
+      Detailed migrant information for a student.
+    </p>
+  </Intro>
+  <Item>
+    <Element>StudentMigrant</Element>
+    <Description>Detailed migrant information for a student.</Description>
+  </Item>
+  <Item>
+    <Attribute>RefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that uniquely identifies the SEA.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RefIdType"/>
+  </Item>
+  <Item>
+    <Attribute>StudentInfoRefId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The Id (GUID) that identifies the student the migrant information is for.</p>
+    </Description>
+    <Type ref="CommonTypes" name="IdRefType"/>
+  </Item>
+  <Item>
+    <Element>ServicesType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The type of services received by participating migrant students in the migrant education program (MEP).</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000186</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000186</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>PrioritizedForServices</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication that a migratory child 1) is failing to meet, or most at risk of failing to meet, the state's challenging academic content standards and student academic achievement standards; and 2) has experienced interruptions in their education during the regular school year.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000562</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000562</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>QualifyingArrivalDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The qualifying arrival date (QAD) is the month, date, and year that the child completed a move with his or her parent to enable the parent to find qualifying employment. the child's eligibility for the Migrant Education Program begins.</p>
+    </Description>
+    <Type name="xs:date"/>
+    <cedsId>000432</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000432</cedsURL>
+  </Item>
+  <Item>
+    <Element>ProgramStartDate</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The year, month and day on which the person began to participate in a program.</p>
+    </Description>
+    <Type name="xs:date"/>
+    <cedsId>000590</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000590</cedsURL>
+  </Item>  
+  <Item>
+    <Element>ProgramExitDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Date student exited support program(s).</p>
+    </Description>
+    <Type name="xs:date"/>
+    <cedsId>000263</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000263</cedsURL>
+  </Item>
+  <Item>
+    <Element>ContinuationOfServicesReason</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Reason why the student is being served under the continuation of services provision of the MEP.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000429</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000429</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>ContinuationOfServicesStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication that migrant children are receiving instructional or support services under the continuation of services authority ESEA Title III Section 1304(e)(2)-(3).</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000563</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000563</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>LastQualifyingMoveDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The year, month and day of the last qualifying move of a migrant student.</p>
+    </Description>
+    <Type name="xs:date"/>
+    <cedsId>000171</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000171</cedsURL>
+  </Item>
+  <Item>
+    <Element>ExpirationDate</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The year, month, and day on which the child is no longer eligible for the Migrant Education Program. This date should initially be a date equal to 36 months from the Qualifying Arrival Date to indicate the end of MEP eligibility or the student reaches 22 years of age, whichever comes first.</p>
+    </Description>
+    <Type name="xs:date"/>
+    <cedsId>000430</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000430</cedsURL>
+  </Item>
+  <Item>
+    <Element>EnrollmentType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The type of school/migrant education project in which instruction and/or support services are provided.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000437</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000437</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>ParticipationStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indicator of whether the student is served by a Migrant Education Program (MEP).</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000185</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000185</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+</DataObject>

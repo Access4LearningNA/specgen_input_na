@@ -74,6 +74,8 @@
     <Element>subject</Element>
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="xSubjectType"/>
+    <cedsId>000066</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000066</cedsURL>
   </Item>
   <Item>
     <Element>applicableEducationLevels</Element>

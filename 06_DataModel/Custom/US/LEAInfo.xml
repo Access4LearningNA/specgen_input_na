@@ -22,8 +22,18 @@
       <p>The locally-assigned identifier for this LEA.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"/>
-    <cedsId>000365</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000365</cedsURL>
+    <cedsId>001068</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001068</cedsURL>
+  </Item>
+  <Item>
+    <Element>LocalIdSystem</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The locally-assigned identifier for this LEA.</p>
+    </Description>
+    <Type name="xs:string"/>
+    <cedsId>001072</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001072</cedsURL>
   </Item>
   <Item>
     <Element>StateProvinceId</Element>
@@ -48,6 +58,8 @@
       <p>Name of LEA.</p>
     </Description>
     <Type ref="CommonTypes" name="LEANameType"/>
+    <cedsId>000204</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000204</cedsURL>
   </Item>
   <Item>
     <Element>LEAURL</Element>
@@ -123,12 +135,58 @@
     <cedsURL>https://ceds.ed.gov/element/000174</cedsURL>
   </Item>
   <Item>
+    <Element>OperationalStatusDate</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The effective date for a change in operational status.</p>
+    </Description>
+    <Type name="xs:date"/>
+    <cedsId>000534</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000534</cedsURL>
+  </Item>  
+  <Item>
     <Element>CongressionalDistrict</Element>
     <Characteristics>O</Characteristics>
     <Description>
       <p>Number for the US congressional district where the LEA is located.</p>
     </Description>
     <Type ref="CommonTypes" name="CongressionalDistrictType"/>
+  </Item>
+  <Item>
+    <Element>TitleIProgramType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The type of Title I program offered in the school or district.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000284</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000284</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>TitleIIILanguageInstructionProgramType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The type of Title III language instructional programs.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000447</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000447</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>

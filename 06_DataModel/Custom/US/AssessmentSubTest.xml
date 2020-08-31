@@ -54,6 +54,8 @@
     </Description>
     <Characteristics>O</Characteristics>
     <Type name="xs:token"/>
+    <cedsId>000021</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000021</cedsURL>
   </Item>
   <Item>
     <Element>GradeLevels</Element>

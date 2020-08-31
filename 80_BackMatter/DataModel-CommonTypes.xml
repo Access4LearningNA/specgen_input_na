@@ -796,6 +796,16 @@
       </Description>
       <Type name="xs:token"/>
     </Item>
+    <Item>
+      <Element>MilitaryConnectedStudent</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>An indication that the student&#8217;s parent or guardian is on Active Duty, in the National Guard, or in the Reserve components of the United States military services</p>
+      </Description>
+      <Type name="xs:string"/>
+      <cedsId>001576</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001576</cedsURL>
+    </Item>
     <xhtml:Example xmlns="" name="Demographics - Example 1">
       <Demographics>
         <RaceList>
@@ -2264,6 +2274,158 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
+  <CommonElement name="StudentParticipationCommonType" type="true">
+    <Intro>
+      <p>This is a common element used to determine whether a student participated and/or completed.</p>
+    </Intro>
+    <Item>
+      <Element>StudentParticipationCommonType</Element>
+      <Characteristics/>
+      <Description>
+        <p>Whether a student participated and/or completed.</p>
+      </Description>
+    </Item>    
+    <Item>
+      <Element>Indicator</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>An indication of whether a student participated in an assessment.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000025</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000025</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>ReasonNotCompleting</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The primary reason a participant did not complete an assessment.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000540</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000540</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>ReasonNotTested</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The primary reason a student is not tested.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000228</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000228</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="SchoolCharterType" type="true">
+    <Intro>
+      <p>This is a common element that contains fields concerned with establishment or continuation of a charter school.</p>
+    </Intro>
+    <Item>
+      <Element>SchoolCharterType</Element>
+      <Characteristics/>
+      <Description>
+        <p>Contains fields concerned with establishment or continuation of a charter school.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Attribute>Type</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The category of charter school.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000710</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000710</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>TypeCodeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>    
+    <Item>
+      <Element>ApprovalAgencyType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The type of agency that approved the establishment or continuation of a charter school.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>001292</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001292</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>ApprovalDate</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The effective date of the contract (or charter) that an approved charter school authorizer authorized the charter school to operate in the state under the state's charter school legislation.</p>
+      </Description>
+      <Type name="xs:date"/>
+      <cedsId>001652</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001652</cedsURL>
+    </Item>
+    <Item>
+      <Element>RenewalDate</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The date by which the charter school must renew its contract (or charter) with an approved charter school authorizer in order to continue to operate in the state under the state's charter school legislation.</p>
+      </Description>
+      <Type name="xs:date"/>
+      <cedsId>001653</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001653</cedsURL>
+    </Item>
+    <Item>
+      <Element>ManagementOrganizationType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The type of organization that is a separate legal entity that 1) contracts with one or more charter schools to manage, operate, and oversee the charter schools; or 2) holds a charter, or charters, to operate multiple charter schools.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>001650</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001650</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>    
+  </CommonElement>  
   <CommonElement name="GradeLevelType" type="true">
     <Intro>
       <p> This is a common element used to specify a grade level. It is used in StudentSchoolEnrollment and assessment-related objects. </p>
@@ -2732,6 +2894,8 @@
         <p>Other identification information associated with a school or LEA.</p>
       </Description>
       <Type name="xs:normalizedString"/>
+      <cedsId>001069</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001069</cedsURL>
     </Item>
     <Item>
       <Attribute>Code</Attribute>
@@ -2739,7 +2903,8 @@
         <p>Code indicating which identification system is used.</p>
       </Description>
       <Type name="xs:token"/>
-      <Type type="subset" name="xs:token"/>
+      <cedsId>001073</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001073</cedsURL>
     </Item>
     <Item>
       <Attribute>CodeCodeset</Attribute>
@@ -3146,6 +3311,24 @@
       <Type ref="CommonTypes" name="StateProvinceType"/>
       <cedsId>000267</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000267</cedsURL>
+    </Item>
+    <Item>
+      <Element>StateANSICode</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The American National Standards Institute (ANSI) two-digit code for the state.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000424</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000424</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
     </Item>
     <Item>
       <Element>Country</Element>
@@ -4144,6 +4327,8 @@
         <p>A prefix associated with the name like Mr., Ms., etc.</p>
       </Description>
       <Type name="xs:normalizedString"/>
+      <cedsId>000212</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000212</cedsURL>
     </Item>
     <Item>
       <Element>LastName</Element>
@@ -4152,6 +4337,8 @@
         <p>The last name.</p>
       </Description>
       <Type ref="CommonTypes" name="LastNameType"/>
+      <cedsId>000172</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000172</cedsURL>
     </Item>
     <Item>
       <Element>FirstName</Element>
@@ -4160,6 +4347,8 @@
         <p>The first name.</p>
       </Description>
       <Type ref="CommonTypes" name="FirstNameType"/>
+      <cedsId>000115</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000115</cedsURL>      
     </Item>
     <Item>
       <Element>MiddleName</Element>
@@ -4597,6 +4786,154 @@
       </IdentificationInfoList>
     </xhtml:Example>
   </CommonElement>
+  <CommonElement name="FederalProgramListType" type="true">
+    <Item>
+      <Element>FederalProgramListType</Element>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>FederalProgram</Element>
+      <Characteristics>MR</Characteristics>
+      <Type ref="CommonTypes" name="FederalProgramType"/>
+      <Description>
+        <p>The federal program that may impact funding.</p>
+      </Description>
+    </Item>
+  </CommonElement>
+  <CommonElement name="FederalProgramType" type="true">
+    <Intro>
+      <p>The federal program that may impact funding.</p>
+    </Intro>
+    <Item>
+      <Element>FederalProgramType</Element>
+    </Item>
+    <Item>
+      <Element>Code</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The unique five-digit number assigned to each federal program as listed in the Catalog of Federal Domestic Assistance (CFDA) Programs. See http://www.cfda.gov/.</p>
+      </Description>
+      <Type name="xs:decimal"/>
+      <cedsId>000547</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000547</cedsURL>
+    </Item>
+    <Item>
+      <Element>FundingAllocation</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The amount of federal dollars distributed to local education agencies (LEAs), retained by the state education agency (SEA) for program administration or other approved state-level activities (including unallocated, transferred to another state agency, or distributed to entities other than LEAs).</p>
+      </Description>
+      <Type name="xs:decimal"/>
+      <cedsId>000549</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000549</cedsURL>
+    </Item>
+  </CommonElement>
+  
+  <CommonElement name="SpecialEductionType" type="true">
+    <Intro>
+      <p>For tracking common special eduction effort.</p>
+    </Intro>
+    <Item>
+      <Element>SpecialEductionType</Element>
+    </Item>
+    <Item>
+      <Element>AgeGroupList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The groups of students by age receiving special education.</p>
+      </Description>
+      <Type ref="CommonTypes" name="AgeGroupListType"/>
+    </Item>
+    <Item>
+      <Element>TitleList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Titles of personnel employed and contracted to provide special education and related services for children with disabilities.</p>
+      </Description>
+      <Type ref="CommonTypes" name="EmployeeTitleListType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="AgeGroupListType" type="true">
+    <Item>
+      <Element>AgeGroupListType</Element>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>AgeGroup</Element>
+      <Characteristics>MR</Characteristics>
+      <Type ref="CommonTypes" name="AgeGroupType"/>
+      <Description>
+        <p>The age range of special education students taught.</p>
+      </Description>
+    </Item>
+  </CommonElement>
+  <CommonElement name="AgeGroupType" type="true">
+    <Intro>
+      <p>The age range of special education students taught.</p>
+    </Intro>
+    <Item>
+      <Element>AgeGroupType</Element>
+    </Item>
+    <Item>
+      <Element>AgeGroup</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The age range of special education students taught.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000564</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000564</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>  
+  <CommonElement name="EmployeeTitleListType" type="true">
+    <Item>
+      <Element>EmployeeTitleListType</Element>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>TitleList</Element>
+      <Characteristics>MR</Characteristics>
+      <Type ref="CommonTypes" name="EmployeeTitleType"/>
+      <Description>
+        <p> Titles of personnel employed and contracted to provide special education and related services for children with disabilities.</p>
+      </Description>
+    </Item>
+  </CommonElement>
+  <CommonElement name="EmployeeTitleType" type="true">
+    <Intro>
+      <p>Titles of personnel employed and contracted to provide special education and related services for children with disabilities.</p>
+    </Intro>
+    <Item>
+      <Element>EmployeeTitleType</Element>
+    </Item>
+    <Item>
+      <Element>Title</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p> Titles of personnel employed and contracted to provide special education and related services for children with disabilities. </p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>000558</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000558</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>  
+  
   <CommonElement name="PersonInfoType" type="true">
     <Item>
       <Element>PersonInfoType</Element>

@@ -5,7 +5,7 @@
 		<inputDocument>SIF_DataModel.xml</inputDocument>
 		<sifNamespace>http://www.sifassociation.org/datamodel/na/4.x</sifNamespace>
 		<localizationCode>us</localizationCode>
-		<schemaVersion>4.0</schemaVersion>
+		<schemaVersion>4.1</schemaVersion>
 		<jsonExamplesXslt>98_Xslt/sif2jsonspecgen.xslt</jsonExamplesXslt>
 		<resolveExtensions>true</resolveExtensions>
 		<isDraft>false</isDraft>

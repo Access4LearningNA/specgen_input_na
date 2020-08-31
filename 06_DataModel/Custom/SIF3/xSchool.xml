@@ -36,7 +36,7 @@
     </Description>
     <Type ref="CommonTypes" name="xOrganizationIdType"/>
     <cedsId>001071</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/001071</cedsURL>
+    <cedsURL>https://ceds.ed.gov/element/001069</cedsURL>
   </Item>
   <Item>
     <Element>stateProvinceId</Element>
@@ -46,7 +46,7 @@
     </Description>
     <Type ref="CommonTypes" name="xOrganizationIdType"/>
     <cedsId>001071</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/001071</cedsURL>
+    <cedsURL>https://ceds.ed.gov/element/001069</cedsURL>
   </Item>
   <Item>
     <Element>otherIds</Element>

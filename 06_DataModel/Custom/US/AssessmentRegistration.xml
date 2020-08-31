@@ -74,6 +74,14 @@
     <Type ref="CommonTypes" name="AssessmentStudentSnapshotType"/>
   </Item>
   <Item>
+    <Element>StudentParticipation</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Whether a student participated and/or completed.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StudentParticipationCommonType"/>
+  </Item>
+  <Item>
     <Element>LEAInfoRefId</Element>
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="IdRefType"/>

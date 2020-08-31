@@ -22,6 +22,8 @@
       <p>The locally-assigned identifier for this SEA.</p>
     </Description>
     <Type ref="CommonTypes" name="LocalIdType"/>
+    <cedsId>001490</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001490</cedsURL>    
   </Item>
   <Item>
     <Element>NCESId</Element>
@@ -84,6 +86,24 @@
     <Characteristics>O</Characteristics>
     <Description>Container element for EDEN-specific information.</Description>
     <Type ref="CommonTypes" name="EDENInfoType"/>
+  </Item>
+  <Item>
+    <Element>CTEGraduationRateInclusion</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication of how CTE concentrators are included in the state's computation of its graduation rate.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000075</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000075</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>

@@ -32,8 +32,26 @@
       <p>The state-assigned identifier for this school.</p>
     </Description>
     <Type ref="CommonTypes" name="StateProvinceIdType"/>
-    <cedsId>000364</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000364</cedsURL>
+    <cedsId>000826</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000826</cedsURL>
+  </Item>
+  <Item>
+    <Element>StateProvinceIdSystem</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A coding scheme that is used for identification and record-keeping purposes by schools, social services, or other agencies to refer to an organization.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000827</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000827</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>NCESId</Element>
@@ -88,8 +106,8 @@
       <p>An indication of the level of the educational institution.</p>
     </Description>
     <Type name="xs:token"/>
-    <cedsId>000242</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000242</cedsURL>
+    <cedsId>000241</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000241</cedsURL>
   </Item>
   <Item>
     <Attribute>Codeset</Attribute>
@@ -202,6 +220,24 @@
     <Type name="xs:token"/>
   </Item>
   <Item>
+    <Element>TitleIProgramType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The type of Title I program offered in the school or district.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000284</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000284</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
     <Element>OperationalStatus</Element>
     <Characteristics>O</Characteristics>
     <Description>
@@ -210,6 +246,114 @@
     <Type ref="CommonTypes" name="OperationalStatusType"/>
     <cedsId>000533</cedsId>
     <cedsURL>https://ceds.ed.gov/element/000533</cedsURL>
+  </Item>
+  <Item>
+    <Element>OperationalStatusDate</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>The effective date for a change in operational status.</p>
+    </Description>
+    <Type name="xs:date"/>
+    <cedsId>000534</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000534</cedsURL>
+  </Item>
+  <Item>
+    <Element>SchoolImprovementStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication of the improvement stage of the school.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000240</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000240</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>StatePovertyDesignation</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The designation of a school&#8217;s poverty quartile for purposes of determining classes taught by highly qualified teachers in high and low poverty schools, according to state&#8217;s indicator of poverty.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000585</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000585</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>NationalSchoolLunchProgramStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The classification of participation by a school in the National School Lunch Program.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>001767</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001767</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>SchoolCharter</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Fields concerning the establishment or continuation of a charter school.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SchoolCharterType"/>
+  </Item>
+  <Item>
+    <Element>SharedTimeIndicator</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication that a school offers career and technical education or other educational services in which some or all students are enrolled at a separate school of record and attend the shared-time school on a part-time basis.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000257</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000257</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>VirtualSchoolStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication of the extent to which a public school offers instruction in which students and teachers are separated by time and/or location, and interaction occurs via computers and/or telecommunications technologies.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>001766</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001766</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>CongressionalDistrict</Element>

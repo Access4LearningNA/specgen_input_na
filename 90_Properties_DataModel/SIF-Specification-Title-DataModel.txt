@@ -1,1 +1,1 @@
-﻿SIF Data Model Implementation Specification (NA) 4.0
+﻿SIF<sup>®</sup> Data Model Implementation Specification (NA) 4.1

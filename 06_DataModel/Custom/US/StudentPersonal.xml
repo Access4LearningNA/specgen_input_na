@@ -116,6 +116,16 @@
     <Type ref="CommonTypes" name="EmailListType"/>
   </Item>
   <Item>
+    <Element>CohortYear</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The school year in which the student entered the baseline group used for computing completion rates (e.g., high school, program).</p>
+    </Description>
+    <Type ref="CommonTypes" name="OnTimeGraduationYearType"/>
+    <cedsId>000046</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000046</cedsURL>
+  </Item>  
+  <Item>
     <Element>ProjectedGraduationYear</Element>
     <Characteristics>O</Characteristics>
     <Description>
@@ -130,6 +140,8 @@
       <p>First projected graduation year, usually determined when student is accepted into 9th grade.</p>
     </Description>
     <Type ref="CommonTypes" name="OnTimeGraduationYearType"/>
+    <cedsId>000584</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000584</cedsURL>    
   </Item>
   <Item>
     <Element>GraduationDate</Element>
@@ -170,8 +182,8 @@
     <Element>IDEA</Element>
     <Characteristics>O</Characteristics>
     <Type name="xs:token"/>
-    <cedsId>000577</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000577</cedsURL>
+    <cedsId>000151</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000151</cedsURL>
   </Item>
   <Item>
     <Attribute>Codeset</Attribute>
@@ -230,8 +242,8 @@
     <Element>EconomicDisadvantage</Element>
     <Characteristics>O</Characteristics>
     <Type name="xs:token"/>
-    <cedsId>000092</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000092</cedsURL>
+    <cedsId>000086</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000086</cedsURL>
   </Item>
   <Item>
     <Attribute>Codeset</Attribute>
@@ -245,6 +257,8 @@
     <Element>ELL</Element>
     <Characteristics>O</Characteristics>
     <Type name="xs:token"/>
+    <cedsId>000565</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000565</cedsURL>
   </Item>
   <Item>
     <Attribute>Codeset</Attribute>
@@ -258,6 +272,26 @@
     <Element>Homeless</Element>
     <Characteristics>O</Characteristics>
     <Type name="xs:token"/>
+    <cedsId>000149</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000149</cedsURL>    
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Element>HomelessServicedIndicator</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>An indication of whether homeless children and youth were served by a McKinney-Vento program in the state.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000147</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000147</cedsURL>
   </Item>
   <Item>
     <Attribute>Codeset</Attribute>
@@ -299,6 +333,8 @@
     <Element>Immigrant</Element>
     <Characteristics>O</Characteristics>
     <Type name="xs:token"/>
+    <cedsId>000291</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000291</cedsURL>
   </Item>
   <Item>
     <Attribute>Codeset</Attribute>

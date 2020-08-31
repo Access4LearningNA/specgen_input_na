@@ -34,8 +34,26 @@
     <Description>
       <p>The state, local or publisher unique Id for the assessment.</p>
     </Description>
-    <cedsId>000630</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000630</cedsURL>
+    <cedsId>001067</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001067</cedsURL>
+  </Item>
+  <Item>
+    <Element>AssessmentIdSystem</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A coding scheme that is used for identification and record-keeping purposes by schools, social services, or other agencies to refer to an assessment.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000365</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000365</cedsURL>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
   </Item>
   <Item>
     <Element>AssessmentPackageRefId</Element>
