@@ -55,56 +55,17 @@
   <Item>
     <Element>Participant</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>An indication a student has met the state-defined threshold of Career and Technical Education participation as defined in the State's approved Perkins IV State Plan.</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000592</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000592</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentCareerTechnicalParticipantType"/>
   </Item>
   <Item>
     <Element>NontraditionalGenderStatus</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>An indication of whether CTE participants were members of an underrepresented gender group (where one gender comprises less than 25 percent of the persons employed in those occupations or field of work).</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000588</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000588</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentCareerTechnicalNontraditionalGenderStatusType"/>
   </Item>
   <Item>
     <Element>DisplacedHomemaker</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>A person who ; (A) (i) has worked primarily without remuneration to care for a home and family, and for that reason has diminished marketable skills; (ii) has been dependent on the income of another family member but is no longer supported by that income; or (iii) is a parent whose youngest dependent child will become ineligible to receive assistance under part A of title IV of the Social Security Act (42 U.S.C. 601 et seq.) not later than 2 years after the date on which the parent applies for assistance under such title; and (B) is unemployed or underemployed and is experiencing difficulty in obtaining or upgrading employment.</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000084</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000084</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentCareerTechnicalDisplacedHomemakerType"/>
   </Item>
   <Item>
     <Element>ProgramParticipationExitDate</Element>
@@ -129,19 +90,6 @@
   <Item>
     <Element>SingleParentOrSinglePregnantWoman</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>A student who, at some time during the school year, is either a pregnant female student who is unmarried; or a male or female student who is unmarried or legally separated from a spouse and has a minor child or children.</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000580</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000580</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentCareerTechnicalSingleParentOrSinglePregnantWomanType"/>
   </Item>
 </DataObject>

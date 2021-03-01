@@ -47,110 +47,32 @@
   <Item>
     <Element>HighSchoolGraduationRateIndicatorStatus</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>An indication of whether the school or district met the High School Graduation Rate requirement in accordance with state definition for the purposes of determining AYP.</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000140</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000140</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="SchoolAccountabilityHighSchoolGraduationRateIndicatorStatusType"/>
   </Item>
   <Item>
     <Element>PersistentlyDangerousStatus</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>An indication of whether the school is identified as persistently dangerous in accordance with state definition.</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000210</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000210</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="SchoolAccountabilityPersistentlyDangerousStatusType"/>
   </Item>
   <Item>
     <Element>ProficiencyTargetStatusForMath</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>An indication of whether the school or district met the math proficiency target in accordance with state definition for the purposes of determining AYP.</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000221</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000221</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="SchoolAccountabilityProficiencyTargetStatusForMathType"/>
   </Item>
   <Item>
     <Element>ProficiencyTargetStatusForReadingAndLanguageArts</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>An indication of whether the school or district met the reading/language arts proficiency target in accordance with state definition for the purposes of determining AYP.</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000553</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000553</cedsURL>
+    <Type ref="CommonTypes" name="SchoolAccountabilityProficiencyTargetStatusForReadingAndLanguageArtsType"/>
   </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>  
   <Item>
     <Element>SchoolOperationalStatus</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>The current status of the school operations, exclusive of scheduled breaks, holidays, or other temporary interruptions.</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000553</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000553</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="SchoolAccountabilitySchoolOperationalStatusType"/>
   </Item>
   <Item>
     <Element>ReconstitutedStatus</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>An indication that the school was restructured, transformed or otherwise changed as a consequence of the state&#8217;s accountability system under ESEA or as a result of School Improvement Grants (SIG).</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000230</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000230</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="SchoolAccountabilityReconstitutedStatusType"/>
   </Item>
   <Item>
     <Element>SchoolImprovementExitDate</Element>
@@ -165,19 +87,6 @@
   <Item>
     <Element>SchoolImprovementFundsStatus</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>An indication of whether the school received funds under Section 1003 of ESEA, as amended.</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000238</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000238</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="SchoolAccountabilitySchoolImprovementFundsStatusType"/>
   </Item>
 </DataObject>

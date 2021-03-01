@@ -653,20 +653,7 @@
     <Item>
       <Element>Gender</Element>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>Person's gender.</p>
-      </Description>
-      <Type name="xs:token"/>
-      <cedsId>000255</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000255</cedsURL>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="DemographicsGenderType"/>
     </Item>
     <Item>
       <Element>BirthDate</Element>
@@ -681,20 +668,7 @@
     <Item>
       <Element>BirthDateVerification</Element>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>Means by which the person's birth date was validated.</p>
-      </Description>
-      <Type name="xs:token"/>
-      <cedsId>000618</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000618</cedsURL>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="DemographicsBirthDateVerificationType"/>
     </Item>
     <Item>
       <Element>PlaceOfBirth</Element>
@@ -755,18 +729,7 @@
     <Item>
       <Element>CitizenshipStatus</Element>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>The person's citizenship status.</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="DemographicsCitizenshipStatusType"/>
     </Item>
     <Item>
       <Element>EnglishProficiency</Element>
@@ -2306,38 +2269,12 @@
     <Item>
       <Element>ReasonNotCompleting</Element>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>The primary reason a participant did not complete an assessment.</p>
-      </Description>
-      <Type name="xs:token"/>
-      <cedsId>000540</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000540</cedsURL>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="StudentParticipationCommonReasonNotCompletingType"/>
     </Item>
     <Item>
       <Element>ReasonNotTested</Element>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>The primary reason a student is not tested.</p>
-      </Description>
-      <Type name="xs:token"/>
-      <cedsId>000228</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000228</cedsURL>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="StudentParticipationCommonReasonNotTestedType"/>
     </Item>
   </CommonElement>
   <CommonElement name="SchoolCharterType" type="true">
@@ -2410,21 +2347,8 @@
     <Item>
       <Element>ManagementOrganizationType</Element>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>The type of organization that is a separate legal entity that 1) contracts with one or more charter schools to manage, operate, and oversee the charter schools; or 2) holds a charter, or charters, to operate multiple charter schools.</p>
-      </Description>
-      <Type name="xs:token"/>
-      <cedsId>001650</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/001650</cedsURL>
+      <Type ref="CommonTypes" name="SchoolCharterManagementOrganizationTypeType"/>
     </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>    
   </CommonElement>  
   <CommonElement name="GradeLevelType" type="true">
     <Intro>
@@ -2651,21 +2575,8 @@
     </Item>
     <Item>
       <Element>CourseLevel</Element>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>Conveys the level of the course.</p>
-      </Description>
-      <Type name="xs:token"/>
-      <cedsId>000248</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000248</cedsURL>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="SCEDCodeCourseLevelType"/>
     </Item>
     <Item>
       <Element>AvailableCredit</Element>
@@ -3645,20 +3556,7 @@
     <Item>
       <Element>LanguageType</Element>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>An indication of the function and context in which an individual uses a language to communicate.</p>
-      </Description>
-      <Type name="xs:token"/>
-      <cedsId>000316</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000316</cedsURL>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="LanguageContainerLanguageTypeType"/>
     </Item>
     <Item>
       <Element>Dialect</Element>
@@ -5080,45 +4978,43 @@
     <Item>
       <Attribute>RefId</Attribute>
       <Characteristics>M</Characteristics>
-      <Type name="RefIdType"/>
       <Description>
         <p>The GUID that uniquely identifies an instance of the package.</p>
       </Description>
+      <Type ref="CommonTypes" name="RefIdType"/>
     </Item>
-    <Choice>
-      <Item>
-        <Element>XMLData</Element>
-        <Characteristics>C</Characteristics>
-        <Description>
-          <p>Contains an arbitary XML element, encoded in UTF-8.</p>
-        </Description>
-        <Type ref="CommonTypes" name="XMLDataType"/>
-      </Item>
-      <Item>
-        <Element>TextData</Element>
-        <Characteristics>C</Characteristics>
-        <Description>
-          <p>Contains arbitrary text, encoded in UTF-8.</p>
-        </Description>
-        <Type ref="CommonTypes" name="TextDataType"/>
-      </Item>
-      <Item>
-        <Element>BinaryData</Element>
-        <Characteristics>C</Characteristics>
-        <Description>
-          <p>Contains the base64Binary encoding of binary or text data not encoded in UTF-8.</p>
-        </Description>
-        <Type ref="CommonTypes" name="BinaryDataType"/>
-      </Item>
-      <Item>
-        <Element>Reference</Element>
-        <Characteristics>C</Characteristics>
-        <Description>
-          <p>References external content via a URL.</p>
-        </Description>
-        <Type ref="CommonTypes" name="ReferenceType"/>
-      </Item>
-    </Choice>
+    <Item>
+      <Element>XMLData</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>Contains an arbitary XML element, encoded in UTF-8.</p>
+      </Description>
+      <Type ref="CommonTypes" name="XMLDataType"/>
+    </Item>
+    <Item>
+      <Element>TextData</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>Contains arbitrary text, encoded in UTF-8.</p>
+      </Description>
+      <Type ref="CommonTypes" name="TextDataType"/>
+    </Item>
+    <Item>
+      <Element>BinaryData</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>Contains the base64Binary encoding of binary or text data not encoded in UTF-8.</p>
+      </Description>
+      <Type ref="CommonTypes" name="BinaryDataType"/>
+    </Item>
+    <Item>
+      <Element>Reference</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>References external content via a URL.</p>
+      </Description>
+      <Type ref="CommonTypes" name="ReferenceType"/>
+    </Item>
   </CommonElement>
   <CommonElement name="VersionType" type="true">
     <Item>

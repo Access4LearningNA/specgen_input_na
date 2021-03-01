@@ -17,18 +17,8 @@
   </Item>
   <Item>
     <Element>PersonRefId</Element>
-    <Characteristics>M</Characteristics>
-    <Description>
-      <p>RefId of the person or any other SIF role object instance (e.g., student) of the person.</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"/>
-  </Item>
-  <Item>
-    <Attribute>SIF_Object</Attribute>
-    <Characteristics>M</Characteristics>
-    <Description>
-      <p>The name of the SIF object that is being referenced by the payload of this element.</p>
-    </Description>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="UserOrganizationAssociationPersonRefIdType"/>
   </Item>
   <Item>
     <Element>OrganizationRefId</Element>

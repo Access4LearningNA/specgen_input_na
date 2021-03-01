@@ -89,25 +89,7 @@
   <Item>
     <Element>IncidentLocationRefId</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>GUID of the SIF object that relates to the school or location where the incident occurred, if applicable.</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"/>
-  </Item>
-  <Item>
-    <Attribute>SIF_RefObject</Attribute>
-    <Characteristics>M</Characteristics>
-    <Description>
-      <p>The name of the SIF object to which the GUID relates.</p>
-    </Description>
-    <Values>
-      <Value>
-        <Code>SchoolInfo</Code>
-      </Value>
-      <Value>
-        <Code>LocationInfo</Code>
-      </Value>
-    </Values>
+    <Type ref="CommonTypes" name="DisciplineIncidentIncidentLocationRefIdType"/>
   </Item>
   <Item>
     <Element>IncidentCost</Element>

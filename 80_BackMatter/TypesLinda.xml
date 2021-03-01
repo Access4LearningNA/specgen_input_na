@@ -278,19 +278,8 @@
     </Item>
     <Item>
       <Element>UseInAttendanceCalculations</Element>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>Indicates if the bell period should be included in attendance calculations.</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="BellPeriodUseInAttendanceCalculationsType"/>
     </Item>
   </CommonElement>
   <CommonElement name="MedicalAlertMessagesType" type="true" dm="true">
@@ -1100,18 +1089,7 @@
     <Item>
       <Element>FullYearEnrollment</Element>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>An indication as to whether or not the student was enrolled for the whole school year. If the SchoolYear is in progress as of the SnapDate, use the value "Unknown".</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="HomeEnrollmentFullYearEnrollmentType"/>
     </Item>
   </CommonElement>
   <CommonElement name="RoomListType" type="true" dm="true">
@@ -1246,105 +1224,33 @@
     </Item>
     <Item>
       <Element>ZeroTolerance</Element>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>Identifies whether or not this action taken against a student was imposed as a consequence of state or local zero tolerance policies.</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="DisciplineActionZeroToleranceType"/>
     </Item>
     <Item>
       <Element>FullYearExpulsion</Element>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>Identifies whether or not the action involved an expulsion with or without services for a period of one full year (i.e., 365 days).</p>
-      </Description>
-      <Type name="xs:token"/>
-      <cedsId>000513</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000513</cedsURL>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="DisciplineActionFullYearExpulsionType"/>
     </Item>
     <Item>
       <Element>ShortenedExpulsion</Element>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>Identifies whether or not the action involved an expulsion with or without services that is shortened to a term of less than one year by the superintendent or chief administrator of a school district.</p>
-      </Description>
-      <Type name="xs:token"/>
-      <cedsId>000514</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000514</cedsURL>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="DisciplineActionShortenedExpulsionType"/>
     </Item>
     <Item>
       <Element>PoliceNotification</Element>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>Identifies whether or not the offender's action included notification of local law enforcement, regardless of whether official action was taken.</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="DisciplineActionPoliceNotificationType"/>
     </Item>
     <Item>
       <Element>Arrest</Element>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>Identifies whether or not the offender was arrested.</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="DisciplineActionArrestType"/>
     </Item>
     <Item>
       <Element>AlternativeEducation</Element>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>Identifies whether or not the offender was assigned to an Alternative Education facility.</p>
-      </Description>
-      <Type name="xs:token"/>
-      <cedsId>000578</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000578</cedsURL>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="DisciplineActionAlternativeEducationType"/>
     </Item>
   </CommonElement>
   <CommonElement name="PromotionType" type="true" dm="true">
@@ -2110,18 +2016,7 @@
     <Item>
       <Element>DueToDisability</Element>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>Did the team determine that the offense was a manifestation of the student's disability?</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="ManifestationDeterminationDueToDisabilityType"/>
     </Item>
     <Item>
       <Element>MeetingOutcome</Element>
@@ -2190,37 +2085,13 @@
     </Item>
     <Item>
       <Element>PoliceNotification</Element>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>Identifies whether there was notification of local law enforcement, regardless of whether official action was taken.</p>
-      </Description>
-      <Type name="xs:token"/>
-      <cedsId>000512</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000512</cedsURL>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="IncidentActionPoliceNotificationType"/>
     </Item>
     <Item>
       <Element>Arrest</Element>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>Identifies whether there were any arrests.</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="IncidentActionArrestType"/>
     </Item>
   </CommonElement>
   <CommonElement name="BellPeriodListType" type="true" dm="true">
@@ -2612,131 +2483,43 @@
     </Item>
     <Item>
       <Element>PickupRights</Element>
-      <Characteristics>C</Characteristics>
-      <Description>
-        <p>This element tells whether or not the contact has pickup rights.</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="ContactFlagsPickupRightsType"/>
     </Item>
     <Item>
       <Element>LivesWith</Element>
-      <Characteristics>C</Characteristics>
-      <Description>
-        <p>Does the student live with this contact?</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="ContactFlagsLivesWithType"/>
     </Item>
     <Item>
       <Element>AccessToRecords</Element>
-      <Characteristics>C</Characteristics>
-      <Description>
-        <p>Does this contact have access to the student's records?</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="ContactFlagsAccessToRecordsType"/>
     </Item>
     <Item>
       <Element>EmergencyContact</Element>
-      <Characteristics>C</Characteristics>
-      <Description>
-        <p>Should this contact be notified in case of emergency?</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="ContactFlagsEmergencyContactType"/>
     </Item>
     <Item>
       <Element>HasCustody</Element>
-      <Characteristics>C</Characteristics>
-      <Description>
-        <p>Does this contact have or share custody of the student?</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="ContactFlagsHasCustodyType"/>
     </Item>
     <Item>
       <Element>DisciplinaryContact</Element>
-      <Characteristics>C</Characteristics>
-      <Description>
-        <p>Is this person to be contacted in case of disciplinary action?</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="ContactFlagsDisciplinaryContactType"/>
     </Item>
     <Item>
       <Element>PrimaryCareProvider</Element>
-      <Characteristics>C</Characteristics>
-      <Description>
-        <p>Does this person provide daily living or personal assistance to the student?</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="ContactFlagsPrimaryCareProviderType"/>
     </Item>
     <Item>
       <Element>Other</Element>
-      <Characteristics>C</Characteristics>
-      <Description>
-        <p>This person has a relationship to student(s) that the school needs to document but no other contact flag value is 'Yes'.  An example is a parent who enrolled the student but is deceased and is no longer a valid contact.</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="ContactFlagsOtherType"/>
     </Item>
   </CommonElement>
   <CommonElement name="EvaluationPartType" type="true" dm="true">

@@ -142,58 +142,17 @@
   <Item>
     <Element>Advisor</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>Staff member assigned as an advisor for this enrollment.</p>
-    </Description>
-    <Type ref="CommonTypes" relationship="records student advisor as" count="1:?" name="IdRefType"/>
-  </Item>
-  <Item>
-    <Attribute>SIF_RefObject</Attribute>
-    <Characteristics>M</Characteristics>
-    <Description>
-      <p>The name of the object referenced.</p>
-    </Description>
-    <Values>
-      <Value>
-        <Code>StaffPersonal</Code>
-      </Value>
-    </Values>
+    <Type ref="CommonTypes" name="StudentSchoolEnrollmentAdvisorType"/>
   </Item>
   <Item>
     <Element>Counselor</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>Staff member assigned as a counselor for this enrollment.</p>
-    </Description>
-    <Type ref="CommonTypes" relationship="records student counselor as" count="1:?" name="IdRefType"/>
-  </Item>
-  <Item>
-    <Attribute>SIF_RefObject</Attribute>
-    <Characteristics>M</Characteristics>
-    <Description>
-      <p>The name of the object referenced.</p>
-    </Description>
-    <Values>
-      <Value>
-        <Code>StaffPersonal</Code>
-      </Value>
-    </Values>
+    <Type ref="CommonTypes" name="StudentSchoolEnrollmentCounselorType"/>
   </Item>
   <Item>
     <Element>Calendar</Element>
     <Characteristics>O</Characteristics>
-    <Description>The calendar assigned to this enrollment.</Description>
-    <Type ref="CommonTypes" name="IdRefType"/>
-  </Item>
-  <Item>
-    <Attribute>SIF_RefObject</Attribute>
-    <Characteristics>M</Characteristics>
-    <Description>The name of the object referenced.</Description>
-    <Values>
-      <Value>
-        <Code>CalendarSummary</Code>
-      </Value>
-    </Values>
+    <Type ref="CommonTypes" name="StudentSchoolEnrollmentCalendarType"/>
   </Item>
   <Item>
     <Element>ExitDate</Element>
@@ -269,18 +228,7 @@
   <Item>
     <Element>FTPTStatus</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>An indication of whether the student is enrolled full time or part time.</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentSchoolEnrollmentFTPTStatusType"/>
   </Item>
   <Item>
     <Element>ResidencyStatus</Element>
@@ -292,22 +240,8 @@
   </Item>
   <Item>
     <Element>NonResidentAttendReason</Element>
-    <Characteristics>C</Characteristics>
-    <Description>
-      <p>
-        If the school represented by this enrollment is outside of the student's usual attendance area
-        (as indicated in the ResidencyStatus element), this element indicates the reason that the student attends this school.
-      </p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentSchoolEnrollmentNonResidentAttendReasonType"/>
   </Item>
   <Item>
     <Element>ResponsableSchoolList</Element>

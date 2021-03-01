@@ -95,19 +95,7 @@
   <Item>
     <Element>ManagingSchool</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>The GUID of the school responsible for coordinating the student's program participation.</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"/>
-  </Item>
-  <Item>
-    <Attribute>SIF_RefObject</Attribute>
-    <Characteristics>M</Characteristics>
-    <Values>
-      <Value>
-        <Code>SchoolInfo</Code>
-      </Value>
-    </Values>
+    <Type ref="CommonTypes" name="StudentParticipationManagingSchoolType"/>
   </Item>
   <Item>
     <Element>PartCTransitionMeetingNotHeldReasons</Element>
@@ -446,92 +434,27 @@
   <Item>
     <Element>PerkinsLEPStatus</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>An indication that students have Limited English Proficiency according to the definition in the Carl D. Perkins Career and Technical Education Act of 2006, which is "a secondary student, an adult, or an out-of-school youth, who has limited ability in speaking, reading, writing, or understanding English language, and (a) whose native language is a language other than English, or (b) who lives in a family or community environment in which a language other than English is the dominant language.</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000581</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000581</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentParticipationPerkinsLEPStatusType"/>
   </Item>
   <Item>
     <Element>TitleIIIAccountabilityProgressStatus</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>An indication of the progress made by a student toward English proficiency.</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000536</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000536</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentParticipationTitleIIIAccountabilityProgressStatusType"/>
   </Item>
   <Item>
     <Element>TitleIIIImmigrantParticipationStatus</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>An indication that an immigrant student participated in programs for immigrant children and youth funded under ESEA Title III Section 3114(d)(1) using funds reserved for immigrant education programs/activities.</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000290</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000290</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentParticipationTitleIIIImmigrantParticipationStatusType"/>
   </Item>
   <Item>
     <Element>NeglectedOrDelinquentAchievementIndicator</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>Student was served by Title I, Part D, Subpart 1 of ESEA as amended for at least 90 consecutive days during the reporting period who took both a pre- and post-test.</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000635</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000635</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentParticipationNeglectedOrDelinquentAchievementIndicatorType"/>
   </Item>
   <Item>
     <Element>NeglectedOrDelinquentAcademicOutcomeIndicator</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>Student was served by Title I, Part D, Subpart 2 of ESEA as amended for at least 90 consecutive days during the reporting period who took both a pre- and post-test.</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000636</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000636</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentParticipationNeglectedOrDelinquentAcademicOutcomeIndicatorType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>

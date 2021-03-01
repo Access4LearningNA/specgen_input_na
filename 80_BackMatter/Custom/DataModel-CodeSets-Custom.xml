@@ -2400,7 +2400,7 @@ xmlns="http://sifassociation.org/SpecGen">
 <Grouping code="StudentPlacement" name="StudentPlacement" file="no">
 
   <CodeSet>
-    <ID>Other Types of Transportation</ID>
+    <ID>Other Types Of Transportation</ID>
 
     <Values>
       <Value>
@@ -2653,7 +2653,7 @@ xmlns="http://sifassociation.org/SpecGen">
   </CodeSet>
 
   <CodeSet>
-    <ID>Student Equipment and Technology</ID>
+    <ID>Student Equipment And Technology</ID>
     <Values>
       <Value>
         <Code>S135</Code>

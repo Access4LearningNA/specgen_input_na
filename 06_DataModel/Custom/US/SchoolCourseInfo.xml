@@ -126,20 +126,7 @@
   <Item>
     <Element>GraduationRequirement</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>Does the state require that the course be completed for graduation?</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000137</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000137</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="SchoolCourseInfoGraduationRequirementType"/>
   </Item>
   <Item>
     <Element>Department</Element>
@@ -163,34 +150,12 @@
   <Item>
     <Element>DualCredit</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>Indicates whether this course is applicable in having dual credits.</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="SchoolCourseInfoDualCreditType"/>
   </Item>
   <Item>
     <Element>CTEConcentrator</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>Indicates whether this is a CTE concentrator for this course.</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="SchoolCourseInfoCTEConcentratorType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>

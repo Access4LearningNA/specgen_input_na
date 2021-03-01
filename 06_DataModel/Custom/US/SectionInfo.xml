@@ -123,18 +123,7 @@
   <Item>
     <Element>CountForAttendance</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>Indicates if attendance in this section is collected and used in attendance calculations.</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="SectionInfoCountForAttendanceType"/>
   </Item>
   <Item>
     <Element>BellScheduleRefId</Element>

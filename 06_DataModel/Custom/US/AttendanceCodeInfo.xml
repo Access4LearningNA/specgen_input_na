@@ -55,20 +55,7 @@
   <Item>
     <Element>AttendanceStatus</Element>
     <Characteristics>M</Characteristics>
-    <Description>
-      <p>Excused status of the attendance code.</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000076</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000076</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="AttendanceCodeInfoAttendanceStatusType"/>
   </Item>
   <Item>
     <Element>Description</Element>
@@ -93,34 +80,12 @@
   <Item>
     <Element>UsedForDailyAttendance</Element>
     <Characteristics>M</Characteristics>
-    <Description>
-      <p>Is this attendance code used for daily attendance?</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="AttendanceCodeInfoUsedForDailyAttendanceType"/>
   </Item>
   <Item>
     <Element>UsedForPeriodAttendance</Element>
     <Characteristics>M</Characteristics>
-    <Description>
-      <p>Is this attendance code used for period attendance?</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="AttendanceCodeInfoUsedForPeriodAttendanceType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>

@@ -97,18 +97,7 @@
   <Item>
     <Element>CTEConcentrator</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>Indicates whether this is a CTE concentrator for this course.  This value overrides the SchoolCourseInfo CTEConcentrator value at the student section level..</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentSectionEnrollmentCTEConcentratorType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>

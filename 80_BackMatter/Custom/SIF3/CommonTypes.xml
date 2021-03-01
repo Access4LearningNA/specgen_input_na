@@ -34,7 +34,8 @@
       <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementCriterionType"/>
     </Item>
-  </CommonElement>  
+  </CommonElement>
+  
   <CommonElement name="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveType" type="true" dm="true">
     <Item>
       <Element>iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveType</Element>
@@ -5313,7 +5314,8 @@
       <Description>
         <p>References to separate potentially reusable, shared, or pre-verified addresses.</p>
       </Description>
-    </Item>  
+    </Item>
+  
     <Item>
       <Element>AddressRefId</Element>
       <Characteristics>OR</Characteristics>
@@ -5321,7 +5323,8 @@
         <p>Reference to an address.</p>
       </Description>
       <Type ref="CommonTypes" name="gRefIdPointerType"/>
-    </Item>  
+    </Item>
+  
     <Item>
       <Attribute>AddressRole</Attribute>
       <Characteristics>O</Characteristics>
@@ -6296,7 +6299,8 @@
       </Description>
       <Type name="xs:normalizedString"/>
     </Item>
-  </CommonElement>  
+  </CommonElement>
+  
   <CommonElement name="iepPlanPlacementTransportationType" type="true" dm="true">
     <Item>
       <Element>iepPlanPlacementTransportationType</Element>
@@ -6626,12 +6630,16 @@
       <Element>xStaffReferenceListType</Element>
       <Description>
         <p>A list of staff references.</p>
-      </Description>
-      <Type complex="extension" name="xStaffReferenceType"/>
+      </Description>    
+      <List mode="List"/>
     </Item>
     <Item>
       <Element>otherStaff</Element>
       <Characteristics>OR</Characteristics>
+      <Description>
+        <p>A staff reference entry.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xStaffReferenceType"/>
     </Item>
   </CommonElement>
   <CommonElement name="xMeetingTimeType" type="true" dm="true">

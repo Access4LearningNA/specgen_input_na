@@ -186,18 +186,7 @@
   <Item>
     <Element>AuthorizedActual</Element>
     <Characteristics>M</Characteristics>
-    <Description>
-      <p>Indicator - Identifies whether accommodations in this object are authorized or were actually used.</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="TestAccommodationAuthorizedActualType"/>
   </Item>
   <Item>
     <Element>ActualTestAdministrationDate</Element>

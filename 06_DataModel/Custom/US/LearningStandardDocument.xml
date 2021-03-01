@@ -119,16 +119,7 @@
   <Item>
     <Element>DocumentStatus</Element>
     <Characteristics>M</Characteristics>
-    <Description/>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="LearningStandardDocumentDocumentStatusType"/>
   </Item>
   <Item>
     <Element>DocumentDate</Element>

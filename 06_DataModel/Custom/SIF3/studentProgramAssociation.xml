@@ -63,18 +63,7 @@
   <Item>
     <Element>YearGroup</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>Grade or academic level of student for this enrollment.</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentProgramAssociationYearGroupType"/>
   </Item>
   <Item>
     <Element>ExitDate</Element>
@@ -87,34 +76,12 @@
   <Item>
     <Element>ExitStatus</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>Code indicating the closure status for this enrollment.</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentProgramAssociationExitStatusType"/>
   </Item>
   <Item>
     <Element>ExitType</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>Code indicating the type of exit for this enrollment.</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentProgramAssociationExitTypeType"/>
   </Item>
   <Item>
     <Element>FTE</Element>
@@ -135,18 +102,7 @@
   <Item>
     <Element>PlacementType</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>Provides additional detail concerning enrollment in the program, e.g., Resident, State Placed.</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentProgramAssociationPlacementTypeType"/>
   </Item>
   <Item>
     <Element>ManagingSchoolLocalId</Element>
@@ -170,7 +126,7 @@
     <Description>
       <p>Student-specific funding sources for the student in the program.</p>
     </Description>
-    <Type name="fundingSourceType"/>
+    <Type ref="CommonTypes" name="fundingSourceType"/>
   </Item>
   <xhtml:Example xmlns="">
     <StudentProgramAssociation RefId="Cd9aA9fd-1179-4fab-B205-db7e03b93bE4">

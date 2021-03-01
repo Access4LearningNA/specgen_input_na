@@ -132,20 +132,7 @@
   <Item>
     <Element>ItinerantTeacher</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>Is this staff itinerant for this assignment?</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000528</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000528</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StaffAssignmentItinerantTeacherType"/>
   </Item>
   <Item>
     <Element>InstructionalLevel</Element>

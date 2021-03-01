@@ -117,8 +117,38 @@
 			<listWithKeyConstraints>false</listWithKeyConstraints>
 			<isSifMessage2Xsd>false</isSifMessage2Xsd>
 		</xsdDocument>
-		
-
-		
 	</xsdDocuments>
+	
+  <!-- Other outputs built using XSLT -->
+  <xsltTransformations>
+    <xsltTransformation>
+      <xsltInputFile>98_Xslt\dmToJsonSchemaExtns.xsl</xsltInputFile>
+      <xsltOutputDir>JSON</xsltOutputDir>
+      <xsltOutputFile>jsonSchemaUpdate_US.yaml</xsltOutputFile>
+      <yamlToJson>true</yamlToJson>
+    </xsltTransformation>
+
+    <xsltTransformation>
+      <xsltInputFile>98_Xslt\dmToJsonSchemaStrict.xsl</xsltInputFile>
+      <xsltOutputDir>JSON</xsltOutputDir>
+      <xsltOutputFile>jsonSchemaCreate_US.yaml</xsltOutputFile>
+      <yamlToJson>true</yamlToJson>
+    </xsltTransformation>
+
+    <xsltTransformation>
+      <xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile> 
+      <xsltOutputDir>JSON</xsltOutputDir>
+      <xsltOutputFile>OpenAPI_US.yaml</xsltOutputFile>
+      <yamlToJson>true</yamlToJson>
+    </xsltTransformation>           
+
+    <xsltTransformation>
+      <xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile> 
+      <xsltOutputDir>JSON</xsltOutputDir>
+      <xsltOutputFile>examples_US_4.1.yaml</xsltOutputFile>
+      <yamlToJson>true</yamlToJson>
+    </xsltTransformation>           
+  
+  </xsltTransformations>
+
 </sifSpecificationGeneratorConfig>

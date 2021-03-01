@@ -98,36 +98,12 @@
   <Item>
     <Element>ServicingSchool</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>The GUID of the school responsible for providing and coordinating this service (but physical location where service delivered could be different and is identified in SchoolWhereServiceDelivered).</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"/>
-  </Item>
-  <Item>
-    <Attribute>SIF_RefObject</Attribute>
-    <Characteristics>M</Characteristics>
-    <Values>
-      <Value>
-        <Code>SchoolInfo</Code>
-      </Value>
-    </Values>
+    <Type ref="CommonTypes" name="StudentPlacementServicingSchoolType"/>
   </Item>
   <Item>
     <Element>SchoolWhereServiceDelivered</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>The GUID of the school where the service is delivered.</p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"/>
-  </Item>
-  <Item>
-    <Attribute>SIF_RefObject</Attribute>
-    <Characteristics>M</Characteristics>
-    <Values>
-      <Value>
-        <Code>SchoolInfo</Code>
-      </Value>
-    </Values>
+    <Type ref="CommonTypes" name="StudentPlacementSchoolWhereServiceDeliveredType"/>
   </Item>
   <Item>
     <Element>ServiceProviderType</Element>

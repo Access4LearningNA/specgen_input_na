@@ -148,23 +148,7 @@
   <Item>
     <Element>SchoolBusRouteDetail</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>GUID referring to a BusRouteDetail object that identifies the origin bus stop for an outbound route or the destination bus stop for an inbound route.</p>
-      <p>If the SchoolBusRouteDetail does not exist, then the student does not ride a bus to/from school.</p>
-      <p>
-        Note: this element has been deprecated&#8212;use <code>OriginPoint</code> and <code>DestinationPoint</code>.
-      </p>
-    </Description>
-    <Type ref="CommonTypes" name="IdRefType"/>
-  </Item>
-  <Item>
-    <Attribute>SIF_RefObject</Attribute>
-    <Characteristics>M</Characteristics>
-    <Values>
-      <Value>
-        <Code>BusRouteDetail</Code>
-      </Value>
-    </Values>
+    <Type ref="CommonTypes" name="StudentTransportInfoSchoolBusRouteDetailType"/>
   </Item>
   <Item>
     <Element>DestinationPoint</Element>
@@ -174,50 +158,17 @@
   <Item>
     <Element>StateAidQualification</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>The qualification status of a student entitling local education agency to receive state transportation aid.</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentTransportInfoStateAidQualificationType"/>
   </Item>
   <Item>
     <Element>TransportationStatus</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>Information about whether or not a student is transported to and/or from school or receives services, aid, or payment in lieu of transportation.</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentTransportInfoTransportationStatusType"/>
   </Item>
   <Item>
     <Element>PublicExpense</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>The eligibility of a student for transportation between home and school at local public expense because of distance, disability, or other reasons.</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentTransportInfoPublicExpenseType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>

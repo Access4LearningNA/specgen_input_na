@@ -111,34 +111,12 @@
   <Item>
     <Element>SchedulingTerm</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>Does this TermInfo represent a scheduling term?</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="TermInfoSchedulingTermType"/>
   </Item>
   <Item>
     <Element>AttendanceTerm</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>Does this TermInfo represent an attendance term?</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="TermInfoAttendanceTermType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>

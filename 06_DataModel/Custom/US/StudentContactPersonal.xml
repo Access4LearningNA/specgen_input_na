@@ -51,18 +51,7 @@
   <Item>
     <Element>OptOutEmail</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>A "yes" value indicates person may only be contacted as authorized via email.  This usually indicates they have requested contact be limited to essential purposes and use/release of their contact information (e.g. to Parent Teacher organizations) may be limited.</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentContactPersonalOptOutEmailType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>

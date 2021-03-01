@@ -110,18 +110,7 @@
   <Item>
     <Element>Gender</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>Person's gender.</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentSnapshotGenderType"/>
   </Item>
   <Item>
     <Element>BirthDate</Element>
@@ -166,34 +155,12 @@
   <Item>
     <Element>GraduationAward</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>The award received upon graduation.</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentSnapshotGraduationAwardType"/>
   </Item>
   <Item>
     <Element>GraduationOnTime</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>Did the student graduate in the expected number of years?</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentSnapshotGraduationOnTimeType"/>
   </Item>
   <Item>
     <Element>HomeEnrollment</Element>
@@ -209,167 +176,62 @@
   <Item>
     <Element>IDEA</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentSnapshotIDEAType"/>
   </Item>
   <Item>
     <Element>Migrant</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentSnapshotMigrantType"/>
   </Item>
   <Item>
     <Element>Title1</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentSnapshotTitle1Type"/>
   </Item>
   <Item>
     <Element>GiftedTalented</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentSnapshotGiftedTalentedType"/>
   </Item>
   <Item>
     <Element>EconomicDisadvantage</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:token"/>
-    <cedsId>000086</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000086</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentSnapshotEconomicDisadvantageType"/>
   </Item>
   <Item>
     <Element>ELL</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:token"/>
-    <cedsId>000565</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000565</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentSnapshotELLType"/>
   </Item>
   <Item>
     <Element>Homeless</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:token"/>
-    <cedsId>000149</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000149</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentSnapshotHomelessType"/>
   </Item>
   <Item>
     <Element>Section504</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentSnapshotSection504Type"/>
   </Item>
   <Item>
     <Element>VocationalConcentrator</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentSnapshotVocationalConcentratorType"/>
   </Item>
   <Item>
     <Element>Immigrant</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentSnapshotImmigrantType"/>
   </Item>
   <Item>
     <Element>NeglectedDelinquent</Element>
     <Characteristics>O</Characteristics>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentSnapshotNeglectedDelinquentType"/>
   </Item>
   <Item>
     <Element>FreeAndReducedStatus</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>Student's eligibility for free and reduced meals.</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentSnapshotFreeAndReducedStatusType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>

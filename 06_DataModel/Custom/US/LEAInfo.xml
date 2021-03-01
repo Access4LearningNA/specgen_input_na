@@ -155,38 +155,12 @@
   <Item>
     <Element>TitleIProgramType</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>The type of Title I program offered in the school or district.</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000284</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000284</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="LEAInfoTitleIProgramTypeType"/>
   </Item>
   <Item>
     <Element>TitleIIILanguageInstructionProgramType</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>The type of Title III language instructional programs.</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000447</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000447</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="LEAInfoTitleIIILanguageInstructionProgramTypeType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>

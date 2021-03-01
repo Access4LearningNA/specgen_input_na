@@ -47,20 +47,7 @@
   <Item>
     <Element>PrioritizedForServices</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>An indication that a migratory child 1) is failing to meet, or most at risk of failing to meet, the state's challenging academic content standards and student academic achievement standards; and 2) has experienced interruptions in their education during the regular school year.</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000562</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000562</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentMigrantPrioritizedForServicesType"/>
   </Item>
   <Item>
     <Element>QualifyingArrivalDate</Element>
@@ -95,38 +82,12 @@
   <Item>
     <Element>ContinuationOfServicesReason</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>Reason why the student is being served under the continuation of services provision of the MEP.</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000429</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000429</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentMigrantContinuationOfServicesReasonType"/>
   </Item>
   <Item>
     <Element>ContinuationOfServicesStatus</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>An indication that migrant children are receiving instructional or support services under the continuation of services authority ESEA Title III Section 1304(e)(2)-(3).</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000563</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000563</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentMigrantContinuationOfServicesStatusType"/>
   </Item>
   <Item>
     <Element>LastQualifyingMoveDate</Element>
@@ -151,37 +112,11 @@
   <Item>
     <Element>EnrollmentType</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>The type of school/migrant education project in which instruction and/or support services are provided.</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000437</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000437</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentMigrantEnrollmentTypeType"/>
   </Item>
   <Item>
     <Element>ParticipationStatus</Element>
     <Characteristics>O</Characteristics>
-    <Description>
-      <p>An indicator of whether the student is served by a Migrant Education Program (MEP).</p>
-    </Description>
-    <Type name="xs:token"/>
-    <cedsId>000185</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000185</cedsURL>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentMigrantParticipationStatusType"/>
   </Item>
 </DataObject>

@@ -650,42 +650,12 @@
     <Item>
       <Element>ServicingSchool</Element>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>The GUID of the school responsible for providing and coordinating this service (but physical location where service delivered could be different and is identified in SchoolWhereServiceDelivered).</p>
-      </Description>
-      <Type ref="CommonTypes" name="IdRefType"/>
-    </Item>
-    <Item>
-      <Attribute>SIF_RefObject</Attribute>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p/>
-      </Description>
-      <Values>
-        <Value>
-          <Code>SchoolInfo</Code>
-        </Value>
-      </Values>
+      <Type ref="CommonTypes" name="StudentPlacementDataServicingSchoolType"/>
     </Item>
     <Item>
       <Element>SchoolWhereServiceDelivered</Element>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>The GUID of the school where the service is delivered.</p>
-      </Description>
-      <Type ref="CommonTypes" name="IdRefType"/>
-    </Item>
-    <Item>
-      <Attribute>SIF_RefObject</Attribute>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p/>
-      </Description>
-      <Values>
-        <Value>
-          <Code>SchoolInfo</Code>
-        </Value>
-      </Values>
+      <Type ref="CommonTypes" name="StudentPlacementDataSchoolWhereServiceDeliveredType"/>
     </Item>
     <Item>
       <Element>ServiceProviderType</Element>
@@ -1488,18 +1458,7 @@
     <Item>
       <Element>Gender</Element>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>Person's gender.</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="AssessmentStudentSnapshotGenderType"/>
     </Item>
     <Item>
       <Element>BirthDate</Element>
@@ -1512,28 +1471,12 @@
     <Item>
       <Element>Title1</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="AssessmentStudentSnapshotTitle1Type"/>
     </Item>
     <Item>
       <Element>ELL</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="AssessmentStudentSnapshotELLType"/>
     </Item>
   </CommonElement>
   <CommonElement name="BusInfoEquipmentType" type="true" dm="true">
@@ -1997,18 +1940,7 @@
     <Item>
       <Element>InterventionDelivery</Element>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>How the instruction is delivered.</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="Intervention2InterventionDeliveryType"/>
     </Item>
   </CommonElement>
   <CommonElement name="CurriculumStructuresRefIdListType" type="true" dm="true">
@@ -3251,18 +3183,7 @@
     <Item>
       <Element>HispanicLatino</Element>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p/>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="DemographicsDataHispanicLatinoType"/>
     </Item>
     <Item>
       <Element>CountryOfBirth</Element>
@@ -3913,23 +3834,11 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>    
+    </Item>
     <Item>
       <Element>AcademicTrack</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:token"/>
-      <Description>
-        <p>An indication of the general nature and difficulty of instruction provided throughout a course.</p>
-        <p>Note: This element is deprecated, in favor of the two elements below, beginning with Version 2.2.</p>
-      </Description>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="AcademicPerformanceSummaryAcademicTrackType"/>
     </Item>
     <Item>
       <Element>AcademicFoci</Element>
@@ -4813,19 +4722,8 @@
     </Item>
     <Item>
       <Element>EnergyUnits</Element>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p>One of enumerated list of unit types for energy readings (temperature, electrical energy usage, gas usage and the price for both). </p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="ReadingDataEnergyUnitsType"/>
     </Item>
     <Item>
       <Element>ReadingName</Element>
@@ -5842,24 +5740,7 @@
     <Item>
       <Element>HonorsInformationCode</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:token"/>
-      <Description>
-        <p>A designation of the type of academic distinctions or other honors earned by or awarded to the student.</p>
-        <p>
-        Note: <code>HonorsInformationCode</code> and <code>HonorsDescription</code> are related to honors (athletic award, citizenship award/recognition,
-        medals, honor society membership, etc.) <em>other</em> than graduation and scholar awards and scholarships.  <code>DiplomaCredentialHonorsCode</code>
-        and <code>DiplomaCredentialHonorsDescription</code> are focused on graduation honors like cum laude designations (magna, summa),
-        scholar and honors awards, scholarships, and such.
-				</p>
-      </Description>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="ActivityAwardHonorsInformationCodeType"/>
     </Item>
     <Item>
       <Element>HonorsDescription</Element>
@@ -5874,20 +5755,7 @@
     <Item>
       <Element>DiplomaCredentialHonorsCode</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:token"/>
-      <Description>
-        <p>The nature of recognition given the student for the successful completion of work in high school.</p>
-      </Description>
-      <cedsId>000713</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000713</cedsURL>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="ActivityAwardDiplomaCredentialHonorsCodeType"/>
     </Item>
     <Item>
       <Element>DiplomaCredentialHonorsDescription</Element>
@@ -5902,20 +5770,7 @@
     <Item>
       <Element>CredentialConferred</Element>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>An indicator of the category of credential conferred by a state occupational licensing entity or industry organization for competency in a specific area measured by a set of pre-established standards.</p>
-      </Description>
-      <Type name="xs:token"/>
-      <cedsId>000783</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000783</cedsURL>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="ActivityAwardCredentialConferredType"/>
     </Item>
     <Item>
       <Element>SIF_ExtendedElements</Element>
@@ -5975,34 +5830,12 @@
     <Item>
       <Element>AccountTypeDetail</Element>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>Use AccountTypeDetail when AccountType is "Other". For instance, when an AccountType="Other", and the AccountTypeDetail value is Long Term Asset.</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="AnnualItemAccountTypeDetailType"/>
     </Item>
     <Item>
       <Element>FundType</Element>
       <Characteristics>M</Characteristics>
-      <Description>
-        <p>Is the account a general or special account code designation?</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="AnnualItemFundTypeType"/>
     </Item>
     <Item>
       <Element>FundClassificationCode</Element>
@@ -6025,18 +5858,7 @@ balances, or changes therein, e.g. the code for  Debt Service Funds, or Capital 
     <Item>
       <Element>ExpenditureArea</Element>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>Relative area in which the expenditure was used.</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="AnnualItemExpenditureAreaType"/>
     </Item>
     <Item>
       <Element>Function</Element>
@@ -6135,34 +5957,12 @@ balances, or changes therein, e.g. the code for  Debt Service Funds, or Capital 
     <Item>
       <Element>SpecialAmountType</Element>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>With regard to regional/local education service agencies report of "special" account code information, the account code summarization can be classified as:</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="AnnualItemSpecialAmountTypeType"/>
     </Item>
     <Item>
       <Element>GLAmountType</Element>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>General Ledger Amount Type.  With regard to an account code grouping classified as a General Ledger account:</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="AnnualItemGLAmountTypeType"/>
     </Item>
     <Item>
       <Element>SIF_ExtendedElements</Element>
@@ -6951,22 +6751,7 @@ balances, or changes therein, e.g. the code for  Debt Service Funds, or Capital 
     <Item>
       <Element>ManagingSchool</Element>
       <Characteristics>O</Characteristics>
-      <Description>
-        <p>The GUID of the school responsible for coordinating the student's program participation.</p>
-      </Description>
-      <Type ref="CommonTypes" name="IdRefType"/>
-    </Item>
-    <Item>
-      <Attribute>SIF_RefObject</Attribute>
-      <Characteristics>M</Characteristics>
-      <Description>
-        <p/>
-      </Description>
-      <Values>
-        <Value>
-          <Code>SchoolInfo</Code>
-        </Value>
-      </Values>
+      <Type ref="CommonTypes" name="StudentParticipationDataManagingSchoolType"/>
     </Item>
     <Item>
       <Element>ReferralDate</Element>
@@ -8214,18 +7999,7 @@ balances, or changes therein, e.g. the code for  Debt Service Funds, or Capital 
     <Item>
       <Element>NonResidentAttendReason</Element>
       <Characteristics>C</Characteristics>
-      <Description>
-        <p>If the school represented by this enrollment is outside of the student's usual attendance area (as indicated in the ResidencyStatus element), this element indicates the reason that the student attends this school.</p>
-      </Description>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="StudentSchoolRelationshipNonResidentAttendReasonType"/>
     </Item>
     <Item>
       <Element>SIF_ExtendedElements</Element>
@@ -9105,140 +8879,52 @@ balances, or changes therein, e.g. the code for  Debt Service Funds, or Capital 
     <Item>
       <Element>Migrant</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:token"/>
-      <cedsId>000185</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000185</cedsURL>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="StudentPersonalMigrantType"/>
     </Item>
     <Item>
       <Element>Title1</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="StudentPersonalTitle1Type"/>
     </Item>
     <Item>
       <Element>GiftedTalented</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="StudentPersonalGiftedTalentedType"/>
     </Item>
     <Item>
       <Element>EconomicDisadvantage</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:token"/>
-      <cedsId>000290</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000290</cedsURL>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="StudentPersonalEconomicDisadvantageType"/>
     </Item>
     <Item>
       <Element>ELL</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="StudentPersonalELLType"/>
     </Item>
     <Item>
       <Element>Homeless</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="StudentPersonalHomelessType"/>
     </Item>
     <Item>
       <Element>Section504</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="StudentPersonalSection504Type"/>
     </Item>
     <Item>
       <Element>VocationalConcentrator</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:token"/>
-      <cedsId>000037</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000037</cedsURL>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="StudentPersonalVocationalConcentratorType"/>
     </Item>
     <Item>
       <Element>Immigrant</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:token"/>
-      <cedsId>000291</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000291</cedsURL>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="StudentPersonalImmigrantType"/>
     </Item>
     <Item>
       <Element>NeglectedDelinquent</Element>
       <Characteristics>O</Characteristics>
-      <Type name="xs:token"/>
-    </Item>
-    <Item>
-      <Attribute>Codeset</Attribute>
-      <Characteristics>O</Characteristics>
-      <Description>
-        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-      </Description>
-      <Type name="xs:token"/>
+      <Type ref="CommonTypes" name="StudentPersonalNeglectedDelinquentType"/>
     </Item>
   </CommonElement>
   <CommonElement name="StaffPersonalDataSummaryType" type="true" dm="true">
@@ -9774,19 +9460,7 @@ balances, or changes therein, e.g. the code for  Debt Service Funds, or Capital 
     <Item>
       <Element>DisembarkBusRouteDetail</Element>
       <Characteristics>M</Characteristics>
-      <Description>
-        <p>GUID that identifies the bus stop/route where the student gets off the bus.</p>
-      </Description>
-      <Type ref="CommonTypes" name="IdRefType"/>
-    </Item>
-    <Item>
-      <Attribute>SIF_RefObject</Attribute>
-      <Characteristics>M</Characteristics>
-      <Values>
-        <Value>
-          <Code>BusRouteDetail</Code>
-        </Value>
-      </Values>
+      <Type ref="CommonTypes" name="TransferPointDisembarkBusRouteDetailType"/>
     </Item>
   </CommonElement>
   <CommonElement name="ApprovalListType" type="true" dm="true">

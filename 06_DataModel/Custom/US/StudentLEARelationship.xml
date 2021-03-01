@@ -128,21 +128,7 @@
   <Item>
     <Element>NonResidentAttendReason</Element>
     <Characteristics>C</Characteristics>
-    <Description>
-      <p>Indicates the reason that the student has an affiliation with this LEA if the student is a not a resident of the LEA.</p>
-      <p>
-        The conditional characteristic of this element is defined such that if the LEA participating in this affiliation is outside of the student's usual attendance area, as indicated in the <code>LEARelationshipType/ResidencyStatus</code> element, then this element must be reported.
-      </p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" name="StudentLEARelationshipNonResidentAttendReasonType"/>
   </Item>
   <Item>
     <Element>GradeLevel</Element>
