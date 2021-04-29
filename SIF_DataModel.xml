@@ -45,12 +45,28 @@
 			<dd>
 				<xi:include parse="text"  href="90_Properties_DataModel/SIF-Specification-Navigation-Latest Version.xml"/>
 			</dd>
-			<dt>Primary Schema</dt>
+			<br/>
+			<dt>API Documentation</dt>
+      <dd>
+        <a href="ServiceDocs/index.html">Data Model Services</a>
+      </dd>			
+			<dt>XML Schemas</dt>
 			<dd>
-				<a href="XSD/Schema_NoIncludes_Strict/SIF_Message.xsd">Schema_NoIncludes_Strict (single file, non-annotated)</a>
+				<a href="XSD/Schema_NoIncludes_Strict/SIF_Message.xsd">Schema_NoIncludes_Strict (single file, non-annotated, primary)</a>
 				<a href="XSD/Schema_NoIncludes_Strict.zip">(ZIP archive)</a>
-			</dd>			
-			<dt>Other Schemas</dt>
+			</dd>
+      <dd>
+				<a href="XSD/Schema_NoIncludes_Annotated_Strict/SIF_Message.xsd">Schema_NoIncludes_Annotated_Strict (single file, annotated)</a>
+				<a href="XSD/Schema_NoIncludes_Annotated_Strict.zip">(ZIP archive)</a>
+			</dd>
+			<dd>
+				<a href="XSD/Schema_Strict/SIF_Message.xsd">Schema_Strict (includes, non-annotated)</a>
+				<a href="XSD/Schema_Strict.zip">(ZIP archive)</a>
+			</dd>
+			<dd>
+				<a href="XSD/Schema_Annotated_Strict/SIF_Message.xsd">Schema_Annotated_Strict (includes, annotated)</a>
+				<a href="XSD/Schema_Annotated_Strict.zip">(ZIP archive)</a>
+			</dd>				
 			<dd>
 				<a href="XSD/Schema_NoIncludes_Lax/SIF_Message.xsd">Schema_NoIncludes_Lax (single file, non-annotated)</a>
 				<a href="XSD/Schema_NoIncludes_Lax.zip">(ZIP archive)</a>
@@ -62,34 +78,22 @@
 			<dd>
 				<a href="XSD/Schema_Lax/SIF_Message.xsd">Schema_Lax (includes, non-annotated)</a>
 				<a href="XSD/Schema_Lax.zip">(ZIP archive)</a>
-			</dd>
+ 			</dd>
 			<dd>
 				<a href="XSD/Schema_Annotated_Lax/SIF_Message.xsd">Schema_Annotated_Lax (includes, annotated)</a>
 				<a href="XSD/Schema_Annotated_Lax.zip">(ZIP archive)</a>
 			</dd>
+			<dt>JSON Support</dt>
 			<dd>
-				<a href="XSD/Schema_NoIncludes_Annotated_Strict/SIF_Message.xsd">Schema_NoIncludes_Annotated_Strict (single file, annotated)</a>
-				<a href="XSD/Schema_NoIncludes_Annotated_Strict.zip">(ZIP archive)</a>
-			</dd>
-			<dd>
-				<a href="XSD/Schema_Strict/SIF_Message.xsd">Schema_Strict (includes, non-annotated)</a>
-				<a href="XSD/Schema_Strict.zip">(ZIP archive)</a>
-			</dd>
-			<dd>
-				<a href="XSD/Schema_Annotated_Strict/SIF_Message.xsd">Schema_Annotated_Strict (includes, annotated)</a>
-				<a href="XSD/Schema_Annotated_Strict.zip">(ZIP archive)</a>
-			</dd>
-			<dd style="font-size: smaller">
-				<br/>
-				<em>Note:</em>
-				<em>SIF_Message</em> schemas define every data object element as optional per SIF's Publish/Subscribe and SIF Request/Response Models; 
-				<em>DataModel</em> schemas maintain the cardinality of all data object elements.
+        <a href="background/PESCJSON.pdf">PESC Compliant JSON</a> - <a href="background/scripts.zip">Conversion Scripts</a>
+      </dd>
+      <dd>
+        <a href="background/OpenAPI.zip">OpenAPI &amp; JSON Schemas Files Archive</a>
 			</dd>
 		</dl>
 		<p>This document is also available in these non-normative formats: <a href="ImplementationSpecification.zip">ZIP archive</a>, <a href="ImplementationSpecification.pdf">PDF (for printing as a single file)</a>,
 		<a href="ImplementationSpecification.xlsx">Excel spreadsheet</a>.</p>
 		<p>Summaries of the changes in this release and errata since its release can be found with the <a href="BackgroundSupplementaryDocumentationNonNormative.html#BackgroundSupplementaryDocumentationNonNormative">Background Supplementary Documentation</a></p>
-		<br/>
 		<br/>
 		<p>Copyright &#xA9; <xi:include parse="text" href="90_Properties/SIF-Specification-ReleaseYear.txt"/> <a href="httpS://www.a4l.org">
 				SIF<sup>®</sup> Association (dba <xi:include parse="text" href="90_Properties/SIF Association Trademark Name.txt"/></a>).  All Rights Reserved.

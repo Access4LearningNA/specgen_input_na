@@ -319,4 +319,13 @@
 		<xi:include parse="text" href="US\UserOrganizationAssociation.xml"/>
   </Group>
 
+  <Group name="Privacy Project Team">
+    <Intro>
+      <p>
+        This Project Team will concentrate on end user (District and State) issues relating to student data privacy.
+      </p>
+    </Intro>
+    <xi:include parse="text" href="Global\PersonPrivacyObligationDocument.xml"/>
+  </Group>
+
 </IncludeGroup>

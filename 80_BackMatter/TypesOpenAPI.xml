@@ -1,5 +1,4 @@
 <IncludeGroup xmlns:json="http://json.org/" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://sifassociation.org/SpecGen">
-  
   <CommonElement name="StudentLEARelationshipNonResidentAttendReasonType" type="true" dm="true">
     <Item>
       <Element>StudentLEARelationshipNonResidentAttendReasonType</Element>
@@ -21,7 +20,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="EmployeeCredentialHispanicType" type="true" dm="true">
     <Item>
       <Element>EmployeeCredentialHispanicType</Element>
@@ -178,7 +176,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-  
   <CommonElement name="StudentParticipationManagingSchoolType" type="true" dm="true">
     <Item>
       <Element>StudentParticipationManagingSchoolType</Element>
@@ -236,7 +233,7 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
   <CommonElement name="StudentParticipationTitleIIIImmigrantParticipationStatusType" type="true" dm="true">
     <Item>
@@ -256,7 +253,7 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
   <CommonElement name="StudentParticipationNeglectedOrDelinquentAchievementIndicatorType" type="true" dm="true">
     <Item>
@@ -276,7 +273,7 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
   <CommonElement name="StudentParticipationNeglectedOrDelinquentAcademicOutcomeIndicatorType" type="true" dm="true">
     <Item>
@@ -296,9 +293,8 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
-  
   <CommonElement name="StudentPlacementServicingSchoolType" type="true" dm="true">
     <Item>
       <Element>StudentPlacementServicingSchoolType</Element>
@@ -316,7 +312,7 @@
           <Code>SchoolInfo</Code>
         </Value>
       </Values>
-    </Item>  
+    </Item>
   </CommonElement>
   <CommonElement name="StudentPlacementSchoolWhereServiceDeliveredType" type="true" dm="true">
     <Item>
@@ -335,9 +331,8 @@
           <Code>SchoolInfo</Code>
         </Value>
       </Values>
-    </Item>  
+    </Item>
   </CommonElement>
-  
   <CommonElement name="TestAccommodationAuthorizedActualType" type="true" dm="true">
     <Item>
       <Element>TestAccommodationAuthorizedActualType</Element>
@@ -356,7 +351,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-  
   <CommonElement name="StudentSpecialEducationSummaryEnvironmentForSchoolAgeType" type="true" dm="true">
     <Item>
       <Element>StudentSpecialEducationSummaryEnvironmentForSchoolAgeType</Element>
@@ -375,7 +369,7 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
   <CommonElement name="StudentSpecialEducationSummaryEnvironmentForEarlyChildhoodType" type="true" dm="true">
     <Item>
@@ -395,9 +389,8 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
-  
   <CommonElement name="StudentCareerTechnicalParticipantType" type="true" dm="true">
     <Item>
       <Element>StudentCareerTechnicalParticipantType</Element>
@@ -416,7 +409,7 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
   <CommonElement name="StudentCareerTechnicalNontraditionalGenderStatusType" type="true" dm="true">
     <Item>
@@ -436,7 +429,7 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
   <CommonElement name="StudentCareerTechnicalDisplacedHomemakerType" type="true" dm="true">
     <Item>
@@ -456,7 +449,7 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
   <CommonElement name="StudentCareerTechnicalSingleParentOrSinglePregnantWomanType" type="true" dm="true">
     <Item>
@@ -476,9 +469,8 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
-  
   <CommonElement name="LearningStandardDocumentDocumentStatusType" type="true" dm="true">
     <Item>
       <Element>LearningStandardDocumentDocumentStatusType</Element>
@@ -495,7 +487,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-  
   <CommonElement name="ContentCatalogInstructionalLevelType" type="true" dm="true">
     <Item>
       <Element>ContentCatalogInstructionalLevelType</Element>
@@ -514,7 +505,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-  
   <CommonElement name="AddressSubregionType" type="true" dm="true">
     <Item>
       <Element>AddressSubregionType</Element>
@@ -549,7 +539,7 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
   <CommonElement name="AddressCountryType" type="true" dm="true">
     <Item>
@@ -564,9 +554,8 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
-  
   <CommonElement name="StudentProgramAssociationYearGroupType" type="true" dm="true">
     <Item>
       <Element>StudentProgramAssociationYearGroupType</Element>
@@ -619,7 +608,7 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
   <CommonElement name="StudentProgramAssociationPlacementTypeType" type="true" dm="true">
     <Item>
@@ -637,9 +626,8 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
-  
   <CommonElement name="DisciplineIncidentIncidentLocationRefIdType" type="true" dm="true">
     <Item>
       <Element>DisciplineIncidentIncidentLocationRefIdType</Element>
@@ -665,7 +653,6 @@
       </Values>
     </Item>
   </CommonElement>
-  
   <CommonElement name="AttendanceCodeInfoAttendanceStatusType" type="true" dm="true">
     <Item>
       <Element>AttendanceCodeInfoAttendanceStatusType</Element>
@@ -702,7 +689,7 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
   <CommonElement name="AttendanceCodeInfoUsedForPeriodAttendanceType" type="true" dm="true">
     <Item>
@@ -720,9 +707,8 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
-  
   <CommonElement name="SchoolCourseInfoGraduationRequirementType" type="true" dm="true">
     <Item>
       <Element>SchoolCourseInfoGraduationRequirementType</Element>
@@ -741,7 +727,7 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
   <CommonElement name="SchoolCourseInfoDualCreditType" type="true" dm="true">
     <Item>
@@ -759,7 +745,7 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
   <CommonElement name="SchoolCourseInfoCTEConcentratorType" type="true" dm="true">
     <Item>
@@ -777,9 +763,8 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
-  
   <CommonElement name="SchoolInfoSchoolTypeType" type="true" dm="true">
     <Item>
       <Element>SchoolInfoSchoolTypeType</Element>
@@ -896,7 +881,7 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
   <CommonElement name="SchoolInfoNationalSchoolLunchProgramStatusType" type="true" dm="true">
     <Item>
@@ -916,7 +901,7 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
   <CommonElement name="SchoolInfoSharedTimeIndicatorType" type="true" dm="true">
     <Item>
@@ -936,29 +921,28 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
   <CommonElement name="SchoolInfoVirtualSchoolStatusType" type="true" dm="true">
     <Item>
-        <Element>SchoolInfoVirtualSchoolStatusType</Element>
-        <Characteristics>O</Characteristics>
-        <Description>
-          <p>An indication of the extent to which a public school offers instruction in which students and teachers are separated by time and/or location, and interaction occurs via computers and/or telecommunications technologies.</p>
-        </Description>
-        <Type name="xs:token"/>
-        <cedsId>001766</cedsId>
-        <cedsURL>https://ceds.ed.gov/element/001766</cedsURL>
-      </Item>
-      <Item>
-        <Attribute>Codeset</Attribute>
-        <Characteristics>O</Characteristics>
-        <Description>
-          <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-        </Description>
-        <Type name="xs:token"/>
-      </Item>  
+      <Element>SchoolInfoVirtualSchoolStatusType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>An indication of the extent to which a public school offers instruction in which students and teachers are separated by time and/or location, and interaction occurs via computers and/or telecommunications technologies.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>001766</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001766</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
   </CommonElement>
-  
   <CommonElement name="SectionInfoCountForAttendanceType" type="true" dm="true">
     <Item>
       <Element>SectionInfoCountForAttendanceType</Element>
@@ -977,14 +961,13 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-  
   <CommonElement name="StudentPersonalIDEAType" type="true" dm="true">
     <Item>
       <Element>StudentPersonalIDEAType</Element>
       <Characteristics>O</Characteristics>
       <Type name="xs:token"/>
       <cedsId>000151</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000151</cedsURL>      
+      <cedsURL>https://ceds.ed.gov/element/000151</cedsURL>
     </Item>
     <Item>
       <Attribute>Codeset</Attribute>
@@ -1071,7 +1054,7 @@
       <cedsId>000565</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000565</cedsURL>
     </Item>
-      <Item>
+    <Item>
       <Attribute>Codeset</Attribute>
       <Characteristics>O</Characteristics>
       <Description>
@@ -1086,7 +1069,7 @@
       <Characteristics>O</Characteristics>
       <Type name="xs:token"/>
       <cedsId>000149</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000149</cedsURL>    
+      <cedsURL>https://ceds.ed.gov/element/000149</cedsURL>
     </Item>
     <Item>
       <Attribute>Codeset</Attribute>
@@ -1125,7 +1108,7 @@
       <cedsId>000249</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000249</cedsURL>
     </Item>
-      <Item>
+    <Item>
       <Attribute>Codeset</Attribute>
       <Characteristics>O</Characteristics>
       <Description>
@@ -1182,8 +1165,7 @@
       </Description>
       <Type name="xs:token"/>
     </Item>
-  </CommonElement>  
-
+  </CommonElement>
   <CommonElement name="StudentSchoolEnrollmentAdvisorType" type="true" dm="true">
     <Item>
       <Element>StudentSchoolEnrollmentAdvisorType</Element>
@@ -1244,7 +1226,7 @@
           <Code>CalendarSummary</Code>
         </Value>
       </Values>
-    </Item>  
+    </Item>
   </CommonElement>
   <CommonElement name="StudentSchoolEnrollmentFTPTStatusType" type="true" dm="true">
     <Item>
@@ -1285,7 +1267,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="StudentSectionEnrollmentCTEConcentratorType" type="true" dm="true">
     <Item>
       <Element>StudentSectionEnrollmentCTEConcentratorType</Element>
@@ -1304,7 +1285,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="TermInfoSchedulingTermType" type="true" dm="true">
     <Item>
       <Element>TermInfoSchedulingTermType</Element>
@@ -1341,24 +1321,23 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
-<CommonElement name="StudentSnapshotGenderType" type="true" dm="true">
-  <Item>
-    <Element>StudentSnapshotGenderType</Element>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>Person's gender.</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
-  <Item>
-    <Attribute>Codeset</Attribute>
-    <Characteristics>O</Characteristics>
-    <Description>
-      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
-    </Description>
-    <Type name="xs:token"/>
-  </Item>
+  <CommonElement name="StudentSnapshotGenderType" type="true" dm="true">
+    <Item>
+      <Element>StudentSnapshotGenderType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Person's gender.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
   </CommonElement>
   <CommonElement name="StudentSnapshotGraduationAwardType" type="true" dm="true">
     <Item>
@@ -1508,7 +1487,7 @@
     </Item>
   </CommonElement>
   <CommonElement name="StudentSnapshotSection504Type" type="true" dm="true">
-    <Item> 
+    <Item>
       <Element>StudentSnapshotSection504Type</Element>
       <Characteristics>O</Characteristics>
       <Type name="xs:token"/>
@@ -1585,7 +1564,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="LEAInfoTitleIProgramTypeType" type="true" dm="true">
     <Item>
       <Element>LEAInfoTitleIProgramTypeType</Element>
@@ -1626,7 +1604,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="StaffAssignmentItinerantTeacherType" type="true" dm="true">
     <Item>
       <Element>StaffAssignmentItinerantTeacherType</Element>
@@ -1647,7 +1624,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="StudentContactPersonalOptOutEmailType" type="true" dm="true">
     <Item>
       <Element>StudentContactPersonalOptOutEmailType</Element>
@@ -1666,7 +1642,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="SchoolAccountabilityHighSchoolGraduationRateIndicatorStatusType" type="true" dm="true">
     <Item>
       <Element>SchoolAccountabilityHighSchoolGraduationRateIndicatorStatusType</Element>
@@ -1807,7 +1782,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="SchoolFederalFundSchoolImprovementGrantInterventionTypeType" type="true" dm="true">
     <Item>
       <Element>SchoolFederalFundSchoolImprovementGrantInterventionTypeType</Element>
@@ -1828,7 +1802,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="StudentMigrantPrioritizedForServicesType" type="true" dm="true">
     <Item>
       <Element>StudentMigrantPrioritizedForServicesType</Element>
@@ -1929,7 +1902,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="StudentTransportInfoSchoolBusRouteDetailType" type="true" dm="true">
     <Item>
       <Element>StudentTransportInfoSchoolBusRouteDetailType</Element>
@@ -2007,7 +1979,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="UserOrganizationAssociationPersonRefIdType" type="true" dm="true">
     <Item>
       <Element>UserOrganizationAssociationPersonRefIdType</Element>
@@ -2025,7 +1996,6 @@
       </Description>
     </Item>
   </CommonElement>
-
   <CommonElement name="DemographicsGenderType" type="true" dm="true">
     <Item>
       <Element>DemographicsGenderType</Element>
@@ -2084,7 +2054,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="StudentParticipationCommonReasonNotCompletingType" type="true" dm="true">
     <Item>
       <Element>StudentParticipationCommonReasonNotCompletingType</Element>
@@ -2125,7 +2094,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="SchoolCharterManagementOrganizationTypeType" type="true" dm="true">
     <Item>
       <Element>SchoolCharterManagementOrganizationTypeType</Element>
@@ -2146,7 +2114,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="SCEDCodeCourseLevelType" type="true" dm="true">
     <Item>
       <Element>SCEDCodeCourseLevelType</Element>
@@ -2167,7 +2134,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="LanguageContainerLanguageTypeType" type="true" dm="true">
     <Item>
       <Element>LanguageContainerLanguageTypeType</Element>
@@ -2188,7 +2154,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="BellPeriodUseInAttendanceCalculationsType" type="true" dm="true">
     <Item>
       <Element>BellPeriodUseInAttendanceCalculationsType</Element>
@@ -2207,7 +2172,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="HomeEnrollmentFullYearEnrollmentType" type="true" dm="true">
     <Item>
       <Element>HomeEnrollmentFullYearEnrollmentType</Element>
@@ -2226,7 +2190,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="DisciplineActionZeroToleranceType" type="true" dm="true">
     <Item>
       <Element>DisciplineActionZeroToleranceType</Element>
@@ -2341,7 +2304,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="ManifestationDeterminationDueToDisabilityType" type="true" dm="true">
     <Item>
       <Element>ManifestationDeterminationDueToDisabilityType</Element>
@@ -2360,7 +2322,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="IncidentActionPoliceNotificationType" type="true" dm="true">
     <Item>
       <Element>IncidentActionPoliceNotificationType</Element>
@@ -2399,7 +2360,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="ContactFlagsPickupRightsType" type="true" dm="true">
     <Item>
       <Element>ContactFlagsPickupRightsType</Element>
@@ -2544,7 +2504,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="StudentPlacementDataServicingSchoolType" type="true" dm="true">
     <Item>
       <Element>StudentPlacementDataServicingSchoolType</Element>
@@ -2589,7 +2548,6 @@
       </Values>
     </Item>
   </CommonElement>
-
   <CommonElement name="AssessmentStudentSnapshotGenderType" type="true" dm="true">
     <Item>
       <Element>AssessmentStudentSnapshotGenderType</Element>
@@ -2623,7 +2581,7 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-  <CommonElement name="AssessmentStudentSnapshotELLType" type="true" dm="true">  
+  <CommonElement name="AssessmentStudentSnapshotELLType" type="true" dm="true">
     <Item>
       <Element>AssessmentStudentSnapshotELLType</Element>
       <Characteristics>O</Characteristics>
@@ -2638,7 +2596,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="Intervention2InterventionDeliveryType" type="true" dm="true">
     <Item>
       <Element>Intervention2InterventionDeliveryType</Element>
@@ -2657,7 +2614,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="DemographicsDataHispanicLatinoType" type="true" dm="true">
     <Item>
       <Element>DemographicsDataHispanicLatinoType</Element>
@@ -2676,7 +2632,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="AcademicPerformanceSummaryAcademicTrackType" type="true" dm="true">
     <Item>
       <Element>AcademicPerformanceSummaryAcademicTrackType</Element>
@@ -2694,9 +2649,8 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>  
+    </Item>
   </CommonElement>
-
   <CommonElement name="ReadingDataEnergyUnitsType" type="true" dm="true">
     <Item>
       <Element>ReadingDataEnergyUnitsType</Element>
@@ -2715,7 +2669,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="ActivityAwardHonorsInformationCodeType" type="true" dm="true">
     <Item>
       <Element>ActivityAwardHonorsInformationCodeType</Element>
@@ -2780,7 +2733,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="AnnualItemAccountTypeDetailType" type="true" dm="true">
     <Item>
       <Element>AnnualItemAccountTypeDetailType</Element>
@@ -2798,7 +2750,7 @@
       </Description>
       <Type name="xs:token"/>
     </Item>
-  </CommonElement>  
+  </CommonElement>
   <CommonElement name="AnnualItemFundTypeType" type="true" dm="true">
     <Item>
       <Element>AnnualItemFundTypeType</Element>
@@ -2833,7 +2785,7 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
-    </Item>    
+    </Item>
   </CommonElement>
   <CommonElement name="AnnualItemSpecialAmountTypeType" type="true" dm="true">
     <Item>
@@ -2871,7 +2823,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="StudentParticipationDataManagingSchoolType" type="true" dm="true">
     <Item>
       <Element>StudentParticipationDataManagingSchoolType</Element>
@@ -2893,8 +2844,7 @@
         </Value>
       </Values>
     </Item>
-  </CommonElement>  
-
+  </CommonElement>
   <CommonElement name="StudentSchoolRelationshipNonResidentAttendReasonType" type="true" dm="true">
     <Item>
       <Element>StudentSchoolRelationshipNonResidentAttendReasonType</Element>
@@ -2913,7 +2863,6 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-
   <CommonElement name="TransferPointDisembarkBusRouteDetailType" type="true" dm="true">
     <Item>
       <Element>TransferPointDisembarkBusRouteDetailType</Element>
@@ -2933,11 +2882,30 @@
       </Values>
     </Item>
   </CommonElement>
-
-
-  <CommonElement name="RemoteLearningProfilePrimaryLearningDeviceType" type="true" dm="true">
+  <!-- The following are other additional type for Unity (4.2) and should be reorganized. -->
+  <!-- Remote Learning Location Profile -->
+  <CommonElement name="RemoteLearningLocationProfilePrimaryIndicatorType" type="true">
     <Item>
-      <Element>RemoteLearningProfilePrimaryLearningDeviceType</Element>
+      <Element>RemoteLearningLocationProfilePrimaryIndicatorType</Element>
+      <Description>
+        <p>Is this the primary learning location?</p>
+      </Description>
+      <Values>
+        <Value>
+          <Code>Yes</Code>
+        </Value>
+        <Value>
+          <Code>No</Code>
+        </Value>
+      </Values>
+    </Item>
+    <xhtml:Example xmlns="">
+      <PrimaryIndicator>Yes</PrimaryIndicator>
+    </xhtml:Example>
+  </CommonElement>
+  <CommonElement name="RemoteLearningLocationProfilePrimaryLearningDeviceType" type="true" dm="true">
+    <Item>
+      <Element>RemoteLearningLocationProfilePrimaryLearningDeviceType</Element>
       <Characteristics>O</Characteristics>
       <Description>
         <p>The type of device the student uses most often to complete learning activities away from school.</p>
@@ -2954,13 +2922,13 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-  <CommonElement name="RemoteLearningProfilePrimaryLearningDeviceAccessType" type="true" dm="true">
+  <CommonElement name="RemoteLearningLocationProfilePrimaryLearningDeviceAccessType" type="true" dm="true">
     <Item>
-      <Element>RemoteLearningProfilePrimaryLearningDeviceAccessType</Element>
+      <Element>RemoteLearningLocationProfilePrimaryLearningDeviceAccessType</Element>
       <Characteristics>O</Characteristics>
       <Description>
         <p>An indication of whether the primary learning device is shared or not shared with another individual.</p>
-        <p>Is the student’s primary learning device shared with anyone else?</p>
+        <p>Is the student&#8217;s primary learning device shared with anyone else?</p>
       </Description>
       <Type name="xs:token"/>
     </Item>
@@ -2973,9 +2941,9 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-  <CommonElement name="RemoteLearningProfilePrimaryLearningDeviceProviderType" type="true" dm="true">
+  <CommonElement name="RemoteLearningLocationProfilePrimaryLearningDeviceProviderType" type="true" dm="true">
     <Item>
-      <Element>RemoteLearningProfilePrimaryLearningDeviceProviderType</Element>
+      <Element>RemoteLearningLocationProfilePrimaryLearningDeviceProviderType</Element>
       <Characteristics>O</Characteristics>
       <Description>
         <p>The provider of the primary learning device.</p>
@@ -2992,9 +2960,9 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-  <CommonElement name="RemoteLearningProfileInternetAccessType" type="true" dm="true">
+  <CommonElement name="RemoteLearningLocationProfileInternetAccessType" type="true" dm="true">
     <Item>
-      <Element>RemoteLearningProfileInternetAccessType</Element>
+      <Element>RemoteLearningLocationProfileInternetAccessType</Element>
       <Characteristics>O</Characteristics>
       <Description>
         <p>An indication of whether the student is able to access the internet in their primary place of residence.</p>
@@ -3011,12 +2979,12 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-  <CommonElement name="RemoteLearningProfileInternetAccessBarrierType" type="true" dm="true">
+  <CommonElement name="RemoteLearningLocationProfileInternetAccessBarrierType" type="true" dm="true">
     <Item>
-      <Element>RemoteLearningProfileInternetAccessBarrierType</Element>
+      <Element>RemoteLearningLocationProfileInternetAccessBarrierType</Element>
       <Characteristics>O</Characteristics>
       <Description>
-        <p>An indication of the barrier to having internet access in the student’s primary place of residence.</p>
+        <p>An indication of the barrier to having internet access in the student&#8217;s primary place of residence.</p>
         <p>If the student is unable to access the internet in their primary place of residence, why not?</p>
       </Description>
       <Type name="xs:token"/>
@@ -3030,13 +2998,13 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-  <CommonElement name="RemoteLearningProfileInternetAccessTypeType" type="true" dm="true">
+  <CommonElement name="RemoteLearningLocationProfileInternetAccessTypeType" type="true" dm="true">
     <Item>
-      <Element>RemoteLearningProfileInternetAccessTypeType</Element>
+      <Element>RemoteLearningLocationProfileInternetAccessTypeType</Element>
       <Characteristics>O</Characteristics>
       <Description>
-        <p>The primary type of internet service used in the student’s primary place of residence.</p>
-        <p>What is the primary type of internet service used in the student’s primary place of residence?</p>
+        <p>The primary type of internet service used in the student&#8217;s primary place of residence.</p>
+        <p>What is the primary type of internet service used in the student&#8217;s primary place of residence?</p>
       </Description>
       <Type name="xs:token"/>
     </Item>
@@ -3049,10 +3017,9 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-  
-  <CommonElement name="RemoteLearningProfileInternetPerformanceType" type="true" dm="true">
+  <CommonElement name="RemoteLearningLocationProfileInternetPerformanceType" type="true" dm="true">
     <Item>
-      <Element>RemoteLearningProfileInternetPerformanceType</Element>
+      <Element>RemoteLearningLocationProfileInternetPerformanceType</Element>
       <Characteristics>O</Characteristics>
       <Description>
         <p>An indication of whether the student can complete the full range of learning activities, including video streaming and assignment upload, without interruptions caused by poor internet performance in their primary place of residence.</p>
@@ -3069,9 +3036,25 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
-  <CommonElement name="RemoteLearningProfileType" type="true" dm="true">
+  <CommonElement name="RemoteLearningLocationProfileType" type="true" dm="true">
     <Item>
-      <Element>RemoteLearningProfileType</Element>
+      <Element>RemoteLearningLocationProfileType</Element>
+    </Item>
+    <Item>
+      <Element>LocationName</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A quick label describing the location the Remote Learning Location Profile is for.  ex: Dad's House</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>PrimaryIndicator</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Is this the primary learning location?</p>
+      </Description>
+      <Type ref="CommonTypes" name="RemoteLearningLocationProfilePrimaryIndicatorType"/>
     </Item>
     <Item>
       <Element>PrimaryLearningDevice</Element>
@@ -3080,16 +3063,16 @@
         <p>The type of device the student uses most often to complete learning activities away from school.</p>
         <p>What device does the student most often use to complete learning activities away from school?</p>
       </Description>
-      <Type ref="CommonTypes" name="RemoteLearningProfilePrimaryLearningDeviceType"/>
+      <Type ref="CommonTypes" name="RemoteLearningLocationProfilePrimaryLearningDeviceType"/>
     </Item>
     <Item>
       <Element>PrimaryLearningDeviceAccess</Element>
       <Characteristics>O</Characteristics>
       <Description>
         <p>An indication of whether the primary learning device is shared or not shared with another individual.</p>
-        <p>Is the student’s primary learning device shared with anyone else?</p>
+        <p>Is the student&#8217;s primary learning device shared with anyone else?</p>
       </Description>
-      <Type ref="CommonTypes" name="RemoteLearningProfilePrimaryLearningDeviceAccessType"/>
+      <Type ref="CommonTypes" name="RemoteLearningLocationProfilePrimaryLearningDeviceAccessType"/>
     </Item>
     <Item>
       <Element>PrimaryLearningDeviceProvider</Element>
@@ -3098,7 +3081,7 @@
         <p>The provider of the primary learning device.</p>
         <p>Who provided the primary learning device to the student?</p>
       </Description>
-      <Type ref="CommonTypes" name="RemoteLearningProfilePrimaryLearningDeviceProviderType"/>
+      <Type ref="CommonTypes" name="RemoteLearningLocationProfilePrimaryLearningDeviceProviderType"/>
     </Item>
     <Item>
       <Element>InternetAccess</Element>
@@ -3107,25 +3090,25 @@
         <p>An indication of whether the student is able to access the internet in their primary place of residence.</p>
         <p>Can the student access the internet in their primary place of residence?</p>
       </Description>
-      <Type ref="CommonTypes" name="RemoteLearningProfileInternetAccessType"/>
+      <Type ref="CommonTypes" name="RemoteLearningLocationProfileInternetAccessType"/>
     </Item>
     <Item>
       <Element>InternetAccessBarrier</Element>
       <Characteristics>O</Characteristics>
       <Description>
-        <p>An indication of the barrier to having internet access in the student’s primary place of residence.</p>
+        <p>An indication of the barrier to having internet access in the student&#8217;s primary place of residence.</p>
         <p>If the student is unable to access the internet in their primary place of residence, why not?</p>
       </Description>
-      <Type ref="CommonTypes" name="RemoteLearningProfileInternetAccessBarrierType"/>
+      <Type ref="CommonTypes" name="RemoteLearningLocationProfileInternetAccessBarrierType"/>
     </Item>
     <Item>
       <Element>InternetAccessType</Element>
       <Characteristics>O</Characteristics>
       <Description>
-        <p>The primary type of internet service used in the student’s primary place of residence.</p>
-        <p>What is the primary type of internet service used in the student’s primary place of residence?</p>
-      </Description>      
-      <Type ref="CommonTypes" name="RemoteLearningProfileInternetAccessTypeType"/>
+        <p>The primary type of internet service used in the student&#8217;s primary place of residence.</p>
+        <p>What is the primary type of internet service used in the student&#8217;s primary place of residence?</p>
+      </Description>
+      <Type ref="CommonTypes" name="RemoteLearningLocationProfileInternetAccessTypeType"/>
     </Item>
     <Item>
       <Element>InternetPerformance</Element>
@@ -3133,9 +3116,725 @@
       <Description>
         <p>An indication of whether the student can complete the full range of learning activities, including video streaming and assignment upload, without interruptions caused by poor internet performance in their primary place of residence.</p>
         <p>Can the student complete learning activities such as streaming a video and uploading assignments without interruptions caused by poor internet performance?</p>
-      </Description>      
-      <Type ref="CommonTypes" name="RemoteLearningProfileInternetPerformanceType"/>
+      </Description>
+      <Type ref="CommonTypes" name="RemoteLearningLocationProfileInternetPerformanceType"/>
+    </Item>
+    <Item>
+      <Element>AddressRefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Reference to an Address object or instance (see AddressList in this object.)</p>
+      </Description>
+      <Type ref="CommonTypes" name="RefIdType"/>
     </Item>
   </CommonElement>
-
+  <CommonElement name="RemoteLearningLocationProfileListType" type="true">
+    <Item>
+      <Element>RemoteLearningLocationProfileListType</Element>
+      <Description>
+        <p>For conveying Remote Learning capabilities.</p>
+      </Description>
+      <List mode="List"> </List>
+    </Item>
+    <Item>
+      <Element>RemoteLearningLocationProfile</Element>
+      <Characteristics>MR</Characteristics>
+      <Type ref="CommonTypes" name="RemoteLearningLocationProfileType"/>
+    </Item>
+  </CommonElement>
+  <!-- Instructional Delivery Mode -->
+  <CommonElement name="InstructionalDeliveryModeType" type="true" dm="true">
+    <Item>
+      <Element>InstructionalDeliveryModeType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Depending on the context, how instruction is available to be, chosen to be, or was delivered.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>001161</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001161</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="InstructionalDeliveryModeListType" type="true">
+    <Item>
+      <Element>InstructionalDeliveryModeListType</Element>
+      <Description>
+        <p>The various instruction delivery modes available, chosen, or employed.</p>
+      </Description>
+      <List mode="List"> </List>
+    </Item>
+    <Item>
+      <Element>InstructionalDeliveryMode</Element>
+      <Characteristics>MR</Characteristics>
+      <Type ref="CommonTypes" name="InstructionalDeliveryModeType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="instructionalDeliveryModeType" type="true" dm="true">
+    <Item>
+      <Element>instructionalDeliveryModeType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>How instruction is available, chosen, or employed.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>001161</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001161</cedsURL>
+    </Item>
+  </CommonElement>
+  <!-- P-POD -->
+  <CommonElement name="SettingLocationListType" type="true" dm="true">
+    <Item>
+      <Element>SettingLocationListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>SettingLocation</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type ref="CommonTypes" name="SettingLocationType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="SettingLocationType" type="true">
+    <Intro>
+      <p> This element initially supports describing specific physical locations where the P-POD applied.</p>
+    </Intro>
+    <Item>
+      <Element>SettingLocationType</Element>
+    </Item>
+    <Item>
+      <Element>SettingLocationName</Element>
+      <Characteristics>O</Characteristics>
+      <Description>Name of the location.</Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>SettingLocationType</Element>
+      <Characteristics>O</Characteristics>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>SettingLocationRefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description> RefId of the location object if the location is a SIF Object such as <code>SchoolInfo</code>. </Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+    <Item>
+      <Element>SettingLocationObjectTypeName</Element>
+      <Characteristics>M</Characteristics>
+      <Description> Type of SIF Object <code>SettingLocationRefId</code> points to. </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ConsentToSharingOfDataContainerType" type="true" dm="true">
+    <Item>
+      <Element>ConsentToSharingOfDataContainerType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>Container for sharing of data</Description>
+    </Item>
+    <Item>
+      <Element>DataDomainObligationList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type ref="CommonTypes" name="DataDomainObligationListType"/>
+    </Item>
+    <Item>
+      <Element>NeverShareWithList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type ref="CommonTypes" name="NeverShareWithListType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="DataDomainObligationListType" type="true" dm="true">
+    <Item>
+      <Element>DataDomainObligationListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>DataDomainObligation</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type ref="CommonTypes" name="DataDomainObligationType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="DataDomainObligationType" type="true" dm="true">
+    <Item>
+      <Element>DataDomainObligationType</Element>
+      <Characteristics/>
+      <Description>
+        <p>.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>DataDomain</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>DomainComments</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Comments associated with data obligation.</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>ShareWithList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type ref="CommonTypes" name="ShareWithListType"/>
+    </Item>
+    <Item>
+      <Element>DoNotShareWithList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type ref="CommonTypes" name="DoNotShareWithListType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ShareWithListType" type="true" dm="true">
+    <Item>
+      <Element>ShareWithListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A list of parties and data sharing permissions.</p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>ShareWith</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p>The .</p>
+      </Description>
+      <Type ref="CommonTypes" name="ShareWithType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ShareWithType" type="true" dm="true">
+    <Item>
+      <Element>ShareWithType</Element>
+      <Characteristics/>
+      <Description>
+        <p>Information about data sharing.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>ShareWithParty</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Who data could be shared with?</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>ShareWithRefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>RefId of entity data to be shared with if known.</Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+    <Item>
+			<Element>ShareWithObjectTypeName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The name of the object referenced.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>
+    <Item>
+      <Element>ShareWithLocalId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>LocalId of entity data to be shared with if known.</Description>
+      <Type ref="CommonTypes" name="LocalIdType"/>
+    </Item>
+		<Item>
+			<Element>ShareWithName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The name of the person/body. Only to be used when a SIF reference object not available.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>
+		<Item>
+			<Element>ShareWithRelationship</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The relationship of the person/body. Only to be used when a SIF reference object not available.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>
+    <Item>
+      <Element>ShareWithPurpose</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Why is this information to be shared?</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>ShareWithRole</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Role of the information to be shared?</p>
+      </Description>
+      <Type name="xs:string"/>
+      <cedsId>001156</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001156</cedsURL>
+    </Item>
+    <Item>
+      <Element>ShareWithComments</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Comments associated with Sharing arrangement</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>PermissionToOnShare</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Can this information be shared with other parties?</p>
+      </Description>
+      <Type ref="CodeSets" name="GenericYesNoType"/>
+    </Item>
+    <Item>
+      <Element>ShareWithURL</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>URL Associated with Share</p>
+      </Description>
+      <Type name="xs:anyURI"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="DoNotShareWithListType" type="true" dm="true">
+    <Item>
+      <Element>DoNotShareWithListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A list of parties and data sharing permissions.</p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>DoNotShareWith</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p>The .</p>
+      </Description>
+      <Type ref="CommonTypes" name="DoNotShareWithType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="DoNotShareWithType" type="true" dm="true">
+    <Item>
+      <Element>DoNotShareWithType</Element>
+      <Characteristics/>
+      <Description>
+        <p>Information about data sharing.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>DoNotShareWithParty</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Who data should not be shared with? (Can we agree on a broadlist that can be typed for enumeration?)</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>DoNotShareWithRefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>RefId of entity date not to be shared with if known.</Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+		<Item>
+			<Element>DoNotShareWithObjectTypeName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The name of the object referenced.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>    
+    <Item>
+      <Element>DoNotShareWithLocalId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>LocalId of entity data not to be shared with if known.</Description>
+      <Type ref="CommonTypes" name="LocalIdType"/>
+    </Item>
+		<Item>
+			<Element>DoNotShareWithName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The name of the person/body. Only to be used when a SIF reference object not available.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>
+		<Item>
+			<Element>DoNotShareWithRelationship</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The relationship of the person/body. Only to be used when a SIF reference object not available.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>
+    <Item>
+      <Element>DoNotShareWithPurpose</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Why is this information is not to be shared?</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>DoNotShareWithRole</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Role of the information to be shared?</p>
+      </Description>
+      <Type name="xs:string"/>
+      <cedsId>001156</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001156</cedsURL>
+    </Item>
+    <Item>
+      <Element>DoNotShareWithComments</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Comments associated with Sharing arrangement</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>DoNotShareWithURL</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>URL Associated with Share</p>
+      </Description>
+      <Type name="xs:anyURI"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ApplicableLawListType" type="true" dm="true">
+    <Item>
+      <Element>ApplicableLawListType</Element>
+      <Characteristics/>
+      <Description>
+        <p>.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>ApplicableLaw</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type name="ApplicableLawType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="ApplicableLawType" type="true" dm="true">
+    <Item>
+      <Element>ApplicableLawType</Element>
+      <Characteristics/>
+      <Description>
+        <p>.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>ApplicableCountry</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>We can type this, list of countries?</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+      <cedsId>000050</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000050</cedsURL>
+    </Item>
+    <Item>
+      <Element>ApplicableLawName</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The name of the law that must be observed for this individual.</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>ApplicableLawURL</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <Type name="xs:anyURI"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="PermissionToParticipateListType" type="true" dm="true">
+    <Item>
+      <Element>PermissionToParticipateListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p/>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>PermissionToParticipate</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p>The .</p>
+      </Description>
+      <Type ref="CommonTypes" name="PermissionToParticipateType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="PermissionToParticipateType" type="true" dm="true">
+    <Item>
+      <Element>PermissionToParticipateType</Element>
+      <Characteristics/>
+      <Description>
+        <p/>
+      </Description>
+    </Item>
+    <Item>
+      <Element>PermissionCategory</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>What is the category of permission</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>Permission</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>What is the Permission?</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>PermissionValue</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Permission or not?</p>
+      </Description>
+      <Values>
+        <Value>
+          <Code>Y</Code>
+          <Text>Yes</Text>
+        </Value>
+        <Value>
+          <Code>N</Code>
+          <Text>No</Text>
+        </Value>
+        <Value>
+          <Code>U</Code>
+          <Text>Unknown</Text>
+        </Value>
+      </Values>
+    </Item>
+    <Item>
+      <Element>PermissionStartDate</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Start Date Associated with Permission</p>
+      </Description>
+      <Type name="xs:date"/>
+    </Item>
+    <Item>
+      <Element>PermissionEndDate</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>End Date Associated with Permission</p>
+      </Description>
+      <Type name="xs:date"/>
+    </Item>
+    <Item>
+      <Element>PermissionGranteeRefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>RefId of the person granting permission if known.</Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+		<Item>
+			<Element>PermissionGranteeObjectTypeName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The name of the object referenced.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>      
+    <Item>
+			<Element>PermissionGranteeName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The name of the person. Only to be used when a SIF reference object not available.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>
+		<Item>
+			<Element>PermissionGranteeRelationship</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The relationship of the person. Only to be used when a SIF reference object not available.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>
+    <Item>
+      <Element>PermissionComments</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Comments Associated with Permission</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="NeverShareWithListType" type="true" dm="true">
+    <Item>
+      <Element>NeverShareWithListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A list of parties and data sharing permissions.</p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>NeverShareWith</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p>The .</p>
+      </Description>
+      <Type ref="CommonTypes" name="NeverShareWithType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="NeverShareWithType" type="true" dm="true">
+    <Item>
+      <Element>NeverShareWithType</Element>
+      <Characteristics/>
+      <Description>
+        <p>Information about data sharing.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>NeverShareWithParty</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Who data should never be shared with?</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Element>NeverShareWithRefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>RefId of entity never to be shared with if known.</Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+		<Item>
+			<Element>NeverShareWithObjectTypeName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The name of the object referenced.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>    
+    <Item>
+      <Element>NeverShareWithLocalId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>LocalId of entity never to be shared with if known.</Description>
+      <Type ref="CommonTypes" name="LocalIdType"/>
+    </Item>
+		<Item>
+			<Element>NeverShareWithName</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The name of the person/body. Only to be used when a SIF reference object not available.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>
+		<Item>
+			<Element>NeverShareWithRelationship</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The relationship of the person/body. Only to be used when a SIF reference object not available.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>
+    <Item>
+      <Element>NeverShareWithPurpose</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Purpose of information never to be shared?</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>NeverShareWithRole</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Role of information never to be shared?</p>
+      </Description>
+      <Type name="xs:string"/>
+      <cedsId>001156</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001156</cedsURL>
+    </Item>
+    <Item>
+      <Element>NeverShareWithComments</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Comments associated with Sharing arrangement</p>
+      </Description>
+      <Type name="xs:string"/>
+    </Item>
+    <Item>
+      <Element>NeverShareWithURL</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>URL Associated with Share</p>
+      </Description>
+      <Type name="xs:anyURI"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="GenericYesNoType" type="true" dm="true">
+    <Item>
+      <Element>GenericYesNoType</Element>
+      <Description>
+        <p>Yes/No codeset for the P-POD.</p>
+      </Description>
+      <Values>
+        <Value>
+          <Code>Y</Code>
+          <Text>Yes</Text>
+        </Value>
+        <Value>
+          <Code>N</Code>
+          <Text>No</Text>
+        </Value>
+        <Value>
+          <Code>U</Code>
+          <Text>Unknown</Text>
+        </Value>
+      </Values>
+    </Item>
+  </CommonElement>
 </IncludeGroup>
+

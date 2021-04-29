@@ -1319,7 +1319,6 @@
       <Description>
         <p>The description of the source of the measurements.</p>
       </Description>
-      <Type ref="CommonTypes" name="EnergyUsageDataSourceType"/>
     </Item>
     <Item>
       <Element>System</Element>
@@ -2236,7 +2235,6 @@
       <Description>
         <p>A record of performance on an individual assessment.</p>
       </Description>
-      <Type ref="CommonTypes" name="AssessmentPerformanceHistoryType"/>
     </Item>
     <Item>
       <Element>Name</Element>

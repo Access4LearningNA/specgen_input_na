@@ -14,27 +14,7 @@
 		  Note: With SIF Implementation Specification version 2.4 the choice element depicted in the diagram below has changed.  In the XSD files, the choice element used to be rendered as a sequence of optional elements.  Now, in the XSD files, the choice element is rendered as an xs:choice.  This may cause problems with agents that treat the choice element as two optional elements rather than a choice of one and only one of the choices.
       </p>
     </Description>
-    <Type ref="CommonTypes" complex="extension" name="AbstractContentPackageType"/>
-  </Item>
-  <Item>
-    <Attribute>SIF_RefId</Attribute>
-    <Characteristics>M</Characteristics>
-    <Type ref="CommonTypes" name="RefIdType"/>
-    <Description>
-      <p>
-        The GUID of an associated object, either <code>StudentRecordExchange</code> or <code>StudentPersonal</code>.
-      </p>
-    </Description>
-  </Item>
-  <Item>
-    <Attribute>SIF_RefObject</Attribute>
-    <Characteristics>M</Characteristics>
-    <Description>
-      <p>
-        The associated object type.
-      </p>
-    </Description>
-    <Type name="xs:token"/>
+    <Type ref="CommonTypes" complex="extension" name="StudentRecordPackageAbstractContentPackageType"/>
   </Item>
   <xhtml:Example xmlns="">
     <StudentRecordPackage RefId="25FCD7C038E44E38A025FFD609B9D190" SIF_RefId="974C88A3892D4E398891403D26CD280C" SIF_RefObject="StudentRecordExchange">

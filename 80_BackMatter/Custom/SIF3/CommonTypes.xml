@@ -862,7 +862,7 @@
       </Description>
     </Item>
     <Item>
-      <Element>sessionList</Element>
+      <Element>session</Element>
       <Characteristics>OR</Characteristics>
       <Type ref="CommonTypes" name="xSessionType"/>
     </Item>
@@ -6715,6 +6715,14 @@
       <Type name="xs:token"/>
       <cedsId>000252</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000252</cedsURL>
+    </Item>
+    <Item>
+      <Element>instructionalDeliveryMode</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>How instruction is expected to be delivered.</p>
+      </Description>
+      <Type ref="CommonTypes" name="instructionalDeliveryModeType"/>
     </Item>
     <Item>
       <Element>schoolCalendarRefId</Element>

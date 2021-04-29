@@ -59,8 +59,17 @@
     <Characteristics>O</Characteristics>
     <Description>
       <p>Medium through which the student receives instructional communication from the teacher.</p>
+      <p>Note: this element has been deprecated&#8212;use InstructionalDeliveryModeList.</p>
     </Description>
     <Type ref="CommonTypes" name="MediumOfInstructionType"/>
+  </Item>
+  <Item>
+    <Element>InstructionalDeliveryModeList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The various instructional delivery modes offered for this section.</p>
+    </Description>
+    <Type ref="CommonTypes" name="InstructionalDeliveryModeListType"/>
   </Item>
   <Item>
     <Element>LanguageOfInstruction</Element>

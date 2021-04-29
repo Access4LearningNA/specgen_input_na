@@ -157,6 +157,30 @@
     <Type name="xs:decimal"/>
   </Item>
   <Item>
+    <Element>InstructionalDeliveryModeList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The various modalities of instruction employed, during the period being summarized.</p>
+    </Description>
+    <Type ref="CommonTypes" name="InstructionalDeliveryModeListType"/>
+  </Item>
+  <Item>
+    <Element>ExpectationsMets</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The number of days the student met expectations to be considered fully present.</p>
+    </Description>
+    <Type name="xs:decimal"/>
+  </Item>
+  <Item>
+    <Element>ExpectationsNotMets</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The number of days the student did not met expectations to be considered fully present.</p>
+    </Description>
+    <Type name="xs:decimal"/>
+  </Item>
+  <Item>
     <Element>StudentSchoolEnrollmentRefId</Element>
     <Characteristics>O</Characteristics>
     <Description>

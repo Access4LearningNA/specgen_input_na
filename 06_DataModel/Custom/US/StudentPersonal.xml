@@ -84,6 +84,14 @@
     <Type ref="CommonTypes" name="DemographicsType"/>
   </Item>
   <Item>
+    <Element>RemoteLearningLocationProfileList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>For conveying Remote Learning capabilities.ß</p>
+    </Description>    
+    <Type ref="CommonTypes" name="RemoteLearningLocationProfileListType"/>
+  </Item>
+  <Item>
     <Element>AddressList</Element>
     <Characteristics>O</Characteristics>
     <Description>

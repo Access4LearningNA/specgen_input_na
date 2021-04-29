@@ -71,6 +71,14 @@
     <Type ref="CommonTypes" name="ScheduleInfoOverrideListType"/>
   </Item>
   <Item>
+    <Element>InstructionalDeliveryModeList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The various instructional delivery modes chosen, out of those offered, for this section.</p>
+    </Description>
+    <Type ref="CommonTypes" name="InstructionalDeliveryModeListType"/>
+  </Item>
+  <Item>
     <Element>CreditsAttempted</Element>
     <Characteristics>O</Characteristics>
     <Description>
