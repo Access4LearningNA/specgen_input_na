@@ -3269,6 +3269,14 @@
       <cedsId>000597</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000597</cedsURL>
     </Item>
+    <Item>
+      <Element>AddressRefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Reference to an Address object or instance.</p>
+      </Description>    
+      <Type ref="CommonTypes" name="RefIdType"/>
+    </Item>    
   </CommonElement>
   <CommonElement name="RightsElementsType" type="true">
     <Item>
@@ -4982,6 +4990,75 @@
         <p>The GUID that uniquely identifies an instance of the package.</p>
       </Description>
       <Type ref="CommonTypes" name="RefIdType"/>
+    </Item>
+    <Item>
+      <Element>XMLData</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>Contains an arbitary XML element, encoded in UTF-8.</p>
+      </Description>
+      <Type ref="CommonTypes" name="XMLDataType"/>
+    </Item>
+    <Item>
+      <Element>TextData</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>Contains arbitrary text, encoded in UTF-8.</p>
+      </Description>
+      <Type ref="CommonTypes" name="TextDataType"/>
+    </Item>
+    <Item>
+      <Element>BinaryData</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>Contains the base64Binary encoding of binary or text data not encoded in UTF-8.</p>
+      </Description>
+      <Type ref="CommonTypes" name="BinaryDataType"/>
+    </Item>
+    <Item>
+      <Element>Reference</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>References external content via a URL.</p>
+      </Description>
+      <Type ref="CommonTypes" name="ReferenceType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="StudentRecordPackageAbstractContentPackageType" type="true">
+    <Key>@RefId</Key>
+    <Item>
+      <Element>StudentRecordPackageAbstractContentPackageType</Element>
+      <Description>
+        <p> An abstract type for derived content package types, elements and objects.  This structure may be used verbatim, optionally extending with additional attributes, or may be redefined to include only a subset of child elements and/or to add validation to XML contained in <code>XMLData</code>.  Only one instance of <code>XMLData</code>, <code>TextData</code>, <code>BinaryData</code> or <code>Reference</code> can occur in a single instance. </p>
+      </Description>
+    </Item>
+    <Item>
+      <Attribute>RefId</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The GUID that uniquely identifies an instance of the package.</p>
+      </Description>
+      <Type ref="CommonTypes" name="RefIdType"/>
+    </Item>
+    <Item>
+      <Attribute>SIF_RefId</Attribute>
+      <Characteristics>M</Characteristics>
+      <Type ref="CommonTypes" name="RefIdType"/>
+      <Description>
+        <p>
+          The GUID of an associated object, either <code>StudentRecordExchange</code> or <code>StudentPersonal</code>.
+        </p>
+      </Description>
+    </Item>
+    <Item>
+      <Attribute>SIF_RefObject</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>
+          The associated object type.
+        </p>
+      </Description>
+      <Type name="xs:token"/>
     </Item>
     <Item>
       <Element>XMLData</Element>

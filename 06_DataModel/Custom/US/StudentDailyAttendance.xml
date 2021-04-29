@@ -85,6 +85,22 @@
     <Type name="xs:normalizedString"/>
   </Item>
   <Item>
+    <Element>InstructionalDeliveryMode</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>How instruction was delivered.</p>
+    </Description>
+    <Type ref="CommonTypes" name="InstructionalDeliveryModeType"/>
+  </Item>
+  <Item>
+    <Element>ExpectationsMet</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>If true, he student met the expectations required by the organization marking attendance to be considered fully present.</p>
+    </Description>
+    <Type name="xs:boolean"/>
+  </Item>
+  <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_MetadataType"/>

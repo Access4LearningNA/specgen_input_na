@@ -12,11 +12,18 @@
 
 	<xsl:param name="sifVersion"/>
 	<xsl:param name="sifLocale"/>
+	<xsl:param name="sifObjectList" select="''"/> <!-- Default to empty list -->
 
 	<xsl:import href="./sif2jsonspecgen.xslt"/>
 	<xsl:import href="./xmlToJson-goessner.xslt"/>
 		
 	<xsl:template match="/specgen:SIFSpecification">
+		<xsl:text># // Data Model Example file for:&#x0a;</xsl:text>
+		<xsl:value-of select="concat('# // Locale: ', $sifLocale, '&#x0a;')"/>
+		<xsl:value-of select="concat('# // SIF Datamodel Version: ', $sifVersion, '&#x0a;')"/>
+		<xsl:value-of select="concat('# // Limited to Objects: ', $sifObjectList, '&#x0a;')"/>
+		<xsl:text>&#x0a;</xsl:text>
+	
 		<xsl:apply-templates select=".//specgen:DataObjects" mode="objectExamples"/>
 	</xsl:template>
 	
@@ -35,11 +42,13 @@
 	</xsl:template>
 
 	<xsl:template match="specgen:DataObject" mode="objectExamples">
-		<xsl:variable name="excludeOps" select="specgen:OpenAPI/specgen:ExcludeOperations"/>
-
-		<xsl:if test="not(contains($excludeOps,'ALL'))">
-			<xsl:apply-templates select="." mode="singleExample"/>
-			<xsl:apply-templates select="." mode="collectionExample"/>
+		<xsl:if test="xfn:containsOrEmpty($sifObjectList, @name)">
+			<xsl:variable name="excludeOps" select="specgen:OpenAPI/specgen:ExcludeOperations"/>
+	
+			<xsl:if test="not(contains($excludeOps,'ALL'))">
+				<xsl:apply-templates select="." mode="singleExample"/>
+				<xsl:apply-templates select="." mode="collectionExample"/>
+			</xsl:if>
 		</xsl:if>
 	</xsl:template>
 
@@ -250,6 +259,19 @@
 				'\n','\\n'),
 				'\r','\\r'),
 				'\t','\\t')"/>
+	</xsl:function>
+
+	<!-- returns true if value is not set or empty -->
+	<xsl:function name="xfn:empty" as="xs:boolean">
+		<xsl:param name="value"/>
+		<xsl:sequence select="not($value != '')" />
+	</xsl:function>
+
+	<!-- returns true if listOfValues is empty or if the valueToCheck is in the given comma separated listOfValues -->
+	<xsl:function name="xfn:containsOrEmpty" as="xs:boolean">
+		<xsl:param name="listOfValues"/>
+		<xsl:param name="valueToCheck"/>
+		<xsl:sequence select="xfn:empty($listOfValues) or contains($listOfValues, $valueToCheck)" />
 	</xsl:function>
 
 </xsl:stylesheet>

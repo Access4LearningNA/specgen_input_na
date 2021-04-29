@@ -2252,7 +2252,7 @@
       <Element>MeetingTimeList</Element>
       <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="MeetingTimeListType"/>
-    </Item>
+    </Item> 
   </CommonElement>
   <CommonElement name="IncidentCategoryContainerType" type="true" dm="true">
     <Item>
