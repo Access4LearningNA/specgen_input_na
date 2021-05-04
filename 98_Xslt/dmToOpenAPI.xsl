@@ -14,6 +14,8 @@
 	<xsl:param name="sifLocale"/>
 	<xsl:param name="sifObjectList" select="''"/> <!-- Default to empty list -->
 	<xsl:param name="sifObjectGroupList" select="''"/> <!-- Default to empty list -->
+	<xsl:param name="includeAllHeaders" select="true()" as="xs:boolean"/> <!-- If false we only show minimum number of headers -->
+
 
     <!-- Get the Data Model URL from the Title Page -->
 	<xsl:variable name="extDocUrlRoot">
@@ -23,6 +25,16 @@
 	<xsl:variable name="exampleFileName">
 		<xsl:value-of select="concat('examples_', $sifLocale, '_' , $sifVersion, '.yaml')"/>
 	</xsl:variable>
+
+	<xsl:variable name="title">
+		<xsl:if test="xfn:empty($sifObjectGroupList)">
+		  	<xsl:value-of select="concat('SIF ', $sifLocale, ' API')"/>
+		</xsl:if>
+		<xsl:if test="not(xfn:empty($sifObjectGroupList))">
+		  	<xsl:value-of select="$sifObjectGroupList"/>
+		</xsl:if>
+	</xsl:variable>
+
 	
 	<xsl:template match="/specgen:SIFSpecification">
 		<xsl:text># // Open API file for:&#x0a;</xsl:text>
@@ -30,13 +42,14 @@
 		<xsl:value-of select="concat('# // SIF Datamodel Version: ', $sifVersion, '&#x0a;')"/>
 		<xsl:value-of select="concat('# // Limited to Objects: ', $sifObjectList, '&#x0a;')"/>
 		<xsl:value-of select="concat('# // Limited to Groups: ', $sifObjectGroupList, '&#x0a;')"/>
+		<xsl:value-of select="concat('# // Include all HTTP Headers: ', $includeAllHeaders, '&#x0a;')"/>
 		<xsl:text>&#x0a;</xsl:text>
 
 		<xsl:value-of select="concat( 'openapi: 3.0.2&#x0a;',
                                       'info:&#x0a;',
                                       '  version: v', $sifVersion, '&#x0a;',
-                                      '  title: &quot;SIF ', $sifLocale, ' derived API&quot;&#x0a;',
-									  '  description: ', normalize-space(specgen:TitlePage/specgen:h1), '&#x0a;',
+                                      '  title: ', '&quot;' , $title, '&quot;&#x0a;',
+									  '  description: ', '&quot;', normalize-space(specgen:TitlePage/specgen:h1), '&quot;&#x0a;',
 									  '  host: &quot;apihost.example.com&quot;&#x0a;',
 									  '  basePath: &quot;v3&quot;&#x0a;')"/>
 			  
@@ -248,11 +261,12 @@
 					<xsl:with-param name="objectName"><xsl:value-of select="concat(@name, 's')"/></xsl:with-param>
 					<xsl:with-param name="isQBE">true</xsl:with-param>
 				</xsl:apply-templates>
+				
 				<!-- Response Headers -->
 				<xsl:apply-templates select="." mode="addResponseHeaders">
 					<xsl:with-param name="pfx"><xsl:text>        </xsl:text></xsl:with-param>
 					<xsl:with-param name="excludeHeaders">
-						<xsl:value-of select="concat(specgen:OpenAPI/specgen:GetBatch/specgen:ExcludeResponseHTTPHeaders, ',changesSinceMarkerHead')"/>
+						<xsl:value-of select="concat(specgen:OpenAPI/specgen:GetBatch/specgen:ExcludeResponseHTTPHeaders, ',changesSinceMarkerHead,changesSinceMarkerGet')"/>
 					</xsl:with-param>
 				</xsl:apply-templates>
 				<xsl:text>&#x0a;</xsl:text>
@@ -440,27 +454,28 @@
 	    <xsl:param name="pfx"/>
 		<xsl:param name="excludeHeaders"/>
 
-<!-- -->		
 		<xsl:value-of select="concat($pfx, 'headers:&#x0a;')"/>
 		
-		<xsl:if test="not(contains($excludeHeaders, 'accept'))">
-			<xsl:value-of select="concat($pfx, '  ''accept'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/accept''&#x0a;')"/>
-		</xsl:if>
-
-		<xsl:if test="not(contains($excludeHeaders, 'content-type'))">
-			<xsl:value-of select="concat($pfx, '  ''content-type'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/content-type''&#x0a;')"/>
-		</xsl:if>
-		
-		<xsl:if test="not(contains($excludeHeaders, 'content-encoding'))">
-			<xsl:value-of select="concat($pfx, '  ''content-encoding'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/content-encoding''&#x0a;')"/>
-		</xsl:if>
-
-		<xsl:if test="not(contains($excludeHeaders, 'content-profile'))">
-			<xsl:value-of select="concat($pfx, '  ''content-profile'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/content-profile''&#x0a;')"/>
+		<xsl:if test="$includeAllHeaders">
+			<xsl:if test="not(contains($excludeHeaders, 'accept'))">
+				<xsl:value-of select="concat($pfx, '  ''accept'':&#x0a;')"/>
+				<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/accept''&#x0a;')"/>
+			</xsl:if>
+	
+			<xsl:if test="not(contains($excludeHeaders, 'content-type'))">
+				<xsl:value-of select="concat($pfx, '  ''content-type'':&#x0a;')"/>
+				<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/content-type''&#x0a;')"/>
+			</xsl:if>
+			
+			<xsl:if test="not(contains($excludeHeaders, 'content-encoding'))">
+				<xsl:value-of select="concat($pfx, '  ''content-encoding'':&#x0a;')"/>
+				<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/content-encoding''&#x0a;')"/>
+			</xsl:if>
+	
+			<xsl:if test="not(contains($excludeHeaders, 'content-profile'))">
+				<xsl:value-of select="concat($pfx, '  ''content-profile'':&#x0a;')"/>
+				<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/content-profile''&#x0a;')"/>
+			</xsl:if>
 		</xsl:if>
 
 		<xsl:if test="not(contains($excludeHeaders, 'changesSinceMarkerGet'))">
@@ -473,26 +488,28 @@
 			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/changesSinceMarkerHead''&#x0a;')"/>
 		</xsl:if>
 		
-		<xsl:if test="not(contains($excludeHeaders, 'environmentURI'))">
-			<xsl:value-of select="concat($pfx, '  ''environmentURI'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/environmentURI''&#x0a;')"/>
+		<xsl:if test="$includeAllHeaders">
+			<xsl:if test="not(contains($excludeHeaders, 'environmentURI'))">
+				<xsl:value-of select="concat($pfx, '  ''environmentURI'':&#x0a;')"/>
+				<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/environmentURI''&#x0a;')"/>
+			</xsl:if>
+	
+			<xsl:if test="not(contains($excludeHeaders, 'ETag'))">
+				<xsl:value-of select="concat($pfx, '  ''ETag'':&#x0a;')"/>
+				<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/ETag''&#x0a;')"/>
+			</xsl:if>
+	
+			<xsl:if test="not(contains($excludeHeaders, 'fingerprint'))">
+				<xsl:value-of select="concat($pfx, '  ''fingerprint'':&#x0a;')"/>
+				<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/fingerprint''&#x0a;')"/>
+			</xsl:if>
+	
+			<xsl:if test="not(contains($excludeHeaders, 'messageId'))">
+				<xsl:value-of select="concat($pfx, '  ''messageId'':&#x0a;')"/>
+				<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/messageId''&#x0a;')"/>
+			</xsl:if>
 		</xsl:if>
-
-		<xsl:if test="not(contains($excludeHeaders, 'ETag'))">
-			<xsl:value-of select="concat($pfx, '  ''ETag'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/ETag''&#x0a;')"/>
-		</xsl:if>
-
-		<xsl:if test="not(contains($excludeHeaders, 'fingerprint'))">
-			<xsl:value-of select="concat($pfx, '  ''fingerprint'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/fingerprint''&#x0a;')"/>
-		</xsl:if>
-
-		<xsl:if test="not(contains($excludeHeaders, 'messageId'))">
-			<xsl:value-of select="concat($pfx, '  ''messageId'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/messageId''&#x0a;')"/>
-		</xsl:if>
-		
+				
 		<xsl:if test="not(contains($excludeHeaders, 'messageType'))">
 			<xsl:value-of select="concat($pfx, '  ''messageType'':&#x0a;')"/>
 			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/messageType''&#x0a;')"/>
@@ -523,36 +540,40 @@
 			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/navigationPageSize''&#x0a;')"/>
 		</xsl:if>
 
-		<xsl:if test="not(contains($excludeHeaders, 'relativeServicePath'))">
-			<xsl:value-of select="concat($pfx, '  ''relativeServicePath'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/relativeServicePath''&#x0a;')"/>
+		<xsl:if test="$includeAllHeaders">
+			<xsl:if test="not(contains($excludeHeaders, 'relativeServicePath'))">
+				<xsl:value-of select="concat($pfx, '  ''relativeServicePath'':&#x0a;')"/>
+				<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/relativeServicePath''&#x0a;')"/>
+			</xsl:if>
+	
 		</xsl:if>
 
 		<xsl:if test="not(contains($excludeHeaders, 'requestId'))">
 			<xsl:value-of select="concat($pfx, '  ''requestId'':&#x0a;')"/>
 			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/requestId''&#x0a;')"/>
 		</xsl:if>
-		
+				
 		<xsl:if test="not(contains($excludeHeaders, 'responseAction'))">
 			<xsl:value-of select="concat($pfx, '  ''responseAction'':&#x0a;')"/>
 			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/responseAction''&#x0a;')"/>
 		</xsl:if>
 		
-		<xsl:if test="not(contains($excludeHeaders, 'serviceType'))">
-			<xsl:value-of select="concat($pfx, '  ''serviceType'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/serviceType''&#x0a;')"/>
-		</xsl:if>
+		<xsl:if test="$includeAllHeaders">
+			<xsl:if test="not(contains($excludeHeaders, 'serviceType'))">
+				<xsl:value-of select="concat($pfx, '  ''serviceType'':&#x0a;')"/>
+				<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/serviceType''&#x0a;')"/>
+			</xsl:if>
 		
-		<xsl:if test="not(contains($excludeHeaders, 'timestamp'))">
-			<xsl:value-of select="concat($pfx, '  ''timestamp'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/timestamp''&#x0a;')"/>
+			<xsl:if test="not(contains($excludeHeaders, 'timestamp'))">
+				<xsl:value-of select="concat($pfx, '  ''timestamp'':&#x0a;')"/>
+				<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/timestamp''&#x0a;')"/>
+			</xsl:if>
+			
+			<xsl:if test="not(contains($excludeHeaders, 'vary'))">
+				<xsl:value-of select="concat($pfx, '  ''vary'':&#x0a;')"/>
+				<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/vary''&#x0a;')"/>
+			</xsl:if>
 		</xsl:if>
-		
-		<xsl:if test="not(contains($excludeHeaders, 'vary'))">
-			<xsl:value-of select="concat($pfx, '  ''vary'':&#x0a;')"/>
-			<xsl:value-of select="concat($pfx, '    $ref: ''commonDefs.yaml#/components/schemas/httpHeaders/response/vary''&#x0a;')"/>
-		</xsl:if>
-<!-- -->		
 	</xsl:template>
 	
 	<xsl:template match="specgen:DataObjects" mode="paths">
@@ -638,6 +659,14 @@
 						<xsl:text>      responses:&#x0a;</xsl:text>
 						<xsl:text>        '200':&#x0a;</xsl:text>
 						<xsl:text>          description: Operation succeeded. No payload returned for HTTP HEAD.&#x0a;</xsl:text>
+
+						<!-- Response Headers -->
+						<xsl:apply-templates select="." mode="addResponseHeaders">
+							<xsl:with-param name="pfx"><xsl:text>          </xsl:text></xsl:with-param>
+							<xsl:with-param name="excludeHeaders">
+								<xsl:value-of select="concat(specgen:OpenAPI/specgen:HeadBatch/specgen:ExcludeResponseHTTPHeaders, ',changesSinceMarkerGet')"/>
+							</xsl:with-param>
+						</xsl:apply-templates>
 		
 						<xsl:text>        '401':&#x0a;</xsl:text>
 						<xsl:text>          description: Authorisation failed.&#x0a;</xsl:text>
@@ -646,7 +675,7 @@
 						<xsl:apply-templates select="." mode="addResponseHeaders">
 							<xsl:with-param name="pfx"><xsl:text>          </xsl:text></xsl:with-param>
 							<xsl:with-param name="excludeHeaders">
-								<xsl:value-of select="concat(specgen:OpenAPI/specgen:HeadBatch/specgen:ExcludeResponseHTTPHeaders, ',changesSinceMarkerGet')"/>
+								<xsl:value-of select="concat(specgen:OpenAPI/specgen:HeadBatch/specgen:ExcludeResponseHTTPHeaders, ',changesSinceMarkerGet,changesSinceMarkerHead,navigationCount,navigationId,navigationLastPage,navigationPageSize,navigationLastPageSize')"/>
 							</xsl:with-param>
 						</xsl:apply-templates>
 					</xsl:if>
@@ -1079,90 +1108,93 @@
 			</xsl:apply-templates>
 		</xsl:if>
 		
-
-		<xsl:if test="not(contains($excludeHTTPHeaders, 'accept'))">
-			<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
-				<xsl:with-param name="hdrName">accept</xsl:with-param>
-			</xsl:apply-templates>
+		<xsl:if test="$includeAllHeaders">
+			<xsl:if test="not(contains($excludeHTTPHeaders, 'accept'))">
+				<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
+					<xsl:with-param name="hdrName">accept</xsl:with-param>
+				</xsl:apply-templates>
+			</xsl:if>
+			
+			<xsl:if test="not(contains($excludeHTTPHeaders, 'accept-encoding'))">
+				<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
+					<xsl:with-param name="hdrName">accept-encoding</xsl:with-param>
+				</xsl:apply-templates>
+			</xsl:if>
+	
+			<xsl:if test="not(contains($excludeHTTPHeaders, 'accept-profile'))">
+				<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
+					<xsl:with-param name="hdrName">accept-profile</xsl:with-param>
+				</xsl:apply-templates>
+			</xsl:if>
+	
+			<xsl:if test="not(contains($excludeHTTPHeaders, 'applicationKey'))">
+				<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
+					<xsl:with-param name="hdrName">applicationKey</xsl:with-param>
+				</xsl:apply-templates>
+			</xsl:if>
+	
+			<xsl:if test="not(contains($excludeHTTPHeaders, 'authenticatedUser'))">
+				<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
+					<xsl:with-param name="hdrName">authenticatedUser</xsl:with-param>
+				</xsl:apply-templates>
+			</xsl:if>
+	
+			<xsl:if test="not(contains($excludeHTTPHeaders, 'connectionId'))">
+				<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
+					<xsl:with-param name="hdrName">connectionId</xsl:with-param>
+				</xsl:apply-templates>
+			</xsl:if>
+	
+			<xsl:if test="not(contains($excludeHTTPHeaders, 'content-type'))">
+				<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
+					<xsl:with-param name="hdrName">content-type</xsl:with-param>
+				</xsl:apply-templates>
+			</xsl:if>
+	
+			<xsl:if test="not(contains($excludeHTTPHeaders, 'content-encoding'))">
+				<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
+					<xsl:with-param name="hdrName">content-encoding</xsl:with-param>
+				</xsl:apply-templates>
+			</xsl:if>
+	
+			<xsl:if test="not(contains($excludeHTTPHeaders, 'content-profile'))">
+				<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
+					<xsl:with-param name="hdrName">content-profile</xsl:with-param>
+				</xsl:apply-templates>
+			</xsl:if>
+	
+			<xsl:if test="not(contains($excludeHTTPHeaders, 'ETag'))">
+				<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
+					<xsl:with-param name="hdrName">ETag</xsl:with-param>
+				</xsl:apply-templates>
+			</xsl:if>
+	
+			<xsl:if test="not(contains($excludeHTTPHeaders, 'fingerprint'))">
+				<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
+					<xsl:with-param name="hdrName">fingerprint</xsl:with-param>
+				</xsl:apply-templates>
+			</xsl:if>
+			<xsl:if test="not(contains($excludeHTTPHeaders, 'generatorId'))">
+				<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
+					<xsl:with-param name="hdrName">generatorId</xsl:with-param>
+				</xsl:apply-templates>
+			</xsl:if>
 		</xsl:if>
 		
-		<xsl:if test="not(contains($excludeHTTPHeaders, 'accept-encoding'))">
-			<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
-				<xsl:with-param name="hdrName">accept-encoding</xsl:with-param>
-			</xsl:apply-templates>
-		</xsl:if>
-
-		<xsl:if test="not(contains($excludeHTTPHeaders, 'accept-profile'))">
-			<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
-				<xsl:with-param name="hdrName">accept-profile</xsl:with-param>
-			</xsl:apply-templates>
-		</xsl:if>
-
-		<xsl:if test="not(contains($excludeHTTPHeaders, 'applicationKey'))">
-			<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
-				<xsl:with-param name="hdrName">applicationKey</xsl:with-param>
-			</xsl:apply-templates>
-		</xsl:if>
-
-		<xsl:if test="not(contains($excludeHTTPHeaders, 'authenticatedUser'))">
-			<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
-				<xsl:with-param name="hdrName">authenticatedUser</xsl:with-param>
-			</xsl:apply-templates>
-		</xsl:if>
-
-		<xsl:if test="not(contains($excludeHTTPHeaders, 'connectionId'))">
-			<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
-				<xsl:with-param name="hdrName">connectionId</xsl:with-param>
-			</xsl:apply-templates>
-		</xsl:if>
-
-		<xsl:if test="not(contains($excludeHTTPHeaders, 'content-type'))">
-			<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
-				<xsl:with-param name="hdrName">content-type</xsl:with-param>
-			</xsl:apply-templates>
-		</xsl:if>
-
-		<xsl:if test="not(contains($excludeHTTPHeaders, 'content-encoding'))">
-			<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
-				<xsl:with-param name="hdrName">content-encoding</xsl:with-param>
-			</xsl:apply-templates>
-		</xsl:if>
-
-		<xsl:if test="not(contains($excludeHTTPHeaders, 'content-profile'))">
-			<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
-				<xsl:with-param name="hdrName">content-profile</xsl:with-param>
-			</xsl:apply-templates>
-		</xsl:if>
-
-		<xsl:if test="not(contains($excludeHTTPHeaders, 'ETag'))">
-			<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
-				<xsl:with-param name="hdrName">ETag</xsl:with-param>
-			</xsl:apply-templates>
-		</xsl:if>
-
-		<xsl:if test="not(contains($excludeHTTPHeaders, 'fingerprint'))">
-			<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
-				<xsl:with-param name="hdrName">fingerprint</xsl:with-param>
-			</xsl:apply-templates>
-		</xsl:if>
-		<xsl:if test="not(contains($excludeHTTPHeaders, 'generatorId'))">
-			<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
-				<xsl:with-param name="hdrName">generatorId</xsl:with-param>
-			</xsl:apply-templates>
-		</xsl:if>
-
 		<xsl:if test="not(contains($excludeHTTPHeaders, 'messageId'))">
 			<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
 				<xsl:with-param name="hdrName">messageId</xsl:with-param>
 			</xsl:apply-templates>
 		</xsl:if>
 
-		<xsl:if test="not(contains($excludeHTTPHeaders, 'messageType'))">
-			<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
-				<xsl:with-param name="hdrName">messageType</xsl:with-param>
-			</xsl:apply-templates>
+		<xsl:if test="$includeAllHeaders">
+			<xsl:if test="not(contains($excludeHTTPHeaders, 'messageType'))">
+				<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
+					<xsl:with-param name="hdrName">messageType</xsl:with-param>
+				</xsl:apply-templates>
+			</xsl:if>
 		</xsl:if>
-
+		
 		<xsl:if test="not(contains($excludeHTTPHeaders, 'methodOverridePut'))">
 			<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
 				<xsl:with-param name="hdrName">methodOverridePut</xsl:with-param>
@@ -1181,10 +1213,12 @@
 			</xsl:apply-templates>
 		</xsl:if>
 
-		<xsl:if test="not(contains($excludeHTTPHeaders, 'navigationId'))">
-			<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
-				<xsl:with-param name="hdrName">navigationId</xsl:with-param>
-			</xsl:apply-templates>
+		<xsl:if test="$includeAllHeaders">
+			<xsl:if test="not(contains($excludeHTTPHeaders, 'navigationId'))">
+				<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
+					<xsl:with-param name="hdrName">navigationId</xsl:with-param>
+				</xsl:apply-templates>
+			</xsl:if>
 		</xsl:if>
 
 		<xsl:if test="not(contains($excludeHTTPHeaders, 'navigationPage'))">
@@ -1205,10 +1239,12 @@
 			</xsl:apply-templates>
 		</xsl:if>
 
-		<xsl:if test="not(contains($excludeHTTPHeaders, 'queueId'))">
-			<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
-				<xsl:with-param name="hdrName">queueId</xsl:with-param>
-			</xsl:apply-templates>
+		<xsl:if test="$includeAllHeaders">
+			<xsl:if test="not(contains($excludeHTTPHeaders, 'queueId'))">
+				<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
+					<xsl:with-param name="hdrName">queueId</xsl:with-param>
+				</xsl:apply-templates>
+			</xsl:if>
 		</xsl:if>
 
 		<xsl:if test="not(contains($excludeHTTPHeaders, 'replacement'))">
@@ -1223,30 +1259,34 @@
 			</xsl:apply-templates>
 		</xsl:if>
 
-		<xsl:if test="not(contains($excludeHTTPHeaders, 'requestAction'))">
-			<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
-				<xsl:with-param name="hdrName">requestAction</xsl:with-param>
-			</xsl:apply-templates>
+		<xsl:if test="$includeAllHeaders">
+			<xsl:if test="not(contains($excludeHTTPHeaders, 'requestAction'))">
+				<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
+					<xsl:with-param name="hdrName">requestAction</xsl:with-param>
+				</xsl:apply-templates>
+			</xsl:if>
 		</xsl:if>
-
+		
 		<xsl:if test="not(contains($excludeHTTPHeaders, 'requestType'))">
 			<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
 				<xsl:with-param name="hdrName">requestType</xsl:with-param>
 			</xsl:apply-templates>
 		</xsl:if>
 
-		<xsl:if test="not(contains($excludeHTTPHeaders, 'serviceType'))">
-			<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
-				<xsl:with-param name="hdrName">serviceType</xsl:with-param>
-			</xsl:apply-templates>
-		</xsl:if>
+		<xsl:if test="$includeAllHeaders">
+			<xsl:if test="not(contains($excludeHTTPHeaders, 'serviceType'))">
+				<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
+					<xsl:with-param name="hdrName">serviceType</xsl:with-param>
+				</xsl:apply-templates>
+			</xsl:if>
 
-		<xsl:if test="not(contains($excludeHTTPHeaders, 'sourceName'))">
-			<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
-				<xsl:with-param name="hdrName">sourceName</xsl:with-param>
-			</xsl:apply-templates>
+			<xsl:if test="not(contains($excludeHTTPHeaders, 'sourceName'))">
+				<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
+					<xsl:with-param name="hdrName">sourceName</xsl:with-param>
+				</xsl:apply-templates>
+			</xsl:if>
 		</xsl:if>
-
+		
 		<xsl:if test="not(contains($excludeHTTPHeaders, 'timestamp'))">
 			<xsl:apply-templates select="." mode="addRequestHTTPHeaderRef">
 				<xsl:with-param name="hdrName">timestamp</xsl:with-param>
@@ -1310,6 +1350,7 @@
 
 		<xsl:value-of select="normalize-space(translate($descr, ':', ''))"/>
 	</xsl:template>
+	
 	<xsl:template match="specgen:p|specgen:br|specgen:a
 						 |specgen:code|specgen:strong|specgen:em|specgen:span
 						 |specgen:h1|specgen:h2|specgen:h3|specgen:h4
