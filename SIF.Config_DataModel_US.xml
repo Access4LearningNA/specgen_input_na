@@ -136,7 +136,13 @@
     </xsltTransformation>
 
     <xsltTransformation>
-      <xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile> 
+      <xsltInputFile>98_Xslt\dmToOpenAPI.xsl</xsltInputFile>
+			<xsltParamList>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
+			</xsltParamList>                       
       <xsltOutputDir>JSON</xsltOutputDir>
       <xsltOutputFile>OpenAPI_US.yaml</xsltOutputFile>
       <yamlToJson>true</yamlToJson>
@@ -152,7 +158,11 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>Assessment</xsltValue>
-				</xsltParam>				
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>      
       <xsltOutputDir>JSON</xsltOutputDir>
       <xsltOutputFile>AssessmentAPI_US.yaml</xsltOutputFile>
@@ -169,7 +179,11 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>Data Model</xsltValue>
-				</xsltParam>				
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>      
       <xsltOutputDir>JSON</xsltOutputDir>
       <xsltOutputFile>DataModelAPI_US.yaml</xsltOutputFile>
@@ -186,7 +200,11 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>Data Warehouse</xsltValue>
-				</xsltParam>				
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>      
       <xsltOutputDir>JSON</xsltOutputDir>
       <xsltOutputFile>DataWarehouseAPI_US.yaml</xsltOutputFile>
@@ -203,7 +221,11 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>Facilities and Energy Management</xsltValue>
-				</xsltParam>				
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>      
       <xsltOutputDir>JSON</xsltOutputDir>
       <xsltOutputFile>FacilitiesEnergyAPI_US.yaml</xsltOutputFile>
@@ -220,7 +242,11 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>Food Services</xsltValue>
-				</xsltParam>				
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>      
       <xsltOutputDir>JSON</xsltOutputDir>
       <xsltOutputFile>FoodServicesAPI_US.yaml</xsltOutputFile>
@@ -237,7 +263,11 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>Grade Book</xsltValue>
-				</xsltParam>				
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>		
 			</xsltParamList>      
       <xsltOutputDir>JSON</xsltOutputDir>
       <xsltOutputFile>GradeBookAPI_US.yaml</xsltOutputFile>
@@ -254,7 +284,11 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>Human Resources &amp; Financials</xsltValue>
-				</xsltParam>				
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>      
       <xsltOutputDir>JSON</xsltOutputDir>
       <xsltOutputFile>HumanResourcesFinancialsAPI_US.yaml</xsltOutputFile>
@@ -271,7 +305,11 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>Identity Management</xsltValue>
-				</xsltParam>				
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>      
       <xsltOutputDir>JSON</xsltOutputDir>
       <xsltOutputFile>IdentityManagementAPI_US.yaml</xsltOutputFile>
@@ -288,7 +326,11 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>Infrastructure</xsltValue>
-				</xsltParam>				
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>      
       <xsltOutputDir>JSON</xsltOutputDir>
       <xsltOutputFile>InfrastructureAPI_US.yaml</xsltOutputFile>
@@ -305,7 +347,11 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>Instructional Services</xsltValue>
-				</xsltParam>				
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>      
       <xsltOutputDir>JSON</xsltOutputDir>
       <xsltOutputFile>InstructionalServicesAPI_US.yaml</xsltOutputFile>
@@ -322,7 +368,11 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>Library Automation</xsltValue>
-				</xsltParam>				
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>      
       <xsltOutputDir>JSON</xsltOutputDir>
       <xsltOutputFile>LibraryAutomationAPI_US.yaml</xsltOutputFile>
@@ -339,7 +389,11 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>Privacy</xsltValue>
-				</xsltParam>				
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>      
       <xsltOutputDir>JSON</xsltOutputDir>
       <xsltOutputFile>PrivacyAPI_US.yaml</xsltOutputFile>
@@ -356,7 +410,11 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>Professional Development</xsltValue>
-				</xsltParam>				
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>      
       <xsltOutputDir>JSON</xsltOutputDir>
       <xsltOutputFile>ProfessionalDevelopmentAPI_US.yaml</xsltOutputFile>
@@ -373,7 +431,11 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>Special Programs</xsltValue>
-				</xsltParam>				
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>      
       <xsltOutputDir>JSON</xsltOutputDir>
       <xsltOutputFile>SpecialProgramsAPI_US.yaml</xsltOutputFile>
@@ -390,7 +452,11 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>Student Information Systems</xsltValue>
-				</xsltParam>				
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>      
       <xsltOutputDir>JSON</xsltOutputDir>
       <xsltOutputFile>StudentInformationSystemsAPI_US.yaml</xsltOutputFile>
@@ -408,6 +474,10 @@
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>Student Record Exchange</xsltValue>
 				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>      
       <xsltOutputDir>JSON</xsltOutputDir>
       <xsltOutputFile>StudentRecordExchangeAPI_US.yaml</xsltOutputFile>
@@ -424,7 +494,11 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>Transportation and Geographic Information</xsltValue>
-				</xsltParam>				
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>			
 			</xsltParamList>      
       <xsltOutputDir>JSON</xsltOutputDir>
       <xsltOutputFile>TransportationAPI_US.yaml</xsltOutputFile>
@@ -441,7 +515,11 @@
 				<xsltParam>
 					<xsltName>sifObjectGroupList</xsltName>
 					<xsltValue>xPress</xsltValue>
-				</xsltParam>				
+				</xsltParam>
+				<xsltParam>
+					<xsltName>includeAllHeaders</xsltName>
+					<xsltValue>true</xsltValue>
+				</xsltParam>
 			</xsltParamList>      
       <xsltOutputDir>JSON</xsltOutputDir>
       <xsltOutputFile>xPressAPI_US.yaml</xsltOutputFile>
