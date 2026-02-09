@@ -43,15 +43,23 @@
     <Element>ScorePoints</Element>
     <Characteristics>C</Characteristics>
     <Description>
-      <p>The score represented as points.  Conditionally required that one or more of ScorePoints, ScorePercent or ScoreLetter must be filled in.</p>
+      <p>The score represented as points.  Conditionally required that one or more of ScorePoints, ScorePointsFloat, ScorePercent, ScoreLetter or ScoreEmptyReason be present.</p>
     </Description>
     <Type name="xs:unsignedInt"/>
+  </Item>
+  <Item>
+    <Element>ScorePointsFloat</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>The score represented as points and partial points.  Conditionally required that one or more of ScorePoints, ScorePointsFloat, ScorePercent, ScoreLetter or ScoreEmptyReason be present.</p>
+    </Description>
+    <Type name="xs:float"/>
   </Item>
   <Item>
     <Element>ScorePercent</Element>
     <Characteristics>C</Characteristics>
     <Description>
-      <p>The score represented as a percent.  Conditionally required that one or more of ScorePoints, ScorePercent or ScoreLetter must be filled in.</p>
+      <p>The score represented as a percent.  Conditionally required that one or more of ScorePoints, ScorePointsFloat, ScorePercent, ScoreLetter or ScoreEmptyReason be present.</p>
     </Description>
     <Type name="xs:decimal"/>
   </Item>
@@ -59,9 +67,19 @@
     <Element>ScoreLetter</Element>
     <Characteristics>C</Characteristics>
     <Description>
-      <p>The score represented as a letter grade.  Conditionally required that one or more of ScorePoints, ScorePercent or ScoreLetter must be filled in.</p>
+      <p>The score represented as a letter grade.  Conditionally required that one or more of ScorePoints, ScorePointsFloat, ScorePercent, ScoreLetter or ScoreEmptyReason be present.</p>
     </Description>
     <Type name="xs:string"/>
+  </Item>
+  <Item>
+    <Element>ScoreEmptyReason</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>Code that represents why the assignment is not scored using any of the other methods.  Conditionally required that one or more of ScorePoints, ScorePointsFloat, ScorePercent, ScoreLetter or ScoreEmptyReason be present.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000934</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000934</cedsURL>
   </Item>
   <Item>
     <Element>ScoreDescription</Element>
@@ -70,6 +88,14 @@
       <p>Text description of the score.</p>
     </Description>
     <Type name="xs:string"/>
+  </Item>
+  <Item>
+    <Element>LearningStandardItemList</Element>
+    <Description>
+      <p>References to LearningStandardItems or LearningStandardDocuments directly.</p>
+    </Description>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="LearningStandardItemListType"/>
   </Item>
   <Item>
     <Element>SIF_Metadata</Element>

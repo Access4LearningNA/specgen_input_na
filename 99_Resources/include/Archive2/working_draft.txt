@@ -2,8 +2,8 @@ Replace the line in specification.css in order to change the logo in the upper l
 
 
 ---DRAFT-----
-body { background-image: url(../images/sif_working_draft.jpg); background-position: top left; background-attachment: fixed; background-repeat: no-repeat; margin-left: 70px }
+body { background-image: url(../images/sif_working_draft.png); background-position: top left; background-attachment: fixed; background-repeat: no-repeat; margin-left: 70px }
 
 
 ----REGULAR---------
-body { background-image: url(../images/sif_specification.jpg); background-position: top left; background-attachment: fixed; background-repeat: no-repeat; margin-left: 70px }
+body { background-image: url(../images/sif_specification.png); background-position: top left; background-attachment: fixed; background-repeat: no-repeat; margin-left: 70px }

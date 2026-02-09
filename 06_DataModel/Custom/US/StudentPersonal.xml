@@ -186,6 +186,24 @@
     </Description>
     <Type name="xs:token"/>
   </Item>
+  <!--
+  <Item>
+    <Element>CodeOfConduct</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Does the student have a current signed Code of Conduct document?</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
+    <Attribute>Codeset</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  -->
   <Item>
     <Element>IDEA</Element>
     <Characteristics>O</Characteristics>

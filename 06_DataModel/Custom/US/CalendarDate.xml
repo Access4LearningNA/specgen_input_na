@@ -23,8 +23,8 @@
       <p>A specific school day that occurs within the school year.</p>
     </Description>
     <Type name="xs:date"/>
-    <cedsId>000243</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000243</cedsURL>
+    <cedsId>001275</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001275</cedsURL>
   </Item>
   <Item>
     <Attribute>CalendarSummaryRefId</Attribute>

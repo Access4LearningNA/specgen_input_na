@@ -242,6 +242,16 @@
     <cedsURL>https://ceds.ed.gov/element/001227</cedsURL>
   </Item>
   <Item>
+    <Element>ProgramPlacementReason</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Why the student was placed in the support program.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+    <cedsId>001922</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001922</cedsURL>
+  </Item>
+  <Item>
     <Element>LeastRestrictiveEnvironment</Element>
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="LeastRestrictiveEnvironmentType"/>

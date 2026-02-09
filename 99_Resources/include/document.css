@@ -1,66 +1,94 @@
-body { background-color: white }
+/* open-sans-regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/open-sans-v29-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/open-sans-v29-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/open-sans-v29-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/open-sans-v29-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/open-sans-v29-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/open-sans-v29-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
 
-h1 { text-indent:  0%; color: #005696; border-width: 3px; border-style: solid; padding: 5px; border-color: #005696; margin-bottom: 18px }
-h2 { text-indent:  0%; color: #005696; margin-top: 27px; margin-bottom: 18px }
-h3 { text-indent:  0%; color: #005696; margin-top: 24px; margin-bottom: 15px }
-h4 { text-indent:  0%; color: #005696; margin-top: 21px; margin-bottom: 12px }
-h5 { text-indent:  0%; color: #005696; margin-top: 18px; margin-bottom:  9px }
-h6 { text-indent:  0%; color: #005696; margin-top: 15px; margin-bottom:  6px }
+/* poppins-regular - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/poppins-v20-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/poppins-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/poppins-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/poppins-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/poppins-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/poppins-v20-latin-regular.svg#Poppins') format('svg'); /* Legacy iOS */
+}
+
+body { background-color: white; font-family: 'Open Sans' }
+
+h1 { text-indent:  0%; color: #003087; font-family: 'Poppins'; border-width: 3px; border-style: solid; padding: 5px; border-color: #707372; margin-bottom: 18px }
+h2 { text-indent:  0%; color: #00C389; font-family: 'Poppins'; margin-top: 27px; margin-bottom: 18px }
+h3 { text-indent:  0%; color: #00C389; font-family: 'Poppins'; margin-top: 24px; margin-bottom: 15px }
+h4 { text-indent:  0%; color: #00C389; font-family: 'Poppins'; margin-top: 21px; margin-bottom: 12px }
+h5 { text-indent:  0%; color: #00C389; font-family: 'Poppins'; margin-top: 18px; margin-bottom:  9px }
+h6 { text-indent:  0%; color: #00C389; font-family: 'Poppins'; margin-top: 15px; margin-bottom:  6px }
 
 .element_section { margin-bottom: 40px }
-.element_name { background-color: #005696; color: white; border-color: #FFC425; border-style: double; border-width: 3px; padding: 10px; font-size: larger }
+.element_name { background-color: #707372; color: white; border-color: #00C389; border-style: double; border-width: 3px; padding: 10px; font-size: larger }
 
 a img { border: 0 }
 
-a:link { color: #005696; text-decoration: none }
-a:visited { color: #005696; text-decoration: none }
-a:active { color: #005696; text-decoration: none }
-a:link:hover { color: #005696; text-decoration: underline }
+a:link { color: #00C389; text-decoration: none }
+a:visited { color: #00C389; text-decoration: none }
+a:active { color: #00C389; text-decoration: none }
+a:link:hover { color: #00C389; text-decoration: underline }
 
-hr { color: #FFC425 }
+hr { color: #00C389 }
 
 table { border-collapse: collapse; margin-bottom: 12px }
 tr { border-collapse: collapse }
-td { border-width: 1px; border-color: #005696/*#FFC425*/; border-style: solid; border-collapse: collapse; padding: 3px }
-th { border-width: 1px; border-color: #005696/*#FFC425*/; border-style: solid; border-collapse: collapse; padding: 3px }
+td { border-width: 1px; border-color: #707372; border-style: solid; border-collapse: collapse; padding: 3px }
+th { border-width: 1px; border-color: #707372; border-style: solid; border-collapse: collapse; padding: 3px }
 
-em { color: #005696 }
-strong { color: #005696 }
+em { color: #707372 }
+strong { color: #707372 }
 
 td dl { margin-bottom: 0px }
 
-table > tr:first-child td { background-color: #005696; color: white; font-weight: bold; vertical-align: bottom }
-th { background-color: #005696; color: white; font-weight: bold; vertical-align: bottom }
+table > tr:first-child td { background-color: #707372; color: white; font-weight: bold; vertical-align: bottom }
+th { background-color: #707372; color: white; font-weight: bold; vertical-align: bottom }
 table td { vertical-align: top }
-thead td { background-color: #005696; color: white; font-weight: bold; vertical-align: bottom }
+thead td { background-color: #707372; color: white; font-weight: bold; vertical-align: bottom }
 
 ul li { list-style-position: outside; list-style-image: url(../images/bullet_logo.jpg); background-attachment: fixed; padding: 2px }
 
-/*div.example { margin-top: 20px; background-color: #FAFAFA; border-width: 2; border-style: double; border-color: #005696; padding: 10px; white-space: pre; font-family: monospace; font-size: smaller }*/
-div.example { text-align: left; margin-top: 20px; background-color: #FAFAFA; border-width: 2; border-style: double; border-color: #005696; padding: 10px; white-space: pre; font-family: monospace; font-size: smaller; overflow: scroll; width: 96%; height: 100%; margin-left: auto; margin-right: auto }
+/*div.example { margin-top: 20px; background-color: #FAFAFA; border-width: 2; border-style: double; border-color: #707372; padding: 10px; white-space: pre; font-family: monospace; font-size: smaller }*/
+div.example { text-align: left; margin-top: 20px; background-color: #FAFAFA; border-width: 2; border-style: double; border-color: #707372; padding: 10px; white-space: pre; font-family: monospace; font-size: smaller; overflow: scroll; width: 96%; height: 100%; margin-left: auto; margin-right: auto }
 div.example_parent { text-align: center; margin-bottom: 2px }
 
 span.caption { font-size: smaller; font-style: italic; margin-bottom: 10px; display: block }
 span.example { font-family: monospace; font-size: smaller }
-span.title { color: #005696; font-weight: bolder }
+span.title { color: #707372; font-weight: bolder }
 
-dt { font-weight: bold; color: #005696 }
+dt { font-weight: bold; color: #707372 }
 
 table.codeset dt { font-weight: normal }
 
 table.definition { margin-bottom: 2px }
 
-table.definition td.indicators { color: #005696; font-size: 14px; font-weight: bold; text-align: center; padding: 1px }
+table.definition td.indicators { color: #707372; font-size: 14px; font-weight: bold; text-align: center; padding: 1px }
 table.definition img.key { padding-top: 4px }
 table.definition td.element { font-size: smaller }
 table.definition td.attribute { font-size: smaller }
 table.definition td.emptycell { background-color: #FAFAFA }
 table.definition td.characteristics { text-align: center }
 
-table.definition .type a:link { color: #005696; font-family: monospace; text-decoration: none; font-size: smaller }
-table.definition .type a:visited { color: #005696; font-family: monospace; text-decoration: none; font-size: smaller }
-table.definition .type a:active { color: #005696; font-family: monospace; text-decoration: none; font-size: smaller }
-table.definition .type a:link:hover { color: #005696; font-family: monospace; text-decoration: none; font-size: smaller; text-decoration: underline }
+table.definition .type a:link { color: #707372; font-family: monospace; text-decoration: none; font-size: smaller }
+table.definition .type a:visited { color: #707372; font-family: monospace; text-decoration: none; font-size: smaller }
+table.definition .type a:active { color: #707372; font-family: monospace; text-decoration: none; font-size: smaller }
+table.definition .type a:link:hover { color: #707372; font-family: monospace; text-decoration: none; font-size: smaller; text-decoration: underline }
 table.definition .type dt { font-family: monospace; font-weight: normal; font-size: smaller }
 table.definition .type dd { font-size: smaller }
 table.definition .type table { margin-top: 10px; margin-left: 10px }
@@ -72,7 +100,7 @@ table.definition li { list-style-image: none }
 ol.comment { background-color: lime; border-color: gray; border-width: 1; border-style: solid; padding: 5px; margin: 10px  }
 ol.comment li { list-style-position: inside }
 
-p.emphasized_note { color: #005696; font-weight: bold }
+p.emphasized_note { color: #707372; font-weight: bold }
 
 div.contents { margin-top: 50px }
 
@@ -97,9 +125,9 @@ div.navigation a { margin-right: 25px; font-size: larger; font-weight: bold }
 .diagram_parent { width: 100%; height: 100%; overflow: scroll; text-align: center; border-width: 1px; border-style: inset; margin-top: 10px; margin-bottom: 0px }
 .diagram { margin-top: 10px; margin-bottom: 10px }
 
-.rfc2119 { font-family: monospace; color: #005696 }
+.rfc2119 { font-family: monospace; color: #707372 }
 
-.rootElement { font-weight: bold; color: #005696; font-size: 110% }
+.rootElement { font-weight: bold; color: #707372; font-size: 110% }
 
 div.type_indent { margin-left: 5%; margin-top: 0px; margin-bottom: 0px }
 
@@ -114,7 +142,7 @@ li.folder ul { margin-left: 16px; margin-top: 2px; margin-bottom: 0px; padding-t
 
 .charOverride {
 	display:block;
-	color: #005696; font-family: monospace; font-weight:bold;
+	color: #707372; font-family: monospace; font-weight:bold;
 }
 
 @media print
@@ -127,9 +155,9 @@ li.folder ul { margin-left: 16px; margin-top: 2px; margin-bottom: 0px; padding-t
 	table { page-break-inside: avoid }
 	tr { page-break-inside: avoid }
 	h1 { page-break-before: always }
-	hr { color: #005696 }
-	td { border-color: #005696 }
-	th { border-color: #005696 }
+	hr { color: #707372 }
+	td { border-color: #707372 }
+	th { border-color: #707372 }
 	
 	div.example { page-break-inside: avoid; overflow: hidden; width: auto; height: auto }
 	.diagram_parent { page-break-inside: avoid; overflow: hidden; width: auto; height: auto; border-width: 0px }

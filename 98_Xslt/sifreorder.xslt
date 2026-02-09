@@ -558,6 +558,7 @@
 <xsl:apply-templates select="DueDate" mode="copy" />
 <xsl:apply-templates select="Weight" mode="copy" />
 <xsl:apply-templates select="DetailedDescription" mode="DocumentSourceType" />
+<xsl:apply-templates select="LearningStandardItemList" mode="LearningStandardItemListType" />
 <xsl:apply-templates select="SIF_Metadata" mode="SIF_MetadataType" />
 <xsl:apply-templates select="SIF_ExtendedElements" mode="SIF_ExtendedElementsType" />
 </xsl:copy>
@@ -566,9 +567,12 @@
 <xsl:copy>
     <xsl:apply-templates select="@*" mode="copy" />
 <xsl:apply-templates select="ScorePoints" mode="copy" />
+<xsl:apply-templates select="ScorePointsFloat" mode="copy" />
 <xsl:apply-templates select="ScorePercent" mode="copy" />
 <xsl:apply-templates select="ScoreLetter" mode="copy" />
+<xsl:apply-templates select="ScoreEmptyReason" mode="copy" />
 <xsl:apply-templates select="ScoreDescription" mode="copy" />
+<xsl:apply-templates select="LearningStandardItemList" mode="LearningStandardItemListType" />
 <xsl:apply-templates select="SIF_Metadata" mode="SIF_MetadataType" />
 <xsl:apply-templates select="SIF_ExtendedElements" mode="SIF_ExtendedElementsType" />
 </xsl:copy>
@@ -641,6 +645,8 @@
 <xsl:apply-templates select="ProgramType" mode="EmployeeAssignmentProgramType" />
 <xsl:apply-templates select="FundingSource" mode="OldFundingSourceType" />
 <xsl:apply-templates select="SpecialEducation" mode="SpecialEductionType" />
+<xsl:apply-templates select="TeacherInexperiencedStatus" mode="TeacherInexperiencedStatusType" />
+<xsl:apply-templates select="TeacherOutOfFieldStatus" mode="TeacherOutOfFieldStatusType" />
 <xsl:apply-templates select="SIF_Metadata" mode="SIF_MetadataType" />
 <xsl:apply-templates select="SIF_ExtendedElements" mode="SIF_ExtendedElementsType" />
 </xsl:copy>
@@ -685,6 +691,8 @@
 <xsl:apply-templates select="AddressList" mode="AddressListType" />
 <xsl:apply-templates select="PhoneNumberList" mode="PhoneNumberListType" />
 <xsl:apply-templates select="EmailList" mode="EmailListType" />
+<xsl:apply-templates select="BenefitEligible" mode="copy" />
+<xsl:apply-templates select="ReemployedRetiree" mode="copy" />
 <xsl:apply-templates select="SIF_Metadata" mode="SIF_MetadataType" />
 <xsl:apply-templates select="SIF_ExtendedElements" mode="SIF_ExtendedElementsType" />
 </xsl:copy>
@@ -1018,6 +1026,7 @@
 <xsl:apply-templates select="NOREPDate" mode="copy" />
 <xsl:apply-templates select="PlacementParentalConsentDate" mode="copy" />
 <xsl:apply-templates select="ProgramPlacementDate" mode="copy" />
+<xsl:apply-templates select="ProgramPlacementReason" mode="copy" />
 <xsl:apply-templates select="LeastRestrictiveEnvironment" mode="LeastRestrictiveEnvironmentType" />
 <xsl:apply-templates select="ExtendedSchoolYear" mode="copy" />
 <xsl:apply-templates select="ExtendedDay" mode="copy" />
@@ -1127,17 +1136,24 @@
 <xsl:apply-templates select="DisplacedHomemaker" mode="StudentCareerTechnicalDisplacedHomemakerType" />
 <xsl:apply-templates select="ProgramParticipationExitDate" mode="copy" />
 <xsl:apply-templates select="ProgramParticipationStartDate" mode="copy" />
+<xsl:apply-templates select="NeglectedOrDelinquentProgramType" mode="copy" />
 <xsl:apply-templates select="SingleParentOrSinglePregnantWoman" mode="StudentCareerTechnicalSingleParentOrSinglePregnantWomanType" />
+<xsl:apply-templates select="OutcomeType" mode="copy" />
+<xsl:apply-templates select="OutcomeExitType" mode="copy" />
 </xsl:copy>
 </xsl:template>
 <xsl:template match="Assessment" mode="object">
 <xsl:copy>
     <xsl:apply-templates select="@*" mode="copy" />
 <xsl:apply-templates select="Name" mode="copy" />
+<xsl:apply-templates select="ShortName" mode="copy" />
 <xsl:apply-templates select="AssessmentId" mode="copy" />
 <xsl:apply-templates select="AssessmentIdSystem" mode="copy" />
 <xsl:apply-templates select="AssessmentPackageRefId" mode="copy" />
 <xsl:apply-templates select="AssessmentDescriptors" mode="AssessmentDescriptorListType" />
+<xsl:apply-templates select="AssessmentPurpose" mode="copy" />
+<xsl:apply-templates select="AssessmentFamilyTitle" mode="copy" />
+<xsl:apply-templates select="AssessmentFamilyShortName" mode="copy" />
 <xsl:apply-templates select="SIF_Metadata" mode="SIF_MetadataType" />
 <xsl:apply-templates select="SIF_ExtendedElements" mode="SIF_ExtendedElementsType" />
 </xsl:copy>
@@ -1734,6 +1750,7 @@
 <xsl:apply-templates select="SchoolType" mode="SchoolInfoSchoolTypeType" />
 <xsl:apply-templates select="SchoolFocusList" mode="SchoolFocusListType" />
 <xsl:apply-templates select="SchoolURL" mode="SchoolURLType" />
+<xsl:apply-templates select="SchoolDesignationList" mode="SchoolDesignationListType" />
 <xsl:apply-templates select="PrincipalInfo" mode="PrincipalInfoType" />
 <xsl:apply-templates select="SchoolContactList" mode="SchoolContactListType" />
 <xsl:apply-templates select="AddressList" mode="AddressListType" />
@@ -1742,6 +1759,7 @@
 <xsl:apply-templates select="IdentificationInfoList" mode="IdentificationInfoListType" />
 <xsl:apply-templates select="SessionType" mode="SchoolInfoSessionTypeType" />
 <xsl:apply-templates select="GradeLevels" mode="GradeLevelsType" />
+<xsl:apply-templates select="GradeLevelApprovedList" mode="GradeLevelApprovedListType" />
 <xsl:apply-templates select="Title1Status" mode="SchoolInfoTitle1StatusType" />
 <xsl:apply-templates select="TitleIProgramType" mode="SchoolInfoTitleIProgramTypeType" />
 <xsl:apply-templates select="OperationalStatus" mode="OperationalStatusType" />
@@ -1980,6 +1998,7 @@
 <xsl:apply-templates select="NCESId" mode="NCESIdType" />
 <xsl:apply-templates select="LEAName" mode="LEANameType" />
 <xsl:apply-templates select="LEAURL" mode="copy" />
+<xsl:apply-templates select="SchoolDesignationList" mode="SchoolDesignationListType" />
 <xsl:apply-templates select="EducationAgencyType" mode="EducationAgencyTypeType" />
 <xsl:apply-templates select="LEAContactList" mode="LEAContactListType" />
 <xsl:apply-templates select="PhoneNumberList" mode="PhoneNumberListType" />
@@ -1990,6 +2009,7 @@
 <xsl:apply-templates select="OperationalStatus" mode="OperationalStatusType" />
 <xsl:apply-templates select="OperationalStatusDate" mode="copy" />
 <xsl:apply-templates select="CongressionalDistrict" mode="CongressionalDistrictType" />
+<xsl:apply-templates select="RegionOrganizationList" mode="RegionOrganizationListType" />
 <xsl:apply-templates select="TitleIProgramType" mode="LEAInfoTitleIProgramTypeType" />
 <xsl:apply-templates select="TitleIIILanguageInstructionProgramType" mode="LEAInfoTitleIIILanguageInstructionProgramTypeType" />
 <xsl:apply-templates select="SIF_Metadata" mode="SIF_MetadataType" />
@@ -2009,6 +2029,8 @@
 <xsl:apply-templates select="GradeLevels" mode="GradeLevelsType" />
 <xsl:apply-templates select="ItinerantTeacher" mode="StaffAssignmentItinerantTeacherType" />
 <xsl:apply-templates select="InstructionalLevel" mode="InstructionalLevelType" />
+<xsl:apply-templates select="TeacherInexperiencedStatus" mode="TeacherInexperiencedStatusType" />
+<xsl:apply-templates select="TeacherOutOfFieldStatus" mode="TeacherOutOfFieldStatusType" />
 <xsl:apply-templates select="EmployeePersonalRefId" mode="copy" />
 <xsl:apply-templates select="SIF_Metadata" mode="SIF_MetadataType" />
 <xsl:apply-templates select="SIF_ExtendedElements" mode="SIF_ExtendedElementsType" />
@@ -2058,6 +2080,8 @@
 <xsl:apply-templates select="TeacherOfRecord" mode="copy" />
 <xsl:apply-templates select="Roles" mode="RolesType" />
 <xsl:apply-templates select="PercentResponsible" mode="copy" />
+<xsl:apply-templates select="TeacherInexperiencedStatus" mode="TeacherInexperiencedStatusType" />
+<xsl:apply-templates select="TeacherOutOfFieldStatus" mode="TeacherOutOfFieldStatusType" />
 <xsl:apply-templates select="SIF_Metadata" mode="SIF_MetadataType" />
 <xsl:apply-templates select="SIF_ExtendedElements" mode="SIF_ExtendedElementsType" />
 </xsl:copy>
@@ -2477,6 +2501,7 @@
     <xsl:apply-templates select="@*" mode="copy" />
 <xsl:apply-templates select="RaceList" mode="RaceListType" />
 <xsl:apply-templates select="HispanicLatino" mode="copy" />
+<xsl:apply-templates select="RaceEthnicityDeclined" mode="copy" />
 <xsl:apply-templates select="Gender" mode="DemographicsGenderType" />
 <xsl:apply-templates select="BirthDate" mode="BirthDateType" />
 <xsl:apply-templates select="BirthDateVerification" mode="DemographicsBirthDateVerificationType" />
@@ -2847,6 +2872,7 @@
 <xsl:copy>
     <xsl:apply-templates select="@*" mode="copy" />
 <xsl:apply-templates select="ApprovalAgencyType" mode="copy" />
+<xsl:apply-templates select="ContractIdNumber" mode="copy" />
 <xsl:apply-templates select="ApprovalDate" mode="copy" />
 <xsl:apply-templates select="RenewalDate" mode="copy" />
 <xsl:apply-templates select="ManagementOrganizationType" mode="SchoolCharterManagementOrganizationTypeType" />
@@ -4073,6 +4099,18 @@
 <xsl:apply-templates select="LearningStandardItemRefId" mode="copy" />
 </xsl:copy>
 </xsl:template>
+<xsl:template match="node()|@*" mode="LearningStandardItemListType">
+<xsl:copy>
+    <xsl:apply-templates select="@*" mode="copy" />
+<xsl:apply-templates select="LearningStandardItem" mode="LearningStandardItemRefType" />
+</xsl:copy>
+</xsl:template>
+<xsl:template match="node()|@*" mode="LearningStandardItemRefType">
+<xsl:copy>
+    <xsl:apply-templates select="@*" mode="copy" />
+<xsl:apply-templates select="LearningStandardRefId" mode="copy" />
+</xsl:copy>
+</xsl:template>
 <xsl:template match="node()|@*" mode="AssessmentItemChoiceListType">
 <xsl:copy>
     <xsl:apply-templates select="@*" mode="copy" />
@@ -4293,7 +4331,6 @@
 <xsl:template match="node()|@*" mode="EnergyUsageDataSourceType">
 <xsl:copy>
     <xsl:apply-templates select="@*" mode="copy" />
-<xsl:apply-templates select="node()" mode="EnergyUsageDataSourceType" />
 <xsl:apply-templates select="System" mode="copy" />
 <xsl:apply-templates select="StartTime" mode="copy" />
 <xsl:apply-templates select="ReadingDataList" mode="EnergyUsageDataSourceReadingDataListType" />
@@ -4474,7 +4511,6 @@
 <xsl:template match="node()|@*" mode="AssessmentPerformanceHistoryType">
 <xsl:copy>
     <xsl:apply-templates select="@*" mode="copy" />
-<xsl:apply-templates select="node()" mode="AssessmentPerformanceHistoryType" />
 <xsl:apply-templates select="Name" mode="copy" />
 <xsl:apply-templates select="AdministrationDate" mode="PartialDateType" />
 <xsl:apply-templates select="Form" mode="copy" />
@@ -6387,6 +6423,18 @@
 <xsl:apply-templates select="node()" mode="copy" />
 </xsl:copy>
 </xsl:template>
+<xsl:template match="node()|@*" mode="TeacherInexperiencedStatusType">
+<xsl:copy>
+    <xsl:apply-templates select="@*" mode="copy" />
+<xsl:apply-templates select="node()" mode="copy" />
+</xsl:copy>
+</xsl:template>
+<xsl:template match="node()|@*" mode="TeacherOutOfFieldStatusType">
+<xsl:copy>
+    <xsl:apply-templates select="@*" mode="copy" />
+<xsl:apply-templates select="node()" mode="copy" />
+</xsl:copy>
+</xsl:template>
 <xsl:template match="node()|@*" mode="EmployeeCredentialTerminationCodeType">
 <xsl:copy>
     <xsl:apply-templates select="@*" mode="copy" />
@@ -7490,6 +7538,55 @@
 <xsl:copy>
     <xsl:apply-templates select="@*" mode="copy" />
 <xsl:apply-templates select="node()" mode="copy" />
+</xsl:copy>
+</xsl:template>
+<xsl:template match="node()|@*" mode="RegionOrganizationListType">
+<xsl:copy>
+    <xsl:apply-templates select="@*" mode="copy" />
+<xsl:apply-templates select="RegionOrganization" mode="RegionOrganizationType" />
+</xsl:copy>
+</xsl:template>
+<xsl:template match="node()|@*" mode="RegionOrganizationType">
+<xsl:copy>
+    <xsl:apply-templates select="@*" mode="copy" />
+<xsl:apply-templates select="Indicator" mode="copy" />
+<xsl:apply-templates select="Type" mode="copy" />
+</xsl:copy>
+</xsl:template>
+<xsl:template match="node()|@*" mode="SchoolDesignationListType">
+<xsl:copy>
+    <xsl:apply-templates select="@*" mode="copy" />
+<xsl:apply-templates select="SchoolDesignation" mode="copy" />
+</xsl:copy>
+</xsl:template>
+<xsl:template match="node()|@*" mode="JobTitleListType">
+<xsl:copy>
+    <xsl:apply-templates select="@*" mode="copy" />
+<xsl:apply-templates select="JobTitle" mode="JobTitleType" />
+</xsl:copy>
+</xsl:template>
+<xsl:template match="node()|@*" mode="JobTitleType">
+<xsl:copy>
+    <xsl:apply-templates select="@*" mode="copy" />
+<xsl:apply-templates select="JobTitle" mode="copy" />
+</xsl:copy>
+</xsl:template>
+<xsl:template match="node()|@*" mode="StateJobTitleListType">
+<xsl:copy>
+    <xsl:apply-templates select="@*" mode="copy" />
+<xsl:apply-templates select="StateJobTitle" mode="StateJobTitleType" />
+</xsl:copy>
+</xsl:template>
+<xsl:template match="node()|@*" mode="StateJobTitleType">
+<xsl:copy>
+    <xsl:apply-templates select="@*" mode="copy" />
+<xsl:apply-templates select="StateJobTitle" mode="copy" />
+</xsl:copy>
+</xsl:template>
+<xsl:template match="node()|@*" mode="GradeLevelApprovedListType">
+<xsl:copy>
+    <xsl:apply-templates select="@*" mode="copy" />
+<xsl:apply-templates select="GradeLevelApproved" mode="GradeLevelType" />
 </xsl:copy>
 </xsl:template>
 <xsl:template match="node()|@*" mode="iepPlanCommonAuthorizationType">

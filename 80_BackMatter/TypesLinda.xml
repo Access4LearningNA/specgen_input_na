@@ -1793,7 +1793,7 @@
       <Characteristics>O</Characteristics>
       <Description>
         <p>
-        Local identifier representing the current or most recent homeroom in which the student is or was most recently assigned in the district.  Use the value from <code>RoomInfo/HomeroomNumber</code> if supported.  If not supported, use the value from <code>RoomInfo/RoomNumber</code>.  If neither is supported, use the most appropriate value from the agent&#8217;s application.
+        Local identifier representing the current or most recent homeroom in which the student is or was most recently assigned in the district.  Use the value from <code>RoomInfo/HomeroomNumber</code> if supported.  If not supported, use the value from <code>RoomInfo/RoomNumber</code>.  If neither is supported, use the most appropriate value from the agent's application.
 			</p>
       </Description>
       <Type ref="CommonTypes" name="LocalIdType"/>

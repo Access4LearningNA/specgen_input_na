@@ -120,6 +120,14 @@
     <cedsURL>https://ceds.ed.gov/element/000704</cedsURL>
   </Item>
   <Item>
+    <Element>SchoolDesignationList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A list of designations of the kind of groups creating the school.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SchoolDesignationListType"/>
+  </Item>
+  <Item>
     <Element>PrincipalInfo</Element>
     <Characteristics>O</Characteristics>
     <Description>
@@ -176,6 +184,14 @@
       <p>Collection of grade levels offered in this school.</p>
     </Description>
     <Type ref="CommonTypes" name="GradeLevelsType"/>
+  </Item>
+  <Item>
+    <Element>GradeLevelApprovedList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Collection of grade levels this school may (but doesn't necessarily) offer.</p>
+    </Description>
+    <Type ref="CommonTypes" name="GradeLevelApprovedListType"/>
   </Item>
   <Item>
     <Element>Title1Status</Element>

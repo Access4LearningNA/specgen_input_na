@@ -100,6 +100,14 @@
     <Type ref="CommonTypes" name="DocumentSourceType"/>
   </Item>
   <Item>
+    <Element>LearningStandardItemList</Element>
+    <Description>
+      <p>References to LearningStandardItems or LearningStandardDocuments directly.</p>
+    </Description>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="LearningStandardItemListType"/>
+  </Item>
+  <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_MetadataType"/>

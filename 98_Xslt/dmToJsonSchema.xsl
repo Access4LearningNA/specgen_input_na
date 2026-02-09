@@ -409,6 +409,10 @@
 				<xsl:text>          type: string&#x0a;</xsl:text>
 				<xsl:text>          format: date&#x0a;</xsl:text>
 			</xsl:when>
+			<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:dateTime'"> 
+				<xsl:text>          type: string&#x0a;</xsl:text>
+				<xsl:text>          format: date-time&#x0a;</xsl:text>
+			</xsl:when>
 			<xsl:when test="specgen:Item[2]/specgen:Type/@name eq 'xs:boolean'"> 
 				<xsl:text>          type: boolean&#x0a;</xsl:text>
 			</xsl:when>
@@ -723,6 +727,12 @@
 				<xsl:value-of select="concat($indent, '  format: date&#x0a;')"/>
 			</xsl:when>
 			
+			<xsl:when test="@name eq 'xs:dateTime'">
+				<xsl:value-of select="concat($indent, '  type: string&#x0a;')"/>
+				<!--xsl:value-of select="concat($indent, '  example: 2021-06-03T14:42:38.810Z&#x0a;')"/-->
+				<xsl:value-of select="concat($indent, '  format: date-time&#x0a;')"/>
+			</xsl:when>
+
 			<xsl:when test="   @name eq 'xs:string'
 											or @name eq 'xs:normalizedString'
                       or @name eq 'xs:token'

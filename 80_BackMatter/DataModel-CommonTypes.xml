@@ -448,6 +448,8 @@
         <p>A person's middle name or initial.</p>
       </Description>
       <Type name="xs:normalizedString"/>
+      <cedsId>000184</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000184</cedsURL>
     </Item>
     <xhtml:Example xmlns="">
       <MiddleName>Bartholomew</MiddleName>
@@ -651,6 +653,13 @@
       <Type name="xs:token"/>
     </Item>
     <Item>
+      <Element>RaceEthnicityDeclined</Element>
+      <Characteristics>O</Characteristics>
+      <Type name="xs:normalizedString"/>
+      <cedsId>001944</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001944</cedsURL>
+    </Item>
+    <Item>
       <Element>Gender</Element>
       <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="DemographicsGenderType"/>
@@ -674,7 +683,7 @@
       <Element>PlaceOfBirth</Element>
       <Characteristics>O</Characteristics>
       <Description>
-        <p>The person's place of birth&#8212;like village, town, city etc.</p>
+        <p>The person's place of birth like: village, town, city etc.</p>
       </Description>
       <Type name="xs:normalizedString"/>
     </Item>
@@ -763,7 +772,7 @@
       <Element>MilitaryConnectedStudent</Element>
       <Characteristics>O</Characteristics>
       <Description>
-        <p>An indication that the student&#8217;s parent or guardian is on Active Duty, in the National Guard, or in the Reserve components of the United States military services</p>
+        <p>An indication that the student's parent or guardian is on Active Duty, in the National Guard, or in the Reserve components of the United States military services</p>
       </Description>
       <Type name="xs:string"/>
       <cedsId>001576</cedsId>
@@ -1332,7 +1341,7 @@
   <CommonElement name="HomeroomNumberType" type="true">
     <Item>
       <Description>
-        <p> Common element used to specify the locally-defined number or identifier for a homeroom. It is used in objects such as RoomInfo and StudentSnapshot. </p>
+        <p>Common element used to specify the locally-defined number or identifier for a homeroom. It is used in objects such as RoomInfo and StudentSnapshot.</p>
       </Description>
       <Element>HomeroomNumberType</Element>
       <Characteristics/>
@@ -2325,6 +2334,16 @@
       <Type name="xs:token"/>
     </Item>
     <Item>
+      <Element>ContractIdNumber</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The unique number the SEA assigns to the contract (or charter) that authorizes the charter school to operate in the state under the state's charter school legislation.</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+      <cedsId>001651</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001651</cedsURL>
+    </Item>
+    <Item>
       <Element>ApprovalDate</Element>
       <Characteristics>O</Characteristics>
       <Description>
@@ -3066,8 +3085,6 @@
         <p> A state/province code, local code, other code or a text string that crosswalks to or serves as a translation of an associated <code>Code</code> element. </p>
       </Description>
       <Type name="xs:token"/>
-      <cedsId>000036</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000036</cedsURL>
     </Item>
     <Item>
       <Attribute>Codeset</Attribute>
@@ -3542,7 +3559,7 @@
       <Element>Code</Element>
       <Characteristics>M</Characteristics>
       <Description>
-        <p>The code representing the specific language that an individual uses to communicate.&#160;</p>
+        <p>The code representing the specific language that an individual uses to communicate.</p>
       </Description>
       <Type name="xs:token"/>
       <cedsId>000317</cedsId>
@@ -3664,6 +3681,8 @@
         <p>In a given SIF implementation Agents must have alignment on the use of the NCES and deprecated SPEEDE code sets. Agents are not required to translate between the code sets.</p>
       </Description>
       <Type name="xs:token"/>
+      <cedsId>001943</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001943</cedsURL>
     </Item>
     <Item>
       <Attribute>Codeset</Attribute>
@@ -4263,6 +4282,8 @@
         <p>The middle name or initial.</p>
       </Description>
       <Type ref="CommonTypes" name="MiddleNameType"/>
+      <cedsId>000184</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000184</cedsURL>
     </Item>
     <Item>
       <Element>Suffix</Element>

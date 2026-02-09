@@ -143,6 +143,20 @@
     <Type ref="CommonTypes" name="InstructionalLevelType"/>
   </Item>
   <Item>
+    <Element>TeacherInexperiencedStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="TeacherInexperiencedStatusType"/>
+    <cedsId>001961</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001961</cedsURL>
+  </Item>  
+  <Item>
+    <Element>TeacherOutOfFieldStatus</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="TeacherOutOfFieldStatusType"/>
+    <cedsId>001962</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001962</cedsURL>    
+  </Item>
+  <Item>
     <Element>EmployeePersonalRefId</Element>
     <Characteristics>O</Characteristics>
     <Description>

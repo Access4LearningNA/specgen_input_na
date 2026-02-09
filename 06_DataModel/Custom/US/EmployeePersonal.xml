@@ -71,6 +71,40 @@
     </Description>
     <Type ref="CommonTypes" name="EmailListType"/>
   </Item>
+  <!--
+  <Item>
+    <Element>JobTitleList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The employee's job titles.</p>
+    </Description>
+    <Type ref="CommonTypes" name="JobTitleListType"/>
+  </Item>
+  <Item>
+    <Element>StateJobTitleList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The employee's job titles.</p>
+    </Description>
+    <Type ref="CommonTypes" name="StateJobTitleListType"/>
+  </Item>
+  -->
+  <Item>
+    <Element>BenefitEligible</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Indicator if this employee qualifies for benefits.</p>
+    </Description>
+    <Type ref="CodeSets" name="GenericYesNoType"/>
+  </Item>
+  <Item>
+    <Element>ReemployedRetiree</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Indicates this employee is also retired.</p>
+    </Description>
+    <Type ref="CodeSets" name="GenericYesNoType"/>
+  </Item>  
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>

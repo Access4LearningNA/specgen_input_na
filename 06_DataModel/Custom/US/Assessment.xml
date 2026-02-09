@@ -28,6 +28,16 @@
     <cedsURL>https://ceds.ed.gov/element/000028</cedsURL>
   </Item>
   <Item>
+    <Element>ShortName</Element>
+    <Characteristics>O</Characteristics>
+    <Type name="xs:normalizedString"/>
+    <Description>
+      <p>An abbreviated title for an assessment.</p>
+    </Description>
+    <cedsId>000931</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000931</cedsURL>
+  </Item>
+  <Item>
     <Element>AssessmentId</Element>
     <Characteristics>O</Characteristics>
     <Type name="xs:normalizedString"/>
@@ -70,6 +80,36 @@
     </Description>
     <Type ref="CommonTypes" name="AssessmentDescriptorListType"/>
   </Item>
+  <Item>
+    <Element>AssessmentPurpose</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The reason for which an assessment is designed or delivered.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+    <cedsId>000026</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000026</cedsURL>
+  </Item>
+  <Item>
+    <Element>AssessmentFamilyTitle</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The full title of the Assessment Family. An Assessment Family is a set of assessments with a common name, jurisdiction, or focus, such as Graduate Record Exam or National Assessment of Educational Progress.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+    <cedsId>000932</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000932</cedsURL>
+  </Item>
+  <Item>
+    <Element>AssessmentFamilyShortName</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The abbreviated title of the Assessment Family. An Assessment Family is a set of assessments with a common name, jurisdiction, or focus.</p>
+    </Description>
+    <Type name="xs:normalizedString"/>
+    <cedsId>000933</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000933</cedsURL>
+  </Item>  
   <Item>
     <Element>SIF_Metadata</Element>
     <Characteristics>O</Characteristics>

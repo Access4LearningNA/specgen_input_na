@@ -72,6 +72,14 @@
     <cedsURL>https://ceds.ed.gov/element/000704</cedsURL>
   </Item>
   <Item>
+    <Element>SchoolDesignationList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A list of designations of the kind of groups creating the school.</p>
+    </Description>
+    <Type ref="CommonTypes" name="SchoolDesignationListType"/>
+  </Item>
+  <Item>
     <Element>EducationAgencyType</Element>
     <Characteristics>O</Characteristics>
     <Description>
@@ -152,6 +160,14 @@
     </Description>
     <Type ref="CommonTypes" name="CongressionalDistrictType"/>
   </Item>
+  <Item>
+    <Element>RegionOrganizationList</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A list of indicators connecting the LEA to regions or organizational constructs.</p>
+    </Description>
+    <Type ref="CommonTypes" name="RegionOrganizationListType"/>
+  </Item>  
   <Item>
     <Element>TitleIProgramType</Element>
     <Characteristics>O</Characteristics>

@@ -116,8 +116,8 @@
       <p>Note:  No SIF_Query SIF_Condition support is required for this element.</p>
     </Description>
     <Type name="xs:decimal"/>
-    <cedsId>000271</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000271</cedsURL>
+    <cedsId>000202</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000202</cedsURL>
   </Item>
   <Item>
     <Element>ExcusedAbsences</Element>

@@ -352,10 +352,56 @@
         <p>Link to associated LearningStandardItem object.</p>
       </Description>
       <Type ref="CommonTypes" name="IdRefType"/>
-      <cedsId>000605</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000605</cedsURL>
     </Item>
   </CommonElement>
+
+  <CommonElement name="LearningStandardItemListType" type="true" dm="true">
+    <Item>
+      <Element>LearningStandardItemListType</Element>
+      <Description>
+        <p>Associated <code>LearningStandardItem</code> objects with qualifiers.</p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>LearningStandardItem</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p>Link to associated LearningStandardItem object with qualifiers.</p>
+      </Description>
+      <Type ref="CommonTypes" name="LearningStandardItemRefType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="LearningStandardItemRefType" type="true" dm="true">
+    <Item>
+      <Element>LearningStandardItemRefType</Element>
+      <Description>
+        These fields associates learning standards with particular learning resources.
+      </Description>
+    </Item>
+    <Item>
+      <Element>LearningStandardRefId</Element>
+      <Characteristics>M</Characteristics>
+      <Description>A RefId that identifies a Learning Standard.</Description>
+      <Type ref="CommonTypes" name="IdRefType"/>
+    </Item>
+    <Item>
+      <Attribute>ObjectType</Attribute>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Declares whether the this RefId references a LearningStandardItem or a LearningStandardDocument</p>
+      </Description>
+      <Values>
+        <Value>
+          <Code>LearningStandardItem</Code>
+        </Value>
+        <Value>
+          <Code>LearningStandardDocument</Code>
+        </Value>
+      </Values>
+    </Item>
+  </CommonElement>
+  
   <CommonElement name="AssessmentItemChoiceListType" type="true" dm="true">
     <Item>
       <Element>AssessmentItemChoiceListType</Element>
@@ -1028,6 +1074,8 @@
       <Element>AssessmentDescriptor</Element>
       <Characteristics>OR</Characteristics>
       <Type name="xs:token"/>
+      <cedsId>000029</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000029</cedsURL>
     </Item>
     <Item>
       <Attribute>Codeset</Attribute>

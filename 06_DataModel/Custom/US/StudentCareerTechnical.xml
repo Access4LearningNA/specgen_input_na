@@ -88,8 +88,38 @@
     <cedsURL>https://ceds.ed.gov/element/000590</cedsURL>
   </Item>
   <Item>
+    <Element>NeglectedOrDelinquentProgramType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The year, month and day on which the person began to participate in a program.The type of program under ESEA Title I, Part D, Subpart 1 (state programs) or Subpart 2 (LEA).</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>000194</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000194</cedsURL>
+  </Item>
+  <Item>
     <Element>SingleParentOrSinglePregnantWoman</Element>
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="StudentCareerTechnicalSingleParentOrSinglePregnantWomanType"/>
+  </Item>
+  <Item>
+    <Element>OutcomeType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The type of academic or career and technical outcome attained while enrolled in the program.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>001978</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001978</cedsURL>
+  </Item>
+  <Item>
+    <Element>OutcomeExitType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The type of academic or career and technical outcome attained up to 90 days after exiting the facility or program.</p>
+    </Description>
+    <Type name="xs:token"/>
+    <cedsId>001979</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001979</cedsURL>
   </Item>
 </DataObject>

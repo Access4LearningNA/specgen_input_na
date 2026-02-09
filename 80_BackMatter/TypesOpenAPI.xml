@@ -156,6 +156,46 @@
       <Type name="xs:token"/>
     </Item>
   </CommonElement>
+   <CommonElement name="TeacherInexperiencedStatusType" type="true" dm="true">
+    <Item>
+      <Element>TeacherInexperiencedStatusType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>An indication of whether teachers have been identified as inexperienced as defined by the state. This element is used specifically for EDFacts reporting.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>001961</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001961</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="TeacherOutOfFieldStatusType" type="true" dm="true">
+    <Item>
+      <Element>TeacherOutOfFieldStatusType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>An indication of whether teachers have been identified as teaching a subject or field for which they are not certified or licensed as defined by the state. This element is used specifically for EDFacts reporting.</p>
+      </Description>
+      <Type name="xs:token"/>
+      <cedsId>001962</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001962</cedsURL>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
   <CommonElement name="EmployeeCredentialTerminationCodeType" type="true" dm="true">
     <Item>
       <Element>EmployeeCredentialTerminationCodeType</Element>
@@ -2984,7 +3024,7 @@
       <Element>RemoteLearningLocationProfileInternetAccessBarrierType</Element>
       <Characteristics>O</Characteristics>
       <Description>
-        <p>An indication of the barrier to having internet access in the student&#8217;s primary place of residence.</p>
+        <p>An indication of the barrier to having internet access in the student's primary place of residence.</p>
         <p>If the student is unable to access the internet in their primary place of residence, why not?</p>
       </Description>
       <Type name="xs:token"/>
@@ -3003,8 +3043,8 @@
       <Element>RemoteLearningLocationProfileInternetAccessTypeType</Element>
       <Characteristics>O</Characteristics>
       <Description>
-        <p>The primary type of internet service used in the student&#8217;s primary place of residence.</p>
-        <p>What is the primary type of internet service used in the student&#8217;s primary place of residence?</p>
+        <p>The primary type of internet service used in the student's primary place of residence.</p>
+        <p>What is the primary type of internet service used in the student's primary place of residence?</p>
       </Description>
       <Type name="xs:token"/>
     </Item>
@@ -3096,7 +3136,7 @@
       <Element>InternetAccessBarrier</Element>
       <Characteristics>O</Characteristics>
       <Description>
-        <p>An indication of the barrier to having internet access in the student&#8217;s primary place of residence.</p>
+        <p>An indication of the barrier to having internet access in the student's primary place of residence.</p>
         <p>If the student is unable to access the internet in their primary place of residence, why not?</p>
       </Description>
       <Type ref="CommonTypes" name="RemoteLearningLocationProfileInternetAccessBarrierType"/>
@@ -3105,8 +3145,8 @@
       <Element>InternetAccessType</Element>
       <Characteristics>O</Characteristics>
       <Description>
-        <p>The primary type of internet service used in the student&#8217;s primary place of residence.</p>
-        <p>What is the primary type of internet service used in the student&#8217;s primary place of residence?</p>
+        <p>The primary type of internet service used in the student's primary place of residence.</p>
+        <p>What is the primary type of internet service used in the student's primary place of residence?</p>
       </Description>
       <Type ref="CommonTypes" name="RemoteLearningLocationProfileInternetAccessTypeType"/>
     </Item>

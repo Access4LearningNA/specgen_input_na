@@ -124,7 +124,8 @@
 		<xi:include parse="text" href="80_BackMatter/DataModel-CommonTypes.xml"/>
 		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="80_BackMatter/TypesLinda.xml"/>
 		<xi:include parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" href="80_BackMatter/TypesNick.xml"/>
-		<xi:include parse="text" href="80_BackMatter/TypesOpenAPI.xml"/>	
+		<xi:include parse="text" href="80_BackMatter/TypesOpenAPI.xml"/>
+		<xi:include parse="text" href="80_BackMatter/TypesNC.xml"/>	
 		<xi:include parse="text" href="80_BackMatter/Custom/SIF3/CommonTypes.xml"/>
 	</Appendix>
 	
