@@ -1,0 +1,194 @@
+<IncludeGroup xmlns:json="http://json.org/" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://sifassociation.org/SpecGen">
+  <CommonElement name="RegionOrganizationListType" type="true" dm="true">
+    <Item>
+      <Element>RegionOrganizationListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A list of indicators connecting the LEA to regions or organizational constructs.</p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>RegionOrganization</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Indicator of grouping by region or other organizational construct.</p>
+      </Description>
+      <Type ref="CommonTypes" name="RegionOrganizationType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="RegionOrganizationType" type="true" dm="true">
+    <Item>
+      <Element>RegionOrganizationType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Indicator of grouping by region or other organizational construct.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>Indicator</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The region or organization that the LEA belongs to.</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+		<Item>
+			<Element>Type</Element>
+			<Characteristics>O</Characteristics>
+			<Description>
+			  <p>The type of the paired indicator so that many of diffrent types my exist and be properly understood.</p>
+			</Description>
+			<Type name="xs:normalizedString"></Type>
+		</Item>    
+  </CommonElement>
+  
+  <CommonElement name="SchoolDesignationListType" type="true" dm="true">
+    <Item>
+      <Element>SchoolDesignationListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A list of designations of the kind of groups creating the school.</p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>SchoolDesignation</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>Designation of the kind of groups creating the school.</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item> 
+  </CommonElement>
+  
+  <CommonElement name="JobTitleListType" type="true" dm="true">
+    <Item>
+      <Element>JobTitleListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A list of job titles to the employee holds.</p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>JobTitle</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>A job title the employee holds.</p>
+      </Description>
+      <Type ref="CommonTypes" name="JobTitleType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="JobTitleType" type="true" dm="true">
+    <Item>
+      <Element>JobTitleType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>A job title the employee holds.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>JobTitle</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The text of the job title the employee holds.</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Primary</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>An indicator that this is the primary job title for this employee.  This attribute MUST appear for only one item in the list.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  
+  <CommonElement name="StateJobTitleListType" type="true" dm="true">
+    <Item>
+      <Element>StateJobTitleListType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A list of state job titles to the employee holds.</p>
+      </Description>
+      <List mode="List"/>
+    </Item>
+    <Item>
+      <Element>StateJobTitle</Element>
+      <Characteristics>MR</Characteristics>
+      <Description>
+        <p>A state job title the employee holds.</p>
+      </Description>
+      <Type ref="CommonTypes" name="StateJobTitleType"/>
+    </Item>
+  </CommonElement>
+  <CommonElement name="StateJobTitleType" type="true" dm="true">
+    <Item>
+      <Element>StateJobTitleType</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>A state job title the employee holds.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>StateJobTitle</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>The text of the state job title the employee holds.</p>
+      </Description>
+      <Type name="xs:normalizedString"/>
+    </Item>
+    <Item>
+      <Attribute>Codeset</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique indicator (usually a URL) that points to the codeset used.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Attribute>Primary</Attribute>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>An indicator that this is the primary state job title for this employee.  This attribute MUST appear for only one item in the list.</p>
+      </Description>
+      <Type name="xs:token"/>
+    </Item>
+  </CommonElement>
+  
+  <CommonElement name="GradeLevelApprovedListType" type="true">
+    <Item>
+      <Element>GradeLevelApprovedListType</Element>
+      <Description>
+        <p>Collection of grade levels this school approved to  (but doesn't necessarily) offer.</p>
+      </Description>
+      <List mode="List"> </List>
+    </Item>
+    <Item>
+      <Element>GradeLevelApproved</Element>
+      <Characteristics>MR</Characteristics>
+      <Type ref="CommonTypes" name="GradeLevelType"/>
+      <cedsId>001926</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001926</cedsURL>
+    </Item>
+  </CommonElement>
+  
+</IncludeGroup>
