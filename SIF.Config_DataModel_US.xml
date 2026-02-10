@@ -5,11 +5,11 @@
 		<inputDocument>SIF_DataModel.xml</inputDocument>
 		<sifNamespace>http://www.sifassociation.org/datamodel/na/4.x</sifNamespace>
 		<localizationCode>us</localizationCode>
-		<schemaVersion>4.3</schemaVersion>
+		<schemaVersion>4.4</schemaVersion>
 		<jsonExamplesXslt>98_Xslt/sif2jsonspecgen.xslt</jsonExamplesXslt>
 		<resolveExtensions>true</resolveExtensions>
-		<isDraft>false</isDraft>
-		<includeCEDS>true</includeCEDS>
+		<isDraft>true</isDraft>
+		<includeCEDS>false</includeCEDS>
 		<examplesValidatorFile>XSD\Schema_NoIncludes_Lax\SIF_Message.xsd</examplesValidatorFile>
 		<defaultExample>XML</defaultExample>
 		<includePrivacy>false</includePrivacy>
@@ -529,7 +529,7 @@
     <xsltTransformation>
       <xsltInputFile>98_Xslt\dmToExamples.xsl</xsltInputFile> 
       <xsltOutputDir>JSON</xsltOutputDir>
-      <xsltOutputFile>examples_US_4.3.yaml</xsltOutputFile>
+      <xsltOutputFile>examples_US_4.4.yaml</xsltOutputFile>
       <yamlToJson>true</yamlToJson>
     </xsltTransformation>           
   
