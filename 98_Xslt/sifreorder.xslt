@@ -168,27 +168,7 @@
 </xsl:copy>
 </xsl:template>
 <xsl:template match="xStudent" mode="object">
-<xsl:copy>
-    <xsl:apply-templates select="@*" mode="copy" />
-<xsl:apply-templates select="name" mode="xPersonNameType" />
-<xsl:apply-templates select="otherNames" mode="xOtherPersonNameListType" />
-<xsl:apply-templates select="localId" mode="xPersonIdType" />
-<xsl:apply-templates select="loginId" mode="xLoginIdType" />
-<xsl:apply-templates select="stateProvinceId" mode="xPersonIdType" />
-<xsl:apply-templates select="otherIds" mode="xOtherPersonIdListType" />
-<xsl:apply-templates select="address" mode="xPersonAddressType" />
-<xsl:apply-templates select="otherAddresses" mode="xOtherPersonAddressListType" />
-<xsl:apply-templates select="phoneNumber" mode="xTelephoneType" />
-<xsl:apply-templates select="otherPhoneNumbers" mode="xTelephoneListType" />
-<xsl:apply-templates select="email" mode="xEmailType" />
-<xsl:apply-templates select="otherEmails" mode="xEmailListType" />
-<xsl:apply-templates select="demographics" mode="xDemographicsType" />
-<xsl:apply-templates select="enrollment" mode="xEnrollmentType" />
-<xsl:apply-templates select="otherEnrollments" mode="xEnrollmentListType" />
-<xsl:apply-templates select="academicSummary" mode="xAcademicSummaryType" />
-<xsl:apply-templates select="studentContacts" mode="xStudentContactListType" />
-<xsl:apply-templates select="languages" mode="xLanguageListType" />
-</xsl:copy>
+<xsl:apply-templates select="." mode="xStudentObjectType" />
 </xsl:template>
 <xsl:template match="xTransferIep" mode="object">
 <xsl:copy>
@@ -8941,10 +8921,33 @@
 <xsl:template match="node()|@*" mode="iepCommonOrganizationRefIdPointerType">
 <xsl:apply-templates select="." mode="gUUIDType" />
 </xsl:template>
+<xsl:template match="node()|@*" mode="xStudentObjectType">
+<xsl:copy>
+    <xsl:apply-templates select="@*" mode="copy" />
+<xsl:apply-templates select="name" mode="xPersonNameType" />
+<xsl:apply-templates select="otherNames" mode="xOtherPersonNameListType" />
+<xsl:apply-templates select="localId" mode="xPersonIdType" />
+<xsl:apply-templates select="loginId" mode="xLoginIdType" />
+<xsl:apply-templates select="stateProvinceId" mode="xPersonIdType" />
+<xsl:apply-templates select="otherIds" mode="xOtherPersonIdListType" />
+<xsl:apply-templates select="address" mode="xPersonAddressType" />
+<xsl:apply-templates select="otherAddresses" mode="xOtherPersonAddressListType" />
+<xsl:apply-templates select="phoneNumber" mode="xTelephoneType" />
+<xsl:apply-templates select="otherPhoneNumbers" mode="xTelephoneListType" />
+<xsl:apply-templates select="email" mode="xEmailType" />
+<xsl:apply-templates select="otherEmails" mode="xEmailListType" />
+<xsl:apply-templates select="demographics" mode="xDemographicsType" />
+<xsl:apply-templates select="enrollment" mode="xEnrollmentType" />
+<xsl:apply-templates select="otherEnrollments" mode="xEnrollmentListType" />
+<xsl:apply-templates select="academicSummary" mode="xAcademicSummaryType" />
+<xsl:apply-templates select="studentContacts" mode="xStudentContactListType" />
+<xsl:apply-templates select="languages" mode="xLanguageListType" />
+</xsl:copy>
+</xsl:template>
 <xsl:template match="node()|@*" mode="tiepReferenceObjectsType">
 <xsl:copy>
     <xsl:apply-templates select="@*" mode="copy" />
-<xsl:apply-templates select="student" mode="copy" />
+<xsl:apply-templates select="student" mode="xStudentObjectType" />
 <xsl:apply-templates select="leaList" mode="tiepReferenceObjectLeaListType" />
 <xsl:apply-templates select="contactList" mode="tiepReferenceObjectContactListType" />
 <xsl:apply-templates select="staffList" mode="tiepReferenceObjectStaffListType" />
