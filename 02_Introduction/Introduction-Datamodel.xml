@@ -42,8 +42,11 @@
         <code>SIF message and object names, XML element tags, attribute names and values, and other codes or values are typically presented as in this sentence.</code>
       </p>
     </Section>
-    <Section name="Examples">
-      <Example name="Examples Convention">Longer examples of XML or HTTP messages are typically numbered and presented as given here.</Example>
+    <Section name="Example Conventions">
+      <p>
+        <span>XML examples are represented as if they are within a collection.  As such no namespace declaration is included, as it is assumed it would be inherited from its (not represented) parent.</span>
+      </p>
+      <Example name="Example">Longer examples are typically numbered and presented in a box like this.</Example>
     </Section>
     <Section name="References">
       <p>

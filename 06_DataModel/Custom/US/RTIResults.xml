@@ -102,7 +102,39 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="RTIResults - Example 1">
+  <RTIResults RefId="a0dfb585-7116-4155-9f77-8fa66abd9245" StudentPersonalRefId="12218fcf-b8e7-4cc9-9866-8c18dc9441b9" StudentPlacementRefId="2d6d0e52-8a02-4259-bc20-84fa1a4a75c3" ResponseToInterventionRefId="211064af-a6e3-4999-8a95-e0934bca26df">
+    <RTILocalId>RTI-2025-26-ORF-0487</RTILocalId>
+    <Intervention>Read Naturally Live: Fifth Grade Fluency Support</Intervention>
+    <PerformanceIndicators>
+      <PerformanceIndicator>Read a fifth-grade informational passage aloud at 120 correct words per minute with at least 97 percent accuracy.</PerformanceIndicator>
+      <PerformanceIndicator>Answer at least 20 of 24 comprehension questions correctly after reading a fifth-grade informational passage.</PerformanceIndicator>
+    </PerformanceIndicators>
+    <Measurements>
+      <Measurement>
+        <MeasurementTool>DIBELS 8th Edition Oral Reading Fluency</MeasurementTool>
+        <FrequencyofMeasure Codeset="https://example.org/codesets/progress-monitoring-frequency">Weekly</FrequencyofMeasure>
+      </Measurement>
+      <Measurement>
+        <MeasurementTool>MAZE Reading Comprehension Probe</MeasurementTool>
+        <FrequencyofMeasure Codeset="https://example.org/codesets/progress-monitoring-frequency">Biweekly</FrequencyofMeasure>
+      </Measurement>
+    </Measurements>
+    <Baselines>
+      <Baseline>Fall baseline: 52 correct words per minute at 94 percent accuracy on a fifth-grade informational passage.</Baseline>
+      <Baseline>Fall baseline: 12 of 24 correct on a MAZE reading comprehension probe.</Baseline>
+    </Baselines>
+    <Targets>
+      <Target>Spring target: 120 correct words per minute at 97 percent accuracy on a fifth-grade informational passage.</Target>
+      <Target>Spring target: 20 of 24 correct on a MAZE reading comprehension probe.</Target>
+    </Targets>
+    <Results>
+      <Result>Final progress-monitoring result: 116 correct words per minute at 97 percent accuracy.</Result>
+      <Result>Final MAZE result: 21 of 24 correct.</Result>
+    </Results>
+  </RTIResults>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="RTIResults - Example 2">
     <RTIResults RefId="1652D3E34F419D75101A8C3D00AA001A" StudentPersonalRefId="F260716384746B387459000F84717C00" StudentPlacementRefId="DE072A87EFAD4B778AF9FAF83C94839E" ResponseToInterventionRefId="869670E8540A43509515AFB767FADD9A">
       <RTILocalId>837D3</RTILocalId>
       <Intervention>Read Naturally</Intervention>

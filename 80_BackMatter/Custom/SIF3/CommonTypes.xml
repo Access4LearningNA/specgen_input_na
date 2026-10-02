@@ -3409,7 +3409,7 @@
       <Description>
         <p>A person associated with a student.</p>
       </Description>
-      <Type ref="CommonTypes" name="xContactType"/>
+      <Type ref="CommonTypes" name="xContactObjectType"/>
     </Item>
   </CommonElement>
   <CommonElement name="iepPlanPlacementScheduleModificationSchoolDayType" type="true" dm="true">
@@ -4119,7 +4119,7 @@
       <Description>
         <p> Information for a staff person referenced in the IEP by iepStaffRefIdPointerType </p>
       </Description>
-      <Type ref="CommonTypes" name="xStaffType"/>
+      <Type ref="CommonTypes" name="xStaffObjectType"/>
     </Item>
   </CommonElement>
   <CommonElement name="tiepHistoryListItemType" type="true" dm="true">
@@ -4719,7 +4719,7 @@
       <Description>
         <p> Information for a contact person referenced in the IEP by iepCommonContactRefIdPointerType </p>
       </Description>
-      <Type ref="CommonTypes" name="xContactType"/>
+      <Type ref="CommonTypes" name="xContactObjectType"/>
     </Item>
   </CommonElement>
   <CommonElement name="iepPlanPresentLevelPerformanceFunctionalType" type="true" dm="true">
@@ -5077,7 +5077,7 @@
       <Description>
         <p> Information for a school or other Local Education Agency referenced in the IEP by iepCommonLeaRefIdPointerType </p>
       </Description>
-      <Type ref="CommonTypes" name="xLeaType"/>
+      <Type ref="CommonTypes" name="xLeaObjectType"/>
     </Item>
   </CommonElement>
   <CommonElement name="xOtherPersonIdListType" type="true" dm="true">
@@ -6201,6 +6201,313 @@
         <p>A refId that refers to an instance of xOrganization object. The RefId points to the object instance. </p>
       </Description>
       <Type ref="CommonTypes" name="gUUIDType"/>
+    </Item>
+  </CommonElement>
+
+  <CommonElement name="xContactObjectType" type="true" dm="true">
+    <Item>
+      <Element>xContactObjectType</Element>
+      <Description>
+        <p>This defines the internal structure of the xContact object for reuse.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Attribute>refId</Attribute>
+      <Characteristics>M</Characteristics>
+      <Type ref="CommonTypes" name="gRefIdType"/>
+    </Item>
+    <Item>
+      <Element>name</Element>
+      <Characteristics>M</Characteristics>
+      <Description>
+        <p>Name of the contact.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xPersonNameType"/>
+    </Item>
+    <Item>
+      <Element>otherNames</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Other names of the contact.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xOtherPersonNameListType"/>
+    </Item>
+    <Item>
+      <Element>localId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique number or alphanumeric code assigned to a staff member by a district or LEA.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xPersonIdType"/>
+      <cedsId>001572</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001572</cedsURL>
+    </Item>
+    <Item>
+      <Element>loginId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The login identifier for the person.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xLoginIdType"/>
+      <cedsId>001170</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001170</cedsURL>
+    </Item>
+    <Item>
+      <Element>otherIds</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Other Ids of the contact.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xOtherPersonIdListType"/>
+    </Item>
+    <Item>
+      <Element>address</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Address of the student.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xPersonAddressType"/>
+    </Item>
+    <Item>
+      <Element>phoneNumber</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Phone number of the contact.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xTelephoneType"/>
+    </Item>
+    <Item>
+      <Element>otherPhoneNumbers</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Other phone numbers for the contact.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xTelephoneListType"/>
+    </Item>
+    <Item>
+      <Element>email</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The numbers, letters, and symbols used to identify an electronic mail (e-mail) user within the network to which the person or organization belongs.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xEmailType"/>
+      <cedsId>000088</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000088</cedsURL>
+    </Item>
+    <Item>
+      <Element>otherEmails</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Other emails of the contact.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xEmailListType"/>
+      <cedsId>000088</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000088</cedsURL>
+    </Item>
+    <Item>
+      <Element>sex</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The concept describing the biological traits that distinguish the males and females of a species.</p>
+      </Description>
+      <Type ref="CodeSets" name="xSexType"/>
+      <cedsId>000255</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000255</cedsURL>
+    </Item>
+    <Item>
+      <Element>employerType</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A code that defines the employer type.</p>
+      </Description>
+      <Type ref="CodeSets" name="xEmployerType"/>
+    </Item>
+    <Item>
+      <Element>relationships</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Relationships that this contact has with the student.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xContactStudentRelationshipListType"/>
+    </Item>
+  </CommonElement>
+
+  <CommonElement name="xLeaObjectType" type="true" dm="true">
+    <Item>
+      <Element>xLeaObjectType</Element>
+      <Description>
+        <p>This defines the internal structure of the xLea object for reuse.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Attribute>refId</Attribute>
+      <Characteristics>M</Characteristics>
+      <Type ref="CommonTypes" name="gRefIdType"/>
+    </Item>
+    <Item>
+      <Element>localId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique number or alphanumeric code assigned to a local education agency by a school system.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xOrganizationIdType"/>
+      <cedsId>001068</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001068</cedsURL>
+    </Item>
+    <Item>
+      <Element>leaRefId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The refId for the LEA.</p>
+      </Description>
+      <Type ref="CommonTypes" name="gRefIdPointerType"/>
+    </Item>
+    <Item>
+      <Element>stateProvinceId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique number or alphanumeric code assigned to a local education agency by a state.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xOrganizationIdType"/>
+      <cedsId>001068</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001068</cedsURL>
+    </Item>
+    <Item>
+      <Element>ncesId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique number or alphanumeric code assigned to a local education agency by NCES.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xOrganizationIdType"/>
+      <cedsId>001068</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001068</cedsURL>
+    </Item>
+    <Item>
+      <Element>leaName</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The name of a non-person entity such as an organization, institution, agency or business; in this case, a Local Education Agency.</p>
+      </Description>
+      <Type name="xs:string"/>
+      <cedsId>000204</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000204</cedsURL>
+    </Item>
+    <Item>
+      <Element>address</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The address of the LEA.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xOrganizationAddressType"/>
+    </Item>
+    <Item>
+      <Element>phoneNumber</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The phone number of the LEA.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xTelephoneType"/>
+    </Item>
+    <Item>
+      <Element>otherPhoneNumbers</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A list of other phone numbers for the LEA.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xTelephoneListType"/>
+    </Item>
+  </CommonElement>
+
+  <CommonElement name="xStaffObjectType" type="true" dm="true">
+    <Item>
+      <Element>xStaffObjectType</Element>
+      <Description>
+        <p>This defines the internal structure of the xStaff object for reuse.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Attribute>refId</Attribute>
+      <Characteristics>M</Characteristics>
+      <Type ref="CommonTypes" name="gRefIdType"/>
+    </Item>
+    <Item>
+      <Element>name</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Name of the staff person.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xPersonNameType"/>
+    </Item>
+    <Item>
+      <Element>localId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique number or alphanumeric code assigned to a staff member by a district or LEA.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xPersonIdType"/>
+      <cedsId>001070</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001070</cedsURL>
+    </Item>
+    <Item>
+      <Element>loginId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The login identifier for the person.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xLoginIdType"/>
+      <cedsId>001170</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001170</cedsURL>
+    </Item>
+    <Item>
+      <Element>stateProvinceId</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>A unique number or alphanumeric code assigned to a staff member by a state.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xPersonIdType"/>
+      <cedsId>001070</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001070</cedsURL>
+    </Item>
+    <Item>
+      <Element>otherIds</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Other Ids for the person.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xOtherPersonIdListType"/>
+    </Item>
+    <Item>
+      <Element>sex</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The concept describing the biological traits that distinguish the males and females of a species.</p>
+      </Description>
+      <Type ref="CodeSets" name="xSexType"/>
+      <cedsId>000255</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000255</cedsURL>
+    </Item>
+    <Item>
+      <Element>email</Element>
+      <Characteristics>O</Characteristics>
+      <Type ref="CommonTypes" name="xEmailType"/>
+      <cedsId>000088</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000088</cedsURL>
+    </Item>
+    <Item>
+      <Element>primaryAssignment</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>The primary district, school, and function to which the person is assigned.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xStaffPersonAssignmentType"/>
+    </Item>
+    <Item>
+      <Element>otherAssignments</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>Other locations and functions to which the person is assigned.</p>
+      </Description>
+      <Type ref="CommonTypes" name="xStaffPersonAssignmentListType"/>
     </Item>
   </CommonElement>
 

@@ -26,7 +26,7 @@
     <Description>
       <p>An administrative unit within K-12 education at the local level which exists primarily to operate schools or to contract for educational services. These units may or may not be co-extensive with county, city, or town boundaries. </p>
     </Description>
-    <Type ref="CommonTypes" name="xLeaType"/>
+    <Type ref="CommonTypes" name="xLeaObjectType"/>
   </Item>
   <Item>
     <Element>localId</Element>

@@ -50,24 +50,24 @@
     </Description>
     <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
-  <Sequence>
-    <Item>
-      <Element>Name</Element>
-      <Characteristics>C</Characteristics>
-      <Description>
-        <p>The student's name as presented in StudentPersonal object, Name element with a Type of 02 (Current Legal Name).  If Type 02 is not available, Type of 04 (Name of Record).  Sub-elements to be used: LastName, FirstName, MiddleName.</p>
-      </Description>
-      <Type ref="CommonTypes" name="NameOfRecordType"/>
-    </Item>
-    <Item>
-      <Element>LocalId</Element>
-      <Characteristics>C</Characteristics>
-      <Description>
-        <p>The locally assigned identifier for this student.</p>
-      </Description>
-      <Type ref="CommonTypes" name="LocalIdType"/>
-    </Item>
-  </Sequence>
+  <!--<Sequence>-->
+  <Item>
+    <Element>Name</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>The student's name as presented in StudentPersonal object, Name element with a Type of 02 (Current Legal Name).  If Type 02 is not available, Type of 04 (Name of Record).  Sub-elements to be used: LastName, FirstName, MiddleName.</p>
+    </Description>
+    <Type ref="CommonTypes" name="NameOfRecordType"/>
+  </Item>
+  <Item>
+    <Element>LocalId</Element>
+    <Characteristics>C</Characteristics>
+    <Description>
+      <p>The locally assigned identifier for this student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="LocalIdType"/>
+  </Item>
+  <!--</Sequence>-->
   <Item>
     <Element>StateProvinceId</Element>
     <Characteristics>C</Characteristics>
