@@ -36,7 +36,12 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="BusEquipment - Example 1">
+    <BusEquipment RefId="413b08d5-d8ad-4856-9359-b95ca9aa8c12">
+      <Description>Hybrid school bus equipped with wheelchair lift, three-point seat belts, and onboard route communication system.</Description>
+    </BusEquipment>
+  </xhtml:Example>
+  <xhtml:Example name="BusEquipment - Example 2" xmlns="">
     <BusEquipment RefId="D3E34B359D75101A8C3D00AA001A1652">
       <Description>Wheelchair</Description>
     </BusEquipment>

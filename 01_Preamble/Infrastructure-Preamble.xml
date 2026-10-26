@@ -48,13 +48,22 @@
 			</ul>
 		</Section>
 	</Section>
+	<p>This specification is released with the following provisos to developers and educators.</p>
+	<Section name="License">
+		<p>&#169; Copyright Access 4 Learning Community. Some Rights Reserved.</p>
+		<p><img src="images/by-sa.png" alt="CC BY-SA Logo" style="width: 194px; height: auto;"/></p>
+		<p>
+			The SIF Implementation Specifications are available under an Attribution-ShareAlike CC BY-SA 4.0 International license (<a href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a>). Entities must give appropriate credit, provide a link to the license, and indicate if changes were made. Modifications of this license and derivatives need to be licensed under the same terms, but not other works in the compilation or collection. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original. Entities may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+		</p>
+	  <p>The machine-readable files associated with the Specification, including Excel presentations, XSD schemas, JSON schemas, and OpenAPI specifications, are all licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license</a>.  Developers can look here for guidance on using the license: <a href="https://www.apache.org/legal/apply-license.html">Using the Apache license</a>.   The Apache 2.0 License is permissive. It allows you to use, modify, and distribute the licensed software, including creating derivative works, without requiring those derivative works to be licensed under the same terms. You can release the modified parts of the code under any license you prefer.</p>
+	</Section>
 	<Section name="Disclaimer">
 		<p>The information, software, products, and services included
 in the SIF Implementation Specification may include inaccuracies or typographical errors. Changes are periodically added to the information herein. The SIF Association may make improvements and/or changes in this document at any time without notification. Information contained in this document should not be relied upon for personal, medical, legal, or financial decisions. Appropriate professionals should be consulted for advice tailored to specific situations.</p>
 		<p>THE SIF ASSOCIATION, ITS PARTICIPANT(S), AND THIRD PARTY CONTENT PROVIDERS MAKE NO REPRESENTATIONS ABOUT THE SUITABILITY, RELIABILITY, TIMELINESS, AND ACCURACY OF THE INFORMATION, SOFTWARE, PRODUCTS, SERVICES, AND RELATED GRAPHICS CONTAINED IN THIS DOCUMENT FOR ANY PURPOSE. ALL SUCH INFORMATION, SOFTWARE, PRODUCTS, SERVICES, AND RELATED GRAPHICS ARE PROVIDED &quot;AS IS&quot; WITHOUT WARRANTY OF ANY KIND. THE SIF ASSOCIATION AND/OR ITS PARTICIPANT(S) HEREBY DISCLAIM ALL WARRANTIES AND CONDITIONS WITH REGARD TO THIS INFORMATION, SOFTWARE, PRODUCTS, SERVICES, AND RELATED GRAPHICS, INCLUDING ALL IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.</p>
 		<p>IN NO EVENT SHALL THE SIF ASSOCIATION, ITS PARTICIPANT(S), OR THIRD PARTY CONTENT PROVIDERS BE LIABLE FOR ANY DIRECT, INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF USE, DATA, OR PROFITS, ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE USE OR PERFORMANCE OF THIS DOCUMENT, WITH THE DELAY OR INABILITY TO USE THE DOCUMENT, THE PROVISION OF OR FAILURE TO PROVIDE SERVICES, OR FOR ANY INFORMATION, SOFTWARE, PRODUCTS, SERVICES AND RELATED GRAPHICS OBTAINED THROUGH THIS DOCUMENT OR OTHERWISE ARISING OUT OF THE USE OF THIS DOCUMENT, WHETHER BASED ON CONTRACT, TORT, STRICT LIABILITY, OR OTHERWISE, EVEN IF THE SIF ASSOCIATION, ITS PARTICIPANT(S), OR THIRD PARTY CONTENT PROVIDERS HAVE BEEN ADVISED OF THE POSSIBILITY OF DAMAGES. BECAUSE SOME STATES/JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL DAMAGES, THE ABOVE LIMITATION MAY NOT APPLY TO YOU. IF YOU ARE DISSATISFIED WITH ANY PORTION OF THIS DOCUMENT OR WITH ANY OF THESE TERMS OF USE, YOUR SOLE AND EXCLUSIVE REMEDY IS TO DISCONTINUE USING THIS DOCUMENT.</p>
 	</Section>
-	<p>This specification is released with the following provisos to developers and educators.</p>
+	<p>Current legal information for the Access 4 Learning (A4L) Community can be found <a href="https://a4l.org/legal/">here</a>.</p>
 	<Section name="Certification and Compliance Claims">
 		<p>
         Though a product may be demonstrated to comply with this specification, no product may be designated as 
@@ -65,11 +74,5 @@ in the SIF Implementation Specification may include inaccuracies or typographica
         and dedicating resources to the initiative may also use the designation
         <em>SIF Participant</em> to describe their involvement with the SIF Association and SIF in marketing, public relations and other materials.
     </p>
-	</Section>
-	<Section name="Permissions and Copyright">
-		<p>	Copyright© SIF Association (2011-2022). All Rights Reserved.</p>
-		<p>
-			This document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to the SIF Association, or its committees, except as needed for the purpose of developing SIF standards using procedures approved by the SIF Association, or as required to translate it into languages other than English. The limited permissions granted above are perpetual and will not be revoked by the SIF Association or its successors or assigns.
-		</p>
 	</Section>
 </Section>

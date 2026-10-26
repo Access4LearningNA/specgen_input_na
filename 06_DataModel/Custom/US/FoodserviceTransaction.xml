@@ -111,7 +111,30 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="FoodserviceTransaction - Example 1">
+    <FoodserviceTransaction RefId="22d7c355-5e79-4df1-816a-e68babde6fb1">
+      <SchoolInfoRefId>59bdc724-93a1-42e6-8f84-91c79a581ebb</SchoolInfoRefId>
+      <Program Type="NSLP" TypeCodeset="https://www.fns.usda.gov/nslp">National School Lunch Program</Program>
+      <TransactionDate>2025-03-14</TransactionDate>
+      <TransactionTime>11:42:18</TransactionTime>
+      <TransactionTypes>
+        <TransactionType Codeset="https://example.org/codesets/foodservice-transaction-types">Purchase</TransactionType>
+        <TransactionType Codeset="https://example.org/codesets/foodservice-transaction-types">Lunch</TransactionType>
+      </TransactionTypes>
+      <Customer SIF_RefId="b0aef9d2-dcb9-427b-85f6-73e8383ce1f1" SIF_RefObject="StudentPersonal">
+        <MealStatus Type="ReducedPrice" TypeCodeset="https://www.fns.usda.gov/cn/labeling/meal-status">
+          <StartDate>2024-08-12</StartDate>
+          <EndDate>2025-06-06</EndDate>
+          <SchoolYear>2025</SchoolYear>
+        </MealStatus>
+      </Customer>
+      <Amount Type="Cash" TypeCodeset="https://example.org/codesets/foodservice-amount-types" Credits="0" Currency="USD" CurrencyCodeset="urn:iso:std:iso:4217">3.25</Amount>
+      <Tax Currency="USD" CurrencyCodeset="urn:iso:std:iso:4217">0.00</Tax>
+      <Description>Reduced-price turkey avocado wrap lunch purchased at Harbor Ridge Middle School.</Description>
+      <Voided Codeset="https://example.org/codesets/foodservice-void-status">false</Voided>
+    </FoodserviceTransaction>
+  </xhtml:Example>
+  <xhtml:Example name="FoodserviceTransaction - Example 2" xmlns="">
     <FoodserviceTransaction RefId="A9E34B359F44D51A8C3D00AA001A1652">
       <SchoolInfoRefId>EFA054E90CDE45C9BB8A87E9F8F9B238</SchoolInfoRefId>
       <Program Type="Foodservice">NSLP</Program>

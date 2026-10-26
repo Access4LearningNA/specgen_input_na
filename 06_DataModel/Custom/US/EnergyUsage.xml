@@ -50,7 +50,60 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="EnergyUsage - Example 1">
+    <EnergyUsage RefId="2c0309dd-9cfa-491c-8d5d-65deb7b5b854">
+      <UsageLocationInfo>
+        <SchoolId>urn:sif:school:mariner-elementary.harborview.or.us</SchoolId>
+        <Building>Juniper Learning Center</Building>
+        <EnergyZone>
+          <Type>
+            <Facility Codeset="https://nces.ed.gov/programs/edge/">ElementarySchool</Facility>
+            <Description>Instructional classroom wing serving grades 3 through 5</Description>
+          </Type>
+          <EnergyZoneName>Juniper Learning Center - Room 214 Science and Mathematics Cluster</EnergyZoneName>
+          <TagList>
+            <Tag>
+              <Name>Classroom</Name>
+              <Value>214</Value>
+            </Tag>
+            <Tag>
+              <Name>HVSD-Program</Name>
+              <Value>STEM-UpperElementary</Value>
+            </Tag>
+          </TagList>
+        </EnergyZone>
+      </UsageLocationInfo>
+      <DataSource>
+        <System>Harborview Facilities Energy Monitor</System>
+        <StartTime>2026-08-19T08:00:00-07:00</StartTime>
+        <ReadingDataList>
+          <ReadingData>
+            <Measurement Codeset="https://www.energystar.gov/buildings/tools-and-resources/portfolio-manager">Electricity</Measurement>
+            <SensorId>JLC-214-ELEC-MTR-01</SensorId>
+            <Interval>900</Interval>
+            <EnergyUnits Codeset="https://www.iso.org/obp/ui/#iso:std:iso:80000:-1:ed-2:v1:en">kWh</EnergyUnits>
+            <ReadingName>Morning instructional occupancy electricity consumption</ReadingName>
+            <ReadingList>
+              <Reading IntervalIndex="1">3.84</Reading>
+              <Reading IntervalIndex="2">4.17</Reading>
+            </ReadingList>
+          </ReadingData>
+          <ReadingData>
+            <Measurement Codeset="https://www.energystar.gov/buildings/tools-and-resources/portfolio-manager">NaturalGas</Measurement>
+            <SensorId>JLC-214-HVAC-GAS-01</SensorId>
+            <Interval>900</Interval>
+            <EnergyUnits Codeset="https://www.iso.org/obp/ui/#iso:std:iso:80000:-1:ed-2:v1:en">therm</EnergyUnits>
+            <ReadingName>Morning HVAC natural gas allocation</ReadingName>
+            <ReadingList>
+              <Reading IntervalIndex="1">0.21</Reading>
+              <Reading IntervalIndex="2">0.24</Reading>
+            </ReadingList>
+          </ReadingData>
+        </ReadingDataList>
+      </DataSource>
+    </EnergyUsage>
+  </xhtml:Example>
+  <xhtml:Example name="EnergyUsage - Example 2" xmlns="">
     <EnergyUsage RefId="359D75101AD0A9D7A8C3DAD0A85103A2">
       <UsageLocationInfo>
         <SchoolId>urn:sif:school:AcmeMiddleSchool1.CoyoteDistrict.Arizona</SchoolId>

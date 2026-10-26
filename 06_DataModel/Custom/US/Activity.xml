@@ -183,6 +183,76 @@
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="" name="Activity - Example 1">
+    <Activity RefId="9da1602a-3c6a-4f7d-92d4-0bc9a12a78b5">
+      <Title>Watershed Evidence Portfolio</Title>
+      <Preamble>Fifth-grade learners investigate how rainfall moves through the Cedar Ridge watershed and prepare a claim supported by mapped evidence.</Preamble>
+      <TechnicalRequirements>
+        <TechnicalRequirement>Broadband internet access</TechnicalRequirement>
+        <TechnicalRequirement>Device capable of viewing interactive maps and creating a digital presentation</TechnicalRequirement>
+      </TechnicalRequirements>
+      <SoftwareRequirementList>
+        <SoftwareRequirement>
+          <SoftwareTitle>Chrome</SoftwareTitle>
+          <Version>126 or later</Version>
+          <Vendor>Google</Vendor>
+          <OS>ChromeOS 120 or later</OS>
+        </SoftwareRequirement>
+        <SoftwareRequirement>
+          <SoftwareTitle>Google Slides</SoftwareTitle>
+          <Version>Web edition</Version>
+          <Vendor>Google</Vendor>
+          <OS>Web browser</OS>
+        </SoftwareRequirement>
+      </SoftwareRequirementList>
+      <EssentialMaterials>
+        <EssentialMaterial>Cedar Ridge watershed map packet</EssentialMaterial>
+        <EssentialMaterial>Science notebook and colored pencils</EssentialMaterial>
+      </EssentialMaterials>
+      <LearningObjectives>
+        <LearningObjective>Construct an evidence-based explanation of how landforms affect water flow.</LearningObjective>
+        <LearningObjective>Interpret map symbols, scale, and drainage patterns to identify a watershed boundary.</LearningObjective>
+      </LearningObjectives>
+      <LearningStandards>
+        <LearningStandardItemRefId>67bb8792-f89f-4c1d-ad91-58c0d326234f</LearningStandardItemRefId>
+        <LearningStandardItemRefId>72d1d330-20ac-4ca8-9ca5-a43dfe0d0372</LearningStandardItemRefId>
+      </LearningStandards>
+      <SubjectArea>
+        <Code Codeset="https://nces.ed.gov/sced">01</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Text">English Language Arts</OtherCode>
+        </OtherCodeList>
+      </SubjectArea>
+      <Prerequisites>
+        <Prerequisite>Ability to distinguish an observation from an inference</Prerequisite>
+        <Prerequisite>Ability to read a simple topographic map legend</Prerequisite>
+      </Prerequisites>
+      <Students>
+        <StudentPersonalRefId>ae7a6237-d1cc-4272-a85e-d4b7d3fa7ae7</StudentPersonalRefId>
+        <StudentPersonalRefId>4058c49b-f7fe-41ea-a787-781a1c57f80b</StudentPersonalRefId>
+      </Students>
+      <SourceObjects>
+        <SourceObject SIF_RefObject="LearningResource" SIF_RefObjectCodeset="urn:sif:object-types">43d5ee70-55f0-470d-83f0-1cc1d78e90d8</SourceObject>
+        <SourceObject SIF_RefObject="Assessment" SIF_RefObjectCodeset="urn:sif:object-types">ffc431d6-3ff8-400a-b778-2ac1c69be490</SourceObject>
+      </SourceObjects>
+      <Points>40</Points>
+      <ActivityTime>
+        <CreationDate>2026-09-08</CreationDate>
+        <Duration Units="Minutes" UnitsCodeset="urn:sif:time-units">180</Duration>
+        <StartDate>2026-09-14</StartDate>
+        <FinishDate>2026-09-18</FinishDate>
+        <DueDate>2026-09-18</DueDate>
+      </ActivityTime>
+      <AssessmentRefId>121fbeba-4284-4860-aaa4-b8399fa90490</AssessmentRefId>
+      <MaxAttemptsAllowed>2</MaxAttemptsAllowed>
+      <ActivityWeight>12.5</ActivityWeight>
+      <Evaluation EvaluationType="RefId" EvaluationTypeCodeset="urn:sif:evaluation-types" />
+      <LearningResources>
+        <LearningResourceRefId>d1d456e6-6d8c-4e08-8aa6-2d246fc6a509</LearningResourceRefId>
+        <LearningResourceRefId>8f0de1b9-2122-40dc-b9a8-1ea2652acdc1</LearningResourceRefId>
+      </LearningResources>
+    </Activity>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="Activity - Example 2">
     <Activity RefId="C27E1FCFC163485FBEF0F36F18A0493A" xml:lang="en">
       <Title>Shakespeare Essay - Much Ado About Nothing</Title>
       <Preamble>This is a very funny comedy - students should have passing familiarity with Shakespeare</Preamble>
@@ -211,7 +281,7 @@
       </LearningResources>
     </Activity>
   </xhtml:Example>
-  <xhtml:Example xmlns="" name="Activity - Example 2">
+  <xhtml:Example xmlns="" name="Activity - Example 3">
     <Activity RefId="C27E1FCFC163485FBEF0F36F18A0493A" xml:lang="en">
       <Title>Shakespeare Essay - Much Ado About Nothing</Title>
       <Preamble>This is a very funny comedy - students should have passing familiarity with Shakespeare</Preamble>

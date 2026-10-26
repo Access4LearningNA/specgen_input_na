@@ -6,10 +6,139 @@
     <Description>
       <p>xStaff is a composite object that provides a view of the most commonly used core data elements for teachers and non-teaching staff. The refId of a xStaff object coincides with the refId of a corresponding staff object.</p>
     </Description>
-    <Type ref="xPressWorkingGroup" complex="extension" name="xStaffObjectType"/>
   </Item>
-
-  <xhtml:Example xmlns="">
+  <Item>
+    <Attribute>refId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="gRefIdType"/>
+  </Item>
+  <Item>
+    <Element>name</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Name of the staff person.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xPersonNameType"/>
+  </Item>
+  <Item>
+    <Element>localId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique number or alphanumeric code assigned to a staff member by a district or LEA.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xPersonIdType"/>
+    <cedsId>001070</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001070</cedsURL>
+  </Item>
+  <Item>
+    <Element>loginId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The login identifier for the person.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xLoginIdType"/>
+    <cedsId>001170</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001170</cedsURL>
+  </Item>
+  <Item>
+    <Element>stateProvinceId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique number or alphanumeric code assigned to a staff member by a state.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xPersonIdType"/>
+    <cedsId>001070</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001070</cedsURL>
+  </Item>
+  <Item>
+    <Element>otherIds</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Other Ids for the person.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xOtherPersonIdListType"/>
+  </Item>
+  <Item>
+    <Element>sex</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The concept describing the biological traits that distinguish the males and females of a species.</p>
+    </Description>
+    <Type ref="CodeSets" name="xSexType"/>
+    <cedsId>000255</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000255</cedsURL>
+  </Item>
+  <Item>
+    <Element>email</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="xEmailType"/>
+    <cedsId>000088</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000088</cedsURL>
+  </Item>
+  <Item>
+    <Element>primaryAssignment</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The primary district, school, and function to which the person is assigned.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xStaffPersonAssignmentType"/>
+  </Item>
+  <Item>
+    <Element>otherAssignments</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Other locations and functions to which the person is assigned.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xStaffPersonAssignmentListType"/>
+  </Item>
+  <xhtml:Example xmlns="" name="xStaff - Example 1">
+    <xStaff refId="b27fe93f-4e94-406c-aa8b-91c7070f4a60">
+      <name>
+        <type>LegalName</type>
+        <prefix>Dr.</prefix>
+        <familyName>Alvarez</familyName>
+        <givenName>Marisol</givenName>
+        <middleName>Ines</middleName>
+        <suffix>Ph.D.</suffix>
+      </name>
+      <localId>STAFF-20481</localId>
+      <loginId>malvarez</loginId>
+      <stateProvinceId>WA-EDU-20481</stateProvinceId>
+      <otherIds>
+        <otherId>
+          <type>ProfessionalCertificate</type>
+          <id>WA-CERT-583194</id>
+        </otherId>
+        <otherId>
+          <type>District</type>
+          <id>HSD-EMP-20481</id>
+        </otherId>
+      </otherIds>
+      <sex>Female</sex>
+      <email>
+        <emailType>Work</emailType>
+        <emailAddress>marisol.alvarez@harborviewschools.example</emailAddress>
+      </email>
+      <primaryAssignment>
+        <leaRefId>412a0fcf-efac-4dd8-a7b3-b5112156a08c</leaRefId>
+        <schoolRefId>75067227-ea1e-4bcd-a339-1e19b102bae6</schoolRefId>
+        <jobFunction>Elementary Teachers</jobFunction>
+      </primaryAssignment>
+      <otherAssignments>
+        <staffPersonAssignment>
+          <leaRefId>899b323f-aa94-411f-a5d4-7c895b04628b</leaRefId>
+          <schoolRefId>19854656-25ef-4982-ae88-1c894f6afdf0</schoolRefId>
+          <jobFunction>Instructional Coordinators</jobFunction>
+        </staffPersonAssignment>
+        <staffPersonAssignment>
+          <leaRefId>8ed34b5d-b1a2-44f6-baf0-1340b0e3a464</leaRefId>
+          <schoolRefId>7d6bbe4d-a1f7-49ad-8d35-abe84eda6804</schoolRefId>
+          <jobFunction>Special Education Teachers</jobFunction>
+        </staffPersonAssignment>
+      </otherAssignments>
+    </xStaff>
+  </xhtml:Example>
+  <xhtml:Example name="xStaff - Example 2" xmlns="">
     <xStaff refId="0A363E64-8A65-4873-A971-006192DE8D55">
       <name>
         <type>LegalName</type>

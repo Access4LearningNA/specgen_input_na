@@ -50,24 +50,24 @@
     </Description>
     <Type ref="CommonTypes" name="IdRefType"/>
   </Item>
-  <!--<Sequence>-->
-  <Item>
-    <Element>Name</Element>
-    <Characteristics>C</Characteristics>
-    <Description>
-      <p>The student's name as presented in StudentPersonal object, Name element with a Type of 02 (Current Legal Name).  If Type 02 is not available, Type of 04 (Name of Record).  Sub-elements to be used: LastName, FirstName, MiddleName.</p>
-    </Description>
-    <Type ref="CommonTypes" name="NameOfRecordType"/>
-  </Item>
-  <Item>
-    <Element>LocalId</Element>
-    <Characteristics>C</Characteristics>
-    <Description>
-      <p>The locally assigned identifier for this student.</p>
-    </Description>
-    <Type ref="CommonTypes" name="LocalIdType"/>
-  </Item>
-  <!--</Sequence>-->
+  <Sequence>
+    <Item>
+      <Element>Name</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>The student's name as presented in StudentPersonal object, Name element with a Type of 02 (Current Legal Name).  If Type 02 is not available, Type of 04 (Name of Record).  Sub-elements to be used: LastName, FirstName, MiddleName.</p>
+      </Description>
+      <Type ref="CommonTypes" name="NameOfRecordType"/>
+    </Item>
+    <Item>
+      <Element>LocalId</Element>
+      <Characteristics>C</Characteristics>
+      <Description>
+        <p>The locally assigned identifier for this student.</p>
+      </Description>
+      <Type ref="CommonTypes" name="LocalIdType"/>
+    </Item>
+  </Sequence>
   <Item>
     <Element>StateProvinceId</Element>
     <Characteristics>C</Characteristics>
@@ -195,8 +195,6 @@
       <p>The date the test was actually administered.</p>
     </Description>
     <Type name="xs:date"/>
-    <cedsId>000022</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000022</cedsURL>
   </Item>
   <Item>
     <Element>StudentProgramAccommodations</Element>
@@ -216,7 +214,88 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="TestAccommodation - Example 1">
+    <TestAccommodation RefId="7d3ccfe0-9fa8-4308-9afd-3bb3903ad225">
+      <StudentPersonalRefId>cfc55774-4a92-44a0-981a-d741dd508ab8</StudentPersonalRefId>
+      <Name Type="LegalName" TypeCodeset="urn:example:codeset:name-type">
+        <Prefix>Ms.</Prefix>
+        <LastName>Quispe</LastName>
+        <FirstName>Marisol</FirstName>
+        <MiddleName>Elena</MiddleName>
+        <Suffix>II</Suffix>
+        <PreferredName>Soli</PreferredName>
+        <SortName>Quispe, Marisol Elena</SortName>
+        <FullName>Ms. Marisol Elena Quispe II</FullName>
+      </Name>
+      <LocalId>MEQ-082741</LocalId>
+      <StateProvinceId>WA-2026-482719</StateProvinceId>
+      <StateDistrictId>WA-5301234</StateDistrictId>
+      <LEAInfoRefId>b0f2e097-f403-4858-a3a7-ec5b5355d5b7</LEAInfoRefId>
+      <SchoolInfoRefId>ff592600-876d-4d6e-8b1a-161a326ef5fc</SchoolInfoRefId>
+      <StateSchoolId>WA-5301234-041</StateSchoolId>
+      <GradeLevel>
+        <Code Codeset="urn:example:codeset:grade-level">08</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">08</OtherCode>
+          <OtherCode Codeset="Local">Grade 8</OtherCode>
+        </OtherCodeList>
+      </GradeLevel>
+      <AssessmentRegistrationRefId>49657330-9229-4f04-a6cb-3c2d4a150a65</AssessmentRegistrationRefId>
+      <TestAdministration>Washington Comprehensive Assessment of Science</TestAdministration>
+      <TestSubjectArea>Science</TestSubjectArea>
+      <TestGradeLevel>08</TestGradeLevel>
+      <TestAdministrationDateRange>Spring 2026</TestAdministrationDateRange>
+      <PlannedTestAdministrationDate>2026-05-12</PlannedTestAdministrationDate>
+      <TestType Codeset="urn:example:codeset:test-type">Standard</TestType>
+      <AuthorizedActual Codeset="urn:example:codeset:accommodation-status">Authorized</AuthorizedActual>
+      <ActualTestAdministrationDate>2026-05-12</ActualTestAdministrationDate>
+      <StudentProgramAccommodations>
+        <StudentProgramAccommodation>
+          <StudentParticipationRefId>ab882ae1-b954-4fe0-9d77-d567caa8b4a1</StudentParticipationRefId>
+          <StudentProgramType>
+            <Code>IDEA</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="StateProvince">SPED</OtherCode>
+              <OtherCode Codeset="Local">Individualized Education Program</OtherCode>
+            </OtherCodeList>
+          </StudentProgramType>
+          <Accommodations>
+            <Accommodation>
+              <Code>S101</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="StateProvince">ExtendedTime</OtherCode>
+                <OtherCode Codeset="Local">Time and a half</OtherCode>
+              </OtherCodeList>
+              <AccommodationCategory>
+                <Code Codeset="urn:example:codeset:accommodation-category">Scheduling</Code>
+                <OtherCodeList>
+                  <OtherCode Codeset="StateProvince">Scheduling</OtherCode>
+                  <OtherCode Codeset="Text">Extended testing time</OtherCode>
+                </OtherCodeList>
+              </AccommodationCategory>
+              <SpecialMaterials>false</SpecialMaterials>
+            </Accommodation>
+            <Accommodation>
+              <Code>S145</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="StateProvince">SmallGroup</OtherCode>
+                <OtherCode Codeset="Local">Reduced-distraction room</OtherCode>
+              </OtherCodeList>
+              <AccommodationCategory>
+                <Code Codeset="urn:example:codeset:accommodation-category">Setting</Code>
+                <OtherCodeList>
+                  <OtherCode Codeset="StateProvince">Setting</OtherCode>
+                  <OtherCode Codeset="Text">Small-group administration</OtherCode>
+                </OtherCodeList>
+              </AccommodationCategory>
+              <SpecialMaterials>true</SpecialMaterials>
+            </Accommodation>
+          </Accommodations>
+        </StudentProgramAccommodation>
+      </StudentProgramAccommodations>
+    </TestAccommodation>
+  </xhtml:Example>
+  <xhtml:Example name="TestAccommodation - Example 2" xmlns="">
     <TestAccommodation RefId="AD634F59A742C1A4B3D11CC002B163A2">
       <StudentPersonalRefId>A2E34F59A742C1A4B3D11CC002B163A2</StudentPersonalRefId>
       <StateProvinceId>9289348</StateProvinceId>

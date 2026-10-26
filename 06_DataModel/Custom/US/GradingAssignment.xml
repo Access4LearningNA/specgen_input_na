@@ -117,7 +117,25 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="GradingAssignment - Example 1">
+    <GradingAssignment RefId="e2bd1e2d-60df-4788-827a-85511be177bd" SectionInfoRefId="c4ebb53c-98af-4cf7-ab30-6a69e8d58959" TermInfoRefId="00fd1393-43c1-4af5-96e9-07b4d0fcc7a9" SchoolInfoRefId="65099dc2-5ebc-4cf4-bcb4-af8e4b5349d4" GradingCategoryRefId="0d53afe1-5343-48a7-973a-dedba1979342">
+      <Description>Analyze how evidence from primary sources supports claims about the causes of the American Revolution.</Description>
+      <PointsPossible>40</PointsPossible>
+      <CreateDate>2026-09-08</CreateDate>
+      <DueDate>2026-09-18</DueDate>
+      <Weight>12.50</Weight>
+      <DetailedDescription Type="URL" TypeCodeset="https://www.iana.org/assignments/media-types">https://learn.cascadia.example.org/assignments/revolutionary-evidence-brief</DetailedDescription>
+      <LearningStandardItemList>
+        <LearningStandardItem>
+          <LearningStandardRefId ObjectType="LearningStandardItem">eb711529-7a08-45f4-9fa7-961c32341ae7</LearningStandardRefId>
+        </LearningStandardItem>
+        <LearningStandardItem>
+          <LearningStandardRefId ObjectType="LearningStandardDocument">61eb0b9f-8cf4-41bc-a74c-a22e76f906b8</LearningStandardRefId>
+        </LearningStandardItem>
+      </LearningStandardItemList>
+    </GradingAssignment>
+  </xhtml:Example>
+  <xhtml:Example name="GradingAssignment - Example 2" xmlns="">
     <GradingAssignment RefId="359D75101AD0A9D7A8C3DAD0A85103A2" SectionInfoRefId="D0A0A27AD0A8510AD9D75101A8C3DA39" TermInfoRefId="A8C3A2E35B359D75101D00AA001A0000" GradingCategoryRefId="98A57A0013BA8C3D00AA012B359D751A" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB">
       <Description>Pop Quiz</Description>
       <PointsPossible>100</PointsPossible>

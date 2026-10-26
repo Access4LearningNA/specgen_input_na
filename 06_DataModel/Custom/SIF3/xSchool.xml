@@ -26,7 +26,7 @@
     <Description>
       <p>An administrative unit within K-12 education at the local level which exists primarily to operate schools or to contract for educational services. These units may or may not be co-extensive with county, city, or town boundaries. </p>
     </Description>
-    <Type ref="CommonTypes" name="xLeaObjectType"/>
+    <Type ref="CommonTypes" name="xLeaType"/>
   </Item>
   <Item>
     <Element>localId</Element>
@@ -100,7 +100,88 @@
     </Description>
     <Type ref="CommonTypes" name="xTelephoneListType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="xSchool - Example 1">
+    <xSchool refId="684fc874-31f5-4682-8a15-733c7b687b6d">
+      <leaRefId>885ee736-a2b8-4d73-84c8-c85b732b61c0</leaRefId>
+      <lea refId="28a2d13c-8fd2-4e37-a00c-9dea0530dbd1">
+        <localId>HBR-LEA-17</localId>
+        <leaRefId>ac7e0b5c-9157-4644-9a36-f2253f6ec903</leaRefId>
+        <stateProvinceId>WA-LEA-421</stateProvinceId>
+        <ncesId>5304210</ncesId>
+        <leaName>Harborlight Public Schools</leaName>
+        <address>
+          <addressType>Mailing</addressType>
+          <line1>480 Mariner Quay</line1>
+          <line2>Suite 210</line2>
+          <city>Port Townsend</city>
+          <stateProvince>WA</stateProvince>
+          <countryCode>US</countryCode>
+          <postalCode>98368</postalCode>
+        </address>
+        <phoneNumber>
+          <phoneNumberType>Work</phoneNumberType>
+          <number>360-555-0140</number>
+          <primaryIndicator>true</primaryIndicator>
+        </phoneNumber>
+        <otherPhoneNumbers>
+          <phoneNumber>
+            <phoneNumberType>Fax</phoneNumberType>
+            <number>360-555-0141</number>
+            <primaryIndicator>false</primaryIndicator>
+          </phoneNumber>
+          <phoneNumber>
+            <phoneNumberType>Other</phoneNumberType>
+            <number>360-555-0142</number>
+            <primaryIndicator>false</primaryIndicator>
+          </phoneNumber>
+        </otherPhoneNumbers>
+      </lea>
+      <localId>HPS-MES-042</localId>
+      <stateProvinceId>WA-0421</stateProvinceId>
+      <otherIds>
+        <otherId>
+          <type>NCES</type>
+          <id>530421001278</id>
+        </otherId>
+        <otherId>
+          <type>School</type>
+          <id>MARINER-ELEMENTARY</id>
+        </otherId>
+      </otherIds>
+      <schoolName>Mariner's Grove Elementary School</schoolName>
+      <gradeLevels>
+        <gradeLevel>03</gradeLevel>
+        <gradeLevel>04</gradeLevel>
+      </gradeLevels>
+      <address>
+        <addressType>Physical</addressType>
+        <line1>480 Mariner Quay</line1>
+        <line2>Building A</line2>
+        <city>Port Townsend</city>
+        <stateProvince>WA</stateProvince>
+        <countryCode>US</countryCode>
+        <postalCode>98368</postalCode>
+      </address>
+      <phoneNumber>
+        <phoneNumberType>Work</phoneNumberType>
+        <number>360-555-0180</number>
+        <primaryIndicator>true</primaryIndicator>
+      </phoneNumber>
+      <otherPhoneNumbers>
+        <phoneNumber>
+          <phoneNumberType>Fax</phoneNumberType>
+          <number>360-555-0181</number>
+          <primaryIndicator>false</primaryIndicator>
+        </phoneNumber>
+        <phoneNumber>
+          <phoneNumberType>Other</phoneNumberType>
+          <number>360-555-0182</number>
+          <primaryIndicator>false</primaryIndicator>
+        </phoneNumber>
+      </otherPhoneNumbers>
+    </xSchool>
+  </xhtml:Example>
+  <xhtml:Example name="xSchool - Example 2" xmlns="">
     <xSchool refId="66667705-6C51-4C30-A22A-77CEA0FBCF53">
       <leaRefId>9BA8379D-9A9D-4D59-9202-E976CADF5526</leaRefId>
       <localId>542334</localId>

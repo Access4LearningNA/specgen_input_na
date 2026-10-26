@@ -116,7 +116,51 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="AssessmentAdministration - Example 1">
+    <AssessmentAdministration RefId="ce61b658-671e-462b-be5f-783e28fac217" AssessmentFormRefId="358c067d-caf2-4eca-89e4-86e6fbb09a85">
+      <AdministrationName>Spring 2026 Grade 5 Mathematics Performance Assessment</AdministrationName>
+      <SpecialConditions>
+        <SpecialCondition Code="13807" />
+        <SpecialCondition Code="13812" />
+      </SpecialConditions>
+      <AdministrationDateTime>2026-04-14T09:00:00-07:00</AdministrationDateTime>
+      <StartDateTime>2026-04-14T09:05:00-07:00</StartDateTime>
+      <FinishDateTime>2026-04-14T10:35:00-07:00</FinishDateTime>
+      <DueDateTime>2026-04-18T23:59:00-07:00</DueDateTime>
+      <Address Type="OnCampus" TypeCodeset="https://ceds.ed.gov/element/000010">
+        <Street>
+          <Line1>4827 Juniper Mesa Drive</Line1>
+          <Line2>Learning Commons, Room 214</Line2>
+          <Line3>North Testing Wing</Line3>
+          <Complex>Mariner Elementary School</Complex>
+          <StreetNumber>4827</StreetNumber>
+          <StreetPrefix>NE</StreetPrefix>
+          <StreetName>Juniper Mesa</StreetName>
+          <StreetType>Drive</StreetType>
+          <StreetSuffix>NE</StreetSuffix>
+          <ApartmentType>Room</ApartmentType>
+          <ApartmentNumberPrefix>Rm</ApartmentNumberPrefix>
+          <ApartmentNumber>214</ApartmentNumber>
+          <ApartmentNumberSuffix>B</ApartmentNumberSuffix>
+        </Street>
+        <City>Port Orford</City>
+        <County>Curry</County>
+        <StateProvince Codeset="https://www.usps.com/state-abbreviations">OR</StateProvince>
+        <StateANSICode Codeset="https://www.census.gov/library/reference/code-lists/ansi.html">41</StateANSICode>
+        <Country Codeset="https://www.iso.org/iso-3166-country-codes.html">US</Country>
+        <PostalCode>97465</PostalCode>
+        <GridLocation>
+          <Latitude>42.7458</Latitude>
+          <Longitude>-124.4971</Longitude>
+        </GridLocation>
+        <AddressRefId>07c4edad-3c0e-4546-ac85-772d1b616593</AddressRefId>
+      </Address>
+      <StaffPersonalRefId>5bce94b3-9121-4338-acc3-d14eebd14941</StaffPersonalRefId>
+      <LEAInfoRefId>8003e058-f728-4150-824c-cab9fbec4cec</LEAInfoRefId>
+      <SchoolInfoRefId>07579c1e-f0e4-4792-927e-384864492f1e</SchoolInfoRefId>
+    </AssessmentAdministration>
+  </xhtml:Example>
+  <xhtml:Example name="AssessmentAdministration - Example 2" xmlns="">
     <AssessmentAdministration RefId="E2E8045FD8884745AC588F1DDDBEE864" AssessmentFormRefId="78DA3F367AAE4E34995CE15530F531CC">
       <SpecialConditions>
         <SpecialCondition Code="25B">Fire drill during test.</SpecialCondition>

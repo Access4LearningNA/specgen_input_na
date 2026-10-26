@@ -89,7 +89,51 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="Purchasing - Example 1">
+    <Purchasing RefId="e262afb0-5ba6-4daa-96ff-139d82a30536">
+      <FormType Codeset="https://example.org/codesets/purchasing-form-types">PO</FormType>
+      <FormNumber>PO-2026-0417</FormNumber>
+      <FiscalYearRefId>21c0b1e5-b168-4f28-b242-98b3348faf04</FiscalYearRefId>
+      <VendorInfoRefId>a5dc21d8-0d08-4c07-8357-c1a7db877c16</VendorInfoRefId>
+      <LocationInfoRefId>4147d947-a26d-460c-9cb0-e7b276c436b0</LocationInfoRefId>
+      <EmployeePersonalRefId>dfbb12d9-321c-4f39-833d-2f64d10bc6d0</EmployeePersonalRefId>
+      <PurchasingItems>
+        <PurchasingItem>
+          <ItemNumber>MSC-ALG-SET-30</ItemNumber>
+          <ItemDescription>Classroom set of Algebra I graphing workbooks for Mariner STEM Academy</ItemDescription>
+          <Quantity>30</Quantity>
+          <UnitCost Currency="USD" CurrencyCodeset="urn:iso:std:iso:4217">18.75</UnitCost>
+          <ExpenseAccounts>
+            <ExpenseAccount>
+              <AccountCode>1100-100-4300-2710</AccountCode>
+              <Amount Currency="USD" CurrencyCodeset="urn:iso:std:iso:4217">450.00</Amount>
+            </ExpenseAccount>
+            <ExpenseAccount>
+              <AccountCode>1100-100-4300-2725</AccountCode>
+              <Amount Currency="USD" CurrencyCodeset="urn:iso:std:iso:4217">112.50</Amount>
+            </ExpenseAccount>
+          </ExpenseAccounts>
+        </PurchasingItem>
+        <PurchasingItem>
+          <ItemNumber>LAB-GEO-MANIP</ItemNumber>
+          <ItemDescription>Geometric solids and measuring tools for eighth-grade mathematics classrooms</ItemDescription>
+          <Quantity>12</Quantity>
+          <UnitCost Currency="USD" CurrencyCodeset="urn:iso:std:iso:4217">46.20</UnitCost>
+          <ExpenseAccounts>
+            <ExpenseAccount>
+              <AccountCode>1100-100-4300-2710</AccountCode>
+              <Amount Currency="USD" CurrencyCodeset="urn:iso:std:iso:4217">369.60</Amount>
+            </ExpenseAccount>
+            <ExpenseAccount>
+              <AccountCode>1100-100-4300-2725</AccountCode>
+              <Amount Currency="USD" CurrencyCodeset="urn:iso:std:iso:4217">184.80</Amount>
+            </ExpenseAccount>
+          </ExpenseAccounts>
+        </PurchasingItem>
+      </PurchasingItems>
+    </Purchasing>
+  </xhtml:Example>
+  <xhtml:Example name="Purchasing - Example 2" xmlns="">
     <Purchasing RefId="ED12345FDA8497275BC28AA349DD3721">
       <FormType>PO</FormType>
       <FormNumber>00342</FormNumber>

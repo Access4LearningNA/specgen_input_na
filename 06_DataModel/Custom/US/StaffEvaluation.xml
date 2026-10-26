@@ -145,7 +145,43 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="" name="StaffEvaluation">
+  <xhtml:Example xmlns="" name="StaffEvaluation - Example 1">
+    <StaffEvaluation RefId="ff78c466-ee7b-4b54-82a0-a1bc5191e41f">
+      <StaffPersonalRefId>f9d13021-b2ac-48be-a1cc-7cf80a089fa0</StaffPersonalRefId>
+      <SchoolInfoRefId>90494799-7ab6-4903-846b-cd2f64687ce6</SchoolInfoRefId>
+      <NCESId>482745013579</NCESId>
+      <EvaluatorStateProvinceId>TX-ADM-048217</EvaluatorStateProvinceId>
+      <BargainingUnit>Willow Creek Educators Association</BargainingUnit>
+      <EvaluationCycleName>2025-2026 Professional Growth Cycle</EvaluationCycleName>
+      <EvaluationPreconferenceDate>2026-02-10</EvaluationPreconferenceDate>
+      <ProjectedEvaluationDate>2026-05-12</ProjectedEvaluationDate>
+      <EvaluationDate>2026-05-14</EvaluationDate>
+      <EvaluationPostconferenceDate>2026-05-20</EvaluationPostconferenceDate>
+      <EvaluationSystem>Willow Creek Instructional Practice Framework</EvaluationSystem>
+      <EvaluationParts>
+        <EvaluationPart>
+          <Name>Standards-Aligned Mathematics Instruction</Name>
+          <Score>3</Score>
+          <Scale>1-4 Proficient Practice Scale</Scale>
+        </EvaluationPart>
+        <EvaluationPart>
+          <Name>Student Engagement and Academic Discourse</Name>
+          <Score>4</Score>
+          <Scale>1-4 Proficient Practice Scale</Scale>
+        </EvaluationPart>
+      </EvaluationParts>
+      <EvaluationHolisticScore>3</EvaluationHolisticScore>
+      <EvaluationHolisticScale>1-4 Proficient Practice Scale</EvaluationHolisticScale>
+      <EvaluationRecommendation>
+        <Code>RENEW</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">Contract Renewal Recommended</OtherCode>
+          <OtherCode Codeset="Text">Continue professional growth plan</OtherCode>
+        </OtherCodeList>
+      </EvaluationRecommendation>
+    </StaffEvaluation>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="StaffEvaluation - Example 2">
     <StaffEvaluation RefId="359D75101AD0A9D7A8C3DAD0A85103A2">
       <StaffPersonalRefId>DCE34B359D75101A8C3D00AA001A1652</StaffPersonalRefId>
       <SchoolInfoRefId>1947AB893C29F73910FEC3827A239CB1</SchoolInfoRefId>

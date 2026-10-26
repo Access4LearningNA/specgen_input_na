@@ -35,8 +35,6 @@
       <p>Room number as presented to the user/application.</p>
     </Description>
     <Type name="xs:token"/>
-    <cedsId>002507</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/002507</cedsURL>
   </Item>
   <Item>
     <Element>StaffList</Element>
@@ -111,7 +109,27 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="RoomInfo - Example 1">
+    <RoomInfo RefId="948a6c16-b79b-4dbc-a13d-6ebdc48ad750" SchoolInfoRefId="2b35827c-03be-4f75-be02-08d78e29c841">
+      <RoomNumber>214</RoomNumber>
+      <StaffList>
+        <StaffPersonalRefId>579d81b1-9e16-476d-baaf-8ae3bfda6fed</StaffPersonalRefId>
+        <StaffPersonalRefId>9802021d-6578-40b9-9d4a-fccb1af6eb2f</StaffPersonalRefId>
+      </StaffList>
+      <Description>River Ecology and Earth Science Laboratory</Description>
+      <Building>North Academic Building, Second Floor</Building>
+      <HomeroomNumber>8B</HomeroomNumber>
+      <Size>920.5</Size>
+      <Capacity>28</Capacity>
+      <PhoneNumber Type="Work" TypeCodeset="https://www.sifassociation.org/codesets/phone-type">
+        <Number>(503) 555-0148</Number>
+        <Extension>2214</Extension>
+        <ListedStatus>Unlisted</ListedStatus>
+      </PhoneNumber>
+      <RoomTypeRefId>1b399cc6-4427-4809-b1d9-1e15899a1e4d</RoomTypeRefId>
+    </RoomInfo>
+  </xhtml:Example>
+  <xhtml:Example name="RoomInfo - Example 2" xmlns="">
     <RoomInfo RefId="D3E34B359D75101A8C3D00AA001A1652" SchoolInfoRefId="A2E35B359D75101A8C3D00AA001A0000">
       <RoomNumber>101</RoomNumber>
       <StaffList>

@@ -117,7 +117,46 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="" name="StudentSectionEnrollment">
+  <xhtml:Example xmlns="" name="StudentSectionEnrollment - Example 1">
+    <StudentSectionEnrollment RefId="0d0c6192-881b-452f-a404-9def07731c87" StudentPersonalRefId="bf9a6c30-9726-4447-8df3-6d749de08bfa" SectionInfoRefId="e5583197-0e35-42fa-bb92-00c3409da379" SchoolYear="2026">
+      <EntryDate>2025-08-20</EntryDate>
+      <ExitDate>2026-06-05</ExitDate>
+      <ScheduleInfoOverrideList>
+        <ScheduleInfoOverride Override="StudentScheduleOverride" OverrideCodeset="https://example.edu/codesets/schedule-overrides" TermInfoRefId="113da000-f930-431f-8106-7060ecdf2732">
+          <MeetingTimeList>
+            <MeetingTime>
+              <TimetableDay>A</TimetableDay>
+              <TimetablePeriod>3</TimetablePeriod>
+            </MeetingTime>
+            <MeetingTime>
+              <TimetableDay>B</TimetableDay>
+              <TimetablePeriod>4</TimetablePeriod>
+            </MeetingTime>
+          </MeetingTimeList>
+        </ScheduleInfoOverride>
+        <ScheduleInfoOverride Override="ModifiedMeetingPattern" OverrideCodeset="https://example.edu/codesets/schedule-overrides" TermInfoRefId="b912ca81-fcd3-4e9b-9f71-f18dd3db9484">
+          <MeetingTimeList>
+            <MeetingTime>
+              <TimetableDay>A</TimetableDay>
+              <TimetablePeriod>5</TimetablePeriod>
+            </MeetingTime>
+            <MeetingTime>
+              <TimetableDay>B</TimetableDay>
+              <TimetablePeriod>5</TimetablePeriod>
+            </MeetingTime>
+          </MeetingTimeList>
+        </ScheduleInfoOverride>
+      </ScheduleInfoOverrideList>
+      <InstructionalDeliveryModeList>
+        <InstructionalDeliveryMode Codeset="https://example.edu/codesets/instructional-delivery">InPerson</InstructionalDeliveryMode>
+        <InstructionalDeliveryMode Codeset="https://example.edu/codesets/instructional-delivery">BlendedLearning</InstructionalDeliveryMode>
+      </InstructionalDeliveryModeList>
+      <CreditsAttempted Type="NewEnrollment" TypeCodeset="https://example.edu/codesets/credit-types">0.5</CreditsAttempted>
+      <DualCredit Codeset="https://example.edu/codesets/dual-credit">NotApplicable</DualCredit>
+      <CTEConcentrator Codeset="https://example.edu/codesets/cte-concentrator">Participant</CTEConcentrator>
+    </StudentSectionEnrollment>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="StudentSectionEnrollment - Example 2">
     <StudentSectionEnrollment RefId="983AC16598793002C3D00AA00456789D" StudentPersonalRefId="CAE293165987101A8C3D00AA00456789" SectionInfoRefId="9076AB23E386112B7EA2256100BB3312" SchoolYear="2002">
       <EntryDate>2001-09-05</EntryDate>
       <ExitDate>2002-03-01</ExitDate>

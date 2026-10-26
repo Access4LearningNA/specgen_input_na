@@ -72,7 +72,36 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="FoodserviceMenuPlan - Example 1">
+    <FoodserviceMenuPlan RefId="d0e6b828-8849-4265-8996-5a099deb2748">
+      <SchoolInfoRefId>5f904390-9f76-4277-9846-dce58849d89b</SchoolInfoRefId>
+      <GradeLevels>
+        <GradeLevel>
+          <Code Codeset="https://example.org/codesets/grade-level">03</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">03</OtherCode>
+            <OtherCode Codeset="Text">Grade 3</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+        <GradeLevel>
+          <Code Codeset="https://example.org/codesets/grade-level">04</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">04</OtherCode>
+            <OtherCode Codeset="Text">Grade 4</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+      </GradeLevels>
+      <MenuPlanDate>2026-09-08</MenuPlanDate>
+      <Program Type="NSLP" TypeCodeset="https://example.org/codesets/funded-program">National School Lunch Program</Program>
+      <Description>Weekday breakfast and lunch menu plan for Harbor Lantern Elementary School students in grades three and four.</Description>
+      <ProjectedParticipation>286</ProjectedParticipation>
+      <MenuPlanQuantities>
+        <MenuPlanQuantity FoodserviceItemPortionRefId="838786d8-c0bf-4139-b5ea-2517a44883af" MenuCategory="Breakfast" MenuCategoryCodeset="https://example.org/codesets/menu-category">148</MenuPlanQuantity>
+        <MenuPlanQuantity FoodserviceItemPortionRefId="58349f7f-a900-4703-8296-56dbc35661e1" MenuCategory="Lunch" MenuCategoryCodeset="https://example.org/codesets/menu-category">286</MenuPlanQuantity>
+      </MenuPlanQuantities>
+    </FoodserviceMenuPlan>
+  </xhtml:Example>
+  <xhtml:Example name="FoodserviceMenuPlan - Example 2" xmlns="">
     <FoodserviceMenuPlan RefId="EF521958AB474559B2AE7BD82647C66B">
       <SchoolInfoRefId>FF521958AB474559B2AE7BD82647C66B</SchoolInfoRefId>
       <GradeLevels>

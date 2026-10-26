@@ -44,4 +44,9 @@
     </Description>
     <Type name="xs:token"/>
   </Item>
+  <xhtml:Example xmlns="" name="SEAAccountability - Example 1">
+    <SEAAccountability RefId="39e52dae-5796-4da3-b02a-827c78e010af" SEAInfoRefId="1bd278c6-d944-4ae2-9f78-6752c43903a5">
+      <HighSchoolGraduationRateIndicatorStatus Codeset="https://example.org/codesets/sea-accountability-status">MetTarget</HighSchoolGraduationRateIndicatorStatus>
+    </SEAAccountability>
+  </xhtml:Example>
 </DataObject>

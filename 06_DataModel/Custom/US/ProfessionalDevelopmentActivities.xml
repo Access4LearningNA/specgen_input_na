@@ -118,7 +118,24 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="ProfessionalDevelopmentActivities - Example 1">
+    <ProfessionalDevelopmentActivities RefId="38291428-2012-4a2f-8558-ebd16a9f1c00" ActivityProviderRefId="556fb59b-f271-4ba9-bed7-d358894cb97f">
+      <ProfessionalDevelopmentProgramRefId>872e1359-b6ef-4c9d-9eb7-3ef1ced28bda</ProfessionalDevelopmentProgramRefId>
+      <LearningStandardItems>
+        <LearningStandardItemRefId>40534384-b1b7-4f1a-9b02-c0db225ac56f</LearningStandardItemRefId>
+        <LearningStandardItemRefId>75cdb3fd-6906-4d3c-86de-ef5c01447a85</LearningStandardItemRefId>
+      </LearningStandardItems>
+      <LocalId>PD-MATH-2026-041</LocalId>
+      <StartDate>2026-09-12</StartDate>
+      <EndDate>2026-09-13</EndDate>
+      <Description>Two-day professional learning institute for elementary mathematics teachers focused on strengthening student reasoning with fractions through visual models, discourse, and formative assessment.</Description>
+      <ClockHours>12.0</ClockHours>
+      <Credits>1.2</Credits>
+      <Stipend Currency="USD" CurrencyCodeset="ISO4217">240.00</Stipend>
+      <FundingSource>Mariner Unified School District Title II-A Professional Learning Grant</FundingSource>
+    </ProfessionalDevelopmentActivities>
+  </xhtml:Example>
+  <xhtml:Example name="ProfessionalDevelopmentActivities - Example 2" xmlns="">
     <ProfessionalDevelopmentActivities RefId="CCD1254884AE54687FF4567DACD34653" ActivityProviderRefId="CAD125488EE54687FF4567DACD346532">
       <ProfessionalDevelopmentProgramRefId>8BCFB9B7A6BC4895818E5A46C0B431E9</ProfessionalDevelopmentProgramRefId>
       <LearningStandardItems>

@@ -38,7 +38,21 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="EmployeeWage - Example 1">
+    <EmployeeWage RefId="62d95f33-e305-4793-b7c5-3d7c3f4bf2c3" EmployeePersonalRefId="bf9bedcd-3a28-4412-a050-c11f2bd90226">
+      <PayRates>
+        <PayRate Type="BaseSalary" TypeCodeset="https://example.org/codesets/pay-rate-type">
+          <Amount Currency="USD" CurrencyCodeset="urn:iso:std:iso:4217">78250.00</Amount>
+          <Percentage>85</Percentage>
+        </PayRate>
+        <PayRate Type="SupplementalStipend" TypeCodeset="https://example.org/codesets/pay-rate-type">
+          <Amount Currency="USD" CurrencyCodeset="urn:iso:std:iso:4217">13810.00</Amount>
+          <Percentage>15</Percentage>
+        </PayRate>
+      </PayRates>
+    </EmployeeWage>
+  </xhtml:Example>
+  <xhtml:Example name="EmployeeWage - Example 2" xmlns="">
     <EmployeeWage RefId="CDF90651225DAC3859D2A3458BC39583" EmployeePersonalRefId="CD490651225DAC3859DEA3458BC39522">
       <PayRates>
         <PayRate Type="P">

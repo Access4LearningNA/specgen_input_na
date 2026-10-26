@@ -80,6 +80,71 @@
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="" name="BellSchedule - Example 1">
+    <BellSchedule RefId="295141e2-537f-42e6-9bce-7725f8ae4476">
+      <SchoolInfoRefId>37438038-5eaa-4ee4-85b0-53bedf0a6921</SchoolInfoRefId>
+      <SchoolYear>2027</SchoolYear>
+      <BellScheduleName>Mariner Elementary Standard Schedule 2026-2027</BellScheduleName>
+      <TimetableDayList>
+        <TimetableDay>
+          <Identifier>A</Identifier>
+          <Name>Mariner Day A</Name>
+        </TimetableDay>
+        <TimetableDay>
+          <Identifier>B</Identifier>
+          <Name>Mariner Day B</Name>
+        </TimetableDay>
+      </TimetableDayList>
+      <TimetablePeriodList>
+        <TimetablePeriod>
+          <Identifier>P1</Identifier>
+          <Name>Morning Instruction</Name>
+        </TimetablePeriod>
+        <TimetablePeriod>
+          <Identifier>P2</Identifier>
+          <Name>Afternoon Instruction</Name>
+        </TimetablePeriod>
+      </TimetablePeriodList>
+      <BellPeriodList>
+        <BellPeriod>
+          <TimetableDayIdentifier>A</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>P1</TimetablePeriodIdentifier>
+          <StartTime>08:10:00</StartTime>
+          <EndTime>10:35:00</EndTime>
+          <RegularSchoolPeriod Codeset="https://example.org/codesets/bell-period-type">Regular</RegularSchoolPeriod>
+          <InstructionalMinutes>145</InstructionalMinutes>
+          <UseInAttendanceCalculations Codeset="https://example.org/codesets/attendance-use">FullDay</UseInAttendanceCalculations>
+        </BellPeriod>
+        <BellPeriod>
+          <TimetableDayIdentifier>A</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>P2</TimetablePeriodIdentifier>
+          <StartTime>10:55:00</StartTime>
+          <EndTime>14:50:00</EndTime>
+          <RegularSchoolPeriod Codeset="https://example.org/codesets/bell-period-type">Regular</RegularSchoolPeriod>
+          <InstructionalMinutes>215</InstructionalMinutes>
+          <UseInAttendanceCalculations Codeset="https://example.org/codesets/attendance-use">FullDay</UseInAttendanceCalculations>
+        </BellPeriod>
+        <BellPeriod>
+          <TimetableDayIdentifier>B</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>P1</TimetablePeriodIdentifier>
+          <StartTime>08:10:00</StartTime>
+          <EndTime>10:35:00</EndTime>
+          <RegularSchoolPeriod Codeset="https://example.org/codesets/bell-period-type">Regular</RegularSchoolPeriod>
+          <InstructionalMinutes>145</InstructionalMinutes>
+          <UseInAttendanceCalculations Codeset="https://example.org/codesets/attendance-use">FullDay</UseInAttendanceCalculations>
+        </BellPeriod>
+        <BellPeriod>
+          <TimetableDayIdentifier>B</TimetableDayIdentifier>
+          <TimetablePeriodIdentifier>P2</TimetablePeriodIdentifier>
+          <StartTime>10:55:00</StartTime>
+          <EndTime>14:50:00</EndTime>
+          <RegularSchoolPeriod Codeset="https://example.org/codesets/bell-period-type">Regular</RegularSchoolPeriod>
+          <InstructionalMinutes>215</InstructionalMinutes>
+          <UseInAttendanceCalculations Codeset="https://example.org/codesets/attendance-use">FullDay</UseInAttendanceCalculations>
+        </BellPeriod>
+      </BellPeriodList>
+    </BellSchedule>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="BellSchedule - Example 2">
     <BellSchedule RefId="A157E79C10AC744ED90AF2871BEB90B3">
       <SchoolInfoRefId>B7A34E561C97345C0A4E11BB112B2753</SchoolInfoRefId>
       <SchoolYear>2009</SchoolYear>

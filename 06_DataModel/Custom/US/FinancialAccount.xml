@@ -73,7 +73,17 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="FinancialAccount - Example 1">
+    <FinancialAccount RefId="688702ae-af44-475e-9b21-a71e6ae61dd7">
+      <AccountNumber>4100-2026-STEM-018</AccountNumber>
+      <Name>Mariner Middle School STEM Materials Account</Name>
+      <Description>Restricted instructional-materials account supporting science, mathematics, and technology resources for Mariner Middle School.</Description>
+      <FinancialClassRefId>4b09200f-81c2-4374-a9da-81a256739146</FinancialClassRefId>
+      <CreationDate>2026-08-03</CreationDate>
+      <CreationTime>09:15:00</CreationTime>
+    </FinancialAccount>
+  </xhtml:Example>
+  <xhtml:Example name="FinancialAccount - Example 2" xmlns="">
     <FinancialAccount RefId="EEC8FC128D2C4EE394A86C5395024EDE">
       <AccountNumber>9990001</AccountNumber>
       <Name>Purchased Foods</Name>

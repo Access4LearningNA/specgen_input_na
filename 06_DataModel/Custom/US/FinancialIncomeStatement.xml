@@ -70,7 +70,23 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="FinancialIncomeStatement - Example 1">
+    <FinancialIncomeStatement RefId="e8d263ef-eef0-4464-91f4-7ae25cd55a40">
+      <GenerationDate>2025-06-30</GenerationDate>
+      <GenerationTime>16:45:00</GenerationTime>
+      <LocationInfoRefId>a8445594-fbe6-47e7-b39c-fb4d0e9bd3bb</LocationInfoRefId>
+      <Period>
+        <StartDate>2024-07-01</StartDate>
+        <EndDate>2025-06-30</EndDate>
+      </Period>
+      <Amounts>
+        <Amount FinancialAccountAccountingPeriodLocationInfoRefId="fbb0800d-3c6a-404e-8eb7-af2fcf15b48e" FinancialClassRefId="0e20306a-369f-45a8-8941-52bd64d9c5a4" Currency="USD" CurrencyCodeset="urn:iso:std:iso:4217">1847500.00</Amount>
+        <Amount FinancialAccountAccountingPeriodLocationInfoRefId="6af8a8bd-c895-4fcd-a9a0-e8371ca2651f" FinancialClassRefId="5c043127-6964-4b79-aa4f-0b01a1311594" Currency="USD" CurrencyCodeset="urn:iso:std:iso:4217">126400.00</Amount>
+      </Amounts>
+      <Program Type="FederalTitleI" TypeCodeset="https://www.ed.gov/programs/codes">Title I Academic Enrichment</Program>
+    </FinancialIncomeStatement>
+  </xhtml:Example>
+  <xhtml:Example name="FinancialIncomeStatement - Example 2" xmlns="">
     <FinancialIncomeStatement RefId="E72C08BD41894187BA07B00C1401BE3F">
       <GenerationDate>2003-12-31</GenerationDate>
       <GenerationTime>04:32:23-08:00</GenerationTime>

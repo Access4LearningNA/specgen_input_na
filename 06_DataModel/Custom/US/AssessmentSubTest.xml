@@ -114,8 +114,6 @@
       <p>This element records the number of items included on the assessment.  This number may be different than the possible score.</p>
     </Description>
     <Type name="xs:unsignedInt"/>
-    <cedsId>000399</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000399</cedsURL>
   </Item>
   <Item>
     <Element>ContainerOnly</Element>
@@ -137,7 +135,58 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="AssessmentSubTest - Example 1">
+    <AssessmentSubTest RefId="bf32aa8b-dfe5-44f2-bb69-2203aa3f7ef4">
+      <Name>Grade 5 Mathematical Reasoning and Problem Solving</Name>
+      <ScoreRange ScoreMetric="00512" ScoreMetricCodeset="https://ceds.ed.gov/element/00512">
+        <Minimum>0</Minimum>
+        <Maximum>40</Maximum>
+      </ScoreRange>
+      <PerformanceLevels>
+        <PerformanceLevel LevelName="Developing" LevelIdentifier="DEV">
+          <CutScores ScoreMetric="00512" ScoreMetricCodeset="https://ceds.ed.gov/element/00512">
+            <LowerCut>0</LowerCut>
+            <UpperCut>21</UpperCut>
+          </CutScores>
+        </PerformanceLevel>
+        <PerformanceLevel LevelName="Proficient" LevelIdentifier="PRO">
+          <CutScores ScoreMetric="00512" ScoreMetricCodeset="https://ceds.ed.gov/element/00512">
+            <LowerCut>22</LowerCut>
+            <UpperCut>40</UpperCut>
+          </CutScores>
+        </PerformanceLevel>
+      </PerformanceLevels>
+      <SubjectArea>00546</SubjectArea>
+      <GradeLevels>
+        <GradeLevel>
+          <Code Codeset="https://ceds.ed.gov/grade-levels">05</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">Grade5</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+        <GradeLevel>
+          <Code Codeset="https://ceds.ed.gov/grade-levels">06</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">Grade6</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+      </GradeLevels>
+      <AssessmentSubTestRefIds>
+        <AssessmentSubTestRefId>bc37cd77-6cf5-4c3a-acc9-af65e4f826cd</AssessmentSubTestRefId>
+        <AssessmentSubTestRefId>e35b3640-4de1-4c79-a503-6ac8ec2dbbe4</AssessmentSubTestRefId>
+      </AssessmentSubTestRefIds>
+      <SubTestTier>1</SubTestTier>
+      <LearningStandardItemRefIds>
+        <LearningStandardItemRefId>145b595c-4573-4873-b81f-38915d0e8bf2</LearningStandardItemRefId>
+        <LearningStandardItemRefId>46e9c619-f4cc-4473-b85f-aa063e38a57f</LearningStandardItemRefId>
+      </LearningStandardItemRefIds>
+      <Abbreviation>G5-MRPS</Abbreviation>
+      <Description>Measures fifth-grade mathematical reasoning through multi-step problems involving fractions, decimals, geometry, and data analysis.</Description>
+      <NumberOfItems>40</NumberOfItems>
+      <ContainerOnly>false</ContainerOnly>
+    </AssessmentSubTest>
+  </xhtml:Example>
+  <xhtml:Example name="AssessmentSubTest - Example 2" xmlns="">
     <AssessmentSubTest RefId="90E298F70E094EE2B8B52DFD88006AF2">
       <Name>Reading Comprehension Subtest</Name>
       <ScoreRange ScoreMetric="0499">

@@ -176,7 +176,75 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="ResponseToIntervention - Example 1">
+    <ResponseToIntervention RefId="5d7f81b0-cc1d-4afe-87df-07a85ea47b75" StudentPersonalRefId="9d84c984-e18b-46d3-9832-f52a2e55d252" SchoolInfoRefId="f636beea-0c38-40a5-9120-02ba828ae04b" StaffPersonalRefId="84cfe23a-07b9-48b5-b1ab-1f8a9d755a3e" StudentPlacementRefId="5f615e9d-5184-440b-9b99-d9afb92a2953">
+      <RTILocalId>RTI-2026-0472</RTILocalId>
+      <LocationWhereInterventionDelivered>Mariner Elementary School, Learning Lab B</LocationWhereInterventionDelivered>
+      <InterventionProviderNames>
+        <InterventionProviderName StaffPersonalRefId="eece5be4-904c-4594-9328-cd524e37186b">
+          <OtherProvider>Amara Velasquez</OtherProvider>
+        </InterventionProviderName>
+        <InterventionProviderName StaffPersonalRefId="9aa8f811-19b8-4537-a5fb-ed3677c57d55">
+          <OtherProvider>Quentin Harrow</OtherProvider>
+        </InterventionProviderName>
+      </InterventionProviderNames>
+      <Tier>2</Tier>
+      <Interventions>
+        <Intervention>
+          <InterventionName>Strategic Reading Fluency Lab</InterventionName>
+          <InterventionDescription>Small-group explicit instruction in decoding, phrasing, and repeated oral reading using grade-level informational texts.</InterventionDescription>
+          <InterventionType Codeset="https://example.org/codesets/rti-intervention-type">ReadingFluency</InterventionType>
+          <InterventionDelivery Codeset="https://example.org/codesets/rti-delivery">SmallGroup</InterventionDelivery>
+        </Intervention>
+        <Intervention>
+          <InterventionName>Vocabulary Mapping Conference</InterventionName>
+          <InterventionDescription>Teacher-guided practice connecting academic vocabulary, morphology, and contextual clues in science and social studies passages.</InterventionDescription>
+          <InterventionType Codeset="https://example.org/codesets/rti-intervention-type">VocabularyDevelopment</InterventionType>
+          <InterventionDelivery Codeset="https://example.org/codesets/rti-delivery">TeacherConference</InterventionDelivery>
+        </Intervention>
+      </Interventions>
+      <SubjectArea>
+        <Code Codeset="https://nces.ed.gov/sced">01</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">ELA</OtherCode>
+        </OtherCodeList>
+      </SubjectArea>
+      <LearningStandardItems>
+        <LearningStandardItemRefId>2120d532-ee99-43e1-ad9d-07ea682686c5</LearningStandardItemRefId>
+        <LearningStandardItemRefId>3540a472-d3de-4207-8339-4428a18e4d68</LearningStandardItemRefId>
+      </LearningStandardItems>
+      <LearningObjectives>
+        <LearningObjective>Read an unfamiliar grade four passage accurately and with appropriate rate, expression, and phrasing.</LearningObjective>
+        <LearningObjective>Use prefixes, suffixes, roots, and context clues to determine the meaning of academic vocabulary.</LearningObjective>
+      </LearningObjectives>
+      <Measurements>
+        <Measurement>
+          <MeasurementTool>DIBELS 8th Edition Oral Reading Fluency</MeasurementTool>
+          <FrequencyofMeasure Codeset="https://example.org/codesets/measurement-frequency">Weekly</FrequencyofMeasure>
+        </Measurement>
+        <Measurement>
+          <MeasurementTool>Teacher Vocabulary Probe</MeasurementTool>
+          <FrequencyofMeasure Codeset="https://example.org/codesets/measurement-frequency">Biweekly</FrequencyofMeasure>
+        </Measurement>
+      </Measurements>
+      <Baselines>
+        <Baseline>Oral reading fluency baseline: 74 correct words per minute with 93 percent accuracy on a grade four passage.</Baseline>
+        <Baseline>Vocabulary baseline: 6 of 15 academic vocabulary items answered correctly.</Baseline>
+      </Baselines>
+      <Targets>
+        <Target>Increase oral reading fluency to 105 correct words per minute with at least 97 percent accuracy.</Target>
+        <Target>Answer at least 13 of 15 academic vocabulary items correctly on a grade four probe.</Target>
+      </Targets>
+      <EntryDate>2026-01-12</EntryDate>
+      <ProjectedExitDate>2026-05-29</ProjectedExitDate>
+      <ExitDate>2026-05-29</ExitDate>
+      <FrequencyTime>
+        <Code>WeeklySchedule</Code>
+        <Duration UnitOfMeasure="minutes" UnitOfMeasureCodeset="https://example.org/codesets/time-units">30</Duration>
+      </FrequencyTime>
+    </ResponseToIntervention>
+  </xhtml:Example>
+  <xhtml:Example name="ResponseToIntervention - Example 2" xmlns="">
     <ResponseToIntervention RefId="1652D3E34F419D75101A8C3D00AA001A" StudentPersonalRefId="DE072A87EFAD4B778AF9FAF83C94839E" SchoolInfoRefId="1947AB893C29F73910FEC3827A239CB1" StaffPersonalRefId="DCE34B359D75101A8C3D00AA001A1652" StudentPlacementRefId="869670E8540A43509515AFB767FADD9A">
       <RTILocalId>837D3</RTILocalId>
       <LocationWhereInterventionDelivered>Classroom</LocationWhereInterventionDelivered>

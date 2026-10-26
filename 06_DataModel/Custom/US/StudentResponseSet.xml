@@ -58,6 +58,36 @@
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="" name="StudentResponseSet - Example 1">
+    <StudentResponseSet RefId="fa5b0d1b-c019-4824-b1b3-d2dd6aa9b965" AssessmentAdministrationRefId="4bb24676-f9f3-425d-aaf5-3224f6bd8028" StudentPersonalRefId="6975f19a-17cb-416a-bc6e-682c365f803f" AssessmentRegistrationRefId="5f9765ab-03c5-49df-abf6-f2073ff6db75">
+      <Items>
+        <Item AssessmentItemRefId="5f521f8f-50c5-4a56-964f-360c19799bfa">
+          <Response>42</Response>
+          <ResponseLocation>https://assessment.example.edu/responses/amara-velasquez/item-01</ResponseLocation>
+          <ResponseStatus Codeset="https://www.sifassociation.org/codesets/response-status">Correct</ResponseStatus>
+          <ResponseTime>PT1M18S</ResponseTime>
+          <ItemNumber>01</ItemNumber>
+          <ItemName>Ratios in the School Garden</ItemName>
+          <DiagnosticStatement>Measures proportional reasoning using a real-world quantity comparison.</DiagnosticStatement>
+          <NumberOfAttempts>1</NumberOfAttempts>
+          <ItemScore>1</ItemScore>
+          <ItemAidSetUsed>Digital calculator and bilingual glossary</ItemAidSetUsed>
+        </Item>
+        <Item AssessmentItemRefId="36a27f63-acf2-4ce8-98a9-e99b007e3ca4">
+          <Response>The garden needs 42 seedlings because 6 rows times 7 seedlings per row equals 42.</Response>
+          <ResponseLocation>https://assessment.example.edu/responses/amara-velasquez/item-02</ResponseLocation>
+          <ResponseStatus Codeset="https://www.sifassociation.org/codesets/response-status">PartialComplete</ResponseStatus>
+          <ResponseTime>PT2M41S</ResponseTime>
+          <ItemNumber>02</ItemNumber>
+          <ItemName>Explain the Seedling Array</ItemName>
+          <DiagnosticStatement>Measures the student's ability to explain multiplication as equal groups.</DiagnosticStatement>
+          <NumberOfAttempts>2</NumberOfAttempts>
+          <ItemScore>0.75</ItemScore>
+          <ItemAidSetUsed>Text-to-speech and digital scratchpad</ItemAidSetUsed>
+        </Item>
+      </Items>
+    </StudentResponseSet>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="StudentResponseSet - Example 2">
     <StudentResponseSet RefId="A32F55CC14004172A7CD8E8FB5187DD0" AssessmentAdministrationRefId="BB181B05598C46D2B8D533483D91392E" StudentPersonalRefId="8F0934CC2F0448F8BBD788AA1ADE691B">
       <Items>
         <Item>
@@ -73,7 +103,7 @@
       </Items>
     </StudentResponseSet>
   </xhtml:Example>
-  <xhtml:Example xmlns="" name="StudentResponseSet - Example 2">
+  <xhtml:Example xmlns="" name="StudentResponseSet - Example 3">
     <StudentResponseSet RefId="A32F55CC14004172A7CD8E8FB5187DD0" AssessmentAdministrationRefId="BB181B05598C46D2B8D533483D91392E" StudentPersonalRefId="8F0934CC2F0448F8BBD788AA1ADE691B">
       <Items>
         <Item>

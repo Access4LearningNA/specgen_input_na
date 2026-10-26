@@ -113,7 +113,216 @@
     <Description/>
     <Type ref="CommonTypes" name="ApplicableLawListType"/>
   </Item>
-  <xhtml:Example xmlns="" name="PersonPrivacyObligationDocument">
+  <xhtml:Example xmlns="" name="PersonPrivacyObligationDocument - Example 1">
+    <PersonPrivacyObligationDocument RefId="34b26fc0-80fd-4387-8f55-d417823fab07">
+      <ParentRefId>545aa4a5-708d-4dc1-8bec-8e7bf1a02c55</ParentRefId>
+      <ParentObjectTypeName>StudentPersonal</ParentObjectTypeName>
+      <SchoolYear>2027</SchoolYear>
+      <StartDate>2026-08-19</StartDate>
+      <EndDate>2027-06-11</EndDate>
+      <SettingLocationList>
+        <SettingLocation>
+          <SettingLocationName>Juniper Ridge Elementary School</SettingLocationName>
+          <SettingLocationType>School</SettingLocationType>
+          <SettingLocationRefId>b9076a75-5aa7-48c8-ae91-4779b4fb0097</SettingLocationRefId>
+          <SettingLocationObjectTypeName>SchoolInfo</SettingLocationObjectTypeName>
+        </SettingLocation>
+        <SettingLocation>
+          <SettingLocationName>Juniper Ridge Elementary Library Media Center</SettingLocationName>
+          <SettingLocationType>Facility</SettingLocationType>
+          <SettingLocationRefId>e97e8395-c052-4cf4-86e4-420cae8727c8</SettingLocationRefId>
+          <SettingLocationObjectTypeName>RoomInfo</SettingLocationObjectTypeName>
+        </SettingLocation>
+      </SettingLocationList>
+      <ContactForRequestsRefId>b060169b-e128-403a-8755-3b864101363b</ContactForRequestsRefId>
+      <ContactForRequestsObjectTypeName>StaffPersonal</ContactForRequestsObjectTypeName>
+      <ConsentToSharingOfData>
+        <DataDomainObligationList>
+          <DataDomainObligation>
+            <DataDomain>Student learning progress and assessment records</DataDomain>
+            <DomainComments>Limited disclosure supports district-approved instructional analytics and intervention planning for the 2026-2027 school year.</DomainComments>
+            <ShareWithList>
+              <ShareWith>
+                <ShareWithParty>Northstar Learning Analytics</ShareWithParty>
+                <ShareWithRefId>4da6aa21-82a7-4c84-90e6-b1a1aeb91c04</ShareWithRefId>
+                <ShareWithObjectTypeName>ServiceProvider</ShareWithObjectTypeName>
+                <ShareWithLocalId>NLA-EDU-204</ShareWithLocalId>
+                <ShareWithName>Northstar Learning Analytics</ShareWithName>
+                <ShareWithRelationship>District-approved instructional analytics provider</ShareWithRelationship>
+                <ShareWithPurpose>Provide adaptive mathematics practice recommendations for the student.</ShareWithPurpose>
+                <ShareWithRole>ServiceProvider</ShareWithRole>
+                <ShareWithComments>Only the minimum data required to personalize grade five mathematics activities may be disclosed.</ShareWithComments>
+                <PermissionToOnShare>N</PermissionToOnShare>
+                <ShareWithURL>https://northstar.example.edu/privacy/juniper-ridge</ShareWithURL>
+              </ShareWith>
+              <ShareWith>
+                <ShareWithParty>Juniper Ridge Elementary School</ShareWithParty>
+                <ShareWithRefId>bc18cb13-a047-4ef6-bf6d-13641d8aa5bf</ShareWithRefId>
+                <ShareWithObjectTypeName>SchoolInfo</ShareWithObjectTypeName>
+                <ShareWithLocalId>JRE-041</ShareWithLocalId>
+                <ShareWithName>Juniper Ridge Elementary School</ShareWithName>
+                <ShareWithRelationship>Enrolling school</ShareWithRelationship>
+                <ShareWithPurpose>Coordinate classroom instruction, progress monitoring, and family conferences.</ShareWithPurpose>
+                <ShareWithRole>K12School</ShareWithRole>
+                <ShareWithComments>Disclosure is restricted to authorized school staff with a legitimate educational interest.</ShareWithComments>
+                <PermissionToOnShare>N</PermissionToOnShare>
+                <ShareWithURL>https://juniperridge.example.edu/student-data</ShareWithURL>
+              </ShareWith>
+            </ShareWithList>
+            <DoNotShareWithList>
+              <DoNotShareWith>
+                <DoNotShareWithParty>BrightPath Advertising Network</DoNotShareWithParty>
+                <DoNotShareWithRefId>540cdb9b-89a2-46b0-a4f3-d3912989e567</DoNotShareWithRefId>
+                <DoNotShareWithObjectTypeName>ServiceProvider</DoNotShareWithObjectTypeName>
+                <DoNotShareWithLocalId>BPA-090</DoNotShareWithLocalId>
+                <DoNotShareWithName>BrightPath Advertising Network</DoNotShareWithName>
+                <DoNotShareWithRelationship>Commercial advertising vendor</DoNotShareWithRelationship>
+                <DoNotShareWithPurpose>Student learning records must not be used for targeted advertising.</DoNotShareWithPurpose>
+                <DoNotShareWithRole>ServiceProvider</DoNotShareWithRole>
+                <DoNotShareWithComments>No educational purpose has been established for this party.</DoNotShareWithComments>
+                <DoNotShareWithURL>https://brightpath.example.com/privacy</DoNotShareWithURL>
+              </DoNotShareWith>
+              <DoNotShareWith>
+                <DoNotShareWithParty>OpenScholar Research Collaborative</DoNotShareWithParty>
+                <DoNotShareWithRefId>6530ffcc-03ee-44e1-93bf-c448f70bd3c0</DoNotShareWithRefId>
+                <DoNotShareWithObjectTypeName>EducationOrganizationNetwork</DoNotShareWithObjectTypeName>
+                <DoNotShareWithLocalId>OSRC-118</DoNotShareWithLocalId>
+                <DoNotShareWithName>OpenScholar Research Collaborative</DoNotShareWithName>
+                <DoNotShareWithRelationship>External research consortium</DoNotShareWithRelationship>
+                <DoNotShareWithPurpose>Individual student learning records require separate research authorization.</DoNotShareWithPurpose>
+                <DoNotShareWithRole>EducationOrganizationNetwork</DoNotShareWithRole>
+                <DoNotShareWithComments>De-identified aggregate data may be considered only under a separate district agreement.</DoNotShareWithComments>
+                <DoNotShareWithURL>https://openscholar.example.org/data-governance</DoNotShareWithURL>
+              </DoNotShareWith>
+            </DoNotShareWithList>
+          </DataDomainObligation>
+          <DataDomainObligation>
+            <DataDomain>Student directory and family contact information</DataDomain>
+            <DomainComments>Directory information is restricted to school operations and approved educational communications.</DomainComments>
+            <ShareWithList>
+              <ShareWith>
+                <ShareWithParty>Juniper Ridge Elementary School</ShareWithParty>
+                <ShareWithRefId>c99b9142-750a-4000-9e71-09d59735127e</ShareWithRefId>
+                <ShareWithObjectTypeName>SchoolInfo</ShareWithObjectTypeName>
+                <ShareWithLocalId>JRE-041</ShareWithLocalId>
+                <ShareWithName>Juniper Ridge Elementary School</ShareWithName>
+                <ShareWithRelationship>Enrolling school</ShareWithRelationship>
+                <ShareWithPurpose>Maintain enrollment records and communicate school schedules, safety notices, and family events.</ShareWithPurpose>
+                <ShareWithRole>K12School</ShareWithRole>
+                <ShareWithComments>Use is limited to authorized school communications.</ShareWithComments>
+                <PermissionToOnShare>N</PermissionToOnShare>
+                <ShareWithURL>https://juniperridge.example.edu/family-services</ShareWithURL>
+              </ShareWith>
+              <ShareWith>
+                <ShareWithParty>Harbor County Unified School District</ShareWithParty>
+                <ShareWithRefId>7cd22db7-bda1-45f9-b59c-e7cab5617212</ShareWithRefId>
+                <ShareWithObjectTypeName>LEAInfo</ShareWithObjectTypeName>
+                <ShareWithLocalId>HCUSD-07</ShareWithLocalId>
+                <ShareWithName>Harbor County Unified School District</ShareWithName>
+                <ShareWithRelationship>Governing local education agency</ShareWithRelationship>
+                <ShareWithPurpose>Administer enrollment, transportation, food service, and required state reporting.</ShareWithPurpose>
+                <ShareWithRole>LEA</ShareWithRole>
+                <ShareWithComments>District access is subject to role-based access controls and the district privacy policy.</ShareWithComments>
+                <PermissionToOnShare>N</PermissionToOnShare>
+                <ShareWithURL>https://harborcountyschools.example.edu/privacy</ShareWithURL>
+              </ShareWith>
+            </ShareWithList>
+            <DoNotShareWithList>
+              <DoNotShareWith>
+                <DoNotShareWithParty>Community Merchant Directory</DoNotShareWithParty>
+                <DoNotShareWithRefId>d82994f0-05ba-4a99-bcc1-a410151c9a3d</DoNotShareWithRefId>
+                <DoNotShareWithObjectTypeName>ServiceProvider</DoNotShareWithObjectTypeName>
+                <DoNotShareWithLocalId>CMD-303</DoNotShareWithLocalId>
+                <DoNotShareWithName>Community Merchant Directory</DoNotShareWithName>
+                <DoNotShareWithRelationship>Commercial directory publisher</DoNotShareWithRelationship>
+                <DoNotShareWithPurpose>Family contact information must not be disclosed for commercial solicitation.</DoNotShareWithPurpose>
+                <DoNotShareWithRole>ServiceProvider</DoNotShareWithRole>
+                <DoNotShareWithComments>Parent or guardian has not authorized commercial directory publication.</DoNotShareWithComments>
+                <DoNotShareWithURL>https://communitymerchant.example.net/privacy</DoNotShareWithURL>
+              </DoNotShareWith>
+              <DoNotShareWith>
+                <DoNotShareWithParty>AfterSchool Outreach Partners</DoNotShareWithParty>
+                <DoNotShareWithRefId>84710253-d9f5-4cb8-a74f-6ce4383ad754</DoNotShareWithRefId>
+                <DoNotShareWithObjectTypeName>ServiceProvider</DoNotShareWithObjectTypeName>
+                <DoNotShareWithLocalId>AOP-517</DoNotShareWithLocalId>
+                <DoNotShareWithName>AfterSchool Outreach Partners</DoNotShareWithName>
+                <DoNotShareWithRelationship>External enrichment program vendor</DoNotShareWithRelationship>
+                <DoNotShareWithPurpose>Contact information may not be used to market optional programs without separate permission.</DoNotShareWithPurpose>
+                <DoNotShareWithRole>ServiceProvider</DoNotShareWithRole>
+                <DoNotShareWithComments>School may send program notices directly without releasing family contact information.</DoNotShareWithComments>
+                <DoNotShareWithURL>https://afterschooloutreach.example.org/privacy</DoNotShareWithURL>
+              </DoNotShareWith>
+            </DoNotShareWithList>
+          </DataDomainObligation>
+        </DataDomainObligationList>
+        <NeverShareWithList>
+          <NeverShareWith>
+            <NeverShareWithParty>BrightPath Advertising Network</NeverShareWithParty>
+            <NeverShareWithRefId>c3c25012-0edd-4f27-8048-0e99a3bab3a2</NeverShareWithRefId>
+            <NeverShareWithObjectTypeName>ServiceProvider</NeverShareWithObjectTypeName>
+            <NeverShareWithLocalId>BPA-090</NeverShareWithLocalId>
+            <NeverShareWithName>BrightPath Advertising Network</NeverShareWithName>
+            <NeverShareWithRelationship>Commercial advertising vendor</NeverShareWithRelationship>
+            <NeverShareWithPurpose>Student information must never be disclosed for behavioral advertising, profiling, or sale.</NeverShareWithPurpose>
+            <NeverShareWithRole>ServiceProvider</NeverShareWithRole>
+            <NeverShareWithComments>This prohibition applies regardless of the data domain or school year.</NeverShareWithComments>
+            <NeverShareWithURL>https://brightpath.example.com/privacy</NeverShareWithURL>
+          </NeverShareWith>
+          <NeverShareWith>
+            <NeverShareWithParty>Public Social Media Platforms</NeverShareWithParty>
+            <NeverShareWithRefId>20c66532-625d-4c94-8b22-0f17fac97afa</NeverShareWithRefId>
+            <NeverShareWithObjectTypeName>ServiceProvider</NeverShareWithObjectTypeName>
+            <NeverShareWithLocalId>PSMP-001</NeverShareWithLocalId>
+            <NeverShareWithName>Public Social Media Platforms</NeverShareWithName>
+            <NeverShareWithRelationship>Public online publishing services</NeverShareWithRelationship>
+            <NeverShareWithPurpose>Student personally identifiable information must never be posted or transferred to public social media services.</NeverShareWithPurpose>
+            <NeverShareWithRole>ServiceProvider</NeverShareWithRole>
+            <NeverShareWithComments>Photographs, names, contact details, and educational records are included in this prohibition.</NeverShareWithComments>
+            <NeverShareWithURL>https://social-platforms.example.org/privacy</NeverShareWithURL>
+          </NeverShareWith>
+        </NeverShareWithList>
+      </ConsentToSharingOfData>
+      <PermissionToParticipateList>
+        <PermissionToParticipate>
+          <PermissionCategory>Instructional Technology</PermissionCategory>
+          <Permission>Participation in district-approved adaptive mathematics learning activities</Permission>
+          <PermissionValue>Y</PermissionValue>
+          <PermissionStartDate>2026-08-19</PermissionStartDate>
+          <PermissionEndDate>2027-06-11</PermissionEndDate>
+          <PermissionGranteeRefId>9c79c0dc-9c33-4714-b4e4-7c8f45e616a5</PermissionGranteeRefId>
+          <PermissionGranteeObjectTypeName>StudentContactPersonal</PermissionGranteeObjectTypeName>
+          <PermissionGranteeName>Marisol Ibarra</PermissionGranteeName>
+          <PermissionGranteeRelationship>Parent</PermissionGranteeRelationship>
+          <PermissionComments>Permission is limited to instructional use in the student’s grade five classroom.</PermissionComments>
+        </PermissionToParticipate>
+        <PermissionToParticipate>
+          <PermissionCategory>School Media</PermissionCategory>
+          <Permission>Participation in the Juniper Ridge student science showcase</Permission>
+          <PermissionValue>Y</PermissionValue>
+          <PermissionStartDate>2027-03-01</PermissionStartDate>
+          <PermissionEndDate>2027-05-30</PermissionEndDate>
+          <PermissionGranteeRefId>f272a030-0a87-4abd-9841-a05653b01a7a</PermissionGranteeRefId>
+          <PermissionGranteeObjectTypeName>StudentContactPersonal</PermissionGranteeObjectTypeName>
+          <PermissionGranteeName>Marisol Ibarra</PermissionGranteeName>
+          <PermissionGranteeRelationship>Parent</PermissionGranteeRelationship>
+          <PermissionComments>Permission covers display of the student’s first name and science project at the school showcase only.</PermissionComments>
+        </PermissionToParticipate>
+      </PermissionToParticipateList>
+      <ApplicableLawList>
+        <ApplicableLaw>
+          <ApplicableCountry>US</ApplicableCountry>
+          <ApplicableLawName>Family Educational Rights and Privacy Act</ApplicableLawName>
+          <ApplicableLawURL>https://www2.ed.gov/policy/gen/guid/fpco/ferpa/index.html</ApplicableLawURL>
+        </ApplicableLaw>
+        <ApplicableLaw>
+          <ApplicableCountry>US</ApplicableCountry>
+          <ApplicableLawName>Children's Online Privacy Protection Act</ApplicableLawName>
+          <ApplicableLawURL>https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa</ApplicableLawURL>
+        </ApplicableLaw>
+      </ApplicableLawList>
+    </PersonPrivacyObligationDocument>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="PersonPrivacyObligationDocument - Example 2">
     <PersonPrivacyObligationDocument RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
       <!-- Do we want this as an Element/Attribute or 2 elements?? -->
       <ParentRefId>AA648462-8886-24AA-5294-BC638017320B</ParentRefId>

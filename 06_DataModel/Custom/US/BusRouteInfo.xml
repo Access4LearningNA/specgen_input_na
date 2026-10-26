@@ -117,7 +117,30 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="BusRouteInfo - Example 1">
+    <BusRouteInfo RefId="3b834be9-98e6-4083-93d6-7c09270ded14">
+      <BusInfoRefId>d5a7a1f9-4102-4832-aea7-edce22319d40</BusInfoRefId>
+      <RouteNumber>27AM</RouteNumber>
+      <RouteType Codeset="https://www.ed-fi.org/codeset/transportation-route-type">RegularEducation</RouteType>
+      <MaximumLoad>54</MaximumLoad>
+      <Description>Blue Harbor morning route serving Mariner Elementary School and the East Wharf neighborhood.</Description>
+      <Name Type="04">
+        <Prefix>Dr.</Prefix>
+        <LastName>Okafor</LastName>
+        <FirstName>Idris</FirstName>
+        <MiddleName>Chukwudi</MiddleName>
+        <Suffix>III</Suffix>
+        <PreferredName>Idris</PreferredName>
+        <SortName>Okafor, Idris Chukwudi III</SortName>
+        <FullName>Dr. Idris Chukwudi Okafor III</FullName>
+      </Name>
+      <RouteDurationLoaded>PT1H5M</RouteDurationLoaded>
+      <RouteDurationTotal>PT1H28M</RouteDurationTotal>
+      <RouteDistanceLoaded Unit="mi" UnitCodeset="https://www.ucum.org">18.6</RouteDistanceLoaded>
+      <RouteDistanceTotal Unit="mi" UnitCodeset="https://www.ucum.org">24.1</RouteDistanceTotal>
+    </BusRouteInfo>
+  </xhtml:Example>
+  <xhtml:Example name="BusRouteInfo - Example 2" xmlns="">
     <BusRouteInfo RefId="D3E34B359D75101A8C3D00AA001A1652">
       <BusInfoRefId>A2E35B359D75101A8C3D00AA001A0000</BusInfoRefId>
       <RouteNumber>16AM</RouteNumber>

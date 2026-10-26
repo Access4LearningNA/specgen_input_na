@@ -264,6 +264,96 @@
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="" name="StudentSchoolEnrollment - Example 1">
+    <StudentSchoolEnrollment RefId="1093a485-cee8-43fb-9417-c205c21a405a" StudentPersonalRefId="55f2d8f4-8a15-4ec7-996d-4e32b2cc639e" SchoolInfoRefId="5a15ed3a-517a-4e6b-8cef-42e4e767fbf2" MembershipType="HomeSchool" MembershipTypeCodeset="https://example.org/codesets/membership-type" TimeFrame="Historical" TimeFrameCodeset="https://example.org/codesets/time-frame" SchoolYear="2026">
+      <EntryDate>2025-08-20</EntryDate>
+      <EntryType>
+        <Code Codeset="https://example.org/codesets/student-entry-type">01821</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">01821</OtherCode>
+          <OtherCode Codeset="Text">Regular enrollment at the beginning of the school year</OtherCode>
+        </OtherCodeList>
+      </EntryType>
+      <GradeLevel>
+        <Code Codeset="https://example.org/codesets/grade-level">05</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">05</OtherCode>
+          <OtherCode Codeset="Text">Grade 5</OtherCode>
+        </OtherCodeList>
+      </GradeLevel>
+      <Homeroom SIF_RefObject="RoomInfo">95bda539-0256-4a9a-a47e-ccf6020503bd</Homeroom>
+      <Advisor SIF_RefObject="StaffPersonal">fa75cb7f-4464-4d07-81d9-49f2d19358ac</Advisor>
+      <Counselor SIF_RefObject="StaffPersonal">cf3d2cbb-da46-493a-846d-c1fb0e8c107d</Counselor>
+      <Calendar SIF_RefObject="CalendarSummary">c3de59fa-ac66-4445-9ab5-7ef03896b55b</Calendar>
+      <ExitDate>2026-06-12</ExitDate>
+      <ExitStatus>
+        <Code Codeset="https://example.org/codesets/student-exit-status">Permanent</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">Permanent</OtherCode>
+          <OtherCode Codeset="Text">Completed school year</OtherCode>
+        </OtherCodeList>
+      </ExitStatus>
+      <ExitType>
+        <Code Codeset="https://example.org/codesets/student-exit-type">01907</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">01907</OtherCode>
+          <OtherCode Codeset="Text">Promoted to the next grade level</OtherCode>
+        </OtherCodeList>
+      </ExitType>
+      <ExitGradeLevel>
+        <Code Codeset="https://example.org/codesets/grade-level">05</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">05</OtherCode>
+          <OtherCode Codeset="Text">Grade 5 completed</OtherCode>
+        </OtherCodeList>
+      </ExitGradeLevel>
+      <RecordClosureReason Codeset="https://example.org/codesets/record-closure-reason">EndOfSchoolYear</RecordClosureReason>
+      <PromotionInfo>
+        <PromotionStatus Codeset="https://example.org/codesets/promotion-status">Promoted</PromotionStatus>
+        <Promotion>
+          <Code Codeset="https://example.org/codesets/promotion-reason">RegularPromotion</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">REG-PROM</OtherCode>
+            <OtherCode Codeset="Text">Met Grade 5 promotion requirements</OtherCode>
+          </OtherCodeList>
+        </Promotion>
+      </PromotionInfo>
+      <FTE>1.00</FTE>
+      <FTPTStatus Codeset="https://example.org/codesets/ftpt-status">FullTime</FTPTStatus>
+      <ResidencyStatus>
+        <Code Codeset="https://example.org/codesets/residency-status">01653</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">01653</OtherCode>
+          <OtherCode Codeset="Text">Out-of-district resident</OtherCode>
+        </OtherCodeList>
+      </ResidencyStatus>
+      <NonResidentAttendReason Codeset="https://example.org/codesets/nonresident-attendance-reason">SchoolChoice</NonResidentAttendReason>
+      <ResponsableSchoolList>
+        <ResponsableSchool>
+          <SchoolInfoRefId>127796db-ad68-44c8-be95-74aa0fdee74d</SchoolInfoRefId>
+          <Id>RS-ATTENDANCE-01</Id>
+          <Type Codeset="https://example.org/codesets/responsibility-type">Attendance</Type>
+        </ResponsableSchool>
+        <ResponsableSchool>
+          <SchoolInfoRefId>dd31f5cd-905c-4075-802d-151089309f54</SchoolInfoRefId>
+          <Id>RS-ACCOUNTABILITY-02</Id>
+          <Type Codeset="https://example.org/codesets/responsibility-type">Accountability</Type>
+        </ResponsableSchool>
+      </ResponsableSchoolList>
+      <ResponsableLEAList>
+        <ResponsableLEA>
+          <LEAInfoRefId>0a6f307b-dd84-464e-96a1-bef5b350e21e</LEAInfoRefId>
+          <Id>RLEA-FUNDING-01</Id>
+          <Type Codeset="https://example.org/codesets/responsibility-type">Funding</Type>
+        </ResponsableLEA>
+        <ResponsableLEA>
+          <LEAInfoRefId>02c9c24f-650f-475d-affc-8dadcf0c5dc6</LEAInfoRefId>
+          <Id>RLEA-TRANSPORT-02</Id>
+          <Type Codeset="https://example.org/codesets/responsibility-type">Transportation</Type>
+        </ResponsableLEA>
+      </ResponsableLEAList>
+    </StudentSchoolEnrollment>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="StudentSchoolEnrollment - Example 2">
     <StudentSchoolEnrollment RefId="A8C3D3E34B359D75101D00AA001A1652" StudentPersonalRefId="D3E34B359D75101A8C3D00AA001A1652" SchoolInfoRefId="D3E34B359D75101A8C3D00AA001A1651" MembershipType="Home" TimeFrame="Current" SchoolYear="2004">
       <EntryDate>2004-01-29</EntryDate>
       <EntryType>
@@ -282,7 +372,7 @@
       <NonResidentAttendReason>1658</NonResidentAttendReason>
     </StudentSchoolEnrollment>
   </xhtml:Example>
-  <xhtml:Example xmlns="" name="StudentSchoolEnrollment - Example 2">
+  <xhtml:Example xmlns="" name="StudentSchoolEnrollment - Example 3">
     <StudentSchoolEnrollment RefId="A8C3D3E34B359D75101D00AA001A1652" StudentPersonalRefId="D3E34B359D75101A8C3D00AA001A1652" SchoolInfoRefId="D3E34B359D75101A8C3D00AA001A1651" MembershipType="Home" TimeFrame="Historical" SchoolYear="2008">
       <ExitDate>2008-01-29</ExitDate>
       <RecordClosureReason>TimeDependentDataChange</RecordClosureReason>

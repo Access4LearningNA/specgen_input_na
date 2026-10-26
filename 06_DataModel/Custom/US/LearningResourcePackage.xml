@@ -18,7 +18,19 @@
     <Description>A wrapper for any external learning content to be transmitted across a SIF Zone.</Description>
     <Type ref="CommonTypes" complex="extension" name="AbstractContentPackageType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="LearningResourcePackage - Example 1">
+    <LearningResourcePackage RefId="1966162b-2aed-4e9e-b9d7-d57ccf3607d9">
+      <XMLData Description="Supplemental interactive activity metadata">
+        <payload />
+      </XMLData>
+      <TextData MIMEType="text/plain" FileName="river-systems-investigation.txt" Description="Grade 5 earth science investigation guide">Marisol Vega's class examines how rivers shape landforms through erosion, transport, and deposition.</TextData>
+      <BinaryData MIMEType="application/pdf" FileName="river-systems-field-notes.pdf" Description="Printable field observation worksheet">JVBERi0xLjQKJSBTYW1wbGUgUml2ZXIgU3lzdGVtcyBXb3Jrc2hlZXQK</BinaryData>
+      <Reference MIMEType="text/html" Description="External watershed simulation lesson">
+        <URL>https://learning.example.edu/resources/river-systems-watershed-simulation</URL>
+      </Reference>
+    </LearningResourcePackage>
+  </xhtml:Example>
+  <xhtml:Example name="LearningResourcePackage - Example 2" xmlns="">
     <LearningResourcePackage RefId="C7DE86685968459FBF9FED22A0E1EA6E">
       <BinaryData MIMEType="text/plain">ab++</BinaryData>
     </LearningResourcePackage>

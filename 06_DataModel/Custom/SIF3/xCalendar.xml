@@ -36,7 +36,25 @@
     </Description>
     <Type ref="CommonTypes" name="xSessionListType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="xCalendar - Example 1">
+    <xCalendar refId="fc7db7ab-8c52-4e11-8e7f-d63b13884a5c">
+      <schoolRefId>03f4ed45-a2cf-468a-9c22-9c3e1029334a</schoolRefId>
+      <schoolYear>2026</schoolYear>
+      <sessions>
+        <session>
+          <sessionType>FullSchoolYear</sessionType>
+          <sessionCode>FSY26</sessionCode>
+          <description>2026-2027 Full School Year</description>
+          <markingTerm>false</markingTerm>
+          <schedulingTerm>true</schedulingTerm>
+          <linkedSessionCode>Q1-26</linkedSessionCode>
+          <startDate>2026-08-24</startDate>
+          <endDate>2027-06-04</endDate>
+        </session>
+      </sessions>
+    </xCalendar>
+  </xhtml:Example>
+  <xhtml:Example name="xCalendar - Example 2" xmlns="">
     <xCalendar refId="B0FD06FD-5F35-4D96-B2EA-AA96CD2D0F38">
       <schoolRefId>66667705-6C51-4C30-A22A-77CEA0FBCF53</schoolRefId>
       <schoolYear>2014</schoolYear>

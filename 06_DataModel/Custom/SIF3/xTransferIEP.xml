@@ -24,4 +24,980 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="tiepHistoryListType"/>
   </Item>
+  <xhtml:Example xmlns="" name="xTransferIep - Example 1">
+    <xTransferIep refId="3f532da5-9b63-49fc-a30f-10c3453b9446">
+      <referenceObjects>
+        <student refId="36f26b32-c496-4ff2-8d31-e3c8acc94c05">
+          <name>
+            <type>LegalName</type>
+            <prefix>Ms</prefix>
+            <familyName>Quintero</familyName>
+            <givenName>Marisol</givenName>
+            <middleName>Elena</middleName>
+            <suffix>III</suffix>
+          </name>
+          <otherNames>
+            <name>
+              <type>Nickname</type>
+              <prefix>Ms</prefix>
+              <familyName>Quintero</familyName>
+              <givenName>Soli</givenName>
+              <middleName>Elena</middleName>
+              <suffix>III</suffix>
+            </name>
+          </otherNames>
+          <localId>NRUSD-240781</localId>
+          <loginId>mquintero240781</loginId>
+          <stateProvinceId>CA-9814472</stateProvinceId>
+          <otherIds>
+            <otherId>
+              <type>District</type>
+              <id>NRUSD-240781</id>
+            </otherId>
+          </otherIds>
+          <address>
+            <addressType>Physical</addressType>
+            <line1>1847 Juniper Vale Road</line1>
+            <line2>Apartment 3B</line2>
+            <city>Redwood Glen</city>
+            <stateProvince>CA</stateProvince>
+            <countryCode>US</countryCode>
+            <postalCode>94062</postalCode>
+          </address>
+          <otherAddresses>
+            <name>
+              <addressType>Mailing</addressType>
+              <line1>PO Box 418</line1>
+              <line2>Family Mailbox</line2>
+              <city>Redwood Glen</city>
+              <stateProvince>CA</stateProvince>
+              <countryCode>US</countryCode>
+              <postalCode>94063</postalCode>
+            </name>
+          </otherAddresses>
+          <phoneNumber>
+            <phoneNumberType>Mobile</phoneNumberType>
+            <number>6505550184</number>
+            <primaryIndicator>true</primaryIndicator>
+          </phoneNumber>
+          <otherPhoneNumbers>
+            <phoneNumber>
+              <phoneNumberType>Home</phoneNumberType>
+              <number>6505550147</number>
+              <primaryIndicator>false</primaryIndicator>
+            </phoneNumber>
+          </otherPhoneNumbers>
+          <email>
+            <emailType>Organizational</emailType>
+            <emailAddress>marisol.quintero@students.northridgeusd.example</emailAddress>
+          </email>
+          <otherEmails>
+            <email>
+              <emailType>Home</emailType>
+              <emailAddress>marisol.quintero.family@example.org</emailAddress>
+            </email>
+          </otherEmails>
+          <demographics>
+            <races>
+              <race>
+                <race>White</race>
+              </race>
+            </races>
+            <hispanicLatinoEthnicity>true</hispanicLatinoEthnicity>
+            <sex>Female</sex>
+            <birthDate>2011-04-18</birthDate>
+            <countryOfBirth>US</countryOfBirth>
+            <usCitizenshipStatus>USCitizen</usCitizenshipStatus>
+          </demographics>
+          <enrollment>
+            <leaRefId>284ca725-5462-47a7-a3f3-a4e7b2ea7a0f</leaRefId>
+            <schoolRefId>e3c80f22-112f-47cd-a157-3fe6483838b5</schoolRefId>
+            <studentSchoolAssociationRefId>8a2f4a3a-f290-4921-acf8-280747ea059a</studentSchoolAssociationRefId>
+            <responsibleSchoolType>IEP</responsibleSchoolType>
+            <membershipType>Home</membershipType>
+            <entryDate>2025-08-14</entryDate>
+            <exitDate>2026-06-05</exitDate>
+            <exitOrWithdrawalType>01908</exitOrWithdrawalType>
+            <homeRoomNumber>B-214</homeRoomNumber>
+            <homeRoomTeacher>
+              <refId>ec8eb4ed-459c-499e-b6af-334c238ccf5a</refId>
+              <localId>NRUSD-STAFF-4102</localId>
+              <givenName>Celeste</givenName>
+              <familyName>Watanabe</familyName>
+            </homeRoomTeacher>
+            <gradeLevel>08</gradeLevel>
+            <projectedGraduationYear>2030</projectedGraduationYear>
+            <counselor>
+              <refId>62ff17bd-c6a8-47ef-b699-da46c82fa5e0</refId>
+              <localId>NRUSD-STAFF-3286</localId>
+              <givenName>Darian</givenName>
+              <familyName>Okafor</familyName>
+            </counselor>
+          </enrollment>
+          <otherEnrollments>
+            <enrollment>
+              <leaRefId>0b57492a-0a48-42b4-b011-de6359e96280</leaRefId>
+              <schoolRefId>887abc85-127c-45ff-99ab-4b8d8f90fa9e</schoolRefId>
+              <studentSchoolAssociationRefId>8f1e9135-81e2-49f7-a0a3-77cada33c4d9</studentSchoolAssociationRefId>
+              <responsibleSchoolType>Transportation</responsibleSchoolType>
+              <membershipType>Summer</membershipType>
+              <entryDate>2025-06-17</entryDate>
+              <exitDate>2025-07-18</exitDate>
+              <exitOrWithdrawalType>01908</exitOrWithdrawalType>
+              <homeRoomNumber>S-104</homeRoomNumber>
+              <homeRoomTeacher>
+                <refId>9937a635-a33f-456a-84f8-d683aef9daac</refId>
+                <localId>NRUSD-STAFF-4228</localId>
+                <givenName>Rafael</givenName>
+                <familyName>Montoya</familyName>
+              </homeRoomTeacher>
+              <gradeLevel>07</gradeLevel>
+              <projectedGraduationYear>2030</projectedGraduationYear>
+              <counselor>
+                <refId>8edd7845-d0d8-4527-bff5-3a83536c770d</refId>
+                <localId>NRUSD-STAFF-3286</localId>
+                <givenName>Darian</givenName>
+                <familyName>Okafor</familyName>
+              </counselor>
+            </enrollment>
+          </otherEnrollments>
+          <academicSummary>
+            <cumulativeWeightedGpa>3.18</cumulativeWeightedGpa>
+            <termWeightedGpa>3.32</termWeightedGpa>
+            <classRank>146</classRank>
+          </academicSummary>
+          <studentContacts>
+            <contactPersonRefId>910e39ef-9e28-4446-a703-dfcffe5e2146</contactPersonRefId>
+            <xContact refId="b690cfe5-d7fc-4400-9411-3aa46aa6c458">
+              <name>
+                <type>LegalName</type>
+                <prefix>Mrs</prefix>
+                <familyName>Quintero</familyName>
+                <givenName>Yasmin</givenName>
+                <middleName>Lucero</middleName>
+                <suffix>Jr</suffix>
+              </name>
+              <otherNames>
+                <name>
+                  <type>PreferredGivenName</type>
+                  <prefix>Mrs</prefix>
+                  <familyName>Quintero</familyName>
+                  <givenName>Yas</givenName>
+                  <middleName>Lucero</middleName>
+                  <suffix>Jr</suffix>
+                </name>
+              </otherNames>
+              <localId>NRUSD-CONTACT-8821</localId>
+              <loginId>yasmin.quintero</loginId>
+              <otherIds>
+                <otherId>
+                  <type>District</type>
+                  <id>NRUSD-CONTACT-8821</id>
+                </otherId>
+              </otherIds>
+              <address>
+                <addressType>MotherAddress</addressType>
+                <line1>1847 Juniper Vale Road</line1>
+                <line2>Apartment 3B</line2>
+                <city>Redwood Glen</city>
+                <stateProvince>CA</stateProvince>
+                <countryCode>US</countryCode>
+                <postalCode>94062</postalCode>
+              </address>
+              <phoneNumber>
+                <phoneNumberType>Mobile</phoneNumberType>
+                <number>6505550134</number>
+                <primaryIndicator>true</primaryIndicator>
+              </phoneNumber>
+              <otherPhoneNumbers>
+                <phoneNumber>
+                  <phoneNumberType>Work</phoneNumberType>
+                  <number>6505550191</number>
+                  <primaryIndicator>false</primaryIndicator>
+                </phoneNumber>
+              </otherPhoneNumbers>
+              <email>
+                <emailType>Home</emailType>
+                <emailAddress>yasmin.quintero@example.org</emailAddress>
+              </email>
+              <otherEmails>
+                <email>
+                  <emailType>Work</emailType>
+                  <emailAddress>yquintero@redwoodhealth.example</emailAddress>
+                </email>
+              </otherEmails>
+              <sex>Female</sex>
+              <employerType>PrivateOrganization_1805</employerType>
+              <relationships>
+                <relationship>
+                  <studentRefId>0706b1db-1da2-4c94-be09-b5dc9308d70c</studentRefId>
+                  <relationshipCode>Mother</relationshipCode>
+                  <restrictions>Authorized for school pickup and educational decision-making.</restrictions>
+                  <livesWith>true</livesWith>
+                  <primaryContactIndicator>true</primaryContactIndicator>
+                  <emergencyContactIndicator>true</emergencyContactIndicator>
+                  <financialResponsibilityIndicator>true</financialResponsibilityIndicator>
+                  <custodialIndicator>true</custodialIndicator>
+                  <communicationsIndicator>true</communicationsIndicator>
+                  <contactSequence>1</contactSequence>
+                </relationship>
+              </relationships>
+            </xContact>
+          </studentContacts>
+          <languages>
+            <type>Home</type>
+            <code>spa</code>
+            <language>
+              <type>Dominant</type>
+              <code>eng</code>
+            </language>
+          </languages>
+        </student>
+        <leaList>
+          <referenceLea refId="b8935b47-68ac-4b0c-9090-f4897aab859e">
+            <localId>NRUSD</localId>
+            <leaRefId>94daf342-3011-4713-a8df-e702d599f15d</leaRefId>
+            <stateProvinceId>CA-44781</stateProvinceId>
+            <ncesId>0628390</ncesId>
+            <leaName>North Ridge Unified School District</leaName>
+            <address>
+              <addressType>Mailing</addressType>
+              <line1>760 Meridian Avenue</line1>
+              <line2>District Administration Building</line2>
+              <city>Redwood Glen</city>
+              <stateProvince>CA</stateProvince>
+              <countryCode>US</countryCode>
+              <postalCode>94061</postalCode>
+            </address>
+            <phoneNumber>
+              <phoneNumberType>Work</phoneNumberType>
+              <number>6505550100</number>
+              <primaryIndicator>true</primaryIndicator>
+            </phoneNumber>
+            <otherPhoneNumbers>
+              <phoneNumber>
+                <phoneNumberType>Fax</phoneNumberType>
+                <number>6505550101</number>
+                <primaryIndicator>false</primaryIndicator>
+              </phoneNumber>
+            </otherPhoneNumbers>
+          </referenceLea>
+        </leaList>
+        <contactList>
+          <referenceContactPerson refId="f404f45f-49dc-4683-8327-2ae95c3191ce">
+            <name>
+              <type>LegalName</type>
+              <prefix>Mrs</prefix>
+              <familyName>Quintero</familyName>
+              <givenName>Yasmin</givenName>
+              <middleName>Lucero</middleName>
+              <suffix>Jr</suffix>
+            </name>
+            <otherNames>
+              <name>
+                <type>PreferredGivenName</type>
+                <prefix>Mrs</prefix>
+                <familyName>Quintero</familyName>
+                <givenName>Yas</givenName>
+                <middleName>Lucero</middleName>
+                <suffix>Jr</suffix>
+              </name>
+            </otherNames>
+            <localId>NRUSD-CONTACT-8821</localId>
+            <loginId>yasmin.quintero</loginId>
+            <otherIds>
+              <otherId>
+                <type>District</type>
+                <id>NRUSD-CONTACT-8821</id>
+              </otherId>
+            </otherIds>
+            <address>
+              <addressType>MotherAddress</addressType>
+              <line1>1847 Juniper Vale Road</line1>
+              <line2>Apartment 3B</line2>
+              <city>Redwood Glen</city>
+              <stateProvince>CA</stateProvince>
+              <countryCode>US</countryCode>
+              <postalCode>94062</postalCode>
+            </address>
+            <phoneNumber>
+              <phoneNumberType>Mobile</phoneNumberType>
+              <number>6505550134</number>
+              <primaryIndicator>true</primaryIndicator>
+            </phoneNumber>
+            <otherPhoneNumbers>
+              <phoneNumber>
+                <phoneNumberType>Work</phoneNumberType>
+                <number>6505550191</number>
+                <primaryIndicator>false</primaryIndicator>
+              </phoneNumber>
+            </otherPhoneNumbers>
+            <email>
+              <emailType>Home</emailType>
+              <emailAddress>yasmin.quintero@example.org</emailAddress>
+            </email>
+            <otherEmails>
+              <email>
+                <emailType>Work</emailType>
+                <emailAddress>yquintero@redwoodhealth.example</emailAddress>
+              </email>
+            </otherEmails>
+            <sex>Female</sex>
+            <employerType>PrivateOrganization_1805</employerType>
+            <relationships>
+              <relationship>
+                <studentRefId>0f9293ed-d384-4dfd-ae8d-4f5e16309cc6</studentRefId>
+                <relationshipCode>Mother</relationshipCode>
+                <restrictions>Authorized for school pickup and educational decision-making.</restrictions>
+                <livesWith>true</livesWith>
+                <primaryContactIndicator>true</primaryContactIndicator>
+                <emergencyContactIndicator>true</emergencyContactIndicator>
+                <financialResponsibilityIndicator>true</financialResponsibilityIndicator>
+                <custodialIndicator>true</custodialIndicator>
+                <communicationsIndicator>true</communicationsIndicator>
+                <contactSequence>1</contactSequence>
+              </relationship>
+            </relationships>
+          </referenceContactPerson>
+        </contactList>
+        <staffList>
+          <referenceStaffPerson refId="2739582b-8a8e-4970-837e-a999648d0143">
+            <name>
+              <type>LegalName</type>
+              <prefix>Dr</prefix>
+              <familyName>Watanabe</familyName>
+              <givenName>Celeste</givenName>
+              <middleName>Akemi</middleName>
+              <suffix>PhD</suffix>
+            </name>
+            <localId>NRUSD-STAFF-4102</localId>
+            <loginId>cwatanabe</loginId>
+            <stateProvinceId>CA-EDU-4102</stateProvinceId>
+            <otherIds>
+              <otherId>
+                <type>District</type>
+                <id>NRUSD-STAFF-4102</id>
+              </otherId>
+            </otherIds>
+            <sex>Female</sex>
+            <email>
+              <emailType>Work</emailType>
+              <emailAddress>celeste.watanabe@northridgeusd.example</emailAddress>
+            </email>
+            <primaryAssignment>
+              <leaRefId>ec3b6ed7-9a5b-426f-9ddc-5ec40cce7a74</leaRefId>
+              <schoolRefId>9e0d1730-bb66-45a5-92c0-e70e8f901eac</schoolRefId>
+              <jobFunction>Secondary Teachers</jobFunction>
+            </primaryAssignment>
+            <otherAssignments>
+              <staffPersonAssignment>
+                <leaRefId>177ab522-6948-4cb1-9fff-43ff2f9022ed</leaRefId>
+                <schoolRefId>aad56721-b945-4aea-8089-0333c90dd312</schoolRefId>
+                <jobFunction>Special Education Teachers</jobFunction>
+              </staffPersonAssignment>
+            </otherAssignments>
+          </referenceStaffPerson>
+        </staffList>
+        <organizationList>
+          <referenceOrganization>
+            <name>Redwood Glen Speech and Language Center</name>
+            <address>
+              <addressType>Physical</addressType>
+              <line1>912 Harbor Fern Drive</line1>
+              <line2>Suite 210</line2>
+              <city>Redwood Glen</city>
+              <stateProvince>CA</stateProvince>
+              <countryCode>US</countryCode>
+              <postalCode>94061</postalCode>
+            </address>
+            <phone>
+              <phoneNumberType>Work</phoneNumberType>
+              <number>6505550178</number>
+              <primaryIndicator>true</primaryIndicator>
+            </phone>
+          </referenceOrganization>
+        </organizationList>
+      </referenceObjects>
+      <iep refId="eadd4fe1-7ad6-4164-a5f8-07f46b358d58">
+        <iepAdministrativeData>
+          <studentRefId>7b9494be-e82d-4fa4-9a91-a8dce9cadfa3</studentRefId>
+          <reevaluationDueDate>2028-05-22</reevaluationDueDate>
+          <costSharing>
+            <status>true</status>
+            <agency>California Department of Education Special Education Division</agency>
+          </costSharing>
+          <transferPermissionList>
+            <transmitPermission>
+              <authorizingOfficial>
+                <identity>Yasmin Lucero Quintero</identity>
+                <qualification>Parent and educational rights holder</qualification>
+                <date>2025-05-29</date>
+                <contactRefId>d1cd5ff4-e4ab-45fd-b6ea-f0e490a5c984</contactRefId>
+                <staffRefId>ad9dd36e-8716-4801-b533-a411da712fbb</staffRefId>
+                <parentGuardianRefId>031db7ce-20b9-48ba-88ff-0aaf2b0448a8</parentGuardianRefId>
+                <studentRefId>c9f2ff80-75b5-46e6-b250-e222a09e33b2</studentRefId>
+                <intrinsicRole>Parent</intrinsicRole>
+              </authorizingOfficial>
+              <authorizationDate>2025-05-29</authorizationDate>
+              <justification>
+                <authorizingParent>
+                  <identity>Yasmin Lucero Quintero</identity>
+                  <qualification>Custodial parent</qualification>
+                  <date>2025-05-29</date>
+                  <contactRefId>b45e655a-f1d0-4306-8a25-b6e5f142d818</contactRefId>
+                  <staffRefId>24116eaf-be44-4aba-8b13-d375cacfc06c</staffRefId>
+                  <parentGuardianRefId>92ccf78b-cc75-42fa-a430-f1f601a7b689</parentGuardianRefId>
+                  <studentRefId>8a7e2c4f-dbce-4eb9-a9e1-23c095388f90</studentRefId>
+                  <intrinsicRole>Parent</intrinsicRole>
+                </authorizingParent>
+                <otherJustification>Permission supports continuity of speech-language services after district relocation.</otherJustification>
+              </justification>
+              <destination>
+                <lea>bf8de9cb-8c5f-4f1f-9fee-95d3798a5507</lea>
+                <serviceProvider>
+                  <contactRefId>6e25bda1-7ae0-42c0-8766-1c12df605b8e</contactRefId>
+                  <organizationRefId>91dc8e3f-9bdd-48cd-ac84-1b5421456b6c</organizationRefId>
+                  <staffRefId>d0860dd1-de93-4c99-905a-52d79bd221a6</staffRefId>
+                  <role>SPEECHPATH</role>
+                </serviceProvider>
+                <other>
+                  <contactRefId>40454f12-2d54-4fcd-8cce-d67d3afa3ec2</contactRefId>
+                  <organizationRefId>429b9fd2-46e0-437d-9486-9f39daf74978</organizationRefId>
+                  <explanation>Receiving provider requires the current IEP to coordinate language services.</explanation>
+                </other>
+              </destination>
+              <purpose>
+                <standardPurpose>transfer</standardPurpose>
+                <otherPurpose>Continuity of special education and related services.</otherPurpose>
+              </purpose>
+            </transmitPermission>
+          </transferPermissionList>
+        </iepAdministrativeData>
+        <iepEligibility>
+          <background>
+            <referral>
+              <explanation>Persistent decoding, spelling, and written-expression difficulty despite targeted classroom interventions.</explanation>
+              <referrer>
+                <identity>
+                  <identity>Celeste Akemi Watanabe</identity>
+                  <qualification>Special education teacher</qualification>
+                  <date>2025-01-16</date>
+                  <contactRefId>5f3a2394-e7d4-4a51-8896-101fe3149afb</contactRefId>
+                  <staffRefId>4f68a2b7-ee28-4e6e-b276-d92a9b7ba629</staffRefId>
+                  <parentGuardianRefId>aea398fa-887b-4f63-9692-6672af79e888</parentGuardianRefId>
+                  <studentRefId>b1044389-9edb-4226-81ef-b16640df1d8b</studentRefId>
+                  <intrinsicRole>Teacher</intrinsicRole>
+                </identity>
+                <date>2025-01-16</date>
+              </referrer>
+            </referral>
+            <history>Marisol received reading intervention in grades six and seven and demonstrated stronger oral language than written language performance.</history>
+            <currentPlacement>Grade 8 general education classes with daily specialized academic instruction and speech-language support.</currentPlacement>
+            <parentObservations>Family reports that Marisol enjoys science and art but needs extended time and structured support for reading-heavy assignments.</parentObservations>
+            <consentToEvaluation>
+              <accepted>Yes</accepted>
+              <identity>
+                <identity>Yasmin Lucero Quintero</identity>
+                <qualification>Custodial parent</qualification>
+                <date>2025-01-23</date>
+                <contactRefId>67e3a0dd-1a22-4d88-ab90-2ab7fafc027c</contactRefId>
+                <staffRefId>876a2faf-878c-4a5e-8221-6850b59d7919</staffRefId>
+                <parentGuardianRefId>70a6bc44-41f0-4be9-bb11-5f5ff79298a5</parentGuardianRefId>
+                <studentRefId>32ccde14-db99-41f4-82c9-129f5888fe69</studentRefId>
+                <intrinsicRole>Parent</intrinsicRole>
+              </identity>
+            </consentToEvaluation>
+          </background>
+          <evaluationResultList>
+            <evaluationResult>
+              <procedureDescription>Comprehensive psychoeducational evaluation including academic achievement, classroom observation, record review, and student interview.</procedureDescription>
+              <type>Academic Achievement</type>
+              <explanation>Results identify significant weakness in basic reading skills and written expression.</explanation>
+              <date>2025-05-08</date>
+              <identity>
+                <contactRefId>db7a90fb-9f1b-43dc-ab98-860dacc68f6d</contactRefId>
+                <organizationRefId>3fe8c0e1-3071-4757-946b-3dd00b8ad241</organizationRefId>
+                <staffRefId>dc29b71b-7acf-4855-a3cb-3b578bd8e042</staffRefId>
+                <role>PSYCH</role>
+              </identity>
+            </evaluationResult>
+          </evaluationResultList>
+          <ideaDisability>
+            <disabilityCodeList>SLD</disabilityCodeList>
+            <explanation>Specific learning disability affecting reading decoding, reading fluency, spelling, and written expression.</explanation>
+            <analysis>
+              <adverseEffects>Difficulty decoding unfamiliar multisyllabic words reduces access to grade-level text and slows completion of written assignments.</adverseEffects>
+              <educationNeeds>Explicit structured literacy instruction, vocabulary support, and written-expression scaffolds are required.</educationNeeds>
+              <accommodation>Extended time, text-to-speech for non-reading assessments, and access to graphic organizers support meaningful participation.</accommodation>
+              <otherInformation>Marisol demonstrates age-appropriate oral reasoning, strong participation, and sustained interest in environmental science.</otherInformation>
+            </analysis>
+            <SpecialDiagnosisJustifications>
+              <specificLearningDisability>
+                <primaryCauseExclusions>
+                  <determinantFactors>
+                    <insufficientMath>Not a primary determinant.</insufficientMath>
+                    <insufficientReading>Not a primary determinant; documented systematic reading intervention was provided.</insufficientReading>
+                    <insufficientEnglish>Not a primary determinant; English is the student's dominant instructional language.</insufficientEnglish>
+                    <visualHearingOrMotorDisability>Not identified as a determinant.</visualHearingOrMotorDisability>
+                    <intellectualDisability>Not identified as a determinant.</intellectualDisability>
+                    <emotionalDisability>Not identified as a determinant.</emotionalDisability>
+                    <culturalFactors>Not identified as a determinant.</culturalFactors>
+                    <environmentalOrEconomicDisadvantage>Not identified as a determinant.</environmentalOrEconomicDisadvantage>
+                    <limitedEnglishProficiency>Not identified as a determinant.</limitedEnglishProficiency>
+                  </determinantFactors>
+                  <medicalExplanation>No medical factor accounts for the identified pattern of academic weakness.</medicalExplanation>
+                  <otherFactorsExplanation>Multiple measures support a disability determination independent of exclusionary factors.</otherFactorsExplanation>
+                </primaryCauseExclusions>
+                <lackOfAdequateAchievementExplanation>Achievement in word reading, reading fluency, spelling, and written expression remains substantially below grade-level expectations.</lackOfAdequateAchievementExplanation>
+                <learningSettingObservations>During independent reading, Marisol used context clues effectively but required prompting to decode unfamiliar words and complete written responses.</learningSettingObservations>
+                <decisions>
+                  <severeDiscrepancyFound>true</severeDiscrepancyFound>
+                  <InsufficientResponseToInterventionFound>true</InsufficientResponseToInterventionFound>
+                  <eligibleForSpecificLearningDisabilityFinding>true</eligibleForSpecificLearningDisabilityFinding>
+                </decisions>
+              </specificLearningDisability>
+              <TeamOverride>Multidisciplinary team reached consensus using convergent academic, observational, and intervention data.</TeamOverride>
+            </SpecialDiagnosisJustifications>
+            <decisions>
+              <specificDisabilityIdentified>true</specificDisabilityIdentified>
+              <adverseEffectIdentified>Disability adversely affects progress in grade-level English language arts and content-area reading.</adverseEffectIdentified>
+              <eligible>Yes</eligible>
+              <identity>
+                <identity>Darian Okafor</identity>
+                <qualification>School counselor and IEP team participant</qualification>
+                <date>2025-05-22</date>
+                <contactRefId>ed3409b0-5854-427f-988c-fe58160a4053</contactRefId>
+                <staffRefId>bfd93c06-656a-405a-b812-070cb65f962e</staffRefId>
+                <parentGuardianRefId>45f0b83c-8048-4019-8060-83be0cbc580e</parentGuardianRefId>
+                <studentRefId>ef35244e-0be4-4856-826e-13860edb725c</studentRefId>
+                <intrinsicRole>Counselor</intrinsicRole>
+              </identity>
+            </decisions>
+          </ideaDisability>
+          <eligibilityParticipantReportList>
+            <participantReport>
+              <authorization>
+                <identity>Celeste Akemi Watanabe</identity>
+                <qualification>Special education teacher</qualification>
+                <date>2025-05-22</date>
+                <contactRefId>c78a8de7-24f2-4427-97a7-345f6fae4c87</contactRefId>
+                <staffRefId>9bfcba93-349d-4205-9191-4083d232ead5</staffRefId>
+                <parentGuardianRefId>4b7ea784-0c74-44be-ab80-803a73ad6a5c</parentGuardianRefId>
+                <studentRefId>0366d9de-271e-4156-abd0-51b5635dba64</studentRefId>
+                <intrinsicRole>Teacher</intrinsicRole>
+              </authorization>
+              <role>SPEECHPATH</role>
+              <explanation>Speech-language findings inform written-language supports.</explanation>
+              <procedures>Reviewed language sample, curriculum-based measures, teacher records, and classroom observation.</procedures>
+              <observations>Marisol communicated ideas clearly in discussion but benefited from sentence frames when composing extended responses.</observations>
+              <conclusions>Structured language supports and direct reading intervention are educationally necessary.</conclusions>
+            </participantReport>
+          </eligibilityParticipantReportList>
+          <lifecyclePurpose>Initial</lifecyclePurpose>
+          <determination>Marisol meets IDEA eligibility criteria for specific learning disability and requires specially designed instruction.</determination>
+          <identity>
+            <identity>North Ridge Unified IEP Team</identity>
+            <qualification>Multidisciplinary eligibility team</qualification>
+            <date>2025-05-22</date>
+            <contactRefId>4854f8f1-cb95-47be-9999-db9e1d3e414a</contactRefId>
+            <staffRefId>9c9c7c8f-ed06-41ce-a17b-2fb7c205a009</staffRefId>
+            <parentGuardianRefId>58785668-e92b-4d23-85b9-71b55ae7c5c0</parentGuardianRefId>
+            <studentRefId>f9b6f267-8198-48cc-8d68-ce398cac9bfa</studentRefId>
+            <intrinsicRole>IEP Team</intrinsicRole>
+          </identity>
+        </iepEligibility>
+        <iepPlan>
+          <effectivePeriod>
+            <start>2025-08-14</start>
+            <end>2026-08-13</end>
+            <evaluationDate>2025-05-08</evaluationDate>
+          </effectivePeriod>
+          <enrollmentGradeLevel>
+            <standardGradeLevel>08</standardGradeLevel>
+            <explanation>Marisol begins the effective IEP period in eighth grade.</explanation>
+          </enrollmentGradeLevel>
+          <presentLevelPerformance>
+            <personal>
+              <concerns>
+                <reason>Reading disability limits independent access to grade-level print and written demonstration of knowledge.</reason>
+                <parentConcernDescription>Parent wants Marisol to build confidence reading extended text and independently organize written work.</parentConcernDescription>
+                <studentConcernDescription>Marisol wants to read faster, write longer essays, and participate in science projects without falling behind.</studentConcernDescription>
+                <background>Marisol responds positively to clear routines, visual models, and feedback that recognizes incremental progress.</background>
+              </concerns>
+              <strengthsDescription>Marisol is curious, collaborative, verbally articulate, and demonstrates strong conceptual understanding in science.</strengthsDescription>
+              <motivation>She is motivated by environmental science, digital illustration, and helping younger cousins with art projects.</motivation>
+              <evaluation>
+                <needsList>
+                  <need>Direct, explicit instruction in multisyllabic decoding, reading fluency, spelling patterns, and structured paragraph development.</need>
+                </needsList>
+                <performance>
+                  <generalEducationDescription>In general education, Marisol participates actively in discussion but requires accommodations to complete text-heavy assignments and written assessments.</generalEducationDescription>
+                  <testResultList>
+                    <diagnosticStatement>Achievement data show a pattern of strength in oral language and reasoning with significant weakness in foundational reading and written expression.</diagnosticStatement>
+                  </testResultList>
+                </performance>
+                <personalGoalsList>
+                  <personalGoal>
+                    <description>Increase independence when reading grade-level informational text and planning written responses.</description>
+                    <successCriteria>Use taught decoding and planning strategies with no more than one adult prompt in four of five opportunities.</successCriteria>
+                  </personalGoal>
+                </personalGoalsList>
+              </evaluation>
+              <intention>
+                <overview>Marisol intends to pursue education and work connected to environmental design or conservation.</overview>
+                <desiredOutcomeList>
+                  <desiredOutcome>
+                    <category>Post-secondary</category>
+                    <title>Environmental design learning pathway</title>
+                    <description>Explore high-school science, art, and technology courses that support environmental design interests.</description>
+                    <timeframe>During grades nine through twelve.</timeframe>
+                  </desiredOutcome>
+                </desiredOutcomeList>
+              </intention>
+            </personal>
+            <academic>
+              <deficitList>
+                <deficit>
+                  <academicSubject>01</academicSubject>
+                  <explanation>Specific learning disability interferes with decoding, fluency, spelling, and written expression.</explanation>
+                  <consequences>Slow, effortful reading reduces comprehension stamina and limits completion of written assignments.</consequences>
+                  <accommodation>
+                    <type>03513</type>
+                    <description>Provide extended time and access to text-to-speech for non-reading assessments.</description>
+                    <rationale>Reduces the impact of decoding difficulty while preserving assessment of content knowledge.</rationale>
+                  </accommodation>
+                </deficit>
+              </deficitList>
+              <summary>
+                <description>Marisol requires specialized academic instruction to access grade-level literacy tasks and demonstrate knowledge in written form.</description>
+                <accommodationList>
+                  <accommodation>
+                    <category>Post-secondary</category>
+                    <explanation>Use digital organizers, text-to-speech, and extended time for literacy-intensive work.</explanation>
+                  </accommodation>
+                </accommodationList>
+              </summary>
+            </academic>
+            <functional>
+              <disabilityList>
+                <disability>
+                  <disabilityCodeList>SLD</disabilityCodeList>
+                  <explanation>Reading and written-expression disability affects independent assignment initiation and completion.</explanation>
+                  <consequences>Marisol may avoid lengthy reading tasks unless steps and available supports are made explicit.</consequences>
+                  <accommodation>
+                    <type>00461</type>
+                    <description>Use visual task checklists and chunked directions for independent work.</description>
+                    <rationale>Supports planning, persistence, and self-monitoring during multi-step assignments.</rationale>
+                  </accommodation>
+                </disability>
+              </disabilityList>
+              <summary>
+                <description>Functional performance improves when Marisol receives predictable routines, visual organization tools, and opportunities to demonstrate learning orally.</description>
+                <accommodationList>
+                  <accommodation>
+                    <category>IndependentLiving</category>
+                    <explanation>Provide a planner check and assignment chunking at the start of independent work periods.</explanation>
+                  </accommodation>
+                </accommodationList>
+              </summary>
+            </functional>
+            <consequenceOfDisability>
+              <curriculum>General education curriculum with specialized literacy instruction, accommodations, and related speech-language services.</curriculum>
+              <specialCategoryList>
+                <specialCategory>
+                  <programType>05978</programType>
+                  <explanation>Special education services are required to address a specific learning disability in reading and written expression.</explanation>
+                </specialCategory>
+              </specialCategoryList>
+            </consequenceOfDisability>
+          </presentLevelPerformance>
+          <annualGoalsList>
+            <annualGoal>
+              <currentStatus>Marisol reads unfamiliar multisyllabic words accurately in approximately 62 percent of structured opportunities and writes organized paragraphs with adult prompting.</currentStatus>
+              <goalType>
+                <category>Academic</category>
+                <additionalInformation>Annual literacy goal aligned to grade-level informational reading and written-expression access.</additionalInformation>
+                <standardsReference>
+                  <url>https://www.cde.ca.gov/be/st/ss/ela8standards.asp</url>
+                  <identifier>RL.8.1</identifier>
+                </standardsReference>
+              </goalType>
+              <measurableObjectiveList>
+                <measurableObjective>
+                  <identifier>IEP-READ-WRITE-01</identifier>
+                  <facilitatorList>
+                    <facilitator>
+                      <identity>
+                        <contactRefId>48b6d5a6-9561-4d90-b87d-1a24ace0595a</contactRefId>
+                        <staffRefId>10d0ed4c-3cde-4977-9242-d54b6bfcac2e</staffRefId>
+                        <parentGuardianRefId>314b9e47-574b-4b0d-9137-a3cbc48cbd41</parentGuardianRefId>
+                      </identity>
+                      <contribution>Provide direct structured literacy instruction, monitor data weekly, and share strategy practice activities with family.</contribution>
+                    </facilitator>
+                  </facilitatorList>
+                  <measurement>
+                    <criterion>
+                      <description>Given grade-level instructional passages and a writing prompt, Marisol will apply decoding and planning strategies independently.</description>
+                      <metric>
+                        <accuracyPercentEvaluation>80</accuracyPercentEvaluation>
+                        <trialCountEvaluation>
+                          <successCount>4</successCount>
+                          <attemptCount>5</attemptCount>
+                        </trialCountEvaluation>
+                        <otherEvaluation>Curriculum-based reading probes, writing samples, and teacher rubrics.</otherEvaluation>
+                      </metric>
+                    </criterion>
+                  </measurement>
+                  <parentAcceptance>
+                    <accepted>Yes</accepted>
+                    <explanation>Parent supports the literacy objective and home practice plan.</explanation>
+                  </parentAcceptance>
+                </measurableObjective>
+              </measurableObjectiveList>
+              <independentActionsList>
+                <independentAction>Use a digital planner to record assignments, deadlines, and selected reading strategies before leaving each class.</independentAction>
+              </independentActionsList>
+              <servicesList>
+                <service>
+                  <type>Academic Achievement</type>
+                  <inclusiveSettingIndicator>Yes</inclusiveSettingIndicator>
+                  <serviceProvider>
+                    <contactRefId>1f73a630-0e29-483e-ac41-08402cd7dfeb</contactRefId>
+                    <organizationRefId>bc474635-a4e1-415b-95ad-66d400376215</organizationRefId>
+                    <staffRefId>5e8c0a64-2562-4840-b6b1-24fbea89a78c</staffRefId>
+                    <role>SPEECHPATH</role>
+                  </serviceProvider>
+                  <frequency>
+                    <cycle>
+                      <count>5</count>
+                      <period>week</period>
+                    </cycle>
+                    <duration>
+                      <directMinutes>50</directMinutes>
+                      <indirectMinutes>10</indirectMinutes>
+                    </duration>
+                  </frequency>
+                  <startDate>2025-08-14</startDate>
+                  <endDate>2026-08-13</endDate>
+                  <nonParticipationReason>None; parent accepted recommended services.</nonParticipationReason>
+                  <extendsSchoolYear>No</extendsSchoolYear>
+                </service>
+              </servicesList>
+              <coursesList>
+                <course>
+                  <name>Grade 8 English Language Arts</name>
+                  <timing>2025-2026 school year</timing>
+                  <courseContentDescription>Reading literature and informational text, evidence-based writing, vocabulary, discussion, and research.</courseContentDescription>
+                  <courseUri>https://www.northridgeusd.example/courses/grade8-ela</courseUri>
+                </course>
+              </coursesList>
+              <progressReportList>
+                <progressReport>
+                  <description>Marisol is making satisfactory progress toward independently applying decoding and paragraph-planning strategies.</description>
+                  <measurement>
+                    <explanation>Weekly curriculum-based probes measure accurate decoding of multisyllabic words and rubric-scored paragraph organization.</explanation>
+                    <dataNames>
+                      <categoryName>Instructional Week</categoryName>
+                      <valueName>Percent Accurate</valueName>
+                    </dataNames>
+                    <dataValuesList>
+                      <dataValue>
+                        <category>1</category>
+                        <value>68</value>
+                      </dataValue>
+                    </dataValuesList>
+                  </measurement>
+                  <status>SatisfactoryProgress</status>
+                  <explanation>Progress trend is sufficient to reach the annual criterion with continued direct instruction.</explanation>
+                  <date>2025-10-17</date>
+                  <identity>
+                    <identity>Celeste Akemi Watanabe</identity>
+                    <qualification>Special education teacher</qualification>
+                    <date>2025-10-17</date>
+                    <contactRefId>e067b284-6449-40e6-8550-dfd06e8f5850</contactRefId>
+                    <staffRefId>14b39a5d-ddf2-45c8-8534-2d8ac9f67d12</staffRefId>
+                    <parentGuardianRefId>d90c20e3-a5ce-478d-8eb6-5f3c263f936e</parentGuardianRefId>
+                    <studentRefId>d4a2ec00-6abc-4e16-b386-6f491d3eb2d8</studentRefId>
+                    <intrinsicRole>Teacher</intrinsicRole>
+                  </identity>
+                </progressReport>
+              </progressReportList>
+              <parentAcceptance>
+                <accepted>Yes</accepted>
+                <explanation>Parent agrees to the annual literacy goal and associated services.</explanation>
+              </parentAcceptance>
+            </annualGoal>
+          </annualGoalsList>
+          <accommodationsList>
+            <accommodation>
+              <accommodation>
+                <type>03513</type>
+                <description>Extended time and text-to-speech for classroom and district assessments that do not measure reading decoding.</description>
+                <rationale>Allows Marisol to demonstrate content knowledge without undue influence from her decoding disability.</rationale>
+              </accommodation>
+              <applicabilityList>
+                <applicability>Use for English language arts writing, science, social studies, mathematics word problems, and district benchmark assessments.</applicability>
+              </applicabilityList>
+            </accommodation>
+          </accommodationsList>
+          <standardizedAssessmentResultList>
+            <standardizedAssessmentResult>
+              <standardsReference>
+                <assessmentTitle>California Assessment of Student Performance and Progress</assessmentTitle>
+                <subject>Reading</subject>
+                <url>https://www.caaspp-elpac.org/</url>
+              </standardsReference>
+              <accommodationList>
+                <accommodation>
+                  <accommodation>
+                    <type>03513</type>
+                    <description>Provide designated supports and approved accommodations consistent with the IEP.</description>
+                    <rationale>Provides equitable access while retaining the intended assessment construct.</rationale>
+                  </accommodation>
+                  <location>Small-group testing room</location>
+                  <category>Post-secondary</category>
+                  <explanation>Quiet small-group location reduces distraction and permits approved accessibility tools.</explanation>
+                  <achievementStandard>
+                    <type>Academic Achievement</type>
+                    <name>Grade-level achievement standard with approved accommodations</name>
+                  </achievementStandard>
+                </accommodation>
+              </accommodationList>
+            </standardizedAssessmentResult>
+          </standardizedAssessmentResultList>
+          <placement>
+            <environmentForSchoolAge>RC80</environmentForSchoolAge>
+            <environmentForEarlyChildhood>SC</environmentForEarlyChildhood>
+            <placementRationale>Marisol can access the general education curriculum for more than 80 percent of the school day with specialized instruction and accommodations.</placementRationale>
+            <scheduleModification>
+              <schoolDay>
+                <category>IndependentLiving</category>
+                <specificModification>Provide a daily 10-minute planner and assignment-organization check during advisory.</specificModification>
+                <rationale>Supports independent completion of multi-step assignments and self-advocacy.</rationale>
+              </schoolDay>
+              <schoolYear>
+                <category>ExtendedSchoolYearReview</category>
+                <specificModification>Review regression and recoupment data at the annual IEP meeting before determining extended school year eligibility.</specificModification>
+                <rationale>Current data do not establish a need for extended school year services.</rationale>
+              </schoolYear>
+            </scheduleModification>
+            <transportation>
+              <outsideSchool>
+                <category>IndependentLiving</category>
+                <explanation>No specialized transportation is required; Marisol uses regular district transportation safely.</explanation>
+              </outsideSchool>
+              <insideSchool>
+                <category>CampusNavigation</category>
+                <explanation>No specialized transportation is required within the school campus.</explanation>
+              </insideSchool>
+            </transportation>
+            <leastRestrictiveEnvironment>
+              <totalMinutesPerWeek>1800</totalMinutesPerWeek>
+              <inclusionMinutesPerWeek>1620</inclusionMinutesPerWeek>
+              <nonInclusionMinutesPerWeek>180</nonInclusionMinutesPerWeek>
+            </leastRestrictiveEnvironment>
+          </placement>
+          <authorization>
+            <authorizingOfficialsList>
+              <authorizingOfficial>
+                <identity>Darian Okafor</identity>
+                <qualification>School counselor and LEA representative</qualification>
+                <date>2025-05-29</date>
+                <contactRefId>77bc1c32-e86f-4986-94ed-c035e511d6eb</contactRefId>
+                <staffRefId>7aadafca-d43e-4a0c-88a0-e3ae91582d40</staffRefId>
+                <parentGuardianRefId>fa400043-3ddd-45be-b69a-39b384edca47</parentGuardianRefId>
+                <studentRefId>5d2899b4-a885-40c7-8ec1-601a0f523aa7</studentRefId>
+                <intrinsicRole>LEA Representative</intrinsicRole>
+              </authorizingOfficial>
+            </authorizingOfficialsList>
+            <parentGuardianAuthorization>
+              <accepted>Yes</accepted>
+              <rejectedPlanElements>
+                <rejectedDetailList>
+                  <description>No plan elements were rejected.</description>
+                  <explanation>Parent accepted the complete proposed IEP.</explanation>
+                </rejectedDetailList>
+                <explanation>Parent supports implementation of all services, accommodations, and annual goals.</explanation>
+              </rejectedPlanElements>
+              <authorizingParentGuardian>
+                <identity>Yasmin Lucero Quintero</identity>
+                <qualification>Custodial parent</qualification>
+                <date>2025-05-29</date>
+                <contactRefId>8da16c8d-5a20-4990-87ff-c7b3a6f1d784</contactRefId>
+                <staffRefId>19914225-4f91-4d3b-8131-a6b396167954</staffRefId>
+                <parentGuardianRefId>9c674d84-1b0d-4d08-9cd1-061160ae5b44</parentGuardianRefId>
+                <studentRefId>0d638958-955b-4366-9dae-99712af12ebb</studentRefId>
+                <intrinsicRole>Parent</intrinsicRole>
+              </authorizingParentGuardian>
+              <authorizationDate>2025-05-29</authorizationDate>
+            </parentGuardianAuthorization>
+            <transferOfRightsNotificationDate>2029-04-18</transferOfRightsNotificationDate>
+          </authorization>
+          <amendmentList>
+            <amendment>
+              <changeList>
+                <change>
+                  <explanation>Added text-to-speech access for science and social studies assignments after a team review of first-quarter work samples.</explanation>
+                  <reasonForChange>Expanded accommodation improves access to content-area instruction without changing reading-decoding expectations in literacy assessment.</reasonForChange>
+                </change>
+              </changeList>
+              <explanation>Accommodation clarification approved by the IEP team.</explanation>
+              <authorization>
+                <authorizingOfficialsList>
+                  <authorizingOfficial>
+                    <identity>Darian Okafor</identity>
+                    <qualification>School counselor and LEA representative</qualification>
+                    <date>2025-10-24</date>
+                    <contactRefId>b7e7cad4-8afd-4611-9d89-f5b30764a70c</contactRefId>
+                    <staffRefId>9f4a804b-efde-4a13-9277-585d3cbc9818</staffRefId>
+                    <parentGuardianRefId>020fcdec-1626-4c83-882c-e3617aa35fde</parentGuardianRefId>
+                    <studentRefId>2f279cb6-8a43-4dc0-b0fb-1f2c592066b9</studentRefId>
+                    <intrinsicRole>LEA Representative</intrinsicRole>
+                  </authorizingOfficial>
+                </authorizingOfficialsList>
+                <parentGuardianAuthorization>
+                  <accepted>Yes</accepted>
+                  <rejectedPlanElements>
+                    <rejectedDetailList>
+                      <description>No amendment elements were rejected.</description>
+                      <explanation>Parent accepted the accommodation clarification.</explanation>
+                    </rejectedDetailList>
+                    <explanation>Parent agrees that the amendment reflects Marisol's current access needs.</explanation>
+                  </rejectedPlanElements>
+                  <authorizingParentGuardian>
+                    <identity>Yasmin Lucero Quintero</identity>
+                    <qualification>Custodial parent</qualification>
+                    <date>2025-10-24</date>
+                    <contactRefId>1b2b144e-1f6a-491f-9c4d-29060fcc42fb</contactRefId>
+                    <staffRefId>2a7c56fb-633f-46ef-b9ab-85b574727a97</staffRefId>
+                    <parentGuardianRefId>bb70edb6-30ba-4a5f-9965-f1558cd34e67</parentGuardianRefId>
+                    <studentRefId>20311b44-a35a-45f1-9ee1-3f7718b1cb5b</studentRefId>
+                    <intrinsicRole>Parent</intrinsicRole>
+                  </authorizingParentGuardian>
+                  <authorizationDate>2025-10-24</authorizationDate>
+                </parentGuardianAuthorization>
+                <transferOfRightsNotificationDate>2029-04-18</transferOfRightsNotificationDate>
+              </authorization>
+            </amendment>
+          </amendmentList>
+        </iepPlan>
+      </iep>
+      <historyList>
+        <lea>4347ddd8-13be-40b3-bf4a-fd4a8b5080cb</lea>
+        <iepDates>
+          <start>2024-08-15</start>
+          <end>2025-08-13</end>
+        </iepDates>
+        <contactInfoRefId>5f40688d-9732-4eb0-a735-6fadc759abbc</contactInfoRefId>
+        <historyItem>
+          <lea>822b0f9c-10d4-41ce-a4df-a983393bfbfc</lea>
+          <iepDates>
+            <start>2023-08-16</start>
+            <end>2024-08-14</end>
+          </iepDates>
+          <contactInfoRefId>11f2fc0c-c9ca-4a27-822f-64e992e6cb19</contactInfoRefId>
+        </historyItem>
+      </historyList>
+    </xTransferIep>
+  </xhtml:Example>
 </DataObject>

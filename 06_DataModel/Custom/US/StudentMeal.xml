@@ -80,7 +80,28 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="StudentMeal - Example 1">
+    <StudentMeal RefId="31a3b87f-af34-4bff-b5ee-661d3cf9d579" StudentPersonalRefId="03aaf02c-83db-4fa9-8e25-026c626b7ee2">
+      <MealStatus Type="Free" TypeCodeset="https://nces.ed.gov/programs/coe/indicator/cce">
+        <StartDate>2026-08-17</StartDate>
+        <SchoolYear>2027</SchoolYear>
+      </MealStatus>
+      <HistoricalMealStatus>
+        <MealStatus Type="ReducedPrice" TypeCodeset="https://nces.ed.gov/programs/coe/indicator/cce">
+          <StartDate>2025-08-18</StartDate>
+          <EndDate>2026-06-12</EndDate>
+          <SchoolYear>2026</SchoolYear>
+        </MealStatus>
+      </HistoricalMealStatus>
+      <LastBreakfastDate>2026-08-19</LastBreakfastDate>
+      <LastLunchDate>2026-08-19</LastLunchDate>
+      <Amounts>
+        <Amount Type="BreakfastCredit" TypeCodeset="https://example.org/codesets/student-meal-amount-types" Credits="12" Currency="USD" CurrencyCodeset="ISO4217">12.00</Amount>
+        <Amount Type="LunchCredit" TypeCodeset="https://example.org/codesets/student-meal-amount-types" Credits="15" Currency="USD" CurrencyCodeset="ISO4217">15.00</Amount>
+      </Amounts>
+    </StudentMeal>
+  </xhtml:Example>
+  <xhtml:Example name="StudentMeal - Example 2" xmlns="">
     <StudentMeal RefId="C4E34B359D75101A8C3D00AA001A1792" StudentPersonalRefId="D3E34B359D75101A8C3D00AA001A1652">
       <MealStatus Type="Free"/>
       <HistoricalMealStatus>

@@ -34,4 +34,18 @@
     </Description>
     <Type ref="CommonTypes" name="FederalProgramListType"/>
   </Item>
+  <xhtml:Example xmlns="" name="SEAFederalFund - Example 1">
+    <SEAFederalFund RefId="b1e95e16-8642-4d0a-911f-121334c1cd8d" SEAInfoRefId="955aeac6-7969-416f-9568-1d26e3a665b2">
+      <FederalProgramList>
+        <FederalProgram>
+          <Code>84.010</Code>
+          <FundingAllocation>1842750.00</FundingAllocation>
+        </FederalProgram>
+        <FederalProgram>
+          <Code>84.027</Code>
+          <FundingAllocation>963480.00</FundingAllocation>
+        </FederalProgram>
+      </FederalProgramList>
+    </SEAFederalFund>
+  </xhtml:Example>
 </DataObject>

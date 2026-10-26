@@ -10,7 +10,24 @@
     </Description>
     <Type ref="GradeBookWorkingGroup" complex="extension" name="StudentPeriodAttendance"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="OfficialStudentPeriodAttendance - Example 1">
+    <OfficialStudentPeriodAttendance RefId="4747408c-8da8-4f1d-9768-43f2cd65b28d" StudentPersonalRefId="f7206c40-ae08-403e-a7c0-72e7d3c36fb1" SectionInfoRefId="eaa68f5a-677e-4194-a04a-f181cf7d54a7" SchoolInfoRefId="8d1cacd5-bce6-440e-9d24-09eaef06a4f2" Date="2026-08-19">
+      <TimetablePeriod>3B</TimetablePeriod>
+      <TimeIn>10:02:00</TimeIn>
+      <TimeOut>10:48:00</TimeOut>
+      <AttendanceCode AttendanceCodeInfoRefId="c5023fb2-9a9f-4533-8cdb-279b8fe00a64">T</AttendanceCode>
+      <AuditInfo>
+        <CreationUser Type="Teacher" TypeCodeset="https://example.edu/codesets/user-roles">
+          <UserId>staff.nadiya.ortiz</UserId>
+        </CreationUser>
+        <CreationDateTime>2026-08-19T10:49:12-05:00</CreationDateTime>
+      </AuditInfo>
+      <AttendanceComment>Marisol returned to eighth-grade Earth Science after a scheduled counseling check-in.</AttendanceComment>
+      <InstructionalDeliveryMode Codeset="https://example.edu/codesets/instructional-delivery">InPerson</InstructionalDeliveryMode>
+      <ExpectationsMet>true</ExpectationsMet>
+    </OfficialStudentPeriodAttendance>
+  </xhtml:Example>
+  <xhtml:Example name="OfficialStudentPeriodAttendance - Example 2" xmlns="">
     <OfficialStudentPeriodAttendance RefId="98157AA013BA8C3D00AA012B359D7512" StudentPersonalRefId="A75A00101A8C301D02E3A05B359D0A00" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB" Date="2001-03-05" SectionInfoRefId="D02E3A05B359DA75A00101A8C3010A00">
       <TimetablePeriod>P4</TimetablePeriod>
       <AttendanceCode AttendanceCodeInfoRefId="1A0000359D75101A8C3D00AA00A2E35B">042</AttendanceCode>

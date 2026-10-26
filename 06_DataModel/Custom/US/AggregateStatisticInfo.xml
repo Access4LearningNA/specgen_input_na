@@ -113,7 +113,27 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="AggregateStatisticInfo - Example 1">
+    <AggregateStatisticInfo RefId="09f53f32-f395-4866-976f-ee4f3f4cb134">
+      <StatisticName>Grade 7 Mathematics Proficiency Rate</StatisticName>
+      <CalculationRule Type="PercentageAboveBenchmark" TypeCodeset="https://example.edu/codesets/aggregate-calculation-rules" />
+      <ApprovalDate>2026-08-01</ApprovalDate>
+      <ExpirationDate>2027-07-31</ExpirationDate>
+      <ExclusionRules>
+        <ExclusionRule Type="RecentlyEnrolled" TypeCodeset="https://example.edu/codesets/aggregate-exclusion-rules" />
+        <ExclusionRule Type="InvalidAssessmentRecord" TypeCodeset="https://example.edu/codesets/aggregate-exclusion-rules" />
+      </ExclusionRules>
+      <Source>Northwind Valley Student Information Service</Source>
+      <EffectiveDate>2026-08-15</EffectiveDate>
+      <DiscontinueDate>2027-07-31</DiscontinueDate>
+      <Location Type="School" TypeCodeset="https://example.edu/codesets/location-types">
+        <LocationName>Mariner Ridge Middle School</LocationName>
+        <LocationRefId SIF_RefObject="SchoolInfo">100696cd-b648-4846-a942-31cc8e19fbbb</LocationRefId>
+      </Location>
+      <Measure Codeset="https://example.edu/codesets/statistical-measures">PercentProficient</Measure>
+    </AggregateStatisticInfo>
+  </xhtml:Example>
+  <xhtml:Example name="AggregateStatisticInfo - Example 2" xmlns="">
     <AggregateStatisticInfo RefId="A5DECBD3161B4F5D9F46EBA64C87B002">
       <StatisticName>Read Proficiency L1</StatisticName>
       <CalculationRule Type="Description">Number of students scoring at Reading Proficiency Level 1</CalculationRule>

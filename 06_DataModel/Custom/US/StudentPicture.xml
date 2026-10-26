@@ -70,7 +70,13 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="" name="StudentPicture">
+  <xhtml:Example xmlns="" name="StudentPicture - Example 1">
+    <StudentPicture RefId="3c961ff0-7f7f-473d-a99c-c1e70027cf0d" StudentPersonalRefId="f0c4b7ca-2298-48ed-b691-54ec13cae426" SchoolYear="2027">
+      <PictureSource Type="URL" TypeCodeset="https://example.org/codesets/picture-source-type">https://media.cascadiavalley.example/student-portraits/amaya-valdez-2027.jpg</PictureSource>
+      <OKToPublish Codeset="https://example.org/codesets/publication-permission">DistrictAuthorized</OKToPublish>
+    </StudentPicture>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="StudentPicture - Example 2">
     <StudentPicture RefId="359D75101AD0A9D7A8C3DAD0A85103A2" StudentPersonalRefId="D3E34B359D75101A8C3D00AA001A1652" SchoolYear="1999">
       <PictureSource Type="URL">http://www.schoolsite.com/pictures/1999/1234.jpg</PictureSource>
     </StudentPicture>

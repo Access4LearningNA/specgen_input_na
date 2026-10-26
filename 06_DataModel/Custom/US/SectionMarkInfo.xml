@@ -47,7 +47,17 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="SectionMarkInfo - Example 1">
+    <SectionMarkInfo RefId="4e6dd9db-22b8-4b52-b6b9-e73ae5d5a4c7" SectionInfoRefId="f4f1f53b-dc16-4329-b389-9af1d812565f" SchoolInfoRefId="a50b86aa-b575-4a54-bf9d-07b08e640fdc">
+      <TermMarkLists>
+        <MarkInfoList TermInfoRefId="3841ca27-028c-42d8-accf-35fd40b38208">
+          <MarkInfoRefId>79cb3521-395d-496d-b6ff-f0c6a809486c</MarkInfoRefId>
+          <MarkInfoRefId>6bfa6969-554b-4491-b0d5-5276d6997ab5</MarkInfoRefId>
+        </MarkInfoList>
+      </TermMarkLists>
+    </SectionMarkInfo>
+  </xhtml:Example>
+  <xhtml:Example name="SectionMarkInfo - Example 2" xmlns="">
     <SectionMarkInfo RefId="359D75101AD0A9D7A8C3DAD0A85103A2" SectionInfoRefId="11737E214A7C46BDBA4301CADCA75C87" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB">
       <TermMarkLists>
         <MarkInfoList TermInfoRefId="BDBA4301CA1A7C461737DCA75C87E214">

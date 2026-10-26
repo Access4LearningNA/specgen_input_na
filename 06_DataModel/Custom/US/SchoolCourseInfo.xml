@@ -167,7 +167,52 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="SchoolCourseInfo - Example 1">
+    <SchoolCourseInfo RefId="91d7be6d-77bf-43ed-beda-bd80bb7fc0ce" SchoolInfoRefId="fe94fb40-5bb0-4181-a222-d57abde7f895" SchoolYear="2026">
+      <CourseCode>MAT-ALG2-10</CourseCode>
+      <StateCourseCode>02056</StateCourseCode>
+      <DistrictCourseCode>NVUSD-MTH-ALG2</DistrictCourseCode>
+      <SubjectAreaList>
+        <SubjectArea>
+          <Code Codeset="https://nces.ed.gov/sced">02</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">MAT</OtherCode>
+            <OtherCode Codeset="Local">Mathematics</OtherCode>
+          </OtherCodeList>
+        </SubjectArea>
+        <SubjectArea>
+          <Code Codeset="https://nces.ed.gov/sced">21</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">STEM</OtherCode>
+            <OtherCode Codeset="Text">Quantitative Reasoning</OtherCode>
+          </OtherCodeList>
+        </SubjectArea>
+      </SubjectAreaList>
+      <CourseTitle>Algebra II with Mathematical Modeling</CourseTitle>
+      <Description>A tenth-grade mathematics course emphasizing functions, equations, logarithms, probability, statistics, and mathematical modeling through community and environmental data sets.</Description>
+      <InstructionalLevel>
+        <Code Codeset="https://ceds.ed.gov/element/000246">10</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">Secondary</OtherCode>
+          <OtherCode Codeset="Local">Grade10CollegePreparatory</OtherCode>
+        </OtherCodeList>
+      </InstructionalLevel>
+      <CourseCredits Type="CarnegieUnit" TypeCodeset="https://example.edu/codesets/credit-types">1.0</CourseCredits>
+      <CoreAcademicCourse Codeset="https://example.edu/codesets/core-academic">Yes</CoreAcademicCourse>
+      <GraduationRequirement Codeset="https://example.edu/codesets/graduation-requirements">Mathematics</GraduationRequirement>
+      <Department>Mathematics Department</Department>
+      <SCEDCode>
+        <CourseDescription Codeset="https://nces.ed.gov/sced">02056</CourseDescription>
+        <CourseLevel Codeset="https://nces.ed.gov/sced">H</CourseLevel>
+        <AvailableCredit>1.0</AvailableCredit>
+        <SequenceNumber>2</SequenceNumber>
+        <SequenceLimit>2</SequenceLimit>
+      </SCEDCode>
+      <DualCredit Codeset="https://example.edu/codesets/dual-credit">No</DualCredit>
+      <CTEConcentrator Codeset="https://example.edu/codesets/cte-concentrator">No</CTEConcentrator>
+    </SchoolCourseInfo>
+  </xhtml:Example>
+  <xhtml:Example name="SchoolCourseInfo - Example 2" xmlns="">
     <SchoolCourseInfo RefId="9D75101A8C3D00AA001A0000A2E35B35" SchoolInfoRefId="101A8C3D00AA001A0000A2E35B359D75" SchoolYear="2006">
       <CourseCode>CS101</CourseCode>
       <StateCourseCode>08-001</StateCourseCode>

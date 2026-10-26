@@ -41,7 +41,16 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="BusStopInfo - Example 1">
+    <BusStopInfo RefId="39150bfe-f63b-4302-96cf-bf50d311d87d">
+      <Description>Northbound student pickup at the northwest corner of Harbor Avenue and Juniper Street, serving Mariner Elementary School.</Description>
+      <GridLocation>
+        <Latitude>47.610184</Latitude>
+        <Longitude>-122.338921</Longitude>
+      </GridLocation>
+    </BusStopInfo>
+  </xhtml:Example>
+  <xhtml:Example name="BusStopInfo - Example 2" xmlns="">
     <BusStopInfo RefId="D3E34B359D75101A8C3D00AA001A1652">
       <Description>Elm St @ Pine Ave</Description>
       <GridLocation>

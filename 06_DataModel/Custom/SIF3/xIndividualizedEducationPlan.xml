@@ -38,4 +38,574 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="iepPlanType"/>
   </Item>
+  <xhtml:Example xmlns="" name="xIndividualizedEducationPlan - Example 1">
+    <xIndividualizedEducationPlan refId="ccb86db2-1db3-4db0-a7ab-fa40db4eca96">
+      <iepAdministrativeData>
+        <studentRefId>cea6ef68-21f4-4131-bea1-667032ff5ea7</studentRefId>
+        <reevaluationDueDate>2028-05-18</reevaluationDueDate>
+        <costSharing>
+          <status>true</status>
+          <agency>Harbor County Department of Developmental Services</agency>
+        </costSharing>
+        <transferPermissionList>
+          <transmitPermission>
+            <authorizingOfficial>
+              <identity>Priya Nanduri</identity>
+              <qualification>Parent and legal guardian</qualification>
+              <date>2025-08-21</date>
+              <contactRefId>07903dbc-2653-48cc-8b89-85c844fed78c</contactRefId>
+              <staffRefId>dad4e9a9-d031-443a-96c9-3a2ca1996e96</staffRefId>
+              <parentGuardianRefId>7bbc1f96-f823-45b4-b215-f9925e2e00ea</parentGuardianRefId>
+              <studentRefId>48e4a65e-0760-4d93-8c75-31636e683479</studentRefId>
+              <intrinsicRole>parent</intrinsicRole>
+            </authorizingOfficial>
+            <authorizationDate>2025-08-21</authorizationDate>
+            <justification>
+              <authorizingParent>
+                <identity>Priya Nanduri</identity>
+                <qualification>Parent and legal guardian</qualification>
+                <date>2025-08-21</date>
+                <contactRefId>248f9450-f07d-432d-bf25-de95afdd9876</contactRefId>
+                <staffRefId>fc830ba1-0727-45f6-a929-13fc817ea0f4</staffRefId>
+                <parentGuardianRefId>8f461df1-af4e-42a1-9386-f5bc9b71d7a1</parentGuardianRefId>
+                <studentRefId>a896f9ec-e978-4fe0-8355-a79aa1fe992b</studentRefId>
+                <intrinsicRole>parent</intrinsicRole>
+              </authorizingParent>
+              <otherJustification>Permission supports continuity of special education services during an anticipated district transition.</otherJustification>
+            </justification>
+            <destination>
+              <lea>39429894-545d-4c14-b015-27f80aa36fae</lea>
+              <serviceProvider>
+                <contactRefId>9db03a56-cb92-4c22-8474-0486c9d5bad0</contactRefId>
+                <organizationRefId>b2170f31-2809-47a6-9d3f-c01feb4b2674</organizationRefId>
+                <staffRefId>e3647ad1-c9d8-4be6-be69-8000ccd02650</staffRefId>
+                <role>SPEECHPATH</role>
+              </serviceProvider>
+              <other>
+                <contactRefId>69c101d3-a71d-4249-86bd-011e2914b64d</contactRefId>
+                <organizationRefId>524bb456-9625-40da-b704-4de75c37abcc</organizationRefId>
+                <explanation>Regional assistive technology cooperative providing consultation records.</explanation>
+              </other>
+            </destination>
+            <purpose>
+              <standardPurpose>transfer</standardPurpose>
+              <otherPurpose>Coordinate speech-language and reading intervention records with the receiving educational team.</otherPurpose>
+            </purpose>
+          </transmitPermission>
+        </transferPermissionList>
+      </iepAdministrativeData>
+      <iepEligibility>
+        <background>
+          <referral>
+            <explanation>Teachers and family requested a multidisciplinary evaluation after persistent difficulty with decoding multisyllabic words and organizing written responses despite targeted intervention.</explanation>
+            <referrer>
+              <identity>
+                <identity>Marisol Quillan</identity>
+                <qualification>Grade 5 classroom teacher</qualification>
+                <date>2025-01-17</date>
+                <contactRefId>1864dd3e-962b-427f-b920-2520452cfd05</contactRefId>
+                <staffRefId>f332b007-9d8f-4c02-9684-bb57b9fbe627</staffRefId>
+                <parentGuardianRefId>ca7da02f-5a61-4cb9-992a-3c69e2afc045</parentGuardianRefId>
+                <studentRefId>e7235e3c-c39a-4094-ba7f-8722055e66d4</studentRefId>
+                <intrinsicRole>teacher</intrinsicRole>
+              </identity>
+              <date>2025-01-17</date>
+            </referrer>
+          </referral>
+          <history>Leena Nanduri attended Harbor Lantern Elementary School since kindergarten. She received small-group reading intervention during grades three through five and demonstrates strong oral vocabulary, curiosity, and persistence.</history>
+          <currentPlacement>Grade 5 general education classroom at Harbor Lantern Elementary School with daily reading intervention and consultative speech-language support.</currentPlacement>
+          <parentObservations>Priya Nanduri reports that Leena enjoys science podcasts and drawing but becomes discouraged when reading unfamiliar longer words and when writing extended responses at home.</parentObservations>
+          <consentToEvaluation>
+            <accepted>Yes</accepted>
+            <identity>
+              <identity>Priya Nanduri</identity>
+              <qualification>Parent and legal guardian</qualification>
+              <date>2025-01-24</date>
+              <contactRefId>7809d92e-937b-4a10-a095-0a66448ba845</contactRefId>
+              <staffRefId>e802b37c-179a-41c6-9c74-234d998cd62d</staffRefId>
+              <parentGuardianRefId>2a77ae21-2d23-4572-a815-37a007f3d9fc</parentGuardianRefId>
+              <studentRefId>89c10cde-bf24-4359-9d69-c4f0719b801a</studentRefId>
+              <intrinsicRole>parent</intrinsicRole>
+            </identity>
+          </consentToEvaluation>
+        </background>
+        <evaluationResultList>
+          <evaluationResult>
+            <procedureDescription>Academic achievement evaluation incorporating curriculum-based measures, structured literacy probes, writing samples, classroom observation, and review of intervention progress data.</procedureDescription>
+            <type>Academic Achievement</type>
+            <explanation>Results showed a significant and persistent weakness in basic reading skills and written expression relative to grade-level expectations.</explanation>
+            <date>2025-04-29</date>
+            <identity>
+              <contactRefId>4f741380-8a8e-4c3f-b5c8-dcbe2f1c6702</contactRefId>
+              <organizationRefId>1e01ff49-33b5-477e-993c-f5e1c558e860</organizationRefId>
+              <staffRefId>89497c7a-f1bc-4dfc-a505-61c7d723ca58</staffRefId>
+              <role>PSYCH</role>
+            </identity>
+          </evaluationResult>
+        </evaluationResultList>
+        <ideaDisability>
+          <disabilityCodeList>SLD</disabilityCodeList>
+          <disabilityCodeList>SLI</disabilityCodeList>
+          <explanation>Specific learning disability is identified in basic reading skills and written expression; speech-language impairment affects language formulation for complex oral and written tasks.</explanation>
+          <analysis>
+            <adverseEffects>Difficulty decoding multisyllabic words, spelling, and organizing written responses limits independent access to grade-level English language arts and social studies assignments.</adverseEffects>
+            <educationNeeds>Leena requires explicit structured literacy instruction, direct instruction in written-expression planning, and supported opportunities to apply skills in her general education classes.</educationNeeds>
+            <accommodation>Leena benefits from extended time, text-to-speech for lengthy grade-level passages when decoding is not being assessed, and graphic organizers for written work.</accommodation>
+            <otherInformation>Oral language, science reasoning, visual creativity, and classroom participation are relative strengths that should be used to support instruction.</otherInformation>
+          </analysis>
+          <SpecialDiagnosisJustifications>
+            <specificLearningDisability>
+              <primaryCauseExclusions>
+                <determinantFactors>
+                  <insufficientMath>No evidence; Leena receives consistent grade-level mathematics instruction and performs near expectations in computation.</insufficientMath>
+                  <insufficientReading>No evidence; Leena received documented evidence-based reading instruction and intervention with inadequate progress in foundational reading skills.</insufficientReading>
+                  <insufficientEnglish>No evidence; English is Leena's primary language of instruction and assessment.</insufficientEnglish>
+                  <visualHearingOrMotorDisability>No visual, hearing, or motor disability explains the identified academic pattern.</visualHearingOrMotorDisability>
+                  <intellectualDisability>No evidence; cognitive and adaptive functioning information does not indicate intellectual disability.</intellectualDisability>
+                  <emotionalDisability>No emotional disability explains the persistent and skill-specific reading and writing pattern.</emotionalDisability>
+                  <culturalFactors>No cultural factors were identified as the primary cause of the academic difficulties.</culturalFactors>
+                  <environmentalOrEconomicDisadvantage>Economic circumstances do not account for the documented response-to-intervention pattern.</environmentalOrEconomicDisadvantage>
+                  <limitedEnglishProficiency>Limited English proficiency is not a factor in this determination.</limitedEnglishProficiency>
+                </determinantFactors>
+                <medicalExplanation>No medical condition is considered the primary explanation for the specific learning disability determination.</medicalExplanation>
+                <otherFactorsExplanation>Multiple data sources indicate that the reading and writing needs persist despite appropriate instruction and intervention.</otherFactorsExplanation>
+              </primaryCauseExclusions>
+              <lackOfAdequateAchievementExplanation>Leena performs below grade-level expectations in word reading, decoding, spelling, reading fluency, and written expression, particularly when tasks require independent processing of multisyllabic words.</lackOfAdequateAchievementExplanation>
+              <learningSettingObservations>During a grade-level social studies reading task, Leena contributed accurate oral ideas after listening to text but required prompts and a word bank to read and summarize independently.</learningSettingObservations>
+              <decisions>
+                <severeDiscrepancyFound>true</severeDiscrepancyFound>
+                <InsufficientResponseToInterventionFound>true</InsufficientResponseToInterventionFound>
+                <eligibleForSpecificLearningDisabilityFinding>true</eligibleForSpecificLearningDisabilityFinding>
+              </decisions>
+            </specificLearningDisability>
+            <TeamOverride>Eligibility team determination was based on converging academic, intervention, classroom, parent, and speech-language data.</TeamOverride>
+          </SpecialDiagnosisJustifications>
+          <decisions>
+            <specificDisabilityIdentified>true</specificDisabilityIdentified>
+            <adverseEffectIdentified>Yes; the identified disabilities adversely affect Leena's progress in grade-level reading and written language tasks.</adverseEffectIdentified>
+            <eligible>Yes</eligible>
+            <identity>
+              <identity>Dr. Oren Bellwether</identity>
+              <qualification>Licensed school psychologist and eligibility team chair</qualification>
+              <date>2025-05-16</date>
+              <contactRefId>1e85c0d5-d193-4a0e-b87b-876ea1a54600</contactRefId>
+              <staffRefId>d9686feb-5877-452a-839c-3b26dbf09ebd</staffRefId>
+              <parentGuardianRefId>4a4e5822-9de8-4336-bd2a-01183443aed1</parentGuardianRefId>
+              <studentRefId>fa69ffc8-ab57-4681-8f98-52a4fc8ab77e</studentRefId>
+              <intrinsicRole>school psychologist</intrinsicRole>
+            </identity>
+          </decisions>
+        </ideaDisability>
+        <eligibilityParticipantReportList>
+          <participantReport>
+            <authorization>
+              <identity>Dr. Oren Bellwether</identity>
+              <qualification>Licensed school psychologist</qualification>
+              <date>2025-05-16</date>
+              <contactRefId>575ae524-191a-4745-8d70-814fabca82ca</contactRefId>
+              <staffRefId>ccfb8f75-8ca0-48dc-83a6-63bcceee1097</staffRefId>
+              <parentGuardianRefId>a76d8f81-14d8-464d-9cef-64a4567efad7</parentGuardianRefId>
+              <studentRefId>b01cdda8-0bb6-48af-aa89-1c839b581368</studentRefId>
+              <intrinsicRole>school psychologist</intrinsicRole>
+            </authorization>
+            <role>PSYCH</role>
+            <role>SPEECHPATH</role>
+            <explanation>Multidisciplinary review of academic, language, intervention, observation, and family data.</explanation>
+            <procedures>Reviewed evaluation results, conducted classroom observation, interviewed Leena and her parent, and participated in eligibility conference deliberations.</procedures>
+            <observations>Leena engaged well in discussion and demonstrated stronger comprehension when text was read aloud or supported with visuals.</observations>
+            <conclusions>Data support eligibility under specific learning disability and speech-language impairment, with need for specially designed instruction and related services.</conclusions>
+          </participantReport>
+        </eligibilityParticipantReportList>
+        <lifecyclePurpose>Initial</lifecyclePurpose>
+        <determination>Leena meets eligibility criteria because her specific learning disability and speech-language impairment adversely affect educational performance and require specially designed instruction.</determination>
+        <identity>
+          <identity>Dr. Oren Bellwether</identity>
+          <qualification>Licensed school psychologist and eligibility team chair</qualification>
+          <date>2025-05-16</date>
+          <contactRefId>6a71f1ef-1779-49b9-8476-c6743ff1ae5f</contactRefId>
+          <staffRefId>07b75256-c2b2-4bf7-ba4a-28d1112b819e</staffRefId>
+          <parentGuardianRefId>a204fdeb-bb30-44a6-b212-196aa2b3ebf2</parentGuardianRefId>
+          <studentRefId>85f0fcf3-0871-430c-b766-180540cf96d3</studentRefId>
+          <intrinsicRole>school psychologist</intrinsicRole>
+        </identity>
+      </iepEligibility>
+      <iepPlan>
+        <effectivePeriod>
+          <start>2025-08-25</start>
+          <end>2026-08-24</end>
+          <evaluationDate>2025-05-16</evaluationDate>
+        </effectivePeriod>
+        <enrollmentGradeLevel>
+          <standardGradeLevel>05</standardGradeLevel>
+          <explanation>Leena begins the IEP effective period as a fifth-grade student.</explanation>
+        </enrollmentGradeLevel>
+        <presentLevelPerformance>
+          <personal>
+            <concerns>
+              <reason>Persistent reading and written-expression needs affect independent completion of grade-level work.</reason>
+              <parentConcernDescription>Priya Nanduri wants Leena to gain confidence reading longer texts and writing complete, organized responses without prolonged frustration.</parentConcernDescription>
+              <studentConcernDescription>Leena wants to read chapter books without getting stuck on long words and finish writing assignments during class.</studentConcernDescription>
+              <background>Leena responds positively to predictable routines, visual models, and opportunities to explain ideas aloud before writing.</background>
+            </concerns>
+            <strengthsDescription>Leena is imaginative, kind, highly engaged in science, and demonstrates strong oral vocabulary and comprehension when material is presented orally or with visual support.</strengthsDescription>
+            <motivation>Leena is motivated by marine biology, illustration, collaborative projects, and the goal of creating a graphic science guide.</motivation>
+            <evaluation>
+              <needsList>
+                <need>Explicit instruction and guided practice in decoding multisyllabic words, spelling patterns, sentence construction, paragraph organization, and self-monitoring strategies.</need>
+              </needsList>
+              <performance>
+                <generalEducationDescription>Leena participates successfully in general education discussions but needs accommodations and specially designed instruction to independently access complex print and produce grade-level written responses.</generalEducationDescription>
+                <testResultList>
+                  <diagnosticStatement>Achievement results indicate significant weakness in foundational reading and written expression, with stronger listening comprehension and verbal reasoning.</diagnosticStatement>
+                </testResultList>
+              </performance>
+              <personalGoalsList>
+                <personalGoal>
+                  <description>Build confidence and independence when reading informational text and explaining ideas in writing.</description>
+                  <successCriteria>Leena will select and apply learned reading and writing strategies with decreasing adult prompts across classroom tasks.</successCriteria>
+                </personalGoal>
+              </personalGoalsList>
+            </evaluation>
+            <intention>
+              <overview>Leena wants to become an independent learner who can share her science interests through clear writing and presentations.</overview>
+              <desiredOutcomeList>
+                <desiredOutcome>
+                  <category>Post-secondary</category>
+                  <title>Science communication pathway</title>
+                  <description>Leena will develop the literacy and self-advocacy skills needed to pursue future coursework and projects in environmental science or illustration.</description>
+                  <timeframe>By the end of high school.</timeframe>
+                </desiredOutcome>
+              </desiredOutcomeList>
+            </intention>
+          </personal>
+          <academic>
+            <deficitList>
+              <deficit>
+                <academicSubject>01</academicSubject>
+                <academicSubject>02</academicSubject>
+                <explanation>Specific learning disability affects efficient decoding, spelling, reading fluency, and organization of written expression in English language arts.</explanation>
+                <consequences>Leena requires additional time and structured supports to read grade-level passages and develop complete written assignments independently.</consequences>
+                <accommodation>
+                  <type>03513</type>
+                  <description>Provide extended time and a graphic organizer for lengthy reading and written-expression tasks.</description>
+                  <rationale>These supports allow Leena to demonstrate comprehension and content knowledge while receiving instruction in the underlying literacy skills.</rationale>
+                </accommodation>
+              </deficit>
+            </deficitList>
+            <summary>
+              <description>Leena's disability affects academic achievement primarily in foundational reading and written language; comprehension and content learning improve substantially with accessible text and explicit organizational supports.</description>
+              <accommodationList>
+                <accommodation>
+                  <category>Post-secondary</category>
+                  <explanation>Use accessible digital text, planning templates, and extended time for reading-intensive assignments and assessments.</explanation>
+                </accommodation>
+              </accommodationList>
+            </summary>
+          </academic>
+          <functional>
+            <disabilityList>
+              <disability>
+                <disabilityCodeList>SLD</disabilityCodeList>
+                <disabilityCodeList>SLI</disabilityCodeList>
+                <explanation>Reading and language formulation needs can affect task initiation, organization, and self-advocacy during independent academic work.</explanation>
+                <consequences>Leena may avoid beginning lengthy literacy tasks, require reassurance, and need prompts to use available strategies.</consequences>
+                <accommodation>
+                  <type>03534</type>
+                  <description>Provide a visual task checklist and brief scheduled check-ins for multistep assignments.</description>
+                  <rationale>Visual sequencing and predictable check-ins support independent task initiation and strategy use without reducing academic expectations.</rationale>
+                </accommodation>
+              </disability>
+            </disabilityList>
+            <summary>
+              <description>Functionally, Leena benefits from structured planning tools, explicit expectations, and opportunities to request clarification before frustration interferes with task completion.</description>
+              <accommodationList>
+                <accommodation>
+                  <category>IndependentLiving</category>
+                  <explanation>Teach and reinforce use of a planner, assignment checklist, and self-advocacy sentence starters.</explanation>
+                </accommodation>
+              </accommodationList>
+            </summary>
+          </functional>
+          <consequenceOfDisability>
+            <curriculum>General education grade 5 curriculum with specially designed reading and written-expression instruction, accessible materials, and structured literacy supports.</curriculum>
+            <specialCategoryList>
+              <specialCategory>
+                <programType>05978</programType>
+                <explanation>Special education resource support is required to provide explicit foundational literacy instruction and writing strategy instruction.</explanation>
+              </specialCategory>
+            </specialCategoryList>
+          </consequenceOfDisability>
+        </presentLevelPerformance>
+        <annualGoalsList>
+          <annualGoal>
+            <currentStatus>Leena reads grade-level text with adequate listening comprehension but currently decodes multisyllabic words and completes independent written summaries below fifth-grade expectations.</currentStatus>
+            <goalType>
+              <category>Academic</category>
+              <additionalInformation>This annual goal addresses foundational reading and written-expression skills needed for access to the fifth-grade curriculum.</additionalInformation>
+              <standardsReference>
+                <url>https://example.org/standards/ela/grade-5/RF.5.3</url>
+                <identifier>RF.5.3</identifier>
+              </standardsReference>
+            </goalType>
+            <measurableObjectiveList>
+              <measurableObjective>
+                <identifier>IEP-LEENA-READWRITE-01</identifier>
+                <facilitatorList>
+                  <facilitator>
+                    <identity>
+                      <contactRefId>64b74dc4-25bd-457b-af1b-89f3877fa728</contactRefId>
+                      <staffRefId>6dc86883-4110-43a0-9262-127a192e52e9</staffRefId>
+                      <parentGuardianRefId>72997156-4f8f-4d94-b99a-08a1e2ec3ec8</parentGuardianRefId>
+                    </identity>
+                    <contribution>Provide structured literacy instruction, collect progress-monitoring data, and coordinate strategy use with the classroom teacher and family.</contribution>
+                  </facilitator>
+                </facilitatorList>
+                <measurement>
+                  <criterion>
+                    <description>Given a fifth-grade instructional passage and a planning organizer, Leena will accurately decode targeted multisyllabic words and produce a structured written response containing a topic sentence, supporting details, and concluding statement.</description>
+                    <metric>
+                      <accuracyPercentEvaluation>80</accuracyPercentEvaluation>
+                      <trialCountEvaluation>
+                        <successCount>4</successCount>
+                        <attemptCount>5</attemptCount>
+                      </trialCountEvaluation>
+                      <otherEvaluation>Performance will be measured through curriculum-based reading probes, writing rubrics, and work samples collected at least monthly.</otherEvaluation>
+                    </metric>
+                  </criterion>
+                </measurement>
+                <parentAcceptance>
+                  <accepted>Yes</accepted>
+                  <explanation>Parent agrees that the objective reflects Leena's priority needs in reading confidence and written expression.</explanation>
+                </parentAcceptance>
+              </measurableObjective>
+            </measurableObjectiveList>
+            <independentActionsList>
+              <independentAction>Use a personal strategy card to mark unfamiliar word parts, reread directions, and check that each writing response includes a beginning, middle, and ending.</independentAction>
+            </independentActionsList>
+            <servicesList>
+              <service>
+                <type>Academic Achievement</type>
+                <inclusiveSettingIndicator>Yes</inclusiveSettingIndicator>
+                <serviceProvider>
+                  <contactRefId>c86ba5d7-1720-477a-a217-6a8155862057</contactRefId>
+                  <organizationRefId>25bad10b-9920-4f1c-bd1f-1bd2e779b8d4</organizationRefId>
+                  <staffRefId>d67897c7-140b-4db5-bdfc-c53ea0917d65</staffRefId>
+                  <role>SPEECHPATH</role>
+                </serviceProvider>
+                <frequency>
+                  <cycle>
+                    <count>5</count>
+                    <period>week</period>
+                  </cycle>
+                  <duration>
+                    <directMinutes>45</directMinutes>
+                    <indirectMinutes>10</indirectMinutes>
+                  </duration>
+                </frequency>
+                <startDate>2025-08-25</startDate>
+                <endDate>2026-08-24</endDate>
+                <nonParticipationReason>Not applicable; service is accepted and scheduled.</nonParticipationReason>
+                <extendsSchoolYear>No</extendsSchoolYear>
+              </service>
+            </servicesList>
+            <coursesList>
+              <course>
+                <name>Grade 5 English Language Arts</name>
+                <timing>2025-2026 school year</timing>
+                <courseContentDescription>Reading literature and informational text, vocabulary, writing process, speaking, listening, and language conventions.</courseContentDescription>
+                <courseUri>https://example.org/courses/grade-5-english-language-arts</courseUri>
+              </course>
+            </coursesList>
+            <progressReportList>
+              <progressReport>
+                <description>Leena increased accuracy on targeted multisyllabic word reading and is using her writing organizer with fewer prompts. Progress is sufficient to continue toward the annual goal.</description>
+                <measurement>
+                  <explanation>Data reflect the average of three curriculum-based probes and teacher-scored writing samples collected during the first reporting period.</explanation>
+                  <dataNames>
+                    <categoryName>Progress monitoring probe number</categoryName>
+                    <valueName>Percent accurate</valueName>
+                  </dataNames>
+                  <dataValuesList>
+                    <dataValue>
+                      <category>1</category>
+                      <value>62</value>
+                    </dataValue>
+                  </dataValuesList>
+                </measurement>
+                <status>SatisfactoryProgress</status>
+                <explanation>Leena is making expected progress with continued explicit instruction and accommodations.</explanation>
+                <date>2025-11-07</date>
+                <identity>
+                  <identity>Marisol Quillan</identity>
+                  <qualification>Grade 5 classroom teacher</qualification>
+                  <date>2025-11-07</date>
+                  <contactRefId>9236a120-a620-4f71-9f46-4bdbd0a2cd30</contactRefId>
+                  <staffRefId>dd3901e2-a4ab-474c-b207-2b080c82987e</staffRefId>
+                  <parentGuardianRefId>1f033beb-bea0-4d65-9293-0e1ebee32b36</parentGuardianRefId>
+                  <studentRefId>dca16f53-89c7-457b-8848-cd6f8fcf708c</studentRefId>
+                  <intrinsicRole>teacher</intrinsicRole>
+                </identity>
+              </progressReport>
+            </progressReportList>
+            <parentAcceptance>
+              <accepted>Yes</accepted>
+              <explanation>Parent accepts the annual goal and related instructional supports.</explanation>
+            </parentAcceptance>
+          </annualGoal>
+        </annualGoalsList>
+        <accommodationsList>
+          <accommodation>
+            <accommodation>
+              <type>03513</type>
+              <description>Extended time up to time-and-a-half for reading-intensive classroom assignments and assessments when speed is not the construct being measured.</description>
+              <rationale>Additional processing time enables Leena to apply decoding and planning strategies and demonstrate content knowledge.</rationale>
+            </accommodation>
+            <applicabilityList>
+              <applicability>Apply during grade-level reading, written-expression tasks, classroom assessments, and district assessments as permitted.</applicability>
+            </applicabilityList>
+          </accommodation>
+        </accommodationsList>
+        <standardizedAssessmentResultList>
+          <standardizedAssessmentResult>
+            <standardsReference>
+              <assessmentTitle>Harbor County Grade 5 Reading Benchmark</assessmentTitle>
+              <subject>Reading</subject>
+              <url>https://example.org/assessments/harbor-county-grade-5-reading-benchmark</url>
+            </standardsReference>
+            <accommodationList>
+              <accommodation>
+                <accommodation>
+                  <type>03513</type>
+                  <description>Extended time and a small-group testing setting for reading benchmark administration.</description>
+                  <rationale>Reduced distraction and additional time support sustained attention and strategy use while preserving the assessment's reading construct.</rationale>
+                </accommodation>
+                <location>Harbor Lantern Elementary School assessment room B</location>
+                <category>Post-secondary</category>
+                <explanation>Accommodation supports access to the assessment environment without changing score interpretation.</explanation>
+                <achievementStandard>
+                  <type>Academic Achievement</type>
+                  <name>Grade-level achievement standard with approved accommodations</name>
+                </achievementStandard>
+              </accommodation>
+            </accommodationList>
+          </standardizedAssessmentResult>
+        </standardizedAssessmentResultList>
+        <placement>
+          <environmentForSchoolAge>RC80</environmentForSchoolAge>
+          <environmentForEarlyChildhood>SC</environmentForEarlyChildhood>
+          <placementRationale>Leena will receive the majority of instruction with nondisabled peers in the general education setting, supplemented by targeted special education and related services necessary to address her identified literacy and language needs.</placementRationale>
+          <scheduleModification>
+            <schoolDay>
+              <category>IndependentLiving</category>
+              <specificModification>Provide a daily scheduled resource period for structured literacy instruction and a brief end-of-day planner check.</specificModification>
+              <rationale>Consistent intervention time and organizational support are needed to develop skills and maintain access to the general education schedule.</rationale>
+            </schoolDay>
+            <schoolYear>
+              <category>Instructional calendar support</category>
+              <specificModification>Provide optional summer literacy practice materials and a transition meeting before the next school year.</specificModification>
+              <rationale>Continuity of strategy use helps reduce regression and supports a successful transition to grade six.</rationale>
+            </schoolYear>
+          </scheduleModification>
+          <transportation>
+            <outsideSchool>
+              <category>IndependentLiving</category>
+              <explanation>No specialized transportation is required; Leena can use standard district transportation with peers.</explanation>
+            </outsideSchool>
+            <insideSchool>
+              <category>Standard mobility</category>
+              <explanation>No specialized transportation or mobility support is required within the school building.</explanation>
+            </insideSchool>
+          </transportation>
+          <leastRestrictiveEnvironment>
+            <totalMinutesPerWeek>1800</totalMinutesPerWeek>
+            <inclusionMinutesPerWeek>1650</inclusionMinutesPerWeek>
+            <nonInclusionMinutesPerWeek>150</nonInclusionMinutesPerWeek>
+          </leastRestrictiveEnvironment>
+        </placement>
+        <authorization>
+          <authorizingOfficialsList>
+            <authorizingOfficial>
+              <identity>Dr. Oren Bellwether</identity>
+              <qualification>Licensed school psychologist and eligibility team chair</qualification>
+              <date>2025-05-22</date>
+              <contactRefId>dafc7f47-35a5-4ef1-93e2-43c62b3a6c30</contactRefId>
+              <staffRefId>2922d3d9-ec4a-4e26-810a-614164de41b9</staffRefId>
+              <parentGuardianRefId>bc3e07ae-506a-48ce-a9c9-09da0203460a</parentGuardianRefId>
+              <studentRefId>9918c7a1-4dd7-445e-ae23-f11f5589a0d1</studentRefId>
+              <intrinsicRole>school psychologist</intrinsicRole>
+            </authorizingOfficial>
+          </authorizingOfficialsList>
+          <parentGuardianAuthorization>
+            <accepted>Yes</accepted>
+            <rejectedPlanElements>
+              <rejectedDetailList>
+                <description>No plan elements rejected.</description>
+                <explanation>Parent reviewed all proposed services and accommodations and did not reject any portion of the plan.</explanation>
+              </rejectedDetailList>
+              <explanation>Parent supports implementation of the complete IEP.</explanation>
+            </rejectedPlanElements>
+            <authorizingParentGuardian>
+              <identity>Priya Nanduri</identity>
+              <qualification>Parent and legal guardian</qualification>
+              <date>2025-05-22</date>
+              <contactRefId>33f8e26c-46f6-4e7a-90d2-58d69d011433</contactRefId>
+              <staffRefId>f13e1c41-fdc5-487f-8329-e8eed0f18683</staffRefId>
+              <parentGuardianRefId>d97ae0e7-3213-40ac-b290-94eec6325c5f</parentGuardianRefId>
+              <studentRefId>5a446a3a-1844-463f-8c71-d533ac85881b</studentRefId>
+              <intrinsicRole>parent</intrinsicRole>
+            </authorizingParentGuardian>
+            <authorizationDate>2025-05-22</authorizationDate>
+          </parentGuardianAuthorization>
+          <transferOfRightsNotificationDate>2033-02-14</transferOfRightsNotificationDate>
+        </authorization>
+        <amendmentList>
+          <amendment>
+            <changeList>
+              <change>
+                <explanation>Added a visual assignment checklist and scheduled planner check-in to strengthen independent task initiation and organization.</explanation>
+                <reasonForChange>First-quarter progress data and parent feedback indicated that organizational supports were improving timely completion of written assignments.</reasonForChange>
+              </change>
+            </changeList>
+            <explanation>The amendment clarifies implementation of existing accommodations and does not change eligibility, placement, or service frequency.</explanation>
+            <authorization>
+              <authorizingOfficialsList>
+                <authorizingOfficial>
+                  <identity>Marisol Quillan</identity>
+                  <qualification>Grade 5 classroom teacher and IEP team member</qualification>
+                  <date>2025-11-14</date>
+                  <contactRefId>508a8f68-d14b-48a4-a2a6-13549985cf09</contactRefId>
+                  <staffRefId>a1434a9e-8028-4b0d-81b7-271b83f0a410</staffRefId>
+                  <parentGuardianRefId>c5a3c01a-5888-4230-8d7d-c37d661059eb</parentGuardianRefId>
+                  <studentRefId>3797ac8d-edf8-4175-9891-bbc95c89ba1f</studentRefId>
+                  <intrinsicRole>teacher</intrinsicRole>
+                </authorizingOfficial>
+              </authorizingOfficialsList>
+              <parentGuardianAuthorization>
+                <accepted>Yes</accepted>
+                <rejectedPlanElements>
+                  <rejectedDetailList>
+                    <description>No amended plan elements rejected.</description>
+                    <explanation>Parent agrees with the added organizational support.</explanation>
+                  </rejectedDetailList>
+                  <explanation>Parent supports the amendment in full.</explanation>
+                </rejectedPlanElements>
+                <authorizingParentGuardian>
+                  <identity>Priya Nanduri</identity>
+                  <qualification>Parent and legal guardian</qualification>
+                  <date>2025-11-14</date>
+                  <contactRefId>87565b98-1d28-49bd-b5ba-7e1d8a0f5a08</contactRefId>
+                  <staffRefId>6574979e-f73a-4dd2-bfa7-bbad3557da82</staffRefId>
+                  <parentGuardianRefId>aa6f1dcc-b537-422b-bad9-cc034f59cd6f</parentGuardianRefId>
+                  <studentRefId>fbdc7e5f-fdde-42b1-b6b9-205fa8fb821a</studentRefId>
+                  <intrinsicRole>parent</intrinsicRole>
+                </authorizingParentGuardian>
+                <authorizationDate>2025-11-14</authorizationDate>
+              </parentGuardianAuthorization>
+              <transferOfRightsNotificationDate>2033-02-14</transferOfRightsNotificationDate>
+            </authorization>
+          </amendment>
+        </amendmentList>
+      </iepPlan>
+    </xIndividualizedEducationPlan>
+  </xhtml:Example>
 </DataObject>

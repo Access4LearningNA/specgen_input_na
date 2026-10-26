@@ -145,7 +145,7 @@
   <CommonElement name="IncidentLocationType" type="true" dm="true">
     <Item>
       <Element>IncidentLocationType</Element>
-      <Characteristics>M</Characteristics>
+      <Characteristics>O</Characteristics>
       <Description>
         <p>The locally-defined identifier or description of the location where the incident occurred.</p>
       </Description>
@@ -346,8 +346,6 @@
         <p>Information regarding the action(s) taken in response to the incident.</p>
       </Description>
       <Type ref="CommonTypes" name="IncidentActionType"/>
-      <cedsId>000545</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000545</cedsURL>
     </Item>
   </CommonElement>
   <CommonElement name="PromotionInfoType" type="true" dm="true">
@@ -617,6 +615,23 @@
         <p>A unique indicator (usually a URL) that points to the codeset used.</p>
       </Description>
       <Type name="xs:token"/>
+    </Item>
+    <Item>
+      <Element>RelatedToList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>List of secondary behaviors or contributing circumstances in addition to the IncidentCategory that directly impacted this victim. Use this victim-level RelatedToList to indicate secondary behaviors or contributing circumstances that impacted this individual directly.</p>
+      </Description>
+      <Type ref="CommonTypes" name="RelatedToListType"/>
+    </Item>
+    <Item>
+      <Element>ActionList</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>List of actions taken in response to the incident that are directed toward, or taken for the safety or support of, this victim.</p>
+        <p>Note:  There is also a SIF type called ActionList.  It is one of two types of lists.  Do not confuse this element with the SIF type called ActionList.  This problem will be resolved in the next major release.</p>
+      </Description>
+      <Type ref="CommonTypes" name="DisciplineActionListType"/>
     </Item>
   </CommonElement>
   <CommonElement name="IdentityProviderListType" type="true" dm="true">
@@ -1447,7 +1462,7 @@
     </Item>
     <Item>
       <Element>Injury</Element>
-      <Characteristics>M</Characteristics>
+      <Characteristics>O</Characteristics>
       <Description>
         <p>Identifies whether or not this specific offender was physically injured, and if so, identifies whether the injury was major or minor.</p>
       </Description>
@@ -1475,7 +1490,7 @@
       <Element>ActionList</Element>
       <Characteristics>O</Characteristics>
       <Description>
-        <p>List of actions taken.</p>
+        <p>List of actions taken in response to the incident that are directed toward this offender. Record an action at the offender level when the action is directed toward a specific offender.</p>
         <p>Note:  There is also a SIF type called ActionList.  It is one of two types of lists.  Do not confuse this element with the SIF type called ActionList.  This problem will be resolved in the next major release.</p>
       </Description>
       <Type ref="CommonTypes" name="DisciplineActionListType"/>
@@ -1484,9 +1499,7 @@
       <Element>WeaponTypeList</Element>
       <Characteristics>C</Characteristics>
       <Description>
-        <p>List of weapons involved in the incident used by the offender. If the incident involves weapons, the element must have a value.</p>
-        <p>Each weapon used by the offender is identified by a WeaponType entry. When multiple weapons of a single type are used by the offender, each weapon has a separate entry in this list.</p>
-        <p>(Note: All weapons used in the incident are reported in WeaponTypeList entries for the incident, including those weapons related to this offender.)</p>
+        <p>List of weapons involved in the incident used by the offender. If the incident involves weapons and possession or use can be attributed to this offender, associate the weapon with this offender.</p>
       </Description>
       <Type ref="CommonTypes" name="WeaponTypeListType"/>
     </Item>
@@ -1494,7 +1507,7 @@
       <Element>RelatedToList</Element>
       <Characteristics>O</Characteristics>
       <Description>
-        <p>List of categories to which the offender&#8217;s incident is related.</p>
+        <p>List of secondary behaviors or contributing circumstances in addition to the IncidentCategory that are attributed to this offender. Use this offender-level RelatedToList to attribute responsibility for secondary behaviors or contributing circumstances to this individual.</p>
       </Description>
       <Type ref="CommonTypes" name="RelatedToListType"/>
     </Item>
@@ -1585,7 +1598,7 @@
   <CommonElement name="IncidentReporterType" type="true" dm="true">
     <Item>
       <Element>IncidentReporterType</Element>
-      <Characteristics>M</Characteristics>
+      <Characteristics>O</Characteristics>
       <Description>
         <p>Information regarding the individual who reported the incident.</p>
       </Description>
@@ -1692,7 +1705,7 @@
   <CommonElement name="IncidentTimeType" type="true" dm="true">
     <Item>
       <Element>IncidentTimeType</Element>
-      <Characteristics>M</Characteristics>
+      <Characteristics>O</Characteristics>
       <Description>
         <p>The time when the incident occurred.</p>
       </Description>
@@ -1793,7 +1806,7 @@
       <Characteristics>O</Characteristics>
       <Description>
         <p>
-        Local identifier representing the current or most recent homeroom in which the student is or was most recently assigned in the district.  Use the value from <code>RoomInfo/HomeroomNumber</code> if supported.  If not supported, use the value from <code>RoomInfo/RoomNumber</code>.  If neither is supported, use the most appropriate value from the agent's application.
+        Local (non-canonical) identifier representing the current or most recent homeroom in which the student is or was most recently assigned in the district. Use the most appropriate value from the agent's application. In horizontal integrations it’s common to base this string on the teacher name (could match RoomInfo/Description).
 			</p>
       </Description>
       <Type ref="CommonTypes" name="LocalIdType"/>
@@ -1839,8 +1852,8 @@
       <Facets>
         <xs:pattern value="[0-9]{2}|[A-Z]{2}"/>
       </Facets>
-      <cedsId>000052</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000052</cedsURL>
+      <cedsId>000424</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000424</cedsURL>
     </Item>
     <Item>
       <Attribute>Codeset</Attribute>
@@ -1872,8 +1885,8 @@
         <p>Code representing the type of teaching assignment.</p>
       </Description>
       <Type name="xs:token"/>
-      <cedsId>002276</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/002276</cedsURL>      
+      <cedsId>000021</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/00021</cedsURL>      
     </Item>
     <Item>
       <Attribute>Codeset</Attribute>
@@ -2257,14 +2270,14 @@
   <CommonElement name="IncidentCategoryContainerType" type="true" dm="true">
     <Item>
       <Element>IncidentCategoryContainerType</Element>
-      <Characteristics>M</Characteristics>
+      <Characteristics>O</Characteristics>
       <Description>
         <p>The category or description for this incident.</p>
       </Description>
     </Item>
     <Item>
       <Element>Code</Element>
-      <Characteristics>M</Characteristics>
+      <Characteristics>O</Characteristics>
       <Description>
         <p>Identifies the type of incident being reported.</p>
       </Description>

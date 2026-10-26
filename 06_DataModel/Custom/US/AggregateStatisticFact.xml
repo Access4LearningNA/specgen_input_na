@@ -63,7 +63,18 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="AggregateStatisticFact - Example 1">
+    <AggregateStatisticFact RefId="67d165c9-a9de-4b5f-89ee-7d7370d94c3a">
+      <AggregateStatisticInfoRefId>579b735e-42ee-44a5-a223-2a78a85c42e7</AggregateStatisticInfoRefId>
+      <Characteristics>
+        <AggregateCharacteristicInfoRefId>3adf5b64-57c3-40da-8ad6-b7c3073334ed</AggregateCharacteristicInfoRefId>
+        <AggregateCharacteristicInfoRefId>2e21f07a-aa24-4210-ada4-26cf7c14e557</AggregateCharacteristicInfoRefId>
+      </Characteristics>
+      <Excluded Codeset="https://example.org/codesets/aggregate-exclusions">Students enrolled fewer than 30 instructional days</Excluded>
+      <Value>87.5</Value>
+    </AggregateStatisticFact>
+  </xhtml:Example>
+  <xhtml:Example name="AggregateStatisticFact - Example 2" xmlns="">
     <AggregateStatisticFact RefId="3A4E2822C696433B812B49DEAE557E41">
       <AggregateStatisticInfoRefId>91A4209F7F4F4F4B9DC8D21CEFD1DC2F</AggregateStatisticInfoRefId>
       <Characteristics>

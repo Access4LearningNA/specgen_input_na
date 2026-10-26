@@ -93,7 +93,17 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="W4 - Example 1">
+    <W4 RefId="2da684b7-182e-4be4-9f5e-d4d6da9a2db9" EmployeePersonalRefId="cfd6cb1e-e52c-4500-8c2d-34abea849570">
+      <W4Date>2026-01-08</W4Date>
+      <MaritalStatusRate Codeset="https://www.irs.gov/forms-pubs/about-form-w-4">Single</MaritalStatusRate>
+      <FederalAllowancesNumber>0</FederalAllowancesNumber>
+      <StateAllowancesNumber>0</StateAllowancesNumber>
+      <StateProvince Codeset="https://www.iso.org/obp/ui/#iso:code:3166:US">OR</StateProvince>
+      <Exempt>false</Exempt>
+    </W4>
+  </xhtml:Example>
+  <xhtml:Example name="W4 - Example 2" xmlns="">
     <W4 RefId="359D75101AD0A9D7A8C3DAD0A85103A2" EmployeePersonalRefId="DD5906EFD512EFDA253764EDA5897321">
       <W4Date>1998-12-01</W4Date>
       <MaritalStatusRate>Married</MaritalStatusRate>

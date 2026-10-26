@@ -93,7 +93,17 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="EmployeeContract - Example 1">
+    <EmployeeContract RefId="48b1e7da-de3b-4ec0-ab95-c2af464afbde" EmployeePersonalRefId="5933bf1f-6586-4920-9464-022e203fb5af">
+      <BaseSalary Currency="USD" CurrencyCodeset="https://www.iso.org/iso-4217-currency-codes.html">68450.00</BaseSalary>
+      <ContractStartDate>2025-08-18</ContractStartDate>
+      <ContractEndDate>2026-06-12</ContractEndDate>
+      <ContractTerm Codeset="https://example.edu/codesets/contract-terms">2025-2026</ContractTerm>
+      <ContractDays>187.0</ContractDays>
+      <AssignmentDays>187.0</AssignmentDays>
+    </EmployeeContract>
+  </xhtml:Example>
+  <xhtml:Example name="EmployeeContract - Example 2" xmlns="">
     <EmployeeContract RefId="AA1078BA3261545A31905937B265CE01" EmployeePersonalRefId="AB1078BA3261545A31905937B265CE01">
       <BaseSalary Currency="USD">25000</BaseSalary>
       <ContractStartDate>2003-07-01</ContractStartDate>

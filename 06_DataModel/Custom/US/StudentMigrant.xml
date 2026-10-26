@@ -119,4 +119,19 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="StudentMigrantParticipationStatusType"/>
   </Item>
+  <xhtml:Example xmlns="" name="StudentMigrant - Example 1">
+    <StudentMigrant RefId="ea7cdf11-c422-421d-b0e2-c26db54a2299" StudentInfoRefId="007ba4fe-423c-4508-bd5a-9497ee87c123">
+      <ServicesType Codeset="https://ceds.ed.gov/element/000186">MathematicsInstruction</ServicesType>
+      <PrioritizedForServices Codeset="https://example.org/codesets/student-migrant-priority">Yes</PrioritizedForServices>
+      <QualifyingArrivalDate>2024-08-19</QualifyingArrivalDate>
+      <ProgramStartDate>2024-08-26</ProgramStartDate>
+      <ProgramExitDate>2025-06-06</ProgramExitDate>
+      <ContinuationOfServicesReason Codeset="https://example.org/codesets/student-migrant-continuation-reason">SecondarySchoolCreditAccrual</ContinuationOfServicesReason>
+      <ContinuationOfServicesStatus Codeset="https://example.org/codesets/student-migrant-continuation-status">Eligible</ContinuationOfServicesStatus>
+      <LastQualifyingMoveDate>2024-08-17</LastQualifyingMoveDate>
+      <ExpirationDate>2027-08-19</ExpirationDate>
+      <EnrollmentType Codeset="https://example.org/codesets/student-migrant-enrollment-type">RegularSchoolYear</EnrollmentType>
+      <ParticipationStatus Codeset="https://example.org/codesets/student-migrant-participation-status">Active</ParticipationStatus>
+    </StudentMigrant>
+  </xhtml:Example>
 </DataObject>

@@ -72,7 +72,19 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="ProfessionalDevelopmentProgram - Example 1">
+    <ProfessionalDevelopmentProgram RefId="9be8d463-1790-43b6-9041-6b32ef0ddda1">
+      <LearningStandardItems>
+        <LearningStandardItemRefId>97dfde8d-573f-4be4-af98-9b4d5fec0853</LearningStandardItemRefId>
+        <LearningStandardItemRefId>09c56a29-f552-49f8-a10e-19f1b847defa</LearningStandardItemRefId>
+      </LearningStandardItems>
+      <LocalProgramId>PD-2026-STEM-047</LocalProgramId>
+      <ProgramName>Inquiry-Centered Earth Systems Institute</ProgramName>
+      <ProgramType>Professional Learning Plan</ProgramType>
+      <FundingSource>Lakeview Unified School District Science Innovation Grant</FundingSource>
+    </ProfessionalDevelopmentProgram>
+  </xhtml:Example>
+  <xhtml:Example name="ProfessionalDevelopmentProgram - Example 2" xmlns="">
     <ProfessionalDevelopmentProgram RefId="E6F37470472D49EE86C1FA8EE47D8244">
       <LearningStandardItems>
         <LearningStandardItemRefId>241A53AFBA3176EF062367CFCC2900BC</LearningStandardItemRefId>

@@ -117,7 +117,30 @@
     <cedsId>001518</cedsId>
     <cedsURL>https://ceds.ed.gov/element/001518</cedsURL>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="xCourse - Example 1">
+    <xCourse refId="ba042f00-3daf-4257-89e6-ce4c73bf1dad">
+      <schoolRefId>0ddfd9cb-662d-445f-84c3-41cf26f1703b</schoolRefId>
+      <schoolCourseId>MHS-MATH-ALG1</schoolCourseId>
+      <leaCourseId>RUSD-MAT-102</leaCourseId>
+      <otherIds>
+        <otherId>
+          <type>SCED</type>
+          <id>02052</id>
+        </otherId>
+      </otherIds>
+      <courseTitle>Algebra I</courseTitle>
+      <description>Foundational algebra course covering linear relationships, equations, inequalities, functions, polynomials, and data analysis.</description>
+      <subject>Mathematics</subject>
+      <applicableEducationLevels>
+        <applicableEducationLevel>08</applicableEducationLevel>
+        <applicableEducationLevel>09</applicableEducationLevel>
+      </applicableEducationLevels>
+      <scedCourseCode>02052</scedCourseCode>
+      <scedCourseLevelCode>G</scedCourseLevelCode>
+      <scedCourseSubjectAreaCode>02</scedCourseSubjectAreaCode>
+    </xCourse>
+  </xhtml:Example>
+  <xhtml:Example name="xCourse - Example 2" xmlns="">
     <xCourse refId="0B629B89-B1A0-42D2-B912-5F6A325C98AA">
       <schoolRefId>66667705-6C51-4C30-A22A-77CEA0FBCF53</schoolRefId>
       <otherIds>

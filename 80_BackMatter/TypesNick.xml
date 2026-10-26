@@ -3457,8 +3457,8 @@
       <Description>
         <p>Comment created by any logical analysis of this score.</p>
       </Description>
-      <cedsId>000394</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000394</cedsURL>
+      <cedsId>001219</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001219</cedsURL>
     </Item>
     <Item>
       <Element>Description</Element>
@@ -5864,6 +5864,8 @@
         <p>Classification of budgetary account code summary</p>
       </Description>
       <Type name="xs:token"/>
+      <cedsId>001345</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001345</cedsURL>
     </Item>
     <Item>
       <Attribute>Codeset</Attribute>
@@ -5908,11 +5910,13 @@ balances, or changes therein, e.g. the code for  Debt Service Funds, or Capital 
     </Item>
     <Item>
       <Element>Function</Element>
-      <Characteristics>M</Characteristics>
+      <Characteristics>O</Characteristics>
       <Description>
         <p>Function break in account code for summarization. The function describes the activity for which a service or material object is acquired.  (Definition from NCES, Financial Accounting for Local and State School Systems.)</p>
       </Description>
       <Type name="xs:normalizedString"/>
+      <cedsId>001354</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001354</cedsURL>
     </Item>
     <Item>
       <Element>Object</Element>
@@ -7044,8 +7048,8 @@ balances, or changes therein, e.g. the code for  Debt Service Funds, or Capital 
         <p>A tool or aid set used while viewing the item</p>
       </Description>
       <Type name="xs:string"/>
-      <cedsId>002397</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/002397</cedsURL>
+      <cedsId>000406</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000406</cedsURL>
     </Item>
   </CommonElement>
   <CommonElement name="StandardIdentifierType" type="true" dm="true">

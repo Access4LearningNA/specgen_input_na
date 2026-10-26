@@ -64,6 +64,201 @@
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="" name="StudentContactPersonal - Example 1">
+    <StudentContactPersonal RefId="0b1b88c9-4a0e-4f6a-b16a-d13eebcb2c7a">
+      <PersonInfo>
+        <LocalId>CP-20487</LocalId>
+        <OtherIdList>
+          <OtherId Type="DistrictContactId" TypeCodeset="https://example.org/codesets/contact-identifiers">DCP-20487</OtherId>
+          <OtherId Type="StateGuardianId" TypeCodeset="https://example.org/codesets/contact-identifiers">WA-GDN-778241</OtherId>
+        </OtherIdList>
+        <Name Type="LegalName" TypeCodeset="https://example.org/codesets/name-types">
+          <Prefix>Ms.</Prefix>
+          <LastName>Okafor</LastName>
+          <FirstName>Mara</FirstName>
+          <MiddleName>Imani</MiddleName>
+          <Suffix>II</Suffix>
+          <PreferredName>Mari</PreferredName>
+          <SortName>Okafor, Mara Imani</SortName>
+          <FullName>Ms. Mara Imani Okafor II</FullName>
+        </Name>
+        <OtherNames>
+          <Name Type="Alias" TypeCodeset="https://example.org/codesets/name-types">
+            <Prefix>Ms.</Prefix>
+            <LastName>Okafor</LastName>
+            <FirstName>Mari</FirstName>
+            <MiddleName>Imani</MiddleName>
+            <Suffix>II</Suffix>
+            <PreferredName>Mari</PreferredName>
+            <SortName>Okafor, Mari Imani</SortName>
+            <FullName>Ms. Mari Imani Okafor II</FullName>
+          </Name>
+          <Name Type="PreviousLegalName" TypeCodeset="https://example.org/codesets/name-types">
+            <Prefix>Ms.</Prefix>
+            <LastName>Callaghan</LastName>
+            <FirstName>Mara</FirstName>
+            <MiddleName>Imani</MiddleName>
+            <Suffix>II</Suffix>
+            <PreferredName>Mari</PreferredName>
+            <SortName>Callaghan, Mara Imani</SortName>
+            <FullName>Ms. Mara Imani Callaghan II</FullName>
+          </Name>
+        </OtherNames>
+        <Demographics>
+          <RaceList>
+            <Race>
+              <Code Codeset="https://example.org/codesets/us-race">BlackOrAfricanAmerican</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Local">BLK</OtherCode>
+                <OtherCode Codeset="Text">Black or African American</OtherCode>
+              </OtherCodeList>
+              <Proportion>0.50</Proportion>
+            </Race>
+            <Race>
+              <Code Codeset="https://example.org/codesets/us-race">White</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Local">WHT</OtherCode>
+                <OtherCode Codeset="Text">White</OtherCode>
+              </OtherCodeList>
+              <Proportion>0.50</Proportion>
+            </Race>
+          </RaceList>
+          <HispanicLatino Codeset="https://example.org/codesets/ethnicity">No</HispanicLatino>
+          <RaceEthnicityDeclined>No</RaceEthnicityDeclined>
+          <Gender Codeset="https://example.org/codesets/gender">Female</Gender>
+          <BirthDate>1988-04-17</BirthDate>
+          <BirthDateVerification Codeset="https://example.org/codesets/birth-verification">BirthCertificate</BirthDateVerification>
+          <PlaceOfBirth>Seattle</PlaceOfBirth>
+          <CountyOfBirth>US</CountyOfBirth>
+          <StateOfBirth Codeset="https://example.org/codesets/us-states">WA</StateOfBirth>
+          <CountryOfBirth Codeset="https://example.org/codesets/countries">US</CountryOfBirth>
+          <CountriesOfCitizenship>
+            <CountryOfCitizenship Codeset="https://example.org/codesets/countries">US</CountryOfCitizenship>
+            <CountryOfCitizenship Codeset="https://example.org/codesets/countries">NG</CountryOfCitizenship>
+          </CountriesOfCitizenship>
+          <CountriesOfResidency>
+            <CountryOfResidency Codeset="https://example.org/codesets/countries">US</CountryOfResidency>
+            <CountryOfResidency Codeset="https://example.org/codesets/countries">NG</CountryOfResidency>
+          </CountriesOfResidency>
+          <CountryArrivalDate>1988-04-17</CountryArrivalDate>
+          <CitizenshipStatus Codeset="https://example.org/codesets/citizenship-status">Citizen</CitizenshipStatus>
+          <EnglishProficiency>
+            <Code Codeset="https://example.org/codesets/english-proficiency">Yes</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">Fluent</OtherCode>
+              <OtherCode Codeset="Text">English proficient</OtherCode>
+            </OtherCodeList>
+          </EnglishProficiency>
+          <LanguageList>
+            <Language>
+              <Code Codeset="https://example.org/codesets/iso-639-3">eng</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Local">EN</OtherCode>
+                <OtherCode Codeset="Text">English</OtherCode>
+              </OtherCodeList>
+              <LanguageType Codeset="https://example.org/codesets/language-type">Primary</LanguageType>
+              <Dialect>Pacific Northwest English</Dialect>
+            </Language>
+            <Language>
+              <Code Codeset="https://example.org/codesets/iso-639-3">yor</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Local">YO</OtherCode>
+                <OtherCode Codeset="Text">Yoruba</OtherCode>
+              </OtherCodeList>
+              <LanguageType Codeset="https://example.org/codesets/language-type">Heritage</LanguageType>
+              <Dialect>Standard Yoruba</Dialect>
+            </Language>
+          </LanguageList>
+          <DwellingArrangement>
+            <Code Codeset="https://example.org/codesets/dwelling-arrangement">PrivateResidence</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">PR</OtherCode>
+              <OtherCode Codeset="Text">Private residence</OtherCode>
+            </OtherCodeList>
+          </DwellingArrangement>
+          <MaritalStatus>Married</MaritalStatus>
+          <MilitaryConnectedStudent>NotMilitaryConnected</MilitaryConnectedStudent>
+        </Demographics>
+        <AddressList>
+          <Address Type="Physical" TypeCodeset="https://example.org/codesets/address-types">
+            <Street>
+              <Line1>1847 Alder Lantern Way</Line1>
+              <Line2>Suite 4B</Line2>
+              <Line3>Building Cedar</Line3>
+              <Complex>Alder Lantern Commons</Complex>
+              <StreetNumber>1847</StreetNumber>
+              <StreetPrefix>NE</StreetPrefix>
+              <StreetName>Alder Lantern</StreetName>
+              <StreetType>Way</StreetType>
+              <StreetSuffix>NE</StreetSuffix>
+              <ApartmentType>Suite</ApartmentType>
+              <ApartmentNumberPrefix>#</ApartmentNumberPrefix>
+              <ApartmentNumber>4</ApartmentNumber>
+              <ApartmentNumberSuffix>B</ApartmentNumberSuffix>
+            </Street>
+            <City>Seattle</City>
+            <County>King</County>
+            <StateProvince Codeset="https://example.org/codesets/us-states">WA</StateProvince>
+            <StateANSICode Codeset="https://example.org/codesets/ansi-state">53</StateANSICode>
+            <Country Codeset="https://example.org/codesets/countries">US</Country>
+            <PostalCode>98105</PostalCode>
+            <GridLocation>
+              <Latitude>47.6614</Latitude>
+              <Longitude>-122.3118</Longitude>
+            </GridLocation>
+            <AddressRefId>10acf96c-884a-4a2f-a617-e7bda507d124</AddressRefId>
+          </Address>
+          <Address Type="Mailing" TypeCodeset="https://example.org/codesets/address-types">
+            <Street>
+              <Line1>PO Box 4187</Line1>
+              <Line2>University Station</Line2>
+              <Line3>Mail Stop 22</Line3>
+              <Complex>University Postal Center</Complex>
+              <StreetNumber>4187</StreetNumber>
+              <StreetPrefix>NE</StreetPrefix>
+              <StreetName>Campus Parkway</StreetName>
+              <StreetType>Station</StreetType>
+              <StreetSuffix>NE</StreetSuffix>
+              <ApartmentType>Box</ApartmentType>
+              <ApartmentNumberPrefix>PO</ApartmentNumberPrefix>
+              <ApartmentNumber>4187</ApartmentNumber>
+              <ApartmentNumberSuffix>A</ApartmentNumberSuffix>
+            </Street>
+            <City>Seattle</City>
+            <County>King</County>
+            <StateProvince Codeset="https://example.org/codesets/us-states">WA</StateProvince>
+            <StateANSICode Codeset="https://example.org/codesets/ansi-state">53</StateANSICode>
+            <Country Codeset="https://example.org/codesets/countries">US</Country>
+            <PostalCode>98105</PostalCode>
+            <GridLocation>
+              <Latitude>47.6602</Latitude>
+              <Longitude>-122.3137</Longitude>
+            </GridLocation>
+            <AddressRefId>477bfcc4-6e3d-4cbd-bd5e-2aaed5bcf81a</AddressRefId>
+          </Address>
+        </AddressList>
+        <PhoneNumberList>
+          <PhoneNumber Type="Mobile" TypeCodeset="https://example.org/codesets/phone-types">
+            <Number>206-555-0148</Number>
+            <Extension>204</Extension>
+            <ListedStatus>Unlisted</ListedStatus>
+          </PhoneNumber>
+          <PhoneNumber Type="Work" TypeCodeset="https://example.org/codesets/phone-types">
+            <Number>206-555-0186</Number>
+            <Extension>318</Extension>
+            <ListedStatus>Listed</ListedStatus>
+          </PhoneNumber>
+        </PhoneNumberList>
+        <EmailList>
+          <Email Type="Home" TypeCodeset="https://example.org/codesets/email-types">mara.okafor@example.net</Email>
+          <Email Type="Work" TypeCodeset="https://example.org/codesets/email-types">m.okafor@harborlight.example.org</Email>
+        </EmailList>
+      </PersonInfo>
+      <EmployerType Codeset="https://example.org/codesets/employer-types">EducationalServices</EmployerType>
+      <EducationLevel Codeset="https://example.org/codesets/education-levels">BachelorsDegree</EducationLevel>
+      <OptOutEmail Codeset="https://example.org/codesets/opt-out-email">false</OptOutEmail>
+    </StudentContactPersonal>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="StudentContactPersonal - Example 2">
     <StudentContactPersonal RefId="6472B2610947583A463DBB345291B001">
       <PersonInfo>
         <Name Type="04">

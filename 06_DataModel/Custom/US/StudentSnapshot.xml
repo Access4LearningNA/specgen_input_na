@@ -243,7 +243,108 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="" name="StudentSnapshot">
+  <xhtml:Example xmlns="" name="StudentSnapshot - Example 1">
+    <StudentSnapshot RefId="fc0f9fe5-45b4-46db-9251-75cb6fa88883" SnapDate="2026-08-20" StudentPersonalRefId="b6bd3cb1-633f-4bef-bb68-69591a4bc877" SchoolYear="2027">
+      <Name Type="04">
+        <Prefix>Ms.</Prefix>
+        <LastName>Delgado</LastName>
+        <FirstName>Marisol</FirstName>
+        <MiddleName>Elena</MiddleName>
+        <Suffix>II</Suffix>
+        <PreferredName>Soli</PreferredName>
+        <SortName>Delgado, Marisol Elena II</SortName>
+        <FullName>Ms. Marisol Elena Delgado II</FullName>
+      </Name>
+      <LocalId>MVHS-2026-1847</LocalId>
+      <StateProvinceId>WA-98122-1847</StateProvinceId>
+      <Address Type="Physical" TypeCodeset="urn:example:codeset:address-type">
+        <Street>
+          <Line1>1847 East Juniper Avenue</Line1>
+          <Line2>Apartment 6B</Line2>
+          <Line3>Building C</Line3>
+          <Complex>Cedar Lantern Commons</Complex>
+          <StreetNumber>1847</StreetNumber>
+          <StreetPrefix>East</StreetPrefix>
+          <StreetName>Juniper</StreetName>
+          <StreetType>Avenue</StreetType>
+          <StreetSuffix>NE</StreetSuffix>
+          <ApartmentType>Apartment</ApartmentType>
+          <ApartmentNumberPrefix>Unit</ApartmentNumberPrefix>
+          <ApartmentNumber>6</ApartmentNumber>
+          <ApartmentNumberSuffix>B</ApartmentNumberSuffix>
+        </Street>
+        <City>Seattle</City>
+        <County>King</County>
+        <StateProvince Codeset="urn:example:codeset:us-state">WA</StateProvince>
+        <StateANSICode Codeset="urn:example:codeset:ansi-state">53</StateANSICode>
+        <Country Codeset="urn:example:codeset:iso-3166-1">US</Country>
+        <PostalCode>98122</PostalCode>
+        <GridLocation>
+          <Latitude>47.610112</Latitude>
+          <Longitude>-122.313941</Longitude>
+        </GridLocation>
+        <AddressRefId>02750f92-99e7-409f-adb9-4f9f012a1195</AddressRefId>
+      </Address>
+      <RaceList>
+        <Race>
+          <Code Codeset="urn:example:codeset:race">White</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">W</OtherCode>
+            <OtherCode Codeset="Local">RACE-WHITE</OtherCode>
+          </OtherCodeList>
+          <Proportion>0.50</Proportion>
+        </Race>
+        <Race>
+          <Code Codeset="urn:example:codeset:race">AmericanIndianOrAlaskaNative</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">AIAN</OtherCode>
+            <OtherCode Codeset="Local">RACE-AIAN</OtherCode>
+          </OtherCodeList>
+          <Proportion>0.50</Proportion>
+        </Race>
+      </RaceList>
+      <HispanicLatino Codeset="urn:example:codeset:ethnicity">No</HispanicLatino>
+      <Gender Codeset="urn:example:codeset:gender">Female</Gender>
+      <BirthDate>2008-03-14</BirthDate>
+      <Age>18</Age>
+      <ProjectedGraduationYear>2026</ProjectedGraduationYear>
+      <OnTimeGraduationYear>2026</OnTimeGraduationYear>
+      <GraduationDate>2026-06-18</GraduationDate>
+      <GraduationAward Codeset="urn:example:codeset:graduation-award">RegularDiploma</GraduationAward>
+      <GraduationOnTime Codeset="urn:example:codeset:graduation-on-time">OnTime</GraduationOnTime>
+      <HomeEnrollment>
+        <StudentSchoolEnrollmentRefId>47617f7b-9fc3-4609-954f-62fe5babce60</StudentSchoolEnrollmentRefId>
+        <SchoolName>Mariner Valley High School</SchoolName>
+        <SchoolInfoRefId>bbb1fbbf-333a-4de0-ad75-0465729dde98</SchoolInfoRefId>
+        <LocalId>MVHS</LocalId>
+        <StateProvinceId>WA-17001</StateProvinceId>
+        <Status Codeset="urn:example:codeset:enrollment-status">Graduated</Status>
+        <GradeLevel>
+          <Code Codeset="urn:example:codeset:grade-level">12</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">12</OtherCode>
+            <OtherCode Codeset="Local">SENIOR</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+        <Homeroom SIF_RefObject="RoomInfo">c49db4d4-86b0-4281-ac61-62143da6b43a</Homeroom>
+        <HomeroomNumber>214</HomeroomNumber>
+        <FullYearEnrollment Codeset="urn:example:codeset:full-year-enrollment">FullYear</FullYearEnrollment>
+      </HomeEnrollment>
+      <IDEA Codeset="urn:example:codeset:idea">No</IDEA>
+      <Migrant Codeset="urn:example:codeset:migrant">No</Migrant>
+      <Title1 Codeset="urn:example:codeset:title1">No</Title1>
+      <GiftedTalented Codeset="urn:example:codeset:gifted-talented">Yes</GiftedTalented>
+      <EconomicDisadvantage Codeset="urn:example:codeset:economic-disadvantage">No</EconomicDisadvantage>
+      <ELL Codeset="urn:example:codeset:ell">No</ELL>
+      <Homeless Codeset="urn:example:codeset:homeless">No</Homeless>
+      <Section504 Codeset="urn:example:codeset:section504">No</Section504>
+      <VocationalConcentrator Codeset="urn:example:codeset:vocational-concentrator">No</VocationalConcentrator>
+      <Immigrant Codeset="urn:example:codeset:immigrant">No</Immigrant>
+      <NeglectedDelinquent Codeset="urn:example:codeset:neglected-delinquent">No</NeglectedDelinquent>
+      <FreeAndReducedStatus Codeset="urn:example:codeset:free-reduced">Paid</FreeAndReducedStatus>
+    </StudentSnapshot>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="StudentSnapshot - Example 2">
     <StudentSnapshot RefId="359D75101AD0A9D7A8C3DAD0A85103A2" SnapDate="2003-10-01" StudentPersonalRefId="A15484ED564995254A4568EFFC5100BD" SchoolYear="2004">
       <Name Type="04">
         <LastName>Johnson</LastName>

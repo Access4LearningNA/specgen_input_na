@@ -52,7 +52,35 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="FoodserviceStaffEnrollmentCount - Example 1">
+    <FoodserviceStaffEnrollmentCount RefId="4f8dcf1e-6d5b-45c4-afa4-48497bcec18a" SchoolInfoRefId="1dac19dd-606a-43a6-a2b2-97918e6a2bbe" Date="2025-06-03">
+      <Program Type="NationalSchoolLunchProgram" TypeCodeset="https://www.fns.usda.gov/nslp" />
+      <Counts>
+        <Count>
+          <MealStatus Type="Free" TypeCodeset="https://www.fns.usda.gov/cn/labeling/meal-status">
+            <StartDate>2024-08-19</StartDate>
+            <EndDate>2025-06-03</EndDate>
+            <SchoolYear>2025</SchoolYear>
+          </MealStatus>
+          <MealType Codeset="https://www.fns.usda.gov/cn/labeling/meal-types">Lunch</MealType>
+          <Amount Type="Value" TypeCodeset="https://www.fns.usda.gov/cn/amount-types" Credits="0" Currency="USD" CurrencyCodeset="ISO4217">3.75</Amount>
+          <Tax Currency="USD" CurrencyCodeset="ISO4217">0.00</Tax>
+          <Value>186</Value>
+        </Count>
+        <Count>
+          <EarnedStatus Type="Paid" TypeCodeset="https://www.fns.usda.gov/cn/labeling/earned-status">
+            <StartDate>2024-08-19</StartDate>
+            <EndDate>2025-06-03</EndDate>
+          </EarnedStatus>
+          <MealType Codeset="https://www.fns.usda.gov/cn/labeling/meal-types">Breakfast</MealType>
+          <Amount Type="BreakfastCredit" TypeCodeset="https://www.fns.usda.gov/cn/amount-types" Credits="1.00" Currency="USD" CurrencyCodeset="ISO4217">0.00</Amount>
+          <Tax Currency="USD" CurrencyCodeset="ISO4217">0.00</Tax>
+          <Value>94</Value>
+        </Count>
+      </Counts>
+    </FoodserviceStaffEnrollmentCount>
+  </xhtml:Example>
+  <xhtml:Example name="FoodserviceStaffEnrollmentCount - Example 2" xmlns="">
     <FoodserviceStaffEnrollmentCount RefId="359D75101AD0A9D7A8C3DAD0A85103A2" SchoolInfoRefId="E822BCDC9E7A40F787ED8183D3B485B5" Date="2001-10-31">
       <Program Type="Foodservice">NSLP</Program>
       <Counts>

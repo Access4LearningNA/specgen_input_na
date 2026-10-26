@@ -76,7 +76,75 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="VendorInfo - Example 1">
+    <VendorInfo RefId="c00b76b9-6984-4694-9f95-cdbb57eb463e">
+      <Name>Juniper Ridge Learning Supply Cooperative</Name>
+      <ContactInfo>
+        <Name Type="04">
+          <Prefix>Dr.</Prefix>
+          <LastName>Velasquez</LastName>
+          <FirstName>Marisol</FirstName>
+          <MiddleName>Ines</MiddleName>
+          <Suffix>II</Suffix>
+          <PreferredName>Sol</PreferredName>
+          <SortName>Velasquez, Marisol Ines</SortName>
+          <FullName>Dr. Marisol Ines Velasquez II</FullName>
+        </Name>
+        <PositionTitle>Education Partnerships Director</PositionTitle>
+        <Role>Vendor Account Manager</Role>
+        <Address Type="Mailing" TypeCodeset="https://example.org/codesets/address-type">
+          <Street>
+            <Line1>1847 Alder Meridian Avenue</Line1>
+            <Line2>Suite 420</Line2>
+            <Line3>North Tower</Line3>
+            <Complex>Harbor Point Exchange</Complex>
+            <StreetNumber>1847</StreetNumber>
+            <StreetPrefix>NE</StreetPrefix>
+            <StreetName>Alder Meridian</StreetName>
+            <StreetType>Avenue</StreetType>
+            <StreetSuffix>NW</StreetSuffix>
+            <ApartmentType>Suite</ApartmentType>
+            <ApartmentNumberPrefix>#</ApartmentNumberPrefix>
+            <ApartmentNumber>420</ApartmentNumber>
+            <ApartmentNumberSuffix>A</ApartmentNumberSuffix>
+          </Street>
+          <City>Portland</City>
+          <County>Multnomah</County>
+          <StateProvince Codeset="https://www.usps.com/state-codes">OR</StateProvince>
+          <StateANSICode Codeset="https://www.census.gov/library/reference/code-lists/ansi.html">41</StateANSICode>
+          <Country Codeset="https://www.iso.org/iso-3166-country-codes.html">US</Country>
+          <PostalCode>97232-1847</PostalCode>
+          <GridLocation>
+            <Latitude>45.530198</Latitude>
+            <Longitude>-122.647281</Longitude>
+          </GridLocation>
+          <AddressRefId>d037f4f8-902a-4d3a-b22f-8763556080bd</AddressRefId>
+        </Address>
+        <AddressRefId>24c4485a-3b71-4655-94da-9e52959061f5</AddressRefId>
+        <EmailList>
+          <Email Type="Work" TypeCodeset="https://example.org/codesets/email-type">marisol.velasquez@juniperridge.example</Email>
+          <Email Type="Organizational" TypeCodeset="https://example.org/codesets/email-type">partnerships@juniperridge.example</Email>
+        </EmailList>
+        <PhoneNumberList>
+          <PhoneNumber Type="Work" TypeCodeset="https://example.org/codesets/phone-type">
+            <Number>503-555-0187</Number>
+            <Extension>420</Extension>
+            <ListedStatus>Listed</ListedStatus>
+          </PhoneNumber>
+          <PhoneNumber Type="Mobile" TypeCodeset="https://example.org/codesets/phone-type">
+            <Number>503-555-0146</Number>
+            <Extension>046</Extension>
+            <ListedStatus>Unlisted</ListedStatus>
+          </PhoneNumber>
+        </PhoneNumberList>
+      </ContactInfo>
+      <CustomerId>JRL-PORTLAND-0420</CustomerId>
+      <EmployeePersonalRefId>b4c1b6e8-1a2b-47df-823b-78e05db1c834</EmployeePersonalRefId>
+      <Send1099>true</Send1099>
+      <FederalTaxId Code="EIN" CodeCodeset="https://www.irs.gov/businesses/small-businesses-self-employed/employer-id-numbers">93-4827619</FederalTaxId>
+    </VendorInfo>
+  </xhtml:Example>
+  <xhtml:Example name="VendorInfo - Example 2" xmlns="">
     <VendorInfo RefId="AB3647C568654CF45678DD34EF564E22">
       <Name>ABC School Supply</Name>
       <ContactInfo>

@@ -174,7 +174,57 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="" name="StaffAssignment">
+  <xhtml:Example xmlns="" name="StaffAssignment - Example 1">
+    <StaffAssignment RefId="e164b2dc-dc18-4bac-9e55-f543b4ee0e05" SchoolInfoRefId="567d0746-f1a7-4a71-b7e1-cc4b29063c17" SchoolYear="2026" StaffPersonalRefId="82bd47b3-3da9-4dfb-ac93-b54b09e758cc">
+      <Description>Fifth and sixth grade earth science teacher at Juniper Ridge Middle School</Description>
+      <PrimaryAssignment Codeset="https://example.org/codesets/primary-assignment">Yes</PrimaryAssignment>
+      <JobStartDate>2025-08-18</JobStartDate>
+      <JobEndDate>2026-06-12</JobEndDate>
+      <JobFTE>1.00</JobFTE>
+      <JobFunction>
+        <Code Codeset="https://example.org/codesets/job-function">Teacher</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">2300</OtherCode>
+          <OtherCode Codeset="Local">SCI-TEACHER</OtherCode>
+        </OtherCodeList>
+      </JobFunction>
+      <TeachingAssignment>
+        <Code Codeset="https://example.org/codesets/teaching-assignment">EarthScience</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">SCI-5-6</OtherCode>
+          <OtherCode Codeset="Local">JRMS-EARTHSCI</OtherCode>
+        </OtherCodeList>
+      </TeachingAssignment>
+      <GradeLevels>
+        <GradeLevel>
+          <Code Codeset="https://example.org/codesets/grade-levels">05</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">Grade5</OtherCode>
+            <OtherCode Codeset="Local">G5</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+        <GradeLevel>
+          <Code Codeset="https://example.org/codesets/grade-levels">06</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">Grade6</OtherCode>
+            <OtherCode Codeset="Local">G6</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+      </GradeLevels>
+      <ItinerantTeacher Codeset="https://example.org/codesets/itinerant-status">No</ItinerantTeacher>
+      <InstructionalLevel>
+        <Code Codeset="https://example.org/codesets/instructional-levels">Intermediate</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">MiddleGrades</OtherCode>
+          <OtherCode Codeset="Local">MG</OtherCode>
+        </OtherCodeList>
+      </InstructionalLevel>
+      <TeacherInexperiencedStatus Codeset="https://example.org/codesets/teacher-experience">TCHEXPRNCD</TeacherInexperiencedStatus>
+      <TeacherOutOfFieldStatus Codeset="https://example.org/codesets/teacher-field-status">TCHINFLD</TeacherOutOfFieldStatus>
+      <EmployeePersonalRefId>3ebd4d34-edef-4b6a-8c6f-7a1ef9901fb5</EmployeePersonalRefId>
+    </StaffAssignment>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="StaffAssignment - Example 2">
     <StaffAssignment RefId="D3E34B359D75101A8C3D00AA001A1652" SchoolInfoRefId="A8C3D3E34B359D75101D00AA001A1652" SchoolYear="2004" StaffPersonalRefId="D3E34B359D75101A8C3D00AA001A1651">
       <Description>First grade elementary teacher</Description>
       <PrimaryAssignment>Yes</PrimaryAssignment>

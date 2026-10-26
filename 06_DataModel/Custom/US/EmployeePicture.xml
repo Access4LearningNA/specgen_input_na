@@ -43,7 +43,12 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="EmployeePicture - Example 1">
+    <EmployeePicture RefId="1e6b7a92-b4c0-4300-af4e-01c08f608565" EmployeePersonalRefId="c942f965-e8e3-4d83-888a-d6c3197ac79f">
+      <PictureSource Type="URL" TypeCodeset="https://www.sifassociation.org/codesets/picture-source">https://media.cascadevalley.example/employee-portraits/amara-villaseca.jpg</PictureSource>
+    </EmployeePicture>
+  </xhtml:Example>
+  <xhtml:Example name="EmployeePicture - Example 2" xmlns="">
     <EmployeePicture RefId="359D75101AD0A9D7A8C3DAD0A85103A2" EmployeePersonalRefId="D3E34B359D75101A8C3D00AA001A1652">
       <PictureSource Type="URL">http://www.schoolsite.com/pictures/1999/1234.jpg</PictureSource>
     </EmployeePicture>

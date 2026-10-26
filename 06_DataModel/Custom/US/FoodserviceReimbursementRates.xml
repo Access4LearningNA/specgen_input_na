@@ -62,7 +62,59 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="FoodserviceReimbursementRates - Example 1">
+    <FoodserviceReimbursementRates RefId="06d0ed49-163e-4019-a031-b4a0df524bf5">
+      <SchoolInfoRefId>544ba136-3727-465f-9255-42e5151038a5</SchoolInfoRefId>
+      <StartDate>2025-07-01</StartDate>
+      <EndDate>2026-06-30</EndDate>
+      <Program Type="NSLP" TypeCodeset="https://www.fns.usda.gov/nslp">National School Lunch Program</Program>
+      <Agencies>
+        <Agency Type="Other" TypeCodeset="https://www.fns.usda.gov">
+          <Name>United States Department of Agriculture Food and Nutrition Service</Name>
+          <Rates>
+            <Rate SevereNeed="Yes" SevereNeedCodeset="https://www.fns.usda.gov/nslp">
+              <Value>4.57</Value>
+              <MealStatus Type="Free" TypeCodeset="https://www.fns.usda.gov/nslp">
+                <StartDate>2025-07-01</StartDate>
+                <EndDate>2026-06-30</EndDate>
+                <SchoolYear>2026</SchoolYear>
+              </MealStatus>
+            </Rate>
+            <Rate SevereNeed="NA" SevereNeedCodeset="https://www.fns.usda.gov/nslp">
+              <Value>0.54</Value>
+              <MealStatus Type="Paid" TypeCodeset="https://www.fns.usda.gov/nslp">
+                <StartDate>2025-07-01</StartDate>
+                <EndDate>2026-06-30</EndDate>
+                <SchoolYear>2026</SchoolYear>
+              </MealStatus>
+            </Rate>
+          </Rates>
+        </Agency>
+        <Agency Type="Other" TypeCodeset="https://education.oregon.gov">
+          <Name>Oregon Department of Education Child Nutrition Programs</Name>
+          <Rates>
+            <Rate SevereNeed="Yes" SevereNeedCodeset="https://education.oregon.gov">
+              <Value>0.25</Value>
+              <MealStatus Type="Free" TypeCodeset="https://education.oregon.gov">
+                <StartDate>2025-07-01</StartDate>
+                <EndDate>2026-06-30</EndDate>
+                <SchoolYear>2026</SchoolYear>
+              </MealStatus>
+            </Rate>
+            <Rate SevereNeed="NA" SevereNeedCodeset="https://education.oregon.gov">
+              <Value>0.10</Value>
+              <MealStatus Type="Paid" TypeCodeset="https://education.oregon.gov">
+                <StartDate>2025-07-01</StartDate>
+                <EndDate>2026-06-30</EndDate>
+                <SchoolYear>2026</SchoolYear>
+              </MealStatus>
+            </Rate>
+          </Rates>
+        </Agency>
+      </Agencies>
+    </FoodserviceReimbursementRates>
+  </xhtml:Example>
+  <xhtml:Example name="FoodserviceReimbursementRates - Example 2" xmlns="">
     <FoodserviceReimbursementRates RefId="D9837A776DD626777872361DD118873C">
       <SchoolInfoRefId>EF521958AB474559B2AE7BD82647C66B</SchoolInfoRefId>
       <StartDate>2004-01-01</StartDate>

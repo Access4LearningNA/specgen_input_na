@@ -129,6 +129,239 @@
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="" name="StudentSpecialEducationSummary - Example 1">
+    <StudentSpecialEducationSummary RefId="64b20ba1-4e32-4670-aefb-6b73c3dbf685" StudentPersonalRefId="039d071f-b714-4ca6-a5a2-22e1ba662576" SummaryDate="2026-06-12" SchoolYear="2025">
+      <StudentSpecialEducationFTE>1.00</StudentSpecialEducationFTE>
+      <PrimaryDisabilityCode Codeset="https://ceds.ed.gov/element/000218">SLD</PrimaryDisabilityCode>
+      <SpecificDisabilityIdentified>true</SpecificDisabilityIdentified>
+      <EnvironmentForSchoolAge Codeset="https://example.edu/codesets/special-education-environment">InsideRegularClass80PercentOrMore</EnvironmentForSchoolAge>
+      <EnvironmentForEarlyChildhood Codeset="https://example.edu/codesets/special-education-environment">NotApplicable</EnvironmentForEarlyChildhood>
+      <NeglectedOrDelinquentParticipationList>
+        <NeglectedOrDelinquentParticipation>
+          <Type Codeset="https://example.edu/codesets/neglected-delinquent-programs">Delinquent</Type>
+          <TotalDayCount>5</TotalDayCount>
+          <ConsecutiveDayCount>3</ConsecutiveDayCount>
+        </NeglectedOrDelinquentParticipation>
+        <NeglectedOrDelinquentParticipation>
+          <Type Codeset="https://example.edu/codesets/neglected-delinquent-programs">PreventionSupport</Type>
+          <TotalDayCount>8</TotalDayCount>
+          <ConsecutiveDayCount>4</ConsecutiveDayCount>
+        </NeglectedOrDelinquentParticipation>
+      </NeglectedOrDelinquentParticipationList>
+      <StudentParticipationList>
+        <StudentParticipationData>
+          <ProgramType>
+            <Code Codeset="https://example.edu/codesets/program-types">IDEA-IEP</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">SPED-IEP</OtherCode>
+              <OtherCode Codeset="Text">Individualized Education Program</OtherCode>
+            </OtherCodeList>
+          </ProgramType>
+          <ProgramFundingSources>
+            <ProgramFundingSource>
+              <Code Codeset="https://example.edu/codesets/funding-sources">IDEA-B</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="StateProvince">619</OtherCode>
+                <OtherCode Codeset="Text">Federal IDEA Part B allocation</OtherCode>
+              </OtherCodeList>
+            </ProgramFundingSource>
+            <ProgramFundingSource>
+              <Code Codeset="https://example.edu/codesets/funding-sources">LOCAL-SPED</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Local">MUSD-SPED</OtherCode>
+                <OtherCode Codeset="Text">Mariner Unified special education fund</OtherCode>
+              </OtherCodeList>
+            </ProgramFundingSource>
+          </ProgramFundingSources>
+          <ManagingPublicAgency SIF_RefObject="LEAInfo">2df6355e-f11b-4b6d-b3db-3fe9c342152e</ManagingPublicAgency>
+          <ManagingSchool SIF_RefObject="SchoolInfo">b67ff0d0-41cb-4f29-9dc3-0c09833e188d</ManagingSchool>
+          <ReferralDate>2024-10-03</ReferralDate>
+          <ProgramStatus>
+            <Code Codeset="https://example.edu/codesets/program-status">Active</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">CURRENT</OtherCode>
+              <OtherCode Codeset="Text">Active IEP services</OtherCode>
+            </OtherCodeList>
+          </ProgramStatus>
+          <GiftedEligibilityCriteria Codeset="https://example.edu/codesets/gifted-eligibility">NotEligible</GiftedEligibilityCriteria>
+          <EvaluationDate>2024-11-18</EvaluationDate>
+          <ReevaluationDate>2027-11-17</ReevaluationDate>
+          <ExceptionalityCategories>
+            <ExceptionalityCategory>
+              <Code Codeset="https://ceds.ed.gov/element/000218">SLD</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="StateProvince">LD</OtherCode>
+                <OtherCode Codeset="Text">Specific Learning Disability</OtherCode>
+              </OtherCodeList>
+              <ExceptionalityPriority>Primary</ExceptionalityPriority>
+            </ExceptionalityCategory>
+            <ExceptionalityCategory>
+              <Code Codeset="https://ceds.ed.gov/element/000218">SLI</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="StateProvince">SL</OtherCode>
+                <OtherCode Codeset="Text">Speech or Language Impairment</OtherCode>
+              </OtherCodeList>
+              <ExceptionalityPriority>Secondary</ExceptionalityPriority>
+            </ExceptionalityCategory>
+          </ExceptionalityCategories>
+          <ProgramPlanDate>2024-12-06</ProgramPlanDate>
+          <ProgramPlanEffectiveDate>2025-01-06</ProgramPlanEffectiveDate>
+          <PlannedAssessmentParticipation Codeset="StateProvince">GeneralAssessmentWithAccommodations</PlannedAssessmentParticipation>
+          <DaysInParticipation>170</DaysInParticipation>
+        </StudentParticipationData>
+        <StudentParticipationData>
+          <ProgramType>
+            <Code Codeset="https://example.edu/codesets/program-types">SECTION-504</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">ACC-504</OtherCode>
+              <OtherCode Codeset="Text">Section 504 accommodation plan</OtherCode>
+            </OtherCodeList>
+          </ProgramType>
+          <ProgramFundingSources>
+            <ProgramFundingSource>
+              <Code Codeset="https://example.edu/codesets/funding-sources">LOCAL-GENERAL</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Local">MUSD-GF</OtherCode>
+                <OtherCode Codeset="Text">Mariner Unified general fund</OtherCode>
+              </OtherCodeList>
+            </ProgramFundingSource>
+            <ProgramFundingSource>
+              <Code Codeset="https://example.edu/codesets/funding-sources">TITLE-I</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="StateProvince">TitleI-A</OtherCode>
+                <OtherCode Codeset="Text">Title I instructional support</OtherCode>
+              </OtherCodeList>
+            </ProgramFundingSource>
+          </ProgramFundingSources>
+          <ManagingPublicAgency SIF_RefObject="LEAInfo">c6bee734-3343-44c9-8c38-47e6ba0da812</ManagingPublicAgency>
+          <ManagingSchool SIF_RefObject="SchoolInfo">7a37979e-ccf0-485d-bbbc-ef27202d808b</ManagingSchool>
+          <ReferralDate>2025-08-21</ReferralDate>
+          <ProgramStatus>
+            <Code Codeset="https://example.edu/codesets/program-status">Active</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">CURRENT</OtherCode>
+              <OtherCode Codeset="Text">Active accommodation support</OtherCode>
+            </OtherCodeList>
+          </ProgramStatus>
+          <GiftedEligibilityCriteria Codeset="https://example.edu/codesets/gifted-eligibility">NotEligible</GiftedEligibilityCriteria>
+          <EvaluationDate>2025-09-12</EvaluationDate>
+          <ReevaluationDate>2028-09-11</ReevaluationDate>
+          <ExceptionalityCategories>
+            <ExceptionalityCategory>
+              <Code Codeset="https://ceds.ed.gov/element/000218">SLD</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="StateProvince">LD</OtherCode>
+                <OtherCode Codeset="Text">Specific Learning Disability</OtherCode>
+              </OtherCodeList>
+              <ExceptionalityPriority>Primary</ExceptionalityPriority>
+            </ExceptionalityCategory>
+            <ExceptionalityCategory>
+              <Code Codeset="https://ceds.ed.gov/element/000218">SLI</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="StateProvince">SL</OtherCode>
+                <OtherCode Codeset="Text">Speech-language support need</OtherCode>
+              </OtherCodeList>
+              <ExceptionalityPriority>Secondary</ExceptionalityPriority>
+            </ExceptionalityCategory>
+          </ExceptionalityCategories>
+          <ProgramPlanDate>2025-09-18</ProgramPlanDate>
+          <ProgramPlanEffectiveDate>2025-09-22</ProgramPlanEffectiveDate>
+          <PlannedAssessmentParticipation Codeset="Local">DistrictBenchmarkWithAccommodations</PlannedAssessmentParticipation>
+          <DaysInParticipation>145</DaysInParticipation>
+        </StudentParticipationData>
+      </StudentParticipationList>
+      <StudentPlacementList>
+        <StudentPlacementData>
+          <Service>
+            <Code Codeset="https://example.edu/codesets/special-education-services">SPECIALIZED-READING</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">READ-SPED-45</OtherCode>
+              <OtherCode Codeset="Text">Specialized reading instruction</OtherCode>
+            </OtherCodeList>
+          </Service>
+          <ServiceCategory Codeset="https://example.edu/codesets/service-categories">Instruction</ServiceCategory>
+          <ServiceFundingSources>
+            <ServiceFundingSource>
+              <Code Codeset="https://example.edu/codesets/funding-sources">IDEA-B</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="StateProvince">619</OtherCode>
+                <OtherCode Codeset="Text">Federal IDEA Part B allocation</OtherCode>
+              </OtherCodeList>
+            </ServiceFundingSource>
+            <ServiceFundingSource>
+              <Code Codeset="https://example.edu/codesets/funding-sources">LOCAL-SPED</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Local">MUSD-SPED</OtherCode>
+                <OtherCode Codeset="Text">Mariner Unified special education fund</OtherCode>
+              </OtherCodeList>
+            </ServiceFundingSource>
+          </ServiceFundingSources>
+          <ServicingPublicAgency SIF_RefObject="LEAInfo">6a93f5f2-d345-44f6-8466-7792b8823580</ServicingPublicAgency>
+          <ServicingSchool SIF_RefObject="SchoolInfo">68fb7990-97e8-488e-b9d6-dcdb8ebbc194</ServicingSchool>
+          <SchoolWhereServiceDelivered SIF_RefObject="SchoolInfo">c7e65202-71d1-45d0-bfec-27f80159f2e8</SchoolWhereServiceDelivered>
+          <ServiceProviderType>
+            <Code Codeset="https://example.edu/codesets/provider-types">SPECIAL-ED-TEACHER</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">SPED-TCH</OtherCode>
+              <OtherCode Codeset="Text">Special education teacher</OtherCode>
+            </OtherCodeList>
+          </ServiceProviderType>
+          <AgencyType>Mariner Unified School District</AgencyType>
+          <FrequencyTime>
+            <Code Codeset="https://example.edu/codesets/service-frequency">5X45-MIN-WEEK</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">DAILY-45</OtherCode>
+              <OtherCode Codeset="Text">Five forty-five minute sessions per week</OtherCode>
+            </OtherCodeList>
+          </FrequencyTime>
+        </StudentPlacementData>
+        <StudentPlacementData>
+          <Service>
+            <Code Codeset="https://example.edu/codesets/special-education-services">SPEECH-LANGUAGE</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">SLP-30</OtherCode>
+              <OtherCode Codeset="Text">Speech-language therapy</OtherCode>
+            </OtherCodeList>
+          </Service>
+          <ServiceCategory Codeset="https://example.edu/codesets/service-categories">RelatedService</ServiceCategory>
+          <ServiceFundingSources>
+            <ServiceFundingSource>
+              <Code Codeset="https://example.edu/codesets/funding-sources">IDEA-B</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="StateProvince">619</OtherCode>
+                <OtherCode Codeset="Text">Federal IDEA Part B allocation</OtherCode>
+              </OtherCodeList>
+            </ServiceFundingSource>
+            <ServiceFundingSource>
+              <Code Codeset="https://example.edu/codesets/funding-sources">MEDICAID</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="StateProvince">SchoolBasedMedicaid</OtherCode>
+                <OtherCode Codeset="Text">School-based Medicaid reimbursement</OtherCode>
+              </OtherCodeList>
+            </ServiceFundingSource>
+          </ServiceFundingSources>
+          <ServicingPublicAgency SIF_RefObject="LEAInfo">8de1284f-e241-4c3f-af65-0d4ffbb68505</ServicingPublicAgency>
+          <ServicingSchool SIF_RefObject="SchoolInfo">f1bd8df5-8a05-41a2-9814-61a82bf0c37f</ServicingSchool>
+          <SchoolWhereServiceDelivered SIF_RefObject="SchoolInfo">3b325f2d-c9a7-4314-8546-25c965463b43</SchoolWhereServiceDelivered>
+          <ServiceProviderType>
+            <Code Codeset="https://example.edu/codesets/provider-types">SPEECH-LANGUAGE-PATHOLOGIST</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">SLP</OtherCode>
+              <OtherCode Codeset="Text">Licensed speech-language pathologist</OtherCode>
+            </OtherCodeList>
+          </ServiceProviderType>
+          <AgencyType>Harbor Speech and Language Clinic</AgencyType>
+          <FrequencyTime>
+            <Code Codeset="https://example.edu/codesets/service-frequency">2X30-MIN-WEEK</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">TWICE-30</OtherCode>
+              <OtherCode Codeset="Text">Two thirty minute sessions per week</OtherCode>
+            </OtherCodeList>
+          </FrequencyTime>
+        </StudentPlacementData>
+      </StudentPlacementList>
+    </StudentSpecialEducationSummary>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="StudentSpecialEducationSummary - Example 2">
     <StudentSpecialEducationSummary RefId="359D75101AD0A9D7A8C3DAD0A85103A2" StudentPersonalRefId="A2E34F59A742C1A4B3D11CC002B163A2" SummaryDate="2003-10-01" SchoolYear="2008">
       <StudentSpecialEducationFTE>0.45</StudentSpecialEducationFTE>
       <PrimaryDisabilityCode>2134</PrimaryDisabilityCode>

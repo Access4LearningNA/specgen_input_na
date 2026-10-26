@@ -122,4 +122,19 @@
     <cedsId>001979</cedsId>
     <cedsURL>https://ceds.ed.gov/element/001979</cedsURL>
   </Item>
+  <xhtml:Example xmlns="" name="StudentCareerTechnical - Example 1">
+    <StudentCareerTechnical RefId="ea8c0adb-74ee-41b3-abf2-03ea936fc625" StudentPersonalRefId="1f4c3423-6640-4dd4-8a40-67d7c5f924bb">
+      <EducationCompleter Codeset="https://example.org/codesets/cte-education-completer">Yes</EducationCompleter>
+      <Concentrator>Yes</Concentrator>
+      <Participant Codeset="https://example.org/codesets/cte-participant">Participant</Participant>
+      <NontraditionalGenderStatus Codeset="https://example.org/codesets/cte-nontraditional-gender-status">Nontraditional</NontraditionalGenderStatus>
+      <DisplacedHomemaker Codeset="https://example.org/codesets/cte-displaced-homemaker">No</DisplacedHomemaker>
+      <ProgramParticipationExitDate>2026-06-12</ProgramParticipationExitDate>
+      <ProgramParticipationStartDate>2024-08-26</ProgramParticipationStartDate>
+      <NeglectedOrDelinquentProgramType>AtRiskPrograms</NeglectedOrDelinquentProgramType>
+      <SingleParentOrSinglePregnantWoman Codeset="https://example.org/codesets/cte-single-parent-single-pregnant-woman">No</SingleParentOrSinglePregnantWoman>
+      <OutcomeType>EARNDIPL</OutcomeType>
+      <OutcomeExitType>POSTSEC</OutcomeExitType>
+    </StudentCareerTechnical>
+  </xhtml:Example>
 </DataObject>

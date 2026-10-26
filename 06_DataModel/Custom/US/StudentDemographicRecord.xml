@@ -82,7 +82,352 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="StudentDemographicRecord - Example 1">
+    <StudentDemographicRecord RefId="f4b083f1-ae5b-49ab-a5a6-99315c0671cf" SIF_RefId="24ae8c41-11ab-450d-b206-8fef7151f19b" SIF_RefObject="StudentPersonal" SIF_RefObjectCodeset="urn:sif:object-types">
+      <ReportingDate>2026-08-20</ReportingDate>
+      <StudentPersonalData>
+        <LocalId>MRN-2026-08417</LocalId>
+        <StateProvinceId>WA-982-417-06</StateProvinceId>
+        <SSN>555-42-8173</SSN>
+        <OtherIdList>
+          <OtherId Type="DistrictStudentId" TypeCodeset="urn:mariner:identifier-types">MPS-08417</OtherId>
+          <OtherId Type="LibraryCard" TypeCodeset="urn:mariner:identifier-types">LIB-744-1902</OtherId>
+        </OtherIdList>
+        <Name Type="LegalName" TypeCodeset="urn:sif:name-types">
+          <Prefix>Ms.</Prefix>
+          <LastName>Quispe</LastName>
+          <FirstName>Amaranta</FirstName>
+          <MiddleName>Lucía</MiddleName>
+          <Suffix>II</Suffix>
+          <PreferredName>Ama</PreferredName>
+          <SortName>Quispe, Amaranta Lucía</SortName>
+          <FullName>Ms. Amaranta Lucía Quispe II</FullName>
+        </Name>
+        <OtherNames>
+          <Name Type="Nickname" TypeCodeset="urn:sif:name-types">
+            <Prefix>Ms.</Prefix>
+            <LastName>Quispe</LastName>
+            <FirstName>Ama</FirstName>
+            <MiddleName>Lucía</MiddleName>
+            <Suffix>II</Suffix>
+            <PreferredName>Ama</PreferredName>
+            <SortName>Quispe, Ama Lucía</SortName>
+            <FullName>Ms. Ama Lucía Quispe II</FullName>
+          </Name>
+          <Name Type="PreferredGivenName" TypeCodeset="urn:sif:name-types">
+            <Prefix>Ms.</Prefix>
+            <LastName>Quispe</LastName>
+            <FirstName>Amaranta</FirstName>
+            <MiddleName>Lucía</MiddleName>
+            <Suffix>II</Suffix>
+            <PreferredName>Ama</PreferredName>
+            <SortName>Quispe, Amaranta Lucía</SortName>
+            <FullName>Ms. Amaranta Lucía Quispe II</FullName>
+          </Name>
+        </OtherNames>
+        <DemographicsData>
+          <RaceList>
+            <Race>
+              <Code Codeset="urn:ceds:race">AmericanIndianOrAlaskaNative</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Text">Quechua heritage</OtherCode>
+              </OtherCodeList>
+              <Proportion>0.50</Proportion>
+            </Race>
+            <Race>
+              <Code Codeset="urn:ceds:race">White</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Text">Multiracial family background</OtherCode>
+              </OtherCodeList>
+              <Proportion>0.50</Proportion>
+            </Race>
+          </RaceList>
+          <Gender Codeset="urn:ceds:gender">Female</Gender>
+          <BirthDate>2015-03-14</BirthDate>
+          <EnglishProficiency>
+            <Code Codeset="urn:ceds:english-proficiency">Yes</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">FluentEnglish</OtherCode>
+            </OtherCodeList>
+          </EnglishProficiency>
+          <LanguageList>
+            <Language>
+              <Code Codeset="urn:iso:639-2">eng</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Text">English</OtherCode>
+              </OtherCodeList>
+              <LanguageType Codeset="urn:sif:language-types">Primary</LanguageType>
+              <Dialect>Pacific Northwest English</Dialect>
+            </Language>
+            <Language>
+              <Code Codeset="urn:iso:639-2">spa</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Text">Spanish</OtherCode>
+              </OtherCodeList>
+              <LanguageType Codeset="urn:sif:language-types">Home</LanguageType>
+              <Dialect>Peruvian Spanish</Dialect>
+            </Language>
+          </LanguageList>
+          <HispanicLatino Codeset="urn:ceds:hispanic-latino">Yes</HispanicLatino>
+          <CountryOfBirth Codeset="urn:iso:3166-1">US</CountryOfBirth>
+          <DwellingArrangement>
+            <Code Codeset="urn:mariner:dwelling-arrangements">FamilyHome</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Text">Two-parent household</OtherCode>
+            </OtherCodeList>
+          </DwellingArrangement>
+        </DemographicsData>
+        <AddressList>
+          <Address Type="Physical" TypeCodeset="urn:sif:address-types">
+            <Street>
+              <Line1>4827 NE Alder Lantern Way</Line1>
+              <Line2>Building C</Line2>
+              <Line3>North Entrance</Line3>
+              <Complex>Lantern Ridge Homes</Complex>
+              <StreetNumber>4827</StreetNumber>
+              <StreetPrefix>NE</StreetPrefix>
+              <StreetName>Alder Lantern</StreetName>
+              <StreetType>Way</StreetType>
+              <StreetSuffix>NE</StreetSuffix>
+              <ApartmentType>Apartment</ApartmentType>
+              <ApartmentNumberPrefix>Unit</ApartmentNumberPrefix>
+              <ApartmentNumber>3C</ApartmentNumber>
+              <ApartmentNumberSuffix>North</ApartmentNumberSuffix>
+            </Street>
+            <City>Evergreen Harbor</City>
+            <County>Mariner County</County>
+            <StateProvince Codeset="urn:usps:states">WA</StateProvince>
+            <StateANSICode Codeset="urn:ansi:states">53</StateANSICode>
+            <Country Codeset="urn:iso:3166-1">US</Country>
+            <PostalCode>98118</PostalCode>
+            <GridLocation>
+              <Latitude>47.539261</Latitude>
+              <Longitude>-122.276844</Longitude>
+            </GridLocation>
+            <AddressRefId>ce06c08e-1139-4ccf-ad55-9de53b1d17a4</AddressRefId>
+          </Address>
+          <Address Type="Mailing" TypeCodeset="urn:sif:address-types">
+            <Street>
+              <Line1>PO Box 18427</Line1>
+              <Line2>Evergreen Harbor Postal Annex</Line2>
+              <Line3>Family Mailbox</Line3>
+              <Complex>Evergreen Harbor Postal Annex</Complex>
+              <StreetNumber>18427</StreetNumber>
+              <StreetPrefix>NE</StreetPrefix>
+              <StreetName>Harbor</StreetName>
+              <StreetType>Post</StreetType>
+              <StreetSuffix>NE</StreetSuffix>
+              <ApartmentType>Box</ApartmentType>
+              <ApartmentNumberPrefix>PO</ApartmentNumberPrefix>
+              <ApartmentNumber>18427</ApartmentNumber>
+              <ApartmentNumberSuffix>Main</ApartmentNumberSuffix>
+            </Street>
+            <City>Evergreen Harbor</City>
+            <County>Mariner County</County>
+            <StateProvince Codeset="urn:usps:states">WA</StateProvince>
+            <StateANSICode Codeset="urn:ansi:states">53</StateANSICode>
+            <Country Codeset="urn:iso:3166-1">US</Country>
+            <PostalCode>98118</PostalCode>
+            <GridLocation>
+              <Latitude>47.539261</Latitude>
+              <Longitude>-122.276844</Longitude>
+            </GridLocation>
+            <AddressRefId>d3fdc051-c899-4320-92ef-cfbeac12ee10</AddressRefId>
+          </Address>
+        </AddressList>
+        <PhoneNumberList>
+          <PhoneNumber Type="Home" TypeCodeset="urn:sif:phone-types">
+            <Number>206-555-0184</Number>
+            <Extension>12</Extension>
+            <ListedStatus>Unlisted</ListedStatus>
+          </PhoneNumber>
+          <PhoneNumber Type="Mobile" TypeCodeset="urn:sif:phone-types">
+            <Number>206-555-0198</Number>
+            <Extension>0</Extension>
+            <ListedStatus>Unlisted</ListedStatus>
+          </PhoneNumber>
+        </PhoneNumberList>
+        <IDEA Codeset="urn:mariner:program-status">No</IDEA>
+        <Migrant Codeset="urn:mariner:program-status">No</Migrant>
+        <Title1 Codeset="urn:mariner:program-status">Yes</Title1>
+        <GiftedTalented Codeset="urn:mariner:program-status">Yes</GiftedTalented>
+        <EconomicDisadvantage Codeset="urn:mariner:program-status">No</EconomicDisadvantage>
+        <ELL Codeset="urn:mariner:program-status">No</ELL>
+        <Homeless Codeset="urn:mariner:program-status">No</Homeless>
+        <Section504 Codeset="urn:mariner:program-status">No</Section504>
+        <VocationalConcentrator Codeset="urn:mariner:program-status">No</VocationalConcentrator>
+        <Immigrant Codeset="urn:mariner:program-status">No</Immigrant>
+        <NeglectedDelinquent Codeset="urn:mariner:program-status">No</NeglectedDelinquent>
+      </StudentPersonalData>
+      <StudentContactsSummary>
+        <ParentGuardian1>
+          <Name Type="04">
+            <Prefix>Dr.</Prefix>
+            <LastName>Quispe</LastName>
+            <FirstName>Marisol</FirstName>
+            <MiddleName>Elena</MiddleName>
+            <Suffix>III</Suffix>
+            <PreferredName>Mari</PreferredName>
+            <SortName>Quispe, Marisol Elena</SortName>
+            <FullName>Dr. Marisol Elena Quispe III</FullName>
+          </Name>
+          <PhoneNumberList>
+            <PhoneNumber Type="Mobile" TypeCodeset="urn:sif:phone-types">
+              <Number>206-555-0121</Number>
+              <Extension>0</Extension>
+              <ListedStatus>Unlisted</ListedStatus>
+            </PhoneNumber>
+            <PhoneNumber Type="Work" TypeCodeset="urn:sif:phone-types">
+              <Number>206-555-0147</Number>
+              <Extension>304</Extension>
+              <ListedStatus>Listed</ListedStatus>
+            </PhoneNumber>
+          </PhoneNumberList>
+          <AddressList>
+            <Address Type="MotherAddress" TypeCodeset="urn:sif:address-types">
+              <Street>
+                <Line1>4827 NE Alder Lantern Way</Line1>
+                <Line2>Building C</Line2>
+                <Line3>North Entrance</Line3>
+                <Complex>Lantern Ridge Homes</Complex>
+                <StreetNumber>4827</StreetNumber>
+                <StreetPrefix>NE</StreetPrefix>
+                <StreetName>Alder Lantern</StreetName>
+                <StreetType>Way</StreetType>
+                <StreetSuffix>NE</StreetSuffix>
+                <ApartmentType>Apartment</ApartmentType>
+                <ApartmentNumberPrefix>Unit</ApartmentNumberPrefix>
+                <ApartmentNumber>3C</ApartmentNumber>
+                <ApartmentNumberSuffix>North</ApartmentNumberSuffix>
+              </Street>
+              <City>Evergreen Harbor</City>
+              <County>Mariner County</County>
+              <StateProvince Codeset="urn:usps:states">WA</StateProvince>
+              <StateANSICode Codeset="urn:ansi:states">53</StateANSICode>
+              <Country Codeset="urn:iso:3166-1">US</Country>
+              <PostalCode>98118</PostalCode>
+              <GridLocation>
+                <Latitude>47.539261</Latitude>
+                <Longitude>-122.276844</Longitude>
+              </GridLocation>
+              <AddressRefId>4cd8da82-c34d-4aca-b186-584ab06d0faa</AddressRefId>
+            </Address>
+            <Address Type="Mailing" TypeCodeset="urn:sif:address-types">
+              <Street>
+                <Line1>PO Box 18427</Line1>
+                <Line2>Evergreen Harbor Postal Annex</Line2>
+                <Line3>Family Mailbox</Line3>
+                <Complex>Evergreen Harbor Postal Annex</Complex>
+                <StreetNumber>18427</StreetNumber>
+                <StreetPrefix>NE</StreetPrefix>
+                <StreetName>Harbor</StreetName>
+                <StreetType>Post</StreetType>
+                <StreetSuffix>NE</StreetSuffix>
+                <ApartmentType>Box</ApartmentType>
+                <ApartmentNumberPrefix>PO</ApartmentNumberPrefix>
+                <ApartmentNumber>18427</ApartmentNumber>
+                <ApartmentNumberSuffix>Main</ApartmentNumberSuffix>
+              </Street>
+              <City>Evergreen Harbor</City>
+              <County>Mariner County</County>
+              <StateProvince Codeset="urn:usps:states">WA</StateProvince>
+              <StateANSICode Codeset="urn:ansi:states">53</StateANSICode>
+              <Country Codeset="urn:iso:3166-1">US</Country>
+              <PostalCode>98118</PostalCode>
+              <GridLocation>
+                <Latitude>47.539261</Latitude>
+                <Longitude>-122.276844</Longitude>
+              </GridLocation>
+              <AddressRefId>c7a01eb5-9225-4517-bed7-4f9713319bd1</AddressRefId>
+            </Address>
+          </AddressList>
+        </ParentGuardian1>
+        <ParentGuardian2>
+          <Name Type="04">
+            <Prefix>Mr.</Prefix>
+            <LastName>Vega</LastName>
+            <FirstName>Tadeo</FirstName>
+            <MiddleName>Rafael</MiddleName>
+            <Suffix>Jr.</Suffix>
+            <PreferredName>Tad</PreferredName>
+            <SortName>Vega, Tadeo Rafael</SortName>
+            <FullName>Mr. Tadeo Rafael Vega Jr.</FullName>
+          </Name>
+          <PhoneNumberList>
+            <PhoneNumber Type="Mobile" TypeCodeset="urn:sif:phone-types">
+              <Number>425-555-0175</Number>
+              <Extension>0</Extension>
+              <ListedStatus>Unlisted</ListedStatus>
+            </PhoneNumber>
+            <PhoneNumber Type="Work" TypeCodeset="urn:sif:phone-types">
+              <Number>425-555-0116</Number>
+              <Extension>208</Extension>
+              <ListedStatus>Listed</ListedStatus>
+            </PhoneNumber>
+          </PhoneNumberList>
+          <AddressList>
+            <Address Type="FatherAddress" TypeCodeset="urn:sif:address-types">
+              <Street>
+                <Line1>611 Harbor Glass Avenue</Line1>
+                <Line2>Suite 14</Line2>
+                <Line3>West Courtyard</Line3>
+                <Complex>Glassworks Lofts</Complex>
+                <StreetNumber>611</StreetNumber>
+                <StreetPrefix>SW</StreetPrefix>
+                <StreetName>Harbor Glass</StreetName>
+                <StreetType>Avenue</StreetType>
+                <StreetSuffix>SW</StreetSuffix>
+                <ApartmentType>Suite</ApartmentType>
+                <ApartmentNumberPrefix>Suite</ApartmentNumberPrefix>
+                <ApartmentNumber>14</ApartmentNumber>
+                <ApartmentNumberSuffix>West</ApartmentNumberSuffix>
+              </Street>
+              <City>Evergreen Harbor</City>
+              <County>Mariner County</County>
+              <StateProvince Codeset="urn:usps:states">WA</StateProvince>
+              <StateANSICode Codeset="urn:ansi:states">53</StateANSICode>
+              <Country Codeset="urn:iso:3166-1">US</Country>
+              <PostalCode>98109</PostalCode>
+              <GridLocation>
+                <Latitude>47.625018</Latitude>
+                <Longitude>-122.349504</Longitude>
+              </GridLocation>
+              <AddressRefId>cfd59a3d-3af3-4e85-8e86-12c60efb0c2d</AddressRefId>
+            </Address>
+            <Address Type="Mailing" TypeCodeset="urn:sif:address-types">
+              <Street>
+                <Line1>PO Box 61114</Line1>
+                <Line2>Evergreen Harbor Postal Annex</Line2>
+                <Line3>Vega Family Mail</Line3>
+                <Complex>Evergreen Harbor Postal Annex</Complex>
+                <StreetNumber>61114</StreetNumber>
+                <StreetPrefix>SW</StreetPrefix>
+                <StreetName>Harbor</StreetName>
+                <StreetType>Post</StreetType>
+                <StreetSuffix>SW</StreetSuffix>
+                <ApartmentType>Box</ApartmentType>
+                <ApartmentNumberPrefix>PO</ApartmentNumberPrefix>
+                <ApartmentNumber>61114</ApartmentNumber>
+                <ApartmentNumberSuffix>Main</ApartmentNumberSuffix>
+              </Street>
+              <City>Evergreen Harbor</City>
+              <County>Mariner County</County>
+              <StateProvince Codeset="urn:usps:states">WA</StateProvince>
+              <StateANSICode Codeset="urn:ansi:states">53</StateANSICode>
+              <Country Codeset="urn:iso:3166-1">US</Country>
+              <PostalCode>98109</PostalCode>
+              <GridLocation>
+                <Latitude>47.625018</Latitude>
+                <Longitude>-122.349504</Longitude>
+              </GridLocation>
+              <AddressRefId>304d63a7-1ca2-4ac6-9cb9-16123928041c</AddressRefId>
+            </Address>
+          </AddressList>
+        </ParentGuardian2>
+      </StudentContactsSummary>
+    </StudentDemographicRecord>
+  </xhtml:Example>
+  <xhtml:Example name="StudentDemographicRecord - Example 2" xmlns="">
     <StudentDemographicRecord RefId="0B4AC4176FED4F00BCB6FBF1AE466FD2" SIF_RefObject="StudentRecordExchange" SIF_RefId="0EAF9D6DA4854F348103B04BFEAC65B2">
       <ReportingDate>2006-09-26</ReportingDate>
       <StudentPersonalData>

@@ -105,7 +105,63 @@
     </Description>
     <Type ref="CommonTypes" name="xStaffReferenceListType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="xRoster - Example 1">
+    <xRoster refId="6fc78b04-d6e9-49cd-8231-7f34ccade129">
+      <courseRefId>fb3e5229-9c3f-4220-b0dd-90632a8ffeec</courseRefId>
+      <courseTitle>Integrated Mathematics 7</courseTitle>
+      <sectionRefId>192849b1-6357-4eb6-b362-15bb56c58f3a</sectionRefId>
+      <subject>Mathematics</subject>
+      <schoolRefId>27aebbac-0571-4303-b0c2-9c515b8d9f9b</schoolRefId>
+      <schoolSectionId>IM7-204-B</schoolSectionId>
+      <schoolYear>2026</schoolYear>
+      <meetingTimes>
+        <meetingTime>
+          <timeTableDay>A</timeTableDay>
+          <classMeetingDays>
+            <bellScheduleDay>Tuesday</bellScheduleDay>
+          </classMeetingDays>
+          <timeTablePeriod>Period3</timeTablePeriod>
+          <roomNumber>204B</roomNumber>
+          <classBeginningTime>10:05:00</classBeginningTime>
+          <classEndingTime>10:55:00</classEndingTime>
+          <sessionCode>SPRING</sessionCode>
+          <instructionalDeliveryMode>InPerson</instructionalDeliveryMode>
+          <schoolCalendarRefId>1b1f1f62-2528-40d8-8ebb-1785685a0e1a</schoolCalendarRefId>
+        </meetingTime>
+      </meetingTimes>
+      <students>
+        <studentReference>
+          <refId>f89b6a43-c6dd-482d-8288-2424d9840fdd</refId>
+          <localId>STU-48291</localId>
+          <givenName>Marisol</givenName>
+          <familyName>Quintero</familyName>
+        </studentReference>
+      </students>
+      <primaryStaff>
+        <staffPersonReference>
+          <refId>5d6bf56e-bb7a-444c-b099-b205c6d32eee</refId>
+          <localId>STF-17304</localId>
+          <givenName>Darius</givenName>
+          <familyName>Okafor</familyName>
+        </staffPersonReference>
+        <teacherOfRecord>true</teacherOfRecord>
+        <percentResponsible>80</percentResponsible>
+      </primaryStaff>
+      <otherStaffs>
+        <otherStaff>
+          <staffPersonReference>
+            <refId>74e89578-4abe-4249-bd2e-7fedbe05c709</refId>
+            <localId>STF-19672</localId>
+            <givenName>Leilani</givenName>
+            <familyName>Kealoha</familyName>
+          </staffPersonReference>
+          <teacherOfRecord>false</teacherOfRecord>
+          <percentResponsible>20</percentResponsible>
+        </otherStaff>
+      </otherStaffs>
+    </xRoster>
+  </xhtml:Example>
+  <xhtml:Example name="xRoster - Example 2" xmlns="">
     <xRoster refId="0A85D682-8151-4897-B226-867C1D585281">
       <courseRefId>9FCA2918-FD73-4F32-A957-6AE6CC9306BA</courseRefId>
       <courseTitle>Tech 7</courseTitle>

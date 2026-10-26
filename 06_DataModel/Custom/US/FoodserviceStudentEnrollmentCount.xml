@@ -52,7 +52,36 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="FoodserviceStudentEnrollmentCount - Example 1">
+    <FoodserviceStudentEnrollmentCount RefId="ddb392a3-2a54-4a96-969b-6c806f8c5215" SchoolInfoRefId="054e4210-37d7-4ff3-bb74-c3cf0c06846e" Date="2025-05-01">
+      <Program Type="NSLP" TypeCodeset="https://www.fns.usda.gov/nslp">National School Lunch Program</Program>
+      <Counts>
+        <Count>
+          <MealStatus Type="ReducedPrice" TypeCodeset="https://www.fns.usda.gov/nslp">
+            <StartDate>2024-08-19</StartDate>
+            <EndDate>2025-06-06</EndDate>
+            <SchoolYear>2025</SchoolYear>
+          </MealStatus>
+          <MealType Codeset="https://www.fns.usda.gov/school-meals">Lunch</MealType>
+          <Amount Type="Cash" TypeCodeset="https://www.fns.usda.gov/school-meals" Credits="0" Currency="USD" CurrencyCodeset="ISO4217">0.40</Amount>
+          <Tax Currency="USD" CurrencyCodeset="ISO4217">0.00</Tax>
+          <Value>84</Value>
+        </Count>
+        <Count>
+          <MealStatus Type="Free" TypeCodeset="https://www.fns.usda.gov/nslp">
+            <StartDate>2024-08-19</StartDate>
+            <EndDate>2025-06-06</EndDate>
+            <SchoolYear>2025</SchoolYear>
+          </MealStatus>
+          <MealType Codeset="https://www.fns.usda.gov/school-meals">Breakfast</MealType>
+          <Amount Type="Cash" TypeCodeset="https://www.fns.usda.gov/school-meals" Credits="0" Currency="USD" CurrencyCodeset="ISO4217">0.00</Amount>
+          <Tax Currency="USD" CurrencyCodeset="ISO4217">0.00</Tax>
+          <Value>126</Value>
+        </Count>
+      </Counts>
+    </FoodserviceStudentEnrollmentCount>
+  </xhtml:Example>
+  <xhtml:Example name="FoodserviceStudentEnrollmentCount - Example 2" xmlns="">
     <FoodserviceStudentEnrollmentCount RefId="359D75101AD0A9D7A8C3DAD0A85103A2" SchoolInfoRefId="E822BCDC9E7A40F787ED8183D3B485B5" Date="2003-08-25">
       <Program Type="Foodservice">NSLP</Program>
       <Counts>

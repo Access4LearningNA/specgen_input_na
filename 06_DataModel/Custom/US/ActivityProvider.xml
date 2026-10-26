@@ -57,7 +57,42 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="ActivityProvider - Example 1">
+    <ActivityProvider RefId="a63a16b4-652f-49ac-8191-2d86dec45e18">
+      <LocalId>CASCADE-ACT-041</LocalId>
+      <StateProvinceId>WA-AP-8041</StateProvinceId>
+      <Name>Cascade Learning Expeditions</Name>
+      <Address Type="Physical" TypeCodeset="https://www.sifassociation.org/codesets/address-type">
+        <Street>
+          <Line1>1847 Alder Creek Way</Line1>
+          <Line2>Suite 240</Line2>
+          <Line3>North Building</Line3>
+          <Complex>Cedar Harbor Professional Center</Complex>
+          <StreetNumber>1847</StreetNumber>
+          <StreetPrefix>NE</StreetPrefix>
+          <StreetName>Alder Creek</StreetName>
+          <StreetType>Way</StreetType>
+          <StreetSuffix>NE</StreetSuffix>
+          <ApartmentType>Suite</ApartmentType>
+          <ApartmentNumberPrefix>Unit</ApartmentNumberPrefix>
+          <ApartmentNumber>240</ApartmentNumber>
+          <ApartmentNumberSuffix>B</ApartmentNumberSuffix>
+        </Street>
+        <City>Everett</City>
+        <County>Snohomish</County>
+        <StateProvince Codeset="https://www.sifassociation.org/codesets/us-state">WA</StateProvince>
+        <StateANSICode Codeset="https://www.census.gov/library/reference/code-lists/ansi.html">53</StateANSICode>
+        <Country Codeset="https://www.iso.org/iso-3166-country-codes.html">US</Country>
+        <PostalCode>98201</PostalCode>
+        <GridLocation>
+          <Latitude>47.978984</Latitude>
+          <Longitude>-122.202079</Longitude>
+        </GridLocation>
+        <AddressRefId>ffeed7fe-63dd-4075-9d02-75cff9c2c367</AddressRefId>
+      </Address>
+    </ActivityProvider>
+  </xhtml:Example>
+  <xhtml:Example name="ActivityProvider - Example 2" xmlns="">
     <ActivityProvider RefId="FE1078BA3261545A31905937B265CE01">
       <LocalId>305.0</LocalId>
       <StateProvinceId>4580</StateProvinceId>

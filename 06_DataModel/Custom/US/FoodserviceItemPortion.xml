@@ -69,7 +69,15 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="FoodserviceItemPortion - Example 1">
+    <FoodserviceItemPortion RefId="8b0b0300-7900-415f-ac03-07645711c432">
+      <FoodserviceItemUnitRefId>a02e2836-1d2c-4ba5-aec7-6f24557d0fe4</FoodserviceItemUnitRefId>
+      <ItemPortionQuantity>1.00</ItemPortionQuantity>
+      <ItemPortionType Codeset="https://example.org/codesets/foodservice-portion-types">Serving</ItemPortionType>
+      <Description>One whole-grain vegetable quesadilla serving for a middle-school lunch tray.</Description>
+    </FoodserviceItemPortion>
+  </xhtml:Example>
+  <xhtml:Example name="FoodserviceItemPortion - Example 2" xmlns="">
     <FoodserviceItemPortion RefId="EF521958AB474559B2AE7BD82647C66B">
       <FoodserviceItemUnitRefId>D9837A776DD626777872361DD118873C</FoodserviceItemUnitRefId>
       <ItemPortionQuantity>1</ItemPortionQuantity>

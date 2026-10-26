@@ -55,7 +55,14 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="FinancialClass - Example 1">
+    <FinancialClass RefId="61bdc8f3-cc75-4808-b839-d8902b4bf9a5">
+      <Name>Northshore STEM Materials Account</Name>
+      <Description>Financial classification for district-funded instructional science, technology, engineering, and mathematics materials.</Description>
+      <ClassType Codeset="https://example.edu/codesets/financial-class-types">InstructionalMaterials</ClassType>
+    </FinancialClass>
+  </xhtml:Example>
+  <xhtml:Example name="FinancialClass - Example 2" xmlns="">
     <FinancialClass RefId="EEC8FC128D2C4EE394A86C5395024EDE">
       <Name>Asset</Name>
       <Description>Assets</Description>

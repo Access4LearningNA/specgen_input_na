@@ -105,7 +105,39 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="AssessmentForm - Example 1">
+    <AssessmentForm RefId="bc7d6702-4583-44a6-a9d9-e1531267c617" AssessmentRefId="f398c48e-2474-4746-9833-2e997abff8e7">
+      <AssessmentType Codeset="https://ceds.ed.gov/assessment-types">Benchmark</AssessmentType>
+      <FormName>Harbor County Grades 5–6 Reading Comprehension Benchmark, Spring Form B</FormName>
+      <FormNumbers>
+        <FormNumber>HCRCB-2026-05-B</FormNumber>
+        <FormNumber>HCRCB-2026-06-B</FormNumber>
+      </FormNumbers>
+      <Level>05</Level>
+      <Period>Spring 2026</Period>
+      <GradeLevels>
+        <GradeLevel>
+          <Code Codeset="https://ceds.ed.gov/grade-levels">05</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">05</OtherCode>
+            <OtherCode Codeset="Local">GRADE5</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+        <GradeLevel>
+          <Code Codeset="https://ceds.ed.gov/grade-levels">06</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">06</OtherCode>
+            <OtherCode Codeset="Local">GRADE6</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+      </GradeLevels>
+      <AssessmentSubTestRefIds>
+        <AssessmentSubTestRefId>597230bc-1f66-4751-ad7f-b28612dee13a</AssessmentSubTestRefId>
+        <AssessmentSubTestRefId>1f54a511-49df-4ab8-97f9-f8feda1b5b6f</AssessmentSubTestRefId>
+      </AssessmentSubTestRefIds>
+    </AssessmentForm>
+  </xhtml:Example>
+  <xhtml:Example name="AssessmentForm - Example 2" xmlns="">
     <AssessmentForm RefId="13F3C7AFF8464EE1862B0622A010883E" AssessmentRefId="77C5D8A7345B4BE883053228C9708512">
       <AssessmentType>standard</AssessmentType>
       <FormName>Form A</FormName>

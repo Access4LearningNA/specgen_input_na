@@ -43,7 +43,12 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="RoomType - Example 1">
+    <RoomType RefId="2cbc9f27-0797-4cfb-b33e-3725c209f53a" SchoolInfoRefId="6a8475b6-ab41-4954-b800-48679deb3d32">
+      <Description>Collaborative science laboratory classroom</Description>
+    </RoomType>
+  </xhtml:Example>
+  <xhtml:Example name="RoomType - Example 2" xmlns="">
     <RoomType RefId="D3E34B359D75101A8C3D00AA001A1652" SchoolInfoRefId="A2E35B359D75101A8C3D00AA001A0000">
       <Description>Gymnasium</Description>
     </RoomType>

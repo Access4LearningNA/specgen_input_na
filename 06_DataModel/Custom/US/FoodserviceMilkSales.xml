@@ -51,7 +51,36 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="FoodserviceMilkSales - Example 1">
+    <FoodserviceMilkSales RefId="32dbdeca-e750-463e-83a4-4de0237a92eb">
+      <SchoolInfoRefId>22a059a7-286f-45c9-9697-c63448f74753</SchoolInfoRefId>
+      <Date>2026-03-17</Date>
+      <Program Type="NationalSchoolLunchProgram" TypeCodeset="https://www.fns.usda.gov/nslp">National School Lunch Program</Program>
+      <SaleQuantities>
+        <SaleQuantity>
+          <Value>186</Value>
+          <MealStatus Type="Paid" TypeCodeset="https://www.fns.usda.gov/cn/labeling/meal-status">
+            <StartDate>2025-08-18</StartDate>
+            <EndDate>2026-06-05</EndDate>
+            <SchoolYear>2026</SchoolYear>
+          </MealStatus>
+          <SaleUnit>Half-pint carton</SaleUnit>
+          <ChargeToChild Currency="USD" CurrencyCodeset="ISO-4217">0.60</ChargeToChild>
+        </SaleQuantity>
+        <SaleQuantity>
+          <Value>94</Value>
+          <MealStatus Type="ReducedPrice" TypeCodeset="https://www.fns.usda.gov/cn/labeling/meal-status">
+            <StartDate>2025-08-18</StartDate>
+            <EndDate>2026-06-05</EndDate>
+            <SchoolYear>2026</SchoolYear>
+          </MealStatus>
+          <SaleUnit>Half-pint carton</SaleUnit>
+          <ChargeToChild Currency="USD" CurrencyCodeset="ISO-4217">0.00</ChargeToChild>
+        </SaleQuantity>
+      </SaleQuantities>
+    </FoodserviceMilkSales>
+  </xhtml:Example>
+  <xhtml:Example name="FoodserviceMilkSales - Example 2" xmlns="">
     <FoodserviceMilkSales RefId="D21CF29B7FB44965A9CF950E1E60B21E">
       <SchoolInfoRefId>AA66800BE0D84E80AA5838FA97EE3A3E</SchoolInfoRefId>
       <Date>2001-10-31</Date>

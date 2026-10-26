@@ -68,7 +68,22 @@
 </xsl:copy>
 </xsl:template>
 <xsl:template match="xContact" mode="object">
-<xsl:apply-templates select="." mode="xContactObjectType" />
+<xsl:copy>
+    <xsl:apply-templates select="@*" mode="copy" />
+<xsl:apply-templates select="name" mode="xPersonNameType" />
+<xsl:apply-templates select="otherNames" mode="xOtherPersonNameListType" />
+<xsl:apply-templates select="localId" mode="xPersonIdType" />
+<xsl:apply-templates select="loginId" mode="xLoginIdType" />
+<xsl:apply-templates select="otherIds" mode="xOtherPersonIdListType" />
+<xsl:apply-templates select="address" mode="xPersonAddressType" />
+<xsl:apply-templates select="phoneNumber" mode="xTelephoneType" />
+<xsl:apply-templates select="otherPhoneNumbers" mode="xTelephoneListType" />
+<xsl:apply-templates select="email" mode="xEmailType" />
+<xsl:apply-templates select="otherEmails" mode="xEmailListType" />
+<xsl:apply-templates select="sex" mode="copy" />
+<xsl:apply-templates select="employerType" mode="copy" />
+<xsl:apply-templates select="relationships" mode="xContactStudentRelationshipListType" />
+</xsl:copy>
 </xsl:template>
 <xsl:template match="xCourse" mode="object">
 <xsl:copy>
@@ -95,7 +110,17 @@
 </xsl:copy>
 </xsl:template>
 <xsl:template match="xLea" mode="object">
-<xsl:apply-templates select="." mode="xLeaObjectType" />
+<xsl:copy>
+    <xsl:apply-templates select="@*" mode="copy" />
+<xsl:apply-templates select="localId" mode="xOrganizationIdType" />
+<xsl:apply-templates select="leaRefId" mode="gRefIdPointerType" />
+<xsl:apply-templates select="stateProvinceId" mode="xOrganizationIdType" />
+<xsl:apply-templates select="ncesId" mode="xOrganizationIdType" />
+<xsl:apply-templates select="leaName" mode="copy" />
+<xsl:apply-templates select="address" mode="xOrganizationAddressType" />
+<xsl:apply-templates select="phoneNumber" mode="xTelephoneType" />
+<xsl:apply-templates select="otherPhoneNumbers" mode="xTelephoneListType" />
+</xsl:copy>
 </xsl:template>
 <xsl:template match="xRoster" mode="object">
 <xsl:copy>
@@ -117,7 +142,7 @@
 <xsl:copy>
     <xsl:apply-templates select="@*" mode="copy" />
 <xsl:apply-templates select="leaRefId" mode="gRefIdPointerType" />
-<xsl:apply-templates select="lea" mode="xLeaObjectType" />
+<xsl:apply-templates select="lea" mode="copy" />
 <xsl:apply-templates select="localId" mode="xOrganizationIdType" />
 <xsl:apply-templates select="stateProvinceId" mode="xOrganizationIdType" />
 <xsl:apply-templates select="otherIds" mode="xOtherOrganizationIdListType" />
@@ -129,7 +154,18 @@
 </xsl:copy>
 </xsl:template>
 <xsl:template match="xStaff" mode="object">
-<xsl:apply-templates select="." mode="xStaffObjectType" />
+<xsl:copy>
+    <xsl:apply-templates select="@*" mode="copy" />
+<xsl:apply-templates select="name" mode="xPersonNameType" />
+<xsl:apply-templates select="localId" mode="xPersonIdType" />
+<xsl:apply-templates select="loginId" mode="xLoginIdType" />
+<xsl:apply-templates select="stateProvinceId" mode="xPersonIdType" />
+<xsl:apply-templates select="otherIds" mode="xOtherPersonIdListType" />
+<xsl:apply-templates select="sex" mode="copy" />
+<xsl:apply-templates select="email" mode="xEmailType" />
+<xsl:apply-templates select="primaryAssignment" mode="xStaffPersonAssignmentType" />
+<xsl:apply-templates select="otherAssignments" mode="xStaffPersonAssignmentListType" />
+</xsl:copy>
 </xsl:template>
 <xsl:template match="xStudent" mode="object">
 <xsl:apply-templates select="." mode="xStudentObjectType" />
@@ -995,6 +1031,9 @@
 <xsl:apply-templates select="PerkinsLEPStatus" mode="StudentParticipationPerkinsLEPStatusType" />
 <xsl:apply-templates select="TitleIIIAccountabilityProgressStatus" mode="StudentParticipationTitleIIIAccountabilityProgressStatusType" />
 <xsl:apply-templates select="TitleIIIImmigrantParticipationStatus" mode="StudentParticipationTitleIIIImmigrantParticipationStatusType" />
+<xsl:apply-templates select="TitleIIILIEPInterventionStrategy" mode="StudentParticipationTitleIIILIEPInterventionStrategyType" />
+<xsl:apply-templates select="TribalAffiliation" mode="StudentParticipationTribalAffiliationType" />
+<xsl:apply-templates select="TribalCitizenMember" mode="StudentParticipationTribalCitizenMemberType" />
 <xsl:apply-templates select="NeglectedOrDelinquentAchievementIndicator" mode="StudentParticipationNeglectedOrDelinquentAchievementIndicatorType" />
 <xsl:apply-templates select="NeglectedOrDelinquentAcademicOutcomeIndicator" mode="StudentParticipationNeglectedOrDelinquentAcademicOutcomeIndicatorType" />
 <xsl:apply-templates select="SIF_Metadata" mode="SIF_MetadataType" />
@@ -1035,9 +1074,7 @@
 <xsl:copy>
     <xsl:apply-templates select="@*" mode="copy" />
 <xsl:apply-templates select="StudentPersonalRefId" mode="copy" />
-<xsl:apply-templates select="Name" mode="NameOfRecordType" />
-<xsl:apply-templates select="LocalId" mode="LocalIdType" />
-<xsl:apply-templates select="StateProvinceId" mode="StateProvinceIdType" />
+<xsl:apply-templates select="NameLocalIdStateProvinceId" mode="StateProvinceIdType" />
 <xsl:apply-templates select="StateDistrictId" mode="StateProvinceIdType" />
 <xsl:apply-templates select="LEAInfoRefId" mode="copy" />
 <xsl:apply-templates select="SchoolInfoRefId" mode="copy" />
@@ -3599,6 +3636,8 @@
 <xsl:apply-templates select="Name" mode="NameType" />
 <xsl:apply-templates select="SIF_RefId" mode="copy" />
 <xsl:apply-templates select="Injury" mode="copy" />
+<xsl:apply-templates select="RelatedToList" mode="RelatedToListType" />
+<xsl:apply-templates select="ActionList" mode="DisciplineActionListType" />
 </xsl:copy>
 </xsl:template>
 <xsl:template match="node()|@*" mode="IdentityProviderListType">
@@ -6406,6 +6445,24 @@
 </xsl:copy>
 </xsl:template>
 <xsl:template match="node()|@*" mode="StudentParticipationTitleIIIImmigrantParticipationStatusType">
+<xsl:copy>
+    <xsl:apply-templates select="@*" mode="copy" />
+<xsl:apply-templates select="node()" mode="copy" />
+</xsl:copy>
+</xsl:template>
+<xsl:template match="node()|@*" mode="StudentParticipationTitleIIILIEPInterventionStrategyType">
+<xsl:copy>
+    <xsl:apply-templates select="@*" mode="copy" />
+<xsl:apply-templates select="node()" mode="copy" />
+</xsl:copy>
+</xsl:template>
+<xsl:template match="node()|@*" mode="StudentParticipationTribalAffiliationType">
+<xsl:copy>
+    <xsl:apply-templates select="@*" mode="copy" />
+<xsl:apply-templates select="node()" mode="copy" />
+</xsl:copy>
+</xsl:template>
+<xsl:template match="node()|@*" mode="StudentParticipationTribalCitizenMemberType">
 <xsl:copy>
     <xsl:apply-templates select="@*" mode="copy" />
 <xsl:apply-templates select="node()" mode="copy" />

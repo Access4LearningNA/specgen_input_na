@@ -89,7 +89,18 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="" name="IdMAuthentication">
+  <xhtml:Example xmlns="" name="IdMAuthentication - Example 1">
+    <IdMAuthentication RefId="85a5809a-fffd-41af-8ef5-49871bf22644">
+      <UserOrganizationAssociationRefId>db8c3581-7b9b-497d-b6ea-5e56fe1e3c03</UserOrganizationAssociationRefId>
+      <ApplicationRefId>5b82fcbf-58f3-40cd-a61f-a21ecd8e3f5e</ApplicationRefId>
+      <IdentityProviderLoginId>marisol.quintero</IdentityProviderLoginId>
+      <IdentityProviderType Codeset="https://example.org/codesets/identity-provider-types">SAML2</IdentityProviderType>
+      <AuthoritativeSourceId>12a8033b-30c7-4845-aecf-44cb8980a53d</AuthoritativeSourceId>
+      <StartDate>2026-08-01</StartDate>
+      <EndDate>2027-06-30</EndDate>
+    </IdMAuthentication>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="IdMAuthentication - Example 2">
     <IdMAuthentication RefId="FE1078BA3261545A31905937B265CE01">
       <UserOrganizationAssociationRefId>AC3078BA3261545A31905937B265CE02</UserOrganizationAssociationRefId>
       <ApplicationRefId>AC3089BA3261545A31905937B265CE02</ApplicationRefId>

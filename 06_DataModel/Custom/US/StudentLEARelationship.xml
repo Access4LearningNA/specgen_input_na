@@ -148,7 +148,55 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="StudentLEARelationship - Example 1">
+    <StudentLEARelationship RefId="27ae76c1-fac4-4b08-8891-96137c59fd80" StudentPersonalRefId="6e8faf93-5d94-4176-98c1-25efaef1c7c4" LEAInfoRefId="c8fbf90f-4d20-44e6-b8ad-a79d8469f828" SchoolYear="2025">
+      <MembershipType Codeset="urn:example:codeset:lea-membership">OpenEnrollment</MembershipType>
+      <LEARelationshipType>
+        <ResidencyStatus>
+          <Code Codeset="urn:example:codeset:residency-status">01653</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">NonResident</OtherCode>
+            <OtherCode Codeset="Text">Interdistrict attendance resident</OtherCode>
+          </OtherCodeList>
+        </ResidencyStatus>
+        <ProvidingInstruction>true</ProvidingInstruction>
+        <ProvidingServices>true</ProvidingServices>
+        <FinanciallyResponsible>true</FinanciallyResponsible>
+      </LEARelationshipType>
+      <EntryDate>2025-08-18</EntryDate>
+      <EntryType>
+        <Code Codeset="urn:example:codeset:entry-type">01821</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">InitialEnrollment</OtherCode>
+          <OtherCode Codeset="Text">New enrollment for 2025-2026</OtherCode>
+        </OtherCodeList>
+      </EntryType>
+      <ExitDate>2026-06-05</ExitDate>
+      <ExitType>
+        <Code Codeset="urn:example:codeset:exit-type">01907</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">CompletedSchoolYear</OtherCode>
+          <OtherCode Codeset="Text">Completed grade five school year</OtherCode>
+        </OtherCodeList>
+      </ExitType>
+      <ExitStatus>
+        <Code Codeset="urn:example:codeset:exit-status">Temporary</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">SummerBreak</OtherCode>
+          <OtherCode Codeset="Text">Expected to return next school year</OtherCode>
+        </OtherCodeList>
+      </ExitStatus>
+      <NonResidentAttendReason Codeset="urn:example:codeset:nonresident-reason">InterdistrictTransfer</NonResidentAttendReason>
+      <GradeLevel>
+        <Code Codeset="urn:example:codeset:grade-level">05</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">Grade5</OtherCode>
+          <OtherCode Codeset="Text">Fifth Grade</OtherCode>
+        </OtherCodeList>
+      </GradeLevel>
+    </StudentLEARelationship>
+  </xhtml:Example>
+  <xhtml:Example name="StudentLEARelationship - Example 2" xmlns="">
     <StudentLEARelationship RefId="98C3D3224B35AA75101D00AA201B1652" StudentPersonalRefId="D3E34B359D75101A8C3D00AA001A1652" LEAInfoRefId="D3E34B359D7511AA223D00AA001A165A" SchoolYear="2007">
       <MembershipType>Home</MembershipType>
       <LEARelationshipType>

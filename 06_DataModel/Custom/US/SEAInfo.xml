@@ -40,8 +40,8 @@
       <p>The full legally accepted name of the SEA.</p>
     </Description>
     <Type name="xs:normalizedString"/>
-    <cedsId>002191</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/002191</cedsURL>
+    <cedsId>000204</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000204</cedsURL>
   </Item>
   <Item>
     <Element>SEAURL</Element>
@@ -115,7 +115,276 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="SEAInfo - Example 1">
+    <SEAInfo RefId="ff20be03-5d07-4e82-aaa4-16795c91aade">
+      <LocalId>OR-SEA-041</LocalId>
+      <NCESId>4100000</NCESId>
+      <SEAName>Oregon Department of Learning and Civic Development</SEAName>
+      <SEAURL>https://education.example.org/oregon</SEAURL>
+      <CSSOContact>
+        <Name Type="04">
+          <Prefix>Dr.</Prefix>
+          <LastName>Alvarez</LastName>
+          <FirstName>Marisol</FirstName>
+          <MiddleName>Inés</MiddleName>
+          <Suffix>III</Suffix>
+          <PreferredName>Marisol</PreferredName>
+          <SortName>Alvarez, Marisol Inés</SortName>
+          <FullName>Dr. Marisol Inés Alvarez III</FullName>
+        </Name>
+        <PositionTitle>Chief State School Officer</PositionTitle>
+        <Role>State Education Agency Executive</Role>
+        <Address Type="Physical" TypeCodeset="https://www.sifassociation.org/codesets/address-type">
+          <Street>
+            <Line1>255 Capitol Mall</Line1>
+            <Line2>Education Building</Line2>
+            <Line3>Executive Suite 410</Line3>
+            <Complex>Capitol Education Campus</Complex>
+            <StreetNumber>255</StreetNumber>
+            <StreetPrefix>NE</StreetPrefix>
+            <StreetName>Capitol Mall</StreetName>
+            <StreetType>Avenue</StreetType>
+            <StreetSuffix>NE</StreetSuffix>
+            <ApartmentType>Suite</ApartmentType>
+            <ApartmentNumberPrefix>Room</ApartmentNumberPrefix>
+            <ApartmentNumber>410</ApartmentNumber>
+            <ApartmentNumberSuffix>A</ApartmentNumberSuffix>
+          </Street>
+          <City>Salem</City>
+          <County>Marion</County>
+          <StateProvince Codeset="https://www.usa.gov/state-codes">OR</StateProvince>
+          <StateANSICode Codeset="https://www.census.gov/library/reference/code-lists/ansi.html">41</StateANSICode>
+          <Country Codeset="https://www.iso.org/iso-3166-country-codes.html">US</Country>
+          <PostalCode>97301</PostalCode>
+          <GridLocation>
+            <Latitude>44.942897</Latitude>
+            <Longitude>-123.035096</Longitude>
+          </GridLocation>
+          <AddressRefId>c879298b-670f-41a5-bd57-88779321f26a</AddressRefId>
+        </Address>
+        <AddressRefId>170353d6-ba54-48ae-9607-1dcbb4897d26</AddressRefId>
+        <EmailList>
+          <Email Type="Work" TypeCodeset="https://www.sifassociation.org/codesets/email-type">marisol.alvarez@education.example.org</Email>
+          <Email Type="Organizational" TypeCodeset="https://www.sifassociation.org/codesets/email-type">csso@education.example.org</Email>
+        </EmailList>
+        <PhoneNumberList>
+          <PhoneNumber Type="Work" TypeCodeset="https://www.sifassociation.org/codesets/phone-type">
+            <Number>503-555-0148</Number>
+            <Extension>410</Extension>
+            <ListedStatus>Listed</ListedStatus>
+          </PhoneNumber>
+          <PhoneNumber Type="Mobile" TypeCodeset="https://www.sifassociation.org/codesets/phone-type">
+            <Number>503-555-0186</Number>
+            <Extension>86</Extension>
+            <ListedStatus>Unlisted</ListedStatus>
+          </PhoneNumber>
+        </PhoneNumberList>
+      </CSSOContact>
+      <SEAContactList>
+        <SEAContact>
+          <PublishInDirectory Codeset="https://www.sifassociation.org/codesets/directory-publication">true</PublishInDirectory>
+          <ContactInfo>
+            <Name Type="04">
+              <Prefix>Ms.</Prefix>
+              <LastName>Watanabe</LastName>
+              <FirstName>Keiko</FirstName>
+              <MiddleName>Rin</MiddleName>
+              <Suffix>II</Suffix>
+              <PreferredName>Kei</PreferredName>
+              <SortName>Watanabe, Keiko Rin</SortName>
+              <FullName>Ms. Keiko Rin Watanabe II</FullName>
+            </Name>
+            <PositionTitle>Director of Data Stewardship</PositionTitle>
+            <Role>Education Data Privacy Contact</Role>
+            <Address Type="Mailing" TypeCodeset="https://www.sifassociation.org/codesets/address-type">
+              <Street>
+                <Line1>255 Capitol Mall</Line1>
+                <Line2>Data Services Division</Line2>
+                <Line3>Suite 328</Line3>
+                <Complex>Capitol Education Campus</Complex>
+                <StreetNumber>255</StreetNumber>
+                <StreetPrefix>NE</StreetPrefix>
+                <StreetName>Capitol Mall</StreetName>
+                <StreetType>Avenue</StreetType>
+                <StreetSuffix>NE</StreetSuffix>
+                <ApartmentType>Suite</ApartmentType>
+                <ApartmentNumberPrefix>Room</ApartmentNumberPrefix>
+                <ApartmentNumber>328</ApartmentNumber>
+                <ApartmentNumberSuffix>B</ApartmentNumberSuffix>
+              </Street>
+              <City>Salem</City>
+              <County>Marion</County>
+              <StateProvince Codeset="https://www.usa.gov/state-codes">OR</StateProvince>
+              <StateANSICode Codeset="https://www.census.gov/library/reference/code-lists/ansi.html">41</StateANSICode>
+              <Country Codeset="https://www.iso.org/iso-3166-country-codes.html">US</Country>
+              <PostalCode>97301</PostalCode>
+              <GridLocation>
+                <Latitude>44.942897</Latitude>
+                <Longitude>-123.035096</Longitude>
+              </GridLocation>
+              <AddressRefId>cba68274-1256-481c-86cc-85a064f0a720</AddressRefId>
+            </Address>
+            <AddressRefId>8c0cf060-9496-453a-93aa-bb1eb036e4dd</AddressRefId>
+            <EmailList>
+              <Email Type="Work" TypeCodeset="https://www.sifassociation.org/codesets/email-type">keiko.watanabe@education.example.org</Email>
+              <Email Type="Organizational" TypeCodeset="https://www.sifassociation.org/codesets/email-type">privacy@education.example.org</Email>
+            </EmailList>
+            <PhoneNumberList>
+              <PhoneNumber Type="Work" TypeCodeset="https://www.sifassociation.org/codesets/phone-type">
+                <Number>503-555-0127</Number>
+                <Extension>328</Extension>
+                <ListedStatus>Listed</ListedStatus>
+              </PhoneNumber>
+              <PhoneNumber Type="Fax" TypeCodeset="https://www.sifassociation.org/codesets/phone-type">
+                <Number>503-555-0197</Number>
+                <Extension>329</Extension>
+                <ListedStatus>Listed</ListedStatus>
+              </PhoneNumber>
+            </PhoneNumberList>
+          </ContactInfo>
+        </SEAContact>
+        <SEAContact>
+          <PublishInDirectory Codeset="https://www.sifassociation.org/codesets/directory-publication">true</PublishInDirectory>
+          <ContactInfo>
+            <Name Type="04">
+              <Prefix>Mr.</Prefix>
+              <LastName>Redbird</LastName>
+              <FirstName>Taliesin</FirstName>
+              <MiddleName>James</MiddleName>
+              <Suffix>Jr.</Suffix>
+              <PreferredName>Tali</PreferredName>
+              <SortName>Redbird, Taliesin James</SortName>
+              <FullName>Mr. Taliesin James Redbird Jr.</FullName>
+            </Name>
+            <PositionTitle>Director of Career and Technical Education</PositionTitle>
+            <Role>CTE Program Contact</Role>
+            <Address Type="Physical" TypeCodeset="https://www.sifassociation.org/codesets/address-type">
+              <Street>
+                <Line1>255 Capitol Mall</Line1>
+                <Line2>Career Readiness Wing</Line2>
+                <Line3>Suite 214</Line3>
+                <Complex>Capitol Education Campus</Complex>
+                <StreetNumber>255</StreetNumber>
+                <StreetPrefix>NE</StreetPrefix>
+                <StreetName>Capitol Mall</StreetName>
+                <StreetType>Avenue</StreetType>
+                <StreetSuffix>NE</StreetSuffix>
+                <ApartmentType>Suite</ApartmentType>
+                <ApartmentNumberPrefix>Room</ApartmentNumberPrefix>
+                <ApartmentNumber>214</ApartmentNumber>
+                <ApartmentNumberSuffix>C</ApartmentNumberSuffix>
+              </Street>
+              <City>Salem</City>
+              <County>Marion</County>
+              <StateProvince Codeset="https://www.usa.gov/state-codes">OR</StateProvince>
+              <StateANSICode Codeset="https://www.census.gov/library/reference/code-lists/ansi.html">41</StateANSICode>
+              <Country Codeset="https://www.iso.org/iso-3166-country-codes.html">US</Country>
+              <PostalCode>97301</PostalCode>
+              <GridLocation>
+                <Latitude>44.942897</Latitude>
+                <Longitude>-123.035096</Longitude>
+              </GridLocation>
+              <AddressRefId>dbe49d70-1178-46a2-8762-a89f72a6e612</AddressRefId>
+            </Address>
+            <AddressRefId>05fc17aa-fd00-42bb-b341-eec4527289cd</AddressRefId>
+            <EmailList>
+              <Email Type="Work" TypeCodeset="https://www.sifassociation.org/codesets/email-type">taliesin.redbird@education.example.org</Email>
+              <Email Type="Organizational" TypeCodeset="https://www.sifassociation.org/codesets/email-type">cte@education.example.org</Email>
+            </EmailList>
+            <PhoneNumberList>
+              <PhoneNumber Type="Work" TypeCodeset="https://www.sifassociation.org/codesets/phone-type">
+                <Number>503-555-0162</Number>
+                <Extension>214</Extension>
+                <ListedStatus>Listed</ListedStatus>
+              </PhoneNumber>
+              <PhoneNumber Type="Mobile" TypeCodeset="https://www.sifassociation.org/codesets/phone-type">
+                <Number>503-555-0179</Number>
+                <Extension>79</Extension>
+                <ListedStatus>Unlisted</ListedStatus>
+              </PhoneNumber>
+            </PhoneNumberList>
+          </ContactInfo>
+        </SEAContact>
+      </SEAContactList>
+      <PhoneNumberList>
+        <PhoneNumber Type="Work" TypeCodeset="https://www.sifassociation.org/codesets/phone-type">
+          <Number>503-555-0100</Number>
+          <Extension>100</Extension>
+          <ListedStatus>Listed</ListedStatus>
+        </PhoneNumber>
+        <PhoneNumber Type="Fax" TypeCodeset="https://www.sifassociation.org/codesets/phone-type">
+          <Number>503-555-0190</Number>
+          <Extension>190</Extension>
+          <ListedStatus>Listed</ListedStatus>
+        </PhoneNumber>
+      </PhoneNumberList>
+      <AddressList>
+        <Address Type="Physical" TypeCodeset="https://www.sifassociation.org/codesets/address-type">
+          <Street>
+            <Line1>255 Capitol Mall</Line1>
+            <Line2>Education Building</Line2>
+            <Line3>Main Reception</Line3>
+            <Complex>Capitol Education Campus</Complex>
+            <StreetNumber>255</StreetNumber>
+            <StreetPrefix>NE</StreetPrefix>
+            <StreetName>Capitol Mall</StreetName>
+            <StreetType>Avenue</StreetType>
+            <StreetSuffix>NE</StreetSuffix>
+            <ApartmentType>Building</ApartmentType>
+            <ApartmentNumberPrefix>Floor</ApartmentNumberPrefix>
+            <ApartmentNumber>1</ApartmentNumber>
+            <ApartmentNumberSuffix>North</ApartmentNumberSuffix>
+          </Street>
+          <City>Salem</City>
+          <County>Marion</County>
+          <StateProvince Codeset="https://www.usa.gov/state-codes">OR</StateProvince>
+          <StateANSICode Codeset="https://www.census.gov/library/reference/code-lists/ansi.html">41</StateANSICode>
+          <Country Codeset="https://www.iso.org/iso-3166-country-codes.html">US</Country>
+          <PostalCode>97301</PostalCode>
+          <GridLocation>
+            <Latitude>44.942897</Latitude>
+            <Longitude>-123.035096</Longitude>
+          </GridLocation>
+          <AddressRefId>a1d18c8d-75c5-4bcf-a572-25d05fbb1b6a</AddressRefId>
+        </Address>
+        <Address Type="Mailing" TypeCodeset="https://www.sifassociation.org/codesets/address-type">
+          <Street>
+            <Line1>PO Box 14480</Line1>
+            <Line2>State Education Agency</Line2>
+            <Line3>Records and Correspondence</Line3>
+            <Complex>State Mail Center</Complex>
+            <StreetNumber>14480</StreetNumber>
+            <StreetPrefix>NE</StreetPrefix>
+            <StreetName>Capitol</StreetName>
+            <StreetType>Way</StreetType>
+            <StreetSuffix>NE</StreetSuffix>
+            <ApartmentType>Box</ApartmentType>
+            <ApartmentNumberPrefix>PO</ApartmentNumberPrefix>
+            <ApartmentNumber>14480</ApartmentNumber>
+            <ApartmentNumberSuffix>SEA</ApartmentNumberSuffix>
+          </Street>
+          <City>Salem</City>
+          <County>Marion</County>
+          <StateProvince Codeset="https://www.usa.gov/state-codes">OR</StateProvince>
+          <StateANSICode Codeset="https://www.census.gov/library/reference/code-lists/ansi.html">41</StateANSICode>
+          <Country Codeset="https://www.iso.org/iso-3166-country-codes.html">US</Country>
+          <PostalCode>97309</PostalCode>
+          <GridLocation>
+            <Latitude>44.936198</Latitude>
+            <Longitude>-123.033121</Longitude>
+          </GridLocation>
+          <AddressRefId>8e32305e-e8e4-4968-a713-65108b1a9e78</AddressRefId>
+        </Address>
+      </AddressList>
+      <OperationalStatus Codeset="https://www.sifassociation.org/codesets/operational-status">Open</OperationalStatus>
+      <EDENInfo>
+        <FIPSStateCode Codeset="https://www.census.gov/library/reference/code-lists/ansi.html">41</FIPSStateCode>
+        <AgencyIdNumber>041-ORE-SEA</AgencyIdNumber>
+      </EDENInfo>
+      <CTEGraduationRateInclusion Codeset="https://www.sifassociation.org/codesets/cte-graduation-rate">IncludedAsGraduated</CTEGraduationRateInclusion>
+    </SEAInfo>
+  </xhtml:Example>
+  <xhtml:Example name="SEAInfo - Example 2" xmlns="">
     <SEAInfo RefId="D3E34B359D75101A8C3D00AA001A1652">
       <SEAName>Illinois State Board of Education</SEAName>
       <SEAURL>http://www.isbe.net</SEAURL>

@@ -75,7 +75,26 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="StudentSectionMarks - Example 1">
+    <StudentSectionMarks RefId="0c4012cd-264e-4463-8e03-3ed071e72976" StudentPersonalRefId="3cd32222-13bd-42b5-9b9a-8f095293bbaf" SectionInfoRefId="65e4e3f6-93e5-4f61-8cc5-3792980967f4" TermInfoRefId="6df805d2-957c-4fe1-b3e1-692c52d0885e" SchoolInfoRefId="bc126623-ae70-47c3-b85a-aca40b8c067c">
+      <IsFinal>true</IsFinal>
+      <MarkList>
+        <Mark MarkInfoRefId="249c9176-7c9f-4915-91c1-b9b413856213">
+          <Percentage>94</Percentage>
+          <Numeric>94.00</Numeric>
+          <Letter>A</Letter>
+          <Narrative>Demonstrated strong reasoning with linear equations and communicated solutions clearly.</Narrative>
+        </Mark>
+        <Mark MarkInfoRefId="751c7c65-d0bd-428e-b145-cea72ee56715">
+          <Percentage>91</Percentage>
+          <Numeric>91.00</Numeric>
+          <Letter>A-</Letter>
+          <Narrative>Completed the algebra performance task accurately and showed steady growth in multi-step problem solving.</Narrative>
+        </Mark>
+      </MarkList>
+    </StudentSectionMarks>
+  </xhtml:Example>
+  <xhtml:Example name="StudentSectionMarks - Example 2" xmlns="">
     <StudentSectionMarks RefId="359D75101AD0A9D7A8C3DAD0A85103A2" StudentPersonalRefId="11737EA4301CADCA75C87214A7C46BDB" SectionInfoRefId="11737E214A7C46BDBA4301CADCA75C99" TermInfoRefId="BDBA4301CA1A7C461737DCA75C87E214" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB">
       <IsFinal>true</IsFinal>
       <MarkList>

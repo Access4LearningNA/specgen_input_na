@@ -41,7 +41,22 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="FoodservicePurchaseTransaction - Example 1">
+    <FoodservicePurchaseTransaction RefId="f0882da7-8e02-435d-9a63-8e8a97819b01">
+      <FoodserviceTransactionRefId>2f036bd9-fec6-4aa7-8b03-3e58d2798d76</FoodserviceTransactionRefId>
+      <PurchaseQuantities>
+        <PurchaseQuantity FoodserviceItemPortionRefId="c5807a07-ecc4-423f-9147-537ee035cc14" Earned="NotEarned" EarnedCodeset="https://example.org/codesets/meal-eligibility">
+          <MealType Codeset="https://example.org/codesets/meal-types">Lunch</MealType>
+          <Value>1</Value>
+        </PurchaseQuantity>
+        <PurchaseQuantity FoodserviceItemPortionRefId="24a1f950-5e7a-4096-9091-51108215cd17" Earned="Earned" EarnedCodeset="https://example.org/codesets/meal-eligibility">
+          <MealType Codeset="https://example.org/codesets/meal-types">Snack</MealType>
+          <Value>1</Value>
+        </PurchaseQuantity>
+      </PurchaseQuantities>
+    </FoodservicePurchaseTransaction>
+  </xhtml:Example>
+  <xhtml:Example name="FoodservicePurchaseTransaction - Example 2" xmlns="">
     <FoodservicePurchaseTransaction RefId="AC99DDF0ED0E426ABE18C9174EC469B7">
       <FoodserviceTransactionRefId>EFA054E90CDE45C9BB8A87E9F8F9B238</FoodserviceTransactionRefId>
       <PurchaseQuantities>

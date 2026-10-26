@@ -82,7 +82,42 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="" name="StudentActivityInfo..">
+  <xhtml:Example xmlns="" name="StudentActivityInfo - Example 1">
+    <StudentActivityInfo RefId="37d0d693-6296-4bf5-bd08-ce0d5f12680e">
+      <Title>Great Lakes Robotics Collective</Title>
+      <Description>An after-school engineering and programming team that designs autonomous lake-monitoring robots for regional competitions.</Description>
+      <StudentActivityType>
+        <Code Codeset="https://example.org/codesets/student-activity-types">STEM-ROBOTICS</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">STEM-ROB</OtherCode>
+          <OtherCode Codeset="Local">MLS-RBT-07</OtherCode>
+        </OtherCodeList>
+      </StudentActivityType>
+      <StudentActivityLevel>Intermediate competition team for grades seven and eight</StudentActivityLevel>
+      <GradeLevels>
+        <GradeLevel>
+          <Code Codeset="https://example.org/codesets/grade-levels">07</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">7</OtherCode>
+            <OtherCode Codeset="Local">MIDDLE-7</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+        <GradeLevel>
+          <Code Codeset="https://example.org/codesets/grade-levels">08</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">8</OtherCode>
+            <OtherCode Codeset="Local">MIDDLE-8</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+      </GradeLevels>
+      <CurricularStatus Codeset="https://example.org/codesets/curricular-status">Co-Curricular</CurricularStatus>
+      <Location Type="Room" TypeCodeset="https://example.org/codesets/location-types">
+        <LocationName>Mariner STEM Academy Innovation Lab 214</LocationName>
+        <LocationRefId SIF_RefObject="RoomInfo">e3e7d2db-b9cc-48ac-b3f5-f5e3a7642f8d</LocationRefId>
+      </Location>
+    </StudentActivityInfo>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="StudentActivityInfo.. - Example 2">
     <StudentActivityInfo RefId="6472B2610947583A463DBB345291B001">
       <Title>Junior Chess Club</Title>
       <Description>Competitive team of middle school chess players</Description>

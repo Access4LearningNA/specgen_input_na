@@ -71,7 +71,40 @@
     </Description>
     <Type name="xs:token"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="address - Example 1">
+    <Address RefId="973a8733-6bfa-4baa-95b1-11386b75a18f">
+      <GridLocation>
+        <Latitude>47.610184</Latitude>
+        <Longitude>-122.331746</Longitude>
+      </GridLocation>
+      <AddressType Codeset="https://www.sifassociation.org/codesets/address-type">Physical</AddressType>
+      <LocalId>
+        <IdType Codeset="https://www.sifassociation.org/codesets/local-id-type">DistrictAddressId</IdType>
+        <IdValue>ADDR-CPM-1847</IdValue>
+      </LocalId>
+      <Street>
+        <Line1>1847 Alder Crest Avenue</Line1>
+        <Line2>Apartment 3B</Line2>
+        <Line3>Cedar Point Residential Building</Line3>
+        <Complex>Cedar Point Residences</Complex>
+        <StreetNumber>1847</StreetNumber>
+        <StreetPrefix>N</StreetPrefix>
+        <StreetName>Alder Crest</StreetName>
+        <StreetType>Avenue</StreetType>
+        <StreetSuffix>NE</StreetSuffix>
+        <ApartmentType>Apartment</ApartmentType>
+        <ApartmentNumberPrefix>Unit</ApartmentNumberPrefix>
+        <ApartmentNumber>3B</ApartmentNumber>
+        <ApartmentNumberSuffix>East</ApartmentNumberSuffix>
+      </Street>
+      <City>Seattle</City>
+      <Subregion Codeset="https://www.sifassociation.org/codesets/address-subregion">King</Subregion>
+      <StateProvince Codeset="https://www.sifassociation.org/codesets/us-state">WA</StateProvince>
+      <Country Codeset="https://www.sifassociation.org/codesets/iso-3166-1">US</Country>
+      <PostalCode>98109</PostalCode>
+    </Address>
+  </xhtml:Example>
+  <xhtml:Example name="address - Example 2" xmlns="">
     <Address RefId="812D940C-3f1a-4Db6-Bb2E-66EDB58785BD">
       <GridLocation>
         <Latitude>83</Latitude>

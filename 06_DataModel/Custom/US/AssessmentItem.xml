@@ -152,6 +152,62 @@
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="" name="AssessmentItem - Example 1">
+    <AssessmentItem RefId="8168402d-b71a-4194-a63c-661057a5ffcd" AssessmentFormRefId="681c8323-57f2-4a2d-a838-ef38ac0337fa" ResponseType="MultipleChoice" ResponseTypeCodeset="https://example.edu/codesets/assessment-response-types">
+      <ItemLabel>MAT-5-NF-01</ItemLabel>
+      <ItemName>Fraction Comparison: Garden Beds</ItemName>
+      <LearningStandardItems>
+        <LearningStandardItemRefId>3f783454-51fa-4a4d-bb39-aea3f6c908f8</LearningStandardItemRefId>
+        <LearningStandardItemRefId>ef3b1561-d624-4f1d-86f2-d1624a61eeba</LearningStandardItemRefId>
+      </LearningStandardItems>
+      <Stimulus>
+        <XMLData Description="Illustration placeholder">
+          <payload />
+        </XMLData>
+      </Stimulus>
+      <Stem>
+        <XMLData Description="Question stem placeholder">
+          <payload />
+        </XMLData>
+      </Stem>
+      <ResponseChoices>
+        <Choice>
+          <ChoiceLabel>A</ChoiceLabel>
+          <ChoiceContent>
+            <XMLData Description="Choice A placeholder">
+              <payload />
+            </XMLData>
+          </ChoiceContent>
+          <CreditValue>1.0</CreditValue>
+        </Choice>
+        <Choice>
+          <ChoiceLabel>B</ChoiceLabel>
+          <ChoiceContent>
+            <XMLData Description="Choice B placeholder">
+              <payload />
+            </XMLData>
+          </ChoiceContent>
+          <CreditValue>0.0</CreditValue>
+        </Choice>
+      </ResponseChoices>
+      <ItemScoreMaximum>1</ItemScoreMaximum>
+      <ItemScoreMinimum>0</ItemScoreMinimum>
+      <PerformanceLevels>
+        <PerformanceLevel LevelName="Meets Expectation" LevelIdentifier="MEETS">
+          <CutScores ScoreMetric="00512" ScoreMetricCodeset="https://example.edu/codesets/score-metrics">
+            <LowerCut>1</LowerCut>
+            <UpperCut>1</UpperCut>
+          </CutScores>
+        </PerformanceLevel>
+        <PerformanceLevel LevelName="Below Expectation" LevelIdentifier="BELOW">
+          <CutScores ScoreMetric="00512" ScoreMetricCodeset="https://example.edu/codesets/score-metrics">
+            <LowerCut>0</LowerCut>
+            <UpperCut>0</UpperCut>
+          </CutScores>
+        </PerformanceLevel>
+      </PerformanceLevels>
+    </AssessmentItem>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="AssessmentItem - Example 2">
     <AssessmentItem RefId="C294F3E190F019AD8E1DFC8367537EC8" AssessmentFormRefId="9372CB8EA910FF87D5672CAEF01387AA" ResponseType="multiple-choice">
       <ItemLabel>5</ItemLabel>
       <ItemName>Geometry diagnostic</ItemName>
@@ -200,7 +256,7 @@
       </ResponseChoices>
     </AssessmentItem>
   </xhtml:Example>
-  <xhtml:Example xmlns="" name="AssessmentItem - Example 2">
+  <xhtml:Example xmlns="" name="AssessmentItem - Example 3">
     <AssessmentItem RefId="C294F3E190F019AD8E1DFC8367537EC8" AssessmentFormRefId="9372CB8EA910FF87D5672CAEF01387AA" ResponseType="multiple-choice">
       <ItemLabel>5</ItemLabel>
       <ItemName>Geometry diagnostic</ItemName>

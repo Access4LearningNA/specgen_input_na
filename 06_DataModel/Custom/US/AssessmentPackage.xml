@@ -110,7 +110,14 @@
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <!-- not validated
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="AssessmentPackage - Example 1">
+    <AssessmentPackage RefId="8768ef58-d975-4681-8e5c-47d193238136">
+      <XMLData Description="Qamar Ridge Grade 5 integrated mathematics assessment package">
+        <payload />
+      </XMLData>
+    </AssessmentPackage>
+  </xhtml:Example>
+  <xhtml:Example name="AssessmentPackage - Example 2" xmlns="">
     <AssessmentPackage RefId="495A00194CA340E3A33777B42E59C4F2">
       <XMLData Description="Assessment">...</XMLData>
     </AssessmentPackage>

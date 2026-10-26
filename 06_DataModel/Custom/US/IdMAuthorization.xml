@@ -73,7 +73,17 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="" name="IdMAuthorization">
+  <xhtml:Example xmlns="" name="IdMAuthorization - Example 1">
+    <IdMAuthorization RefId="82c38bab-6940-4595-b802-5b6beddeb243">
+      <UserOrganizationAssociationRefId>f652048e-e952-47ec-8896-38bfd375208d</UserOrganizationAssociationRefId>
+      <ApplicationRefId>7f3c76f2-06e2-47fd-b669-57f4b5200a9f</ApplicationRefId>
+      <ApplicationFunction>Instructor</ApplicationFunction>
+      <AuthoritativeSourceId>0b52ecee-aa36-4e6a-a133-ca17136d4419</AuthoritativeSourceId>
+      <StartDate>2026-08-18</StartDate>
+      <EndDate>2027-06-11</EndDate>
+    </IdMAuthorization>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="IdMAuthorization - Example 2">
     <IdMAuthorization RefId="FE1078BA3261545A31905937B265CE01">
       <UserOrganizationAssociationRefId>AC3078BA3261545A31905937B265CE02</UserOrganizationAssociationRefId>
       <ApplicationRefId>AC3089BA3261545A31905937B265CE02</ApplicationRefId>

@@ -57,7 +57,12 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="GradingCategory - Example 1">
+    <GradingCategory RefId="d9822627-cfe5-435b-b836-3858d56629cb" SectionInfoRefId="ac8ff5ad-3751-417b-8bf9-76d38fa069eb" TermInfoRefId="36b8e857-6e52-4956-aabb-6dbebddc8854" SchoolInfoRefId="99063a17-897b-4fcb-a6d4-73d5168a0e90">
+      <Description>Mathematics Problem Sets</Description>
+    </GradingCategory>
+  </xhtml:Example>
+  <xhtml:Example name="GradingCategory - Example 2" xmlns="">
     <GradingCategory RefId="98157AA013BA8C3D00AA012B359D7512" SectionInfoRefId="13BA8C3D00AA098157AA012B359D7512" TermInfoRefId="D00AA012B359D798157AA013BA8C3512" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB">
       <Description>Tests</Description>
     </GradingCategory>

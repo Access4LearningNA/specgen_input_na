@@ -44,4 +44,9 @@
     </Description>
     <Type name="xs:token"/>
   </Item>
+  <xhtml:Example xmlns="" name="LEAAccountability - Example 1">
+    <LEAAccountability RefId="04e0b57a-d9a5-431d-9df1-d0ebd68620f7" LEAInfoRefId="fe8606e6-fa1a-465f-a408-81fa87565a7b">
+      <GunFreeSchoolsActReportingStatus Codeset="https://ceds.ed.gov/element/000134">YesNoReportedOffenses</GunFreeSchoolsActReportingStatus>
+    </LEAAccountability>
+  </xhtml:Example>
 </DataObject>

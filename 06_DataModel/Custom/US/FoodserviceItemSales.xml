@@ -51,7 +51,54 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="FoodserviceItemSales - Example 1">
+    <FoodserviceItemSales RefId="1f752087-1663-4c3a-9394-c614005d7987">
+      <SchoolInfoRefId>36d530c0-f9db-482d-a96f-4b9f9a10959d</SchoolInfoRefId>
+      <Date>2026-08-20</Date>
+      <Program Type="NSLP" TypeCodeset="https://www.fns.usda.gov/nslp">National School Lunch Program</Program>
+      <ItemQuantities>
+        <ItemQuantity FoodserviceItemPortionRefId="5745a0ac-0042-4346-9af5-599a273fcad7">
+          <Value>186</Value>
+          <MealType Codeset="https://www.fns.usda.gov/cnlabeling">Lunch</MealType>
+          <GradeLevels>
+            <GradeLevel>
+              <Code Codeset="https://ceds.ed.gov/element/000100">05</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Local">Grade 5</OtherCode>
+              </OtherCodeList>
+            </GradeLevel>
+            <GradeLevel>
+              <Code Codeset="https://ceds.ed.gov/element/000100">06</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Local">Grade 6</OtherCode>
+              </OtherCodeList>
+            </GradeLevel>
+          </GradeLevels>
+          <Cost Currency="USD" CurrencyCodeset="https://www.iso.org/iso-4217-currency-codes.html">3.85</Cost>
+        </ItemQuantity>
+        <ItemQuantity FoodserviceItemPortionRefId="fdc42816-f77e-4c68-9a5c-d4a5c823e54a">
+          <Value>74</Value>
+          <MealType Codeset="https://www.fns.usda.gov/school-meals">Breakfast</MealType>
+          <GradeLevels>
+            <GradeLevel>
+              <Code Codeset="https://ceds.ed.gov/element/000100">05</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Local">Grade 5</OtherCode>
+              </OtherCodeList>
+            </GradeLevel>
+            <GradeLevel>
+              <Code Codeset="https://ceds.ed.gov/element/000100">06</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Local">Grade 6</OtherCode>
+              </OtherCodeList>
+            </GradeLevel>
+          </GradeLevels>
+          <Cost Currency="USD" CurrencyCodeset="https://www.iso.org/iso-4217-currency-codes.html">2.40</Cost>
+        </ItemQuantity>
+      </ItemQuantities>
+    </FoodserviceItemSales>
+  </xhtml:Example>
+  <xhtml:Example name="FoodserviceItemSales - Example 2" xmlns="">
     <FoodserviceItemSales RefId="F7E8FF23F3A1471BA9D0B0E22A0839C6">
       <SchoolInfoRefId>B72A99FFC3624AD2ADD197CC5A4A2563</SchoolInfoRefId>
       <Date>2001-09-13</Date>

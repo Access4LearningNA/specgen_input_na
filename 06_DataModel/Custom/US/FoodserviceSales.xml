@@ -51,7 +51,18 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="FoodserviceSales - Example 1">
+    <FoodserviceSales RefId="f2d0d4a4-a2a6-4ad1-a0d8-cb9a6c2e3c91">
+      <SchoolInfoRefId>c82a27b4-79ee-4863-9b8d-94b0f5e26e84</SchoolInfoRefId>
+      <Date>2026-08-19</Date>
+      <Program Type="NSLP" TypeCodeset="https://www.fns.usda.gov/nslp">National School Lunch Program</Program>
+      <SalesAmounts>
+        <SalesAmount Type="Earned" TypeCodeset="https://www.example.org/codesets/foodservice-sales-type" AccountType="NA" AccountTypeCodeset="https://www.example.org/codesets/foodservice-account-type" Currency="USD" CurrencyCodeset="https://www.iso.org/iso-4217-currency-codes.html">684.75</SalesAmount>
+        <SalesAmount Type="Reimbursable" TypeCodeset="https://www.example.org/codesets/foodservice-sales-type" AccountType="StudentMeals" AccountTypeCodeset="https://www.example.org/codesets/foodservice-account-type" Currency="USD" CurrencyCodeset="https://www.iso.org/iso-4217-currency-codes.html">1248.00</SalesAmount>
+      </SalesAmounts>
+    </FoodserviceSales>
+  </xhtml:Example>
+  <xhtml:Example name="FoodserviceSales - Example 2" xmlns="">
     <FoodserviceSales RefId="E57A732918E1473F80C2CFA7774DAA6A">
       <SchoolInfoRefId>D21CF29B7FB44965A9CF950E1E60B21E</SchoolInfoRefId>
       <Date>2001-10-31</Date>

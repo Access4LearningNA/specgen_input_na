@@ -144,7 +144,20 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="EmploymentRecord - Example 1">
+    <EmploymentRecord RefId="ea0fa957-a343-44a9-a0a8-ba4f8afb6e28" SIF_RefId="1c5093f9-12f5-4acd-ae4d-c5ed8296f7f4" SIF_RefObject="StaffPersonal" SIF_RefObjectCodeset="http://www.sifassociation.org/codesets/objects">
+      <LEAInfoRefId>7d5168d4-ab17-40b4-a913-840974b902ff</LEAInfoRefId>
+      <Active>true</Active>
+      <FullTimeStatus Codeset="http://www.sifassociation.org/codesets/employment-status">FullTime</FullTimeStatus>
+      <HireDate>2014-08-18</HireDate>
+      <TotalYearsExperience>16</TotalYearsExperience>
+      <PositionTitle>Environmental Science Teacher</PositionTitle>
+      <PositionNumber>SCI-ENV-204</PositionNumber>
+      <SeniorityDate>2014-08-18</SeniorityDate>
+      <TenureDate>2018-08-18</TenureDate>
+    </EmploymentRecord>
+  </xhtml:Example>
+  <xhtml:Example name="EmploymentRecord - Example 2" xmlns="">
     <EmploymentRecord RefId="359D75101AD0A9D7A8C3DAD0A85103A2" SIF_RefObject="EmployeePersonal" SIF_RefId="CDF90651225DAC3859DEA3458BC39522">
       <LEAInfoRefId>8545A0A6E5CC40CB9B5C07C9E0696725</LEAInfoRefId>
       <Active>true</Active>

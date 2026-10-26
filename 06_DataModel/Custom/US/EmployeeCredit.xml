@@ -57,7 +57,13 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="EmployeeCredit - Example 1">
+    <EmployeeCredit RefId="b011fd8b-181d-4f5d-be00-6c5291c00ae3" EmployeePersonalRefId="5f953fdf-2f70-418d-95d6-51aa80b52a74" ProfessionalDevelopmentActivitiesRefId="9f20320d-1f89-4c8a-8211-03a8bc40416c">
+      <EndDate>2026-06-18</EndDate>
+      <Earned Type="ClockHours" TypeCodeset="https://example.org/codesets/professional-learning-units">12.5</Earned>
+    </EmployeeCredit>
+  </xhtml:Example>
+  <xhtml:Example name="EmployeeCredit - Example 2" xmlns="">
     <EmployeeCredit RefId="BC2078BA3261545A31905937B265CE01" EmployeePersonalRefId="BE3078BA3261545A31905937B265CE01" ProfessionalDevelopmentActivitiesRefId="FD4078BA3261545A31905937B265CE01">
       <EndDate>2003-05-20</EndDate>
       <Earned Type="Credits">3.4</Earned>

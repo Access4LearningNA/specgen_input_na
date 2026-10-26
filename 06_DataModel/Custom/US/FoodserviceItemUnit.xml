@@ -59,7 +59,15 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="FoodserviceItemUnit - Example 1">
+    <FoodserviceItemUnit RefId="f47f6872-fc27-4d99-90fa-5df1185fa4ae">
+      <FoodserviceItemRefId>c5661dde-72d7-440f-8a6d-4bbff06e9666</FoodserviceItemRefId>
+      <Description>1 cup serving of roasted sweet potato cubes</Description>
+      <MeasureDescriptionCode>1CUP</MeasureDescriptionCode>
+      <GramWeight>133.50</GramWeight>
+    </FoodserviceItemUnit>
+  </xhtml:Example>
+  <xhtml:Example name="FoodserviceItemUnit - Example 2" xmlns="">
     <FoodserviceItemUnit RefId="D9837A776DD626777872361DD118873C">
       <FoodserviceItemRefId>EF521958AB474559B2AE7BD82647C66B</FoodserviceItemRefId>
       <Description>cup</Description>

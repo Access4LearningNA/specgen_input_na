@@ -128,7 +128,32 @@
     </Description>
     <Type ref="CommonTypes" name="fundingSourceType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="studentProgramAssociation - Example 1">
+    <StudentProgramAssociation RefId="64588143-e19e-4c57-9dbb-149140cf9fb2">
+      <StudentRefId>172a5b00-8257-49c1-9635-031fab41995e</StudentRefId>
+      <ProgramRefId>abb3f9ef-9c01-48e0-9ea3-b0d2995256a6</ProgramRefId>
+      <SchoolYear>2026</SchoolYear>
+      <EntryDate>2025-08-18</EntryDate>
+      <EntryType Codeset="https://example.org/codesets/student-program-entry-type">NewEnrollment</EntryType>
+      <YearGroup Codeset="https://example.org/codesets/year-group">08</YearGroup>
+      <ExitDate>2026-06-05</ExitDate>
+      <ExitStatus Codeset="https://example.org/codesets/student-program-exit-status">Completed</ExitStatus>
+      <ExitType Codeset="https://example.org/codesets/student-program-exit-type">ProgramCompletion</ExitType>
+      <FTE>1.00</FTE>
+      <FTPTStatus>FullTime</FTPTStatus>
+      <PlacementType Codeset="https://example.org/codesets/student-program-placement-type">RegularEducation</PlacementType>
+      <ManagingSchoolLocalId>
+        <IdType Codeset="https://example.org/codesets/local-id-type">SchoolCode</IdType>
+        <IdValue>MARIGOLD-MIDDLE</IdValue>
+      </ManagingSchoolLocalId>
+      <ManagingSchoolRefId>83c88521-6256-428d-8c32-031fe81e53fb</ManagingSchoolRefId>
+      <FundingSourceList>
+        <FundingSource>StateEducationFund</FundingSource>
+        <FundingSource>LocalDistrictFund</FundingSource>
+      </FundingSourceList>
+    </StudentProgramAssociation>
+  </xhtml:Example>
+  <xhtml:Example name="studentProgramAssociation - Example 2" xmlns="">
     <StudentProgramAssociation RefId="Cd9aA9fd-1179-4fab-B205-db7e03b93bE4">
       <StudentRefId>Bac68eb8-0DFa-43b0-Dd4b-7B1c85C15beA</StudentRefId>
       <ProgramRefId>B45A3aDf-d7C0-4Fa0-2FEd-34721aaf7d6F</ProgramRefId>

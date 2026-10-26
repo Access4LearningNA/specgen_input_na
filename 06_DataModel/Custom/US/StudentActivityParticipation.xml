@@ -82,7 +82,19 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="" name="StudentActivityParticipation">
+  <xhtml:Example xmlns="" name="StudentActivityParticipation - Example 1">
+    <StudentActivityParticipation RefId="84984001-6b2a-4ea0-98f1-aadbc464bb01" StudentPersonalRefId="a7243d40-b8cf-460d-90d9-4ca4d0127f4c" StudentActivityInfoRefId="df29358c-d3a1-449d-b342-5ba25bf226fd" SchoolYear="2026">
+      <ParticipationComment>Amara completed the spring robotics season and served as the programming captain for the Harborview Robotics Collective.</ParticipationComment>
+      <StartDate>2026-01-12</StartDate>
+      <EndDate>2026-05-29</EndDate>
+      <Role>Programming captain</Role>
+      <RecognitionList>
+        <Recognition Code="ROBOTICS-EXCELLENCE" Codeset="https://example.org/codesets/student-recognition">Robotics Excellence Award</Recognition>
+        <Recognition Code="TEAM-LEADERSHIP" Codeset="https://example.org/codesets/student-recognition">Collaborative Team Leadership Recognition</Recognition>
+      </RecognitionList>
+    </StudentActivityParticipation>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="StudentActivityParticipation - Example 2">
     <StudentActivityParticipation RefId="9ECC96830E02406F926C1C4D3542D122" StudentPersonalRefId="646C5D4AC8294886A02B971695C7BC06" StudentActivityInfoRefId="6472B2610947583A463DBB345291B001" SchoolYear="2009">
       <ParticipationComment>First year of participation</ParticipationComment>
       <StartDate>2008-09-01</StartDate>

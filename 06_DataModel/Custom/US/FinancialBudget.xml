@@ -61,7 +61,30 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="FinancialBudget - Example 1">
+    <FinancialBudget RefId="a36e8642-3f80-40ac-a152-c662daeaf862">
+      <ReportDate>2026-08-20</ReportDate>
+      <StateProvinceId>WA-OSPI-1784</StateProvinceId>
+      <FiscalYear>2027</FiscalYear>
+      <BudgetAccounts>
+        <BudgetAccount>
+          <AccountClass Codeset="https://nces.ed.gov/accounting/codes">GeneralFund</AccountClass>
+          <FundBreakdown>100</FundBreakdown>
+          <FunctionBreakdown>1110</FunctionBreakdown>
+          <ObjectBreakdown>5110</ObjectBreakdown>
+          <BudgetAmount>482000</BudgetAmount>
+        </BudgetAccount>
+        <BudgetAccount>
+          <AccountClass Codeset="https://nces.ed.gov/accounting/codes">InstructionalMaterials</AccountClass>
+          <FundBreakdown>100</FundBreakdown>
+          <FunctionBreakdown>1120</FunctionBreakdown>
+          <ObjectBreakdown>6410</ObjectBreakdown>
+          <BudgetAmount>78500</BudgetAmount>
+        </BudgetAccount>
+      </BudgetAccounts>
+    </FinancialBudget>
+  </xhtml:Example>
+  <xhtml:Example name="FinancialBudget - Example 2" xmlns="">
     <FinancialBudget RefId="359D75101AD0A9D7A8C3DAD0A85103A2">
       <ReportDate>2003-07-02</ReportDate>
       <StateProvinceId>123456789</StateProvinceId>

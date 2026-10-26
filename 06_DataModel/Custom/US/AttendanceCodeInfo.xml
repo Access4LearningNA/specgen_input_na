@@ -97,7 +97,18 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="AttendanceCodeInfo - Example 1">
+    <AttendanceCodeInfo RefId="907ee7c7-9b57-47df-b0bb-42499b00459b" SchoolInfoRefId="f9642f67-8839-47b0-9404-cc1c8743e42c">
+      <AttendanceCode>EXC-MED</AttendanceCode>
+      <AttendanceType Codeset="https://example.org/codesets/attendance-types">DailyAttendance</AttendanceType>
+      <AttendanceStatus Codeset="https://example.org/codesets/attendance-status">ExcusedAbsent</AttendanceStatus>
+      <Description>Excused medical absence for a student unable to attend school.</Description>
+      <AbsenceValue>1.0</AbsenceValue>
+      <UsedForDailyAttendance Codeset="https://example.org/codesets/attendance-usage">Yes</UsedForDailyAttendance>
+      <UsedForPeriodAttendance Codeset="https://example.org/codesets/attendance-usage">Yes</UsedForPeriodAttendance>
+    </AttendanceCodeInfo>
+  </xhtml:Example>
+  <xhtml:Example name="AttendanceCodeInfo - Example 2" xmlns="">
     <AttendanceCodeInfo RefId="64A309DA063A2E35B359D75101A8C3D0" SchoolInfoRefId="CE0674A8BB8247669DE348F113D2316A">
       <AttendanceCode>AE</AttendanceCode>
       <AttendanceType>Absent</AttendanceType>

@@ -113,9 +113,11 @@
     <Characteristics>O</Characteristics>
     <Description>
       <p>References to separate potentially reusable, shared, or pre-verified addresses.</p>
-    </Description>    
+    </Description>
+    
     <Type ref="CommonTypes" name="AddressRefIdListType"/>
-  </Item>  
+  </Item>
+  
   <Item>
     <Element>IdentificationInfoList</Element>
     <Characteristics>O</Characteristics>
@@ -144,7 +146,7 @@
   </Item>
   <Item>
     <Element>OperationalStatusDate</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <Description>
       <p>The effective date for a change in operational status.</p>
     </Description>
@@ -188,7 +190,262 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="LEAInfo - Example 1">
+    <LEAInfo RefId="02349d17-827a-476e-8bfc-f916160fbcc2">
+      <LocalId>CBVSD-041</LocalId>
+      <LocalIdSystem>District</LocalIdSystem>
+      <StateProvinceId>WA-041</StateProvinceId>
+      <NCESId>5309999</NCESId>
+      <LEAName>Cedar Valley School District</LEAName>
+      <LEAURL>https://www.cedarvalleysd.example.org</LEAURL>
+      <SchoolDesignationList>
+        <SchoolDesignation Codeset="https://www.cedarvalleysd.example.org/codes/school-designation">Public</SchoolDesignation>
+        <SchoolDesignation Codeset="https://www.cedarvalleysd.example.org/codes/school-designation">UnifiedDistrict</SchoolDesignation>
+      </SchoolDesignationList>
+      <EducationAgencyType>
+        <Code Codeset="https://www.cedarvalleysd.example.org/codes/agency-type">RegularNotInSupervisoryUnion</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">TraditionalPublicDistrict</OtherCode>
+          <OtherCode Codeset="Text">Cedar Valley public education agency</OtherCode>
+        </OtherCodeList>
+      </EducationAgencyType>
+      <LEAContactList>
+        <LEAContact>
+          <PublishInDirectory Codeset="https://www.cedarvalleysd.example.org/codes/directory-status">Public</PublishInDirectory>
+          <ContactInfo>
+            <Name Type="04">
+              <Prefix>Dr.</Prefix>
+              <LastName>Venkataraman</LastName>
+              <FirstName>Anika</FirstName>
+              <MiddleName>Meera</MiddleName>
+              <Suffix>Ed.D.</Suffix>
+              <PreferredName>Anika</PreferredName>
+              <SortName>Venkataraman, Anika Meera</SortName>
+              <FullName>Dr. Anika Meera Venkataraman, Ed.D.</FullName>
+            </Name>
+            <PositionTitle>Superintendent</PositionTitle>
+            <Role>Chief Executive Officer</Role>
+            <Address Type="Physical" TypeCodeset="https://www.cedarvalleysd.example.org/codes/address-type">
+              <Street>
+                <Line1>1840 Juniper Ridge Avenue</Line1>
+                <Line2>District Administration Building</Line2>
+                <Line3>Office 310</Line3>
+                <Complex>Cedar Valley Education Center</Complex>
+                <StreetNumber>1840</StreetNumber>
+                <StreetPrefix>NE</StreetPrefix>
+                <StreetName>Juniper Ridge</StreetName>
+                <StreetType>Avenue</StreetType>
+                <StreetSuffix>NE</StreetSuffix>
+                <ApartmentType>Suite</ApartmentType>
+                <ApartmentNumberPrefix>ADM-</ApartmentNumberPrefix>
+                <ApartmentNumber>310</ApartmentNumber>
+                <ApartmentNumberSuffix>A</ApartmentNumberSuffix>
+              </Street>
+              <City>Evergreen Harbor</City>
+              <County>Rainier County</County>
+              <StateProvince Codeset="https://www.iso.org/iso-3166-country-codes.html">WA</StateProvince>
+              <StateANSICode Codeset="https://www.census.gov/library/reference/code-lists/ansi.html">53</StateANSICode>
+              <Country Codeset="https://www.iso.org/iso-3166-country-codes.html">US</Country>
+              <PostalCode>98188</PostalCode>
+              <GridLocation>
+                <Latitude>47.4479</Latitude>
+                <Longitude>-122.2921</Longitude>
+              </GridLocation>
+              <AddressRefId>29922f9a-d23d-4a9d-ac1a-df40b8e1ec80</AddressRefId>
+            </Address>
+            <AddressRefId>219b20f8-fd97-4572-9eba-dc28d1dedef3</AddressRefId>
+            <EmailList>
+              <Email Type="Work" TypeCodeset="https://www.cedarvalleysd.example.org/codes/email-type">anika.venkataraman@cedarvalleysd.example.org</Email>
+              <Email Type="Organizational" TypeCodeset="https://www.cedarvalleysd.example.org/codes/email-type">superintendent@cedarvalleysd.example.org</Email>
+            </EmailList>
+            <PhoneNumberList>
+              <PhoneNumber Type="Work" TypeCodeset="https://www.cedarvalleysd.example.org/codes/phone-type">
+                <Number>206-555-0140</Number>
+                <Extension>310</Extension>
+                <ListedStatus>Listed</ListedStatus>
+              </PhoneNumber>
+              <PhoneNumber Type="Mobile" TypeCodeset="https://www.cedarvalleysd.example.org/codes/phone-type">
+                <Number>206-555-0141</Number>
+                <Extension>0</Extension>
+                <ListedStatus>Unlisted</ListedStatus>
+              </PhoneNumber>
+            </PhoneNumberList>
+          </ContactInfo>
+        </LEAContact>
+        <LEAContact>
+          <PublishInDirectory Codeset="https://www.cedarvalleysd.example.org/codes/directory-status">Public</PublishInDirectory>
+          <ContactInfo>
+            <Name Type="04">
+              <Prefix>Ms.</Prefix>
+              <LastName>Delgado</LastName>
+              <FirstName>Marisol</FirstName>
+              <MiddleName>Elena</MiddleName>
+              <PreferredName>Sol</PreferredName>
+              <SortName>Delgado, Marisol Elena</SortName>
+              <FullName>Ms. Marisol Elena Delgado</FullName>
+            </Name>
+            <PositionTitle>Director of Teaching and Learning</PositionTitle>
+            <Role>Curriculum Contact</Role>
+            <Address Type="Physical" TypeCodeset="https://www.cedarvalleysd.example.org/codes/address-type">
+              <Street>
+                <Line1>1840 Juniper Ridge Avenue</Line1>
+                <Line2>District Administration Building</Line2>
+                <Line3>Office 225</Line3>
+                <Complex>Cedar Valley Education Center</Complex>
+                <StreetNumber>1840</StreetNumber>
+                <StreetPrefix>NE</StreetPrefix>
+                <StreetName>Juniper Ridge</StreetName>
+                <StreetType>Avenue</StreetType>
+                <StreetSuffix>NE</StreetSuffix>
+                <ApartmentType>Suite</ApartmentType>
+                <ApartmentNumberPrefix>CUR-</ApartmentNumberPrefix>
+                <ApartmentNumber>225</ApartmentNumber>
+                <ApartmentNumberSuffix>B</ApartmentNumberSuffix>
+              </Street>
+              <City>Evergreen Harbor</City>
+              <County>Rainier County</County>
+              <StateProvince Codeset="https://www.iso.org/iso-3166-country-codes.html">WA</StateProvince>
+              <StateANSICode Codeset="https://www.census.gov/library/reference/code-lists/ansi.html">53</StateANSICode>
+              <Country Codeset="https://www.iso.org/iso-3166-country-codes.html">US</Country>
+              <PostalCode>98188</PostalCode>
+              <GridLocation>
+                <Latitude>47.4479</Latitude>
+                <Longitude>-122.2921</Longitude>
+              </GridLocation>
+              <AddressRefId>fdfe15f7-cfd2-4b1e-84d3-a92e5f791af8</AddressRefId>
+            </Address>
+            <AddressRefId>6b72d202-69cb-4798-bcc0-313108df99b4</AddressRefId>
+            <EmailList>
+              <Email Type="Work" TypeCodeset="https://www.cedarvalleysd.example.org/codes/email-type">marisol.delgado@cedarvalleysd.example.org</Email>
+              <Email Type="Organizational" TypeCodeset="https://www.cedarvalleysd.example.org/codes/email-type">curriculum@cedarvalleysd.example.org</Email>
+            </EmailList>
+            <PhoneNumberList>
+              <PhoneNumber Type="Work" TypeCodeset="https://www.cedarvalleysd.example.org/codes/phone-type">
+                <Number>206-555-0162</Number>
+                <Extension>225</Extension>
+                <ListedStatus>Listed</ListedStatus>
+              </PhoneNumber>
+              <PhoneNumber Type="Fax" TypeCodeset="https://www.cedarvalleysd.example.org/codes/phone-type">
+                <Number>206-555-0163</Number>
+                <Extension>0</Extension>
+                <ListedStatus>Listed</ListedStatus>
+              </PhoneNumber>
+            </PhoneNumberList>
+          </ContactInfo>
+        </LEAContact>
+      </LEAContactList>
+      <PhoneNumberList>
+        <PhoneNumber Type="Work" TypeCodeset="https://www.cedarvalleysd.example.org/codes/phone-type">
+          <Number>206-555-0100</Number>
+          <Extension>0</Extension>
+          <ListedStatus>Listed</ListedStatus>
+        </PhoneNumber>
+        <PhoneNumber Type="Fax" TypeCodeset="https://www.cedarvalleysd.example.org/codes/phone-type">
+          <Number>206-555-0101</Number>
+          <Extension>0</Extension>
+          <ListedStatus>Listed</ListedStatus>
+        </PhoneNumber>
+      </PhoneNumberList>
+      <AddressList>
+        <Address Type="Physical" TypeCodeset="https://www.cedarvalleysd.example.org/codes/address-type">
+          <Street>
+            <Line1>1840 Juniper Ridge Avenue</Line1>
+            <Line2>District Administration Building</Line2>
+            <Line3>Main Entrance</Line3>
+            <Complex>Cedar Valley Education Center</Complex>
+            <StreetNumber>1840</StreetNumber>
+            <StreetPrefix>NE</StreetPrefix>
+            <StreetName>Juniper Ridge</StreetName>
+            <StreetType>Avenue</StreetType>
+            <StreetSuffix>NE</StreetSuffix>
+            <ApartmentType>Building</ApartmentType>
+            <ApartmentNumberPrefix>DC-</ApartmentNumberPrefix>
+            <ApartmentNumber>1</ApartmentNumber>
+            <ApartmentNumberSuffix>North</ApartmentNumberSuffix>
+          </Street>
+          <City>Evergreen Harbor</City>
+          <County>Rainier County</County>
+          <StateProvince Codeset="https://www.iso.org/iso-3166-country-codes.html">WA</StateProvince>
+          <StateANSICode Codeset="https://www.census.gov/library/reference/code-lists/ansi.html">53</StateANSICode>
+          <Country Codeset="https://www.iso.org/iso-3166-country-codes.html">US</Country>
+          <PostalCode>98188</PostalCode>
+          <GridLocation>
+            <Latitude>47.4479</Latitude>
+            <Longitude>-122.2921</Longitude>
+          </GridLocation>
+          <AddressRefId>b24153a8-d093-47d4-bc85-dafa87c9a478</AddressRefId>
+        </Address>
+        <Address Type="Mailing" TypeCodeset="https://www.cedarvalleysd.example.org/codes/address-type">
+          <Street>
+            <Line1>1840 Juniper Ridge Avenue</Line1>
+            <Line2>District Administration Building</Line2>
+            <Line3>Mail Stop 100</Line3>
+            <Complex>Cedar Valley Education Center</Complex>
+            <StreetNumber>1840</StreetNumber>
+            <StreetPrefix>NE</StreetPrefix>
+            <StreetName>Juniper Ridge</StreetName>
+            <StreetType>Avenue</StreetType>
+            <StreetSuffix>NE</StreetSuffix>
+            <ApartmentType>Suite</ApartmentType>
+            <ApartmentNumberPrefix>MS-</ApartmentNumberPrefix>
+            <ApartmentNumber>100</ApartmentNumber>
+            <ApartmentNumberSuffix>Mail</ApartmentNumberSuffix>
+          </Street>
+          <City>Evergreen Harbor</City>
+          <County>Rainier County</County>
+          <StateProvince Codeset="https://www.iso.org/iso-3166-country-codes.html">WA</StateProvince>
+          <StateANSICode Codeset="https://www.census.gov/library/reference/code-lists/ansi.html">53</StateANSICode>
+          <Country Codeset="https://www.iso.org/iso-3166-country-codes.html">US</Country>
+          <PostalCode>98188</PostalCode>
+          <GridLocation>
+            <Latitude>47.4479</Latitude>
+            <Longitude>-122.2921</Longitude>
+          </GridLocation>
+          <AddressRefId>478056e8-0c2b-4d22-90bb-e0072785012a</AddressRefId>
+        </Address>
+      </AddressList>
+      <AddressRefIdList>
+        <AddressRefId AddressRole="DistrictPhysicalAddress">211ae8e4-360b-4fa0-ab05-f9c8937d74db</AddressRefId>
+        <AddressRefId AddressRole="DistrictMailingAddress">a27180f9-f05f-4b4b-b94c-826a5758b25e</AddressRefId>
+      </AddressRefIdList>
+      <IdentificationInfoList>
+        <IdentificationInfo Code="LEA" CodeCodeset="https://www.cedarvalleysd.example.org/codes/identification-system">CBVSD-041</IdentificationInfo>
+        <IdentificationInfo Code="NCES" CodeCodeset="https://www.cedarvalleysd.example.org/codes/identification-system">5309999</IdentificationInfo>
+      </IdentificationInfoList>
+      <GradeLevels>
+        <GradeLevel>
+          <Code Codeset="https://www.cedarvalleysd.example.org/codes/grade-level">KG</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">K</OtherCode>
+            <OtherCode Codeset="Text">Kindergarten</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+        <GradeLevel>
+          <Code Codeset="https://www.cedarvalleysd.example.org/codes/grade-level">12</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">12</OtherCode>
+            <OtherCode Codeset="Text">Twelfth Grade</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+      </GradeLevels>
+      <OperationalStatus Codeset="https://www.cedarvalleysd.example.org/codes/operational-status">Open</OperationalStatus>
+      <OperationalStatusDate>2026-09-01</OperationalStatusDate>
+      <CongressionalDistrict>09</CongressionalDistrict>
+      <RegionOrganizationList>
+        <RegionOrganization>
+          <Indicator>Rainier County Educational Service Region</Indicator>
+          <Type>RegionalServiceArea</Type>
+        </RegionOrganization>
+        <RegionOrganization>
+          <Indicator>Puget Sound STEM Partnership</Indicator>
+          <Type>InstructionalConsortium</Type>
+        </RegionOrganization>
+      </RegionOrganizationList>
+      <TitleIProgramType Codeset="https://www.cedarvalleysd.example.org/codes/title-i-program">TargetedAssistance</TitleIProgramType>
+      <TitleIIILanguageInstructionProgramType Codeset="https://www.cedarvalleysd.example.org/codes/title-iii-program">TransitionalBilingualInstruction</TitleIIILanguageInstructionProgramType>
+    </LEAInfo>
+  </xhtml:Example>
+  <xhtml:Example name="LEAInfo - Example 2" xmlns="">
     <LEAInfo RefId="D3E34B359D75101A8C3D00AA001A1652">
       <LocalId>946379881</LocalId>
       <StateProvinceId>C2345681</StateProvinceId>

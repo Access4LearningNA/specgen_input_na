@@ -153,6 +153,105 @@
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="" name="SectionInfo - Example 1">
+    <SectionInfo RefId="c038214b-25e2-4aa8-9202-aff9b2ac4600" SchoolCourseInfoRefId="a33c9afc-99b9-4eb9-bcc1-487eb45d221c" SchoolYear="2026">
+      <LocalId>MVMS-ENG8-042</LocalId>
+      <Description>Grade 8 English Language Arts, Period 2, Cedar Wing classroom instruction.</Description>
+      <ScheduleInfoList>
+        <ScheduleInfo TermInfoRefId="2efa0ced-4fe6-445e-99c8-ab6a4fbb303e">
+          <TeacherList>
+            <StaffPersonalRefId>77ef2cc9-55d9-4746-957f-4be40788bff0</StaffPersonalRefId>
+            <StaffPersonalRefId>c8cdf475-f5c3-4e64-8dd8-800e244308c1</StaffPersonalRefId>
+          </TeacherList>
+          <SectionRoomList>
+            <RoomInfoRefId>aa0bbf7c-9393-4c90-870d-917844131251</RoomInfoRefId>
+            <RoomInfoRefId>2f548671-fec0-4d19-86da-6084fd92b719</RoomInfoRefId>
+          </SectionRoomList>
+          <MeetingTimeList>
+            <MeetingTime>
+              <TimetableDay>A</TimetableDay>
+              <TimetablePeriod>2</TimetablePeriod>
+            </MeetingTime>
+            <MeetingTime>
+              <TimetableDay>B</TimetableDay>
+              <TimetablePeriod>2</TimetablePeriod>
+            </MeetingTime>
+          </MeetingTimeList>
+        </ScheduleInfo>
+        <ScheduleInfo TermInfoRefId="46f6127b-1801-4397-a3fe-93cb5e42810e">
+          <TeacherList>
+            <StaffPersonalRefId>2ae67337-5802-4a03-a970-0c95da39a36f</StaffPersonalRefId>
+            <StaffPersonalRefId>35f13da9-5552-4033-9d22-7241ef0ba448</StaffPersonalRefId>
+          </TeacherList>
+          <SectionRoomList>
+            <RoomInfoRefId>e4723dfa-cf8f-4cd3-980a-061036a717ef</RoomInfoRefId>
+            <RoomInfoRefId>c78eae2f-6cc8-478e-bb94-c4a46a13fda2</RoomInfoRefId>
+          </SectionRoomList>
+          <MeetingTimeList>
+            <MeetingTime>
+              <TimetableDay>A</TimetableDay>
+              <TimetablePeriod>2</TimetablePeriod>
+            </MeetingTime>
+            <MeetingTime>
+              <TimetableDay>B</TimetableDay>
+              <TimetablePeriod>2</TimetablePeriod>
+            </MeetingTime>
+          </MeetingTimeList>
+        </ScheduleInfo>
+      </ScheduleInfoList>
+      <MediumOfInstruction>
+        <Code Codeset="https://example.edu/codesets/medium-of-instruction">InPerson</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">Classroom</OtherCode>
+          <OtherCode Codeset="Text">Face-to-face instruction</OtherCode>
+        </OtherCodeList>
+      </MediumOfInstruction>
+      <InstructionalDeliveryModeList>
+        <InstructionalDeliveryMode Codeset="https://example.edu/codesets/delivery-mode">Classroom</InstructionalDeliveryMode>
+        <InstructionalDeliveryMode Codeset="https://example.edu/codesets/delivery-mode">CollaborativeLearning</InstructionalDeliveryMode>
+      </InstructionalDeliveryModeList>
+      <LanguageOfInstruction>
+        <Code Codeset="https://www.loc.gov/standards/iso639-2/">eng</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">EN</OtherCode>
+          <OtherCode Codeset="Text">English</OtherCode>
+        </OtherCodeList>
+      </LanguageOfInstruction>
+      <LocationOfInstruction>
+        <Code Codeset="https://ceds.ed.gov/element/000524">00341</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">CEDAR-214</OtherCode>
+          <OtherCode Codeset="Text">Mariner Valley Middle School, Cedar Wing Room 214</OtherCode>
+        </OtherCodeList>
+      </LocationOfInstruction>
+      <SummerSchool Codeset="https://example.edu/codesets/summer-school">false</SummerSchool>
+      <SchoolCourseInfoOverride Override="true" OverrideCodeset="https://example.edu/codesets/course-override">
+        <CourseCode>ELA8-HON</CourseCode>
+        <StateCourseCode>01001</StateCourseCode>
+        <DistrictCourseCode>MV-ELA-08-H</DistrictCourseCode>
+        <SubjectArea>
+          <Code Codeset="https://nces.ed.gov/ccd/">01</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">ELA</OtherCode>
+            <OtherCode Codeset="Text">English Language Arts</OtherCode>
+          </OtherCodeList>
+        </SubjectArea>
+        <CourseTitle>Honors English Language Arts 8</CourseTitle>
+        <InstructionalLevel>
+          <Code Codeset="https://example.edu/codesets/instructional-level">Honors</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">H</OtherCode>
+            <OtherCode Codeset="Text">Honors-level middle school instruction</OtherCode>
+          </OtherCodeList>
+        </InstructionalLevel>
+        <CourseCredits Type="CarnegieUnit" TypeCodeset="https://example.edu/codesets/credit-type">0.5</CourseCredits>
+      </SchoolCourseInfoOverride>
+      <CourseSectionCode>ELA8-042</CourseSectionCode>
+      <SectionCode>MVMS-2026-0042</SectionCode>
+      <CountForAttendance Codeset="https://example.edu/codesets/attendance-counting">true</CountForAttendance>
+      <BellScheduleRefId>804801b2-bbee-4277-ae00-4057b56a518c</BellScheduleRefId>
+    </SectionInfo>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="SectionInfo - Example 2">
     <SectionInfo RefId="D3E34B359D75101A8C3D00AA001A1652" SchoolCourseInfoRefId="A2E35B359D75101A8C3D00AA001A0000" SchoolYear="2006">
       <LocalId>287-1</LocalId>
       <ScheduleInfoList>
@@ -248,7 +347,7 @@
       </SchoolCourseInfoOverride>
     </SectionInfo>
   </xhtml:Example>
-  <xhtml:Example xmlns="" name="SectionInfo - Example 2">
+  <xhtml:Example xmlns="" name="SectionInfo - Example 3">
     <SectionInfo RefId="D3E34B359D75101A8C3D00AA001A1652" SchoolCourseInfoRefId="A2E35B359D75101A8C3D00AA001A0000" SchoolYear="2006">
       <LocalId>287-1</LocalId>
       <ScheduleInfoList>

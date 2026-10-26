@@ -65,7 +65,18 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="FoodserviceItem - Example 1">
+    <FoodserviceItem RefId="3c2e2dee-ca38-4de6-89e7-535c98406ce3">
+      <LocalId>FSI-2026-1842</LocalId>
+      <Description>Whole-grain chicken and roasted vegetable wrap</Description>
+      <ElectronicIdList>
+        <ElectronicId Type="UPC" TypeCodeset="https://www.gs1.org/standards/id-keys">00850032184726</ElectronicId>
+        <ElectronicId Type="DistrictFoodserviceId" TypeCodeset="https://meadowlarkusd.example.org/codesets/foodservice-items">MLUSD-LUNCH-1842</ElectronicId>
+      </ElectronicIdList>
+      <ItemCategory>Entrees and Main Dishes</ItemCategory>
+    </FoodserviceItem>
+  </xhtml:Example>
+  <xhtml:Example name="FoodserviceItem - Example 2" xmlns="">
     <FoodserviceItem RefId="EF521958AB474559B2AE7BD82647C66B">
       <LocalId>2391</LocalId>
       <Description>Green Burrito</Description>

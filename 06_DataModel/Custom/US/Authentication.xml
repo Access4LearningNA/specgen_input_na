@@ -187,7 +187,20 @@
       </Section>
     </Section>
   </Section>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="Authentication - Example 1">
+    <Authentication RefId="3bff00f7-27a5-4a96-978e-37432fdfd8f8" SIF_RefId="e3dc5289-3c67-4ba4-9c5b-a970b2bd233f" SIF_RefObject="StudentPersonal" SIF_RefObjectCodeset="https://www.sifassociation.org/codesets/ref-objects">
+      <AuthenticationInfo>
+        <System Type="StudentInformationSystem" TypeCodeset="https://www.sifassociation.org/codesets/authentication-system-types">Northstar Student Information System</System>
+        <Username>marisol.ventura</Username>
+        <DistinguishedName>CN=Marisol Ventura,OU=Students,OU=Harborview Middle School,DC=northstar,DC=edu</DistinguishedName>
+        <PasswordList>
+          <Password Algorithm="SHA-256" AlgorithmCodeset="https://www.sifassociation.org/codesets/password-algorithms" KeyName="NorthstarSIS">5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8</Password>
+          <Password Algorithm="PBKDF2-SHA256" AlgorithmCodeset="https://www.sifassociation.org/codesets/password-algorithms" KeyName="DistrictIdentity">a91c3d0e7b5f27462cede5675ca467301ef49102dfb5e4a9c8d3fb628bca910e</Password>
+        </PasswordList>
+      </AuthenticationInfo>
+    </Authentication>
+  </xhtml:Example>
+  <xhtml:Example name="Authentication - Example 2" xmlns="">
     <Authentication RefId="4286194F43ED43C18EE2F0A27C4BEF86" SIF_RefId="23B08571E4D645C3B82A3E52E5349925" SIF_RefObject="StudentPersonal">
       <AuthenticationInfo>
         <System Type="Network">NetworkSystem</System>

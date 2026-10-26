@@ -134,7 +134,96 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="Lesson - Example 1">
+    <Lesson RefId="d3fdf74a-b5ae-44d5-95ef-d8fd8a1b6a4c">
+      <SourceObjects>
+        <SourceObject SIF_RefObject="LearningResource" SIF_RefObjectCodeset="https://example.edu/codesets/source-object-types">e073616f-0961-42db-99ec-e3947cd83c51</SourceObject>
+        <SourceObject SIF_RefObject="Activity" SIF_RefObjectCodeset="https://example.edu/codesets/source-object-types">526f95e3-2f0f-412f-ab5a-98a95ed44c33</SourceObject>
+      </SourceObjects>
+      <CurriculumStructures>
+        <CurriculumStructureRefId>2023f512-95bd-456d-a6a2-9a0966f4d240</CurriculumStructureRefId>
+        <CurriculumStructureRefId>5ee6982a-892a-4fdc-9d74-5e75805ad895</CurriculumStructureRefId>
+      </CurriculumStructures>
+      <SubjectArea>
+        <Code Codeset="https://nces.ed.gov/sced">02</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">MATH</OtherCode>
+          <OtherCode Codeset="Text">Mathematics</OtherCode>
+        </OtherCodeList>
+      </SubjectArea>
+      <Title>Scaling the Riverfront Mural</Title>
+      <Duration Units="Minutes" UnitsCodeset="https://example.edu/codesets/time-units">50</Duration>
+      <Description>Students use ratios, proportions, and scale drawings to plan a community riverfront mural for the Hawthorne Harbor neighborhood.</Description>
+      <Procedure>Launch with a photograph of the proposed mural wall, model one scale conversion, facilitate partner calculations, and conclude with a gallery walk comparing scale plans.</Procedure>
+      <Strategies>
+        <Strategy>Think-Pair-Share</Strategy>
+        <Strategy>Collaborative Problem Solving</Strategy>
+      </Strategies>
+      <LearningObjectives>
+        <LearningObjective>Use proportional relationships to determine dimensions in a scale drawing.</LearningObjective>
+        <LearningObjective>Explain how a scale factor changes corresponding lengths.</LearningObjective>
+      </LearningObjectives>
+      <SupportingActivities>
+        <ActivityRefId>68861ee2-41af-4cbc-90ca-79dced109c2f</ActivityRefId>
+        <ActivityRefId>b12d4ea4-ffb6-42e9-8629-14a9f107bef9</ActivityRefId>
+      </SupportingActivities>
+      <LearningStandards>
+        <LearningStandardItemRefId>5efd2d16-6148-4fe4-a6ae-ff1b9a97e7f3</LearningStandardItemRefId>
+        <LearningStandardItemRefId>27bc9803-2ad3-4586-8bb0-cf5db27caccc</LearningStandardItemRefId>
+      </LearningStandards>
+      <LearningResources>
+        <LearningResourceRefId>80d8211d-618d-492d-9b49-72f7443a82f0</LearningResourceRefId>
+        <LearningResourceRefId>a37e7b1b-86c0-40aa-a3ef-de5695196172</LearningResourceRefId>
+      </LearningResources>
+      <LessonSources>
+        <LessonSource>
+          <Author>
+            <Name Type="04">
+              <Prefix>Dr.</Prefix>
+              <LastName>Vega</LastName>
+              <FirstName>Isidoro</FirstName>
+              <MiddleName>Mateo</MiddleName>
+              <Suffix>III</Suffix>
+              <PreferredName>Izzy</PreferredName>
+              <SortName>Vega, Isidoro Mateo III</SortName>
+              <FullName>Dr. Isidoro Mateo Vega III</FullName>
+            </Name>
+            <Organization>Hawthorne Harbor Public Schools</Organization>
+            <Address Type="Work" TypeCodeset="https://example.edu/codesets/address-types">
+              <Street>
+                <Line1>1847 NE Alder Street</Line1>
+                <Line2>Suite 310</Line2>
+                <Line3>Curriculum Innovation Office</Line3>
+                <Complex>Harbor Learning Center</Complex>
+                <StreetNumber>1847</StreetNumber>
+                <StreetPrefix>NE</StreetPrefix>
+                <StreetName>Alder</StreetName>
+                <StreetType>Street</StreetType>
+                <StreetSuffix>East</StreetSuffix>
+                <ApartmentType>Suite</ApartmentType>
+                <ApartmentNumberPrefix>Room</ApartmentNumberPrefix>
+                <ApartmentNumber>310</ApartmentNumber>
+                <ApartmentNumberSuffix>A</ApartmentNumberSuffix>
+              </Street>
+              <City>Portland</City>
+              <County>Multnomah</County>
+              <StateProvince Codeset="https://www.usps.com/state-abbreviations">OR</StateProvince>
+              <StateANSICode Codeset="https://www.census.gov/library/reference/code-lists/ansi.html">41</StateANSICode>
+              <Country Codeset="https://www.iso.org/iso-3166-country-codes.html">US</Country>
+              <PostalCode>97232</PostalCode>
+              <GridLocation>
+                <Latitude>45.5336</Latitude>
+                <Longitude>-122.6464</Longitude>
+              </GridLocation>
+              <AddressRefId>fecb580e-04a7-45d3-9393-714ed05f4a26</AddressRefId>
+            </Address>
+            <Email Type="Work" TypeCodeset="https://example.edu/codesets/email-types">isidoro.vega@hawthorneharbor.edu</Email>
+          </Author>
+        </LessonSource>
+      </LessonSources>
+    </Lesson>
+  </xhtml:Example>
+  <xhtml:Example name="Lesson - Example 2" xmlns="">
     <Lesson RefId="6A6151B83273F352228C6411D0F09218" xml:lang="en">
       <SourceObjects>
         <SourceObject SIF_RefObject="Assessment">538A805BCFA442AFBC30BA300309F5B1</SourceObject>

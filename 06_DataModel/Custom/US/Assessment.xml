@@ -120,7 +120,23 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="Assessment - Example 1">
+    <Assessment RefId="01fe13e9-a31f-4053-93ba-f874869528e9">
+      <Name>Harborlight Grade 5 Mathematical Reasoning Benchmark</Name>
+      <ShortName>HG5 Math Benchmark</ShortName>
+      <AssessmentId>HL-MATH-5-2026-SPRING</AssessmentId>
+      <AssessmentIdSystem Codeset="https://www.example.org/codesets/assessment-id-systems">District</AssessmentIdSystem>
+      <AssessmentPackageRefId>6b8ab444-b932-4dd0-b850-4bf66b9ea215</AssessmentPackageRefId>
+      <AssessmentDescriptors>
+        <AssessmentDescriptor Codeset="https://www.example.org/codesets/assessment-descriptors">Benchmark</AssessmentDescriptor>
+        <AssessmentDescriptor Codeset="https://www.example.org/codesets/assessment-descriptors">ComputerAdaptiveTest</AssessmentDescriptor>
+      </AssessmentDescriptors>
+      <AssessmentPurpose>00050</AssessmentPurpose>
+      <AssessmentFamilyTitle>Harborlight Learning Progress Assessments</AssessmentFamilyTitle>
+      <AssessmentFamilyShortName>HLPA</AssessmentFamilyShortName>
+    </Assessment>
+  </xhtml:Example>
+  <xhtml:Example name="Assessment - Example 2" xmlns="">
     <Assessment RefId="CC2834DE9138FAB032EF399BA72A8234">
       <Name>TAKS Test</Name>
       <AssessmentId>TX48A</AssessmentId>

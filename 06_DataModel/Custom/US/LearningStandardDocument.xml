@@ -204,7 +204,69 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="LearningStandardDocument - Example 1">
+    <LearningStandardDocument RefId="49a42957-ce3e-4f46-bc15-7074987e991d">
+      <RefURI>https://standards.example.edu/documents/cascadia-grade5-mathematics-2025</RefURI>
+      <Title>Cascadia Grade 5 Mathematics Learning Standards</Title>
+      <ShortName>CG5Math</ShortName>
+      <DocumentVersion>2025.1</DocumentVersion>
+      <Description>State mathematics standards for Grade 5 learners, emphasizing numerical reasoning, fractions, measurement, data analysis, and mathematical communication.</Description>
+      <Source Codeset="https://standards.example.edu/codesets/standards-source">State Academic Standards Authority</Source>
+      <Organizations>
+        <Organization>Cascadia Department of Public Instruction</Organization>
+        <Organization>Harborlight Unified School District</Organization>
+      </Organizations>
+      <Authors>
+        <Author>Marisol Echevarria</Author>
+        <Author>Devon Takahashi</Author>
+      </Authors>
+      <OrganizationContactPoint>https://standards.example.edu/contact</OrganizationContactPoint>
+      <SubjectAreas>
+        <SubjectArea>
+          <Code Codeset="https://nces.ed.gov/ccd/coursecodes">02</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">MAT</OtherCode>
+          </OtherCodeList>
+        </SubjectArea>
+        <SubjectArea>
+          <Code Codeset="https://nces.ed.gov/ccd/coursecodes">11</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">MATH-G5</OtherCode>
+          </OtherCodeList>
+        </SubjectArea>
+      </SubjectAreas>
+      <DocumentStatus Codeset="https://standards.example.edu/codesets/document-status">Published</DocumentStatus>
+      <DocumentDate>2025-06-15</DocumentDate>
+      <LocalAdoptionDate>2025-08-12</LocalAdoptionDate>
+      <LocalArchiveDate>2030-06-30</LocalArchiveDate>
+      <EndOfLifeDate>2030-08-31</EndOfLifeDate>
+      <Copyright>
+        <Date>2025-01-01</Date>
+        <Holder>Cascadia Department of Public Instruction</Holder>
+      </Copyright>
+      <GradeLevels>
+        <GradeLevel>
+          <Code Codeset="https://ceds.ed.gov/element/000100">05</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">Grade 5</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+        <GradeLevel>
+          <Code Codeset="https://ceds.ed.gov/element/000100">06</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">Bridge Grade 5-6</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+      </GradeLevels>
+      <RepositoryDate>2025-07-01</RepositoryDate>
+      <LearningStandardItemRefId>ed37c042-e698-4865-a808-468971cde51d</LearningStandardItemRefId>
+      <RelatedLearningStandards>
+        <LearningStandardDocumentRefId>29ec1394-85e9-4b7b-95db-b38f92490aee</LearningStandardDocumentRefId>
+        <LearningStandardDocumentRefId>f2439fbe-84e7-45b0-8016-dec4b45bec14</LearningStandardDocumentRefId>
+      </RelatedLearningStandards>
+    </LearningStandardDocument>
+  </xhtml:Example>
+  <xhtml:Example name="LearningStandardDocument - Example 2" xmlns="">
     <LearningStandardDocument RefId="A5A575C789175101B8E7F08ED123A823" xml:lang="en">
       <Title>Washington Essential Academic Learning Requirements</Title>
       <Description>This document addresses high school English Language Arts</Description>

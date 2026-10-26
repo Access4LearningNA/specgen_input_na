@@ -49,7 +49,14 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="FinancialAccountAccountingPeriodLocationInfo - Example 1">
+    <FinancialAccountAccountingPeriodLocationInfo RefId="f1bff20f-f5ad-4fe4-b060-b9a5284dcdc6">
+      <FinancialAccountRefId>bbb3fc83-495a-404c-b95f-c98f7784e275</FinancialAccountRefId>
+      <AccountingPeriodRefId>f9edd16d-e263-4174-bfe5-534b68552fa0</AccountingPeriodRefId>
+      <LocationInfoRefId>260b61f2-62e1-4759-ba97-c5534b359182</LocationInfoRefId>
+    </FinancialAccountAccountingPeriodLocationInfo>
+  </xhtml:Example>
+  <xhtml:Example name="FinancialAccountAccountingPeriodLocationInfo - Example 2" xmlns="">
     <FinancialAccountAccountingPeriodLocationInfo RefId="B595A5959A8FE43448DF0EF5C635CD0E">
       <FinancialAccountRefId>C6576B6AF13F49E09F0B6B0A92BF5D3B</FinancialAccountRefId>
       <AccountingPeriodRefId>BA03EDF66F2848D7BE32586D98170F29</AccountingPeriodRefId>

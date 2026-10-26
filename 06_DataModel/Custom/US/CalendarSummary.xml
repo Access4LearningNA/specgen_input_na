@@ -21,5 +21,35 @@
   <Item><Element>SIF_Metadata</Element><Characteristics>O</Characteristics><Type ref="CommonTypes" name="SIF_MetadataType"/></Item>
   <Item><Element>SIF_ExtendedElements</Element><Characteristics>O</Characteristics><Type ref="CommonTypes" name="SIF_ExtendedElementsType"/></Item>
 
-  <xhtml:Example xmlns=""><CalendarSummary RefId="B5739375800AC4CC63850BB2754114AA" SchoolInfoRefId="B7A34E561C97345C0A4E11BB112B2753" SchoolYear="2005"><LocalId>123321A</LocalId><Description>Elementary School Calendar</Description><DaysInSession>180</DaysInSession><FirstInstructionDate>2006-09-05</FirstInstructionDate><LastInstructionDate>2007-06-10</LastInstructionDate><GraduationDate>2007-06-11</GraduationDate><InstructionalMinutes>64800</InstructionalMinutes><MinutesPerDay>360</MinutesPerDay><GradeLevels><GradeLevel><Code>03</Code></GradeLevel><GradeLevel><Code>04</Code></GradeLevel><GradeLevel><Code>05</Code></GradeLevel></GradeLevels></CalendarSummary></xhtml:Example>
+  <xhtml:Example xmlns="" name="CalendarSummary - Example 1">
+    <CalendarSummary RefId="9a0f05f8-82c2-4f07-8104-0882d9a6143b" SchoolInfoRefId="a5dc660d-2aaa-44ce-a838-11e30267fa22" SchoolYear="2027">
+      <LocalId>LARKSPUR-HS-2026-2027</LocalId>
+      <Description>2026-2027 instructional calendar for Larkspur Ridge High School in Cedar Hollow, Colorado.</Description>
+      <DaysInSession>180</DaysInSession>
+      <StartDate>2026-08-17</StartDate>
+      <EndDate>2027-06-04</EndDate>
+      <FirstInstructionDate>2026-08-19</FirstInstructionDate>
+      <LastInstructionDate>2027-06-02</LastInstructionDate>
+      <GraduationDate>2027-05-28</GraduationDate>
+      <InstructionalMinutes>58500</InstructionalMinutes>
+      <MinutesPerDay>325</MinutesPerDay>
+      <GradeLevels>
+        <GradeLevel>
+          <Code Codeset="https://ceds.ed.gov/element/000100">11</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">11</OtherCode>
+            <OtherCode Codeset="Text">Eleventh Grade</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+        <GradeLevel>
+          <Code Codeset="https://ceds.ed.gov/element/000100">12</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">12</OtherCode>
+            <OtherCode Codeset="Text">Twelfth Grade</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+      </GradeLevels>
+    </CalendarSummary>
+  </xhtml:Example>
+  <xhtml:Example name="CalendarSummary - Example 2" xmlns=""><CalendarSummary RefId="B5739375800AC4CC63850BB2754114AA" SchoolInfoRefId="B7A34E561C97345C0A4E11BB112B2753" SchoolYear="2005"><LocalId>123321A</LocalId><Description>Elementary School Calendar</Description><DaysInSession>180</DaysInSession><FirstInstructionDate>2006-09-05</FirstInstructionDate><LastInstructionDate>2007-06-10</LastInstructionDate><GraduationDate>2007-06-11</GraduationDate><InstructionalMinutes>64800</InstructionalMinutes><MinutesPerDay>360</MinutesPerDay><GradeLevels><GradeLevel><Code>03</Code></GradeLevel><GradeLevel><Code>04</Code></GradeLevel><GradeLevel><Code>05</Code></GradeLevel></GradeLevels></CalendarSummary></xhtml:Example>
 </DataObject>

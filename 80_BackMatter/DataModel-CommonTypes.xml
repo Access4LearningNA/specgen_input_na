@@ -1591,8 +1591,8 @@
         <p>Code representing the relationship.</p>
       </Description>
       <Type name="xs:token"/>
-      <cedsId>000721</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000721</cedsURL>
+      <cedsId>000425</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000425</cedsURL>
     </Item>
     <Item>
       <Attribute>Codeset</Attribute>
@@ -2581,8 +2581,8 @@
         <p>Five-digit number. Subject areas are represented by the first two digits, the last three digits specify a particular course within the subject area.</p>
       </Description>
       <Type name="xs:token"/>
-      <cedsId>000246</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000246</cedsURL>
+      <cedsId>001517</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001517</cedsURL>
     </Item>
     <Item>
       <Attribute>Codeset</Attribute>

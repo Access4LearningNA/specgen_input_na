@@ -150,6 +150,66 @@
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="" name="Assignment - Example 1">
+    <Assignment RefId="db0d9c55-f395-4b1d-b1cf-1ae2cdc2c8ee">
+      <Students>
+        <StudentPersonalRefId>3ff745de-7c9a-4d73-b85f-8b14a561983d</StudentPersonalRefId>
+        <StudentPersonalRefId>3f0acc80-f433-4edd-a7b4-8794b0127562</StudentPersonalRefId>
+      </Students>
+      <StaffPersonalRefId>1ab8a31f-81f6-473d-8c49-8fedca45dc7e</StaffPersonalRefId>
+      <TechnicalRequirements>
+        <TechnicalRequirement>Internet connection capable of streaming instructional video</TechnicalRequirement>
+        <TechnicalRequirement>Web browser with JavaScript and PDF viewing enabled</TechnicalRequirement>
+      </TechnicalRequirements>
+      <SoftwareRequirementList>
+        <SoftwareRequirement>
+          <SoftwareTitle>Google Chrome</SoftwareTitle>
+          <Version>126 or later</Version>
+          <Vendor>Google</Vendor>
+          <OS>ChromeOS 120 or later</OS>
+        </SoftwareRequirement>
+        <SoftwareRequirement>
+          <SoftwareTitle>Adobe Acrobat Reader</SoftwareTitle>
+          <Version>2024.002 or later</Version>
+          <Vendor>Adobe</Vendor>
+          <OS>Windows 11 or macOS 14</OS>
+        </SoftwareRequirement>
+      </SoftwareRequirementList>
+      <EssentialMaterials>
+        <EssentialMaterial>Student science notebook and pencil</EssentialMaterial>
+        <EssentialMaterial>Printed watershed map of the Chesapeake Bay region</EssentialMaterial>
+      </EssentialMaterials>
+      <Title>Watershed Evidence Portfolio: Chesapeake Bay</Title>
+      <Preamble>Students will analyze how runoff from local neighborhoods affects the Chesapeake Bay watershed and will assemble an evidence-based portfolio proposing practical mitigation measures.</Preamble>
+      <LearningObjectives>
+        <LearningObjective>Analyze relationships among land use, runoff, and water quality in a regional watershed.</LearningObjective>
+        <LearningObjective>Construct a claim supported by mapped evidence and scientific reasoning.</LearningObjective>
+      </LearningObjectives>
+      <LearningStandards>
+        <LearningStandardItemRefId>4505bb2c-0afa-4abe-acd7-ab111775a9c9</LearningStandardItemRefId>
+        <LearningStandardItemRefId>93797bc7-fc3e-450a-8c1e-84b9e9dfdd98</LearningStandardItemRefId>
+      </LearningStandards>
+      <Prerequisites>
+        <Prerequisite>Ability to interpret a map key, scale, and directional symbols</Prerequisite>
+        <Prerequisite>Ability to distinguish an observation from an evidence-based claim</Prerequisite>
+      </Prerequisites>
+      <SourceObjects>
+        <SourceObject SIF_RefObject="LearningResource" SIF_RefObjectCodeset="https://www.sifassociation.org/codesets/source-object-types">fec127f3-2003-4b6f-b85d-b8decca8e623</SourceObject>
+        <SourceObject SIF_RefObject="LearningResource" SIF_RefObjectCodeset="https://www.sifassociation.org/codesets/source-object-types">461fc6f8-fd11-4474-8eb2-3b13c390f9ad</SourceObject>
+      </SourceObjects>
+      <AssignmentTime>
+        <CreationDate>2026-08-17</CreationDate>
+        <Duration Units="Minutes" UnitsCodeset="https://www.sifassociation.org/codesets/time-units">90</Duration>
+        <StartDate>2026-08-24</StartDate>
+        <StartTime>08:30:00</StartTime>
+        <DueDate>2026-08-31</DueDate>
+        <DueTime>23:59:00</DueTime>
+        <AdministrationDate>2026-08-24</AdministrationDate>
+      </AssignmentTime>
+      <MaxAttemptsAllowed>2</MaxAttemptsAllowed>
+      <AddToGradeBookFlag>true</AddToGradeBookFlag>
+    </Assignment>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="Assignment - Example 2">
     <Assignment RefId="DE072A87EFAD4B778AF9FAF83C94839E" xml:lang="en">
       <Students>
         <StudentPersonalRefId>687FE59529E5FDB6A0949FDD8E12ACC3</StudentPersonalRefId>
@@ -176,7 +236,7 @@
       <AddToGradeBookFlag>true</AddToGradeBookFlag>
     </Assignment>
   </xhtml:Example>
-  <xhtml:Example xmlns="" name="Assignment - Example 2">
+  <xhtml:Example xmlns="" name="Assignment - Example 3">
     <Assignment RefId="DE072A87EFAD4B778AF9FAF83C94839E" xml:lang="en">
       <Students>
         <StudentPersonalRefId>687FE59529E5FDB6A0949FDD8E12ACC3</StudentPersonalRefId>

@@ -64,7 +64,22 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="StudentRecordExchange - Example 1">
+    <StudentRecordExchange RefId="825ca670-8004-4b71-9213-1f0a98e83dec">
+      <StateProvinceId>ME-30268417</StateProvinceId>
+      <LocalId>HPES-5-1842</LocalId>
+      <StudentPersonalRefId>11696729-9ac8-44a3-a0af-c6847ad86232</StudentPersonalRefId>
+      <Records>
+        <StudentDemographicRecordRefId>acfe57a2-ffc6-4196-b55f-1f7d77cde1e1</StudentDemographicRecordRefId>
+        <StudentAcademicRecordRefId>950cc35b-4221-4af3-81e5-d284fe1efafe</StudentAcademicRecordRefId>
+        <StudentSpecialEducationRecordRefId>3c3da5ee-c8be-4de2-b2b2-2177a172799e</StudentSpecialEducationRecordRefId>
+        <OtherRecords>
+          <StudentRecordPackageRefId>10629c5c-a2c6-46e5-90a6-a275232fb4c9</StudentRecordPackageRefId>
+        </OtherRecords>
+      </Records>
+    </StudentRecordExchange>
+  </xhtml:Example>
+  <xhtml:Example name="StudentRecordExchange - Example 2" xmlns="">
     <StudentRecordExchange RefId="0EAF9D6DA4854F348103B04BFEAC65B2">
       <StateProvinceId>2983472</StateProvinceId>
       <Records>

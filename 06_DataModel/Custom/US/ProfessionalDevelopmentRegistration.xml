@@ -79,7 +79,16 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="ProfessionalDevelopmentRegistration - Example 1">
+    <ProfessionalDevelopmentRegistration RefId="42c37b0d-6938-4d04-9d78-7503668c2d25" EmployeePersonalRefId="f08294d6-80b6-43ff-943c-e59d340775ee">
+      <RegistrationStatus Codeset="https://example.org/codesets/pd-registration-status">Completed</RegistrationStatus>
+      <ProfessionalDevelopmentActivityRefId>841aaf82-d21c-4bf5-b3a7-54a0d97ec738</ProfessionalDevelopmentActivityRefId>
+      <ProfessionalDevelopmentProgramRefId>c4a3eff4-3420-44ff-a476-9fd2ea6ce56d</ProfessionalDevelopmentProgramRefId>
+      <PaidAmount Currency="USD" CurrencyCodeset="https://www.iso.org/iso-4217-currency-codes.html">125.00</PaidAmount>
+      <Stipend Currency="USD" CurrencyCodeset="https://www.iso.org/iso-4217-currency-codes.html">300.00</Stipend>
+    </ProfessionalDevelopmentRegistration>
+  </xhtml:Example>
+  <xhtml:Example name="ProfessionalDevelopmentRegistration - Example 2" xmlns="">
     <ProfessionalDevelopmentRegistration RefId="ACB1254742AE54CC874567DFCD196832" EmployeePersonalRefId="D4E1EA3D82614CA39361514E5F115B14">
       <RegistrationStatus>Registered</RegistrationStatus>
       <ProfessionalDevelopmentActivityRefId>13F1BD47F2AE862C874567ABE4196DD1</ProfessionalDevelopmentActivityRefId>

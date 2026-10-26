@@ -108,7 +108,23 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="" name="StaffSectionAssignment">
+  <xhtml:Example xmlns="" name="StaffSectionAssignment - Example 1">
+    <StaffSectionAssignment RefId="a13c4a0d-6828-42c4-a156-c7ed8eb3d76b">
+      <StaffPersonalRefId>dc098efb-a824-41ee-8420-77011605af8f</StaffPersonalRefId>
+      <SectionInfoRefId>8454cb03-e7e7-4358-a0be-293955aa85de</SectionInfoRefId>
+      <AssignmentStartDate>2026-08-17T00:00:00</AssignmentStartDate>
+      <AssignmentEndDate>2027-06-04T23:59:59</AssignmentEndDate>
+      <TeacherOfRecord Codeset="https://example.org/codesets/teacher-of-record">true</TeacherOfRecord>
+      <Roles>
+        <Role Codeset="https://example.org/codesets/staff-section-role">PrimaryInstructor</Role>
+        <Role Codeset="https://example.org/codesets/staff-section-role">CurriculumLead</Role>
+      </Roles>
+      <PercentResponsible>100</PercentResponsible>
+      <TeacherInexperiencedStatus Codeset="https://example.org/codesets/teacher-experience-status">TCHINEXPRNCD</TeacherInexperiencedStatus>
+      <TeacherOutOfFieldStatus Codeset="https://example.org/codesets/teacher-field-status">TCHINFLD</TeacherOutOfFieldStatus>
+    </StaffSectionAssignment>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="StaffSectionAssignment - Example 2">
     <StaffSectionAssignment RefId="E3D34B359D75101A8C3D00AA001A1652">
       <StaffPersonalRefId>D3E34B359D75101A8C3D0004561A1652</StaffPersonalRefId>
       <SectionInfoRefId>B359D3E34D75101A8C3D00AA001A1652</SectionInfoRefId>

@@ -89,4 +89,17 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SchoolAccountabilitySchoolImprovementFundsStatusType"/>
   </Item>
+  <xhtml:Example xmlns="" name="SchoolAccountability - Example 1">
+    <SchoolAccountability RefId="e1b4f4ba-d3da-4107-a4fc-4fa500e1c1e4" SchoolInfoRefId="cd0877ed-33e1-40d5-a84a-12e6c8eb78a6">
+      <GunFreeSchoolsActReportingStatus Codeset="https://example.edu/codesets/gun-free-schools-act-reporting-status">YesNoReportedOffenses</GunFreeSchoolsActReportingStatus>
+      <HighSchoolGraduationRateIndicatorStatus Codeset="https://example.edu/codesets/high-school-graduation-rate-indicator-status">NotApplicable</HighSchoolGraduationRateIndicatorStatus>
+      <PersistentlyDangerousStatus Codeset="https://example.edu/codesets/persistently-dangerous-status">NotPersistentlyDangerous</PersistentlyDangerousStatus>
+      <ProficiencyTargetStatusForMath Codeset="https://example.edu/codesets/proficiency-target-status-math">Met</ProficiencyTargetStatusForMath>
+      <ProficiencyTargetStatusForReadingAndLanguageArts Codeset="https://example.edu/codesets/proficiency-target-status-reading-language-arts">Met</ProficiencyTargetStatusForReadingAndLanguageArts>
+      <SchoolOperationalStatus Codeset="https://example.edu/codesets/school-operational-status">Open</SchoolOperationalStatus>
+      <ReconstitutedStatus Codeset="https://example.edu/codesets/reconstituted-status">NotReconstituted</ReconstitutedStatus>
+      <SchoolImprovementExitDate>2024-06-14</SchoolImprovementExitDate>
+      <SchoolImprovementFundsStatus Codeset="https://example.edu/codesets/school-improvement-funds-status">NotReceivingFunds</SchoolImprovementFundsStatus>
+    </SchoolAccountability>
+  </xhtml:Example>
 </DataObject>

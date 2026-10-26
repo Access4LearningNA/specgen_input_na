@@ -81,7 +81,38 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="MarkValueInfo - Example 1">
+    <MarkValueInfo RefId="8d4f58dd-4e62-4211-83da-38670e3acebe" SchoolInfoRefId="fa9cbf5d-5612-4739-8992-cbe32e0af993">
+      <SchoolYear>2026</SchoolYear>
+      <Name>Mariner Academy Letter Grades (+/-)</Name>
+      <Percentage IsAccepted="true">
+        <Minimum>0</Minimum>
+        <Maximum>100</Maximum>
+      </Percentage>
+      <Numeric IsAccepted="true">
+        <Precision>3</Precision>
+        <Scale>1</Scale>
+        <Low>0</Low>
+        <High>100</High>
+      </Numeric>
+      <Letter IsAccepted="true">
+        <ValidMark SIF_Action="Delete">
+          <Code>A</Code>
+          <NumericEquivalent>95</NumericEquivalent>
+          <Description>Exceptional mastery</Description>
+        </ValidMark>
+        <ValidMark SIF_Action="Delete">
+          <Code>B+</Code>
+          <NumericEquivalent>88</NumericEquivalent>
+          <Description>Strong proficiency</Description>
+        </ValidMark>
+      </Letter>
+      <Narrative IsAccepted="true">
+        <MaximumSize>500</MaximumSize>
+      </Narrative>
+    </MarkValueInfo>
+  </xhtml:Example>
+  <xhtml:Example name="MarkValueInfo - Example 2" xmlns="">
     <MarkValueInfo RefId="11737E214A7C46BDBA4301CADCA75C87" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB">
       <SchoolYear>2004</SchoolYear>
       <Name>Letter Grades</Name>
@@ -112,7 +143,7 @@
       <Narrative IsAccepted="false"/>
     </MarkValueInfo>
   </xhtml:Example>
-  <xhtml:Example xmlns="">
+  <xhtml:Example name="MarkValueInfo - Example 2" xmlns="">
     <MarkValueInfo RefId="11737E214A7C46BDBA4301CADCA75C87" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB">
       <SchoolYear>2004</SchoolYear>
       <Name>Numeric Grade</Name>
@@ -127,7 +158,7 @@
       <Narrative IsAccepted="false"/>
     </MarkValueInfo>
   </xhtml:Example>
-  <xhtml:Example xmlns="">
+  <xhtml:Example name="MarkValueInfo - Example 2" xmlns="">
     <MarkValueInfo RefId="11737E214A7C46BDBA4301CADCA75C87" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB">
       <SchoolYear>2004</SchoolYear>
       <Name>Free Form Comment</Name>

@@ -89,7 +89,25 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="" name="IdMApplication">
+  <xhtml:Example xmlns="" name="IdMApplication - Example 1">
+    <IdMApplication RefId="907daec2-13df-457e-8fae-260a274dec78">
+      <Name>HarborlightLearningPortal</Name>
+      <URI>https://portal.harborlightacademy.example.edu</URI>
+      <DefaultFunction>Learning resource delivery and single sign-on access</DefaultFunction>
+      <FunctionList>
+        <Function>LearningResourceDelivery</Function>
+        <Function>SingleSignOn</Function>
+      </FunctionList>
+      <DefaultIdentityProvider>e7ec3795-4202-41d0-bdc4-b6795e9296c7</DefaultIdentityProvider>
+      <IdentityProviderList>
+        <IdentityProvider>dc8708f7-9b4a-450f-8bd5-35d92d807f9e</IdentityProvider>
+        <IdentityProvider>005f9af0-ea05-4904-addb-694854c0e877</IdentityProvider>
+      </IdentityProviderList>
+      <StartDate>2026-08-01</StartDate>
+      <EndDate>2027-06-30</EndDate>
+    </IdMApplication>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="IdMApplication - Example 2">
     <IdMApplication RefId="FE1078BA3261545A31905937B265CE01">
       <Name>myApplication</Name>
       <URI>http://myApplication.com</URI>

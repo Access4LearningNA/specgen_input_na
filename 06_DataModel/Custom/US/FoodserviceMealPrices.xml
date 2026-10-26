@@ -43,7 +43,63 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="FoodserviceMealPrices - Example 1">
+    <FoodserviceMealPrices RefId="cf0ed5db-e092-49e2-8799-470c9f083cb1">
+      <SchoolInfoRefId>8cd07bfe-66e3-42c6-b1e7-d1fe410da2fb</SchoolInfoRefId>
+      <Program Type="NSLP" TypeCodeset="https://www.fns.usda.gov/nslp">National School Lunch Program</Program>
+      <Prices>
+        <Price>
+          <Value Currency="USD" CurrencyCodeset="https://www.iso.org/iso-4217-currency-codes.html">0.40</Value>
+          <MealStatus Type="ReducedPrice" TypeCodeset="https://www.fns.usda.gov/cn">
+            <StartDate>2026-08-17</StartDate>
+            <SchoolYear>2027</SchoolYear>
+          </MealStatus>
+          <MealType Codeset="https://www.fns.usda.gov/cn/meal-patterns">Lunch</MealType>
+          <GradeLevels>
+            <GradeLevel>
+              <Code Codeset="https://ceds.ed.gov/element/000100">06</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Local">MiddleSchoolGrade6</OtherCode>
+                <OtherCode Codeset="Text">Sixth Grade</OtherCode>
+              </OtherCodeList>
+            </GradeLevel>
+            <GradeLevel>
+              <Code Codeset="https://ceds.ed.gov/element/000100">07</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Local">MiddleSchoolGrade7</OtherCode>
+                <OtherCode Codeset="Text">Seventh Grade</OtherCode>
+              </OtherCodeList>
+            </GradeLevel>
+          </GradeLevels>
+        </Price>
+        <Price>
+          <Value Currency="USD" CurrencyCodeset="https://www.iso.org/iso-4217-currency-codes.html">3.25</Value>
+          <MealStatus Type="Paid" TypeCodeset="https://www.fns.usda.gov/cn">
+            <StartDate>2026-08-17</StartDate>
+            <SchoolYear>2027</SchoolYear>
+          </MealStatus>
+          <MealType Codeset="https://www.fns.usda.gov/cn/meal-patterns">Lunch</MealType>
+          <GradeLevels>
+            <GradeLevel>
+              <Code Codeset="https://ceds.ed.gov/element/000100">06</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Local">MiddleSchoolGrade6</OtherCode>
+                <OtherCode Codeset="Text">Sixth Grade</OtherCode>
+              </OtherCodeList>
+            </GradeLevel>
+            <GradeLevel>
+              <Code Codeset="https://ceds.ed.gov/element/000100">07</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Local">MiddleSchoolGrade7</OtherCode>
+                <OtherCode Codeset="Text">Seventh Grade</OtherCode>
+              </OtherCodeList>
+            </GradeLevel>
+          </GradeLevels>
+        </Price>
+      </Prices>
+    </FoodserviceMealPrices>
+  </xhtml:Example>
+  <xhtml:Example name="FoodserviceMealPrices - Example 2" xmlns="">
     <FoodserviceMealPrices RefId="EF521958AB474559B2AE7BD82647C66B">
       <SchoolInfoRefId>FF521958AB474559B2AE7BD82647C66B</SchoolInfoRefId>
       <Program Type="Foodservice">NSLP</Program>

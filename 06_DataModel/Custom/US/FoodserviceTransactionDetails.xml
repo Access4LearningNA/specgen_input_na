@@ -49,7 +49,17 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="FoodserviceTransactionDetails - Example 1">
+    <FoodserviceTransactionDetails RefId="2e5d8bba-7ca6-4c37-8ced-52140e2cbfdf">
+      <FoodserviceTransactionRefId>8a6b3e91-0ad8-4847-8626-f82b1556bbff</FoodserviceTransactionRefId>
+      <Amounts>
+        <Amount Type="Cash" TypeCodeset="urn:example:codeset:foodservice-amount-type" Credits="0" Currency="USD" CurrencyCodeset="urn:iso:std:iso:4217">3.25</Amount>
+        <Amount Type="BreakfastCredit" TypeCodeset="urn:example:codeset:foodservice-amount-type" Credits="1" Currency="USD" CurrencyCodeset="urn:iso:std:iso:4217">0.00</Amount>
+      </Amounts>
+      <Description>Breakfast purchase and meal-credit redemption for Marisol Quillan at Juniper Ridge Elementary School.</Description>
+    </FoodserviceTransactionDetails>
+  </xhtml:Example>
+  <xhtml:Example name="FoodserviceTransactionDetails - Example 2" xmlns="">
     <FoodserviceTransactionDetails RefId="E50EE86118004F238D21B86E70B5B4AA">
       <FoodserviceTransactionRefId>D489306D404E4DB28E0B0DA8B4C24908</FoodserviceTransactionRefId>
       <Amounts>

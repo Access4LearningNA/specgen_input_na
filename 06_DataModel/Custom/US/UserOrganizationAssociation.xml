@@ -77,7 +77,17 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="" name="UserOrganizationAssociation">
+  <xhtml:Example xmlns="" name="UserOrganizationAssociation - Example 1">
+    <UserOrganizationAssociation RefId="fabc4fc6-58f8-4244-82b4-315957579761">
+      <PersonRefId SIF_Object="Person">72479b53-d517-4491-9435-66f6d3d34b20</PersonRefId>
+      <OrganizationRefId SIF_Object="Organization">fd6ccc3c-2f05-4e07-928d-1301663fbb9e</OrganizationRefId>
+      <AssociationType>Member</AssociationType>
+      <AuthoritativeSourceId>c8d32f52-e8d8-4960-8176-9404504739d2</AuthoritativeSourceId>
+      <StartDate>2026-08-17</StartDate>
+      <EndDate>2027-06-11</EndDate>
+    </UserOrganizationAssociation>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="UserOrganizationAssociation - Example 2">
     <UserOrganizationAssociation RefId="FE1078BA3261545A31905937B265CE01">
       <PersonRefId SIF_Object="StaffPersonal">AE1078BA3261545A31905937B265CE01</PersonRefId>
       <OrganizationRefId SIF_Object="SchoolInfo">BE1078BA3261545A31905937B265CE01</OrganizationRefId>

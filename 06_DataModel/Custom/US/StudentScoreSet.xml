@@ -75,7 +75,25 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="StudentScoreSet - Example 1">
+    <StudentScoreSet RefId="4809e3d0-f41a-459d-9c7c-ada709de3cad" ScoreMetric="00512" ScoreMetricCodeset="https://ceds.ed.gov/score-metrics" AssessmentAdministrationRefId="83adac6e-e610-454a-8b66-e6dce4ce3f30" StudentPersonalRefId="ebe3d944-bf8f-4b6e-bf1e-e2e216389ba4" AssessmentRegistrationRefId="37503988-4dcd-466c-94b2-6e7152c88530">
+      <Scores>
+        <Score AssessmentSubTestRefId="16b4d96f-0700-442a-b51d-3cdcd2fb3cd4">
+          <ScoreValue>87</ScoreValue>
+          <DiagnosticStatement>Demonstrated secure understanding of proportional relationships and coordinate-plane reasoning.</DiagnosticStatement>
+          <Description>Proficient</Description>
+          <NumberOfResponses>40</NumberOfResponses>
+        </Score>
+        <Score AssessmentSubTestRefId="a4be81c1-4da3-4294-8e62-ee8aea782414">
+          <ScoreValue>91</ScoreValue>
+          <DiagnosticStatement>Demonstrated strong performance interpreting informational text and supporting claims with evidence.</DiagnosticStatement>
+          <Description>Proficient</Description>
+          <NumberOfResponses>42</NumberOfResponses>
+        </Score>
+      </Scores>
+    </StudentScoreSet>
+  </xhtml:Example>
+  <xhtml:Example name="StudentScoreSet - Example 2" xmlns="">
     <StudentScoreSet RefId="5810E283E928459CBBA76EFE1963F784" ScoreMetric="0512" AssessmentAdministrationRefId="1F971F3D414E4146932566638290E6C1" StudentPersonalRefId="8F0934CC2F0448F8BBD788AA1ADE691B">
       <Scores>
         <Score AssessmentSubTestRefId="E5EDAE63A04D47E49D0224A32956B074">

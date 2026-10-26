@@ -44,4 +44,19 @@
     <cedsId>000560</cedsId>
     <cedsURL>https://ceds.ed.gov/element/000560</cedsURL>
   </Item>
+  <xhtml:Example xmlns="" name="LEAFederalFund - Example 1">
+    <LEAFederalFund RefId="47a0c6f0-d574-40e3-b6a9-25f914e7a021" LEAInfoRefId="5605e374-1358-42d3-b911-100d05fe9294">
+      <FederalProgramList>
+        <FederalProgram>
+          <Code>84.010</Code>
+          <FundingAllocation>428750.00</FundingAllocation>
+        </FederalProgram>
+        <FederalProgram>
+          <Code>84.027</Code>
+          <FundingAllocation>316400.00</FundingAllocation>
+        </FederalProgram>
+      </FederalProgramList>
+      <REAPAlternativeFundingStatus>Yes</REAPAlternativeFundingStatus>
+    </LEAFederalFund>
+  </xhtml:Example>
 </DataObject>

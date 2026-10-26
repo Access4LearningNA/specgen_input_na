@@ -4,7 +4,7 @@
   <Item>
     <Element>DisciplineIncident</Element>
     <Description>
-      <p>This object provides information on incidents involving violence, weapons, drugs, and other safety and discipline issues.</p>
+      <p>This object provides information on incidents involving violence, weapons, drugs, and other safety and discipline issues. Each instance of a DisciplineIncident object is designed to represent a specific offense. Therefore, more than one DisciplineIncident object may exist for the same time period and may involve one or more of the same people.</p>
     </Description>
   </Item>
   <Item>
@@ -58,7 +58,7 @@
   </Item>
   <Item>
     <Element>IncidentDate</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <Description>
       <p>The date when the incident occurred.</p>
     </Description>
@@ -68,7 +68,7 @@
   </Item>
   <Item>
     <Element>IncidentTime</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <Description>
       <p>The time when the incident occurred.</p>
     </Description>
@@ -78,7 +78,7 @@
   </Item>
   <Item>
     <Element>IncidentLocation</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <Description>
       <p>The locally-defined identifier or description of the location where the incident occurred.</p>
     </Description>
@@ -104,7 +104,7 @@
   </Item>
   <Item>
     <Element>IncidentReporter</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <Description>
       <p>Information regarding the individual who reported the incident.</p>
     </Description>
@@ -116,7 +116,7 @@
     <Element>RelatedToList</Element>
     <Characteristics>O</Characteristics>
     <Description>
-      <p>List of categories to which the incident is related.</p>
+      <p>List of secondary behaviors or contributing circumstances in addition to the IncidentCategory. Use this incident-level RelatedToList only for secondary behaviors or contributing circumstances that cannot be connected to one or more offenders or victims. This is primarily used when an incident occurs but the secondary behavior or contributing circumstance cannot be tied to an individual.</p>
     </Description>
     <Type ref="CommonTypes" name="RelatedToListType"/>
   </Item>
@@ -124,15 +124,13 @@
     <Element>WeaponTypeList</Element>
     <Characteristics>C</Characteristics>
     <Description>
-      <p>List of weapons involved in the incident. If the incident involves weapons, the element must have a value.</p>
-      <p>Each weapon used in the incident is identified by a WeaponType entry. When multiple weapons of a single type are used, each weapon has a separate entry in this list.</p>
-      <p>Weapons used by individual offenders are also reported in WeaponTypeList entries associated to the offender.</p>
+      <p>List of weapons involved in the incident. If the incident involves weapons, the element must have a value. Associate the weapon at the incident level only when the weapon cannot be tied to an individual offender.</p>
     </Description>
     <Type ref="CommonTypes" name="WeaponTypeListType"/>
   </Item>
   <Item>
     <Element>IncidentCategory</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <Description>
       <p>The category or description for this incident.</p>
     </Description>
@@ -168,7 +166,7 @@
     <Element>IncidentActionList</Element>
     <Characteristics>O</Characteristics>
     <Description>
-      <p>List of actions taken on the incident, regardless of actions relating to individual offenders.</p>
+      <p>List of actions taken on the incident, regardless of actions relating to individual offenders or victims. Record an action at the incident level when the action resolves or characterizes the overall event.</p>
     </Description>
     <Type ref="CommonTypes" name="IncidentActionListType"/>
   </Item>
@@ -182,7 +180,184 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="" name="Discipline Incident">
+  <xhtml:Example xmlns="" name="DisciplineIncident - Example 1">
+    <DisciplineIncident RefId="75dd3076-b08f-4c3b-a394-97cf55c73c8d" SchoolYear="2026">
+      <AgencyReporting SIF_RefObject="SchoolInfo">fc2ca611-4174-40bf-98dd-5b7211d161fb</AgencyReporting>
+      <IncidentNumber>VMS-2026-0417</IncidentNumber>
+      <IncidentDate>2026-04-17</IncidentDate>
+      <IncidentTime Type="DuringSchoolHours" TypeCodeset="urn:example:codeset:incident-time">10:42:00</IncidentTime>
+      <IncidentLocation Type="03017" TypeCodeset="urn:example:codeset:incident-location">North Courtyard beside the science wing</IncidentLocation>
+      <IncidentLocationRefId SIF_RefObject="LocationInfo">3bb716e3-3098-44ec-ac5b-7d2e2c272dbf</IncidentLocationRefId>
+      <IncidentCost>Estimated replacement cost for damaged courtyard planter: $86.50</IncidentCost>
+      <IncidentReporter Type="03032" TypeCodeset="urn:example:codeset:person-role">
+        <Name Type="04">
+          <Prefix>Ms.</Prefix>
+          <LastName>Okafor</LastName>
+          <FirstName>Chiamaka</FirstName>
+          <MiddleName>Nneka</MiddleName>
+          <Suffix>Ed.D.</Suffix>
+          <PreferredName>Dr. Okafor</PreferredName>
+          <SortName>Okafor, Chiamaka Nneka</SortName>
+          <FullName>Dr. Chiamaka Nneka Okafor, Ed.D.</FullName>
+        </Name>
+        <SIF_RefId SIF_RefObject="StaffPersonal">d46bfada-4ed3-4971-a51b-7327045f02b8</SIF_RefId>
+      </IncidentReporter>
+      <RelatedToList>
+        <RelatedTo Codeset="urn:example:codeset:incident-related-to">04645</RelatedTo>
+        <RelatedTo Codeset="urn:example:codeset:incident-related-to">04677</RelatedTo>
+      </RelatedToList>
+      <WeaponTypeList>
+        <WeaponType Codeset="urn:example:codeset:weapon-type">Other</WeaponType>
+        <WeaponType Codeset="urn:example:codeset:weapon-type">Other</WeaponType>
+      </WeaponTypeList>
+      <IncidentCategory>
+        <Code Codeset="urn:example:codeset:incident-category">WeaponsPossession</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">Pocketknife and pepper spray possession</OtherCode>
+          <OtherCode Codeset="Text">Items surrendered without use or injury</OtherCode>
+        </OtherCodeList>
+        <CodeComment>Student brought a small pocketknife and pepper spray to campus; both items were secured by administration.</CodeComment>
+      </IncidentCategory>
+      <OffenderList>
+        <Offender Type="Student" TypeCodeset="urn:example:codeset:person-role">
+          <Name Type="04">
+            <Prefix>Mr.</Prefix>
+            <LastName>Delgado</LastName>
+            <FirstName>Teodoro</FirstName>
+            <MiddleName>Rafael</MiddleName>
+            <Suffix>III</Suffix>
+            <PreferredName>Teo</PreferredName>
+            <SortName>Delgado, Teodoro Rafael</SortName>
+            <FullName>Teodoro Rafael Delgado III</FullName>
+          </Name>
+          <SIF_RefId SIF_RefObject="StudentPersonal">790bfe5f-ca4a-4dc9-ab65-8f15dd7a6c60</SIF_RefId>
+          <Injury Codeset="urn:example:codeset:injury">NoInjury</Injury>
+          <ManifestationDetermination>
+            <MeetingHeld Codeset="urn:example:codeset:yes-no">Yes</MeetingHeld>
+            <MeetingDate>2026-04-21</MeetingDate>
+            <DueToDisability Codeset="urn:example:codeset:manifestation-determination">No</DueToDisability>
+            <MeetingOutcome>Team determined that the conduct was not a manifestation of the student's disability; a behavior support review was scheduled.</MeetingOutcome>
+          </ManifestationDetermination>
+          <ActionList>
+            <Action>
+              <Code Codeset="urn:example:codeset:discipline-action">03078</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Local">Out-of-school suspension</OtherCode>
+                <OtherCode Codeset="Text">Three school-day suspension with reentry conference</OtherCode>
+              </OtherCodeList>
+              <StartDate>2026-04-20</StartDate>
+              <EndDate>2026-04-22</EndDate>
+              <Duration>3.0</Duration>
+              <ZeroTolerance Codeset="urn:example:codeset:yes-no">No</ZeroTolerance>
+              <FullYearExpulsion Codeset="urn:example:codeset:yes-no">No</FullYearExpulsion>
+              <ShortenedExpulsion Codeset="urn:example:codeset:yes-no">No</ShortenedExpulsion>
+              <PoliceNotification Codeset="urn:example:codeset:yes-no">No</PoliceNotification>
+              <Arrest Codeset="urn:example:codeset:yes-no">No</Arrest>
+              <AlternativeEducation Codeset="urn:example:codeset:yes-no">No</AlternativeEducation>
+            </Action>
+            <Action>
+              <Code Codeset="urn:example:codeset:discipline-action">03092</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Local">Behavior intervention referral</OtherCode>
+                <OtherCode Codeset="Text">Restorative reentry conference and counselor check-in</OtherCode>
+              </OtherCodeList>
+              <StartDate>2026-04-23</StartDate>
+              <EndDate>2026-05-15</EndDate>
+              <Duration>1.0</Duration>
+              <ZeroTolerance Codeset="urn:example:codeset:yes-no">No</ZeroTolerance>
+              <FullYearExpulsion Codeset="urn:example:codeset:yes-no">No</FullYearExpulsion>
+              <ShortenedExpulsion Codeset="urn:example:codeset:yes-no">No</ShortenedExpulsion>
+              <PoliceNotification Codeset="urn:example:codeset:yes-no">No</PoliceNotification>
+              <Arrest Codeset="urn:example:codeset:yes-no">No</Arrest>
+              <AlternativeEducation Codeset="urn:example:codeset:yes-no">No</AlternativeEducation>
+            </Action>
+          </ActionList>
+          <WeaponTypeList>
+            <WeaponType Codeset="urn:example:codeset:weapon-type">Other</WeaponType>
+            <WeaponType Codeset="urn:example:codeset:weapon-type">Other</WeaponType>
+          </WeaponTypeList>
+          <RelatedToList>
+            <RelatedTo Codeset="urn:example:codeset:incident-related-to">04645</RelatedTo>
+            <RelatedTo Codeset="urn:example:codeset:incident-related-to">04677</RelatedTo>
+          </RelatedToList>
+        </Offender>
+      </OffenderList>
+      <VictimList>
+        <Victim Type="Student" TypeCodeset="urn:example:codeset:person-role">
+          <Name Type="04">
+            <Prefix>Ms.</Prefix>
+            <LastName>Boudreaux</LastName>
+            <FirstName>Solenne</FirstName>
+            <MiddleName>Marie</MiddleName>
+            <Suffix>II</Suffix>
+            <PreferredName>Sol</PreferredName>
+            <SortName>Boudreaux, Solenne Marie</SortName>
+            <FullName>Solenne Marie Boudreaux II</FullName>
+          </Name>
+          <SIF_RefId SIF_RefObject="StudentPersonal">b1983048-70d2-49b9-a6aa-c0fce2b875c9</SIF_RefId>
+          <Injury Codeset="urn:example:codeset:injury">NoInjury</Injury>
+          <RelatedToList>
+            <RelatedTo Codeset="urn:example:codeset:incident-related-to">04645</RelatedTo>
+            <RelatedTo Codeset="urn:example:codeset:incident-related-to">04677</RelatedTo>
+          </RelatedToList>
+          <ActionList>
+            <Action>
+              <Code Codeset="urn:example:codeset:discipline-action">03078</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Local">Out-of-school suspension</OtherCode>
+                <OtherCode Codeset="Text">Three school-day suspension with reentry conference</OtherCode>
+              </OtherCodeList>
+              <StartDate>2026-04-20</StartDate>
+              <EndDate>2026-04-22</EndDate>
+              <Duration>3.0</Duration>
+              <ZeroTolerance Codeset="urn:example:codeset:yes-no">No</ZeroTolerance>
+              <FullYearExpulsion Codeset="urn:example:codeset:yes-no">No</FullYearExpulsion>
+              <ShortenedExpulsion Codeset="urn:example:codeset:yes-no">No</ShortenedExpulsion>
+              <PoliceNotification Codeset="urn:example:codeset:yes-no">No</PoliceNotification>
+              <Arrest Codeset="urn:example:codeset:yes-no">No</Arrest>
+              <AlternativeEducation Codeset="urn:example:codeset:yes-no">No</AlternativeEducation>
+            </Action>
+            <Action>
+              <Code Codeset="urn:example:codeset:discipline-action">03092</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Local">Behavior intervention referral</OtherCode>
+                <OtherCode Codeset="Text">Restorative reentry conference and counselor check-in</OtherCode>
+              </OtherCodeList>
+              <StartDate>2026-04-23</StartDate>
+              <EndDate>2026-05-15</EndDate>
+              <Duration>1.0</Duration>
+              <ZeroTolerance Codeset="urn:example:codeset:yes-no">No</ZeroTolerance>
+              <FullYearExpulsion Codeset="urn:example:codeset:yes-no">No</FullYearExpulsion>
+              <ShortenedExpulsion Codeset="urn:example:codeset:yes-no">No</ShortenedExpulsion>
+              <PoliceNotification Codeset="urn:example:codeset:yes-no">No</PoliceNotification>
+              <Arrest Codeset="urn:example:codeset:yes-no">No</Arrest>
+              <AlternativeEducation Codeset="urn:example:codeset:yes-no">No</AlternativeEducation>
+            </Action>
+          </ActionList>
+        </Victim>
+      </VictimList>
+      <IncidentDescription>During the passing period before fifth-period Earth Science, Teodoro Delgado disclosed to Assistant Principal Chiamaka Okafor that he had a small pocketknife and a canister of pepper spray in his backpack. The items were secured in the North Courtyard without being displayed, used, or directed toward any person. Solenne Boudreaux was identified as a nearby student witness and reported no injury. The incident was documented, guardians were contacted, and a restorative reentry meeting was arranged.</IncidentDescription>
+      <IncidentActionList>
+        <IncidentAction>
+          <StartDate>2026-04-17</StartDate>
+          <EndDate>2026-04-17</EndDate>
+          <Duration>0.5</Duration>
+          <ZeroTolerance Codeset="urn:example:codeset:yes-no">No</ZeroTolerance>
+          <PoliceNotification Codeset="urn:example:codeset:yes-no">No</PoliceNotification>
+          <Arrest Codeset="urn:example:codeset:yes-no">No</Arrest>
+        </IncidentAction>
+        <IncidentAction>
+          <StartDate>2026-04-20</StartDate>
+          <EndDate>2026-04-22</EndDate>
+          <Duration>3.0</Duration>
+          <ZeroTolerance Codeset="urn:example:codeset:yes-no">No</ZeroTolerance>
+          <PoliceNotification Codeset="urn:example:codeset:yes-no">No</PoliceNotification>
+          <Arrest Codeset="urn:example:codeset:yes-no">No</Arrest>
+        </IncidentAction>
+      </IncidentActionList>
+    </DisciplineIncident>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="Discipline Incident - Example 2">
     <DisciplineIncident RefId="A1544ED564995254A4568EFFC5100BD1" SchoolYear="2007">
       <AgencyReporting SIF_RefObject="SchoolInfo">0847987235489729AAA73011BB365EC3</AgencyReporting>
       <IncidentNumber>56501</IncidentNumber>

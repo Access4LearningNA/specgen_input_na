@@ -117,6 +117,44 @@
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="" name="CalendarDate - Example 1">
+    <CalendarDate RefId="104ad706-ebeb-4c65-9168-0b265d6869f9" Date="2026-09-08" CalendarSummaryRefId="fe0616a2-9410-4f1b-b144-3023b763382d" SchoolInfoRefId="6d78807a-fbf2-42bc-bf28-eee85bd5cb1c" SchoolYear="2027">
+      <CalendarDateType>
+        <Code Codeset="https://www.sifassociation.org/codesets/calendar-date-type">InstructionalDay</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">MVE-INST-001</OtherCode>
+          <OtherCode Codeset="Text">First instructional Tuesday</OtherCode>
+        </OtherCodeList>
+      </CalendarDateType>
+      <CalendarDateNumber>1</CalendarDateNumber>
+      <StudentAttendance>
+        <CountsTowardAttendance Codeset="https://www.sifassociation.org/codesets/attendance-count">FullDay</CountsTowardAttendance>
+        <AttendanceValue>1.0</AttendanceValue>
+      </StudentAttendance>
+      <TeacherAttendance>
+        <CountsTowardAttendance Codeset="https://www.sifassociation.org/codesets/attendance-count">FullDay</CountsTowardAttendance>
+        <AttendanceValue>1.0</AttendanceValue>
+      </TeacherAttendance>
+      <AdministratorAttendance>
+        <CountsTowardAttendance Codeset="https://www.sifassociation.org/codesets/attendance-count">FullDay</CountsTowardAttendance>
+        <AttendanceValue>1.0</AttendanceValue>
+      </AdministratorAttendance>
+      <BellScheduleDayList>
+        <BellScheduleDay>
+          <BellScheduleRefId>04f91aa1-4ae2-462a-a757-38f06f708b62</BellScheduleRefId>
+          <TimetableDayIdentifier>A</TimetableDayIdentifier>
+        </BellScheduleDay>
+        <BellScheduleDay>
+          <BellScheduleRefId>791eef2a-20e4-4a8b-95c0-c82fff844809</BellScheduleRefId>
+          <TimetableDayIdentifier>REGULAR</TimetableDayIdentifier>
+        </BellScheduleDay>
+      </BellScheduleDayList>
+      <InstructionalDeliveryModeList>
+        <InstructionalDeliveryMode Codeset="https://www.sifassociation.org/codesets/instructional-delivery-mode">InPerson</InstructionalDeliveryMode>
+        <InstructionalDeliveryMode Codeset="https://www.sifassociation.org/codesets/instructional-delivery-mode">SynchronousOnline</InstructionalDeliveryMode>
+      </InstructionalDeliveryModeList>
+    </CalendarDate>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="CalendarDate - Example 2">
     <CalendarDate RefId="359D75101AD0A9D7A8C3DAD0A85103A2" Date="2007-08-31" CalendarSummaryRefId="B5739375800AC4CC63850BB2754114AA" SchoolInfoRefId="B7A34E561C97345C0A4E11BB112B2753" SchoolYear="2007">
       <CalendarDateType>
         <Code>0845</Code>
@@ -140,7 +178,7 @@
       </AdministratorAttendance>
     </CalendarDate>
   </xhtml:Example>
-  <xhtml:Example xmlns="" name="CalendarDate - Example 2">
+  <xhtml:Example xmlns="" name="CalendarDate - Example 3">
     <CalendarDate RefId="359D75101AD0A9D7A8C3DAD0A85103A2" Date="2007-08-31" CalendarSummaryRefId="B5739375800AC4CC63850BB2754114AA" SchoolInfoRefId="B7A34E561C97345C0A4E11BB112B2753" SchoolYear="2007">
       <CalendarDateType>
         <Code>0845</Code>

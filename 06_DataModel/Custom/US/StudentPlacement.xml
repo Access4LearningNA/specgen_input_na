@@ -243,7 +243,79 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="StudentPlacement - Example 1">
+    <StudentPlacement RefId="8e5c7dd8-45b4-4ef0-8020-46ff8c62d8c5" StudentParticipationRefId="a91dea7e-2b68-4e75-a58b-827a058ead8c" StudentPersonalRefId="33ecd08b-e819-4838-927c-789e5609edef">
+      <StudentPlacementAsOfDate>2026-08-20</StudentPlacementAsOfDate>
+      <Service>
+        <Code Codeset="https://example.org/codesets/special-education-services">SLP</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">SD-SLP-01</OtherCode>
+          <OtherCode Codeset="Local">RSD-SpeechLanguage</OtherCode>
+        </OtherCodeList>
+      </Service>
+      <ServiceCategory Codeset="https://example.org/codesets/service-categories">RelatedService</ServiceCategory>
+      <ServiceFundingSources>
+        <ServiceFundingSource>
+          <Code Codeset="https://example.org/codesets/funding-sources">IDEA-B</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">SD-IDEA-B</OtherCode>
+            <OtherCode Codeset="Local">RSD-SPED-FED</OtherCode>
+          </OtherCodeList>
+        </ServiceFundingSource>
+        <ServiceFundingSource>
+          <Code Codeset="https://example.org/codesets/funding-sources">LOCAL-SPED</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">SD-LOCAL-ED</OtherCode>
+            <OtherCode Codeset="Local">RSD-SPED-LOCAL</OtherCode>
+          </OtherCodeList>
+        </ServiceFundingSource>
+      </ServiceFundingSources>
+      <ServicingPublicAgency SIF_RefObject="LEAInfo">ef3e6092-9847-46a0-a87f-945d019917bd</ServicingPublicAgency>
+      <ServicingSchool SIF_RefObject="SchoolInfo">40e64ba8-be3e-4741-99f1-67654dd42fd2</ServicingSchool>
+      <SchoolWhereServiceDelivered SIF_RefObject="SchoolInfo">a700d095-eaa1-415e-97af-b25d19844ba2</SchoolWhereServiceDelivered>
+      <ServiceProviderType>
+        <Code Codeset="https://example.org/codesets/provider-types">SpeechLanguagePathologist</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">SD-SLP</OtherCode>
+          <OtherCode Codeset="Local">RSD-Related-Service-SLP</OtherCode>
+        </OtherCodeList>
+      </ServiceProviderType>
+      <AgencyType>Rivermark School District Student Services</AgencyType>
+      <ServiceProviderName>Marisol Quintero</ServiceProviderName>
+      <ServiceSetting>
+        <Code Codeset="https://example.org/codesets/service-settings">ResourceRoom</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">SD-RR</OtherCode>
+          <OtherCode Codeset="Local">Mariner-Elementary-Rm118</OtherCode>
+        </OtherCodeList>
+      </ServiceSetting>
+      <WhenServiceProvided>
+        <Code Codeset="https://example.org/codesets/service-timing">DuringSchoolDay</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">SD-INSTRUCTIONAL-DAY</OtherCode>
+          <OtherCode Codeset="Local">Tuesday-Thursday-Morning</OtherCode>
+        </OtherCodeList>
+      </WhenServiceProvided>
+      <LatestStartDate>2026-08-28</LatestStartDate>
+      <StartDate>2026-08-24</StartDate>
+      <EndDate>2027-06-11</EndDate>
+      <FrequencyTime>
+        <Code Codeset="https://example.org/codesets/frequency">TwiceWeekly</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">SD-2X-WK</OtherCode>
+          <OtherCode Codeset="Local">TueThu</OtherCode>
+        </OtherCodeList>
+      </FrequencyTime>
+      <DirectTime UnitOfMeasure="minutes" UnitOfMeasureCodeset="https://example.org/codesets/time-units">30</DirectTime>
+      <IndirectTime UnitOfMeasure="minutes" UnitOfMeasureCodeset="https://example.org/codesets/time-units">10</IndirectTime>
+      <TotalServiceDuration UnitOfMeasure="minutes" UnitOfMeasureCodeset="https://example.org/codesets/time-units">40</TotalServiceDuration>
+      <IncludedInSpecialEducationFTE>true</IncludedInSpecialEducationFTE>
+      <SpecialNeedsTransportation>false</SpecialNeedsTransportation>
+      <AssistiveTechnology>true</AssistiveTechnology>
+      <EntryPerson>Marisol Quintero</EntryPerson>
+    </StudentPlacement>
+  </xhtml:Example>
+  <xhtml:Example name="StudentPlacement - Example 2" xmlns="">
     <StudentPlacement RefId="A3E34B359A75101D8C3A00DD001D1652" StudentParticipationRefId="D3E34B359D75101A8C3D00AA001A1652" StudentPersonalRefId="A2E34F59A742C1A4B3D11CC002B163A2">
       <StudentPlacementAsOfDate>2006-07-13</StudentPlacementAsOfDate>
       <Service>

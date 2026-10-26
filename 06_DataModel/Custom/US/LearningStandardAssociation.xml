@@ -90,7 +90,30 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="" name="LearningStandardAssociation Example">
+  <xhtml:Example xmlns="" name="LearningStandardAssociation - Example 1">
+    <LearningStandardAssociation RefId="1a05171b-b859-42e4-a1ea-67ad4acd1f18">
+      <RefURI>https://standards.example.edu/associations/algebraic-reasoning-2026</RefURI>
+      <LearningStandardRefId ObjectType="LearningStandardItem">4fab7ed3-1c17-48ee-9cac-ff46263b87b2</LearningStandardRefId>
+      <TargetObjects>
+        <TargetObject ObjectType="LearningResource" ObjectTypeCodeset="https://example.edu/codesets/object-types">
+          <SIF_RefId>ed4277d2-b742-463a-9177-c6e6a1cf0ca5</SIF_RefId>
+          <AssociationStrength>0.95</AssociationStrength>
+          <AssociationType>alignedTo</AssociationType>
+        </TargetObject>
+        <TargetObject ObjectType="AssessmentItem" ObjectTypeCodeset="https://example.edu/codesets/object-types">
+          <SIF_RefId>e3502d6c-4d1e-434c-981b-f074bb1d127e</SIF_RefId>
+          <AssociationStrength>0.90</AssociationStrength>
+          <AssociationType>assesses</AssociationType>
+        </TargetObject>
+      </TargetObjects>
+      <StartDate>2026-08-24</StartDate>
+      <EndDate>2027-06-11</EndDate>
+      <AuthoritativeSource>Redwood Valley Unified School District Curriculum Office</AuthoritativeSource>
+      <Creator Type="Organization" TypeCodeset="https://example.edu/codesets/creator-types" SIF_RefId="3b04db8a-c73d-4474-bda9-fa55acbd0024">Redwood Valley Unified School District Curriculum Office</Creator>
+      <CreationDate>2026-08-12</CreationDate>
+    </LearningStandardAssociation>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="LearningStandardAssociation Example - Example 2">
     <LearningStandardAssociation RefId="869670E8540A43509515AFB767FADD9A">
       <LearningStandardRefId ObjectType="LearningStandardItem">DCE34B359D75101A8C3D00AA001A1652</LearningStandardRefId>
       <TargetObjects>

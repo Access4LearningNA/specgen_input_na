@@ -65,7 +65,15 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="Payment - Example 1">
+    <Payment RefId="8e56e6a0-d1f0-4f07-b022-0eeed4cf42bc" BillingRefId="553dae1f-132e-410a-aa31-04df66137ef4">
+      <ReceivedDate>2026-08-14</ReceivedDate>
+      <ReceivedAmount Currency="USD" CurrencyCodeset="ISO4217">48.75</ReceivedAmount>
+      <ReceivedTransactionId>RIVERVIEW-CAF-20260814-7814</ReceivedTransactionId>
+      <TransactionDescription>Payment received for Amaya Elizondo's eighth-grade environmental science field study fee.</TransactionDescription>
+    </Payment>
+  </xhtml:Example>
+  <xhtml:Example name="Payment - Example 2" xmlns="">
     <Payment RefId="EDF4985ABC3458FEDA75493AB3812345" BillingRefId="CA12345847DEA97463FEB238759FD123">
       <ReceivedDate>1999-10-20</ReceivedDate>
       <ReceivedAmount Currency="USD">50.00</ReceivedAmount>

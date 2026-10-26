@@ -67,7 +67,37 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="" name="FoodservicesStaffMealCounts">
+  <xhtml:Example xmlns="" name="FoodserviceStaffMealCounts - Example 1">
+    <FoodserviceStaffMealCounts RefId="b7fc40d5-5419-458f-9be7-46b482389cba">
+      <SchoolInfoRefId>387c34d4-b826-4b15-bc47-d9c499db0f42</SchoolInfoRefId>
+      <Date>2026-08-19</Date>
+      <Program Type="NSLP" Codeset="https://www.fns.usda.gov/nslp">National School Lunch Program</Program>
+      <Counts>
+        <Count>
+          <MealStatus Type="Free" TypeCodeset="https://www.fns.usda.gov/cn/labeling/food-based">
+            <StartDate>2026-08-01</StartDate>
+            <EndDate>2026-08-19</EndDate>
+            <SchoolYear>2027</SchoolYear>
+          </MealStatus>
+          <MealType Codeset="https://www.fns.usda.gov/nslp">Breakfast</MealType>
+          <Amount Type="BreakfastCredit" TypeCodeset="https://www.fns.usda.gov/cn/labeling/food-based" Credits="1.00" Currency="USD" CurrencyCodeset="urn:iso:std:iso:4217">2.35</Amount>
+          <Tax Currency="USD" CurrencyCodeset="urn:iso:std:iso:4217">0.00</Tax>
+          <Value>18</Value>
+        </Count>
+        <Count>
+          <EarnedStatus Type="Paid" TypeCodeset="https://www.fns.usda.gov/cn/labeling/food-based">
+            <StartDate>2026-08-01</StartDate>
+            <EndDate>2026-08-19</EndDate>
+          </EarnedStatus>
+          <MealType Codeset="https://www.fns.usda.gov/nslp">Lunch</MealType>
+          <Amount Type="LunchCredit" TypeCodeset="https://www.fns.usda.gov/cn/labeling/food-based" Credits="1.00" Currency="USD" CurrencyCodeset="urn:iso:std:iso:4217">4.10</Amount>
+          <Tax Currency="USD" CurrencyCodeset="urn:iso:std:iso:4217">0.00</Tax>
+          <Value>27</Value>
+        </Count>
+      </Counts>
+    </FoodserviceStaffMealCounts>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="FoodservicesStaffMealCounts - Example 2">
     <FoodserviceStaffMealCounts RefId="E822BCDC9E7A40F787ED8183D3B485B5">
       <SchoolInfoRefId>F2F9D9B212B94489BC3F9FD6AB75F54A</SchoolInfoRefId>
       <Date>2003-08-25</Date>

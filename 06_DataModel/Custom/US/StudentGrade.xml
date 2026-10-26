@@ -81,7 +81,24 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="StudentGrade - Example 1">
+    <StudentGrade RefId="77b3bccb-c480-413e-825e-004cc499534a">
+      <StudentPersonalRefId>b3787d31-63f5-4251-979c-6f634ca00721</StudentPersonalRefId>
+      <SectionInfoRefId>07ca0dd8-79a8-4745-a3ed-cafd759ec10f</SectionInfoRefId>
+      <SchoolInfoRefId>2aa48815-12bb-48d1-9e21-678db2669aae</SchoolInfoRefId>
+      <SchoolYear>2026</SchoolYear>
+      <Grade>
+        <Percentage>93.5</Percentage>
+        <Numeric>187</Numeric>
+        <OutOf>200</OutOf>
+        <Low>0</Low>
+        <High>200</High>
+        <Letter>A</Letter>
+        <Narrative>Marisol demonstrated strong evidence-based reasoning in American history discussions and completed all primary-source analysis assignments.</Narrative>
+      </Grade>
+    </StudentGrade>
+  </xhtml:Example>
+  <xhtml:Example name="StudentGrade - Example 2" xmlns="">
     <StudentGrade RefId="0E54211E78674FC9B32E5FD5AC2A4CE0">
       <StudentPersonalRefId>A137D78E00BC744EF90AF2871CEB90A2</StudentPersonalRefId>
       <SectionInfoRefId>AAA0937D8392BB0297ECA78D8F9A3914</SectionInfoRefId>

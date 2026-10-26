@@ -80,7 +80,15 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="Billing - Example 1">
+    <Billing RefId="840130fc-59be-4f75-9cb9-41c845414b81">
+      <BilledEntity SIF_RefObject="StudentPersonal">e9309cb7-1a11-42d9-9d81-8d7a29399c12</BilledEntity>
+      <BillingDate>2026-08-15</BillingDate>
+      <TransactionDescription>Grade 7 environmental science field-study transportation fee</TransactionDescription>
+      <BilledAmount Currency="USD" CurrencyCodeset="ISO4217">18.50</BilledAmount>
+    </Billing>
+  </xhtml:Example>
+  <xhtml:Example name="Billing - Example 2" xmlns="">
     <Billing RefId="CA12345847DEA97463FEB238759FD123">
       <BilledEntity SIF_RefObject="StaffPersonal">BA497254965FDA48965ABCE4589EA421</BilledEntity>
       <BillingDate>1999-10-12</BillingDate>

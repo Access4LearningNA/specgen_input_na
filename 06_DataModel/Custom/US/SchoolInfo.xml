@@ -153,9 +153,11 @@
     <Characteristics>O</Characteristics>
     <Description>
       <p>References to separate potentially reusable, shared, or pre-verified addresses.</p>
-    </Description>    
+    </Description>
+    
     <Type ref="CommonTypes" name="AddressRefIdListType"/>
-  </Item> 
+  </Item>
+ 
   <Item>
     <Element>PhoneNumberList</Element>
     <Characteristics>O</Characteristics>
@@ -215,7 +217,7 @@
   </Item>
   <Item>
     <Element>OperationalStatusDate</Element>
-    <Characteristics>M</Characteristics>
+    <Characteristics>O</Characteristics>
     <Description>
       <p>The effective date for a change in operational status.</p>
     </Description>
@@ -282,7 +284,287 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="SchoolInfo - Example 1">
+    <SchoolInfo RefId="451c5106-6ed8-4878-88f5-1665f26a8b11">
+      <LocalId>School</LocalId>
+      <StateProvinceId>WA-3347</StateProvinceId>
+      <StateProvinceIdSystem Codeset="https://nces.ed.gov/ccd">SEA</StateProvinceIdSystem>
+      <NCESId>530999900347</NCESId>
+      <SchoolName>Harborlight STEM Academy</SchoolName>
+      <LEAInfoRefId>fac71577-adab-4178-bd79-1e490b3a5ec1</LEAInfoRefId>
+      <OtherLEA SIF_RefObject="LEAInfo">caac7b31-cee8-4831-9609-68ad4fc08a89</OtherLEA>
+      <SchoolType Codeset="https://example.org/codesets/school-type">Public</SchoolType>
+      <SchoolFocusList>
+        <SchoolFocus Codeset="https://example.org/codesets/school-focus">All</SchoolFocus>
+        <SchoolFocus Codeset="https://example.org/codesets/school-focus">Some</SchoolFocus>
+      </SchoolFocusList>
+      <SchoolURL>https://harborlightstem.example.edu</SchoolURL>
+      <SchoolDesignationList>
+        <SchoolDesignation Codeset="https://example.org/codesets/school-designation">Charter</SchoolDesignation>
+        <SchoolDesignation Codeset="https://example.org/codesets/school-designation">STEM Academy</SchoolDesignation>
+      </SchoolDesignationList>
+      <PrincipalInfo>
+        <ContactName>Dr. Marisol Vega</ContactName>
+        <ContactTitle>Principal</ContactTitle>
+      </PrincipalInfo>
+      <SchoolContactList>
+        <SchoolContact>
+          <PublishInDirectory Codeset="https://example.org/codesets/directory-status">Public</PublishInDirectory>
+          <ContactInfo>
+            <Name Type="04">
+              <Prefix>Dr.</Prefix>
+              <LastName>Vega</LastName>
+              <FirstName>Marisol</FirstName>
+              <MiddleName>Elena</MiddleName>
+              <Suffix>Ed.D.</Suffix>
+              <PreferredName>Dr. Vega</PreferredName>
+              <SortName>Vega, Marisol Elena</SortName>
+              <FullName>Dr. Marisol Elena Vega, Ed.D.</FullName>
+            </Name>
+            <PositionTitle>Principal</PositionTitle>
+            <Role>School Administrator</Role>
+            <Address Type="Physical" TypeCodeset="https://example.org/codesets/address-type">
+              <Street>
+                <Line1>1840 Harborlight Avenue</Line1>
+                <Line2>Administration Building</Line2>
+                <Line3>Suite 100</Line3>
+                <Complex>Harborlight Education Campus</Complex>
+                <StreetNumber>1840</StreetNumber>
+                <StreetPrefix>NE</StreetPrefix>
+                <StreetName>Harborlight</StreetName>
+                <StreetType>Avenue</StreetType>
+                <StreetSuffix>NE</StreetSuffix>
+                <ApartmentType>Suite</ApartmentType>
+                <ApartmentNumberPrefix>Admin</ApartmentNumberPrefix>
+                <ApartmentNumber>100</ApartmentNumber>
+                <ApartmentNumberSuffix>A</ApartmentNumberSuffix>
+              </Street>
+              <City>Port Townsend</City>
+              <County>Jefferson</County>
+              <StateProvince Codeset="https://www.usps.com/">WA</StateProvince>
+              <StateANSICode Codeset="https://www.census.gov/library/reference/code-lists/ansi.html">53</StateANSICode>
+              <Country Codeset="https://www.iso.org/iso-3166-country-codes.html">US</Country>
+              <PostalCode>98368</PostalCode>
+              <GridLocation>
+                <Latitude>48.1172</Latitude>
+                <Longitude>-122.7604</Longitude>
+              </GridLocation>
+              <AddressRefId>ad54bd20-fb28-487d-87b7-0913499735a9</AddressRefId>
+            </Address>
+            <AddressRefId>15968cbb-7b88-4c0e-b1f4-a0b208160693</AddressRefId>
+            <EmailList>
+              <Email Type="Work" TypeCodeset="https://example.org/codesets/email-type">marisol.vega@harborlightstem.example.edu</Email>
+              <Email Type="Organizational" TypeCodeset="https://example.org/codesets/email-type">principal@harborlightstem.example.edu</Email>
+            </EmailList>
+            <PhoneNumberList>
+              <PhoneNumber Type="Work" TypeCodeset="https://example.org/codesets/phone-type">
+                <Number>360-555-0184</Number>
+                <Extension>101</Extension>
+                <ListedStatus>Listed</ListedStatus>
+              </PhoneNumber>
+              <PhoneNumber Type="Mobile" TypeCodeset="https://example.org/codesets/phone-type">
+                <Number>360-555-0198</Number>
+                <Extension>0</Extension>
+                <ListedStatus>Unlisted</ListedStatus>
+              </PhoneNumber>
+            </PhoneNumberList>
+          </ContactInfo>
+        </SchoolContact>
+        <SchoolContact>
+          <PublishInDirectory Codeset="https://example.org/codesets/directory-status">Public</PublishInDirectory>
+          <ContactInfo>
+            <Name Type="04">
+              <Prefix>Ms.</Prefix>
+              <LastName>Okafor</LastName>
+              <FirstName>Nkiruka</FirstName>
+              <MiddleName>Amara</MiddleName>
+              <Suffix />
+              <PreferredName>Kira</PreferredName>
+              <SortName>Okafor, Nkiruka Amara</SortName>
+              <FullName>Nkiruka Amara Okafor</FullName>
+            </Name>
+            <PositionTitle>Family Engagement Coordinator</PositionTitle>
+            <Role>School Contact</Role>
+            <Address Type="Mailing" TypeCodeset="https://example.org/codesets/address-type">
+              <Street>
+                <Line1>1840 Harborlight Avenue</Line1>
+                <Line2>Family Services Office</Line2>
+                <Line3>Suite 112</Line3>
+                <Complex>Harborlight Education Campus</Complex>
+                <StreetNumber>1840</StreetNumber>
+                <StreetPrefix>NE</StreetPrefix>
+                <StreetName>Harborlight</StreetName>
+                <StreetType>Avenue</StreetType>
+                <StreetSuffix>NE</StreetSuffix>
+                <ApartmentType>Suite</ApartmentType>
+                <ApartmentNumberPrefix>Family</ApartmentNumberPrefix>
+                <ApartmentNumber>112</ApartmentNumber>
+                <ApartmentNumberSuffix>B</ApartmentNumberSuffix>
+              </Street>
+              <City>Port Townsend</City>
+              <County>Jefferson</County>
+              <StateProvince Codeset="https://www.usps.com/">WA</StateProvince>
+              <StateANSICode Codeset="https://www.census.gov/library/reference/code-lists/ansi.html">53</StateANSICode>
+              <Country Codeset="https://www.iso.org/iso-3166-country-codes.html">US</Country>
+              <PostalCode>98368</PostalCode>
+              <GridLocation>
+                <Latitude>48.1172</Latitude>
+                <Longitude>-122.7604</Longitude>
+              </GridLocation>
+              <AddressRefId>b6c204cf-a91d-4bc2-9882-3b0782c89b9a</AddressRefId>
+            </Address>
+            <AddressRefId>09166177-6c55-40e2-9ea4-64f65cd4bf51</AddressRefId>
+            <EmailList>
+              <Email Type="Work" TypeCodeset="https://example.org/codesets/email-type">nkiruka.okafor@harborlightstem.example.edu</Email>
+              <Email Type="Organizational" TypeCodeset="https://example.org/codesets/email-type">familyservices@harborlightstem.example.edu</Email>
+            </EmailList>
+            <PhoneNumberList>
+              <PhoneNumber Type="Work" TypeCodeset="https://example.org/codesets/phone-type">
+                <Number>360-555-0184</Number>
+                <Extension>118</Extension>
+                <ListedStatus>Listed</ListedStatus>
+              </PhoneNumber>
+              <PhoneNumber Type="Fax" TypeCodeset="https://example.org/codesets/phone-type">
+                <Number>360-555-0176</Number>
+                <Extension>0</Extension>
+                <ListedStatus>Listed</ListedStatus>
+              </PhoneNumber>
+            </PhoneNumberList>
+          </ContactInfo>
+        </SchoolContact>
+      </SchoolContactList>
+      <AddressList>
+        <Address Type="Physical" TypeCodeset="https://example.org/codesets/address-type">
+          <Street>
+            <Line1>1840 Harborlight Avenue</Line1>
+            <Line2>Main Entrance</Line2>
+            <Line3>Building A</Line3>
+            <Complex>Harborlight Education Campus</Complex>
+            <StreetNumber>1840</StreetNumber>
+            <StreetPrefix>NE</StreetPrefix>
+            <StreetName>Harborlight</StreetName>
+            <StreetType>Avenue</StreetType>
+            <StreetSuffix>NE</StreetSuffix>
+            <ApartmentType>Building</ApartmentType>
+            <ApartmentNumberPrefix>Bldg</ApartmentNumberPrefix>
+            <ApartmentNumber>A</ApartmentNumber>
+            <ApartmentNumberSuffix>North</ApartmentNumberSuffix>
+          </Street>
+          <City>Port Townsend</City>
+          <County>Jefferson</County>
+          <StateProvince Codeset="https://www.usps.com/">WA</StateProvince>
+          <StateANSICode Codeset="https://www.census.gov/library/reference/code-lists/ansi.html">53</StateANSICode>
+          <Country Codeset="https://www.iso.org/iso-3166-country-codes.html">US</Country>
+          <PostalCode>98368</PostalCode>
+          <GridLocation>
+            <Latitude>48.1172</Latitude>
+            <Longitude>-122.7604</Longitude>
+          </GridLocation>
+          <AddressRefId>5deac78d-e51a-452d-9103-277d6b6f9f04</AddressRefId>
+        </Address>
+        <Address Type="Mailing" TypeCodeset="https://example.org/codesets/address-type">
+          <Street>
+            <Line1>PO Box 284</Line1>
+            <Line2>Harborlight STEM Academy</Line2>
+            <Line3>Records Office</Line3>
+            <Complex>Harborlight Education Campus</Complex>
+            <StreetNumber>284</StreetNumber>
+            <StreetPrefix />
+            <StreetName>Harborlight</StreetName>
+            <StreetType>Box</StreetType>
+            <StreetSuffix />
+            <ApartmentType>Office</ApartmentType>
+            <ApartmentNumberPrefix>Records</ApartmentNumberPrefix>
+            <ApartmentNumber>14</ApartmentNumber>
+            <ApartmentNumberSuffix>M</ApartmentNumberSuffix>
+          </Street>
+          <City>Port Townsend</City>
+          <County>Jefferson</County>
+          <StateProvince Codeset="https://www.usps.com/">WA</StateProvince>
+          <StateANSICode Codeset="https://www.census.gov/library/reference/code-lists/ansi.html">53</StateANSICode>
+          <Country Codeset="https://www.iso.org/iso-3166-country-codes.html">US</Country>
+          <PostalCode>98368</PostalCode>
+          <GridLocation>
+            <Latitude>48.1172</Latitude>
+            <Longitude>-122.7604</Longitude>
+          </GridLocation>
+          <AddressRefId>d99072f3-ebb2-4d9e-991c-63db00b0b79a</AddressRefId>
+        </Address>
+      </AddressList>
+      <AddressRefIdList>
+        <AddressRefId AddressRole="Physical campus location">2611e653-0cd9-4ada-8051-2cfc33606bc2</AddressRefId>
+        <AddressRefId AddressRole="Mailing address">36cfef89-f162-44a8-8935-e8f49cca82c2</AddressRefId>
+      </AddressRefIdList>
+      <PhoneNumberList>
+        <PhoneNumber Type="Work" TypeCodeset="https://example.org/codesets/phone-type">
+          <Number>360-555-0184</Number>
+          <Extension>0</Extension>
+          <ListedStatus>Listed</ListedStatus>
+        </PhoneNumber>
+        <PhoneNumber Type="Fax" TypeCodeset="https://example.org/codesets/phone-type">
+          <Number>360-555-0176</Number>
+          <Extension>0</Extension>
+          <ListedStatus>Listed</ListedStatus>
+        </PhoneNumber>
+      </PhoneNumberList>
+      <IdentificationInfoList>
+        <IdentificationInfo Code="School" CodeCodeset="https://example.org/codesets/identification-system">HLSA-347</IdentificationInfo>
+        <IdentificationInfo Code="NCES" CodeCodeset="https://example.org/codesets/identification-system">530999900347</IdentificationInfo>
+      </IdentificationInfoList>
+      <SessionType Codeset="https://example.org/codesets/session-type">Regular</SessionType>
+      <GradeLevels>
+        <GradeLevel>
+          <Code Codeset="https://example.org/codesets/grade-level">06</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">Grade 6</OtherCode>
+            <OtherCode Codeset="Local">Middle School Year 1</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+        <GradeLevel>
+          <Code Codeset="https://example.org/codesets/grade-level">08</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">Grade 8</OtherCode>
+            <OtherCode Codeset="Local">Middle School Year 3</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+      </GradeLevels>
+      <GradeLevelApprovedList>
+        <GradeLevelApproved>
+          <Code Codeset="https://example.org/codesets/grade-level">06</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">Grade 6</OtherCode>
+            <OtherCode Codeset="Local">Approved Grade 6</OtherCode>
+          </OtherCodeList>
+        </GradeLevelApproved>
+        <GradeLevelApproved>
+          <Code Codeset="https://example.org/codesets/grade-level">08</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">Grade 8</OtherCode>
+            <OtherCode Codeset="Local">Approved Grade 8</OtherCode>
+          </OtherCodeList>
+        </GradeLevelApproved>
+      </GradeLevelApprovedList>
+      <Title1Status Codeset="https://example.org/codesets/title-i-status">Eligible</Title1Status>
+      <TitleIProgramType Codeset="https://example.org/codesets/title-i-program-type">TargetedAssistance</TitleIProgramType>
+      <OperationalStatus Codeset="https://example.org/codesets/operational-status">Open</OperationalStatus>
+      <OperationalStatusDate>2024-08-26</OperationalStatusDate>
+      <SchoolImprovementStatus Codeset="https://example.org/codesets/school-improvement-status">NotIdentified</SchoolImprovementStatus>
+      <StatePovertyDesignation Codeset="https://example.org/codesets/state-poverty-designation">Moderate</StatePovertyDesignation>
+      <NationalSchoolLunchProgramStatus Codeset="https://example.org/codesets/nslp-status">Participating</NationalSchoolLunchProgramStatus>
+      <SchoolCharter Type="School" TypeCodeset="https://example.org/codesets/charter-type">
+        <ApprovalAgencyType Codeset="https://example.org/codesets/approval-agency-type">SEA</ApprovalAgencyType>
+        <ContractIdNumber>WA-CHTR-2021-047</ContractIdNumber>
+        <ApprovalDate>2021-07-01</ApprovalDate>
+        <RenewalDate>2028-06-30</RenewalDate>
+        <ManagementOrganizationType Codeset="https://example.org/codesets/management-organization-type">Independent</ManagementOrganizationType>
+      </SchoolCharter>
+      <SharedTimeIndicator Codeset="https://example.org/codesets/shared-time-indicator">No</SharedTimeIndicator>
+      <VirtualSchoolStatus Codeset="https://example.org/codesets/virtual-school-status">Supplemental</VirtualSchoolStatus>
+      <CongressionalDistrict>06</CongressionalDistrict>
+      <ActiveSchoolYear>2026</ActiveSchoolYear>
+    </SchoolInfo>
+  </xhtml:Example>
+  <xhtml:Example name="SchoolInfo - Example 2" xmlns="">
     <SchoolInfo RefId="D3E34B359D75101A8C3D00AA001A1652">
       <LocalId>946379881</LocalId>
       <StateProvinceId>C2345681</StateProvinceId>

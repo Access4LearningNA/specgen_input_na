@@ -81,7 +81,18 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="PersonRoleAssociation - Example 1">
+    <PersonRoleAssociation RefId="636a6d7e-99b9-40f9-97c2-0ef936420494">
+      <PersonRefId>0fabcbfe-b0f5-43ad-ad40-a05ae8ffd6ac</PersonRefId>
+      <AssociatedRoleRefId Zone_Id="LakeviewUnifiedZone" Type="StudentPersonal" TypeCodeset="https://www.sifassociation.org/codesets/object-types">bfcab578-f95f-48d7-a25c-3c979c93bac8</AssociatedRoleRefId>
+      <EntryDate>2025-08-18</EntryDate>
+      <ExitDate>2026-06-12</ExitDate>
+      <AuthoritativeSource>Lakeview Unified School District Student Information Services</AuthoritativeSource>
+      <Creator Type="System" TypeCodeset="https://www.sifassociation.org/codesets/creator-types" SIF_RefId="a39a41e2-e99d-4ada-b6aa-6d52e2dbdce1">Lakeview Enrollment Services</Creator>
+      <CreationDate>2025-08-12</CreationDate>
+    </PersonRoleAssociation>
+  </xhtml:Example>
+  <xhtml:Example name="PersonRoleAssociation - Example 2" xmlns="">
     <PersonRoleAssociation RefId="F260716384746B387459000F84717C00">
       <PersonRefId>F260716384746B387459000F84717C00</PersonRefId>
       <AssociatedRoleRefId Zone_Id="zone.bostonpublicschools.com" Type="StaffPersonal">D3E34B359D75101A8C3D00AA001A1652</AssociatedRoleRefId>

@@ -49,7 +49,13 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="BusRouteDetail - Example 1">
+    <BusRouteDetail RefId="60f84989-c687-45e8-ae59-d2a633c982c5" BusRouteInfoRefId="db2a589c-fbc6-49ed-8daf-b3aa001d65dc">
+      <BusStopInfoRefId>614671a4-a88b-4d86-9e27-deac5c409417</BusStopInfoRefId>
+      <ArrivalTime>07:42:00</ArrivalTime>
+    </BusRouteDetail>
+  </xhtml:Example>
+  <xhtml:Example name="BusRouteDetail - Example 2" xmlns="">
     <BusRouteDetail RefId="D3E34B359D75101A8C3D00AA001A1652" BusRouteInfoRefId="C2F23F450B86234B9B3D00AA001A1652">
       <BusStopInfoRefId>B7A34E561C97345C0A4E11BB112B2753</BusStopInfoRefId>
       <ArrivalTime>15:39:00-08:00</ArrivalTime>

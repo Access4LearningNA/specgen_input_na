@@ -159,7 +159,211 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="" name="StudentContact">
+  <xhtml:Example xmlns="" name="StudentContact - Example 1">
+    <StudentContact RefId="8c392cf6-412d-41c9-9348-6a1132c2b949" StudentPersonalRefId="e29804d0-6bab-4578-b449-9ebef4644450">
+      <LocalId>CTC-20487</LocalId>
+      <OtherIdList>
+        <OtherId Type="DistrictContactId" TypeCodeset="https://example.org/codesets/contact-id">MARINER-CT-20487</OtherId>
+        <OtherId Type="StateContactId" TypeCodeset="https://example.org/codesets/state-contact-id">WA-CNT-771904</OtherId>
+      </OtherIdList>
+      <Name Type="LegalName" TypeCodeset="https://example.org/codesets/name-type">
+        <Prefix>Dr.</Prefix>
+        <LastName>Quispe</LastName>
+        <FirstName>Marisol</FirstName>
+        <MiddleName>Elena</MiddleName>
+        <Suffix>II</Suffix>
+        <PreferredName>Mari</PreferredName>
+        <SortName>Quispe, Marisol Elena II</SortName>
+        <FullName>Dr. Marisol Elena Quispe II</FullName>
+      </Name>
+      <OtherNames>
+        <Name Type="Alias" TypeCodeset="https://example.org/codesets/name-type">
+          <Prefix>Dr.</Prefix>
+          <LastName>Quispe</LastName>
+          <FirstName>Mari</FirstName>
+          <MiddleName>Elena</MiddleName>
+          <Suffix>II</Suffix>
+          <PreferredName>Mari</PreferredName>
+          <SortName>Quispe, Mari Elena II</SortName>
+          <FullName>Dr. Mari Elena Quispe II</FullName>
+        </Name>
+        <Name Type="PreviousLegalName" TypeCodeset="https://example.org/codesets/name-type">
+          <Prefix>Ms.</Prefix>
+          <LastName>Vargas</LastName>
+          <FirstName>Marisol</FirstName>
+          <MiddleName>Elena</MiddleName>
+          <Suffix>II</Suffix>
+          <PreferredName>Mari</PreferredName>
+          <SortName>Vargas, Marisol Elena II</SortName>
+          <FullName>Ms. Marisol Elena Vargas II</FullName>
+        </Name>
+      </OtherNames>
+      <Demographics>
+        <RaceList>
+          <Race>
+            <Code Codeset="https://example.org/codesets/race">AmericanIndianOrAlaskaNative</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">Andean Indigenous heritage</OtherCode>
+            </OtherCodeList>
+            <Proportion>0.50</Proportion>
+          </Race>
+          <Race>
+            <Code Codeset="https://example.org/codesets/race">White</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">European heritage</OtherCode>
+            </OtherCodeList>
+            <Proportion>0.50</Proportion>
+          </Race>
+        </RaceList>
+        <HispanicLatino Codeset="https://example.org/codesets/hispanic-latino">Yes</HispanicLatino>
+        <RaceEthnicityDeclined>No</RaceEthnicityDeclined>
+        <Gender Codeset="https://example.org/codesets/gender">Female</Gender>
+        <BirthDate>1979-04-17</BirthDate>
+        <BirthDateVerification Codeset="https://example.org/codesets/birth-verification">Verified</BirthDateVerification>
+        <PlaceOfBirth>Yakima</PlaceOfBirth>
+        <CountyOfBirth>US</CountyOfBirth>
+        <StateOfBirth Codeset="https://example.org/codesets/state-province">WA</StateOfBirth>
+        <CountryOfBirth Codeset="https://example.org/codesets/country">US</CountryOfBirth>
+        <CountriesOfCitizenship>
+          <CountryOfCitizenship Codeset="https://example.org/codesets/country">US</CountryOfCitizenship>
+          <CountryOfCitizenship Codeset="https://example.org/codesets/country">PE</CountryOfCitizenship>
+        </CountriesOfCitizenship>
+        <CountriesOfResidency>
+          <CountryOfResidency Codeset="https://example.org/codesets/country">US</CountryOfResidency>
+          <CountryOfResidency Codeset="https://example.org/codesets/country">PE</CountryOfResidency>
+        </CountriesOfResidency>
+        <CountryArrivalDate>1986-08-23</CountryArrivalDate>
+        <CitizenshipStatus Codeset="https://example.org/codesets/citizenship-status">Citizen</CitizenshipStatus>
+        <EnglishProficiency>
+          <Code Codeset="https://example.org/codesets/english-proficiency">Yes</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Text">English proficient</OtherCode>
+          </OtherCodeList>
+        </EnglishProficiency>
+        <LanguageList>
+          <Language>
+            <Code Codeset="https://example.org/codesets/iso-639-2">eng</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Text">English</OtherCode>
+            </OtherCodeList>
+            <LanguageType Codeset="https://example.org/codesets/language-type">Primary</LanguageType>
+            <Dialect>Pacific Northwest English</Dialect>
+          </Language>
+          <Language>
+            <Code Codeset="https://example.org/codesets/iso-639-2">spa</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Text">Spanish</OtherCode>
+            </OtherCodeList>
+            <LanguageType Codeset="https://example.org/codesets/language-type">Secondary</LanguageType>
+            <Dialect>Peruvian Spanish</Dialect>
+          </Language>
+        </LanguageList>
+        <DwellingArrangement>
+          <Code Codeset="https://example.org/codesets/dwelling-arrangement">PrivateResidence</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Text">Owner-occupied household</OtherCode>
+          </OtherCodeList>
+        </DwellingArrangement>
+        <MaritalStatus>Married</MaritalStatus>
+        <MilitaryConnectedStudent>NotMilitaryConnected</MilitaryConnectedStudent>
+      </Demographics>
+      <AddressList>
+        <Address Type="Physical" TypeCodeset="https://example.org/codesets/address-type">
+          <Street>
+            <Line1>1847 Harbor Lantern Way</Line1>
+            <Line2>Suite 4B</Line2>
+            <Line3>Mariner Heights</Line3>
+            <Complex>Mariner Heights</Complex>
+            <StreetNumber>1847</StreetNumber>
+            <StreetPrefix>NE</StreetPrefix>
+            <StreetName>Harbor Lantern</StreetName>
+            <StreetType>Way</StreetType>
+            <StreetSuffix>NE</StreetSuffix>
+            <ApartmentType>Suite</ApartmentType>
+            <ApartmentNumberPrefix>B</ApartmentNumberPrefix>
+            <ApartmentNumber>4</ApartmentNumber>
+            <ApartmentNumberSuffix>North</ApartmentNumberSuffix>
+          </Street>
+          <City>Cedar Harbor</City>
+          <County>Mariner County</County>
+          <StateProvince Codeset="https://example.org/codesets/state-province">WA</StateProvince>
+          <StateANSICode Codeset="https://example.org/codesets/ansi-state">53</StateANSICode>
+          <Country Codeset="https://example.org/codesets/country">US</Country>
+          <PostalCode>98109</PostalCode>
+          <GridLocation>
+            <Latitude>47.6248</Latitude>
+            <Longitude>-122.3406</Longitude>
+          </GridLocation>
+          <AddressRefId>e3947aec-450f-451c-a2f5-3074c35304a7</AddressRefId>
+        </Address>
+        <Address Type="Mailing" TypeCodeset="https://example.org/codesets/address-type">
+          <Street>
+            <Line1>1847 Harbor Lantern Way</Line1>
+            <Line2>Suite 4B</Line2>
+            <Line3>Mariner Heights</Line3>
+            <Complex>Mariner Heights</Complex>
+            <StreetNumber>1847</StreetNumber>
+            <StreetPrefix>NE</StreetPrefix>
+            <StreetName>Harbor Lantern</StreetName>
+            <StreetType>Way</StreetType>
+            <StreetSuffix>NE</StreetSuffix>
+            <ApartmentType>Suite</ApartmentType>
+            <ApartmentNumberPrefix>B</ApartmentNumberPrefix>
+            <ApartmentNumber>4</ApartmentNumber>
+            <ApartmentNumberSuffix>North</ApartmentNumberSuffix>
+          </Street>
+          <City>Cedar Harbor</City>
+          <County>Mariner County</County>
+          <StateProvince Codeset="https://example.org/codesets/state-province">WA</StateProvince>
+          <StateANSICode Codeset="https://example.org/codesets/ansi-state">53</StateANSICode>
+          <Country Codeset="https://example.org/codesets/country">US</Country>
+          <PostalCode>98109</PostalCode>
+          <GridLocation>
+            <Latitude>47.6248</Latitude>
+            <Longitude>-122.3406</Longitude>
+          </GridLocation>
+          <AddressRefId>cb1c670a-02d5-4ab5-ae30-4a590f92502c</AddressRefId>
+        </Address>
+      </AddressList>
+      <PhoneNumberList>
+        <PhoneNumber Type="Mobile" TypeCodeset="https://example.org/codesets/phone-type">
+          <Number>206-555-0187</Number>
+          <Extension>204</Extension>
+          <ListedStatus>Unlisted</ListedStatus>
+        </PhoneNumber>
+        <PhoneNumber Type="Work" TypeCodeset="https://example.org/codesets/phone-type">
+          <Number>206-555-0142</Number>
+          <Extension>318</Extension>
+          <ListedStatus>Listed</ListedStatus>
+        </PhoneNumber>
+      </PhoneNumberList>
+      <EmailList>
+        <Email Type="Home" TypeCodeset="https://example.org/codesets/email-type">marisol.quispe@example.org</Email>
+        <Email Type="Work" TypeCodeset="https://example.org/codesets/email-type">mquispe@cedarharboracademy.example</Email>
+      </EmailList>
+      <Relationship>
+        <Code Codeset="https://example.org/codesets/relationship">Mother</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Text">Biological mother and legal guardian</OtherCode>
+        </OtherCodeList>
+      </Relationship>
+      <EmployerType Codeset="https://example.org/codesets/employer-type">HigherEducation</EmployerType>
+      <EducationalLevel Codeset="https://example.org/codesets/educational-level">DoctoralDegree</EducationalLevel>
+      <ContactFlags>
+        <ParentLegalGuardian Codeset="https://example.org/codesets/contact-flags">Yes</ParentLegalGuardian>
+        <PickupRights Codeset="https://example.org/codesets/contact-flags">Yes</PickupRights>
+        <LivesWith Codeset="https://example.org/codesets/contact-flags">Yes</LivesWith>
+        <AccessToRecords Codeset="https://example.org/codesets/contact-flags">Yes</AccessToRecords>
+        <EmergencyContact Codeset="https://example.org/codesets/contact-flags">Yes</EmergencyContact>
+        <HasCustody Codeset="https://example.org/codesets/contact-flags">Yes</HasCustody>
+        <DisciplinaryContact Codeset="https://example.org/codesets/contact-flags">Yes</DisciplinaryContact>
+        <PrimaryCareProvider Codeset="https://example.org/codesets/contact-flags">Yes</PrimaryCareProvider>
+        <Other Codeset="https://example.org/codesets/contact-flags">AuthorizedToReceiveSchoolMessages</Other>
+      </ContactFlags>
+      <ContactSequence>1</ContactSequence>
+    </StudentContact>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="StudentContact - Example 2">
     <StudentContact RefId="D3E34B379D75101A8C3D00AA001A1652" StudentPersonalRefId="DEE34B359D75101A8C3D00AA001A1652">
       <Name Type="04">
         <LastName>Johnson</LastName>

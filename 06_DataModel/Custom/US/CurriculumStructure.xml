@@ -103,7 +103,44 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="CurriculumStructure - Example 1">
+    <CurriculumStructure RefId="af282242-de9d-44cf-a27d-23eebbe58d6c">
+      <Titles>
+        <Title>American Revolutionary War Inquiry Unit</Title>
+        <Title>Liberty, Conflict, and the Founding Era</Title>
+      </Titles>
+      <Description>A sixth-grade social studies curriculum unit examining causes, major events, perspectives, and consequences of the American Revolutionary War.</Description>
+      <SubjectArea>
+        <Code Codeset="https://nces.ed.gov/ccd/subject-areas">05</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">SOC-06-REV</OtherCode>
+          <OtherCode Codeset="Text">Social Studies</OtherCode>
+        </OtherCodeList>
+      </SubjectArea>
+      <CurriculumHierarchyLevel>
+        <Number>3</Number>
+        <Name>Unit</Name>
+        <Description>A thematic instructional unit within the Grade 6 United States History course sequence.</Description>
+      </CurriculumHierarchyLevel>
+      <PredecessorObjects>
+        <CurriculumStructureRefId>e572e295-06b6-4d78-9ebd-e5babc420308</CurriculumStructureRefId>
+        <CurriculumStructureRefId>aa78d6d0-e7b3-4023-b5d4-5e950eb1e8e3</CurriculumStructureRefId>
+      </PredecessorObjects>
+      <LearningObjectives>
+        <LearningObjective>Analyze how taxation, representation, and colonial resistance contributed to the outbreak of the American Revolution.</LearningObjective>
+        <LearningObjective>Construct an evidence-based explanation of how the Revolution changed political ideas about rights and self-government.</LearningObjective>
+      </LearningObjectives>
+      <ComponentObjects>
+        <ComponentObject SIF_RefObject="Lesson">abdc885f-52c7-4e22-9d27-daa8169f83dc</ComponentObject>
+        <ComponentObject SIF_RefObject="Assessment">6c44049c-e592-4e74-8c8f-6dc7099c6726</ComponentObject>
+      </ComponentObjects>
+      <LearningStandards>
+        <LearningStandardItemRefId>1ccc25cb-8d64-41d6-be24-7cbb22ec5c99</LearningStandardItemRefId>
+        <LearningStandardItemRefId>a32cdb27-e273-4c5c-b413-34e197545d91</LearningStandardItemRefId>
+      </LearningStandards>
+    </CurriculumStructure>
+  </xhtml:Example>
+  <xhtml:Example name="CurriculumStructure - Example 2" xmlns="">
     <CurriculumStructure RefId="B364631190F169CD8E3DF2BA2537EC8B" xml:lang="en">
       <Titles>
         <Title>Cellular Concepts</Title>

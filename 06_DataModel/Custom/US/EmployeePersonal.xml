@@ -115,7 +115,171 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="EmployeePersonal - Example 1">
+    <EmployeePersonal RefId="e54aa64b-ce02-485b-8b1c-07eae74f953c">
+      <StateProvinceId>WA-EMP-04827</StateProvinceId>
+      <OtherIdList>
+        <OtherId Type="DistrictEmployeeNumber" TypeCodeset="https://example.org/codesets/employee-id-types">VLSD-4827</OtherId>
+        <OtherId Type="StateCertificationNumber" TypeCodeset="https://example.org/codesets/employee-id-types">WA-CERT-791406</OtherId>
+      </OtherIdList>
+      <Name Type="LegalName" TypeCodeset="https://example.org/codesets/name-types">
+        <Prefix>Dr.</Prefix>
+        <LastName>Calderón</LastName>
+        <FirstName>Marisol</FirstName>
+        <MiddleName>Elena</MiddleName>
+        <Suffix>Ed.D.</Suffix>
+        <PreferredName>Marisol</PreferredName>
+        <SortName>Calderón, Marisol Elena</SortName>
+        <FullName>Dr. Marisol Elena Calderón, Ed.D.</FullName>
+      </Name>
+      <Demographics>
+        <RaceList>
+          <Race>
+            <Code Codeset="https://example.org/codesets/race-ethnicity">White</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Text">White</OtherCode>
+            </OtherCodeList>
+            <Proportion>0.50</Proportion>
+          </Race>
+          <Race>
+            <Code Codeset="https://example.org/codesets/race-ethnicity">DemographicRaceTwoOrMoreRaces</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Text">White and Mexican heritage</OtherCode>
+            </OtherCodeList>
+            <Proportion>0.50</Proportion>
+          </Race>
+        </RaceList>
+        <HispanicLatino Codeset="https://example.org/codesets/hispanic-latino">Yes</HispanicLatino>
+        <RaceEthnicityDeclined>No</RaceEthnicityDeclined>
+        <Gender Codeset="https://example.org/codesets/gender">Female</Gender>
+        <BirthDate>1981-04-18</BirthDate>
+        <BirthDateVerification Codeset="https://example.org/codesets/birth-date-verification">BirthCertificate</BirthDateVerification>
+        <PlaceOfBirth>Yakima</PlaceOfBirth>
+        <CountyOfBirth>US</CountyOfBirth>
+        <StateOfBirth Codeset="https://example.org/codesets/us-states">WA</StateOfBirth>
+        <CountryOfBirth Codeset="https://example.org/codesets/countries">US</CountryOfBirth>
+        <CountriesOfCitizenship>
+          <CountryOfCitizenship Codeset="https://example.org/codesets/countries">US</CountryOfCitizenship>
+          <CountryOfCitizenship Codeset="https://example.org/codesets/countries">MX</CountryOfCitizenship>
+        </CountriesOfCitizenship>
+        <CountriesOfResidency>
+          <CountryOfResidency Codeset="https://example.org/codesets/countries">US</CountryOfResidency>
+          <CountryOfResidency Codeset="https://example.org/codesets/countries">MX</CountryOfResidency>
+        </CountriesOfResidency>
+        <CountryArrivalDate>1981-04-18</CountryArrivalDate>
+        <CitizenshipStatus Codeset="https://example.org/codesets/citizenship-status">DualCitizen</CitizenshipStatus>
+        <EnglishProficiency>
+          <Code Codeset="https://example.org/codesets/english-proficiency">Yes</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Text">English proficient</OtherCode>
+          </OtherCodeList>
+        </EnglishProficiency>
+        <LanguageList>
+          <Language>
+            <Code Codeset="https://www.loc.gov/standards/iso639-2/php/code_list.php">eng</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Text">English</OtherCode>
+            </OtherCodeList>
+            <LanguageType Codeset="https://example.org/codesets/language-types">Primary</LanguageType>
+            <Dialect>Pacific Northwest English</Dialect>
+          </Language>
+          <Language>
+            <Code Codeset="https://www.loc.gov/standards/iso639-2/php/code_list.php">spa</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Text">Spanish</OtherCode>
+            </OtherCodeList>
+            <LanguageType Codeset="https://example.org/codesets/language-types">Heritage</LanguageType>
+            <Dialect>Mexican Spanish</Dialect>
+          </Language>
+        </LanguageList>
+        <DwellingArrangement>
+          <Code Codeset="https://example.org/codesets/dwelling-arrangements">PrivateResidence</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Text">Owner-occupied residence</OtherCode>
+          </OtherCodeList>
+        </DwellingArrangement>
+        <MaritalStatus>Married</MaritalStatus>
+        <MilitaryConnectedStudent>NotMilitaryConnected</MilitaryConnectedStudent>
+      </Demographics>
+      <AddressList>
+        <Address Type="Physical" TypeCodeset="https://example.org/codesets/address-types">
+          <Street>
+            <Line1>812 Northwest Alder Crest Drive</Line1>
+            <Line2>Suite 4B</Line2>
+            <Line3>Building C</Line3>
+            <Complex>Alder Crest Townhomes</Complex>
+            <StreetNumber>812</StreetNumber>
+            <StreetPrefix>NW</StreetPrefix>
+            <StreetName>Alder Crest</StreetName>
+            <StreetType>Drive</StreetType>
+            <StreetSuffix>NE</StreetSuffix>
+            <ApartmentType>Suite</ApartmentType>
+            <ApartmentNumberPrefix>Unit</ApartmentNumberPrefix>
+            <ApartmentNumber>4</ApartmentNumber>
+            <ApartmentNumberSuffix>B</ApartmentNumberSuffix>
+          </Street>
+          <City>Evergreen Harbor</City>
+          <County>Mariner County</County>
+          <StateProvince Codeset="https://example.org/codesets/us-states">WA</StateProvince>
+          <StateANSICode Codeset="https://example.org/codesets/ansi-states">53</StateANSICode>
+          <Country Codeset="https://example.org/codesets/countries">US</Country>
+          <PostalCode>98118</PostalCode>
+          <GridLocation>
+            <Latitude>47.522814</Latitude>
+            <Longitude>-122.284906</Longitude>
+          </GridLocation>
+          <AddressRefId>1801e184-e442-4fb5-867f-8a3e83506e2e</AddressRefId>
+        </Address>
+        <Address Type="Mailing" TypeCodeset="https://example.org/codesets/address-types">
+          <Street>
+            <Line1>812 Northwest Alder Crest Drive</Line1>
+            <Line2>Suite 4B</Line2>
+            <Line3>Building C</Line3>
+            <Complex>Alder Crest Townhomes</Complex>
+            <StreetNumber>812</StreetNumber>
+            <StreetPrefix>NW</StreetPrefix>
+            <StreetName>Alder Crest</StreetName>
+            <StreetType>Drive</StreetType>
+            <StreetSuffix>NE</StreetSuffix>
+            <ApartmentType>Suite</ApartmentType>
+            <ApartmentNumberPrefix>Unit</ApartmentNumberPrefix>
+            <ApartmentNumber>4</ApartmentNumber>
+            <ApartmentNumberSuffix>B</ApartmentNumberSuffix>
+          </Street>
+          <City>Evergreen Harbor</City>
+          <County>Mariner County</County>
+          <StateProvince Codeset="https://example.org/codesets/us-states">WA</StateProvince>
+          <StateANSICode Codeset="https://example.org/codesets/ansi-states">53</StateANSICode>
+          <Country Codeset="https://example.org/codesets/countries">US</Country>
+          <PostalCode>98118</PostalCode>
+          <GridLocation>
+            <Latitude>47.522814</Latitude>
+            <Longitude>-122.284906</Longitude>
+          </GridLocation>
+          <AddressRefId>a3d5954f-45bb-4381-a31f-e7d51c659676</AddressRefId>
+        </Address>
+      </AddressList>
+      <PhoneNumberList>
+        <PhoneNumber Type="Work" TypeCodeset="https://example.org/codesets/phone-types">
+          <Number>206-555-4827</Number>
+          <Extension>214</Extension>
+          <ListedStatus>Listed</ListedStatus>
+        </PhoneNumber>
+        <PhoneNumber Type="Mobile" TypeCodeset="https://example.org/codesets/phone-types">
+          <Number>206-555-9184</Number>
+          <Extension>0</Extension>
+          <ListedStatus>Unlisted</ListedStatus>
+        </PhoneNumber>
+      </PhoneNumberList>
+      <EmailList>
+        <Email Type="Work" TypeCodeset="https://example.org/codesets/email-types">marisol.calderon@verdantlearning.example</Email>
+        <Email Type="Home" TypeCodeset="https://example.org/codesets/email-types">marisol.calderon.home@example.net</Email>
+      </EmailList>
+      <BenefitEligible>Y</BenefitEligible>
+      <ReemployedRetiree>N</ReemployedRetiree>
+    </EmployeePersonal>
+  </xhtml:Example>
+  <xhtml:Example name="EmployeePersonal - Example 2" xmlns="">
     <EmployeePersonal RefId="CD590651225DAC3859DEA3458BC39583">
       <OtherIdList>
         <OtherId Type="SSN">590651225</OtherId>

@@ -107,7 +107,25 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="GradingAssignmentScore - Example 1">
+    <GradingAssignmentScore RefId="d1bfdf25-3b84-4475-bcd1-449e0eb2131e" StudentPersonalRefId="13c55dc8-6806-4229-b740-fd651e89ed7d" SectionInfoRefId="fa64f3d3-7e13-46fd-8fb1-53a69a3e94a5" SchoolInfoRefId="5bc5006b-a813-4fe0-82bd-3343ebf8fe7e" GradingAssignmentRefId="0f7fa881-5eaf-435b-9a47-b53d15356cd8">
+      <ScorePoints>47</ScorePoints>
+      <ScorePointsFloat>47.5</ScorePointsFloat>
+      <ScorePercent>95</ScorePercent>
+      <ScoreLetter>A</ScoreLetter>
+      <ScoreEmptyReason>completed</ScoreEmptyReason>
+      <ScoreDescription>Excellent mastery of proportional reasoning and unit-rate calculations.</ScoreDescription>
+      <LearningStandardItemList>
+        <LearningStandardItem>
+          <LearningStandardRefId ObjectType="LearningStandardItem">343da829-c3b8-4f8d-bf45-4d1abc028566</LearningStandardRefId>
+        </LearningStandardItem>
+        <LearningStandardItem>
+          <LearningStandardRefId ObjectType="LearningStandardDocument">d5cef30a-4167-44d8-919b-58c0b38b84e8</LearningStandardRefId>
+        </LearningStandardItem>
+      </LearningStandardItemList>
+    </GradingAssignmentScore>
+  </xhtml:Example>
+  <xhtml:Example name="GradingAssignmentScore - Example 2" xmlns="">
     <GradingAssignmentScore RefId="359D75101AD0A9D7A8C3DAD0A85103A2" StudentPersonalRefId="A75A00101A8C301D02E3A05B359D0A00" SectionInfoRefId="D0A0A27AD0A8510AD9D75101A8C3DA39" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB" GradingAssignmentRefId="359D75101AD0A9D7A8C3DAD0A85105D2">
       <ScorePoints>45</ScorePoints>
       <ScorePercent>90</ScorePercent>

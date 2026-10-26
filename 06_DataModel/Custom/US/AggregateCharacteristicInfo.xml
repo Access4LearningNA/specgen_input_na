@@ -64,7 +64,14 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="AggregateCharacteristicInfo - Example 1">
+    <AggregateCharacteristicInfo RefId="b498771e-2b39-493d-a37a-626c10c81dea">
+      <Description>Instructional content accessibility and curriculum alignment profile</Description>
+      <Definition>AccessibleGradeFiveScienceResourceProfile</Definition>
+      <ElementName>LearningStandardItem</ElementName>
+    </AggregateCharacteristicInfo>
+  </xhtml:Example>
+  <xhtml:Example name="AggregateCharacteristicInfo - Example 2" xmlns="">
     <AggregateCharacteristicInfo RefId="06AF1D69FB064AB388983505714F18FB">
       <Description>Ethnicity</Description>
       <Definition>Hispanic</Definition>

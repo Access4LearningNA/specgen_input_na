@@ -180,7 +180,44 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="StudentTransportInfo - Example 1">
+    <StudentTransportInfo RefId="d4f373d9-8eb1-4052-be31-adc1155f3734" StudentPersonalRefId="2f432b01-cd80-4cfc-8daf-c33087aa4cc7" Type="ToSchool" TypeCodeset="https://example.org/codesets/transport-direction" DayOfWeek="MoTuWeThFr" DayOfWeekCodeset="https://example.org/codesets/days-of-week" SchoolInfoRefId="6b31e06d-8232-46c7-8e18-d8b73c870348">
+      <Eligibility Codeset="https://example.org/codesets/transport-eligibility">Eligible</Eligibility>
+      <HomeToSchoolDistance Unit="MI" UnitCodeset="https://example.org/codesets/distance-units">3.8</HomeToSchoolDistance>
+      <WalkToStopDistance Unit="MI" UnitCodeset="https://example.org/codesets/distance-units">0.2</WalkToStopDistance>
+      <StopToSchoolDistance Unit="MI" UnitCodeset="https://example.org/codesets/distance-units">3.6</StopToSchoolDistance>
+      <OriginPoint BusRouteDetailRefId="6d39343e-0795-4e1c-80d3-db2f1c8b4be7">
+        <ArrivalTime>07:18:00</ArrivalTime>
+        <RouteNumber>17AM</RouteNumber>
+        <RouteDescription>Juniper Ridge morning neighborhood route</RouteDescription>
+        <VehicleNumber>BUS-417</VehicleNumber>
+        <BusStopDescription>Northwest corner of Juniper Avenue and Larkspur Drive</BusStopDescription>
+      </OriginPoint>
+      <HomeBusRouteDetail SIF_RefObject="BusRouteDetail">80020b5e-3611-4610-8f87-e428418a6a5c</HomeBusRouteDetail>
+      <TransferPoints>
+        <TransferPoint>
+          <EmbarkBusRouteDetail SIF_RefObject="BusRouteDetail">8207269e-8a54-44f6-83ac-a8e193993b87</EmbarkBusRouteDetail>
+          <DisembarkBusRouteDetail SIF_RefObject="BusRouteDetail">c8d182bf-42aa-4f13-90f2-1e8c3f9d4220</DisembarkBusRouteDetail>
+        </TransferPoint>
+        <TransferPoint>
+          <EmbarkBusRouteDetail SIF_RefObject="BusRouteDetail">fcbed16c-0e8a-4969-99c2-1b9e3cc373d5</EmbarkBusRouteDetail>
+          <DisembarkBusRouteDetail SIF_RefObject="BusRouteDetail">fc4b2ea1-7341-44a3-b564-7572d51cd30b</DisembarkBusRouteDetail>
+        </TransferPoint>
+      </TransferPoints>
+      <SchoolBusRouteDetail SIF_RefObject="BusRouteDetail">86d05fc0-9760-469f-a349-089ec6a8ed34</SchoolBusRouteDetail>
+      <DestinationPoint BusRouteDetailRefId="d2858a21-f57b-49ab-9217-54a4d81ba617">
+        <ArrivalTime>07:42:00</ArrivalTime>
+        <RouteNumber>17AM</RouteNumber>
+        <RouteDescription>Juniper Ridge route arriving at Mariner Elementary School</RouteDescription>
+        <VehicleNumber>BUS-417</VehicleNumber>
+        <BusStopDescription>Mariner Elementary School east bus loop, 480 Harbor View Road</BusStopDescription>
+      </DestinationPoint>
+      <StateAidQualification Codeset="https://example.org/codesets/state-aid-qualification">QualifyingDistance</StateAidQualification>
+      <TransportationStatus Codeset="https://example.org/codesets/transportation-status">Active</TransportationStatus>
+      <PublicExpense Codeset="https://example.org/codesets/public-expense">DistrictFunded</PublicExpense>
+    </StudentTransportInfo>
+  </xhtml:Example>
+  <xhtml:Example name="StudentTransportInfo - Example 2" xmlns="">
     <StudentTransportInfo RefId="D3E34B359D75101A8C3D00AA001A1652" StudentPersonalRefId="C2F23F450B86234B9B3D00AA001A1652" Type="Inbound" DayOfWeek="MoWeFr" SchoolInfoRefId="B7A34E561C97345C0A4E11BB112B2753">
       <Eligibility>Bus</Eligibility>
       <HomeToSchoolDistance Unit="m">2.4</HomeToSchoolDistance>

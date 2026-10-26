@@ -165,7 +165,217 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="LearningResource - Example 1">
+    <LearningResource RefId="9caebff8-1902-4935-9b2c-fa4d2be36e4b">
+      <Name>Mapping Watersheds: A Grade 5 Inquiry Atlas</Name>
+      <Author>Juniper Ridge Educational Press</Author>
+      <Contacts>
+        <Contact>
+          <Name Type="04" TypeCodeset="https://nces.ed.gov/sif/codesets/name-types">
+            <Prefix>Dr.</Prefix>
+            <LastName>Vasquez</LastName>
+            <FirstName>Marisol</FirstName>
+            <MiddleName>Elena</MiddleName>
+            <Suffix>III</Suffix>
+            <PreferredName>Mari</PreferredName>
+            <SortName>Vasquez, Marisol Elena</SortName>
+            <FullName>Dr. Marisol Elena Vasquez III</FullName>
+          </Name>
+          <Address Type="Mailing" TypeCodeset="https://nces.ed.gov/sif/codesets/address-types">
+            <Street>
+              <Line1>4821 NE Alderbrook Avenue</Line1>
+              <Line2>Suite 340</Line2>
+              <Line3>Editorial Services</Line3>
+              <Complex>Harbor Lantern Center</Complex>
+              <StreetNumber>4821</StreetNumber>
+              <StreetPrefix>NE</StreetPrefix>
+              <StreetName>Alderbrook</StreetName>
+              <StreetType>Avenue</StreetType>
+              <StreetSuffix>NE</StreetSuffix>
+              <ApartmentType>Suite</ApartmentType>
+              <ApartmentNumberPrefix>Ste.</ApartmentNumberPrefix>
+              <ApartmentNumber>340</ApartmentNumber>
+              <ApartmentNumberSuffix>B</ApartmentNumberSuffix>
+            </Street>
+            <City>Portland</City>
+            <County>Multnomah</County>
+            <StateProvince Codeset="https://www.usps.com/state-abbreviations">OR</StateProvince>
+            <StateANSICode Codeset="https://www.census.gov/library/reference/code-lists/ansi">41</StateANSICode>
+            <Country Codeset="https://www.iso.org/iso-3166-country-codes.html">US</Country>
+            <PostalCode>97213</PostalCode>
+            <GridLocation>
+              <Latitude>45.548802</Latitude>
+              <Longitude>-122.612447</Longitude>
+            </GridLocation>
+            <AddressRefId>e0a98b01-bc99-472a-80c9-a1692ac13354</AddressRefId>
+          </Address>
+          <PhoneNumber Type="Work" TypeCodeset="https://nces.ed.gov/sif/codesets/phone-types">
+            <Number>503-555-0187</Number>
+            <Extension>214</Extension>
+            <ListedStatus>Listed</ListedStatus>
+          </PhoneNumber>
+          <Email Type="Work" TypeCodeset="https://nces.ed.gov/sif/codesets/email-types">marisol.vasquez@juniperridgepress.example</Email>
+        </Contact>
+        <Contact>
+          <Name Type="04" TypeCodeset="https://nces.ed.gov/sif/codesets/name-types">
+            <Prefix>Mr.</Prefix>
+            <LastName>Okafor</LastName>
+            <FirstName>Chidi</FirstName>
+            <MiddleName>Nnamdi</MiddleName>
+            <Suffix>Jr.</Suffix>
+            <PreferredName>Chidi</PreferredName>
+            <SortName>Okafor, Chidi Nnamdi</SortName>
+            <FullName>Mr. Chidi Nnamdi Okafor Jr.</FullName>
+          </Name>
+          <Address Type="Physical" TypeCodeset="https://nces.ed.gov/sif/codesets/address-types">
+            <Street>
+              <Line1>4821 NE Alderbrook Avenue</Line1>
+              <Line2>Suite 340</Line2>
+              <Line3>Curriculum Design Studio</Line3>
+              <Complex>Harbor Lantern Center</Complex>
+              <StreetNumber>4821</StreetNumber>
+              <StreetPrefix>NE</StreetPrefix>
+              <StreetName>Alderbrook</StreetName>
+              <StreetType>Avenue</StreetType>
+              <StreetSuffix>NE</StreetSuffix>
+              <ApartmentType>Suite</ApartmentType>
+              <ApartmentNumberPrefix>Ste.</ApartmentNumberPrefix>
+              <ApartmentNumber>340</ApartmentNumber>
+              <ApartmentNumberSuffix>C</ApartmentNumberSuffix>
+            </Street>
+            <City>Portland</City>
+            <County>Multnomah</County>
+            <StateProvince Codeset="https://www.usps.com/state-abbreviations">OR</StateProvince>
+            <StateANSICode Codeset="https://www.census.gov/library/reference/code-lists/ansi">41</StateANSICode>
+            <Country Codeset="https://www.iso.org/iso-3166-country-codes.html">US</Country>
+            <PostalCode>97213</PostalCode>
+            <GridLocation>
+              <Latitude>45.548802</Latitude>
+              <Longitude>-122.612447</Longitude>
+            </GridLocation>
+            <AddressRefId>717914a4-9496-46ad-8b45-90ba7faa9e8b</AddressRefId>
+          </Address>
+          <PhoneNumber Type="Mobile" TypeCodeset="https://nces.ed.gov/sif/codesets/phone-types">
+            <Number>971-555-0139</Number>
+            <Extension>88</Extension>
+            <ListedStatus>Unlisted</ListedStatus>
+          </PhoneNumber>
+          <Email Type="Organizational" TypeCodeset="https://nces.ed.gov/sif/codesets/email-types">chidi.okafor@juniperridgepress.example</Email>
+        </Contact>
+      </Contacts>
+      <Location ReferenceType="URI">https://resources.juniperridgepress.example/atlas/mapping-watersheds-grade-5</Location>
+      <Status>Available for classroom license</Status>
+      <Description>This interactive atlas supports fifth-grade students as they investigate watersheds, interpret topographic maps, trace local runoff pathways, and explain how land use affects river systems.</Description>
+      <GradeLevels>
+        <GradeLevel>
+          <Code Codeset="https://nces.ed.gov/sif/codesets/grade-levels">05</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">Grade 5</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+        <GradeLevel>
+          <Code Codeset="https://nces.ed.gov/sif/codesets/grade-levels">06</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">Grade 6 enrichment</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+      </GradeLevels>
+      <SubjectAreas>
+        <SubjectArea>
+          <Code Codeset="https://nces.ed.gov/sif/codesets/subject-areas">03</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Text">Science</OtherCode>
+          </OtherCodeList>
+        </SubjectArea>
+        <SubjectArea>
+          <Code Codeset="https://nces.ed.gov/sif/codesets/subject-areas">04</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Text">Geography</OtherCode>
+          </OtherCodeList>
+        </SubjectArea>
+      </SubjectAreas>
+      <MediaTypes>
+        <MediaType>text/html</MediaType>
+        <MediaType>application/pdf</MediaType>
+      </MediaTypes>
+      <UseAgreement>Licensed for instructional use by enrolled students and staff of participating schools. Redistribution outside the licensed educational organization is prohibited.</UseAgreement>
+      <AgreementDate>2026-07-01</AgreementDate>
+      <Approvals>
+        <Approval>
+          <Organization>North Coast Unified School District Curriculum Council</Organization>
+          <Date>2026-06-18</Date>
+        </Approval>
+        <Approval>
+          <Organization>Mariner Elementary School Instructional Materials Committee</Organization>
+          <Date>2026-06-24</Date>
+        </Approval>
+      </Approvals>
+      <Evaluations>
+        <Evaluation RefId="eeb7df37-b874-4a04-9d59-9ebf89307547">
+          <Description>Field review found the map-reading activities accessible for mixed-ability fifth-grade classrooms and appropriately aligned to local watershed investigations.</Description>
+          <Date>2026-06-11</Date>
+          <Name Type="04">
+            <Prefix>Ms.</Prefix>
+            <LastName>Redbird</LastName>
+            <FirstName>Talulah</FirstName>
+            <MiddleName>Mae</MiddleName>
+            <Suffix>II</Suffix>
+            <PreferredName>Tali</PreferredName>
+            <SortName>Redbird, Talulah Mae</SortName>
+            <FullName>Ms. Talulah Mae Redbird II</FullName>
+          </Name>
+        </Evaluation>
+        <Evaluation RefId="a0407528-602e-4f0e-bcdf-0dccb709f618">
+          <Description>Accessibility review confirmed keyboard navigation, descriptive alt text, readable contrast, and printable map alternatives.</Description>
+          <Date>2026-06-14</Date>
+          <Name Type="04">
+            <Prefix>Dr.</Prefix>
+            <LastName>Banerjee</LastName>
+            <FirstName>Ritwik</FirstName>
+            <MiddleName>Arun</MiddleName>
+            <Suffix>Sr.</Suffix>
+            <PreferredName>Ritwik</PreferredName>
+            <SortName>Banerjee, Ritwik Arun</SortName>
+            <FullName>Dr. Ritwik Arun Banerjee Sr.</FullName>
+          </Name>
+        </Evaluation>
+      </Evaluations>
+      <Components>
+        <Component>
+          <Name>Chapter 1: Reading the Shape of Land</Name>
+          <Reference>https://resources.juniperridgepress.example/atlas/mapping-watersheds-grade-5/chapter-1</Reference>
+          <Description>Students use elevation contours, legends, and scale bars to identify ridges, valleys, and likely water-flow directions.</Description>
+          <Strategies>
+            <Strategy>Guided inquiry</Strategy>
+            <Strategy>Think-pair-share</Strategy>
+          </Strategies>
+          <AssociatedObjects>
+            <AssociatedObject SIF_RefObject="LearningStandardItem">f90b213d-083f-4a02-a566-02036390137d</AssociatedObject>
+            <AssociatedObject SIF_RefObject="Course">c3d5e496-70e4-4d3f-9c2c-4a70687edf41</AssociatedObject>
+          </AssociatedObjects>
+        </Component>
+        <Component>
+          <Name>Chapter 2: A Drop's Journey</Name>
+          <Reference>https://resources.juniperridgepress.example/atlas/mapping-watersheds-grade-5/chapter-2</Reference>
+          <Description>Students model the journey of rainfall from a schoolyard surface through storm drains, creeks, and the Columbia River watershed.</Description>
+          <Strategies>
+            <Strategy>Collaborative learning</Strategy>
+            <Strategy>Project-based learning</Strategy>
+          </Strategies>
+          <AssociatedObjects>
+            <AssociatedObject SIF_RefObject="LearningStandardItem">b93656d5-32bb-4173-89b5-6d4c0b7c7ebc</AssociatedObject>
+            <AssociatedObject SIF_RefObject="SchoolInfo">79b99f37-af11-460b-a07a-5015a9867708</AssociatedObject>
+          </AssociatedObjects>
+        </Component>
+      </Components>
+      <LearningStandards>
+        <LearningStandardItemRefId>12d7d09b-c408-4e6b-9e32-167ff2db7b5a</LearningStandardItemRefId>
+        <LearningStandardItemRefId>eee89116-20ce-4b2b-8d27-cbd37a7ae844</LearningStandardItemRefId>
+      </LearningStandards>
+      <LearningResourcePackageRefId>57488b10-0942-4119-a98c-8632a992db7c</LearningResourcePackageRefId>
+    </LearningResource>
+  </xhtml:Example>
+  <xhtml:Example name="LearningResource - Example 2" xmlns="">
     <LearningResource RefId="6938D88F82A37EFD88892429EC6AB1B5" xml:lang="en">
       <Name>A World of Words (Teacher Reference Sheet)</Name>
       <Author>The Kennedy Center Arts Edge</Author>

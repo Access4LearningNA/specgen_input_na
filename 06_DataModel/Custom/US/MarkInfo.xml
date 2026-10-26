@@ -60,13 +60,19 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="MarkInfo - Example 1">
+    <MarkInfo RefId="159ca298-5387-414e-96a2-e6e3badd3f9c" MarkValueInfoRefId="1e1e4557-1099-49be-a472-be91330b2950" SchoolInfoRefId="5cd0886a-22fc-4ee4-8367-6af4c6b7a71e">
+      <SchoolYear>2025</SchoolYear>
+      <Description>Quarter 2 Standards-Based Mathematics Achievement Mark</Description>
+    </MarkInfo>
+  </xhtml:Example>
+  <xhtml:Example name="MarkInfo - Example 2" xmlns="">
     <MarkInfo RefId="46BDBA4301C11737E214A7CADCA75C87" MarkValueInfoRefId="301CADCA7511737E214A7C46BDBA4E23" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB">
       <SchoolYear>2004</SchoolYear>
       <Description>Marking Period Grade</Description>
     </MarkInfo>
   </xhtml:Example>
-  <xhtml:Example xmlns="">
+  <xhtml:Example name="MarkInfo - Example 2" xmlns="">
     <MarkInfo RefId="11737E214A7C46BDBA4301CADCA75C87" MarkValueInfoRefId="11737E214A7C46BDBA4301CADCA75E23" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB">
       <SchoolYear>2004</SchoolYear>
       <Description>Conduct Grade</Description>

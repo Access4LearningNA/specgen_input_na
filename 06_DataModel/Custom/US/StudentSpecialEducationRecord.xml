@@ -106,4 +106,446 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
+  <xhtml:Example xmlns="" name="StudentSpecialEducationRecord - Example 1">
+    <StudentSpecialEducationRecord RefId="e06a6826-d2da-44d9-ba26-a35459cf1e9c" SIF_RefId="ca3f2f80-0313-4b30-a961-500e511cc118" SIF_RefObject="StudentPersonal" SIF_RefObjectCodeset="urn:example:codesets:sif-ref-object">
+      <ReportingDate>2026-08-20</ReportingDate>
+      <LEAInfoData>
+        <LocalId>ORCHARD-USD</LocalId>
+        <StateProvinceId>OR-415</StateProvinceId>
+        <NCESId>4109999</NCESId>
+        <LEAName>Orchard Valley Unified School District</LEAName>
+      </LEAInfoData>
+      <SchoolInfoData>
+        <LocalId>RIVERSTONE-MIDDLE</LocalId>
+        <StateProvinceId>OR-415-072</StateProvinceId>
+        <NCESId>410999900721</NCESId>
+        <SchoolName>Riverstone Middle School</SchoolName>
+      </SchoolInfoData>
+      <StudentParticipationData>
+        <ProgramType>
+          <Code Codeset="urn:example:codesets:program-type">IDEA</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">SPED-IEP</OtherCode>
+            <OtherCode Codeset="Text">Individualized Education Program</OtherCode>
+          </OtherCodeList>
+        </ProgramType>
+        <LEAInfoData>
+          <LocalId>ORCHARD-USD</LocalId>
+          <StateProvinceId>OR-415</StateProvinceId>
+          <NCESId>4109999</NCESId>
+          <LEAName>Orchard Valley Unified School District</LEAName>
+        </LEAInfoData>
+        <SchoolInfoData>
+          <LocalId>RIVERSTONE-MIDDLE</LocalId>
+          <StateProvinceId>OR-415-072</StateProvinceId>
+          <NCESId>410999900721</NCESId>
+          <SchoolName>Riverstone Middle School</SchoolName>
+          <SchoolURL>https://riverstone.example.edu</SchoolURL>
+          <SchoolContactList>
+            <SchoolContact>
+              <PublishInDirectory Codeset="urn:example:codesets:directory-status">Public</PublishInDirectory>
+              <ContactInfo>
+                <Name Type="04">
+                  <Prefix>Dr.</Prefix>
+                  <LastName>Quispe</LastName>
+                  <FirstName>Marisol</FirstName>
+                  <MiddleName>Elena</MiddleName>
+                  <Suffix>Ed.D.</Suffix>
+                  <PreferredName>Dr. Quispe</PreferredName>
+                  <SortName>Quispe, Marisol Elena</SortName>
+                  <FullName>Dr. Marisol Elena Quispe, Ed.D.</FullName>
+                </Name>
+                <PositionTitle>Principal</PositionTitle>
+                <Role>School Administrator</Role>
+                <Address Type="Physical" TypeCodeset="urn:example:codesets:address-type">
+                  <Street>
+                    <Line1>875 Juniper Avenue</Line1>
+                    <Line2>Administration Building</Line2>
+                    <Line3>Main Reception</Line3>
+                    <Complex>Riverstone Campus</Complex>
+                    <StreetNumber>875</StreetNumber>
+                    <StreetPrefix>N</StreetPrefix>
+                    <StreetName>Juniper</StreetName>
+                    <StreetType>Avenue</StreetType>
+                    <StreetSuffix>NE</StreetSuffix>
+                    <ApartmentType>Suite</ApartmentType>
+                    <ApartmentNumberPrefix>Room</ApartmentNumberPrefix>
+                    <ApartmentNumber>101</ApartmentNumber>
+                    <ApartmentNumberSuffix>A</ApartmentNumberSuffix>
+                  </Street>
+                  <City>Willow Creek</City>
+                  <County>Marion</County>
+                  <StateProvince Codeset="urn:example:codesets:usps-state">OR</StateProvince>
+                  <StateANSICode Codeset="urn:example:codesets:ansi-state">41</StateANSICode>
+                  <Country Codeset="urn:example:codesets:iso-country">US</Country>
+                  <PostalCode>97304</PostalCode>
+                  <GridLocation>
+                    <Latitude>44.946102</Latitude>
+                    <Longitude>-123.067811</Longitude>
+                  </GridLocation>
+                  <AddressRefId>da4e6740-9bf0-4ce9-82d3-2e4ba02f7520</AddressRefId>
+                </Address>
+                <AddressRefId>d6139555-d018-4408-9fc8-cd65a2f0ccf6</AddressRefId>
+                <EmailList>
+                  <Email Type="Work" TypeCodeset="urn:example:codesets:email-type">marisol.quispe@riverstone.example.edu</Email>
+                  <Email Type="Organizational" TypeCodeset="urn:example:codesets:email-type">principal@riverstone.example.edu</Email>
+                </EmailList>
+                <PhoneNumberList>
+                  <PhoneNumber Type="Work" TypeCodeset="urn:example:codesets:phone-type">
+                    <Number>503-555-0148</Number>
+                    <Extension>2101</Extension>
+                    <ListedStatus>Public</ListedStatus>
+                  </PhoneNumber>
+                  <PhoneNumber Type="Mobile" TypeCodeset="urn:example:codesets:phone-type">
+                    <Number>503-555-0194</Number>
+                    <Extension>0</Extension>
+                    <ListedStatus>Private</ListedStatus>
+                  </PhoneNumber>
+                </PhoneNumberList>
+              </ContactInfo>
+            </SchoolContact>
+            <SchoolContact>
+              <PublishInDirectory Codeset="urn:example:codesets:directory-status">Public</PublishInDirectory>
+              <ContactInfo>
+                <Name Type="04">
+                  <Prefix>Ms.</Prefix>
+                  <LastName>Okafor</LastName>
+                  <FirstName>Nkiru</FirstName>
+                  <MiddleName>Amara</MiddleName>
+                  <Suffix>CCC-SLP</Suffix>
+                  <PreferredName>Nkiru</PreferredName>
+                  <SortName>Okafor, Nkiru Amara</SortName>
+                  <FullName>Ms. Nkiru Amara Okafor, CCC-SLP</FullName>
+                </Name>
+                <PositionTitle>Special Education Coordinator</PositionTitle>
+                <Role>IEP Case Management Contact</Role>
+                <Address Type="Mailing" TypeCodeset="urn:example:codesets:address-type">
+                  <Street>
+                    <Line1>875 Juniper Avenue</Line1>
+                    <Line2>Student Services Office</Line2>
+                    <Line3>Attention: Special Education</Line3>
+                    <Complex>Riverstone Campus</Complex>
+                    <StreetNumber>875</StreetNumber>
+                    <StreetPrefix>N</StreetPrefix>
+                    <StreetName>Juniper</StreetName>
+                    <StreetType>Avenue</StreetType>
+                    <StreetSuffix>NE</StreetSuffix>
+                    <ApartmentType>Office</ApartmentType>
+                    <ApartmentNumberPrefix>Room</ApartmentNumberPrefix>
+                    <ApartmentNumber>214</ApartmentNumber>
+                    <ApartmentNumberSuffix>B</ApartmentNumberSuffix>
+                  </Street>
+                  <City>Willow Creek</City>
+                  <County>Marion</County>
+                  <StateProvince Codeset="urn:example:codesets:usps-state">OR</StateProvince>
+                  <StateANSICode Codeset="urn:example:codesets:ansi-state">41</StateANSICode>
+                  <Country Codeset="urn:example:codesets:iso-country">US</Country>
+                  <PostalCode>97304</PostalCode>
+                  <GridLocation>
+                    <Latitude>44.946102</Latitude>
+                    <Longitude>-123.067811</Longitude>
+                  </GridLocation>
+                  <AddressRefId>c4ff1117-567f-4c33-add6-663edb79a057</AddressRefId>
+                </Address>
+                <AddressRefId>1bb46471-b784-4a8f-acc0-a28974f34698</AddressRefId>
+                <EmailList>
+                  <Email Type="Work" TypeCodeset="urn:example:codesets:email-type">nkiru.okafor@riverstone.example.edu</Email>
+                  <Email Type="Organizational" TypeCodeset="urn:example:codesets:email-type">sped@riverstone.example.edu</Email>
+                </EmailList>
+                <PhoneNumberList>
+                  <PhoneNumber Type="Work" TypeCodeset="urn:example:codesets:phone-type">
+                    <Number>503-555-0148</Number>
+                    <Extension>2214</Extension>
+                    <ListedStatus>Public</ListedStatus>
+                  </PhoneNumber>
+                  <PhoneNumber Type="Fax" TypeCodeset="urn:example:codesets:phone-type">
+                    <Number>503-555-0161</Number>
+                    <Extension>0</Extension>
+                    <ListedStatus>Public</ListedStatus>
+                  </PhoneNumber>
+                </PhoneNumberList>
+              </ContactInfo>
+            </SchoolContact>
+          </SchoolContactList>
+          <AddressList>
+            <Address Type="Physical" TypeCodeset="urn:example:codesets:address-type">
+              <Street>
+                <Line1>875 Juniper Avenue</Line1>
+                <Line2>Riverstone Middle School</Line2>
+                <Line3>Main Entrance</Line3>
+                <Complex>Riverstone Campus</Complex>
+                <StreetNumber>875</StreetNumber>
+                <StreetPrefix>N</StreetPrefix>
+                <StreetName>Juniper</StreetName>
+                <StreetType>Avenue</StreetType>
+                <StreetSuffix>NE</StreetSuffix>
+                <ApartmentType>Building</ApartmentType>
+                <ApartmentNumberPrefix>Wing</ApartmentNumberPrefix>
+                <ApartmentNumber>1</ApartmentNumber>
+                <ApartmentNumberSuffix>East</ApartmentNumberSuffix>
+              </Street>
+              <City>Willow Creek</City>
+              <County>Marion</County>
+              <StateProvince Codeset="urn:example:codesets:usps-state">OR</StateProvince>
+              <StateANSICode Codeset="urn:example:codesets:ansi-state">41</StateANSICode>
+              <Country Codeset="urn:example:codesets:iso-country">US</Country>
+              <PostalCode>97304</PostalCode>
+              <GridLocation>
+                <Latitude>44.946102</Latitude>
+                <Longitude>-123.067811</Longitude>
+              </GridLocation>
+              <AddressRefId>d226317b-1b93-4cc3-ac1b-179775836b1a</AddressRefId>
+            </Address>
+            <Address Type="Mailing" TypeCodeset="urn:example:codesets:address-type">
+              <Street>
+                <Line1>PO Box 482</Line1>
+                <Line2>District Mail Center</Line2>
+                <Line3>Riverstone Middle School</Line3>
+                <Complex>Orchard Valley USD</Complex>
+                <StreetNumber>482</StreetNumber>
+                <StreetPrefix>N</StreetPrefix>
+                <StreetName>Orchard Valley</StreetName>
+                <StreetType>Parkway</StreetType>
+                <StreetSuffix>NE</StreetSuffix>
+                <ApartmentType>Box</ApartmentType>
+                <ApartmentNumberPrefix>PO</ApartmentNumberPrefix>
+                <ApartmentNumber>482</ApartmentNumber>
+                <ApartmentNumberSuffix>A</ApartmentNumberSuffix>
+              </Street>
+              <City>Willow Creek</City>
+              <County>Marion</County>
+              <StateProvince Codeset="urn:example:codesets:usps-state">OR</StateProvince>
+              <StateANSICode Codeset="urn:example:codesets:ansi-state">41</StateANSICode>
+              <Country Codeset="urn:example:codesets:iso-country">US</Country>
+              <PostalCode>97308</PostalCode>
+              <GridLocation>
+                <Latitude>44.946102</Latitude>
+                <Longitude>-123.067811</Longitude>
+              </GridLocation>
+              <AddressRefId>fc97160c-1206-4394-b831-106524b6697e</AddressRefId>
+            </Address>
+          </AddressList>
+          <PhoneNumberList>
+            <PhoneNumber Type="Work" TypeCodeset="urn:example:codesets:phone-type">
+              <Number>503-555-0148</Number>
+              <Extension>0</Extension>
+              <ListedStatus>Public</ListedStatus>
+            </PhoneNumber>
+            <PhoneNumber Type="Fax" TypeCodeset="urn:example:codesets:phone-type">
+              <Number>503-555-0161</Number>
+              <Extension>0</Extension>
+              <ListedStatus>Public</ListedStatus>
+            </PhoneNumber>
+          </PhoneNumberList>
+        </SchoolInfoData>
+        <ReferralDate>2024-09-12</ReferralDate>
+        <ProgramStatus>
+          <Code Codeset="urn:example:codesets:program-status">Active</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">IEP-ACTIVE</OtherCode>
+            <OtherCode Codeset="Text">Active IEP services</OtherCode>
+          </OtherCodeList>
+        </ProgramStatus>
+        <EvaluationDate>2024-11-18</EvaluationDate>
+        <ReevaluationDate>2027-11-17</ReevaluationDate>
+        <ExceptionalityCategories>
+          <ExceptionalityCategory>
+            <Code Codeset="urn:example:codesets:idea-disability">SLI</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="StateProvince">SLI</OtherCode>
+              <OtherCode Codeset="Text">Speech or Language Impairment</OtherCode>
+            </OtherCodeList>
+            <ExceptionalityPriority>Primary</ExceptionalityPriority>
+          </ExceptionalityCategory>
+          <ExceptionalityCategory>
+            <Code Codeset="urn:example:codesets:idea-disability">SLD</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="StateProvince">SLD</OtherCode>
+              <OtherCode Codeset="Text">Specific Learning Disability</OtherCode>
+            </OtherCodeList>
+            <ExceptionalityPriority>Secondary</ExceptionalityPriority>
+          </ExceptionalityCategory>
+        </ExceptionalityCategories>
+        <ProgramPlanDate>2024-12-03</ProgramPlanDate>
+        <ProgramPlanEffectiveDate>2025-01-06</ProgramPlanEffectiveDate>
+        <PlannedAssessmentParticipation Codeset="Local">GeneralAssessmentWithAccommodations</PlannedAssessmentParticipation>
+        <StudentSpecialEducationFTE>1.00</StudentSpecialEducationFTE>
+      </StudentParticipationData>
+      <StudentParticipationList>
+        <StudentParticipationData>
+          <ProgramType>
+            <Code Codeset="urn:example:codesets:program-type">IDEA</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">SPED-IEP</OtherCode>
+              <OtherCode Codeset="Text">Individualized Education Program</OtherCode>
+            </OtherCodeList>
+          </ProgramType>
+          <ProgramFundingSources>
+            <ProgramFundingSource>
+              <Code Codeset="urn:example:codesets:funding-source">IDEA-B</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Local">FED-611</OtherCode>
+                <OtherCode Codeset="Text">IDEA Part B Section 611</OtherCode>
+              </OtherCodeList>
+            </ProgramFundingSource>
+            <ProgramFundingSource>
+              <Code Codeset="urn:example:codesets:funding-source">STATE-SPED</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="StateProvince">OR-SPED</OtherCode>
+                <OtherCode Codeset="Text">Oregon special education allocation</OtherCode>
+              </OtherCodeList>
+            </ProgramFundingSource>
+          </ProgramFundingSources>
+          <ManagingPublicAgency SIF_RefObject="LEAInfo">f237cb2d-8631-4069-ac83-54e30f7427a6</ManagingPublicAgency>
+          <ManagingSchool SIF_RefObject="SchoolInfo">7835a28e-937a-47ee-bc2f-88bb078d06a5</ManagingSchool>
+          <ReferralDate>2024-09-12</ReferralDate>
+          <ProgramStatus>
+            <Code Codeset="urn:example:codesets:program-status">Active</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">IEP-ACTIVE</OtherCode>
+              <OtherCode Codeset="Text">Active IEP services</OtherCode>
+            </OtherCodeList>
+          </ProgramStatus>
+          <GiftedEligibilityCriteria Codeset="urn:example:codesets:gifted-eligibility">No</GiftedEligibilityCriteria>
+          <EvaluationDate>2024-11-18</EvaluationDate>
+          <ReevaluationDate>2027-11-17</ReevaluationDate>
+          <ExceptionalityCategories>
+            <ExceptionalityCategory>
+              <Code Codeset="urn:example:codesets:idea-disability">SLI</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="StateProvince">SLI</OtherCode>
+                <OtherCode Codeset="Text">Speech or Language Impairment</OtherCode>
+              </OtherCodeList>
+              <ExceptionalityPriority>Primary</ExceptionalityPriority>
+            </ExceptionalityCategory>
+          </ExceptionalityCategories>
+          <ProgramPlanDate>2024-12-03</ProgramPlanDate>
+          <ProgramPlanEffectiveDate>2025-01-06</ProgramPlanEffectiveDate>
+          <PlannedAssessmentParticipation Codeset="Local">GeneralAssessmentWithAccommodations</PlannedAssessmentParticipation>
+          <DaysInParticipation>170</DaysInParticipation>
+        </StudentParticipationData>
+        <StudentParticipationData>
+          <ProgramType>
+            <Code Codeset="urn:example:codesets:program-type">GIFTED</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">TAG</OtherCode>
+              <OtherCode Codeset="Text">Talented and Gifted Enrichment</OtherCode>
+            </OtherCodeList>
+          </ProgramType>
+          <ProgramFundingSources>
+            <ProgramFundingSource>
+              <Code Codeset="urn:example:codesets:funding-source">LOCAL</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Local">OVUSD-GT</OtherCode>
+                <OtherCode Codeset="Text">District gifted services allocation</OtherCode>
+              </OtherCodeList>
+            </ProgramFundingSource>
+          </ProgramFundingSources>
+          <ManagingPublicAgency SIF_RefObject="LEAInfo">ea852fe3-8f7d-4dac-aad1-4bc7c0fed1e4</ManagingPublicAgency>
+          <ManagingSchool SIF_RefObject="SchoolInfo">33be7a09-e3ae-49ad-9624-0d12e798334c</ManagingSchool>
+          <ReferralDate>2025-02-03</ReferralDate>
+          <ProgramStatus>
+            <Code Codeset="urn:example:codesets:program-status">Active</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">TAG-ACTIVE</OtherCode>
+              <OtherCode Codeset="Text">Active gifted enrichment participation</OtherCode>
+            </OtherCodeList>
+          </ProgramStatus>
+          <GiftedEligibilityCriteria Codeset="urn:example:codesets:gifted-eligibility">Yes</GiftedEligibilityCriteria>
+          <EvaluationDate>2025-03-14</EvaluationDate>
+          <ReevaluationDate>2028-03-13</ReevaluationDate>
+          <ExceptionalityCategories>
+            <ExceptionalityCategory>
+              <Code Codeset="urn:example:codesets:idea-disability">SLD</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="StateProvince">SLD</OtherCode>
+                <OtherCode Codeset="Text">Specific Learning Disability</OtherCode>
+              </OtherCodeList>
+              <ExceptionalityPriority>Primary</ExceptionalityPriority>
+            </ExceptionalityCategory>
+          </ExceptionalityCategories>
+          <ProgramPlanDate>2025-03-28</ProgramPlanDate>
+          <ProgramPlanEffectiveDate>2025-04-07</ProgramPlanEffectiveDate>
+          <PlannedAssessmentParticipation Codeset="Local">GeneralAssessmentWithAccommodations</PlannedAssessmentParticipation>
+          <DaysInParticipation>85</DaysInParticipation>
+        </StudentParticipationData>
+      </StudentParticipationList>
+      <StudentPlacementList>
+        <StudentPlacementData>
+          <Service>
+            <Code Codeset="urn:example:codesets:special-education-service">SPEECH-LANGUAGE</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">SLP-DIRECT</OtherCode>
+              <OtherCode Codeset="Text">Direct speech-language therapy</OtherCode>
+            </OtherCodeList>
+          </Service>
+          <ServiceCategory Codeset="urn:example:codesets:service-category">RelatedService</ServiceCategory>
+          <ServiceFundingSources>
+            <ServiceFundingSource>
+              <Code Codeset="urn:example:codesets:funding-source">IDEA-B</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="Local">FED-611</OtherCode>
+                <OtherCode Codeset="Text">IDEA Part B Section 611</OtherCode>
+              </OtherCodeList>
+            </ServiceFundingSource>
+          </ServiceFundingSources>
+          <ServicingPublicAgency SIF_RefObject="LEAInfo">baca106c-ddae-4538-939d-9377c173b998</ServicingPublicAgency>
+          <ServicingSchool SIF_RefObject="SchoolInfo">8224ccc2-a860-488c-8c75-d4e3e725ce20</ServicingSchool>
+          <SchoolWhereServiceDelivered SIF_RefObject="SchoolInfo">e40c49bf-5a7e-4844-b7a6-a4caeca18549</SchoolWhereServiceDelivered>
+          <ServiceProviderType>
+            <Code Codeset="urn:example:codesets:provider-type">SLP</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">CCC-SLP</OtherCode>
+              <OtherCode Codeset="Text">Speech-Language Pathologist</OtherCode>
+            </OtherCodeList>
+          </ServiceProviderType>
+          <AgencyType>School District Related Services Department</AgencyType>
+          <FrequencyTime>
+            <Code Codeset="urn:example:codesets:frequency">2X30W</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">2X30</OtherCode>
+              <OtherCode Codeset="Text">Two thirty-minute sessions per week</OtherCode>
+            </OtherCodeList>
+          </FrequencyTime>
+        </StudentPlacementData>
+        <StudentPlacementData>
+          <Service>
+            <Code Codeset="urn:example:codesets:special-education-service">READING-SDI</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">READ-SDI</OtherCode>
+              <OtherCode Codeset="Text">Specialized reading instruction</OtherCode>
+            </OtherCodeList>
+          </Service>
+          <ServiceCategory Codeset="urn:example:codesets:service-category">SpecializedInstruction</ServiceCategory>
+          <ServiceFundingSources>
+            <ServiceFundingSource>
+              <Code Codeset="urn:example:codesets:funding-source">STATE-SPED</Code>
+              <OtherCodeList>
+                <OtherCode Codeset="StateProvince">OR-SPED</OtherCode>
+                <OtherCode Codeset="Text">Oregon special education allocation</OtherCode>
+              </OtherCodeList>
+            </ServiceFundingSource>
+          </ServiceFundingSources>
+          <ServicingPublicAgency SIF_RefObject="LEAInfo">464dd389-a9d5-4e0c-afb5-dab04a8d51d3</ServicingPublicAgency>
+          <ServicingSchool SIF_RefObject="SchoolInfo">011a5f81-70ba-4af6-b6d7-525639aedcfe</ServicingSchool>
+          <SchoolWhereServiceDelivered SIF_RefObject="SchoolInfo">8eac9e31-4e55-4062-aa01-a3baf939edd2</SchoolWhereServiceDelivered>
+          <ServiceProviderType>
+            <Code Codeset="urn:example:codesets:provider-type">SPED-TEACHER</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">LD-TCHR</OtherCode>
+              <OtherCode Codeset="Text">Learning Disabilities Special Education Teacher</OtherCode>
+            </OtherCodeList>
+          </ServiceProviderType>
+          <AgencyType>Riverstone Middle School Learning Support Center</AgencyType>
+          <FrequencyTime>
+            <Code Codeset="urn:example:codesets:frequency">5X45W</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">5X45</OtherCode>
+              <OtherCode Codeset="Text">Five forty-five-minute sessions per week</OtherCode>
+            </OtherCodeList>
+          </FrequencyTime>
+        </StudentPlacementData>
+      </StudentPlacementList>
+    </StudentSpecialEducationRecord>
+  </xhtml:Example>
 </DataObject>

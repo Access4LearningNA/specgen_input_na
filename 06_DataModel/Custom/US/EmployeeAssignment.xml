@@ -157,7 +157,52 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="EmployeeAssignment - Example 1">
+    <EmployeeAssignment RefId="d154c813-f86f-4cf8-840e-16a9003bd1fe" EmployeePersonalRefId="2f69d78b-bfcb-4c62-859d-d7705b22a444">
+      <Description>Upper elementary special education resource teacher assignment</Description>
+      <PrimaryAssignment Codeset="https://example.org/codesets/primary-assignment">Yes</PrimaryAssignment>
+      <LocationInfoRefId>b48652b3-4bbb-4f14-9697-27758b1370d5</LocationInfoRefId>
+      <JobStartDate>2026-08-21</JobStartDate>
+      <JobEndDate>2027-06-11</JobEndDate>
+      <JobFTE>1.00</JobFTE>
+      <JobClassification>
+        <Code Codeset="https://example.org/codesets/job-classification">SpecialEducationTeacher</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">SPED-TEACHER</OtherCode>
+          <OtherCode Codeset="Local">MPS-RES-04</OtherCode>
+        </OtherCodeList>
+      </JobClassification>
+      <ProgramType>
+        <Code Codeset="https://example.org/codesets/program-type">04961</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">SPECIAL-EDUCATION</OtherCode>
+          <OtherCode Codeset="Local">IDEA-B</OtherCode>
+        </OtherCodeList>
+      </ProgramType>
+      <FundingSource>
+        <Code Codeset="https://example.org/codesets/funding-source">Yes</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">STATE-SPECIAL-ED</OtherCode>
+          <OtherCode Codeset="Local">FEDERAL-IDEA-B</OtherCode>
+        </OtherCodeList>
+      </FundingSource>
+      <SpecialEducation>
+        <AgeGroupList>
+          <AgeGroup>
+            <AgeGroup Codeset="https://example.org/codesets/special-education-age-group">6TO21</AgeGroup>
+          </AgeGroup>
+        </AgeGroupList>
+        <TitleList>
+          <TitleList>
+            <Title Codeset="https://example.org/codesets/special-education-title">SPEECHPATH</Title>
+          </TitleList>
+        </TitleList>
+      </SpecialEducation>
+      <TeacherInexperiencedStatus Codeset="https://example.org/codesets/teacher-experience">TCHEXPRNCD</TeacherInexperiencedStatus>
+      <TeacherOutOfFieldStatus Codeset="https://example.org/codesets/teacher-field-status">TCHINFLD</TeacherOutOfFieldStatus>
+    </EmployeeAssignment>
+  </xhtml:Example>
+  <xhtml:Example name="EmployeeAssignment - Example 2" xmlns="">
     <EmployeeAssignment RefId="FE1078BA3261545A31905937B265CE01" EmployeePersonalRefId="BE1078BA3261545A31905937B265CE02">
       <Description>First grade elementary teacher</Description>
       <PrimaryAssignment>Yes</PrimaryAssignment>

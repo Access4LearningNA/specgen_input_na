@@ -66,6 +66,29 @@
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="" name="StudentContactRelationship - Example 1">
+    <StudentContactRelationship RefId="2e17f6a6-5b02-4c5b-99a5-c23588f624a2" StudentPersonalRefId="d8023e98-142c-43ff-84e2-a8b0c70516e4" StudentContactPersonalRefId="b62e01da-e2ee-4ba6-9fb5-ffacedab744d">
+      <Relationship>
+        <Code Codeset="https://nces.ed.gov/ceds/relationship">Parent</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">PARENT</OtherCode>
+          <OtherCode Codeset="Local">CUSTODIAL_PARENT</OtherCode>
+        </OtherCodeList>
+      </Relationship>
+      <ContactFlags>
+        <ParentLegalGuardian Codeset="https://nces.ed.gov/ceds/contact-flags">LegalGuardian</ParentLegalGuardian>
+        <PickupRights Codeset="https://nces.ed.gov/ceds/contact-flags">Authorized</PickupRights>
+        <LivesWith Codeset="https://nces.ed.gov/ceds/contact-flags">PrimaryResidence</LivesWith>
+        <AccessToRecords Codeset="https://nces.ed.gov/ceds/contact-flags">FullAccess</AccessToRecords>
+        <EmergencyContact Codeset="https://nces.ed.gov/ceds/contact-flags">Primary</EmergencyContact>
+        <HasCustody Codeset="https://nces.ed.gov/ceds/contact-flags">JointCustody</HasCustody>
+        <DisciplinaryContact Codeset="https://nces.ed.gov/ceds/contact-flags">Authorized</DisciplinaryContact>
+        <PrimaryCareProvider Codeset="https://nces.ed.gov/ceds/contact-flags">No</PrimaryCareProvider>
+        <Other Codeset="https://nces.ed.gov/ceds/contact-flags">ReceivesAttendanceAlerts</Other>
+      </ContactFlags>
+      <ContactSequence>1</ContactSequence>
+    </StudentContactRelationship>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="StudentContactRelationship - Example 2">
     <StudentContactRelationship RefId="359D75101AD0A9D7A8C3DAD0A85103A2" StudentPersonalRefId="DEE34B359D75101A8C3D00AA001A1652" StudentContactPersonalRefId="6472B2610947583A463DBB345291B001">
       <Relationship>
         <Code>1735</Code>

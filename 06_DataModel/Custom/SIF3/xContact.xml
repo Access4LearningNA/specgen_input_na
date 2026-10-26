@@ -3,13 +3,237 @@
   <EventsReported>true</EventsReported>
   <Item>
     <Element>xContact</Element>
-    <Description>
-      <p>xContact is a object that provides human links to the student.</p>
-    </Description>
-    <Type ref="xPressWorkingGroup" complex="extension" name="xContactObjectType"/>
   </Item>
-
-  <xhtml:Example xmlns="">
+  <Item>
+    <Attribute>refId</Attribute>
+    <Characteristics>M</Characteristics>
+    <Type ref="CommonTypes" name="gRefIdType"/>
+  </Item>
+  <Item>
+    <Element>name</Element>
+    <Characteristics>M</Characteristics>
+    <Description>
+      <p>Name of the contact.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xPersonNameType"/>
+  </Item>
+  <Item>
+    <Element>otherNames</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Other names of the contact.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xOtherPersonNameListType"/>
+  </Item>
+  <Item>
+    <Element>localId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A unique number or alphanumeric code assigned to a staff member by a district or LEA.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xPersonIdType"/>
+    <cedsId>001572</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001572</cedsURL>
+  </Item>
+  <Item>
+    <Element>loginId</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The login identifier for the person.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xLoginIdType"/>
+    <cedsId>001170</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/001170</cedsURL>
+  </Item>
+  <Item>
+    <Element>otherIds</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Other Ids of the contact.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xOtherPersonIdListType"/>
+  </Item>
+  <Item>
+    <Element>address</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Address of the student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xPersonAddressType"/>
+  </Item>
+  <Item>
+    <Element>phoneNumber</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Phone number of the contact.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xTelephoneType"/>
+  </Item>
+  <Item>
+    <Element>otherPhoneNumbers</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Other phone numbers for the contact.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xTelephoneListType"/>
+  </Item>
+  <Item>
+    <Element>email</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The numbers, letters, and symbols used to identify an electronic mail (e-mail) user within the network to which the person or organization belongs.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xEmailType"/>
+    <cedsId>000088</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000088</cedsURL>
+  </Item>
+  <Item>
+    <Element>otherEmails</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Other emails of the contact.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xEmailListType"/>
+    <cedsId>000088</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000088</cedsURL>
+  </Item>
+  <Item>
+    <Element>sex</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The concept describing the biological traits that distinguish the males and females of a species.</p>
+    </Description>
+    <Type ref="CodeSets" name="xSexType"/>
+    <cedsId>000255</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000255</cedsURL>
+  </Item>
+  <Item>
+    <Element>employerType</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>A code that defines the employer type.</p>
+    </Description>
+    <Type ref="CodeSets" name="xEmployerType"/>
+  </Item>
+  <Item>
+    <Element>relationships</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>Relationships that this contact has with the student.</p>
+    </Description>
+    <Type ref="CommonTypes" name="xContactStudentRelationshipListType"/>
+  </Item>
+  <xhtml:Example xmlns="" name="xContact - Example 1">
+    <xContact refId="1bd1e5a2-ee35-401b-a9a9-300a008f1ade">
+      <name>
+        <type>LegalName</type>
+        <prefix>Dr.</prefix>
+        <familyName>Okafor</familyName>
+        <givenName>Kelechi</givenName>
+        <middleName>Adeyemi</middleName>
+        <suffix>III</suffix>
+      </name>
+      <otherNames>
+        <name>
+          <type>Nickname</type>
+          <prefix>Dr.</prefix>
+          <familyName>Okafor</familyName>
+          <givenName>Kele</givenName>
+          <middleName>Adeyemi</middleName>
+          <suffix>III</suffix>
+        </name>
+        <name>
+          <type>PreviousLegalName</type>
+          <prefix>Dr.</prefix>
+          <familyName>Nwosu</familyName>
+          <givenName>Kelechi</givenName>
+          <middleName>Adeyemi</middleName>
+          <suffix>III</suffix>
+        </name>
+      </otherNames>
+      <localId>NWPS-CNT-04821</localId>
+      <loginId>kelechi.okafor</loginId>
+      <otherIds>
+        <otherId>
+          <type>District</type>
+          <id>NWPS-EMP-04821</id>
+        </otherId>
+        <otherId>
+          <type>State</type>
+          <id>WA-EDU-771904</id>
+        </otherId>
+      </otherIds>
+      <address>
+        <addressType>GuardianAddress</addressType>
+        <line1>1847 Alder Crest Avenue</line1>
+        <line2>Apartment 3B</line2>
+        <city>Seattle</city>
+        <stateProvince>WA</stateProvince>
+        <countryCode>US</countryCode>
+        <postalCode>98109</postalCode>
+      </address>
+      <phoneNumber>
+        <phoneNumberType>Mobile</phoneNumberType>
+        <number>206-555-0187</number>
+        <primaryIndicator>true</primaryIndicator>
+      </phoneNumber>
+      <otherPhoneNumbers>
+        <phoneNumber>
+          <phoneNumberType>Home</phoneNumberType>
+          <number>206-555-0142</number>
+          <primaryIndicator>false</primaryIndicator>
+        </phoneNumber>
+        <phoneNumber>
+          <phoneNumberType>Work</phoneNumberType>
+          <number>206-555-0194 x4821</number>
+          <primaryIndicator>false</primaryIndicator>
+        </phoneNumber>
+      </otherPhoneNumbers>
+      <email>
+        <emailType>Home</emailType>
+        <emailAddress>kelechi.okafor@example.org</emailAddress>
+      </email>
+      <otherEmails>
+        <email>
+          <emailType>Work</emailType>
+          <emailAddress>k.okafor@northwindpublicschools.example</emailAddress>
+        </email>
+        <email>
+          <emailType>Other</emailType>
+          <emailAddress>kele.okafor@example.net</emailAddress>
+        </email>
+      </otherEmails>
+      <sex>Male</sex>
+      <employerType>Government_1803</employerType>
+      <relationships>
+        <relationship>
+          <studentRefId>8111a1ec-0262-400a-915b-6acf0689c388</studentRefId>
+          <relationshipCode>Father</relationshipCode>
+          <restrictions>Authorized for pickup; photo identification required.</restrictions>
+          <livesWith>true</livesWith>
+          <primaryContactIndicator>true</primaryContactIndicator>
+          <emergencyContactIndicator>true</emergencyContactIndicator>
+          <financialResponsibilityIndicator>true</financialResponsibilityIndicator>
+          <custodialIndicator>true</custodialIndicator>
+          <communicationsIndicator>true</communicationsIndicator>
+          <contactSequence>1</contactSequence>
+        </relationship>
+        <relationship>
+          <studentRefId>e663c23e-f8aa-478c-9563-6faed490b0e0</studentRefId>
+          <relationshipCode>Uncle</relationshipCode>
+          <restrictions>Authorized emergency pickup only.</restrictions>
+          <livesWith>false</livesWith>
+          <primaryContactIndicator>false</primaryContactIndicator>
+          <emergencyContactIndicator>true</emergencyContactIndicator>
+          <financialResponsibilityIndicator>false</financialResponsibilityIndicator>
+          <custodialIndicator>false</custodialIndicator>
+          <communicationsIndicator>true</communicationsIndicator>
+          <contactSequence>2</contactSequence>
+        </relationship>
+      </relationships>
+    </xContact>
+  </xhtml:Example>
+  <xhtml:Example name="xContact - Example 2" xmlns="">
     <xContact refId="05dd5254-43d7-11e6-beb8-9e71128cae77">
         <name>
             <type>LegalName</type>

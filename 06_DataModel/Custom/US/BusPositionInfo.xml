@@ -126,7 +126,82 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="BusPositionInfo - Example 1">
+    <BusPositionInfo RefId="cbed4be8-681e-407c-a9c9-1f518c361eff">
+      <Date>2026-08-20</Date>
+      <Time>08:12:35</Time>
+      <GridLocation>
+        <Latitude>47.608013</Latitude>
+        <Longitude>-122.335167</Longitude>
+      </GridLocation>
+      <TelematicsId>NWPS-BUS-042-TELEM-7A91</TelematicsId>
+      <TelemetryList>
+        <Telemetry>DoorClosed=true</Telemetry>
+        <Telemetry>EngineRunning=true</Telemetry>
+      </TelemetryList>
+      <BusDriver>
+        <Name Type="04">
+          <Prefix>Ms.</Prefix>
+          <LastName>Calderón</LastName>
+          <FirstName>Marisol</FirstName>
+          <MiddleName>Inez</MiddleName>
+          <Suffix>II</Suffix>
+          <PreferredName>Sol</PreferredName>
+          <SortName>Calderón, Marisol Inez II</SortName>
+          <FullName>Ms. Marisol Inez Calderón II</FullName>
+        </Name>
+        <EmployeePersonalRefId>38142219-b873-4b9b-a049-5e8659465d61</EmployeePersonalRefId>
+        <Status Codeset="https://example.org/codesets/bus-boarding-status">On</Status>
+      </BusDriver>
+      <BusStaffList>
+        <BusStaff>
+          <Name Type="04">
+            <Prefix>Mr.</Prefix>
+            <LastName>Okafor</LastName>
+            <FirstName>Darius</FirstName>
+            <MiddleName>Chike</MiddleName>
+            <Suffix>Jr.</Suffix>
+            <PreferredName>Dari</PreferredName>
+            <SortName>Okafor, Darius Chike Jr.</SortName>
+            <FullName>Mr. Darius Chike Okafor Jr.</FullName>
+          </Name>
+          <EmployeePersonalRefId>8418a5b6-c370-451f-a653-7b1dd30457a2</EmployeePersonalRefId>
+          <Status Codeset="https://example.org/codesets/bus-boarding-status">On</Status>
+        </BusStaff>
+        <BusStaff>
+          <Name Type="04">
+            <Prefix>Ms.</Prefix>
+            <LastName>Kealoha</LastName>
+            <FirstName>Leilani</FirstName>
+            <MiddleName>Mahealani</MiddleName>
+            <Suffix>III</Suffix>
+            <PreferredName>Lani</PreferredName>
+            <SortName>Kealoha, Leilani Mahealani III</SortName>
+            <FullName>Ms. Leilani Mahealani Kealoha III</FullName>
+          </Name>
+          <EmployeePersonalRefId>0711c7fc-46e8-49e4-9508-8d422a3bf4fb</EmployeePersonalRefId>
+          <Status Codeset="https://example.org/codesets/bus-boarding-status">On</Status>
+        </BusStaff>
+      </BusStaffList>
+      <RouteStatus>
+        <BusRouteInfoRefId>20004d8b-5ece-4230-b20e-603b59e3fdb2</BusRouteInfoRefId>
+        <Status>InProgress</Status>
+      </RouteStatus>
+      <Odometer Unit="MI" UnitCodeset="https://example.org/codesets/distance-units">42816.7</Odometer>
+      <Speedometer Unit="MPH" UnitCodeset="https://example.org/codesets/speed-units">23.4</Speedometer>
+      <Students>
+        <Student>
+          <StudentPersonalRefId>b2165321-9778-4128-92c7-b6ffdce0f570</StudentPersonalRefId>
+          <Status Codeset="https://example.org/codesets/bus-boarding-status">On</Status>
+        </Student>
+        <Student>
+          <StudentPersonalRefId>8c9a488e-188f-4c9e-8006-17321d914d8b</StudentPersonalRefId>
+          <Status Codeset="https://example.org/codesets/bus-boarding-status">On</Status>
+        </Student>
+      </Students>
+    </BusPositionInfo>
+  </xhtml:Example>
+  <xhtml:Example name="BusPositionInfo - Example 2" xmlns="">
     <BusPositionInfo RefId="A2E35B359D75101A8C3D00AA001A0000">
       <Date>2003-10-13</Date>
       <Time>13:39:12-08:00</Time>

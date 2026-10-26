@@ -159,6 +159,393 @@
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="" name="StudentAcademicRecord - Example 1">
+    <StudentAcademicRecord RefId="1a3aecee-1e32-4f44-b1c6-65dec204568b" SIF_RefId="b205138e-37e9-49f9-8788-ca020588772f" SIF_RefObject="StudentPersonal" SIF_RefObjectCodeset="urn:example:codeset:sif-objects">
+      <ReportingDate>2026-08-20</ReportingDate>
+      <StudentSchoolEnrollmentData SchoolAttendedRefId="9c23181b-9d20-4550-b0ed-7b00ce6e9f5e">
+        <GradeLevel>
+          <Code Codeset="urn:example:codeset:grade-level">10</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">Sophomore</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+        <Advisor>
+          <StaffPersonalData>
+            <Name Type="04">
+              <Prefix>Dr.</Prefix>
+              <LastName>Holloway</LastName>
+              <FirstName>Marisol</FirstName>
+              <MiddleName>Inez</MiddleName>
+              <Suffix>III</Suffix>
+              <PreferredName>Mari</PreferredName>
+              <SortName>Holloway, Marisol Inez</SortName>
+              <FullName>Dr. Marisol Inez Holloway III</FullName>
+            </Name>
+            <Title>Academic Advisor</Title>
+            <AddressList>
+              <Address Type="Work" TypeCodeset="urn:example:codeset:address-type">
+                <Street>
+                  <Line1>780 Lantern Quay</Line1>
+                  <Line2>Advising Suite 214</Line2>
+                  <Line3>North Academic Wing</Line3>
+                  <Complex>Mariner Collegiate Campus</Complex>
+                  <StreetNumber>780</StreetNumber>
+                  <StreetPrefix>NE</StreetPrefix>
+                  <StreetName>Lantern Quay</StreetName>
+                  <StreetType>Avenue</StreetType>
+                  <StreetSuffix>NE</StreetSuffix>
+                  <ApartmentType>Suite</ApartmentType>
+                  <ApartmentNumberPrefix>Room</ApartmentNumberPrefix>
+                  <ApartmentNumber>214</ApartmentNumber>
+                  <ApartmentNumberSuffix>B</ApartmentNumberSuffix>
+                </Street>
+                <City>Alder Cove</City>
+                <County>Harbor County</County>
+                <StateProvince Codeset="urn:example:codeset:us-states">WA</StateProvince>
+                <StateANSICode Codeset="urn:example:codeset:ansi-state">53</StateANSICode>
+                <Country Codeset="urn:example:codeset:iso-country">US</Country>
+                <PostalCode>98118</PostalCode>
+                <GridLocation>
+                  <Latitude>47.5482</Latitude>
+                  <Longitude>-122.2796</Longitude>
+                </GridLocation>
+                <AddressRefId>653fdf22-00eb-42fb-8634-80a886aad9c5</AddressRefId>
+              </Address>
+            </AddressList>
+            <PhoneNumberList>
+              <PhoneNumber Type="Work" TypeCodeset="urn:example:codeset:phone-type">
+                <Number>206-555-0147</Number>
+                <Extension>214</Extension>
+                <ListedStatus>Listed</ListedStatus>
+              </PhoneNumber>
+            </PhoneNumberList>
+          </StaffPersonalData>
+        </Advisor>
+        <Counselor>
+          <StaffPersonalData>
+            <Name Type="04">
+              <Prefix>Ms.</Prefix>
+              <LastName>Okafor</LastName>
+              <FirstName>Chinelo</FirstName>
+              <MiddleName>Amara</MiddleName>
+              <Suffix>Jr.</Suffix>
+              <PreferredName>Nelo</PreferredName>
+              <SortName>Okafor, Chinelo Amara</SortName>
+              <FullName>Ms. Chinelo Amara Okafor Jr.</FullName>
+            </Name>
+            <Title>College and Career Counselor</Title>
+            <AddressList>
+              <Address Type="Work" TypeCodeset="urn:example:codeset:address-type">
+                <Street>
+                  <Line1>780 Lantern Quay</Line1>
+                  <Line2>Counseling Center</Line2>
+                  <Line3>Student Services Floor</Line3>
+                  <Complex>Mariner Collegiate Campus</Complex>
+                  <StreetNumber>780</StreetNumber>
+                  <StreetPrefix>NE</StreetPrefix>
+                  <StreetName>Lantern Quay</StreetName>
+                  <StreetType>Avenue</StreetType>
+                  <StreetSuffix>NE</StreetSuffix>
+                  <ApartmentType>Office</ApartmentType>
+                  <ApartmentNumberPrefix>Room</ApartmentNumberPrefix>
+                  <ApartmentNumber>118</ApartmentNumber>
+                  <ApartmentNumberSuffix>A</ApartmentNumberSuffix>
+                </Street>
+                <City>Alder Cove</City>
+                <County>Harbor County</County>
+                <StateProvince Codeset="urn:example:codeset:us-states">WA</StateProvince>
+                <StateANSICode Codeset="urn:example:codeset:ansi-state">53</StateANSICode>
+                <Country Codeset="urn:example:codeset:iso-country">US</Country>
+                <PostalCode>98118</PostalCode>
+                <GridLocation>
+                  <Latitude>47.5482</Latitude>
+                  <Longitude>-122.2796</Longitude>
+                </GridLocation>
+                <AddressRefId>6a75dcd8-484c-4876-8dcf-4fef50bebc78</AddressRefId>
+              </Address>
+            </AddressList>
+            <PhoneNumberList>
+              <PhoneNumber Type="Work" TypeCodeset="urn:example:codeset:phone-type">
+                <Number>206-555-0182</Number>
+                <Extension>118</Extension>
+                <ListedStatus>Listed</ListedStatus>
+              </PhoneNumber>
+            </PhoneNumberList>
+          </StaffPersonalData>
+        </Counselor>
+      </StudentSchoolEnrollmentData>
+      <DistrictEntryDate>2022-09-06</DistrictEntryDate>
+      <SchoolAttendanceHistory>
+        <SchoolAttended RefId="c1a8952c-318f-4402-82cd-9dc4f8404161">
+          <LEAInfoData>
+            <LocalId>HCPS-041</LocalId>
+            <StateProvinceId>WA-HCPS-041</StateProvinceId>
+            <NCESId>5300001</NCESId>
+            <LEAName>Harbor County Public Schools</LEAName>
+          </LEAInfoData>
+          <SchoolInfoData>
+            <LocalId>ACHS-220</LocalId>
+            <StateProvinceId>WA-ACHS-220</StateProvinceId>
+            <NCESId>5300002</NCESId>
+            <SchoolName>Alder Cove High School</SchoolName>
+            <SchoolURL>https://schools.example.edu/alder-cove-high</SchoolURL>
+            <SchoolContactList>
+              <SchoolContact>
+                <PublishInDirectory Codeset="urn:example:codeset:directory-publication">true</PublishInDirectory>
+                <ContactInfo>
+                  <Name Type="04">
+                    <Prefix>Principal</Prefix>
+                    <LastName>Vasquez</LastName>
+                    <FirstName>Elian</FirstName>
+                    <MiddleName>Rui</MiddleName>
+                    <PreferredName>Eli</PreferredName>
+                    <SortName>Vasquez, Elian Rui</SortName>
+                    <FullName>Principal Elian Rui Vasquez</FullName>
+                  </Name>
+                  <PositionTitle>School Principal</PositionTitle>
+                  <Role>Administrative Contact</Role>
+                  <Address Type="Work" TypeCodeset="urn:example:codeset:address-type">
+                    <Street>
+                      <Line1>780 Lantern Quay</Line1>
+                      <Line2>Administration Office</Line2>
+                      <Line3>Main Building</Line3>
+                      <Complex>Alder Cove High School</Complex>
+                      <StreetNumber>780</StreetNumber>
+                      <StreetPrefix>NE</StreetPrefix>
+                      <StreetName>Lantern Quay</StreetName>
+                      <StreetType>Avenue</StreetType>
+                      <StreetSuffix>NE</StreetSuffix>
+                      <ApartmentType>Suite</ApartmentType>
+                      <ApartmentNumberPrefix>Office</ApartmentNumberPrefix>
+                      <ApartmentNumber>101</ApartmentNumber>
+                      <ApartmentNumberSuffix>A</ApartmentNumberSuffix>
+                    </Street>
+                    <City>Alder Cove</City>
+                    <County>Harbor County</County>
+                    <StateProvince Codeset="urn:example:codeset:us-states">WA</StateProvince>
+                    <StateANSICode Codeset="urn:example:codeset:ansi-state">53</StateANSICode>
+                    <Country Codeset="urn:example:codeset:iso-country">US</Country>
+                    <PostalCode>98118</PostalCode>
+                    <GridLocation>
+                      <Latitude>47.5482</Latitude>
+                      <Longitude>-122.2796</Longitude>
+                    </GridLocation>
+                    <AddressRefId>ea6be886-c034-4811-bd29-fb80a7c54af4</AddressRefId>
+                  </Address>
+                  <AddressRefId>5e1f24f2-c5b0-4e1a-8857-2e81370e3148</AddressRefId>
+                  <EmailList>
+                    <Email Type="Work" TypeCodeset="urn:example:codeset:email-type">elian.vasquez@example.edu</Email>
+                  </EmailList>
+                  <PhoneNumberList>
+                    <PhoneNumber Type="Work" TypeCodeset="urn:example:codeset:phone-type">
+                      <Number>206-555-0100</Number>
+                      <Extension>101</Extension>
+                      <ListedStatus>Listed</ListedStatus>
+                    </PhoneNumber>
+                  </PhoneNumberList>
+                </ContactInfo>
+              </SchoolContact>
+            </SchoolContactList>
+            <AddressList>
+              <Address Type="Physical" TypeCodeset="urn:example:codeset:address-type">
+                <Street>
+                  <Line1>780 Lantern Quay</Line1>
+                  <Line2>Main Building</Line2>
+                  <Line3>Campus Reception</Line3>
+                  <Complex>Alder Cove High School</Complex>
+                  <StreetNumber>780</StreetNumber>
+                  <StreetPrefix>NE</StreetPrefix>
+                  <StreetName>Lantern Quay</StreetName>
+                  <StreetType>Avenue</StreetType>
+                  <StreetSuffix>NE</StreetSuffix>
+                  <ApartmentType>Building</ApartmentType>
+                  <ApartmentNumberPrefix>Campus</ApartmentNumberPrefix>
+                  <ApartmentNumber>1</ApartmentNumber>
+                  <ApartmentNumberSuffix>North</ApartmentNumberSuffix>
+                </Street>
+                <City>Alder Cove</City>
+                <County>Harbor County</County>
+                <StateProvince Codeset="urn:example:codeset:us-states">WA</StateProvince>
+                <StateANSICode Codeset="urn:example:codeset:ansi-state">53</StateANSICode>
+                <Country Codeset="urn:example:codeset:iso-country">US</Country>
+                <PostalCode>98118</PostalCode>
+                <GridLocation>
+                  <Latitude>47.5482</Latitude>
+                  <Longitude>-122.2796</Longitude>
+                </GridLocation>
+                <AddressRefId>2a5b3318-2e55-491d-aee1-e41118b57132</AddressRefId>
+              </Address>
+            </AddressList>
+            <PhoneNumberList>
+              <PhoneNumber Type="Work" TypeCodeset="urn:example:codeset:phone-type">
+                <Number>206-555-0100</Number>
+                <Extension>100</Extension>
+                <ListedStatus>Listed</ListedStatus>
+              </PhoneNumber>
+            </PhoneNumberList>
+            <IdentificationInfoList>
+              <IdentificationInfo Code="NCES" CodeCodeset="urn:example:codeset:identification">5300002</IdentificationInfo>
+            </IdentificationInfoList>
+            <GradeLevels>
+              <GradeLevel>
+                <Code Codeset="urn:example:codeset:grade-level">10</Code>
+                <OtherCodeList>
+                  <OtherCode Codeset="Local">Sophomore</OtherCode>
+                </OtherCodeList>
+              </GradeLevel>
+            </GradeLevels>
+          </SchoolInfoData>
+          <AccreditingBody>Northwest Accreditation Collaborative</AccreditingBody>
+          <MarkingSystems>
+            <MarkValueInfoData RefId="a140ee16-c209-4882-b989-99f7861e9818">
+              <Name>Letter Grades Plus Minus</Name>
+              <Percentage>
+                <Minimum>0.00</Minimum>
+                <Maximum>100.00</Maximum>
+              </Percentage>
+              <Numeric>
+                <Precision>3</Precision>
+                <Scale>2</Scale>
+                <Low>0.00</Low>
+                <High>100.00</High>
+              </Numeric>
+              <Letter>
+                <ValidMark>
+                  <Code>A</Code>
+                  <NumericEquivalent>4.00</NumericEquivalent>
+                  <Description>Excellent mastery</Description>
+                </ValidMark>
+              </Letter>
+              <Narrative>
+                <MaximumSize>500</MaximumSize>
+              </Narrative>
+            </MarkValueInfoData>
+          </MarkingSystems>
+        </SchoolAttended>
+      </SchoolAttendanceHistory>
+      <EnrollmentHistory>
+        <StudentSchoolEnrollmentData SchoolAttendedRefId="0face17c-f1d9-426d-9e38-0fc5630ed649">
+          <SchoolYear>2025</SchoolYear>
+          <EntryDate>2025-09-03</EntryDate>
+          <ExitDate>2026-06-18</ExitDate>
+          <EntryType>
+            <Code Codeset="urn:example:codeset:entry-type">01821</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Text">Continued enrollment</OtherCode>
+            </OtherCodeList>
+          </EntryType>
+          <GradeLevel>
+            <Code Codeset="urn:example:codeset:grade-level">10</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">Sophomore</OtherCode>
+            </OtherCodeList>
+          </GradeLevel>
+          <ExitStatus>
+            <Code Codeset="urn:example:codeset:exit-status">Temporary</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Text">End of school year</OtherCode>
+            </OtherCodeList>
+          </ExitStatus>
+          <ExitType>
+            <Code Codeset="urn:example:codeset:exit-type">01907</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Text">Promoted to next grade</OtherCode>
+            </OtherCodeList>
+          </ExitType>
+          <StudentLEARelationship>
+            <MembershipType Codeset="urn:example:codeset:membership">Resident</MembershipType>
+            <LEARelationshipType>
+              <ResidencyStatus>
+                <Code Codeset="urn:example:codeset:residency">01652</Code>
+                <OtherCodeList>
+                  <OtherCode Codeset="Text">Resident of district</OtherCode>
+                </OtherCodeList>
+              </ResidencyStatus>
+              <ProvidingInstruction>true</ProvidingInstruction>
+              <ProvidingServices>true</ProvidingServices>
+              <FinanciallyResponsible>true</FinanciallyResponsible>
+            </LEARelationshipType>
+          </StudentLEARelationship>
+          <StudentSchoolRelationship>
+            <MembershipType Codeset="urn:example:codeset:membership">FullTime</MembershipType>
+            <ResidencyStatus>
+              <Code Codeset="urn:example:codeset:school-residency">Resident</Code>
+            </ResidencyStatus>
+          </StudentSchoolRelationship>
+        </StudentSchoolEnrollmentData>
+      </EnrollmentHistory>
+      <AcademicPerformanceSummary>
+        <TotalCreditsAttempted>12.00</TotalCreditsAttempted>
+        <TotalCreditsEarned>12.00</TotalCreditsEarned>
+        <CumulativeGPACreditsEarned>12.00</CumulativeGPACreditsEarned>
+        <CumulativeGradePoints>43.20</CumulativeGradePoints>
+        <CumulativeGPA>3.60</CumulativeGPA>
+        <GPAType>Unweighted</GPAType>
+        <ClassRank>38</ClassRank>
+        <ClassTotalNumber>312</ClassTotalNumber>
+        <ClassRankingDate>2026-06-20</ClassRankingDate>
+        <ProjectedGraduationDate>2028-06-15</ProjectedGraduationDate>
+        <GraduationRateSurveyCohortYear>2022</GraduationRateSurveyCohortYear>
+        <GraduationRateSurveyIndicator Codeset="urn:example:codeset:grs">Yes</GraduationRateSurveyIndicator>
+        <AcademicTrack Codeset="urn:example:codeset:academic-track">STEM</AcademicTrack>
+        <AcademicFoci>
+          <AcademicFocus>
+            <Code Codeset="urn:example:codeset:focus">STEM</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Text">Engineering and environmental science</OtherCode>
+            </OtherCodeList>
+          </AcademicFocus>
+        </AcademicFoci>
+        <AcademicSubjects>
+          <AcademicSubject>
+            <Code Codeset="urn:example:codeset:cip">14.1901</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Text">Pre-engineering</OtherCode>
+            </OtherCodeList>
+          </AcademicSubject>
+        </AcademicSubjects>
+      </AcademicPerformanceSummary>
+      <AssessmentPerformanceHistory>
+        <Assessment>
+          <Name>Washington Comprehensive Mathematics Assessment</Name>
+          <AdministrationDate>2026-05-14</AdministrationDate>
+          <Form>Spring 2026</Form>
+          <Level>Grade 10</Level>
+          <StudentGradeLevelWhenAssessed>
+            <Code Codeset="urn:example:codeset:grade-level">10</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">Sophomore</OtherCode>
+            </OtherCodeList>
+          </StudentGradeLevelWhenAssessed>
+          <SubtestCategory>Mathematics</SubtestCategory>
+          <TestScoreType Codeset="urn:example:codeset:test-score">ScaledScore</TestScoreType>
+          <TestScore>2584</TestScore>
+        </Assessment>
+      </AssessmentPerformanceHistory>
+      <AdditionalGraduationRequirementPerformanceHistory>
+        <Requirement>
+          <Name>Washington State History Requirement</Name>
+          <Method>Completed integrated Grade 10 social studies portfolio</Method>
+          <Status Codeset="urn:example:codeset:requirement-status">Met</Status>
+          <StatusDeterminationDate>2026-06-12</StatusDeterminationDate>
+        </Requirement>
+      </AdditionalGraduationRequirementPerformanceHistory>
+      <ActivityAwardHistory>
+        <ActivityAward>
+          <Name>Harbor Robotics Collective</Name>
+          <InvolvementCode Codeset="urn:example:codeset:activity">ROBOTICS</InvolvementCode>
+          <InvolvementBeginningDate>2025-09-10</InvolvementBeginningDate>
+          <InvolvementEndingDate>2026-06-05</InvolvementEndingDate>
+          <InvolvementAmount>6 hours per week</InvolvementAmount>
+          <HonorsInformationCode Codeset="urn:example:codeset:honors">REGIONAL</HonorsInformationCode>
+          <HonorsDescription>Regional Design Merit Award</HonorsDescription>
+          <DiplomaCredentialHonorsCode Codeset="urn:example:codeset:diploma-honors">00737</DiplomaCredentialHonorsCode>
+          <DiplomaCredentialHonorsDescription>STEM distinction</DiplomaCredentialHonorsDescription>
+          <CredentialConferred Codeset="urn:example:codeset:credential">Participation</CredentialConferred>
+        </ActivityAward>
+      </ActivityAwardHistory>
+    </StudentAcademicRecord>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="StudentAcademicRecord - Example 2">
     <StudentAcademicRecord RefId="D932E34082D04C048112729922B58A93" SIF_RefObject="StudentRecordExchange" SIF_RefId="0EAF9D6DA4854F348103B04BFEAC65B2">
       <ReportingDate>2006-09-26</ReportingDate>
       <StudentSchoolEnrollmentData SchoolAttendedRefId="39FA2714A63543B0A7732796825E9C68">
@@ -525,7 +912,7 @@
       </ActivityAwardHistory>
     </StudentAcademicRecord>
   </xhtml:Example>
-  <xhtml:Example xmlns="" name="StudentAcademicRecord - Example 2">
+  <xhtml:Example xmlns="" name="StudentAcademicRecord - Example 3">
     <StudentAcademicRecord RefId="D932E34082D04C048112729922B58A93" SIF_RefObject="StudentRecordExchange" SIF_RefId="0EAF9D6DA4854F348103B04BFEAC65B2">
       <ReportingDate>2010-07-15</ReportingDate>
       <StudentSchoolEnrollmentData SchoolAttendedRefId="140902170B360F35140071CD92A52A4A">

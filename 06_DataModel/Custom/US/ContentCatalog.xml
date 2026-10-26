@@ -183,7 +183,96 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="" name="ContentCatalog">
+  <xhtml:Example xmlns="" name="ContentCatalog - Example 1">
+    <ContentCatalog RefId="4f8e9d2b-7088-45d0-8503-04b57221f9e3">
+      <ContentObject>
+        <SourceObject SIF_RefObject="Assessment">d2796f43-dc91-46fc-a7c8-98cb178228c7</SourceObject>
+        <Location ReferenceType="URI">https://content.redwoodvalley.example.org/assessments/watershed-investigation</Location>
+      </ContentObject>
+      <Status>Available</Status>
+      <Title>Watershed Investigation: Mapping Water Flow</Title>
+      <Description>An interactive grade 6 science assessment in which students analyze topographic maps, identify watershed boundaries, and explain how land use affects local water quality.</Description>
+      <Author>Redwood Valley Public Schools Science Collaborative</Author>
+      <LanguageCode Codeset="https://www.loc.gov/standards/iso639-2/">eng</LanguageCode>
+      <GradeLevels>
+        <GradeLevel>
+          <Code Codeset="https://ceds.ed.gov/element/000100">06</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">Grade 6</OtherCode>
+            <OtherCode Codeset="Text">Sixth Grade</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+        <GradeLevel>
+          <Code Codeset="https://ceds.ed.gov/element/000100">07</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">Grade 7</OtherCode>
+            <OtherCode Codeset="Text">Seventh Grade</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+      </GradeLevels>
+      <SubjectAreas>
+        <SubjectArea>
+          <Code Codeset="https://nces.ed.gov/">03</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">SCI</OtherCode>
+            <OtherCode Codeset="Text">Science</OtherCode>
+          </OtherCodeList>
+        </SubjectArea>
+        <SubjectArea>
+          <Code Codeset="https://nces.ed.gov/">01</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">MAT</OtherCode>
+            <OtherCode Codeset="Text">Mathematics</OtherCode>
+          </OtherCodeList>
+        </SubjectArea>
+      </SubjectAreas>
+      <MediaTypes>
+        <MediaType>text/html</MediaType>
+        <MediaType>application/pdf</MediaType>
+      </MediaTypes>
+      <LearningStandards>
+        <Document>
+          <Title>Washington State Science Learning Standards</Title>
+          <StandardsSettingBody>
+            <Country Codeset="ISO-3166-1">US</Country>
+            <StateProvince Codeset="ISO-3166-2">US-WA</StateProvince>
+            <NCESId>530000000000</NCESId>
+            <SettingBodyName>Washington Office of Superintendent of Public Instruction</SettingBodyName>
+          </StandardsSettingBody>
+          <StatementCodes>
+            <StatementCode>MS-ESS2-4</StatementCode>
+            <StatementCode>MS-ESS3-3</StatementCode>
+          </StatementCodes>
+        </Document>
+      </LearningStandards>
+      <InstructionalLevel Codeset="https://example.org/codesets/instructional-level">Intermediate</InstructionalLevel>
+      <TechnicalRequirements>
+        <TechnicalRequirement>Current web browser with JavaScript enabled</TechnicalRequirement>
+        <TechnicalRequirement>Internet connection capable of streaming interactive map tiles</TechnicalRequirement>
+      </TechnicalRequirements>
+      <Duration Units="minutes" UnitsCodeset="https://example.org/codesets/time-units">45</Duration>
+      <CurriculumHierarchyList>
+        <CurriculumHierarchy>
+          <Level>1</Level>
+          <Description>Earth and Environmental Science</Description>
+          <ParentLevel>Science</ParentLevel>
+        </CurriculumHierarchy>
+        <CurriculumHierarchy>
+          <Level>2</Level>
+          <Description>Watersheds and Human Impacts</Description>
+          <ParentLevel>Earth and Environmental Science</ParentLevel>
+        </CurriculumHierarchy>
+      </CurriculumHierarchyList>
+      <Prerequisites>
+        <Prerequisite>Interpret a map key and cardinal directions.</Prerequisite>
+        <Prerequisite>Describe the movement of water through evaporation, precipitation, and runoff.</Prerequisite>
+      </Prerequisites>
+      <Adaptations>Provide text-to-speech support, printable high-contrast maps, and an extended-time setting for students with documented accommodations.</Adaptations>
+      <Size>18.4 MB</Size>
+      <Cost Currency="USD" CurrencyCodeset="ISO-4217">0.00</Cost>
+    </ContentCatalog>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="ContentCatalog - Example 2">
     <ContentCatalog RefId="359D75101AD0A9D7A8C3DAD0A85103A2" xml:lang="en">
       <ContentObject>
         <Location ReferenceType="URI">http://myserver.mydomain.com/content/civil_war_photos.pdf</Location>

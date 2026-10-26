@@ -62,7 +62,16 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="AccountingPeriod - Example 1">
+    <AccountingPeriod RefId="e0ebaaa6-6e4e-446f-96a2-61e5f1801e54">
+      <Name>Fiscal Year 2026 Quarter 1</Name>
+      <Description>First accounting quarter for Harborlight Unified School District fiscal year 2026.</Description>
+      <FiscalYearRefId>76e72c60-48d4-4a62-b36c-b9949fe3406c</FiscalYearRefId>
+      <StartDate>2025-07-01</StartDate>
+      <EndDate>2025-09-30</EndDate>
+    </AccountingPeriod>
+  </xhtml:Example>
+  <xhtml:Example name="AccountingPeriod - Example 2" xmlns="">
     <AccountingPeriod RefId="A08CC23B059C400CAA9F9BBD3DFF94F1">
       <Name>Quarter 1</Name>
       <Description>First Qtr</Description>

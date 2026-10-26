@@ -47,7 +47,23 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="" name="SectionCorrelation">
+  <xhtml:Example xmlns="" name="SectionCorrelation - Example 1">
+    <SectionCorrelation RefId="16543a20-5b88-4395-90fe-88a64922e789">
+      <CorrelationName>Grade 7 STEM Team Schedule</CorrelationName>
+      <CorrelationType>
+        <Code Codeset="https://example.org/codesets/section-correlation-types">TeamScheduling</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">STEM-7A</OtherCode>
+          <OtherCode Codeset="Text">Integrated mathematics and science planning team</OtherCode>
+        </OtherCodeList>
+      </CorrelationType>
+      <CorrelationSectionList>
+        <CorrelationSection Primary="true" PrimaryCodeset="https://example.org/codesets/primary-indicator">02ff9152-17db-495c-a58a-69ba7dcb0710</CorrelationSection>
+        <CorrelationSection Primary="false" PrimaryCodeset="https://example.org/codesets/primary-indicator">9904ce23-62de-466b-b728-a669f9762549</CorrelationSection>
+      </CorrelationSectionList>
+    </SectionCorrelation>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="SectionCorrelation - Example 2">
     <SectionCorrelation RefId="6472B2610947583A463DBB345291B001">
       <CorrelationName>ComputerizedMilling</CorrelationName>
       <CorrelationType>

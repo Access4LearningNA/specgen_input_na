@@ -123,7 +123,62 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="AssessmentRegistration - Example 1">
+    <AssessmentRegistration RefId="4671c954-e5b1-4828-bac2-d52ecd78cc2b" StudentPersonalRefId="a91b71b1-7b13-465f-b6eb-1a30ae5c35ad" AssessmentAdministrationRefId="06ee24ba-9393-41b2-884d-ef2590d2b6b4">
+      <CreationDateTime>2026-04-14T08:15:00-05:00</CreationDateTime>
+      <StudentSpecialConditions>
+        <StudentSpecialCondition Code="IEP">Student receives extended time and small-group testing accommodation under an individualized education program.</StudentSpecialCondition>
+        <StudentSpecialCondition Code="504Plan">Student may use preferential seating during assessment administration under a Section 504 plan.</StudentSpecialCondition>
+      </StudentSpecialConditions>
+      <StudentGradeLevel>
+        <Code Codeset="https://ceds.ed.gov/element/000100">05</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">Grade5</OtherCode>
+          <OtherCode Codeset="Text">Fifth Grade</OtherCode>
+        </OtherCodeList>
+      </StudentGradeLevel>
+      <AssessmentGradeLevel>
+        <Code Codeset="https://ceds.ed.gov/element/000100">05</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">5</OtherCode>
+          <OtherCode Codeset="Text">Grade Five Assessment Level</OtherCode>
+        </OtherCodeList>
+      </AssessmentGradeLevel>
+      <AssessmentStudentSnapshot>
+        <RaceList>
+          <Race>
+            <Code Codeset="https://ceds.ed.gov/element/001943">Asian</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">ASN</OtherCode>
+              <OtherCode Codeset="Text">Asian</OtherCode>
+            </OtherCodeList>
+            <Proportion>1.00</Proportion>
+          </Race>
+          <Race>
+            <Code Codeset="https://ceds.ed.gov/element/001943">White</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="Local">WHT</OtherCode>
+              <OtherCode Codeset="Text">White</OtherCode>
+            </OtherCodeList>
+            <Proportion>0.00</Proportion>
+          </Race>
+        </RaceList>
+        <HispanicLatino Codeset="https://nces.ed.gov/ipeds">NotHispanicOrLatino</HispanicLatino>
+        <Gender Codeset="https://nces.ed.gov/ipeds">Female</Gender>
+        <BirthDate>2015-09-22</BirthDate>
+        <Title1 Codeset="https://www.ed.gov/title-i">Eligible</Title1>
+        <ELL Codeset="https://nces.ed.gov">NotELL</ELL>
+      </AssessmentStudentSnapshot>
+      <StudentParticipation>
+        <Indicator Codeset="https://ceds.ed.gov/element/000025">Participated</Indicator>
+      </StudentParticipation>
+      <LEAInfoRefId>f04548ce-e213-4d2f-b8f0-3063d7c2e0b8</LEAInfoRefId>
+      <SchoolInfoRefId>961a097e-7a8a-4b0a-8760-861e0289a508</SchoolInfoRefId>
+      <StaffPersonalRefId>29505e52-4102-4098-8523-c2edce52c9a7</StaffPersonalRefId>
+      <SectionInfoRefId>f63e4c05-7c15-4016-ae1c-6a652180faf0</SectionInfoRefId>
+    </AssessmentRegistration>
+  </xhtml:Example>
+  <xhtml:Example name="AssessmentRegistration - Example 2" xmlns="">
     <AssessmentRegistration RefId="84243B2716EA4A68889B57A07E3707C9" StudentPersonalRefId="0D015F74DAB645FD92EFA8F43F2D79C3" AssessmentAdministrationRefId="6B08DF6E158941D9B8206D16E1FA6219">
       <CreationDateTime>2006-03-05T09:30:00-05:00</CreationDateTime>
       <StudentSpecialConditions>

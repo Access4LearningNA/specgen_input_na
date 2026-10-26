@@ -4,14 +4,19 @@
   <Item>
     <Element>StudentParticipation</Element>
     <Description>
-      <p>This object contains information pertaining to student eligibility for and participation in an individualized special program such as special education, ESL, Section 504, etc.</p>
       <p>
-        Multiple instances of this object may be transmitted for a particular student because the student may participate in multiple programs
-        and because the details of a student's participation in a given program may change over time.  A separate instance of this object must be
-        generated for each program in which the student participates, and the <code>ProgramType</code> element is used to identify the particular
-        program.  In addition, each time the student's participation profile changes for a particular program, a new instance of this object must
-        be generated with the appropriate value in the <code>ProgramType</code> element, the effective date of the new profile in
-        <code>StudentParticipationAsOfDate</code>, and a new <code>RefId</code>.
+        The <code>StudentParticipation</code> object represents a student's participation in a specific program, service, or initiative over a defined
+        period of time. Each instance links a single student to a single program and may include identifiers, participation status, entry and exit dates,
+        and other program-specific characteristics required for exchange, reporting, and auditing.
+      </p>
+      <p>
+        Multiple <code>StudentParticipation</code> instances may exist for the same student in order to represent participation in multiple programs,
+        concurrent enrollments, or successive periods of participation in the same program. Implementations may use <code>StudentParticipation</code>
+        as the primary representation of program membership or in conjunction with program-related elements in <code>StudentPersonal</code>, provided
+        that the authoritative source and synchronization rules for each program are clearly defined.
+      </p>
+      <p>
+        See the <code>StudentPersonal</code> description for details on when to use which type of object for program membership.
       </p>
     </Description>
   </Item>
@@ -457,6 +462,21 @@
     <Type ref="CommonTypes" name="StudentParticipationTitleIIIImmigrantParticipationStatusType"/>
   </Item>
   <Item>
+    <Element>TitleIIILIEPInterventionStrategy</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="StudentParticipationTitleIIILIEPInterventionStrategyType"/>
+  </Item>
+  <Item>
+    <Element>TribalAffiliation</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="StudentParticipationTribalAffiliationType"/>
+  </Item>  
+  <Item>
+    <Element>TribalCitizenMember</Element>
+    <Characteristics>O</Characteristics>
+    <Type ref="CommonTypes" name="StudentParticipationTribalCitizenMemberType"/>
+  </Item>
+  <Item>
     <Element>NeglectedOrDelinquentAchievementIndicator</Element>
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="StudentParticipationNeglectedOrDelinquentAchievementIndicatorType"/>
@@ -477,6 +497,186 @@
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="" name="StudentParticipation - Example 1">
+    <StudentParticipation RefId="f5f1dd78-9c0a-42c7-bab2-40e11a67d67b" StudentPersonalRefId="a7b65637-8a1e-414e-862e-7bf5e0988dae">
+      <StudentParticipationAsOfDate>2026-06-12</StudentParticipationAsOfDate>
+      <ProgramType>
+        <Code Codeset="urn:example:codes:program-type">SpecialEducation</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">SPED-IDEA</OtherCode>
+          <OtherCode Codeset="Text">Individualized Education Program services</OtherCode>
+        </OtherCodeList>
+      </ProgramType>
+      <ProgramIdentifier>IDEA-2022-4471</ProgramIdentifier>
+      <ProgramName>Individualized Education Program Support Services</ProgramName>
+      <ProgramFundingSources>
+        <ProgramFundingSource>
+          <Code Codeset="urn:example:codes:funding-source">IDEA-PartB</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">FED-IDEA-B</OtherCode>
+            <OtherCode Codeset="Text">Federal IDEA Part B allocation</OtherCode>
+          </OtherCodeList>
+        </ProgramFundingSource>
+        <ProgramFundingSource>
+          <Code Codeset="urn:example:codes:funding-source">LocalEducationAgency</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">LEA-SPED-LOCAL</OtherCode>
+            <OtherCode Codeset="Text">District special education funding</OtherCode>
+          </OtherCodeList>
+        </ProgramFundingSource>
+      </ProgramFundingSources>
+      <ManagingPublicAgency SIF_RefObject="LEAInfo">52305e1c-90eb-45f3-bf53-9e351fd7d130</ManagingPublicAgency>
+      <ManagingSchool SIF_RefObject="SchoolInfo">a0dc85c7-c9fb-4aa1-8bc1-78fdada5ad75</ManagingSchool>
+      <PartCTransitionMeetingNotHeldReasons>
+        <PartCTransitionMeetingNotHeldReason>
+          <Code Codeset="urn:example:codes:partc-reason">FamilyUnavailable</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">PC-NH-02</OtherCode>
+            <OtherCode Codeset="Text">Family was unavailable for the scheduled meeting</OtherCode>
+          </OtherCodeList>
+        </PartCTransitionMeetingNotHeldReason>
+        <PartCTransitionMeetingNotHeldReason>
+          <Code Codeset="urn:example:codes:partc-reason">Rescheduled</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">PC-NH-05</OtherCode>
+            <OtherCode Codeset="Text">Meeting was rescheduled within the transition timeline</OtherCode>
+          </OtherCodeList>
+        </PartCTransitionMeetingNotHeldReason>
+      </PartCTransitionMeetingNotHeldReasons>
+      <PartCTransitionMeetingDate>2016-02-18</PartCTransitionMeetingDate>
+      <PartCTransitionMeetingOutcomes>
+        <PartCTransitionMeetingOutcome>
+          <Code Codeset="urn:example:codes:partc-outcome">EligibleForPartB</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">PC-OUT-01</OtherCode>
+            <OtherCode Codeset="Text">Student was determined eligible for Part B services</OtherCode>
+          </OtherCodeList>
+        </PartCTransitionMeetingOutcome>
+        <PartCTransitionMeetingOutcome>
+          <Code Codeset="urn:example:codes:partc-outcome">IEPDeveloped</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">PC-OUT-04</OtherCode>
+            <OtherCode Codeset="Text">Initial IEP meeting was scheduled</OtherCode>
+          </OtherCodeList>
+        </PartCTransitionMeetingOutcome>
+      </PartCTransitionMeetingOutcomes>
+      <ReferralDate>2022-09-14</ReferralDate>
+      <ReferralSource>
+        <Code Codeset="urn:example:codes:referral-source">ParentReferral</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">REF-PARENT</OtherCode>
+          <OtherCode Codeset="Text">Parent requested a comprehensive evaluation</OtherCode>
+        </OtherCodeList>
+      </ReferralSource>
+      <ProgramStatus>
+        <Code Codeset="urn:example:codes:program-status">Exited</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">STATUS-EXIT</OtherCode>
+          <OtherCode Codeset="Text">Exited upon completion of the 2025-2026 school year</OtherCode>
+        </OtherCodeList>
+      </ProgramStatus>
+      <GiftedEligibilityCriteria>NotApplicable</GiftedEligibilityCriteria>
+      <EvaluationParentalConsentDate>2022-10-03</EvaluationParentalConsentDate>
+      <EvaluationDate>2022-12-12</EvaluationDate>
+      <EvaluationExtensionDate>2022-12-19</EvaluationExtensionDate>
+      <ExtensionComments>Parent and evaluation team agreed to a one-week extension to complete classroom observations after a weather closure.</ExtensionComments>
+      <ReevaluationDate>2025-12-08</ReevaluationDate>
+      <ExceptionalityCategories>
+        <ExceptionalityCategory>
+          <Code Codeset="urn:example:codes:exceptionality">SLD</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">LD</OtherCode>
+            <OtherCode Codeset="Text">Specific learning disability in reading</OtherCode>
+          </OtherCodeList>
+          <ExceptionalityPriority>Primary</ExceptionalityPriority>
+        </ExceptionalityCategory>
+        <ExceptionalityCategory>
+          <Code Codeset="urn:example:codes:exceptionality">SLI</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">SP</OtherCode>
+            <OtherCode Codeset="Text">Speech or language impairment</OtherCode>
+          </OtherCodeList>
+          <ExceptionalityPriority>Secondary</ExceptionalityPriority>
+        </ExceptionalityCategory>
+      </ExceptionalityCategories>
+      <ProgramEligibilityDate>2022-12-15</ProgramEligibilityDate>
+      <ProgramPlanType>
+        <Code Codeset="urn:example:codes:program-plan">Yes</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">IEP</OtherCode>
+          <OtherCode Codeset="Text">Individualized Education Program</OtherCode>
+        </OtherCodeList>
+      </ProgramPlanType>
+      <ProgramPlanDate>2025-12-16</ProgramPlanDate>
+      <ProgramPlanEffectiveDate>2026-01-05</ProgramPlanEffectiveDate>
+      <NOREPDate>2025-12-17</NOREPDate>
+      <PlacementParentalConsentDate>2025-12-17</PlacementParentalConsentDate>
+      <ProgramPlacementDate>2023-01-09</ProgramPlacementDate>
+      <ProgramPlacementReason>Evaluation data established a need for explicit reading intervention, speech-language support, and classroom accommodations.</ProgramPlacementReason>
+      <LeastRestrictiveEnvironment>
+        <Code Codeset="urn:example:codes:lre">RegularClass80PercentOrMore</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">LRE-80</OtherCode>
+          <OtherCode Codeset="Text">Inside regular class 80 percent or more of the day</OtherCode>
+        </OtherCodeList>
+      </LeastRestrictiveEnvironment>
+      <ExtendedSchoolYear>true</ExtendedSchoolYear>
+      <ExtendedDay>false</ExtendedDay>
+      <ProgramAvailability>
+        <Code Codeset="urn:example:codes:availability">Available</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">AVAIL-SCHOOL</OtherCode>
+          <OtherCode Codeset="Text">Services available at the enrolled school</OtherCode>
+        </OtherCodeList>
+      </ProgramAvailability>
+      <PrivateNotPlacedByPublic>false</PrivateNotPlacedByPublic>
+      <ProgramReviewDate>2026-12-15</ProgramReviewDate>
+      <FBADate>2025-11-20</FBADate>
+      <BIPDate>2025-12-16</BIPDate>
+      <ProgramExitDate>2026-06-12</ProgramExitDate>
+      <ProgramExitReason>
+        <Code Codeset="urn:example:codes:program-exit">Transferred</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">EXIT-TRANSFER</OtherCode>
+          <OtherCode Codeset="Text">Transferred to another public school district</OtherCode>
+        </OtherCodeList>
+      </ProgramExitReason>
+      <ProjectedExitDate>2026-06-12</ProjectedExitDate>
+      <ProjectedExitReason Codeset="Local">TransferredToAnotherDistrict</ProjectedExitReason>
+      <PlannedAssessmentParticipation Codeset="Local">GeneralAssessmentWithAccommodations</PlannedAssessmentParticipation>
+      <TransitionPlanning Codeset="Local">PostsecondaryEducationAndEmployment</TransitionPlanning>
+      <StudentSpecialEducationFTE>0.20</StudentSpecialEducationFTE>
+      <EntryPerson>Marisol Varela</EntryPerson>
+      <ParticipationContact>Devon R. Okafor, Special Education Case Manager</ParticipationContact>
+      <AdditionalProgramAvailabilityList>
+        <ProgramAvailability>
+          <Code Codeset="urn:example:codes:availability">SummerAvailable</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">AVAIL-ESY</OtherCode>
+            <OtherCode Codeset="Text">Extended school year reading services available</OtherCode>
+          </OtherCodeList>
+        </ProgramAvailability>
+        <ProgramAvailability>
+          <Code Codeset="urn:example:codes:availability">TransportationAvailable</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="Local">AVAIL-TRANS</OtherCode>
+            <OtherCode Codeset="Text">Specialized transportation available when required by the IEP</OtherCode>
+          </OtherCodeList>
+        </ProgramAvailability>
+      </AdditionalProgramAvailabilityList>
+      <CaseManager>Devon R. Okafor</CaseManager>
+      <FreeAndReducedStatus>ReducedPrice</FreeAndReducedStatus>
+      <CertifiedLunchProgram Codeset="urn:example:codes:nslp-certification">No</CertifiedLunchProgram>
+      <PerkinsLEPStatus Codeset="urn:example:codes:perkins-lep">NotLimitedEnglishProficient</PerkinsLEPStatus>
+      <TitleIIIAccountabilityProgressStatus Codeset="urn:example:codes:title-iii-progress">NotApplicable</TitleIIIAccountabilityProgressStatus>
+      <TitleIIIImmigrantParticipationStatus Codeset="urn:example:codes:title-iii-immigrant">NotImmigrant</TitleIIIImmigrantParticipationStatus>
+      <TitleIIILIEPInterventionStrategy Codeset="https://ceds.ed.gov/element/000447">ContentBasedESL</TitleIIILIEPInterventionStrategy>
+      <TribalAffiliation Codeset="https://ceds.ed.gov/element/001657">AbsenteeShawneeTribeofIndiansofOklahoma</TribalAffiliation>
+      <TribalCitizenMember Codeset="https://oklahoma.gov/content/dam/ok/en/osde/documents/services/student-information/Code-Table-SIF.pdf">7001</TribalCitizenMember>
+      <NeglectedOrDelinquentAchievementIndicator Codeset="urn:example:codes:neglected-delinquent-achievement">NotApplicable</NeglectedOrDelinquentAchievementIndicator>
+      <NeglectedOrDelinquentAcademicOutcomeIndicator Codeset="urn:example:codes:neglected-delinquent-outcome">NotApplicable</NeglectedOrDelinquentAcademicOutcomeIndicator>
+    </StudentParticipation>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="StudentParticipation - Example 2">
     <StudentParticipation RefId="D3E34B359D75101A8C3D00AA001A1652" StudentPersonalRefId="A2E34F59A742C1A4B3D11CC002B163A2">
       <StudentParticipationAsOfDate>2006-07-13</StudentParticipationAsOfDate>
       <ProgramType>
@@ -561,7 +761,7 @@
       <ParticipationContact>John Mason</ParticipationContact>
     </StudentParticipation>
   </xhtml:Example>
-  <xhtml:Example xmlns="" name="StudentParticipation - Example 2">
+  <xhtml:Example xmlns="" name="StudentParticipation - Example 3">
     <StudentParticipation RefId="D3E34B359D75101A8C3D00AA001A1652" StudentPersonalRefId="A2E34F59A742C1A4B3D11CC002B163A2">
       <StudentParticipationAsOfDate>2006-07-13</StudentParticipationAsOfDate>
       <ProgramType>

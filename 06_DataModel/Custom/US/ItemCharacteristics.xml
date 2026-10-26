@@ -27,8 +27,8 @@
     <Characteristics>O</Characteristics>
     <Description>Number of correct answers in sample.</Description>
     <Type name="xs:decimal"/>
-    <cedsId>000608</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/000608</cedsURL>
+    <cedsId>000391</cedsId>
+    <cedsURL>https://ceds.ed.gov/element/000391</cedsURL>
   </Item>
   <Item>
     <Element>SampleSize</Element>
@@ -76,7 +76,40 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="ItemCharacteristics - Example 1">
+    <ItemCharacteristics RefId="23f7e317-adf2-40e6-ac0f-b7186a2c1811" AssessmentItemRefId="1f4f57bc-c93e-43b9-82b8-c0dc04094989" AssessmentFormRefId="e0062c41-ff0e-4239-a78b-82de20141022">
+      <PercentCorrect>68.1</PercentCorrect>
+      <SampleSize>420</SampleSize>
+      <SampleDescription>Redwood Harbor Unified School District Grade 7 mathematics pilot sample</SampleDescription>
+      <Measurements>
+        <Measurement MeasurementCode="DifficultyIndex" MeasurementCodeCodeset="https://example.org/codesets/item-statistics">
+          <MeasurementDescription>Classical item difficulty calculated from first-attempt scored responses.</MeasurementDescription>
+          <ScaleValue>0.681</ScaleValue>
+          <Min>0</Min>
+          <Max>1</Max>
+          <Optimal>0.70</Optimal>
+        </Measurement>
+      </Measurements>
+      <Descriptive>
+        <PValue>0.681</PValue>
+        <SampleSize>420</SampleSize>
+        <PointBiserial>0.42</PointBiserial>
+        <Biserial>0.51</Biserial>
+        <DiscriminationIndex>0.46</DiscriminationIndex>
+      </Descriptive>
+      <DifferentialItemAnalysis>
+        <CMH>0.08</CMH>
+        <MH>0.94</MH>
+      </DifferentialItemAnalysis>
+      <ResponseChoicePattern>
+        <Choice>
+          <ChoiceLabel>C</ChoiceLabel>
+          <Responses>286</Responses>
+        </Choice>
+      </ResponseChoicePattern>
+    </ItemCharacteristics>
+  </xhtml:Example>
+  <xhtml:Example name="ItemCharacteristics - Example 2" xmlns="">
     <ItemCharacteristics RefId="64B0CC6CFB314A328E520A102229CBC8" AssessmentItemRefId="A328E520A102229CBC864B0CC6CFB314" AssessmentFormRefId="229CBC864A328E520A102B0CC6CFB314">
       <PercentCorrect>66.6</PercentCorrect>
       <SampleSize>1777</SampleSize>

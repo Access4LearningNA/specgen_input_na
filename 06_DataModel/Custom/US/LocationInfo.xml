@@ -161,7 +161,97 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="LocationInfo - Example 1">
+    <LocationInfo RefId="35e22c25-3e9c-43d1-865a-d9f4b1d717d7" LocationType="School" LocationTypeCodeset="https://example.org/codesets/location-type">
+      <SiteCategory>ElementarySchool</SiteCategory>
+      <Name>Juniper Ridge Elementary School</Name>
+      <Description>A public elementary school serving grades kindergarten through five in the Harbor Vale community.</Description>
+      <LocalId>JRE-041</LocalId>
+      <IdentificationInfoList>
+        <IdentificationInfo Code="School" CodeCodeset="https://example.org/codesets/identification-system">JRE-041</IdentificationInfo>
+        <IdentificationInfo Code="NCES" CodeCodeset="https://example.org/codesets/identification-system">482345678901</IdentificationInfo>
+      </IdentificationInfoList>
+      <StateProvinceId>TX-148-041</StateProvinceId>
+      <NCESId>482345678901</NCESId>
+      <LEAInfoRefId>434782d2-901a-4392-98c4-ea47fec19450</LEAInfoRefId>
+      <OtherLEAs>
+        <LEAInfoRefId>9a2bfdd1-f095-4bcd-b6e4-e1ea42624e20</LEAInfoRefId>
+        <LEAInfoRefId>3e76434e-abce-4d1a-a71c-875450594d46</LEAInfoRefId>
+      </OtherLEAs>
+      <ParentLocationInfo SIF_RefObject="LocationInfo">8f0437c0-7fa1-46d0-9f3b-d2f03181e020</ParentLocationInfo>
+      <SchoolInfoRefId>6b7ec0b9-d78f-4b19-80c0-2b8a4c8ef4fa</SchoolInfoRefId>
+      <AddressList>
+        <Address Type="Physical" TypeCodeset="https://example.org/codesets/address-type">
+          <Street>
+            <Line1>1847 Juniper Ridge Drive</Line1>
+            <Line2>Administration Building</Line2>
+            <Line3>North Entrance</Line3>
+            <Complex>Juniper Ridge Education Campus</Complex>
+            <StreetNumber>1847</StreetNumber>
+            <StreetPrefix>N</StreetPrefix>
+            <StreetName>Juniper Ridge</StreetName>
+            <StreetType>Drive</StreetType>
+            <StreetSuffix>NE</StreetSuffix>
+            <ApartmentType>Suite</ApartmentType>
+            <ApartmentNumber>100</ApartmentNumber>
+            <ApartmentNumberSuffix>A</ApartmentNumberSuffix>
+          </Street>
+          <City>Harbor Vale</City>
+          <County>Travis</County>
+          <StateProvince Codeset="https://example.org/codesets/us-states">TX</StateProvince>
+          <StateANSICode Codeset="https://example.org/codesets/ansi-state">48</StateANSICode>
+          <Country Codeset="https://example.org/codesets/iso-3166-1">US</Country>
+          <PostalCode>78724</PostalCode>
+          <GridLocation>
+            <Latitude>30.307812</Latitude>
+            <Longitude>-97.653481</Longitude>
+          </GridLocation>
+          <AddressRefId>5b377593-5c63-4a53-9848-2e2a9df8e590</AddressRefId>
+        </Address>
+        <Address Type="Mailing" TypeCodeset="https://example.org/codesets/address-type">
+          <Street>
+            <Line1>PO Box 4187</Line1>
+            <Line2>Juniper Ridge Elementary School</Line2>
+            <Line3>Attn: Main Office</Line3>
+            <Complex>Harbor Vale Independent School District</Complex>
+            <StreetNumber>4187</StreetNumber>
+            <StreetPrefix>N</StreetPrefix>
+            <StreetName>Harbor Vale</StreetName>
+            <StreetType>Post Office</StreetType>
+            <StreetSuffix>NE</StreetSuffix>
+            <ApartmentType>Box</ApartmentType>
+            <ApartmentNumberPrefix>PO</ApartmentNumberPrefix>
+            <ApartmentNumber>4187</ApartmentNumber>
+            <ApartmentNumberSuffix>JRE</ApartmentNumberSuffix>
+          </Street>
+          <City>Harbor Vale</City>
+          <County>Travis</County>
+          <StateProvince Codeset="https://example.org/codesets/us-states">TX</StateProvince>
+          <StateANSICode Codeset="https://example.org/codesets/ansi-state">48</StateANSICode>
+          <Country Codeset="https://example.org/codesets/iso-3166-1">US</Country>
+          <PostalCode>78767</PostalCode>
+          <GridLocation>
+            <Latitude>30.267153</Latitude>
+            <Longitude>-97.743061</Longitude>
+          </GridLocation>
+          <AddressRefId>990b9f31-30d8-442a-9015-cedbddb9a2f9</AddressRefId>
+        </Address>
+      </AddressList>
+      <PhoneNumberList>
+        <PhoneNumber Type="Work" TypeCodeset="https://example.org/codesets/phone-type">
+          <Number>512-555-0148</Number>
+          <Extension>1000</Extension>
+          <ListedStatus>Listed</ListedStatus>
+        </PhoneNumber>
+        <PhoneNumber Type="Fax" TypeCodeset="https://example.org/codesets/phone-type">
+          <Number>512-555-0149</Number>
+          <Extension>1001</Extension>
+          <ListedStatus>Unlisted</ListedStatus>
+        </PhoneNumber>
+      </PhoneNumberList>
+    </LocationInfo>
+  </xhtml:Example>
+  <xhtml:Example name="LocationInfo - Example 2" xmlns="">
     <LocationInfo RefId="D3E34B359D75101A8C3D00AA001A1652" LocationType="School">
       <SiteCategory>Other</SiteCategory>
       <Name>Lincoln High School</Name>

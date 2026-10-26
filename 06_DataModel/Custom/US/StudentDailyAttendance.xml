@@ -110,7 +110,17 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="" name="StudentDailyAttendance">
+  <xhtml:Example xmlns="" name="StudentDailyAttendance - Example 1">
+    <StudentDailyAttendance RefId="bf855641-ffd6-4dd0-8852-0ee459b6374d" StudentPersonalRefId="df7e3620-c666-4cb6-ba9f-83ca9f74865c" SchoolInfoRefId="832cecdc-68ed-4932-b3f6-9a9654746cac" Date="2026-03-12" SchoolYear="2026">
+      <AttendanceCodeInfoRefId>f3b1bca1-4d50-45d7-9f37-06cb9c3b3a47</AttendanceCodeInfoRefId>
+      <TimeIn>08:17:00</TimeIn>
+      <TimeOut>15:05:00</TimeOut>
+      <AttendanceNote>Marisol arrived after a morning medical appointment and attended the remainder of the instructional day.</AttendanceNote>
+      <InstructionalDeliveryMode Codeset="https://ceds.ed.gov/element/000000">InPerson</InstructionalDeliveryMode>
+      <ExpectationsMet>false</ExpectationsMet>
+    </StudentDailyAttendance>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="StudentDailyAttendance - Example 2">
     <StudentDailyAttendance RefId="359D75101AD0A9D7A8C3DAD0A85103A2" StudentPersonalRefId="D3E34B359D75101A8C3D00AA001A1652" SchoolInfoRefId="CA285746359D75101A8C36432A901A16" Date="2002-11-01" SchoolYear="2003">
       <AttendanceCodeInfoRefId>84726485960937465A53B2781BB260AA</AttendanceCodeInfoRefId>
       <TimeIn>13:30:00</TimeIn>

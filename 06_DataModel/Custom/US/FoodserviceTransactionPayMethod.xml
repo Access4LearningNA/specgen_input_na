@@ -41,7 +41,26 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="FoodserviceTransactionPayMethod - Example 1">
+    <FoodserviceTransactionPayMethod RefId="1ca59f8b-7da8-4e6e-8be5-5fd6693d4034">
+      <FoodserviceTransactionRefId>ab57e263-6242-4f8e-8909-195f6c20c201</FoodserviceTransactionRefId>
+      <TransactionPayMethods>
+        <TransactionPayMethod Type="Cash" TypeCodeset="https://example.org/codesets/foodservice-payment-methods">
+          <Amounts>
+            <Amount Type="Cash" TypeCodeset="https://example.org/codesets/foodservice-amount-types" Credits="0" Currency="USD" CurrencyCodeset="urn:iso:std:iso:4217">3.25</Amount>
+            <Amount Type="LunchCredit" TypeCodeset="https://example.org/codesets/foodservice-amount-types" Credits="1" Currency="USD" CurrencyCodeset="urn:iso:std:iso:4217">0.00</Amount>
+          </Amounts>
+        </TransactionPayMethod>
+        <TransactionPayMethod Type="StudentMealAccount" TypeCodeset="https://example.org/codesets/foodservice-payment-methods">
+          <Amounts>
+            <Amount Type="Value" TypeCodeset="https://example.org/codesets/foodservice-amount-types" Credits="0" Currency="USD" CurrencyCodeset="urn:iso:std:iso:4217">-3.25</Amount>
+            <Amount Type="LunchCredit" TypeCodeset="https://example.org/codesets/foodservice-amount-types" Credits="1" Currency="USD" CurrencyCodeset="urn:iso:std:iso:4217">-1.00</Amount>
+          </Amounts>
+        </TransactionPayMethod>
+      </TransactionPayMethods>
+    </FoodserviceTransactionPayMethod>
+  </xhtml:Example>
+  <xhtml:Example name="FoodserviceTransactionPayMethod - Example 2" xmlns="">
     <FoodserviceTransactionPayMethod RefId="FF8340A51D844EBDB156DE662BF373CE">
       <FoodserviceTransactionRefId>A1D2C4527A484DB08DAD6C382F8F082F</FoodserviceTransactionRefId>
       <TransactionPayMethods>

@@ -127,7 +127,24 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="StudentPeriodAttendance - Example 1">
+    <StudentPeriodAttendance RefId="dd2a5747-30f8-44ab-a18b-caa71e67fd42" StudentPersonalRefId="b4b6015e-5e4b-449e-9614-63adcc57cb79" SectionInfoRefId="ac51a82b-b4c8-41cd-9953-3c52abbfa43b" SchoolInfoRefId="7994e74a-4f0d-418f-8059-59b760cc30f7" Date="2026-08-19">
+      <TimetablePeriod>3</TimetablePeriod>
+      <TimeIn>10:03:00</TimeIn>
+      <TimeOut>10:52:00</TimeOut>
+      <AttendanceCode AttendanceCodeInfoRefId="66037929-5055-44ce-a88e-7251b85c7123">T</AttendanceCode>
+      <AuditInfo>
+        <CreationUser Type="Teacher" TypeCodeset="https://example.org/codesets/staff-role">
+          <UserId>staff.althea.morales</UserId>
+        </CreationUser>
+        <CreationDateTime>2026-08-19T10:55:14-05:00</CreationDateTime>
+      </AuditInfo>
+      <AttendanceComment>Nayeli arrived three minutes after the bell because the campus shuttle was delayed.</AttendanceComment>
+      <InstructionalDeliveryMode Codeset="https://example.org/codesets/instructional-delivery-mode">InPerson</InstructionalDeliveryMode>
+      <ExpectationsMet>true</ExpectationsMet>
+    </StudentPeriodAttendance>
+  </xhtml:Example>
+  <xhtml:Example name="StudentPeriodAttendance - Example 2" xmlns="">
     <StudentPeriodAttendance RefId="98157AA013BA8C3D00AA012B359D7512" StudentPersonalRefId="A75A00101A8C301D02E3A05B359D0A00" SchoolInfoRefId="11737EA4301CADCA75C87214A7C46BDB" Date="2001-03-05" SectionInfoRefId="D02E3A05B359DA75A00101A8C3010A00">
       <TimetablePeriod>P4</TimetablePeriod>
       <AttendanceCode AttendanceCodeInfoRefId="1A0000359D75101A8C3D00AA00A2E35B">042</AttendanceCode>

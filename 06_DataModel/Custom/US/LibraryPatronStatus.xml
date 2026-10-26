@@ -143,7 +143,85 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="LibraryPatronStatus - Example 1">
+    <LibraryPatronStatus RefId="00f9011e-6861-4571-b6d3-63133680a33b" LibraryType="Student" SIF_RefId="72017f5f-b6a1-4387-b271-ce643d7ec822" SIF_RefObject="StudentPersonal" SIF_RefObjectCodeset="https://example.edu/codesets/sif-ref-object">
+      <ElectronicIdList>
+        <ElectronicId Type="LibraryBarcode" TypeCodeset="https://example.edu/codesets/electronic-id">2938401756</ElectronicId>
+        <ElectronicId Type="DistrictStudentNumber" TypeCodeset="https://example.edu/codesets/electronic-id">MVSD-2026-04817</ElectronicId>
+      </ElectronicIdList>
+      <TransactionList>
+        <Transaction>
+          <ItemInfo Type="Book" TypeCodeset="https://example.edu/codesets/library-item-type">
+            <Title>The Cartographer's Lantern</Title>
+            <Author>Marisol Varela</Author>
+            <ElectronicId Type="ISBN13" TypeCodeset="https://www.isbn-international.org">9781643752184</ElectronicId>
+            <CallNumber>FIC VAR</CallNumber>
+            <Price Currency="USD" CurrencyCodeset="https://www.iso.org/iso-4217-currency-codes.html">18.99</Price>
+          </ItemInfo>
+          <CheckoutInfo>
+            <ReturnBy>2026-09-04T15:30:00-05:00</ReturnBy>
+          </CheckoutInfo>
+          <FineInfoList>
+            <FineInfo Type="Overdue" TypeCodeset="https://example.edu/codesets/library-fine-type">
+              <Assessed>2026-08-15T08:00:00-05:00</Assessed>
+              <Description>Overdue charge for a previously borrowed title.</Description>
+              <Amount Currency="USD" CurrencyCodeset="https://www.iso.org/iso-4217-currency-codes.html">0.50</Amount>
+              <Reference>FINE-2026-0815-04817-A</Reference>
+            </FineInfo>
+            <FineInfo Type="ReplacementProcessing" TypeCodeset="https://example.edu/codesets/library-fine-type">
+              <Assessed>2026-08-16T10:15:00-05:00</Assessed>
+              <Description>Processing charge for replacement-library-material review.</Description>
+              <Amount Currency="USD" CurrencyCodeset="https://www.iso.org/iso-4217-currency-codes.html">0.75</Amount>
+              <Reference>FINE-2026-0816-04817-B</Reference>
+            </FineInfo>
+          </FineInfoList>
+          <HoldInfoList>
+            <HoldInfo Type="ReadyForPickup" TypeCodeset="https://example.edu/codesets/library-hold-type">
+              <DatePlaced>2026-08-03</DatePlaced>
+              <DateNeeded>2026-08-28</DateNeeded>
+              <MadeAvailable>2026-08-19</MadeAvailable>
+              <Expires>2026-08-26</Expires>
+            </HoldInfo>
+            <HoldInfo Type="Pending" TypeCodeset="https://example.edu/codesets/library-hold-type">
+              <DatePlaced>2026-08-12</DatePlaced>
+              <DateNeeded>2026-09-10</DateNeeded>
+              <MadeAvailable>2026-08-20</MadeAvailable>
+              <Expires>2026-08-27</Expires>
+            </HoldInfo>
+          </HoldInfoList>
+        </Transaction>
+        <Transaction>
+          <ItemInfo Type="Audiobook" TypeCodeset="https://example.edu/codesets/library-item-type">
+            <Title>River Stones and Other Stories</Title>
+            <Author>Elijah Okafor</Author>
+            <ElectronicId Type="LibraryCatalogNumber" TypeCodeset="https://example.edu/codesets/electronic-id">AUDIO-45892</ElectronicId>
+            <CallNumber>CD FIC OKA</CallNumber>
+            <Price Currency="USD" CurrencyCodeset="https://www.iso.org/iso-4217-currency-codes.html">24.95</Price>
+          </ItemInfo>
+          <CheckoutInfo>
+            <ReturnBy>2026-09-11T15:30:00-05:00</ReturnBy>
+          </CheckoutInfo>
+        </Transaction>
+      </TransactionList>
+      <MessageList>
+        <Message Priority="High" PriorityCodeset="https://example.edu/codesets/message-priority">
+          <Sent>2026-08-20T09:00:00-05:00</Sent>
+          <Text>A requested title is ready for pickup at the Mariner Valley Elementary Library circulation desk.</Text>
+        </Message>
+        <Message Priority="Normal" PriorityCodeset="https://example.edu/codesets/message-priority">
+          <Sent>2026-08-20T09:05:00-05:00</Sent>
+          <Text>Your current library balance is $1.25. Please see the library staff if you have questions.</Text>
+        </Message>
+      </MessageList>
+      <NumberOfCheckouts>2</NumberOfCheckouts>
+      <NumberOfOverdues>1</NumberOfOverdues>
+      <NumberOfFines>2</NumberOfFines>
+      <FineAmount Currency="USD" CurrencyCodeset="https://www.iso.org/iso-4217-currency-codes.html">1.25</FineAmount>
+      <NumberOfRefunds>1</NumberOfRefunds>
+      <RefundAmount Currency="USD" CurrencyCodeset="https://www.iso.org/iso-4217-currency-codes.html">2.00</RefundAmount>
+    </LibraryPatronStatus>
+  </xhtml:Example>
+  <xhtml:Example name="LibraryPatronStatus - Example 2" xmlns="">
     <LibraryPatronStatus RefId="359D75101AD0A9D7A8C3DAD0A85103A2" LibraryType="S" SIF_RefId="52DBFBFC021311D68E8C00039303AE9C" SIF_RefObject="StudentPersonal">
       <ElectronicIdList>
         <ElectronicId Type="Barcode">P 7676</ElectronicId>

@@ -17,8 +17,6 @@
       <p>GUID assigned to each statement at each level within the document hierarchy</p>
     </Description>
     <Type ref="CommonTypes" name="RefIdType"/>
-    <cedsId>002616</cedsId>
-    <cedsURL>https://ceds.ed.gov/element/002616</cedsURL>
   </Item>
   <!--<Item>
     <Attribute>xml:lang</Attribute>
@@ -166,6 +164,107 @@
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
   <xhtml:Example xmlns="" name="LearningStandardItem - Example 1">
+    <LearningStandardItem RefId="4f620122-5ae0-4708-bd78-7d8d7591720c">
+      <RefURI>https://standards.cascadia.example.org/2025/science/grade-05/5-ESS1-2</RefURI>
+      <ShortName>5-ESS1-2</ShortName>
+      <ItemVersion>2025.1</ItemVersion>
+      <Description>Grade 5 Earth and Space Science standard addressing patterns in daily changes of shadows and celestial observations.</Description>
+      <StandardSettingBody>
+        <Country Codeset="ISO-3166-1">US</Country>
+        <StateProvince Codeset="ISO-3166-2">US-WA</StateProvince>
+        <NCESId>5307710</NCESId>
+        <SettingBodyName>Cascadia Office of Public Instruction</SettingBodyName>
+      </StandardSettingBody>
+      <StandardHierarchyLevel>
+        <Number>1</Number>
+        <Description>Grade-level performance expectation</Description>
+      </StandardHierarchyLevel>
+      <PredecessorItems>
+        <LearningStandardItemRefId>dbf02376-f000-49e7-81a6-b75ca2f22d15</LearningStandardItemRefId>
+        <LearningStandardItemRefId>9882b6e1-5798-4849-ad85-ecab47ca111e</LearningStandardItemRefId>
+      </PredecessorItems>
+      <StatementCodes>
+        <StatementCode>CAS-SCI-05-ESS1-02</StatementCode>
+        <StatementCode>NGSS-5-ESS1-2</StatementCode>
+      </StatementCodes>
+      <Statements>
+        <Statement>Represent data in graphical displays to reveal daily changes in length and direction of shadows, day and night, and the seasonal appearance of stars.</Statement>
+        <Statement>Use repeated observations to identify patterns in the apparent movement of the Sun and the resulting changes in shadows.</Statement>
+      </Statements>
+      <GradeLevels>
+        <GradeLevel>
+          <Code Codeset="CEDS-GradeLevel">05</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">5</OtherCode>
+            <OtherCode Codeset="Local">Grade 5</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+        <GradeLevel>
+          <Code Codeset="CEDS-GradeLevel">06</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">6</OtherCode>
+            <OtherCode Codeset="Local">Grade 6 extension</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+      </GradeLevels>
+      <SubjectArea>
+        <Code Codeset="SCED">03</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">Science</OtherCode>
+          <OtherCode Codeset="Local">Earth and Space Science</OtherCode>
+        </OtherCodeList>
+      </SubjectArea>
+      <StandardIdentifier>
+        <YearCreated>2025</YearCreated>
+        <SubjectArea>
+          <Code Codeset="SCED">03</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">Science</OtherCode>
+            <OtherCode Codeset="Local">Earth and Space Science</OtherCode>
+          </OtherCodeList>
+        </SubjectArea>
+        <StandardNumber>5-ESS1-2</StandardNumber>
+        <GradeLevels>
+          <GradeLevel>
+            <Code Codeset="CEDS-GradeLevel">05</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="StateProvince">5</OtherCode>
+              <OtherCode Codeset="Local">Grade 5</OtherCode>
+            </OtherCodeList>
+          </GradeLevel>
+          <GradeLevel>
+            <Code Codeset="CEDS-GradeLevel">06</Code>
+            <OtherCodeList>
+              <OtherCode Codeset="StateProvince">6</OtherCode>
+              <OtherCode Codeset="Local">Grade 6 extension</OtherCode>
+            </OtherCodeList>
+          </GradeLevel>
+        </GradeLevels>
+        <Benchmark>Use graphical evidence to explain observable patterns in the Earth-Sun system.</Benchmark>
+        <GradeLevel>
+          <Code Codeset="CEDS-GradeLevel">05</Code>
+          <OtherCodeList>
+            <OtherCode Codeset="StateProvince">5</OtherCode>
+            <OtherCode Codeset="Local">Grade 5</OtherCode>
+          </OtherCodeList>
+        </GradeLevel>
+        <IndicatorNumber>5-ESS1-2.a</IndicatorNumber>
+        <AlternateIdentificationCodes>
+          <AlternateIdentificationCode>CAS-SCI-05-ESS1-02</AlternateIdentificationCode>
+          <AlternateIdentificationCode>NGSS-5-ESS1-2</AlternateIdentificationCode>
+        </AlternateIdentificationCodes>
+        <Organization>Cascadia Office of Public Instruction</Organization>
+      </StandardIdentifier>
+      <LearningStandardDocumentRefId>0e5cf682-fc19-4a8e-bcdd-f3b0f2c1132f</LearningStandardDocumentRefId>
+      <RelatedLearningStandardItems>
+        <LearningStandardItemRefId RelationshipType="Prerequisite" Codeset="https://standards.cascadia.example.org/relationship-types">e7a4e87d-e764-4deb-a8c8-67840bd93a38</LearningStandardItemRefId>
+        <LearningStandardItemRefId RelationshipType="Extension" Codeset="https://standards.cascadia.example.org/relationship-types">7f988fc7-3332-4edc-ba21-b35aa1400d79</LearningStandardItemRefId>
+      </RelatedLearningStandardItems>
+      <Level4>Analyze observable Earth-Sun patterns.</Level4>
+      <Level5>Interpret shadow data gathered over multiple days.</Level5>
+    </LearningStandardItem>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="LearningStandardItem - Example 2">
     <LearningStandardItem RefId="A5D75F789175101B8C7E08EA123A8234" xml:lang="en">
       <StandardSettingBody>
         <Country>US</Country>
@@ -234,7 +333,7 @@
       </RelatedLearningStandardItems>
     </LearningStandardItem>
   </xhtml:Example>
-  <xhtml:Example xmlns="" name="LearningStandardItem - Example 2">
+  <xhtml:Example xmlns="" name="LearningStandardItem - Example 3">
     <LearningStandardItem RefId="A5D75F789175101B8C7E08EA123A8234" xml:lang="en">
       <StandardSettingBody>
         <Country>US</Country>

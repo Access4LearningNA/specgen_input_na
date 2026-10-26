@@ -81,7 +81,27 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="BusInfo - Example 1">
+    <BusInfo RefId="240afa83-14be-48d2-b1de-5de8a0f145f9">
+      <VehicleNumber>MCSD-218</VehicleNumber>
+      <SeatingCapacity>72</SeatingCapacity>
+      <Contractor>Blue Heron Student Transit</Contractor>
+      <EquipmentList>
+        <Equipment>
+          <BusEquipmentRefId>00ac723d-1231-4852-86ef-f2448290ddae</BusEquipmentRefId>
+          <Count>1</Count>
+        </Equipment>
+        <Equipment>
+          <BusEquipmentRefId>c1b97bcd-f2bb-4476-8715-54ee2f28c2c4</BusEquipmentRefId>
+          <Count>2</Count>
+        </Equipment>
+      </EquipmentList>
+      <ManufactureYear>2023</ManufactureYear>
+      <VehicleIdentificationNumber>1BAKGCPH0PF396218</VehicleIdentificationNumber>
+      <LicensePlateNumber>OR 842-MCS</LicensePlateNumber>
+    </BusInfo>
+  </xhtml:Example>
+  <xhtml:Example name="BusInfo - Example 2" xmlns="">
     <BusInfo RefId="D3E34B359D75101A8C3D00AA001A1652">
       <VehicleNumber>63</VehicleNumber>
       <SeatingCapacity>71</SeatingCapacity>

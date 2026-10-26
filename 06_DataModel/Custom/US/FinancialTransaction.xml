@@ -59,7 +59,19 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="FinancialTransaction - Example 1">
+    <FinancialTransaction RefId="8282b6e1-e6b6-4838-b88a-06d429337778">
+      <TransactionDate>2026-08-19</TransactionDate>
+      <TransactionTime>14:35:00</TransactionTime>
+      <Amounts>
+        <Amount FinancialAccountAccountingPeriodLocationInfoRefId="66653d89-7c17-4604-8bb2-2aaf89f5b683" Type="InstructionalMaterials" TypeCodeset="https://example.org/codesets/financial-amount-types" Currency="USD" CurrencyCodeset="https://www.iso.org/iso-4217-currency-codes.html">148.75</Amount>
+        <Amount FinancialAccountAccountingPeriodLocationInfoRefId="fc139cf7-d607-4b76-af10-88cb6603efde" Type="SalesTax" TypeCodeset="https://example.org/codesets/financial-amount-types" Currency="USD" CurrencyCodeset="https://www.iso.org/iso-4217-currency-codes.html">12.65</Amount>
+      </Amounts>
+      <Program Type="TitleI" TypeCodeset="https://example.org/codesets/funded-programs" />
+      <Description>Purchase of grade 5 mathematics problem-solving workbooks for Mariner Elementary School.</Description>
+    </FinancialTransaction>
+  </xhtml:Example>
+  <xhtml:Example name="FinancialTransaction - Example 2" xmlns="">
     <FinancialTransaction RefId="E72C08BD41894187BA07B00C1401BE3F">
       <TransactionDate>2003-01-01</TransactionDate>
       <TransactionTime>04:32:23-08:00</TransactionTime>

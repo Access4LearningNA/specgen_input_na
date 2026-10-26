@@ -59,4 +59,11 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SchoolFederalFundSchoolImprovementGrantInterventionTypeType"/>
   </Item>
+  <xhtml:Example xmlns="" name="SchoolFederalFund - Example 1">
+    <SchoolFederalFund RefId="736ce949-616d-4f7f-afb0-e8d793e8cc53" SchoolInfoRefId="e856bac3-7622-47de-b6b8-1c0010469101">
+      <ConsolidatedMEPFundsStatus Codeset="https://ceds.ed.gov/element/000542">No</ConsolidatedMEPFundsStatus>
+      <SchoolImprovementAllocation>185000.00</SchoolImprovementAllocation>
+      <SchoolImprovementGrantInterventionType Codeset="https://www.ed.gov/programs/sif/school-improvement-grant-intervention-types">Transformation</SchoolImprovementGrantInterventionType>
+    </SchoolFederalFund>
+  </xhtml:Example>
 </DataObject>

@@ -22,7 +22,7 @@
       <p>The Id (GUID) that identifies the school where the term is used.</p>
     </Description>
     <Type ref="CommonTypes" relationship="records term information for" count="*:1" name="IdRefType"/>
-  </Item>
+  </Item> 
   <Item>
     <Attribute>SchoolYear</Attribute>
     <Characteristics>M</Characteristics>
@@ -32,6 +32,14 @@
       </p>
     </Description>
     <Type ref="CommonTypes" name="SchoolYearType"/>
+  </Item>
+  <Item>
+    <Attribute>CalendarSummaryRefId</Attribute>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The Id (GUID) that identifies the calendar where the term is used.</p>
+    </Description>
+    <Type ref="CommonTypes" relationship="records term information for" count="*:1" name="IdRefType"/>
   </Item>
   <Item>
     <Element>StartDate</Element>
@@ -128,7 +136,27 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="" name="TermInfo">
+  <xhtml:Example xmlns="" name="TermInfo - Example 1">
+    <TermInfo RefId="4afb2727-9705-45de-8627-bf13780f09d7" SchoolInfoRefId="07fc35c1-df55-4533-935b-a2c4527cb82a" SchoolYear="2026">
+      <StartDate>2026-01-26</StartDate>
+      <EndDate>2026-06-12</EndDate>
+      <Description>Spring 2026 semester for Redwood Harbor Middle School.</Description>
+      <RelativeDuration>0.50</RelativeDuration>
+      <TermCode>SPR26</TermCode>
+      <Track>Standard Academic Track</Track>
+      <TermSpan>
+        <Code Codeset="https://example.edu/codesets/term-span">Semester</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="StateProvince">SP2026</OtherCode>
+          <OtherCode Codeset="Local">RHMS-SPRING-2026</OtherCode>
+        </OtherCodeList>
+      </TermSpan>
+      <MarkingTerm Codeset="https://example.edu/codesets/marking-term">Semester</MarkingTerm>
+      <SchedulingTerm Codeset="https://example.edu/codesets/scheduling-term">SpringSemester</SchedulingTerm>
+      <AttendanceTerm Codeset="https://example.edu/codesets/attendance-term">SpringSemester</AttendanceTerm>
+    </TermInfo>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="TermInfo - Example 2">
     <TermInfo RefId="7E59D75101A80A70016375DE097A0726" SchoolInfoRefId="A2E35B359D75101A8C3D00AA001A0000" SchoolYear="2004">
       <StartDate>2003-01-05</StartDate>
       <EndDate>2004-04-01</EndDate>

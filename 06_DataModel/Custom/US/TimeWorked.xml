@@ -73,7 +73,23 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="TimeWorked - Example 1">
+    <TimeWorked RefId="1bdb6b22-8481-4c99-94d4-7f2a4f2c2efa">
+      <EmployeePersonalRefId>41b2e0b9-5022-4ee0-994e-769063d93dcb</EmployeePersonalRefId>
+      <LocationInfoRefId>479ce10a-1ce5-4076-a433-1d4c0bcd39f5</LocationInfoRefId>
+      <JobFunction>
+        <Code Codeset="https://nces.ed.gov/surveys/sss/2017/pdf/2018337_d1.pdf">230</Code>
+        <OtherCodeList>
+          <OtherCode Codeset="Local">MRC-ELA-TEACHER</OtherCode>
+          <OtherCode Codeset="Text">Grade 5 English Language Arts Teacher</OtherCode>
+        </OtherCodeList>
+      </JobFunction>
+      <RegularHours>40.00</RegularHours>
+      <OvertimeHours>2.50</OvertimeHours>
+      <PayPeriod>2026-08-03 through 2026-08-16</PayPeriod>
+    </TimeWorked>
+  </xhtml:Example>
+  <xhtml:Example name="TimeWorked - Example 2" xmlns="">
     <TimeWorked RefId="CCD1254884EE54687FF4567DACD34653">
       <EmployeePersonalRefId>FACD1254884EE54687FF4567DACD3465</EmployeePersonalRefId>
       <LocationInfoRefId>FFD1254884EE54687FF4567DACD34653</LocationInfoRefId>

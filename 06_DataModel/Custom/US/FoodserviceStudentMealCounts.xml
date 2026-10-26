@@ -51,7 +51,37 @@
     <Characteristics>O</Characteristics>
     <Type ref="CommonTypes" name="SIF_ExtendedElementsType"/>
   </Item>
-  <xhtml:Example xmlns="">
+  <xhtml:Example xmlns="" name="FoodserviceStudentMealCounts - Example 1">
+    <FoodserviceStudentMealCounts RefId="f3e20b6e-3056-4532-8b88-24f97a6e6cfb">
+      <SchoolInfoRefId>025a355a-ce97-460f-949f-06a3ddb8dac5</SchoolInfoRefId>
+      <Date>2026-08-19</Date>
+      <Program Type="NSLP" TypeCodeset="https://www.fns.usda.gov/nslp">National School Lunch Program</Program>
+      <Counts>
+        <Count>
+          <MealStatus Type="Free" TypeCodeset="https://www.fns.usda.gov/cn/labels/meal-status">
+            <StartDate>2026-08-01</StartDate>
+            <EndDate>2026-08-19</EndDate>
+            <SchoolYear>2027</SchoolYear>
+          </MealStatus>
+          <MealType Codeset="https://www.fns.usda.gov/cn/labels/meal-type">Breakfast</MealType>
+          <Amount Type="Cash" TypeCodeset="https://www.fns.usda.gov/cn/labels/amount-type" Credits="0" Currency="USD" CurrencyCodeset="ISO4217">0.00</Amount>
+          <Tax Currency="USD" CurrencyCodeset="ISO4217">0.00</Tax>
+          <Value>184</Value>
+        </Count>
+        <Count>
+          <EarnedStatus Type="Paid" TypeCodeset="https://www.fns.usda.gov/cn/labels/earned-status">
+            <StartDate>2026-08-01</StartDate>
+            <EndDate>2026-08-19</EndDate>
+          </EarnedStatus>
+          <MealType Codeset="https://www.fns.usda.gov/cn/labels/meal-type">Lunch</MealType>
+          <Amount Type="LunchCredit" TypeCodeset="https://www.fns.usda.gov/cn/labels/amount-type" Credits="1.00" Currency="USD" CurrencyCodeset="ISO4217">3.25</Amount>
+          <Tax Currency="USD" CurrencyCodeset="ISO4217">0.00</Tax>
+          <Value>267</Value>
+        </Count>
+      </Counts>
+    </FoodserviceStudentMealCounts>
+  </xhtml:Example>
+  <xhtml:Example name="FoodserviceStudentMealCounts - Example 2" xmlns="">
     <FoodserviceStudentMealCounts RefId="E822BCDC9E7A40F787ED8183D3B485B5">
       <SchoolInfoRefId>F2F9D9B212B94489BC3F9FD6AB75F54A</SchoolInfoRefId>
       <Date>2003-08-25</Date>
