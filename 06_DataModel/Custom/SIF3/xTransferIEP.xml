@@ -523,7 +523,10 @@
             </evaluationResult>
           </evaluationResultList>
           <ideaDisability>
-            <disabilityCodeList>SLD</disabilityCodeList>
+            <disabilityCodeList>
+              <disabilityCode>SLD</disabilityCode>
+              <disabilityCode>SLI</disabilityCode>
+            </disabilityCodeList>
             <explanation>Specific learning disability affecting reading decoding, reading fluency, spelling, and written expression.</explanation>
             <analysis>
               <adverseEffects>Difficulty decoding unfamiliar multisyllabic words reduces access to grade-level text and slows completion of written assignments.</adverseEffects>
@@ -681,7 +684,10 @@
             <functional>
               <disabilityList>
                 <disability>
-                  <disabilityCodeList>SLD</disabilityCodeList>
+                  <disabilityCodeList>
+                    <disabilityCode>SLD</disabilityCode>
+                    <disabilityCode>SLI</disabilityCode>
+                  </disabilityCodeList>
                   <explanation>Reading and written-expression disability affects independent assignment initiation and completion.</explanation>
                   <consequences>Marisol may avoid lengthy reading tasks unless steps and available supports are made explicit.</consequences>
                   <accommodation>
@@ -914,8 +920,10 @@
               <accepted>Yes</accepted>
               <rejectedPlanElements>
                 <rejectedDetailList>
-                  <description>No plan elements were rejected.</description>
-                  <explanation>Parent accepted the complete proposed IEP.</explanation>
+                  <rejectedDetail>
+                    <description>No plan elements were rejected.</description>
+                    <explanation>Parent accepted the complete proposed IEP.</explanation>
+                  </rejectedDetail>
                 </rejectedDetailList>
                 <explanation>Parent supports implementation of all services, accommodations, and annual goals.</explanation>
               </rejectedPlanElements>
@@ -959,8 +967,10 @@
                   <accepted>Yes</accepted>
                   <rejectedPlanElements>
                     <rejectedDetailList>
-                      <description>No amendment elements were rejected.</description>
-                      <explanation>Parent accepted the accommodation clarification.</explanation>
+                      <rejectedDetail>
+                        <description>No amendment elements were rejected.</description>
+                        <explanation>Parent accepted the accommodation clarification.</explanation>
+                      </rejectedDetail>
                     </rejectedDetailList>
                     <explanation>Parent agrees that the amendment reflects Marisol's current access needs.</explanation>
                   </rejectedPlanElements>
@@ -998,6 +1008,87 @@
           <contactInfoRefId>11f2fc0c-c9ca-4a27-822f-64e992e6cb19</contactInfoRefId>
         </historyItem>
       </historyList>
+    </xTransferIep>
+  </xhtml:Example>
+  <xhtml:Example xmlns="" name="xTransferIep - Example 2 - Moving with the Mission">
+    <xTransferIep refId="3E55EC12-8291-4394-B807-69396187AE9D" xmlns="http://www.sifassociation.org/datamodel/na/4.x">
+        <referenceObjects>
+            <student refId="95BF6168-8A85-4BA8-880E-551E2A9EB908">
+                <name>
+                    <familyName>Rodriguez</familyName>
+                    <givenName>Marcus</givenName>
+                </name>
+                <localId>1004782</localId>
+                <otherIds>
+                    <otherId>
+                        <type>Federal</type>
+                        <id>MIL-20250410-4782</id>
+                    </otherId>
+                </otherIds>
+                <demographics>
+                    <militaryConnectedStudent>ActiveDuty</militaryConnectedStudent>
+                </demographics>
+            </student>
+        </referenceObjects>
+        <iep refId="AFEE8241-EAA9-4E76-94ED-CC9AB974B097">
+            <iepAdministrativeData>
+                <studentRefId>95BF6168-8A85-4BA8-880E-551E2A9EB908</studentRefId>
+                <reevaluationDueDate>2027-04-01</reevaluationDueDate>
+            </iepAdministrativeData>
+            <iepEligibility>
+                <background>
+                    <consentToEvaluation>
+                        <accepted>true</accepted>
+                        <identity>
+                            <date>2024-09-15</date>
+                            <studentRefId>95BF6168-8A85-4BA8-880E-551E2A9EB908</studentRefId>
+                        </identity>
+                    </consentToEvaluation>
+                </background>
+                <ideaDisability>
+                    <disabilityCodeList>
+                        <disabilityCode>SLD</disabilityCode>
+                    </disabilityCodeList>
+                    <decisions>
+                        <specificDisabilityIdentified>true</specificDisabilityIdentified>
+                        <identity>
+                            <date>2024-10-01</date>
+                            <studentRefId>95BF6168-8A85-4BA8-880E-551E2A9EB908</studentRefId>
+                        </identity>
+                    </decisions>
+                </ideaDisability>
+                <identity>
+                    <date>2024-09-15</date>
+                    <studentRefId>95BF6168-8A85-4BA8-880E-551E2A9EB908</studentRefId>
+                </identity>
+            </iepEligibility>
+            <iepPlan>
+                <effectivePeriod>
+                    <evaluationDate>2025-01-20</evaluationDate>
+                </effectivePeriod>
+                <annualGoalsList>
+                    <annualGoal>
+                        <servicesList>
+                            <service>
+                                <type>Speech</type>
+                                <inclusiveSettingIndicator>Yes</inclusiveSettingIndicator>
+                                <startDate>2025-01</startDate>
+                                <endDate>2025-06</endDate>
+                            </service>
+                            <service>
+                                <type>Vocational</type>
+                                <inclusiveSettingIndicator>No</inclusiveSettingIndicator>
+                                <startDate>2025-01</startDate>
+                                <endDate>2025-06</endDate>
+                            </service>
+                        </servicesList>
+                    </annualGoal>
+                </annualGoalsList>            
+                <placement>
+                    <environmentForSchoolAge>RC80</environmentForSchoolAge>
+                </placement>
+            </iepPlan>
+        </iep>
     </xTransferIep>
   </xhtml:Example>
 </DataObject>

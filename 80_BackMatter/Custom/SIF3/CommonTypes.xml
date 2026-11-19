@@ -52,7 +52,7 @@
     </Item>
     <Item>
       <Element>facilitatorList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListType"/>
     </Item>
     <Item>
@@ -279,7 +279,7 @@
     </Item>
     <Item>
       <Element>need</Element>
-      <Characteristics>O</Characteristics>
+      <Characteristics>OR</Characteristics>
       <Description>
         <p> Characterization of a deficit, disability or problem. </p>
       </Description>
@@ -302,17 +302,36 @@
       <Type ref="CodeSets" name="xRaceTypeType"/>
     </Item>
   </CommonElement>
+  
+  <CommonElement name="iepDisabilityCodeListType" type="true" dm="true">
+    <Item>
+      <Element>iepDisabilityCodeListType</Element>
+      <Description>
+        <p> Categories of Disability Under IDEA </p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>disabilityCode</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p> Category of Disability Under IDEA </p>
+      </Description>
+      <Type ref="CodeSets" name="xDisabilityType"/>
+      <cedsId>000218</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/000218/</cedsURL>
+    </Item>
+  </CommonElement>
   <CommonElement name="iepPlanPresentLevelPerformanceFunctionalDisabilityListDisabilityType" type="true" dm="true">
     <Item>
       <Element>iepPlanPresentLevelPerformanceFunctionalDisabilityListDisabilityType</Element>
     </Item>
     <Item>
       <Element>disabilityCodeList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Description>
         <p> Categories of Disability Under IDEA </p>
       </Description>
-      <Type ref="CodeSets" name="xDisabilityType"/>
+      <Type ref="CommonTypes" name="iepDisabilityCodeListType"/>
     </Item>
     <Item>
       <Element>explanation</Element>
@@ -336,6 +355,7 @@
       <Type ref="CommonTypes" name="iepCommonAccommodationType"/>
     </Item>
   </CommonElement>
+  
   <CommonElement name="fundingSourceType" type="true" dm="true">
     <Item>
       <Element>fundingSourceType</Element>
@@ -438,6 +458,16 @@
       <cedsId>000299</cedsId>
       <cedsURL>https://ceds.ed.gov/element/000299</cedsURL>
     </Item>
+    <Item>
+      <Element>militaryConnectedStudent</Element>
+      <Characteristics>O</Characteristics>
+      <Description>
+        <p>An indication that the student's parent or guardian is on Active Duty, in the National Guard, or in the Reserve components of the United States military services</p>
+      </Description>
+      <Type name="xs:string"/>
+      <cedsId>001576</cedsId>
+      <cedsURL>https://ceds.ed.gov/element/001576</cedsURL>
+    </Item>
   </CommonElement>
   <CommonElement name="iepTransmitPermissionListType" type="true" dm="true">
     <Item>
@@ -478,7 +508,7 @@
     </Item>
     <Item>
       <Element>rejectedDetailList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementsRejectedDetailListType"/>
     </Item>
     <Item>
@@ -751,7 +781,7 @@
     </Item>
     <Item>
       <Element>personalGoal</Element>
-      <Characteristics>O</Characteristics>
+      <Characteristics>OR</Characteristics>
       <Type ref="CommonTypes" name="iepPlanPresentLevelPerformancePersonalEvaluationPersonalGoalsListPersonalGoalType"/>
     </Item>
   </CommonElement>
@@ -969,7 +999,7 @@
     </Item>
     <Item>
       <Element>desiredOutcome</Element>
-      <Characteristics>O</Characteristics>
+      <Characteristics>OR</Characteristics>
       <Type ref="CommonTypes" name="iepPlanPresentLevelPerformancePersonalIntentionDesiredOutcomeListDesiredOutcomeType"/>
     </Item>
   </CommonElement>
@@ -1154,7 +1184,7 @@
     </Item>
     <Item>
       <Element>deficitList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanPresentLevelPerformanceAcademicDeficitListType"/>
     </Item>
     <Item>
@@ -1285,7 +1315,7 @@
     </Item>
     <Item>
       <Element>testResultList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanPresentLevelPerformancePersonalEvaluationPerformanceTestResultListType"/>
     </Item>
   </CommonElement>
@@ -1337,7 +1367,7 @@
     </Item>
     <Item>
       <Element>dataValue</Element>
-      <Characteristics>O</Characteristics>
+      <Characteristics>OR</Characteristics>
       <Type ref="CommonTypes" name="iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataValuesListDataValueType"/>
     </Item>
   </CommonElement>
@@ -1370,7 +1400,7 @@
     </Item>
     <Item>
       <Element>course</Element>
-      <Characteristics>O</Characteristics>
+      <Characteristics>OR</Characteristics>
       <Type ref="CommonTypes" name="iepPlanAnnualGoalCoursesListCourseType"/>
     </Item>
   </CommonElement>
@@ -3030,7 +3060,7 @@
     </Item>
     <Item>
       <Element>facilitator</Element>
-      <Characteristics>O</Characteristics>
+      <Characteristics>OR</Characteristics>
       <Type ref="CommonTypes" name="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListFacilitatorType"/>
     </Item>
   </CommonElement>
@@ -3657,7 +3687,7 @@
     </Item>
     <Item>
       <Element>specialCategoryList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanPresentLevelPerformanceConsequenceOfDisabilitySpecialCategoryListType"/>
     </Item>
   </CommonElement>
@@ -3738,7 +3768,7 @@
     </Item>
     <Item>
       <Element>specialCategory</Element>
-      <Characteristics>O</Characteristics>
+      <Characteristics>OR</Characteristics>
       <Type ref="CommonTypes" name="iepPlanPresentLevelPerformanceConsequenceOfDisabilitySpecialCategoryListSpecialCategoryType"/>
     </Item>
   </CommonElement>
@@ -3826,7 +3856,7 @@
     </Item>
     <Item>
       <Element>deficit</Element>
-      <Characteristics>O</Characteristics>
+      <Characteristics>OR</Characteristics>
       <Type ref="CommonTypes" name="iepPlanPresentLevelPerformanceAcademicDeficitListDeficitType"/>
     </Item>
   </CommonElement>
@@ -3954,7 +3984,7 @@
     </Item>
     <Item>
       <Element>disability</Element>
-      <Characteristics>O</Characteristics>
+      <Characteristics>OR</Characteristics>
       <Type ref="CommonTypes" name="iepPlanPresentLevelPerformanceFunctionalDisabilityListDisabilityType"/>
     </Item>
   </CommonElement>
@@ -4279,7 +4309,7 @@
     </Item>
     <Item>
       <Element>dataValuesList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataValuesListType"/>
     </Item>
   </CommonElement>
@@ -4471,13 +4501,30 @@
     </Item>
     <Item>
       <Element>measurableObjective</Element>
-      <Characteristics>O</Characteristics>
+      <Characteristics>OR</Characteristics>
       <Type ref="CommonTypes" name="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveType"/>
     </Item>
   </CommonElement>
+
   <CommonElement name="iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementsRejectedDetailListType" type="true" dm="true">
     <Item>
       <Element>iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementsRejectedDetailListType</Element>
+      <Description>
+        <p>What was rejected and why.</p>
+      </Description>
+    </Item>
+    <Item>
+      <Element>rejectedDetail</Element>
+      <Characteristics>OR</Characteristics>
+      <Description>
+        <p>What was rejected and why.</p>
+      </Description>
+      <Type ref="CommonTypes" name="iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementsRejectedDetailType"/>
+    </Item>
+  </CommonElement>  
+  <CommonElement name="iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementsRejectedDetailType" type="true" dm="true">
+    <Item>
+      <Element>iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementsRejectedDetailType</Element>
     </Item>
     <Item>
       <Element>description</Element>
@@ -4500,6 +4547,7 @@
       <cedsURL>https://ceds.ed.gov/element/001724</cedsURL>
     </Item>
   </CommonElement>
+
   <CommonElement name="iepPlanAnnualGoalIndependentActionsListType" type="true" dm="true">
     <Item>
       <Element>iepPlanAnnualGoalIndependentActionsListType</Element>
@@ -4509,7 +4557,7 @@
     </Item>
     <Item>
       <Element>independentAction</Element>
-      <Characteristics>O</Characteristics>
+      <Characteristics>OR</Characteristics>
       <Description>
         <p> Activity or action to be accomplished outside of a service context </p>
       </Description>
@@ -4525,7 +4573,7 @@
     </Item>
     <Item>
       <Element>progressReport</Element>
-      <Characteristics>O</Characteristics>
+      <Characteristics>OR</Characteristics>
       <Type ref="CommonTypes" name="iepPlanAnnualGoalProgressReportListProgressReportType"/>
     </Item>
   </CommonElement>
@@ -4550,27 +4598,27 @@
     </Item>
     <Item>
       <Element>measurableObjectiveList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanAnnualGoalMeasurableObjectiveListType"/>
     </Item>
     <Item>
       <Element>independentActionsList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanAnnualGoalIndependentActionsListType"/>
     </Item>
     <Item>
       <Element>servicesList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanAnnualGoalServicesListType"/>
     </Item>
     <Item>
       <Element>coursesList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanAnnualGoalCoursesListType"/>
     </Item>
     <Item>
       <Element>progressReportList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanAnnualGoalProgressReportListType"/>
     </Item>
     <Item>
@@ -4728,12 +4776,12 @@
     </Item>
     <Item>
       <Element>disabilityList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanPresentLevelPerformanceFunctionalDisabilityListType"/>
     </Item>
     <Item>
       <Element>summary</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanPresentLevelPerformanceFunctionalSummaryType"/>
     </Item>
   </CommonElement>
@@ -4785,7 +4833,7 @@
     </Item>
     <Item>
       <Element>applicabilityList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanAccommodationsListAccommodationApplicabiltyListType"/>
     </Item>
   </CommonElement>
@@ -5102,7 +5150,7 @@
     </Item>
     <Item>
       <Element>needsList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanPresentLevelPerformancePersonalEvaluationNeedsListType"/>
     </Item>
     <Item>
@@ -5112,7 +5160,7 @@
     </Item>
     <Item>
       <Element>personalGoalsList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanPresentLevelPerformancePersonalEvaluationPersonalGoalsListType"/>
     </Item>
   </CommonElement>
@@ -5226,9 +5274,7 @@
       <Description>
         <p> Categories of Disability Under IDEA </p>
       </Description>
-      <Type ref="CodeSets" name="xDisabilityType"/>
-      <cedsId>000218</cedsId>
-      <cedsURL>https://ceds.ed.gov/element/000218/</cedsURL>
+      <Type ref="CommonTypes" name="iepDisabilityCodeListType"/>
     </Item>
     <Item>
       <Element>explanation</Element>
@@ -5432,12 +5478,12 @@
     </Item>
     <Item>
       <Element>accommodationsList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanAccommodationsListType"/>
     </Item>
     <Item>
       <Element>standardizedAssessmentResultList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanStandardizedAssessmentResultListType"/>
     </Item>
     <Item>
@@ -5452,7 +5498,7 @@
     </Item>
     <Item>
       <Element>amendmentList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanAmendmentListType"/>
     </Item>
   </CommonElement>
@@ -5623,7 +5669,7 @@
     </Item>
     <Item>
       <Element>desiredOutcomeList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanPresentLevelPerformancePersonalIntentionDesiredOutcomeListType"/>
     </Item>
   </CommonElement>
@@ -5738,7 +5784,7 @@
     </Item>
     <Item>
       <Element>evaluationResultList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepEligibilityEvaluationResultListType"/>
     </Item>
     <Item>
@@ -5748,7 +5794,7 @@
     </Item>
     <Item>
       <Element>eligibilityParticipantReportList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepEligibilityParticipantReportListType"/>
     </Item>
     <Item>
@@ -5949,7 +5995,7 @@
     </Item>
     <Item>
       <Element>service</Element>
-      <Characteristics>O</Characteristics>
+      <Characteristics>OR</Characteristics>
       <Type ref="CommonTypes" name="iepPlanAnnualGoalServicesListServiceType"/>
     </Item>
   </CommonElement>
@@ -6110,7 +6156,7 @@
     </Item>
     <Item>
       <Element>applicability</Element>
-      <Characteristics>O</Characteristics>
+      <Characteristics>OR</Characteristics>
       <Description>
         <p> Circumstances in which the accommodation or change to standards or practices will be applied. </p>
       </Description>
@@ -6792,7 +6838,7 @@
     </Item>
     <Item>
       <Element>changeList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanAmendmentListAmendmentChangeListType"/>
     </Item>
     <Item>
@@ -6840,7 +6886,7 @@
     </Item>
     <Item>
       <Element>accommodationList</Element>
-      <Characteristics>OR</Characteristics>
+      <Characteristics>O</Characteristics>
       <Type ref="CommonTypes" name="iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListType"/>
     </Item>
   </CommonElement>

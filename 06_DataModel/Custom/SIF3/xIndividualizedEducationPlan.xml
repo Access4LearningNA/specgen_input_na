@@ -144,8 +144,10 @@
           </evaluationResult>
         </evaluationResultList>
         <ideaDisability>
-          <disabilityCodeList>SLD</disabilityCodeList>
-          <disabilityCodeList>SLI</disabilityCodeList>
+          <disabilityCodeList>
+            <disabilityCode>SLD</disabilityCode>
+            <disabilityCode>SLI</disabilityCode>
+          </disabilityCodeList>
           <explanation>Specific learning disability is identified in basic reading skills and written expression; speech-language impairment affects language formulation for complex oral and written tasks.</explanation>
           <analysis>
             <adverseEffects>Difficulty decoding multisyllabic words, spelling, and organizing written responses limits independent access to grade-level English language arts and social studies assignments.</adverseEffects>
@@ -305,8 +307,10 @@
           <functional>
             <disabilityList>
               <disability>
-                <disabilityCodeList>SLD</disabilityCodeList>
-                <disabilityCodeList>SLI</disabilityCodeList>
+                <disabilityCodeList>
+                  <disabilityCode>SLD</disabilityCode>
+                  <disabilityCode>SLI</disabilityCode>
+                </disabilityCodeList>
                 <explanation>Reading and language formulation needs can affect task initiation, organization, and self-advocacy during independent academic work.</explanation>
                 <consequences>Leena may avoid beginning lengthy literacy tasks, require reassurance, and need prompts to use available strategies.</consequences>
                 <accommodation>
@@ -539,8 +543,10 @@
             <accepted>Yes</accepted>
             <rejectedPlanElements>
               <rejectedDetailList>
-                <description>No plan elements rejected.</description>
-                <explanation>Parent reviewed all proposed services and accommodations and did not reject any portion of the plan.</explanation>
+                <rejectedDetail>
+                  <description>No plan elements rejected.</description>
+                  <explanation>Parent reviewed all proposed services and accommodations and did not reject any portion of the plan.</explanation>
+                </rejectedDetail>
               </rejectedDetailList>
               <explanation>Parent supports implementation of the complete IEP.</explanation>
             </rejectedPlanElements>
@@ -584,8 +590,10 @@
                 <accepted>Yes</accepted>
                 <rejectedPlanElements>
                   <rejectedDetailList>
-                    <description>No amended plan elements rejected.</description>
-                    <explanation>Parent agrees with the added organizational support.</explanation>
+                    <rejectedDetail>
+                      <description>No amended plan elements rejected.</description>
+                      <explanation>Parent agrees with the added organizational support.</explanation>
+                    </rejectedDetail>
                   </rejectedDetailList>
                   <explanation>Parent supports the amendment in full.</explanation>
                 </rejectedPlanElements>

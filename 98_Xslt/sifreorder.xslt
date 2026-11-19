@@ -7667,10 +7667,16 @@
 <xsl:apply-templates select="race" mode="copy" />
 </xsl:copy>
 </xsl:template>
+<xsl:template match="node()|@*" mode="iepDisabilityCodeListType">
+<xsl:copy>
+    <xsl:apply-templates select="@*" mode="copy" />
+<xsl:apply-templates select="disabilityCode" mode="copy" />
+</xsl:copy>
+</xsl:template>
 <xsl:template match="node()|@*" mode="iepPlanPresentLevelPerformanceFunctionalDisabilityListDisabilityType">
 <xsl:copy>
     <xsl:apply-templates select="@*" mode="copy" />
-<xsl:apply-templates select="disabilityCodeList" mode="copy" />
+<xsl:apply-templates select="disabilityCodeList" mode="iepDisabilityCodeListType" />
 <xsl:apply-templates select="explanation" mode="copy" />
 <xsl:apply-templates select="consequences" mode="copy" />
 <xsl:apply-templates select="accommodation" mode="iepCommonAccommodationType" />
@@ -7698,6 +7704,7 @@
 <xsl:apply-templates select="birthDate" mode="copy" />
 <xsl:apply-templates select="countryOfBirth" mode="copy" />
 <xsl:apply-templates select="usCitizenshipStatus" mode="gCitizenshipStatusType" />
+<xsl:apply-templates select="militaryConnectedStudent" mode="copy" />
 </xsl:copy>
 </xsl:template>
 <xsl:template match="node()|@*" mode="iepTransmitPermissionListType">
@@ -8456,6 +8463,12 @@
 <xsl:template match="node()|@*" mode="iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementsRejectedDetailListType">
 <xsl:copy>
     <xsl:apply-templates select="@*" mode="copy" />
+<xsl:apply-templates select="rejectedDetail" mode="iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementsRejectedDetailType" />
+</xsl:copy>
+</xsl:template>
+<xsl:template match="node()|@*" mode="iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementsRejectedDetailType">
+<xsl:copy>
+    <xsl:apply-templates select="@*" mode="copy" />
 <xsl:apply-templates select="description" mode="copy" />
 <xsl:apply-templates select="explanation" mode="copy" />
 </xsl:copy>
@@ -8671,7 +8684,7 @@
 <xsl:template match="node()|@*" mode="iepEligibilityIdeaDisabilityType">
 <xsl:copy>
     <xsl:apply-templates select="@*" mode="copy" />
-<xsl:apply-templates select="disabilityCodeList" mode="copy" />
+<xsl:apply-templates select="disabilityCodeList" mode="iepDisabilityCodeListType" />
 <xsl:apply-templates select="explanation" mode="copy" />
 <xsl:apply-templates select="analysis" mode="iepEligibilityIdeaDisabilityAnalysisType" />
 <xsl:apply-templates select="SpecialDiagnosisJustifications" mode="iepEligibilityIdeaDisabilitySpecificLearningDisabilitySpecialDiagnosisJustificationsType" />
