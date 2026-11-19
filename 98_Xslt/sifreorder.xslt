@@ -1249,6 +1249,7 @@
 <xsl:template match="StudentScoreSet" mode="object">
 <xsl:copy>
     <xsl:apply-templates select="@*" mode="copy" />
+<xsl:apply-templates select="PerformanceLevelIdentifier" mode="copy" />
 <xsl:apply-templates select="Scores" mode="StudentScoreSetScoreListType" />
 <xsl:apply-templates select="SIF_Metadata" mode="SIF_MetadataType" />
 <xsl:apply-templates select="SIF_ExtendedElements" mode="SIF_ExtendedElementsType" />
@@ -4772,6 +4773,7 @@
 <xsl:copy>
     <xsl:apply-templates select="@*" mode="copy" />
 <xsl:apply-templates select="ScoreValue" mode="copy" />
+<xsl:apply-templates select="PerformanceLevelIdentifier" mode="copy" />
 <xsl:apply-templates select="DiagnosticStatement" mode="copy" />
 <xsl:apply-templates select="Description" mode="copy" />
 <xsl:apply-templates select="NumberOfResponses" mode="copy" />

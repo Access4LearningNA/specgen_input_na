@@ -58,6 +58,14 @@
     </Description>
   </Item>
   <Item>
+    <Element>PerformanceLevelIdentifier</Element>
+    <Characteristics>O</Characteristics>
+    <Description>
+      <p>The overall performance level achieved by the student on this assessment.</p>
+    </Description>
+    <Type name="xs:token"/>
+  </Item>
+  <Item>
     <Element>Scores</Element>
     <Characteristics>M</Characteristics>
     <Description>
@@ -77,15 +85,18 @@
   </Item>
   <xhtml:Example xmlns="" name="StudentScoreSet - Example 1">
     <StudentScoreSet RefId="4809e3d0-f41a-459d-9c7c-ada709de3cad" ScoreMetric="00512" ScoreMetricCodeset="https://ceds.ed.gov/score-metrics" AssessmentAdministrationRefId="83adac6e-e610-454a-8b66-e6dce4ce3f30" StudentPersonalRefId="ebe3d944-bf8f-4b6e-bf1e-e2e216389ba4" AssessmentRegistrationRefId="37503988-4dcd-466c-94b2-6e7152c88530">
+      <PerformanceLevelIdentifier>PRO</PerformanceLevelIdentifier>
       <Scores>
         <Score AssessmentSubTestRefId="16b4d96f-0700-442a-b51d-3cdcd2fb3cd4">
           <ScoreValue>87</ScoreValue>
+          <PerformanceLevelIdentifier>PRO</PerformanceLevelIdentifier>
           <DiagnosticStatement>Demonstrated secure understanding of proportional relationships and coordinate-plane reasoning.</DiagnosticStatement>
           <Description>Proficient</Description>
           <NumberOfResponses>40</NumberOfResponses>
         </Score>
         <Score AssessmentSubTestRefId="a4be81c1-4da3-4294-8e62-ee8aea782414">
           <ScoreValue>91</ScoreValue>
+          <PerformanceLevelIdentifier>PRO</PerformanceLevelIdentifier>
           <DiagnosticStatement>Demonstrated strong performance interpreting informational text and supporting claims with evidence.</DiagnosticStatement>
           <Description>Proficient</Description>
           <NumberOfResponses>42</NumberOfResponses>
